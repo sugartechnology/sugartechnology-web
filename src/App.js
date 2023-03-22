@@ -2,6 +2,7 @@ import './App.css';
 import MainPageSlider from './components/MainPagSlider/MainPageSlider';
 import MainPageSliderItem from './components/MainPagSlider/MainPageSliderItem';
 import { WheelAnimationComponent, WheelAnimationComponentItem } from './components/WheelAnimation/WheelAnimationComponent';
+import { Customers } from './components/Customers/Customers';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <MainPageSliderItem src={process.env.PUBLIC_URL + '/joint.svg'}></MainPageSliderItem>
       </MainPageSlider>
 
+
+      <Customers></Customers>
     </div>
   );
 }
