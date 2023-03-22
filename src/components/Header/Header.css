@@ -1,0 +1,78 @@
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background: #F2F2F2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sugarLogo{
+    position: relative;
+    width: 160.08px;
+    height: 58.46px;
+    top: 20px;
+    left: 30px;
+}
+.routers{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 45px;
+    position: relative;
+    left: 40px;
+}
+.routers a{
+    color: #170F49;
+    cursor: pointer;
+}
+.routers a:hover{
+    color: mediumblue;
+}
+.headerButtons{
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    position: relative;
+    right: 40px;
+}
+.languageButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 135px;
+    height: 54px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    border: 1px solid #EFF0F7;
+    box-shadow: 0px 5px 5px rgba(8, 15, 52, 0.04);
+}
+.languageFlag{
+    width: 36px;
+    height: 36px;
+}
+.languageShowButton{
+    width: 8px;
+    height: 4px;
+    cursor: pointer;
+}
+.mediaCenterButton{
+    width: 135px;
+    height: 54px;
+    background: #ED401A;
+    border-radius: 76px;
+    border: none;
+    cursor: pointer;
+}
+.mediaCenterButton:hover{
+    color: darkred;
+}
+.mediaCenterButton a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}

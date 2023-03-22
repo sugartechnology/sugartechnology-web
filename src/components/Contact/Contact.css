@@ -1,0 +1,186 @@
+.contactContainer{
+    display: flex;
+    position: relative;
+    height: 500px;
+    top: 40px;
+    margin-left: 50px;
+}
+.leftContact{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50px;
+    gap: 50px;
+    width: 33%;
+}
+.communication a{
+    color: #797979;
+    font-size: 19px;
+}
+.about{
+    display: grid;
+    gap: 40px;
+}
+.aboutSpan{
+    width: 320px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: inherit;
+    line-height: 148.4%;
+    letter-spacing: -0.02em;
+    color: #797979;
+}
+.communication{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    right: 40px;
+}
+.mailAdressContainer{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    left: 40px;
+}
+.mailAdressSpan{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.phoneNumberContainer{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    left: 40px;
+}
+.phoneNumberSpan{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.headers{
+    width: 118px;
+    height: 38px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 128.18%;
+    text-transform: capitalize;
+    color: #242331;
+}
+.contactHeaders{
+    display: grid;
+    gap: 20px;
+}
+.contactHeaders a{
+    display: flex;
+    width: 200px;
+    height: 38px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 128.18%;
+    text-transform: capitalize;
+    color: #242331;
+}
+.contactHeaders img{
+    position: relative;
+    right: 10px;
+}
+.contactRouters{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 160px;
+    height: 336px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 220%;
+    text-transform: capitalize;
+    color: #797979;
+    gap: 10px;
+    position: relative;
+    top: 20px;
+}
+.contactRouters a:hover{
+    color: red;
+    cursor: pointer;
+}
+.contactLogo{
+    width: 160.08px;
+    height: 58.46px;
+    position: relative;
+    left: 30px;
+}
+.middleContact{
+    display: flex;
+    justify-content: space-evenly;
+    width: 33%;
+    position: relative;
+    right: 30px;
+}
+.rightContact{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50px;
+}
+.rightContactInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.rightContactInputs a{
+    width: 320px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 148.4%;
+    letter-spacing: -0.02em;
+    color: #797979;
+}
+.nameInput{
+    width: 307.5px;
+    height: 37.31px;
+    background: #FFFFFF;
+    border: 1px solid #D2D6DA;
+    border-radius: 8px;
+}
+.emailInput{
+    width: 307.5px;
+    height: 37.31px;
+    background: #FFFFFF;
+    border: 1px solid #D2D6DA;
+    border-radius: 8px;
+}
+.messageInput{
+    width: 307.5px;
+    height: 130px;
+    background: #FFFFFF;
+    border: 1px solid #D2D6DA;
+    border-radius: 8px;
+}
+.sendButton{
+    width: 307.5px;
+    height: 41.81px;
+    background: #ED401A;
+    box-shadow: 0px 4px 7px -1px rgba(0, 0, 0, 0.11), 0px 2px 4px -1px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+.sendButton a{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 7px;
+    position: relative;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+}

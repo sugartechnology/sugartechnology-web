@@ -1,0 +1,51 @@
+.statisticsContainer{
+    display: flex;
+    width: 1439px;
+    height: 276px;
+    background: #EFEFEF;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.leftStatictics{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.firstSpan{
+    width: 300px;
+    height: 60px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 0px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.01666em;
+    color: #ED401A;
+}
+.secondSpan{
+    width: 300px;
+    height: 27px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 0px;
+    color: #252F40;
+    text-align: center;
+}
+.thirdSpan{
+    width: 300px;
+    height: 52px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #67748E;
+}
+.rightStatictics{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}

@@ -1,0 +1,29 @@
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    gap: 50px;
+}
+.footerElements{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 10px;
+    gap: 500px;
+}
+.footerSpan{
+    width: 638px;
+    height: 35px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 157.4%;
+    color: #797979;
+}
+.footerMediaButtons{
+    display: flex;
+    gap: 20px;
+}
+.footerMediaButtons img{
+    cursor: pointer;
+}

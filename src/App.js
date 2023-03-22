@@ -3,10 +3,15 @@ import MainPageSlider from './components/MainPagSlider/MainPageSlider';
 import MainPageSliderItem from './components/MainPagSlider/MainPageSliderItem';
 import { WheelAnimationComponent, WheelAnimationComponentItem } from './components/WheelAnimation/WheelAnimationComponent';
 import { Customers } from './components/Customers/Customers';
+import { Header } from './components/Header/Header';
+import { Statistics } from './components/Statistics/Statistics';
+import { Footer } from './components/Footer/Footer';
+import { Contact } from './components/Contact/Contact';
 
 function App() {
   return (
     <div className="App">
+      <Header></Header>
       <MainPageSlider>
         <MainPageSliderItem src={process.env.PUBLIC_URL + '/home.svg'}></MainPageSliderItem>
         <MainPageSliderItem src={process.env.PUBLIC_URL + '/metaverse.svg'}></MainPageSliderItem>
@@ -18,6 +23,9 @@ function App() {
 
 
       <Customers></Customers>
+      <Statistics></Statistics>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 }
