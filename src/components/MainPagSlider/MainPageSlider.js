@@ -1,8 +1,12 @@
 import './MainPageSlider.css'
 import SmallSliderMenu from './SmallSliderMenu.svg'
 import { WheelAnimationComponent, WheelAnimationComponentItem } from '../WheelAnimation/WheelAnimationComponent';
+import { useState } from 'react';
 
-const MainPageSlider = (props) => {
+export const MainPageSlider = (props) => {
+
+
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
     return (<div class='mainPageSliderContainer'>
         <div className='mainPageTopLeftFigure rotate'></div>
@@ -30,13 +34,21 @@ const MainPageSlider = (props) => {
         <div className="slideDetail" style={{ filter: '8px' }}></div>
         <WheelAnimationComponent style={{ width: "500px", height: "500px" }} >
 
-            <WheelAnimationComponentItem>
-                <div className='wheelAnimationFoot'></div>
-                <div className='wheelAnimationCamera'></div>
-                <div className='wheelAnimationShoe'></div>
+            <WheelAnimationComponentItem >
+
+
+                <div className='animationFloor animationStopFloor' ></div>
+                <div className='animationCarpet animationStopCarpet' ></div>
+                <div className='animationWindow animationStopWindow' ></div>
+                <div className='animationSofa animationStopSofa' ></div>
+                <div className='animationFlower animationStopFlower' ></div>
+                <div className='animationDrawer animationStopDrawer' ></div>
+
+                <div className='animationIphone animationStopIphone' ></div>
+
             </WheelAnimationComponentItem>
 
-            <WheelAnimationComponentItem>
+            <WheelAnimationComponentItem style={{ display: "none" }}>
                 <div className='wheelAnimationFoot'></div>
                 <div className='wheelAnimationCamera'></div>
                 <div className='wheelAnimationShoe'></div>
@@ -47,4 +59,16 @@ const MainPageSlider = (props) => {
 }
 
 
-export default MainPageSlider;
+export const MainPageSliderItem = (props) => {
+
+    return (<div className='mainPageSliderItem'>
+        <img src={props.src} style={{
+            position: 'absolute',
+            top: 'calc(50%)',
+            transform: 'translate(-50%, -50%)',
+            left: 'calc(-50%)',
+        }}></img>
+    </div>);
+}
+
+

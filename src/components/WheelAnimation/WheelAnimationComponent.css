@@ -42,7 +42,7 @@
     width: 200%;
     height: 200%;
     position: absolute;
-    transform: translate(calc(-50%), calc(-50%))rotate(-180deg);
+    transform: translate(calc(-50%), calc(-50%))rotate(0deg);
 }
 
 .wheelAnimationItemInner {

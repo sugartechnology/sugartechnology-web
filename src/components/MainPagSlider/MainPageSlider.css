@@ -10,7 +10,6 @@
 }
 
 
-
 @keyframes rotate {
     to {
         transform: rotate(360deg);
@@ -143,4 +142,458 @@
     bottom: -109px;
     right: 140px;
     transform: rotate(344deg)translate(125px, -20px)
+}
+
+
+
+.animationSofa {
+    position: absolute;
+    width: 373.4px;
+    height: 186.56px;
+    left: 121px;
+    top: -398px;
+    background-image: url(/public/assets/svg/fantasy/sofa.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+}
+
+
+.animationStartSofa {
+    animation: sofa0 1s ease-out, 1.4s sofa1 1.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+}
+
+.animationStopSofa {
+    animation: sofa2 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sofa0 {
+    to {
+        width: 373.4px;
+        height: 186.56px;
+        left: 124.2px;
+        top: 278px;
+    }
+}
+
+@keyframes sofa1 {
+    to {
+        width: 284.8px;
+        height: 142.29px;
+        left: 228px;
+        top: 306px;
+    }
+}
+
+
+@keyframes sofa2 {
+    from {
+        width: 284.8px;
+        height: 142.29px;
+        left: 228px;
+        top: 306px;
+    }
+
+    to {
+        width: 284.8px;
+        height: 142.29px;
+        left: -347px;
+        top: 780px;
+    }
+}
+
+
+
+
+
+.animationIphone {
+    position: absolute;
+    width: 190.61px;
+    height: 386.38px;
+    left: 173.6px;
+    top: 206.59px;
+    background: url(/public/assets/svg/fantasy/iphone.svg);
+    background-size: contain;
+    transform: rotate(9.86deg);
+    z-index: 2;
+}
+
+
+
+.animationStartIphone {
+    animation: ihpone0 1s ease-out, 1.4s ihpone01 1.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+}
+
+.animationStopIphone {
+    animation: ihpone02 0.5s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ihpone0 {
+    to {
+        width: 190.61px;
+        height: 386.38px;
+        left: 229.07px;
+        top: 161.45px;
+        transform: rotate(105.22deg);
+    }
+}
+
+@keyframes ihpone01 {
+    to {
+        width: 215.48px;
+        height: 436.79px;
+        left: 226.37px;
+        top: 143.2px;
+
+        transform: rotate(89.46deg);
+    }
+}
+
+
+@keyframes ihpone02 {
+    from {
+        width: 215.48px;
+        height: 436.79px;
+        left: 226.37px;
+        top: 143.2px;
+
+        transform: rotate(89.46deg);
+    }
+
+    to {
+        width: 190.61px;
+        height: 386.38px;
+        left: -277.44px;
+        top: 475px;
+
+        transform: rotate(29.72deg);
+    }
+}
+
+
+
+
+.animationFloor {
+    background: url(/public/assets/svg/fantasy/floor.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 767px;
+    height: 193px;
+    left: -826px;
+    top: 593px;
+    z-index: -2;
+}
+
+
+.animationStartFloor {
+    animation: floor01 1s ease-out, 1.4s floor02 1.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+}
+
+
+.animationStopFloor {
+    animation: floor03 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes floor01 {
+    to {
+        width: 767px;
+        height: 193px;
+        left: -787px;
+        top: 601px;
+    }
+}
+
+@keyframes floor02 {
+    to {
+        width: 596px;
+        height: 106px;
+        left: 50px;
+        top: 415px;
+    }
+}
+
+
+@keyframes floor03 {
+    from {
+        width: 596px;
+        height: 106px;
+        left: 50px;
+        top: 415px;
+    }
+
+    to {
+        width: 596px;
+        height: 106px;
+        left: -688px;
+        top: 995px;
+        border-radius: 0px;
+    }
+}
+
+
+.animationFlower {
+    background: url(/public/assets/svg/fantasy/flower.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 132.32px;
+    position: absolute;
+    height: 123.86px;
+    left: 36.13px;
+    top: -160px;
+
+    filter: blur(2.5px);
+    transform: rotate(14.55deg);
+}
+
+
+.animationStartFlower {
+    animation: flower01 1s ease-out, 1.4s flower02 1.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+}
+
+.animationStopFlower {
+    animation: flower03 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes flower01 {
+    to {
+        width: 132.32px;
+        height: 123.86px;
+        left: 39.32px;
+        top: 516px;
+
+        filter: blur(2.5px);
+        transform: rotate(14.55deg);
+    }
+}
+
+@keyframes flower02 {
+    to {
+        width: 105.3px;
+        height: 98.57px;
+        left: 131px;
+        top: 285px;
+        filter: blur(0px);
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes flower03 {
+
+    from {
+        width: 105.3px;
+        height: 98.57px;
+        left: 131px;
+        top: 285px;
+        filter: blur(0px);
+        transform: rotate(0deg);
+    }
+
+    to {
+        left: -504px;
+        top: 585px;
+
+        filter: blur(2.5px);
+        transform: rotate(-9.92deg);
+    }
+}
+
+
+
+.animationDrawer {
+    background: url(/public/assets/svg/fantasy/drawer.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 179.19px;
+    height: 149.46px;
+    left: 264px;
+    top: -585.57px;
+
+    filter: blur(3.5px);
+    transform: rotate(-21.76deg);
+}
+
+
+.animationStartDrawer {
+    animation: drawer01 1s ease-out, 1.4s drawer02 1.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+}
+
+
+.animationStopDrawer {
+    animation: drawer03 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drawer01 {
+    to {
+        width: 179.19px;
+        height: 149.46px;
+        left: 267.2px;
+        top: 90.43px;
+
+        filter: blur(3.5px);
+        transform: rotate(-21.76deg);
+    }
+}
+
+@keyframes drawer02 {
+    to {
+        width: 85.45px;
+        height: 71.27px;
+        left: 140.55px;
+        top: 381.29px;
+        filter: blur(0px);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes drawer03 {
+
+    from {
+        width: 85.45px;
+        height: 71.27px;
+        left: 140.55px;
+        top: 381.29px;
+        filter: blur(0px);
+        transform: rotate(0deg);
+    }
+
+    to {
+        width: 85.45px;
+        height: 71.27px;
+        left: -208.36px;
+        top: 549px;
+        filter: blur(3.5px);
+        transform: rotate(7.17deg);
+    }
+}
+
+
+
+
+.animationCarpet {
+    background: url(/public/assets/svg/fantasy/carpet.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 563px;
+    left: -468px;
+    width: 278.18px;
+    height: 31.18px;
+}
+
+
+.animationStartCarpet {
+    animation: carpet01 1s ease-out, 1.4s carpet02 1.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+}
+
+.animationStopCarpet {
+    animation: carpet03 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes carpet01 {
+    to {
+        left: -451px;
+        top: 563px;
+    }
+}
+
+@keyframes carpet02 {
+    to {
+        left: 239px;
+        top: 476px;
+    }
+}
+
+@keyframes carpet03 {
+    from {
+        left: 239px;
+        top: 476px;
+    }
+
+    to {
+        left: -306px;
+        top: 938px;
+        border-radius: 0px;
+    }
+}
+
+
+
+.animationWindow {
+    background: url(/public/assets/svg/fantasy/window.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 129.489990234375px;
+    width: 161.83245849609375px;
+    left: -64px;
+    top: -211px;
+    border-radius: 0px;
+}
+
+
+.animationStartWindow {
+    animation: window01 1s ease-out, 1.4s window02 1.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+}
+
+.animationStopWindow {
+    animation: window03 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes window01 {
+    to {
+        height: 129.489990234375px;
+        width: 161.83245849609375px;
+        left: -64px;
+        top: -211px;
+        border-radius: 0px;
+    }
+}
+
+@keyframes window02 {
+    to {
+        height: 129.489990234375px;
+        width: 161.83245849609375px;
+        left: 455px;
+        top: 179px;
+        border-radius: 0px;
+    }
+}
+
+@keyframes window03 {
+    from {
+        height: 129.489990234375px;
+        width: 161.83245849609375px;
+        left: 455px;
+        top: 179px;
+        border-radius: 0px;
+    }
+
+    to {
+        height: 129.489990234375px;
+        width: 161.83245849609375px;
+        left: -373px;
+        top: -273px;
+        border-radius: 0px;
+    }
 }

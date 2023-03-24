@@ -1,7 +1,5 @@
 import './App.css';
-import MainPageSlider from './components/MainPagSlider/MainPageSlider';
-import MainPageSliderItem from './components/MainPagSlider/MainPageSliderItem';
-import { WheelAnimationComponent, WheelAnimationComponentItem } from './components/WheelAnimation/WheelAnimationComponent';
+import { MainPageSlider, MainPageSliderItem } from './components/MainPagSlider/MainPageSlider';
 import { Customers } from './components/Customers/Customers';
 import { Header } from './components/Header/Header';
 import { Statistics } from './components/Statistics/Statistics';
@@ -21,10 +19,12 @@ function App() {
         <MainPageSliderItem src={process.env.PUBLIC_URL + '/joint.svg'}></MainPageSliderItem>
       </MainPageSlider>
 
-
       <Customers></Customers>
+
       <Statistics></Statistics>
+
       <Contact></Contact>
+
       <Footer></Footer>
     </div>
   );
