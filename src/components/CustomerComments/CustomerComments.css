@@ -1,21 +1,31 @@
-
+.customerCommentsContainer{
+    width: 1434px;
+    height: 707px;
+}
 .firstCommnetBackground{
     display: flex;
+    position: relative;
+    bottom: 80px;
 }
 .firstCommentPage{
     display: flex;
     z-index: 1;
     position: relative;
-    right: 1400px;
+    right: 800px;
     gap: 530px;
 }
 .commentsLeftButton{
     position: relative;
-    bottom: 100px;
+    z-index: 1;
+    left: 50px;
+    top: 300px;
+    cursor: pointer;
 }
 .commentsRightButton{
     position: relative;
-    bottom: 100px;
+    bottom: 500px;
+    left: 1240px;
+    cursor: pointer;
 }
 .commentSpans{
     display: flex;
@@ -79,6 +89,88 @@
 }
 .commentPageButtons{
     position: relative;
-    bottom: 50px;
-    left: 675px;
+    bottom: 210px;
+    left: 672px;
+}
+.secondComment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1434px;
+    height: 707px;
+    gap: 100px;
+    background: #FFFFFF;
+}
+.thirdComment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1434px;
+    height: 707px;
+    gap: 100px;
+    background: #F1DCD8;
+}
+.comments{
+    display: flex;
+    gap: 100px;
+}
+.commentHeader a{
+    width: 550px;
+    height: 73px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.customerComment{
+    display: flex;
+    flex-direction: column;
+    width: 314px;
+    height: 399px;
+    background: #E9E9E9;
+    border-radius: 16px;
+    padding-left: 30px;
+}
+.commentSymbol{
+    position: relative;
+    bottom: 20px;
+}
+.commentSpan{
+    width: 256px;
+    height: 213px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: justify;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.commentOwner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.commentOwnerFirstSpan{
+    width: 84px;
+    height: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 157.4%;
+    color: #000000;
+}
+.commentOwnerSecondSpan{
+    width: 60px;
+    height: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 157.4%;
+    color: #000000;
 }

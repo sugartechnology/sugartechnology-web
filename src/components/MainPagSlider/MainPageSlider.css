@@ -144,3 +144,36 @@
     right: 140px;
     transform: rotate(344deg)translate(125px, -20px)
 }
+
+.slideDetailFirstSpan{
+    width: 484px;
+    height: 139px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.slideDetailElements{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 30px;
+    top: 40px;
+    left: 70px;
+}
+
+.slideDetailSecondSpan{
+    width: 439px;
+    height: 135px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 32px;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}

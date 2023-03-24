@@ -8,6 +8,7 @@ import { Statistics } from './components/Statistics/Statistics';
 import { Footer } from './components/Footer/Footer';
 import { Contact } from './components/Contact/Contact';
 import { CustomerComments } from './components/CustomerComments/CustomerComments';
+import { About } from './components/About/About';
 
 function App() {
   return (
@@ -22,10 +23,10 @@ function App() {
         <MainPageSliderItem src={process.env.PUBLIC_URL + '/joint.svg'}></MainPageSliderItem>
       </MainPageSlider>
 
-
+      <About></About>
       <Customers></Customers>
-      <CustomerComments></CustomerComments>
       <Statistics></Statistics>
+      <CustomerComments></CustomerComments>
       <Contact></Contact>
       <Footer></Footer>
     </div>

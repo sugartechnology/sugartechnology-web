@@ -3,10 +3,10 @@ import './CustomerComments.css'
 export const CustomerComments = props =>{
     return(
         <div className='customerCommentsContainer'>
+            <img className='commentsLeftButton' alt='' src={'assets/img/commentsLeftButton.svg'}></img>
             <div className='firstCommnetBackground'>
-                <img alt='' src={'assets/img/CustomerCommentBackground.svg'}></img>
+                <img alt='' src={'assets/img/CustomerCommentBackgroundCrop.svg'}></img>
                 <div className='firstCommentPage'>
-                    <img className='commentsLeftButton' alt='' src={'assets/img/commentsLeftButton.svg'}></img>
                     <div className='firstComment'>
                         <div className='commentSpans'>
                             <a className='firstCommentSpan'>Trusted by millions of company.</a>
@@ -20,10 +20,114 @@ export const CustomerComments = props =>{
                             <img alt='' src={'assets/img/Star.svg'}></img>
                         </div>
                     </div>
-                    <img className='commentsRightButton' alt='' src={'assets/img/commentsRightButton.svg'}></img>
                 </div>
             </div>
-           <img className='commentPageButtons' alt='' src={'assets/img/commentPageButtons.svg'}></img>
+            {/* <div className='secondComment'>
+                <div className='commentHeader'>
+                    <a>People love Sugar</a>
+                </div>
+                <div className='comments'>
+                    <div className='customerComment'>
+                        <div className='commentSymbol'>
+                            <img alt='' src={'assets/img/commentSymbol.svg'}></img>
+                        </div>
+                        <div className='commentSpan'>
+                            <a>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. Velit mattis accumsan aenean dignissim fames nisl sed pulvinar. Nullam ut tortor in ac semper enim cursus quisque. Amet felis at consectetur faucibus. At nisl dictum in eu quisque eget. Integer lacinia non mattis diam ornare. Tempor leo erat risus faucibus nulla pharetra egestas ultrices.
+                            </a>
+                        </div>
+                        <div className='commentOwner'>
+                            <img alt='' src={'assets/img/TepeHomeLittlePhoto.svg'}></img>
+                            <a className='commentOwnerFirstSpan'>Lorem ipsum</a>
+                            <a className='commentOwnerSecondSpan'>Tepe home</a>
+                            <img alt='' src={'assets/img/littleStar.svg'}></img>
+                        </div>
+                    </div>
+                    <div className='customerComment'>
+                        <div className='commentSymbol'>
+                            <img alt='' src={'assets/img/commentSymbol.svg'}></img>
+                        </div>
+                        <div className='commentSpan'>
+                            <a>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. Velit mattis accumsan aenean dignissim fames nisl sed pulvinar. Nullam ut tortor in ac semper enim cursus quisque. Amet felis at consectetur faucibus. At nisl dictum in eu quisque eget. Integer lacinia non mattis diam ornare. Tempor leo erat risus faucibus nulla pharetra egestas ultrices.
+                            </a>
+                        </div>
+                        <div className='commentOwner'>
+                            <img alt='' src={'assets/img/TepeHomeLittlePhoto.svg'}></img>
+                            <a className='commentOwnerFirstSpan'>Lorem ipsum</a>
+                            <a className='commentOwnerSecondSpan'>Tepe home</a>
+                            <img alt='' src={'assets/img/littleStar.svg'}></img>
+                        </div>
+                    </div>
+                    <div className='customerComment'>
+                        <div className='commentSymbol'>
+                            <img alt='' src={'assets/img/commentSymbol.svg'}></img>
+                        </div>
+                        <div className='commentSpan'>
+                            <a>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. Velit mattis accumsan aenean dignissim fames nisl sed pulvinar. Nullam ut tortor in ac semper enim cursus quisque. Amet felis at consectetur faucibus. At nisl dictum in eu quisque eget. Integer lacinia non mattis diam ornare. Tempor leo erat risus faucibus nulla pharetra egestas ultrices.
+                            </a>
+                        </div>
+                        <div className='commentOwner'>
+                            <img alt='' src={'assets/img/TepeHomeLittlePhoto.svg'}></img>
+                            <a className='commentOwnerFirstSpan'>Lorem ipsum</a>
+                            <a className='commentOwnerSecondSpan'>Tepe home</a>
+                            <img alt='' src={'assets/img/littleStar.svg'}></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='thirdComment'>
+            <div className='commentHeader'>
+                    <a>People love Sugar</a>
+                </div>
+                <div className='comments'>
+                    <div className='customerComment'>
+                        <div className='commentSymbol'>
+                            <img alt='' src={'assets/img/commentSymbol.svg'}></img>
+                        </div>
+                        <div className='commentSpan'>
+                            <a>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. Velit mattis accumsan aenean dignissim fames nisl sed pulvinar. Nullam ut tortor in ac semper enim cursus quisque. Amet felis at consectetur faucibus. At nisl dictum in eu quisque eget. Integer lacinia non mattis diam ornare. Tempor leo erat risus faucibus nulla pharetra egestas ultrices.
+                            </a>
+                        </div>
+                        <div className='commentOwner'>
+                            <img alt='' src={'assets/img/TepeHomeLittlePhoto.svg'}></img>
+                            <a className='commentOwnerFirstSpan'>Lorem ipsum</a>
+                            <a className='commentOwnerSecondSpan'>Tepe home</a>
+                            <img alt='' src={'assets/img/littleStar.svg'}></img>
+                        </div>
+                    </div>
+                    <div className='customerComment'>
+                        <div className='commentSymbol'>
+                            <img alt='' src={'assets/img/commentSymbol.svg'}></img>
+                        </div>
+                        <div className='commentSpan'>
+                            <a>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. Velit mattis accumsan aenean dignissim fames nisl sed pulvinar. Nullam ut tortor in ac semper enim cursus quisque. Amet felis at consectetur faucibus. At nisl dictum in eu quisque eget. Integer lacinia non mattis diam ornare. Tempor leo erat risus faucibus nulla pharetra egestas ultrices.
+                            </a>
+                        </div>
+                        <div className='commentOwner'>
+                            <img alt='' src={'assets/img/TepeHomeLittlePhoto.svg'}></img>
+                            <a className='commentOwnerFirstSpan'>Lorem ipsum</a>
+                            <a className='commentOwnerSecondSpan'>Tepe home</a>
+                            <img alt='' src={'assets/img/littleStar.svg'}></img>
+                        </div>
+                    </div>
+                    <div className='customerComment'>
+                        <div className='commentSymbol'>
+                            <img alt='' src={'assets/img/commentSymbol.svg'}></img>
+                        </div>
+                        <div className='commentSpan'>
+                            <a>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. Velit mattis accumsan aenean dignissim fames nisl sed pulvinar. Nullam ut tortor in ac semper enim cursus quisque. Amet felis at consectetur faucibus. At nisl dictum in eu quisque eget. Integer lacinia non mattis diam ornare. Tempor leo erat risus faucibus nulla pharetra egestas ultrices.
+                            </a>
+                        </div>
+                        <div className='commentOwner'>
+                            <img alt='' src={'assets/img/TepeHomeLittlePhoto.svg'}></img>
+                            <a className='commentOwnerFirstSpan'>Lorem ipsum</a>
+                            <a className='commentOwnerSecondSpan'>Tepe home</a>
+                            <img alt='' src={'assets/img/littleStar.svg'}></img>
+                        </div>
+                    </div>
+                </div>
+            </div>  */}
+            <img className='commentPageButtons' alt='' src={'assets/img/commentPageButtons.svg'}></img>
+           <img className='commentsRightButton' alt='' src={'assets/img/commentsRightButton.svg'}></img>
         </div>
     );
 }

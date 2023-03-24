@@ -3,6 +3,10 @@ import './Contact.css'
 export const Contact = props =>{
     return(
         <div className='contactContainer'>
+            <div className='contactLine'>
+                <img style={{width: "1430px"}} alt='' src={'assets/img/bigLine.svg'}></img>
+            </div>
+            <div className='contactElements'>
             <div className='leftContact'>
                 <div className='about'>
                     <img className='contactLogo' alt="" src={'assets/img/headerLogo.svg'}></img>
@@ -72,6 +76,7 @@ export const Contact = props =>{
                         <a>Send</a>
                     </button>
                 </div>
+            </div>
             </div>
         </div>
     );

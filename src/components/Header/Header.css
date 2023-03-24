@@ -26,7 +26,7 @@
     cursor: pointer;
 }
 .routers a:hover{
-    color: mediumblue;
+    color: red;
 }
 .headerButtons{
     display: flex;
@@ -66,7 +66,7 @@
     cursor: pointer;
 }
 .mediaCenterButton:hover{
-    color: darkred;
+    color: red;
 }
 .mediaCenterButton a{
     font-style: normal;

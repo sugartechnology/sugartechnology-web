@@ -3,9 +3,8 @@ import './Footer.css'
 export const Footer = props =>{
     return(
         <div className='footerContainer'>
-            
             <div>
-                <img alt='' src={'assets/img/bigLine.svg'}></img>
+                <img style={{width: "1440px"}} alt='' src={'assets/img/bigLine.svg'}></img>
             </div>
             <div className='footerElements'>
                 <div className='footerSpan'>
