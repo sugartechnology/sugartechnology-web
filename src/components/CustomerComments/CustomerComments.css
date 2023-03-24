@@ -1,0 +1,84 @@
+
+.firstCommnetBackground{
+    display: flex;
+}
+.firstCommentPage{
+    display: flex;
+    z-index: 1;
+    position: relative;
+    right: 1400px;
+    gap: 530px;
+}
+.commentsLeftButton{
+    position: relative;
+    bottom: 100px;
+}
+.commentsRightButton{
+    position: relative;
+    bottom: 100px;
+}
+.commentSpans{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    position: relative;
+    top: 40px;
+    left: 50px;
+}
+.firstCommentSpan{
+    width: 752px;
+    height: 55px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 110%;
+    text-align: center;
+    color: #FFFFFF;
+}
+.secondCommentSpan{
+    width: 47px;
+    height: 110px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 110%;
+    text-align: center;
+    color: #FFFFFF;
+}
+.thirdCommentSpan{
+    width: 961px;
+    height: 156px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 157.4%;
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+}
+.commentCustomer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+.customerPhoto{
+    border-radius: 100px;
+}
+.commentCustomer h1{
+    color: #FFFFFF;
+    font-size: 23px;
+}
+.commentCustomer a{
+    color: #FFFFFF;
+    position: relative;
+    bottom: 10px;
+}
+.commentPageButtons{
+    position: relative;
+    bottom: 50px;
+    left: 675px;
+}

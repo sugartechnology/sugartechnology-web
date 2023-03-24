@@ -7,6 +7,7 @@ import { Header } from './components/Header/Header';
 import { Statistics } from './components/Statistics/Statistics';
 import { Footer } from './components/Footer/Footer';
 import { Contact } from './components/Contact/Contact';
+import { CustomerComments } from './components/CustomerComments/CustomerComments';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
 
       <Customers></Customers>
+      <CustomerComments></CustomerComments>
       <Statistics></Statistics>
       <Contact></Contact>
       <Footer></Footer>
