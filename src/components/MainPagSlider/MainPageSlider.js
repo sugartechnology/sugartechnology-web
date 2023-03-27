@@ -37,14 +37,41 @@ export const MainPageSlider = (props) => {
             <WheelAnimationComponentItem >
 
 
-                <div className='animationFloor animationStopFloor' ></div>
-                <div className='animationCarpet animationStopCarpet' ></div>
-                <div className='animationWindow animationStopWindow' ></div>
-                <div className='animationSofa animationStopSofa' ></div>
-                <div className='animationFlower animationStopFlower' ></div>
-                <div className='animationDrawer animationStopDrawer' ></div>
+                {/* <div className='animationFloor animationStartFloor' ></div>
+                <div className='animationCarpet animationStartCarpet' ></div>
+                <div className='animationWindow animationStartWindow' ></div>
+                <div className='animationSofa animationStartSofa' ></div>
+                <div className='animationFlower animationStartFlower' ></div>
+                <div className='animationDrawer animationStartDrawer' ></div>
+                <div className='animationIphone animationStartIphone' ></div> */}
 
-                <div className='animationIphone animationStopIphone' ></div>
+
+                                    {/* Metaverse */}
+
+                {/* <div className='animationMan animationStartMan' ></div> 
+                <div className='animationJoy2 animationStartJoy2' ></div> 
+                <div className='animationJoy animationStartJoy' ></div>  */}
+
+                
+                                {/* Cloth */}
+                                
+
+              {/* <div className='animationWoman animationStartWoman' ></div> 
+              <div className='animationIphone2 animationStartIphone2' ></div>
+              <div className='animationDress animationStartDress' ></div> */}
+
+                                {/* Watch */}
+            {/* <div className='animationArm animationStartArm' ></div>
+            <div className='animationIphone2 animationStartIphone2' ></div>
+            <div className='animationWatch animationStartWatch' ></div> */}
+                               {/* Foot */}
+
+            <div className='animationFoot animationStartFoot' ></div>
+            <div className='animationIphone2 animationStartIphone2' ></div>
+            <div className='animationSneaker animationStartSneaker' ></div>
+
+
+
 
             </WheelAnimationComponentItem>
 
