@@ -66,9 +66,15 @@ export const MainPageSlider = (props) => {
             <div className='animationWatch animationStartWatch' ></div> */}
                                {/* Foot */}
 
-            <div className='animationFoot animationStartFoot' ></div>
+            {/* <div className='animationFoot animationStartFoot' ></div>
             <div className='animationIphone2 animationStartIphone2' ></div>
-            <div className='animationSneaker animationStartSneaker' ></div>
+            <div className='animationSneaker animationStartSneaker' ></div> */}
+
+
+                               {/* Attach */}
+            <div className='animationCorner animationStartCorner' ></div>
+            <div className='animationLeftSofa animationStartLeftSofa' ></div>
+            <div className='animationJoint animationStartJoint' ></div>
 
 
 

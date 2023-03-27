@@ -1003,7 +1003,7 @@
   transform: rotate(-40deg);
 }
 .animationStartFoot {
-  animation: 1s Foot_01 1s ease-out, 1s Foot_02 3s ease-out, infinite;
+  animation: 1s Foot_01 1s ease-out, 1s Foot_02 3s ease-out,1s Foot_03 5.5s ease-out, infinite;
   animation-fill-mode: forwards;
 }
 @keyframes Foot_01 {
@@ -1026,6 +1026,16 @@
     filter: blur(0px);
   }
 }
+@keyframes Foot_03 {
+    to {
+      width: 300px;
+      height: 300px;
+      left: -380px;
+      top: 480px;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+    }
+  }
 .animationSneaker {
   background: url(/public/MainPageSliderItems/shoe.png);
   background-repeat: no-repeat;
@@ -1088,5 +1098,167 @@
       opacity: 100%;
       transform: rotate(2deg);
       visibility: hidden;
+    }
+  }
+  .animationCorner {
+    background: url(/public/MainPageSliderItems/corner.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 450px;
+    top: -500px;
+    filter: blur(2.5px);
+    transform: rotate(-40deg);
+  }
+  .animationStartCorner{
+    animation: 1s corner_01 0.3s ease-out,1s corner_02 2.5s ease-out,1.6s corner_03 4.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+  }
+  @keyframes corner_01 {
+    to {
+      width: 180px;
+      height: 180px;
+      left: 400px;
+      top: 150px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  @keyframes corner_02 {
+    to {
+      width: 180px;
+      height: 180px;
+      left: 350px;
+      top: 200px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  @keyframes corner_03 {
+    to {
+      width: 180px;
+      height: 180px;
+      left: -350px;
+      top: 600px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+
+  .animationJoint {
+    background: url(/public/MainPageSliderItems/joint.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 350px;
+    top: -500px;
+    filter: blur(2.5px);
+    transform: rotate(-40deg);
+  }
+  .animationStartJoint{
+    animation: 1s joint_01 0.6s ease-out,0.2s joint_02 2s ease-out,.2s joint_01 2.3s ease-out,1s joint_03 2.5s ease-out,1.5s joint_04 4.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+  }
+  @keyframes joint_01 {
+    to {
+      width: 50px;
+      height: 50px;
+      left: 410px;
+      top: 220px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  @keyframes joint_02 {
+    to {
+      width: 60px;
+      height: 60px;
+      left: 410px;
+      top: 220px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      filter: invert(60%);
+
+    }
+  }
+  @keyframes joint_03 {
+    to {
+      width: 50px;
+      height: 50px;
+      left: 370px;
+      top: 260px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  @keyframes joint_04 {
+    to {
+      width: 50px;
+      height: 50px;
+      left: -270px;
+      top: 650px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  
+  .animationLeftSofa {
+    background: url(/public/MainPageSliderItems/leftsofa.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 250px;
+    top: -500px;
+    filter: blur(2.5px);
+    transform: rotate(-40deg);
+  }
+  .animationStartLeftSofa{
+    animation: 1s leftSofa_01 0.4s ease-out,1s leftSofa_02 2.5s ease-out,1s leftSofa_03 4.5s ease-out, infinite;
+    animation-fill-mode: forwards;
+  }
+  @keyframes leftSofa_01 {
+    to {
+      width: 180px;
+      height: 180px;
+      left: 150px;
+      top: 220px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  @keyframes leftSofa_02 {
+    to {
+      width: 190px;
+      height: 190px;
+      left: 238px;
+      top: 223px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  @keyframes leftSofa_03 {
+    to {
+      width: 190px;
+      height: 190px;
+      left: -238px;
+      top: 500px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
     }
   }
