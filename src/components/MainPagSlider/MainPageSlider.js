@@ -27,6 +27,14 @@ const MainPageSlider = (props) => {
             {props.children}
         </div>
 
+        <div className='productServicesPopup' id='productServicesPopup' style={{display: "none"}}>
+            <a>3D Çizim ve Render</a>
+            <a>3D Konfigüratör</a>
+            <a>Arttırılmış Gerçeklik</a>
+            <a>Kendi Ürününü Yarat</a>
+            <a>Dijitalleşme</a>
+        </div>
+
         <div className="slideDetail" style={{ filter: '8px' }}>
             <div className='slideDetailElements'>
                 <a className='slideDetailFirstSpan'>Lorem ipsum dolor sit amet consectetur.</a>

@@ -9,6 +9,24 @@ import { Footer } from './components/Footer/Footer';
 import { Contact } from './components/Contact/Contact';
 import { CustomerComments } from './components/CustomerComments/CustomerComments';
 import { About } from './components/About/About';
+import i18n from "i18next";
+import { initReactI18next , useTranslation} from "react-i18next"
+
+i18n
+  .use(initReactI18next)
+  .init({
+    lng: "tr", // varsayılan dil
+    fallbackLng: "en", // yedek dil
+    resources: {
+      en: {
+        translation: require("../src/locales/en.json")
+      },
+      tr: {
+        translation: require("../src/locales/tr.json")
+      }
+    }
+  });
+
 
 function App() {
   return (

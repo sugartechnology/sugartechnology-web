@@ -1,6 +1,8 @@
-import './Contact.css'
+import './Contact.css';
+import { useTranslation} from "react-i18next";
 
 export const Contact = props =>{
+    const {t} = useTranslation();
     return(
         <div className='contactContainer'>
             <div className='contactLine'>
@@ -36,16 +38,16 @@ export const Contact = props =>{
             <div className='middleContact'>
                 <div className='pages'>
                     <div className='contactHeaders'>
-                        <a>Pages</a>
+                        <a>{t("pages")}</a>
                         <img alt='' src={'assets/img/littleLine.svg'}></img>
                     </div>
                     <div className='contactRouters'>
-                        <a>Home</a>
-                        <a>About Us</a>
-                        <a>Integrations</a>
-                        <a>Pricing</a>
-                        <a>Features</a>
-                        <a>Contact Us</a>
+                        <a>{t("home")}</a>
+                        <a>{t("aboutUs")}</a>
+                        <a>{t("integrations")}</a>
+                        <a>{t("pricing")}</a>
+                        <a>{t("features")}</a>
+                        <a>{t("contactUs")}</a>
                     </div>
                 </div>
                 <div className='utilityPages'>
@@ -54,21 +56,21 @@ export const Contact = props =>{
                         <img alt='' src={'assets/img/littleLine.svg'}></img>
                     </div>
                     <div className='contactRouters'>
-                        <a>Password</a>
-                        <a>Protected</a>
-                        <a>404 Not Found</a>
-                        <a>StyleGuide</a>
-                        <a>Licenses</a>
-                        <a>Changelog</a>
+                        <a>{t("password")}</a>
+                        <a>{t("protected")}</a>
+                        <a>{t("notFound")}</a>
+                        <a>{t("styleGuide")}</a>
+                        <a>{t("licences")}</a>
+                        <a>{t("changelog")}</a>
                     </div>
                 </div>
             </div>
             <div className='rightContact'>
                 <div className='contactHeaders'>
-                    <a>Contact Us</a>
+                    <a>{t("Contact Us")}</a>
                 </div>
                 <div className='rightContactInputs'>
-                    <a>Enter your name and email, send your massage to us.</a>
+                    <a>{t("enterYourNameAndEmail")}</a>
                     <input className='nameInput' placeholder='Name'></input>
                     <input className='emailInput' placeholder='Email'></input>
                     <input className='messageInput' placeholder='Message'></input>

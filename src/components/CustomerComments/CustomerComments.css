@@ -23,7 +23,7 @@
 }
 .commentsRightButton{
     position: relative;
-    bottom: 500px;
+    bottom: 517px;
     left: 1240px;
     cursor: pointer;
 }
@@ -35,6 +35,7 @@
     position: relative;
     top: 40px;
     left: 50px;
+    gap: 20px;
 }
 .firstCommentSpan{
     width: 752px;
@@ -89,8 +90,8 @@
 }
 .commentPageButtons{
     position: relative;
-    bottom: 210px;
-    left: 672px;
+    bottom: 190px;
+    left: 665px;
 }
 .secondComment{
     display: flex;

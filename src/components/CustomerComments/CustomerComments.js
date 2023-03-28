@@ -1,6 +1,8 @@
-import './CustomerComments.css'
+import './CustomerComments.css';
+import { useTranslation} from "react-i18next";
 
 export const CustomerComments = props =>{
+    const {t} = useTranslation();
     return(
         <div className='customerCommentsContainer'>
             <img className='commentsLeftButton' alt='' src={'assets/img/commentsLeftButton.svg'}></img>
@@ -9,7 +11,7 @@ export const CustomerComments = props =>{
                 <div className='firstCommentPage'>
                     <div className='firstComment'>
                         <div className='commentSpans'>
-                            <a className='firstCommentSpan'>Trusted by millions of company.</a>
+                            <a className='firstCommentSpan'>{t("trustedByMillionsOfCompany")}</a>
                             <a className='secondCommentSpan'>“</a>
                             <a className='thirdCommentSpan'>Lorem ipsum dolor sit amet consectetur. A id rhoncus orci eget donec rhoncus. Vitae vitae quisque scelerisque velit in blandit dictum netus sed. Amet suspendisse sit morbi sagittis sed et. Odio etiam tristique in diam. Feugiat purus erat diam sit pharetra duis. Habitasse aenean ligula tincidunt amet ut ac lorem.</a>
                         </div>

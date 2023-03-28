@@ -5,12 +5,12 @@
     display: flex!important;
     justify-content: center;
     align-items: center;
-    
+
   }
   
   .swiper-slide img {
     display: block;
-    width: 80%!important;
+    width: 200px!important;
     height: auto;
     object-fit: cover;
   }
@@ -36,7 +36,11 @@
     height: 21px;
     left: 76.78px;
     top: 1604px;
+  }
   
+  .swiper-wrapper{
+    left: 170px;
+    width: 80% !important;
   }
   
   .swiper-button-prev::after{
@@ -49,7 +53,7 @@
 
   .customersSpan{
     position: relative;
-    bottom: 260px;
+    bottom: 240px;
     left: 490px;
     width: 875px;
     height: 37px;
@@ -61,3 +65,16 @@
     text-transform: capitalize;
     color: #666666;
   }
+
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 40px;
+  }
+
+  .swiper-button-next{
+    right: 60px !important;
+  }
+
+  .swiper-button-prev{
+    left: 60px !important;
+  }
+  
