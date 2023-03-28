@@ -1,14 +1,23 @@
 import './MainPageSlider.css'
 import SmallSliderMenu from './SmallSliderMenu.svg'
 import { WheelAnimationComponent, WheelAnimationComponentItem } from '../WheelAnimation/WheelAnimationComponent';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import * as React from 'react';
 
 export const MainPageSlider = (props) => {
 
+    const [index, setIndex] = useState(0);
+    const [timeOutId, setTimeOutId] = useState(0);
+    const indexRef = useRef(index);
+    useEffect(() => {
+        indexRef.current = index;
+        clearTimeout(timeOutId);
+        setTimeOutId(setTimeout(() => {
+            setIndex((indexRef.current + 1) % props.children.length);
+        }, 5000));
+    }, [index]);
 
-    const [selectedIndex, setSelectedIndex] = useState(0);
-
-    return (<div class='mainPageSliderContainer'>
+    return (<div className='mainPageSliderContainer'>
         <div className='mainPageTopLeftFigure rotate'></div>
         <div className='mainPageTopRightFigure rotate'></div>
         <div className='mainPageMiddleFigure rotate'></div>
@@ -28,74 +37,71 @@ export const MainPageSlider = (props) => {
         <div className='mainPageSmallFigure0 '></div>
         <div className="smallSliderMenu" >
             <img src={SmallSliderMenu} style={{ position: 'absolute' }}></img>
-            {props.children}
+            {React.Children.map(props.children,
+                (e, k) => {
+                    return React.cloneElement(e,
+                        {
+                            click: () => {
+                                setIndex(k);
+                            },
+                            selected: k == index
+                        })
+                })}
         </div>
 
         <div className="slideDetail" style={{ filter: '8px' }}></div>
-        <WheelAnimationComponent style={{ width: "500px", height: "500px" }} >
+        <WheelAnimationComponent style={{ width: "500px", height: "500px" }} index={index}>
 
-            <WheelAnimationComponentItem >
-
-
-                {/* <div className='animationFloor animationStartFloor' ></div>
-                <div className='animationCarpet animationStartCarpet' ></div>
-                <div className='animationWindow animationStartWindow' ></div>
-                <div className='animationSofa animationStartSofa' ></div>
-                <div className='animationFlower animationStartFlower' ></div>
-                <div className='animationDrawer animationStartDrawer' ></div>
-                <div className='animationIphone animationStartIphone' ></div> */}
-
-
-                                    {/* Metaverse */}
-
-                {/* <div className='animationMan animationStartMan' ></div> 
-                <div className='animationJoy2 animationStartJoy2' ></div> 
-                <div className='animationJoy animationStartJoy' ></div>  */}
-
-                
-                                {/* Cloth */}
-                                
-
-              {/* <div className='animationWoman animationStartWoman' ></div> 
-              <div className='animationIphone2 animationStartIphone2' ></div>
-              <div className='animationDress animationStartDress' ></div> */}
-
-                                {/* Watch */}
-            {/* <div className='animationArm animationStartArm' ></div>
-            <div className='animationIphone2 animationStartIphone2' ></div>
-            <div className='animationWatch animationStartWatch' ></div> */}
-                               {/* Foot */}
-
-            {/* <div className='animationFoot animationStartFoot' ></div>
-            <div className='animationIphone2 animationStartIphone2' ></div>
-            <div className='animationSneaker animationStartSneaker' ></div> */}
-
-
-                               {/* Attach */}
-            <div className='animationCorner animationStartCorner' ></div>
-            <div className='animationLeftSofa animationStartLeftSofa' ></div>
-            <div className='animationJoint animationStartJoint' ></div>
-
-
-
-
+            <WheelAnimationComponentItem key={1}>
+                <div name="Floor"></div>
+                <div name="Carpet" ></div>
+                <div name="Window" ></div>
+                <div name="Sofa"></div>
+                <div name="Flower" ></div>
+                <div name="Drawer"></div>
+                <div name="Iphone" ></div>
             </WheelAnimationComponentItem>
-
-            <WheelAnimationComponentItem style={{ display: "none" }}>
-                <div className='wheelAnimationFoot'></div>
-                <div className='wheelAnimationCamera'></div>
-                <div className='wheelAnimationShoe'></div>
+            <WheelAnimationComponentItem key={2}>
+                {/* Metaverse */}
+                <div name='Man' ></div>
+                <div name='Joy2' ></div>
+                <div name='Joy'></div>
+            </WheelAnimationComponentItem>
+            {/* Cloth */}
+            <WheelAnimationComponentItem key={3}>
+                <div name='Woman'></div>
+                <div name='Iphone2'></div>
+                <div name='Dress' ></div>
+            </WheelAnimationComponentItem>
+            {/* Watch */}
+            <WheelAnimationComponentItem key={4}>
+                <div name='Arm'></div>
+                <div name='Iphone2'></div>
+                <div name='Watch'></div>
+            </WheelAnimationComponentItem>
+            {/* Foot */}
+            <WheelAnimationComponentItem key={5}>
+                <div name='Foot'></div>
+                <div name='Iphone2'></div>
+                <div name='Sneaker'></div>
+            </WheelAnimationComponentItem>
+            {/* Attach */}
+            <WheelAnimationComponentItem key={6}>
+                <div name='Corner'></div>
+                <div name='LeftSofa'></div>
+                <div name='Joint'></div>
             </WheelAnimationComponentItem>
 
         </WheelAnimationComponent>
-    </div>);
+    </div >);
 }
 
 
 export const MainPageSliderItem = (props) => {
 
-    return (<div className='mainPageSliderItem'>
-        <img src={props.src} style={{
+
+    return (<div className='mainPageSliderItem' onClick={props.click}>
+        <img src={props.selected ? props.ssrc : props.src} style={{
             position: 'absolute',
             top: 'calc(50%)',
             transform: 'translate(-50%, -50%)',

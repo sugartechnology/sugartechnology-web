@@ -154,13 +154,13 @@
 }
 
 .animationStartSofa {
-  animation: sofa0 1s ease-out, 1.4s sofa1 1.5s ease-out, 1s sofa2 3.5s ease-out,
+  animation: sofa0 1s ease-out, 1.4s sofa1 1.5s ease-out,
     infinite;
   animation-fill-mode: forwards;
 }
 
 .animationStopSofa {
-  animation: sofa2 1s ease-out;
+  animation: 1s sofa2 ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -212,13 +212,12 @@
 }
 
 .animationStartIphone {
-  animation: ihpone0 1s ease-out, 1.4s ihpone01 1.5s ease-out,
-    0.5s ihpone02 3.5s ease-in, infinite;
+  animation: ihpone0 1s ease-out, 1.4s ihpone01 1.5s ease-out, infinite;
   animation-fill-mode: forwards;
 }
 
 .animationStopIphone {
-  animation: ihpone02 0.5s ease-in;
+  animation: 1s ihpone02 ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -277,8 +276,7 @@
 }
 
 .animationStartFloor {
-  animation: floor01 1s ease-out, 1.4s floor02 1.5s ease-out,
-    1.4s floor03 3.5s ease-out, infinite;
+  animation: floor01 1s ease-out, 1.4s floor02 1.5s ease-out, infinite;
   animation-fill-mode: forwards;
 }
 
@@ -338,8 +336,7 @@
 }
 
 .animationStartFlower {
-  animation: flower01 1s ease-out, 1.4s flower02 1.5s ease-out,
-    1s flower03 3.5s ease-out, infinite;
+  animation: flower01 1s ease-out, 1.4s flower02 1.5s ease-out, infinite;
   animation-fill-mode: forwards;
 }
 
@@ -406,8 +403,7 @@
 }
 
 .animationStartDrawer {
-  animation: drawer01 1s ease-out, 1.4s drawer02 1.5s ease-out,
-    1.5s drawer03 3.5s ease-out, infinite;
+  animation: drawer01 1s ease-out, 1.4s drawer02 1.5s ease-out, infinite;
   animation-fill-mode: forwards;
 }
 
@@ -472,8 +468,7 @@
 }
 
 .animationStartCarpet {
-  animation: carpet01 1s ease-out, 1.4s carpet02 1.5s ease-out,
-    1.5s carpet03 3.5s ease-out, infinite;
+  animation: carpet01 1s ease-out, 1.4s carpet02 1.5s ease-out, infinite;
   animation-fill-mode: forwards;
 }
 
@@ -523,8 +518,7 @@
 }
 
 .animationStartWindow {
-  animation: window01 1s ease-out, 1.4s window02 1.5s ease-out,
-    1.5s window03 3.5s ease-out, infinite;
+  animation: window01 1s ease-out, 1.4s window02 1.5s ease-out, infinite;
   animation-fill-mode: forwards;
 }
 
@@ -571,6 +565,7 @@
     visibility: hidden;
   }
 }
+
 .animationMan {
   background: url(/public/MainPageSliderItems/man_oculus.png);
   background-repeat: no-repeat;
@@ -584,10 +579,17 @@
   filter: blur(3.5px);
   transform: rotate(-21.76deg);
 }
+
 .animationStartMan {
-  animation: 1s man01 0.5s ease-out, 1s man02 3.5s ease-out, infinite;
+  animation: 1s man01 0.5s ease-out, infinite;
   animation-fill-mode: forwards;
 }
+
+.animationStopMan {
+  animation: 1s man02 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
 @keyframes man01 {
   to {
     height: 619px;
@@ -599,7 +601,18 @@
     transform: rotate(10deg);
   }
 }
+
 @keyframes man02 {
+  from {
+    height: 619px;
+    width: 619px;
+    left: 30px;
+    top: 10px;
+    border-radius: 0px;
+    filter: blur(0px);
+    transform: rotate(10deg);
+  }
+
   to {
     height: 619px;
     width: 619px;
@@ -609,6 +622,7 @@
     visibility: hidden;
   }
 }
+
 .animationJoy2 {
   background: url(/public/MainPageSliderItems/joy2.png);
   background-repeat: no-repeat;
@@ -622,11 +636,17 @@
   filter: blur(3.5px);
   transform: rotate(-21.76deg);
 }
+
 .animationStartJoy2 {
-  animation: 1s joy2_01 0.6s ease-out, 1s joy2_02 2s ease-out,
-    1s joy2_03 3.5s ease-out, infinite;
+  animation: 1s joy2_01 0.6s ease-out, 1s joy2_02 2s ease-out, infinite;
   animation-fill-mode: forwards;
 }
+
+.animationStopJoy2 {
+  animation: 1s joy2_03 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
 @keyframes joy2_01 {
   to {
     height: 110px;
@@ -638,6 +658,7 @@
     transform: rotate(0deg);
   }
 }
+
 @keyframes joy2_02 {
   to {
     height: 135px;
@@ -649,7 +670,18 @@
     transform: rotate(-35deg);
   }
 }
+
 @keyframes joy2_03 {
+  from {
+    height: 135px;
+    width: 155px;
+    left: 350px;
+    top: 400px;
+    border-radius: 0px;
+    filter: blur(0px);
+    transform: rotate(-35deg);
+  }
+
   to {
     height: 135px;
     width: 155px;
@@ -659,6 +691,7 @@
     visibility: hidden;
   }
 }
+
 .animationJoy {
   background: url(/public/MainPageSliderItems/joy.png);
   background-repeat: no-repeat;
@@ -672,11 +705,18 @@
   filter: blur(3.5px);
   transform: rotate(-21.76deg);
 }
+
 .animationStartJoy {
-  animation: 1s joy_01 0.6s ease-out, 1s joy_02 2s ease-out,
-    1s joy_03 3.5s ease-out, infinite;
+  animation: 1s joy_01 0.6s ease-out, 1s joy_02 2s ease-out, infinite;
   animation-fill-mode: forwards;
 }
+
+
+.animationStopJoy {
+  animation: 1s joy_03 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
 @keyframes joy_01 {
   to {
     height: 85px;
@@ -688,6 +728,7 @@
     transform: rotate(-120deg);
   }
 }
+
 @keyframes joy_02 {
   to {
     height: 95px;
@@ -699,7 +740,18 @@
     transform: rotate(-110deg);
   }
 }
+
 @keyframes joy_03 {
+  from {
+    height: 95px;
+    width: 115px;
+    left: 50px;
+    top: 400px;
+    border-radius: 0px;
+    filter: blur(01.5px);
+    transform: rotate(-110deg);
+  }
+
   to {
     height: 95px;
     width: 115px;
@@ -725,10 +777,15 @@
 }
 
 .animationStartWoman {
-  animation: 1.5s Woman01 0.4s ease-out, 1.5s Woman02 2.75s ease-out,
-    1s Woman03 5.5s ease-out, infinite;
+  animation: 1.5s Woman01 0.4s ease-out, 1.5s Woman02 2.75s ease-out, infinite;
   animation-fill-mode: forwards;
 }
+
+.animationStopWoman {
+  animation: 1s Woman03 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
 @keyframes Woman01 {
   to {
     height: 400px;
@@ -740,6 +797,7 @@
     transform: rotate(0deg);
   }
 }
+
 @keyframes Woman02 {
   to {
     height: 430px;
@@ -751,7 +809,18 @@
     transform: rotate(0deg);
   }
 }
+
 @keyframes Woman03 {
+  from {
+    height: 430px;
+    width: 430px;
+    left: 200px;
+    top: 185px;
+    border-radius: 0px;
+    filter: blur(0px);
+    transform: rotate(0deg);
+  }
+
   to {
     height: 430px;
     width: 430px;
@@ -763,6 +832,7 @@
     visibility: hidden;
   }
 }
+
 .animationIphone2 {
   position: absolute;
   background-repeat: no-repeat;
@@ -775,8 +845,9 @@
   transform: rotate(9.86deg);
   z-index: 2;
 }
+
 .animationStartIphone2 {
-  animation: ihpone04 1s ease-out, 1s ihpone05 3s ease-out,1s ihpone06 4s ease-out,1.2s ihpone07 5.5s ease-out,  infinite;
+  animation: ihpone04 1s ease-out, 1s ihpone05 3s ease-out, 1s ihpone06 4s ease-out, infinite;
   /* animation: ihpone04 1s ease-out,
     1s ihpone05 3s ease-out,
     1s ihpone06 4s ease-out,
@@ -784,6 +855,12 @@
     infinite; */
   animation-fill-mode: forwards;
 }
+
+.animationStopIphone2 {
+  animation: 1.2s ihpone07 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
 @keyframes ihpone04 {
   to {
     background-repeat: no-repeat;
@@ -795,6 +872,7 @@
     transform: rotate(30deg);
   }
 }
+
 @keyframes ihpone05 {
   to {
     background-repeat: no-repeat;
@@ -806,6 +884,7 @@
     transform: rotate(0deg);
   }
 }
+
 @keyframes ihpone06 {
   to {
     background-repeat: no-repeat;
@@ -817,7 +896,18 @@
     transform: rotate(0deg);
   }
 }
+
 @keyframes ihpone07 {
+  from {
+    background-repeat: no-repeat;
+    width: 210px;
+    height: 410px;
+    left: 310px;
+    top: 150px;
+
+    transform: rotate(0deg);
+  }
+
   to {
     background-repeat: no-repeat;
     width: 210px;
@@ -843,11 +933,17 @@
   z-index: 1;
   opacity: 0%;
 }
+
 .animationStartDress {
-  animation: 1.5s dress01 1.5s ease-out, 1s dress02 3.2s ease-out,
-    1s dress03 5.5s ease-out, infinite;
+  animation: 1.5s dress01 1.5s ease-out, 1s dress02 3.2s ease-out, infinite;
   animation-fill-mode: forwards;
 }
+
+.animationStopDress {
+  animation: 1s dress03 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
 @keyframes dress01 {
   to {
     width: 380px;
@@ -858,6 +954,7 @@
     transform: rotate(35deg);
   }
 }
+
 @keyframes dress02 {
   to {
     width: 430px;
@@ -868,7 +965,17 @@
     transform: rotate(2deg);
   }
 }
+
 @keyframes dress03 {
+  from {
+    width: 430px;
+    height: 430px;
+    left: 197px;
+    top: 185px;
+    opacity: 100%;
+    transform: rotate(2deg);
+  }
+
   to {
     width: 430px;
     height: 430px;
@@ -893,11 +1000,18 @@
   filter: blur(0.5px);
   transform: rotate(-21.76deg);
 }
+
 .animationStartWatch {
   animation: 1s watch_01 1.6s ease-out, 1s watch_02 3s ease-out,
-    0.5s watch_03 3.8s ease-out, 1.1s watch_04 5.5s ease-out, infinite;
+    0.5s watch_03 3.8s ease-out, infinite;
   animation-fill-mode: forwards;
 }
+
+.animationStopWatch {
+  animation: 1.1s watch_04 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
 @keyframes watch_01 {
   to {
     width: 160px;
@@ -909,6 +1023,7 @@
     filter: blur(0px);
   }
 }
+
 @keyframes watch_02 {
   to {
     width: 160px;
@@ -920,6 +1035,7 @@
     filter: blur(0px);
   }
 }
+
 @keyframes watch_03 {
   to {
     width: 110px;
@@ -931,7 +1047,18 @@
     filter: blur(0px);
   }
 }
+
 @keyframes watch_04 {
+  from {
+    width: 110px;
+    height: 110px;
+    left: 380px;
+    top: 275px;
+    opacity: 100%;
+    transform: rotate(-15deg);
+    filter: blur(0px);
+  }
+
   to {
     width: 110px;
     height: 110px;
@@ -955,11 +1082,18 @@
   filter: blur(2.5px);
   transform: rotate(-21.76deg);
 }
+
 .animationStartArm {
-  animation: 1s Arm_01 1s ease-out, 1s Arm_02 3s ease-out,
-    1s Arm_03 5.5s ease-out, infinite;
+  animation: 1s Arm_01 1s ease-out, 1s Arm_02 3s ease-out, infinite;
   animation-fill-mode: forwards;
 }
+
+.animationStopArm {
+
+  animation: 1s Arm_03 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
 @keyframes Arm_01 {
   to {
     width: 400px;
@@ -970,6 +1104,7 @@
     filter: blur(0px);
   }
 }
+
 @keyframes Arm_02 {
   to {
     width: 400px;
@@ -980,7 +1115,17 @@
     filter: blur(0px);
   }
 }
+
 @keyframes Arm_03 {
+  from {
+    width: 400px;
+    height: 400px;
+    left: 280px;
+    top: 200px;
+    transform: rotate(75deg);
+    filter: blur(0px);
+  }
+
   to {
     width: 400px;
     height: 400px;
@@ -990,6 +1135,7 @@
     filter: blur(0px);
   }
 }
+
 .animationFoot {
   background: url(/public/MainPageSliderItems/foot.png);
   background-repeat: no-repeat;
@@ -1002,10 +1148,17 @@
   filter: blur(2.5px);
   transform: rotate(-40deg);
 }
+
 .animationStartFoot {
-  animation: 1s Foot_01 1s ease-out, 1s Foot_02 3s ease-out,1s Foot_03 5.5s ease-out, infinite;
+  animation: 1s Foot_01 1s ease-out, 1s Foot_02 3s ease-out, infinite;
   animation-fill-mode: forwards;
 }
+
+.animationStopFoot {
+  animation: 1s Foot_03 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
 @keyframes Foot_01 {
   to {
     width: 300px;
@@ -1016,6 +1169,7 @@
     filter: blur(0px);
   }
 }
+
 @keyframes Foot_02 {
   to {
     width: 300px;
@@ -1026,16 +1180,27 @@
     filter: blur(0px);
   }
 }
+
 @keyframes Foot_03 {
-    to {
-      width: 300px;
-      height: 300px;
-      left: -380px;
-      top: 480px;
-      transform: rotate(-15deg);
-      filter: blur(0px);
-    }
+  from {
+    width: 300px;
+    height: 300px;
+    left: 250px;
+    top: 150px;
+    transform: rotate(-15deg);
+    filter: blur(0px);
   }
+
+  to {
+    width: 300px;
+    height: 300px;
+    left: -380px;
+    top: 480px;
+    transform: rotate(-15deg);
+    filter: blur(0px);
+  }
+}
+
 .animationSneaker {
   background: url(/public/MainPageSliderItems/shoe.png);
   background-repeat: no-repeat;
@@ -1052,7 +1217,12 @@
 
 .animationStartSneaker {
   animation: 1s Sneaker_01 1s ease-out, 1s Sneaker_02 3s ease-out,
-    1s Sneaker_03 4s ease-out,1.1s Sneaker_04 5.5s ease-out, infinite;
+    1s Sneaker_03 4s ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
+.animationStopSneaker {
+  animation: 1.0s Sneaker_04 ease-out, infinite;
   animation-fill-mode: forwards;
 }
 
@@ -1067,6 +1237,7 @@
     filter: blur(0px);
   }
 }
+
 @keyframes Sneaker_02 {
   to {
     width: 170px;
@@ -1078,6 +1249,7 @@
     filter: blur(0px);
   }
 }
+
 @keyframes Sneaker_03 {
   to {
     width: 177px;
@@ -1089,176 +1261,246 @@
     filter: blur(0px);
   }
 }
+
 @keyframes Sneaker_04 {
-    to {
-      width: 177px;
-      height: 177px;
-      left: -350px;
-      top: 700px;
-      opacity: 100%;
-      transform: rotate(2deg);
-      visibility: hidden;
-    }
-  }
-  .animationCorner {
-    background: url(/public/MainPageSliderItems/corner.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 450px;
-    top: -500px;
-    filter: blur(2.5px);
-    transform: rotate(-40deg);
-  }
-  .animationStartCorner{
-    animation: 1s corner_01 0.3s ease-out,1s corner_02 2.5s ease-out,1.6s corner_03 4.5s ease-out, infinite;
-    animation-fill-mode: forwards;
-  }
-  @keyframes corner_01 {
-    to {
-      width: 180px;
-      height: 180px;
-      left: 400px;
-      top: 150px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-    }
-  }
-  @keyframes corner_02 {
-    to {
-      width: 180px;
-      height: 180px;
-      left: 350px;
-      top: 200px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-    }
-  }
-  @keyframes corner_03 {
-    to {
-      width: 180px;
-      height: 180px;
-      left: -350px;
-      top: 600px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-    }
+  from {
+    width: 177px;
+    height: 177px;
+    left: 325px;
+    top: 350px;
+    opacity: 100%;
+    transform: rotate(-6deg);
+    filter: blur(0px);
   }
 
-  .animationJoint {
-    background: url(/public/MainPageSliderItems/joint.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    width: 200px;
-    height: 200px;
+  to {
+    width: 177px;
+    height: 177px;
+    left: -350px;
+    top: 700px;
+    opacity: 100%;
+    transform: rotate(2deg);
+    visibility: hidden;
+  }
+}
+
+.animationCorner {
+  background: url(/public/MainPageSliderItems/corner.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 450px;
+  top: -500px;
+  filter: blur(2.5px);
+  transform: rotate(-40deg);
+}
+
+.animationStartCorner {
+  animation: 1s corner_01 0.3s ease-out, 1s corner_02 2.5s ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
+.animationStopCorner {
+  animation: 1.6s corner_03 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes corner_01 {
+  to {
+    width: 180px;
+    height: 180px;
+    left: 400px;
+    top: 150px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
+  }
+}
+
+@keyframes corner_02 {
+  to {
+    width: 180px;
+    height: 180px;
     left: 350px;
-    top: -500px;
-    filter: blur(2.5px);
-    transform: rotate(-40deg);
+    top: 200px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
   }
-  .animationStartJoint{
-    animation: 1s joint_01 0.6s ease-out,0.2s joint_02 2s ease-out,.2s joint_01 2.3s ease-out,1s joint_03 2.5s ease-out,1.5s joint_04 4.5s ease-out, infinite;
-    animation-fill-mode: forwards;
-  }
-  @keyframes joint_01 {
-    to {
-      width: 50px;
-      height: 50px;
-      left: 410px;
-      top: 220px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-    }
-  }
-  @keyframes joint_02 {
-    to {
-      width: 60px;
-      height: 60px;
-      left: 410px;
-      top: 220px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-      filter: invert(60%);
+}
 
-    }
+@keyframes corner_03 {
+  from {
+    width: 180px;
+    height: 180px;
+    left: 350px;
+    top: 200px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
   }
-  @keyframes joint_03 {
-    to {
-      width: 50px;
-      height: 50px;
-      left: 370px;
-      top: 260px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-    }
+
+  to {
+    width: 180px;
+    height: 180px;
+    left: -350px;
+    top: 600px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
   }
-  @keyframes joint_04 {
-    to {
-      width: 50px;
-      height: 50px;
-      left: -270px;
-      top: 650px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-    }
+}
+
+.animationJoint {
+  background: url(/public/MainPageSliderItems/joint.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 350px;
+  top: -500px;
+  filter: blur(2.5px);
+  transform: rotate(-40deg);
+}
+
+.animationStartJoint {
+  animation: 1s joint_01 0.6s ease-out, 0.2s joint_02 2s ease-out, .2s joint_01 2.3s ease-out, 1s joint_03 2.5s ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
+.animationStopJoint {
+  animation: 1.5s joint_04 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes joint_01 {
+  to {
+    width: 50px;
+    height: 50px;
+    left: 410px;
+    top: 220px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
   }
-  
-  .animationLeftSofa {
-    background: url(/public/MainPageSliderItems/leftsofa.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 250px;
-    top: -500px;
-    filter: blur(2.5px);
-    transform: rotate(-40deg);
+}
+
+@keyframes joint_02 {
+  to {
+    width: 60px;
+    height: 60px;
+    left: 410px;
+    top: 220px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
+    filter: invert(60%);
+
   }
-  .animationStartLeftSofa{
-    animation: 1s leftSofa_01 0.4s ease-out,1s leftSofa_02 2.5s ease-out,1s leftSofa_03 4.5s ease-out, infinite;
-    animation-fill-mode: forwards;
+}
+
+@keyframes joint_03 {
+  to {
+    width: 50px;
+    height: 50px;
+    left: 370px;
+    top: 260px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
   }
-  @keyframes leftSofa_01 {
-    to {
-      width: 180px;
-      height: 180px;
-      left: 150px;
-      top: 220px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-    }
+}
+
+@keyframes joint_04 {
+  from {
+    width: 50px;
+    height: 50px;
+    left: 370px;
+    top: 260px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
   }
-  @keyframes leftSofa_02 {
-    to {
-      width: 190px;
-      height: 190px;
-      left: 238px;
-      top: 223px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-    }
+
+  to {
+    width: 50px;
+    height: 50px;
+    left: -270px;
+    top: 650px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
   }
-  @keyframes leftSofa_03 {
-    to {
-      width: 190px;
-      height: 190px;
-      left: -238px;
-      top: 500px;
-      opacity: 100%;
-      transform: rotate(0deg);
-      filter: blur(0px);
-    }
+}
+
+.animationLeftSofa {
+  background: url(/public/MainPageSliderItems/leftsofa.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 250px;
+  top: -500px;
+  filter: blur(2.5px);
+  transform: rotate(-40deg);
+}
+
+.animationStartLeftSofa {
+  animation: 1s leftSofa_01 0.4s ease-out, 1s leftSofa_02 2.5s ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
+.animationStopLeftSofa {
+  animation: 1s leftSofa_03 ease-out, infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes leftSofa_01 {
+  to {
+    width: 180px;
+    height: 180px;
+    left: 150px;
+    top: 220px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
   }
+}
+
+@keyframes leftSofa_02 {
+  to {
+    width: 190px;
+    height: 190px;
+    left: 238px;
+    top: 223px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
+  }
+}
+
+@keyframes leftSofa_03 {
+  from {
+    width: 190px;
+    height: 190px;
+    left: 238px;
+    top: 223px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
+  }
+
+  to {
+    width: 190px;
+    height: 190px;
+    left: -238px;
+    top: 500px;
+    opacity: 100%;
+    transform: rotate(0deg);
+    filter: blur(0px);
+  }
+}
