@@ -25,5 +25,22 @@
     "enterYourNameAndEmail": "Enter your name and email, send your message to us.",
     "name": "Name",
     "email": "Email",
-    "message": "Message"
+    "message": "Message",
+    "whoIsSugar": "Who is Sugar?",
+    "sugarTeam": "Sugar Team...",
+    "productManagmentHead": "Product Managment Head",
+    "softwareDeliveryHead": "Software Delivery Head",
+    "cgiTeamLeader": "CGI Team Leader",
+    "whatsNew": "Whats New?",
+    "sectoralSolution": "Sectoral Solution",
+    "areYouAFurnitureSeller": "Are you a furniture seller?",
+    "areYouArchitect":"Are You Architect?",
+    "areYouShoeSeller":"Are You Shoe Seller",
+    "doYouWantMetaverse":"Do You Want Metaverse?",
+    "weHaveGoodSolutionForYou": "We have a good solution for you.",
+    "getStarted":"Get Started",
+    "arDetails":"AR details",
+    "changeMaterial": "Change Material",
+    "arSeeHome": "AR & See Home",
+    "joint": "Joint"
 }

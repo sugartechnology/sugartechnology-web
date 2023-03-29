@@ -3,6 +3,7 @@ import { useTranslation} from "react-i18next";
 import LanguageSelector from './LanguageSelector';
 
 
+
 export const Header = props => {
     const {t} = useTranslation();
     function showPopup(){
@@ -19,9 +20,9 @@ export const Header = props => {
                 <img alt="" src={'assets/img/headerLogo.svg'}></img>
             </div>
             <div className="routers">
-                <a>{t("home")}</a>
+                <a href='/'>{t("home")}</a>
                 <a onMouseOver={showPopup}>{t("productServices")}</a>
-                <a>{t("aboutUs")}</a>
+                <a href='/aboutUs'>{t("aboutUs")}</a>
                 <a>{t("blog")}</a>
                 <a>{t("contactUs")}</a>
             </div>

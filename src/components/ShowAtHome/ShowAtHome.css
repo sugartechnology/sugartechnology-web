@@ -1,0 +1,95 @@
+.ShowAtHomeContainer{
+    height: 730px;
+    display: flex;
+    justify-content: space-evenly;
+    background: #EBEBEB;
+}
+.showAtHomeBubbles{
+    position: absolute;
+}
+.showAtHomeSpans{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 40px;
+    top: 80px;
+    gap: 100px;
+}
+.showAtHomeHeader{
+    height: 100px;
+    width: 510px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 66px;
+    letter-spacing: -1px;
+    color: #000000;
+}
+.showAtHomeSpan{
+    width: 497px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.showAtHomeImage{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+}
+.showAtHomeButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    position: relative;
+    bottom: 50px;
+}
+.showAtHomeButton1{
+    height: 60px;
+    width: 170px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    filter: drop-shadow(1px 6px 8px rgba(66, 66, 66, 0.35));
+}
+.showAtHomeButton1 a{
+    height: 26px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ED401A;
+}
+.showAtHomeButton2{
+    height: 60px;
+    width: 170px;
+    border: 2px solid #ED401A;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.showAtHomeButton2 a{
+    width: 109px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ED401A;
+}

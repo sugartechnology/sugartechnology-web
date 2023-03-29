@@ -10,7 +10,9 @@ import { Contact } from './components/Contact/Contact';
 import { CustomerComments } from './components/CustomerComments/CustomerComments';
 import { About } from './components/About/About';
 import i18n from "i18next";
-import { initReactI18next , useTranslation} from "react-i18next"
+import { initReactI18next } from "react-i18next";
+import { ArDetails } from './components/ArDetails/ArDetails';
+import { Route, BrowserRouter } from 'react-router-dom';
 
 i18n
   .use(initReactI18next)
@@ -41,7 +43,12 @@ function App() {
         <MainPageSliderItem src={process.env.PUBLIC_URL + '/joint.svg'}></MainPageSliderItem>
       </MainPageSlider>
 
-      <About></About>
+<BrowserRouter>
+  <Route path='/aboutUs'>
+    <About></About>
+  </Route>
+</BrowserRouter>
+      
       <Customers></Customers>
       <Statistics></Statistics>
       <CustomerComments></CustomerComments>

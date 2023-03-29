@@ -1,0 +1,78 @@
+.sectoralSolutionContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1800px;
+    gap: 60px;
+}
+.sectoralSolutionHeader{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.sectoralSolutionSpan{
+    width: 702px;
+    height: 89px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.sectoralSolutionLine{
+    width: 761px;
+    height: 4px;
+    background: linear-gradient(90deg, #ED401A 1.58%, #9970C8 95.97%);
+    transform: rotate(-180deg);
+}
+.solution{
+    display: flex;
+    gap: 50px;
+}
+.solutionSpans{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.solutionHeader{
+    width: 559px;
+    height: 38px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 34px;
+    letter-spacing: -1px;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+.solutionSpan {
+    width: 450px;
+}
+.solutionButton{
+    width: 154px;
+    height: 37px;
+    box-sizing: border-box;
+    border: 1px solid #ED401A;
+    border-radius: 100px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.solutionButton a{
+    width: 82px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ED401A;
+}

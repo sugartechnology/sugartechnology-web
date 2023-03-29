@@ -1,5 +1,4 @@
 import './About.css';
-import { Suspense } from 'react';
 import { useTranslation} from "react-i18next";
 
 export const About = props =>{
