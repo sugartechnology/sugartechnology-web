@@ -1,0 +1,62 @@
+.aboutContainer{
+    display: flex;
+    height: 542px;
+}
+.aboutSpans{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    left: 100px;
+}
+.aboutSpans h1{
+    width: 501px;
+    height: 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.aboutSpans a{
+    width: 442px;
+    height: 200px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: justify;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.aboutButton{
+    border: navajowhite;
+    width: 129px;
+    height: 44px;
+    background: #ED401A;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.aboutButton a{
+    width: 83px;
+    height: 18px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15.9998px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.firstAboutLogo{
+    position: relative;
+    left: 250px;
+    top: 90px;
+}
+.secondAboutLogo{
+    position: relative;
+    bottom: 550px;
+    filter: blur(7.5px);
+}

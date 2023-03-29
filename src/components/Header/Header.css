@@ -10,28 +10,30 @@
     position: relative;
     width: 160.08px;
     height: 58.46px;
-    top: 20px;
+    top: 5px;
     left: 30px;
+    cursor: pointer;
 }
 .routers{
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 45px;
+    margin-top: 25px;
     position: relative;
     left: 40px;
 }
 .routers a{
     color: #170F49;
     cursor: pointer;
+    text-decoration: none;
 }
 .routers a:hover{
-    color: mediumblue;
+    color: red;
 }
 .headerButtons{
     display: flex;
     gap: 20px;
-    margin-top: 25px;
+    margin-top: 18px;
     position: relative;
     right: 40px;
 }
@@ -41,16 +43,37 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 135px;
-    height: 54px;
+    width: 130px;
+    height: 34px;
     border-radius: 50px;
     background: #FFFFFF;
     border: 1px solid #EFF0F7;
     box-shadow: 0px 5px 5px rgba(8, 15, 52, 0.04);
 }
+.languageSelect{
+    border: none;
+}
+.englishButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    right: 5px;
+}
+.turkishButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    right: 5px;
+}
 .languageFlag{
     width: 36px;
-    height: 36px;
+    height: 30px;
 }
 .languageShowButton{
     width: 8px;
@@ -58,15 +81,15 @@
     cursor: pointer;
 }
 .mediaCenterButton{
-    width: 135px;
-    height: 54px;
+    width: 125px;
+    height: 34px;
     background: #ED401A;
     border-radius: 76px;
     border: none;
     cursor: pointer;
 }
 .mediaCenterButton:hover{
-    color: darkred;
+    color: red;
 }
 .mediaCenterButton a{
     font-style: normal;

@@ -1,9 +1,18 @@
 .contactContainer{
     display: flex;
+    flex-direction: column;
     position: relative;
-    height: 500px;
-    top: 40px;
+    height: 550px;
+    top: 60px;
     margin-left: 50px;
+}
+.contactLine{
+    position: relative;
+    right: 45px;
+    bottom: 20px;
+}
+.contactElements{
+    display: flex;
 }
 .leftContact{
     display: flex;

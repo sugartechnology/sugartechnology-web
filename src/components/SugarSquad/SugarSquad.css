@@ -1,0 +1,46 @@
+.SugarSquadContainer{
+    height: 391px;
+    background: #F7F7F7;
+    display: flex;
+    gap: 200px;
+}
+.sugarSquads{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    position: relative;
+    left: 50px;
+}
+.SugarSquadMember{
+    display: flex;
+    flex-direction: row;
+}
+.crew{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.memberInformation{
+    display: flex;
+    flex-direction: column;
+}
+.memberName{
+    width: 166px;
+    height: 27px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    color: #000000;
+}
+.memberPosition{
+    width: 166px;
+    height: 41px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.035em;
+    color: #000000;
+}

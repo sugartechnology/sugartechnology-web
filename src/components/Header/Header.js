@@ -1,29 +1,37 @@
 import './Header.css'
+import { useTranslation} from "react-i18next";
+import LanguageSelector from './LanguageSelector';
+
 
 
 export const Header = props => {
+    const {t} = useTranslation();
+    function showPopup(){
+        var popup = document.getElementById("productServicesPopup");
+        if(popup.style.display === "none"){
+            popup.style.display = "flex";
+        }else { 
+            popup.style.display = "none";
+        }
+    }
     return(
-        <div className="headerContainer" style={{width: "1439px", height: "100px"}}>
+        <div className="headerContainer" style={{width: "1439px", height: "70px"}}>
             <div className="sugarLogo">
                 <img alt="" src={'assets/img/headerLogo.svg'}></img>
             </div>
             <div className="routers">
-                <a>Home</a>
-                <a>Product / Services</a>
-                <a>About Us</a>
-                <a>Blog</a>
-                <a>Contact Us</a>
+                <a href='/'>{t("home")}</a>
+                <a onMouseOver={showPopup}>{t("productServices")}</a>
+                <a href='/aboutUs'>{t("aboutUs")}</a>
+                <a>{t("blog")}</a>
+                <a>{t("contactUs")}</a>
             </div>
             <div className="headerButtons">
-                <div className='languageButton'>
-                    <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag.svg'}></img>
-                    <a className='languageSpan'>English</a>
-                    <img className='languageShowButton' alt='' src={'assets/img/Chevron.svg'}></img>
-                </div>
+                <LanguageSelector></LanguageSelector>
                 <button className='mediaCenterButton'>
-                    <a>Media Center</a>
+                    <a>{t("mediaCenter")}</a>
                 </button>
             </div>
-        </div>
+        </div>  
     );
 }

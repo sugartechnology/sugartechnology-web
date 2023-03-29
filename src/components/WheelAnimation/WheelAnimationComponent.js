@@ -6,7 +6,7 @@ import './WheelAnimationComponent.css'
 
 export const WheelAnimationComponent = React.forwardRef((props, refs) => {
 
-    const prevIndex = usePrevious(props.index);
+
 
     return (
         <div className="wheelAnimationItemsContainer" style={props.style}>
@@ -18,7 +18,7 @@ export const WheelAnimationComponent = React.forwardRef((props, refs) => {
                                 <div className='wheelAnimationItemInner'>
                                     {React.cloneElement(e,
                                         {
-                                            status: k == props.index ? 'start' : k == prevIndex ? 'stop' : ''
+                                            status: k == props.index ? 'start' : k == props.prevIndex ? 'stop' : ''
                                         })
                                     }</div>
                             </div>

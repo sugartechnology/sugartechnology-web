@@ -1,0 +1,64 @@
+.WhatsNewContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    gap: 20px;
+}
+.whatsNewHeader{
+    width: 550px;
+    height: 80px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+    position: relative;
+    top: 40px;
+}
+.whatsNewSpan{
+    width: 800px;
+    height: 144px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-top: 50px;
+}
+.whatsNewSpans{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.whatsNewElements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.whatsNewElement{
+    width: 700px;
+}
+.whatsNewElementShadow{
+    height: 65.9px;
+    position: relative;
+    bottom: 1px;
+}
+.whatsNewPageButtons{
+    height: 70px;
+    width: 900px;
+    position: relative;
+    bottom: 30px;
+    background: white;
+}
+.whatsNewPageButton{
+    position: relative;
+    left: 410px;
+    top: 20px;
+}
