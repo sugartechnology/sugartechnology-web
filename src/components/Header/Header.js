@@ -6,7 +6,7 @@ import LanguageSelector from './LanguageSelector';
 
 export const Header = props => {
     const {t} = useTranslation();
-    function showPopup(){
+    const showPopup = ()=>{
         var popup = document.getElementById("productServicesPopup");
         if(popup.style.display === "none"){
             popup.style.display = "flex";
@@ -21,10 +21,10 @@ export const Header = props => {
             </div>
             <div className="routers">
                 <a href='/'>{t("home")}</a>
-                <a onMouseOver={showPopup}>{t("productServices")}</a>
+                <a href='/products' >{t("productServices")}</a>
                 <a href='/aboutUs'>{t("aboutUs")}</a>
-                <a>{t("blog")}</a>
-                <a>{t("contactUs")}</a>
+                <a href='/blog'>{t("blog")}</a>
+                <a href='/contact'>{t("contactUs")}</a>
             </div>
             <div className="headerButtons">
                 <LanguageSelector></LanguageSelector>

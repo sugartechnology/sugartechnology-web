@@ -6,7 +6,7 @@ export const SugarTeam = props =>{
     return(
         <div className='SugarTeamContainer'>
             <div className='sugarTeamHeader'>
-                <a>{t(sugarTeam)}</a>
+                <a>{t("sugarTeam")}</a>
             </div>
             <div className='sugarTeamLeaders'>
                 <div className='sugarTeamLeader'>
