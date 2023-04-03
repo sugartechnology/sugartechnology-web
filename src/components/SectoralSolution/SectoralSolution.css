@@ -76,3 +76,51 @@
     text-align: center;
     color: #ED401A;
 }
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOutRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+
+#rightSpans {
+    animation: slideLeft 1s backwards;
+}
+#leftSpans{
+    animation: slideRight 1s forwards;
+}
+#rightImage{
+    animation: slideRight 1s backwards;
+}
+#leftImage{
+    animation: slideRight 1s forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

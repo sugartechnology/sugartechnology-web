@@ -1,0 +1,39 @@
+.contactAddressInformation{
+    position: absolute;
+    top: 1200px;
+    left: 300px;
+    display: flex;
+}
+.addressContainer{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    left: 40px;
+}
+.addressSpan{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.contactAddress{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.contactLogo{
+    position: relative;
+    width: 160.08px;
+    height: 58.46px;
+    left: 30px;
+    cursor: pointer;
+    bottom: 30px;
+}
+.location{
+    position: relative;
+    left: 100px;
+    width: 500px;
+    height: 298px;
+    border-radius: 20px;
+    border: 2px solid #A5A5A5;
+}

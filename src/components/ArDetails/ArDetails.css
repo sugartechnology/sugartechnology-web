@@ -37,3 +37,97 @@
     display: flex;
     gap: 50px;
 }
+.option1Span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #ED401A;
+    mix-blend-mode: normal;
+    cursor: pointer;
+}
+.option2Span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #ABABAB;
+    mix-blend-mode: normal;
+    cursor: pointer;
+}
+.option3Span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #ABABAB;
+    mix-blend-mode: normal;
+    cursor: pointer;
+}
+.option1Line{
+    width: 308.53px;
+    height: 0px;
+    border: 3px solid #ED401A;
+    transform: rotate(-180deg);
+}
+.option2Line{
+    width: 308.53px;
+    height: 0px;
+    border: 3px solid #ABABAB;
+    transform: rotate(-180deg);
+}
+.option3Line{
+    width: 308.53px;
+    height: 0px;
+    border: 3px solid #ABABAB;
+    transform: rotate(-180deg);
+}
+.option1Popup{
+    position: absolute;
+    width: 307px;
+    height: 195px;
+    left: 200px;
+    top: 1200px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.35);
+}
+.option2Popup{
+    position: absolute;
+    width: 307px;
+    height: 195px;
+    left: 565px;
+    top: 1200px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.35);
+}
+.option3Popup{
+    position: absolute;
+    width: 307px;
+    height: 195px;
+    left: 934px;
+    top: 1200px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.35);
+}
+.optionPopupSpan{
+    width: 250px;
+    height: 169px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #000000;
+    position: relative;
+    top: 10px;
+}

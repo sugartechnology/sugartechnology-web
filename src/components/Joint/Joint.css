@@ -1,0 +1,19 @@
+.jointContainer{
+    height: 730px;
+    display: flex;
+    justify-content: space-evenly;
+    background: #EBEBEB;
+}
+.jointSpans{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    right: 150px;
+}
+.jointImage{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    width: 700px;
+}

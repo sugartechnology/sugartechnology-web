@@ -1,0 +1,162 @@
+.contactInputContainer{
+    height: 775px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contactInputs{
+    width: 770px;
+    height: 538px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.contactInputInputs{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.contactInputHeaders{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.contactInputHeader{
+    width: 100px;
+    height: 41px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02666em;
+    background: linear-gradient(135deg, #FFA895 15.1%, #FF2E00 67.71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.contactInputSpan{
+    width: 684px;
+    height: 52px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #67748E;
+}
+.nameEmailInputs{
+    display: flex;
+    gap: 30px;
+}
+.nameInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nameInputSpan{
+    width: 85px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    color: #252F40;
+}
+.emailInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.emailInputSpan{
+    width: 48px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    color: #252F40;
+}
+.nameEmailInput{
+    height: 40px;
+    width: 306px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #D2D6DA;
+}
+.descriptionInputs{
+    display: flex;
+    flex-direction: column;
+}
+.descriptionInput{
+    height: 150px;
+    width: 636px;
+    background: #FFFFFF;
+    border: 1px solid #D2D6DA;
+    border-radius: 8px;
+    padding: 8px;
+}
+textarea {
+    resize: none;
+}
+.sendMessageButton{
+    height: 40px;
+    width: 152px;
+    border: none;
+    background: linear-gradient(135deg, #FFA895 15.1%, #FF2E00 67.71%);
+    box-shadow: 0px 4px 7px -1px rgba(0, 0, 0, 0.11), 0px 2px 4px -1px rgba(0, 0, 0, 0.07);
+    border-radius: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.sendMessageButton a{
+    height: 16px;
+    width: 112px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.descriptionInputSpan{
+    width: 200px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 106px;
+    display: flex;
+    color: #252F40;
+    align-items: center;
+    position: relative;
+    bottom: 5px;
+}
+.nameEmailInput::placeholder{
+    position: relative;
+    left: 5px;
+}
+.descriptionInput::placeholder {
+    position: relative;
+    left: 5px;
+}

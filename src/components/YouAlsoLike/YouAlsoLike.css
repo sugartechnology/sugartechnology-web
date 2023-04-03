@@ -1,0 +1,18 @@
+.youAlsoLikeContainer{
+    height: 233px;
+    background: #F7F7F7;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.youAlsoLikeSpan{
+    width: 450px;
+    height: 43px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    color: #ED401A;
+}

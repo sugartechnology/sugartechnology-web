@@ -1,0 +1,52 @@
+.blogsMainContainer{
+    display: flex;
+    justify-content: space-around;
+    background: #EBEBEB;
+    height: 676px;
+    align-items: center;
+}
+.blogsBackground{
+    position: absolute;
+    position: absolute;
+    top: 70px;
+    left: 1px;
+    width: 1440px;
+}
+.blogsSpans{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.blogsImg{
+    position: relative;
+    width: 620px;
+    height: 537px;
+}
+.blogsHeader{
+    height: 203px;
+    width: 510px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -1px;
+    color: #000000;
+}
+.blogSpan{
+    height: 82px;
+    width: 497px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    mix-blend-mode: normal;
+}
+.blogsButtons{
+    display: flex;
+    gap: 40px;
+    position: relative;
+    top: 50px;
+}

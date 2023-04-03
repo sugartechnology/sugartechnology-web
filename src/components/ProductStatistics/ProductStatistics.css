@@ -1,0 +1,46 @@
+.productStatisticsContainer{
+    height: 536px;
+    display: flex;
+    background: white;
+    gap: 50px;
+    justify-content: space-around;
+}
+.productStatisticsHeader{
+    display: flex;
+    height: 203px;
+    width: 409px;
+    line-height: 57px;  
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    color: #000000;
+}
+.productStatisticsSpans{
+    width: 418px;
+    display: flex;
+    height: 130px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: justify;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+    gap: 40px;
+    flex-direction: column;
+}
+.productStatisticsSpanElements{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+.productStatisticsImage{
+    position: relative;
+    top: 100px;
+}

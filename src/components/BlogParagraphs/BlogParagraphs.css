@@ -1,0 +1,84 @@
+.blogParagraphsContainer{
+    height: 3220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.paragraph{
+    display: flex;
+    flex-direction: column;
+}
+.paragraphHeader{
+    width: 849px;
+    height: 80px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    color: #000000;
+}
+.paragraphSpan{
+    width: 1057px;
+    height: 248px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #8C8C8C;
+}
+.secondParagraphLists{
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.secondParagraphList{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    color: #8C8C8C;
+}
+.author{
+    width: 657.3px;
+    height: 176.14px;
+    border: 2px solid #BFBFBF;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    right: 200px;
+}
+.authorSpans{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.authorHeader{
+    width: 292.13px;
+    height: 34.36px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    color: #ED401A;
+}
+.authorSpan{
+    width: 424.06px;
+    height: 58.41px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 124.5%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}

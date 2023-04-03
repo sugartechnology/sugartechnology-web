@@ -9,8 +9,16 @@ import { initReactI18next } from "react-i18next";
 import { Route, Routes, Switch } from 'react-router-dom';
 
 import { MainPage } from './pages/main/MainPage';
-import { AboutUs } from './pages/aboutUs/AboutUs'
-import { Products } from './pages/products/Products';
+import { AboutUs } from './pages/aboutUs/AboutUs';
+import { ProductAr } from './pages/products/ProductAr';
+import { ProductMeta } from './pages/products/ProductMeta';
+import { ProductJoint } from './pages/products/ProductJoint';
+import { ProductWatch } from './pages/products/ProductWatch';
+import { ProductShoes } from './pages/products/ProductShoes';
+import { ProductClooth } from './pages/products/ProductClooth';
+import { Blog } from './pages/blogs/Blog';
+import { Blogs } from './pages/blogs/Blogs';
+import { ContactUs } from './pages/contactUs/ContactUs';
 i18n
   .use(initReactI18next)
   .init({
@@ -26,15 +34,22 @@ i18n
     }
   });
 
-
 function App() {
   return (
         <div>
         <Header></Header>
         <Routes>
           <Route path='/' element={<MainPage></MainPage>}></Route>
-          <Route path='/products' element={<Products></Products>}></Route>
+          <Route path='/productAr' element={<ProductAr></ProductAr>}></Route>
+          <Route path='/productMeta' element={<ProductMeta></ProductMeta>}></Route>
+          <Route path='/productJoint' element={<ProductJoint></ProductJoint>}></Route>
+          <Route path='/productWatch' element={<ProductWatch></ProductWatch>}></Route>
+          <Route path='/productShoes' element={<ProductShoes></ProductShoes>}></Route>
+          <Route path='/productClooth' element={<ProductClooth></ProductClooth>}></Route>
           <Route path='/aboutUs' element={<AboutUs></AboutUs>}></Route>
+          <Route path='/sugarBlog' element={<Blog></Blog>}></Route>
+          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+          <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
         </Routes>
         <Contact></Contact>
         <Footer></Footer>

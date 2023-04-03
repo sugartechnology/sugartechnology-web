@@ -1,0 +1,40 @@
+.blogGraphQLContainer{
+    height: 920px;
+}
+.blogGraphSpans{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    top: 200px;
+}
+.blogGraphBackground{
+    position: absolute;
+    z-index: -1;
+}
+.blogGraphHeader{
+    width: 1057.8px;
+    height: 152.43px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #F5F5F5;
+}
+.blogGraphSpan{
+    width: 901px;
+    height: 180px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #D0C8C8;
+}

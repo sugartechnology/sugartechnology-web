@@ -1,0 +1,55 @@
+.shoesQrContainer{
+    display: flex;
+    height: 750px;
+    background: #E9E9E9;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.shoesQrElements{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    right: 100px;
+    top: 100px;
+}
+.shoesQrHeader{
+    height: 155px;
+    width: 516px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    color: #000000;
+}
+.shoesQrSpan{
+    width: 451px;
+    height: 72px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: justify;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.shoesButtons{
+    width: 207px;
+    height: 157px;
+    background: #FFFFFF;
+    border: 2px solid #AAAAAA;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.shoesQrShoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.shoesQrImg{
+    position: relative;
+    top: 65px;
+}

@@ -1,10 +1,10 @@
-
 .headerContainer{
     display: flex;
     justify-content: space-between;
     position: relative;
     background: #F2F2F2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 .sugarLogo{
     position: relative;
@@ -42,6 +42,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
     gap: 10px;
     width: 130px;
     height: 34px;
@@ -98,4 +99,160 @@
     line-height: 18px;
     text-align: center;
     color: #FFFFFF;
+}
+.productServicesPopup {
+    width: 208px;
+    height: 140px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    position: absolute;
+    left: 535px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.productServicesPopup a {
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    left: 10px;
+    width: 162px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.popupOption:hover{
+    background: #FFE9E7;
+}
+.productServicesPopup a:visited{
+    color: #000000;
+}
+.popupOption{
+    display: flex;
+    position: relative;
+    width: 196px;
+    height: 30px;
+    border-radius: 8px;
+    left: 6px;
+    top: 5px;
+}
+.popupVector{
+    width: 10px;
+    position: relative;
+    left: 20px;
+}
+.popupLine{
+    width: 200px;
+    position: relative;
+    left: 5px;
+}
+.popupLineSmall{
+    width: 150px;
+}
+.secondPopup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 7px 8px;
+    position: relative;
+    width: 150px;
+    height: 100px;
+    background: #ECECEC;
+    box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
+    border-radius: 12px;
+    position: absolute;
+    left: 750px;
+    z-index: 6;
+    top: 160px;
+    justify-content: space-around;
+}
+.secondPopup a{
+    text-decoration: none;
+}
+.firstPopup a{
+    text-decoration: none;
+}
+.secondPopup a:hover{
+    color: red;
+}
+.secondPopup a:visited{
+    color: #000000;
+}
+.firstPopup a:visited{
+    color: #000000;
+}
+.firstPopup a:hover{
+    color: red;
+}
+.firstPopup{
+    display: flex;
+    flex-direction: column;
+    padding: 7px 8px;
+    position: relative;
+    width: 155px;
+    height: 74px;
+    background: #ECECEC;
+    box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
+    border-radius: 12px;
+    position: absolute;
+    left: 750px;
+    z-index: 6;
+    top: 25px;
+    justify-content: space-around;
+}
+.languagePopup{
+    display: flex;
+    top: 60px;
+    right: 209px;
+    z-index: 2;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 6;
+}
+.headerShowButton{
+    display: none;
+    width: 50px;
+    position: relative;
+    left: 10px;
+}
+@media screen and (max-width: 500px) {
+    .headerContainer{
+        justify-content: normal;
+        gap: 100px;
+        width: 499px !important;
+    }
+    .headerShowButton{
+        display: flex;
+    }
+    .routers{
+        display: none;
+    }
+    .mediaCenterButton{
+        display: none;
+    }
+    .languageSpan{
+        display: none;
+    }
+    .languageButton{
+        gap: 0px;
+        width: 60px;
+        left: 40px;
+    }
+    .languagePopup{
+        right: 0px;
+        left: 55px;
+    }
+    .languageLine{
+
+    }
 }

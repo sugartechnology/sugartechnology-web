@@ -71,9 +71,9 @@ export const Contact = props =>{
                 </div>
                 <div className='rightContactInputs'>
                     <a>{t("enterYourNameAndEmail")}</a>
-                    <input className='nameInput' placeholder='Name'></input>
-                    <input className='emailInput' placeholder='Email'></input>
-                    <input className='messageInput' placeholder='Message'></input>
+                    <textarea className='nameInput' placeholder='Name'></textarea>
+                    <textarea className='emailInput' placeholder='Email'></textarea>
+                    <textarea className='messageInput' placeholder='Message'></textarea>
                     <button className='sendButton'>
                         <a>Send</a>
                     </button>

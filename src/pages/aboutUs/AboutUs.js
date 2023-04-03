@@ -9,10 +9,10 @@ export const AboutUs = props =>{
     return(
         <div className='AboutUs'>
             <WhoSugar></WhoSugar>
-          <SugarTeam></SugarTeam>
-          <SugarSquad></SugarSquad>
-          <WhatsNew></WhatsNew>
-          <SectoralSolution></SectoralSolution>
+            <SugarTeam></SugarTeam>
+            <SugarSquad></SugarSquad>
+            <WhatsNew></WhatsNew>
+            <SectoralSolution></SectoralSolution>
         </div>
     );
 }

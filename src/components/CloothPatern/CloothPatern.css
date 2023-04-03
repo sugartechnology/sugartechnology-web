@@ -1,0 +1,46 @@
+.cloothPaternContainer{
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #E9E9E9;
+}
+.cloothPaternSpans{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+}
+.cloothPaternHeader{
+    height: 155px;
+    width: 769px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #000000;
+}
+.cloothPaternSpan{
+    width: 728px;
+    height: 180px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.cloothPaternElements{
+    display: flex;
+    gap: 80px;
+}
+.cloothPaternImage1{
+    width: 480px;
+}
+.cloothPaternImage2{
+    width: 270px;
+}

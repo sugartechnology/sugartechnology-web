@@ -59,4 +59,5 @@
     position: relative;
     bottom: 550px;
     filter: blur(7.5px);
+    z-index: -1;
 }

@@ -1,0 +1,57 @@
+.listenToPartnerContainer{
+    height: 880px;
+    background: #F2EAE8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.partner1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    right: 30px;
+}
+.partnerHeaders{
+    display: flex;
+    gap: 50px;
+    position: relative;
+    left: 40px;
+    top: 40px;
+}
+.partnerHeader{
+    width: 661px;
+    height: 139px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.partnerSpan{
+    width: 800px;
+    height: 144px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 25px;
+    text-align: justify;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #000000;
+    position: relative;
+    left: 30px;
+}
+.partnerPageButton{
+    position: relative;
+    top: 40px;
+}
+.partnerVideoImg{
+    position: relative;
+    left: 30px;
+    width: 700px;
+    filter: drop-shadow(1px 6px 8px rgba(66, 66, 66, 0.35));
+}

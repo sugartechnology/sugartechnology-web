@@ -1,0 +1,12 @@
+.shoesContainer{
+    height: 730px;
+    display: flex;
+    justify-content: space-evenly;
+    background: #EBEBEB;
+}
+.shoesImage{
+    position: absolute;
+    top: 72px;
+    left: 700px;
+    width: 665px;
+}

@@ -1,0 +1,74 @@
+.blogsListContainer{
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F7F7F7;
+    gap: 50px;
+}
+.blogsListHeader{
+    height: 38px;
+    width: 700px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 66px;
+    letter-spacing: -1px;
+    color: #000000;
+}
+.blogsListItems{
+    display: flex;
+    gap: 70px;
+}
+.blogsListItem{
+    display: flex;
+    flex-direction: column;
+    width: 312px;
+    height: 267px;
+    gap: 40px;
+}
+.blogsListItemHeader{
+    height: 38px;
+    width: 256px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 66px;
+    letter-spacing: -1px;
+    color: #000000;
+}
+.blogsListItemSpan{
+    height: 183px;
+    width: 312px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8A8A8A;
+    mix-blend-mode: normal;
+}
+.blogsListItemButton{
+    width: 154px;
+    height: 37px;
+    box-sizing: border-box;
+    border: 1px solid #ED401A;
+    border-radius: 100px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.blogsListItemButton a{
+    width: 82px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ED401A;
+}

@@ -1,0 +1,12 @@
+.MetaverseContainer{
+    height: 730px;
+    display: flex;
+    justify-content: space-evenly;
+    background: #EBEBEB;
+}
+.metaverseImage{
+    position: relative;
+    left: 113px;
+    top: 2px;
+    width: 605px;
+}

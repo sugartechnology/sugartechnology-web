@@ -1538,26 +1538,66 @@
   color: #000000;
 }
 
-.productServicesPopup {
-  width: 150px;
-  height: 170px;
-  background: white;
-  position: absolute;
-  flex-direction: column;
-  left: 535px;
-  top: 10px;
-  border-radius: 10px;
-  justify-content: center;
-  gap: 10px;
-}
-
-.productServicesPopup a {
-  font-size: 13px;
+.slideDetailButton{
+  border: none;
+  width: 129px;
+  height: 44px;
+  background: #ED401A;
+  border-radius: 30px;
   cursor: pointer;
   position: relative;
-  left: 10px;
 }
 
-.productServicesPopup a:hover {
-  color: red;
+.slideDetailButton a{
+  width: 83px;
+  height: 18px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.9998px;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 500px) {
+  .mainPageSliderContainer{
+    height: 858px;
+  }
+  .smallSliderMenu{
+    bottom: 500px !important;
+    left: 270px !important;
+    transform: rotate(90deg);
+    z-index: 1;
+  }
+  .slideDetail{
+    width: 488px !important;
+    height: 333px !important;
+    bottom: 40px;
+  }
+  .slideDetailElements{
+    gap: 0px !important;
+    top: 20px !important;
+  }
+  .slideDetailFirstSpan{
+    width: 268px !important;
+    height: 113px !important;
+    font-size: 29px !important;
+    line-height: 35px !important;
+  }
+  .slideDetailSecondSpan{
+    width: 255px !important;
+    height: 108px !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+  }
+  .slideDetailButton{
+    width: 99px;
+    height: 35px;
+    top: 30px;
+  }
+  .slideDetailButton a{
+    width: 82px;
+    height: 14px;
+    font-size: 13px;
+  }
 }

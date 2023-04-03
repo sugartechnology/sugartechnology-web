@@ -1,0 +1,11 @@
+.watchContainer{
+    height: 730px;
+    display: flex;
+    justify-content: space-evenly;
+    background: #EBEBEB;
+}
+.watchImage{
+    width: 665px;
+    position: relative;
+    left: 90px;
+}

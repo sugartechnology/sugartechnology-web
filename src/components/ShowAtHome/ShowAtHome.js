@@ -6,7 +6,7 @@ export const ShowAtHome = props =>{
     return(
         <div className='ShowAtHomeContainer'>
             <div className='showAtHomeBubbles'>
-                <img alt='' src={'./assets/img/ShowAtHomeImg1.svg'} style={{}}></img>
+                <img alt='' src={'./assets/img/ShowAtHomeImg1.svg'}></img>
                 <img alt='' src={'./assets/img/ShowAtHomeImg2.svg'} style={{position: "relative", top: "280px", right: "610px"}}></img>
                 <img alt='' src={'./assets/img/ShowAtHomeImg3.svg'} style={{position: "relative", right: "200px", bottom: "200px"}}></img>
                 <img alt='' src={'./assets/img/ShowAtHomeImg4.svg'} style={{position: "relative", left: "100px", bottom: "270px"}}></img>

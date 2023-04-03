@@ -1,0 +1,48 @@
+.experienceReportsContainer{
+    height: 1023px;
+    display: flex;
+    flex-direction: column;
+}
+.reportsBackground{
+    position: absolute;
+    width: 1440px;
+    z-index: -1;
+}
+.reportsSpanElement{
+    display: flex;
+    position: relative;
+    left: 200px;
+    top: 150px;
+    gap: 100px;
+}
+.reportsSpans{
+    width: 651px;
+    height: 268px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+.reportsHeader{
+    width: 1081px;
+    height: 66px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 51px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    position: relative;
+    left: 240px;
+    top: 40px;
+}
+.reportList{
+    position: relative;
+    right: 70px;
+}

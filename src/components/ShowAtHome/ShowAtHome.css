@@ -6,6 +6,9 @@
 }
 .showAtHomeBubbles{
     position: absolute;
+    width: 1439px;
+    height: 1000px;
+    z-index: -1;
 }
 .showAtHomeSpans{
     display: flex;
