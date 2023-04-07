@@ -1,6 +1,6 @@
 import './MainPageSlider.css'
 import SmallSliderMenu from './SmallSliderMenu.svg'
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { WheelAnimationComponent, WheelAnimationComponentItem } from '../WheelAnimation/WheelAnimationComponent';
 import { useState, useEffect, useRef } from 'react';
 import * as React from 'react';
@@ -11,8 +11,39 @@ export const MainPageSlider = (props) => {
     const [prevIndex, setPrevIndex] = useState(0);
     const [timeOutId, setTimeOutId] = useState(0);
     const indexRef = useRef(index);
-    const {t} = useTranslation();
-    
+    const { t } = useTranslation();
+    const array = [{
+        header: "slideDetailHeader",
+        span: "slideDetailSpan",
+        link: "route"
+
+    }, {
+        header: "slideDetailHeader2",
+        span: "slideDetailSpan2",
+        link: "route"
+
+    }, {
+        header: "slideDetailHeader3",
+        span: "slideDetailSpan3",
+        link: "route"
+
+    }, {
+        header: "slideDetailHeader4",
+        span: "slideDetailSpan4",
+        link: "route"
+
+    }, {
+        header: "slideDetailHeader5",
+        span: "slideDetailSpan5",
+        link: "route"
+
+    }, {
+        header: "slideDetailHeader6",
+        span: "slideDetailSpan6",
+        link: "route"
+
+    },];
+
     useEffect(() => {
         indexRef.current = index;
         clearTimeout(timeOutId);
@@ -58,8 +89,8 @@ export const MainPageSlider = (props) => {
 
         <div className="slideDetail" style={{ filter: '8px' }} key={1}>
             <div className='slideDetailElements'>
-                <a className='slideDetailFirstSpan'>{t("slideDetailHeader")}</a>
-                <a className='slideDetailSecondSpan'>{t("slideDetailSpan")}</a>
+                <a className='slideDetailFirstSpan'>{t(array[index].header)}</a>
+                <a className='slideDetailSecondSpan'>{t(array[index].span)}</a>
                 <button className='slideDetailButton'>
                     <a>{t("readMore")}</a>
                 </button>
