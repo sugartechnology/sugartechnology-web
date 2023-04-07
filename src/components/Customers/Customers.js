@@ -38,6 +38,8 @@ export const Customers = props =>{
         }}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
+        breakpoints={{
+        }}
       >
         <a className="customersSpan">{t("homePageCustomersSpan")}</a>
         <SwiperSlide><img alt="" src={process.env.PUBLIC_URL + '/assets/img/bellona.svg'}></img></SwiperSlide>

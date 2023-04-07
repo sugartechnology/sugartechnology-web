@@ -81,5 +81,23 @@
   .swiper-container {
     width: 500px;
   }
+  .swiper-button-next{
+    right: 10px !important;
+  }
+  .swiper-button-prev{
+    left: 10px !important;
+  }
+  .swiper-slide img{
+    width: 100px !important;
+  }
+  .swiper-wrapper{
+    left: 50px;
+  }
+  .customersSpan{
+    display: flex;
+    bottom: 240px;
+    left: 60px;
+    width: 375px;
+  }
 }
   

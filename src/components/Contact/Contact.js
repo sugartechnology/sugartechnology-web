@@ -42,12 +42,12 @@ export const Contact = props =>{
                         <img  className='pagesLine'alt='' src={'assets/img/littleLine.svg'}></img>
                     </div>
                     <div className='contactRouters'>
-                        <a>{t("home")}</a>
-                        <a>{t("aboutUs")}</a>
+                        <a href='/'>{t("home")}</a>
+                        <a href='/aboutUs'>{t("aboutUs")}</a>
                         <a>{t("integrations")}</a>
                         <a>{t("pricing")}</a>
                         <a>{t("features")}</a>
-                        <a>{t("contactUs")}</a>
+                        <a href='/contactUs'>{t("contactUs")}</a>
                     </div>
                 </div>
                 <div className='utilityPages'>

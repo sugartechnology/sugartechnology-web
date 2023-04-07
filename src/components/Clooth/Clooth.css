@@ -11,3 +11,13 @@
     left: 800px;
     width: 500px;
 }
+@media screen and (max-width: 500px){
+    .cloothContainer{
+        height: 900px;
+    }
+    .cloothImage{
+        top: 422px;
+        left: 60px;
+        width: 400px;
+    }
+}

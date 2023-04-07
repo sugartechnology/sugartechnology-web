@@ -1,13 +1,10 @@
 import './App.css';
-
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Contact } from './components/Contact/Contact';
-
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { Route, Routes, Switch } from 'react-router-dom';
-
+import { Route, Routes} from 'react-router-dom';
 import { MainPage } from './pages/main/MainPage';
 import { AboutUs } from './pages/aboutUs/AboutUs';
 import { ProductAr } from './pages/products/ProductAr';
@@ -19,17 +16,21 @@ import { ProductClooth } from './pages/products/ProductClooth';
 import { Blog } from './pages/blogs/Blog';
 import { Blogs } from './pages/blogs/Blogs';
 import { ContactUs } from './pages/contactUs/ContactUs';
+
 i18n
   .use(initReactI18next)
   .init({
-    lng: "tr", // varsayılan dil
-    fallbackLng: "en", // yedek dil
+    lng: "tr", // default language
+    fallbackLng: "en", // backup language
     resources: {
       en: {
         translation: require("../src/locales/en.json")
       },
       tr: {
         translation: require("../src/locales/tr.json")
+      },
+      fr: {
+        translation: require("../src/locales/fr.json")
       }
     }
   });

@@ -117,6 +117,12 @@
     position: relative;
     top: 20px;
 }
+.contactRouters a{
+    text-decoration: none;
+}
+.contactRouters a:visited{
+    color: #797979;
+}
 .contactRouters a:hover{
     color: red;
     cursor: pointer;

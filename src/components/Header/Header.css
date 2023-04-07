@@ -10,6 +10,7 @@
     z-index: 9999;
     height: 70px;
 }
+
 .overlay {
     position: fixed;
     top: 0;
@@ -18,7 +19,7 @@
     height: 0%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
-  }
+}
   
 .sugarLogo{
     position: relative;
@@ -28,6 +29,7 @@
     left: 30px;
     cursor: pointer;
 }
+
 .routers{
     display: flex;
     justify-content: center;
@@ -36,11 +38,13 @@
     position: relative;
     left: 40px;
 }
+
 .routers a{
     color: #170F49;
     cursor: pointer;
     text-decoration: none;
 }
+
 .popupRouters{
     display: flex;
     flex-direction: column;
@@ -48,6 +52,7 @@
     position: relative;
     left: 10px;
 }
+
 .popupMediaCenterButton{
     display: flex;
     flex-direction: row;
@@ -64,6 +69,7 @@
     top: 20px;
     cursor: pointer;
 }
+
 .popupMediaCenterButton a{
     width: 105px;
     height: 18px;
@@ -74,6 +80,7 @@
     text-align: center;
     color: #FFFFFF;
 }
+
 .popupRouter{
     height: 40px;
     width: 264px;
@@ -84,6 +91,7 @@
     opacity: 0.5;
     border-radius: 8px;
 }
+
 .popupRouter a{
     width: 120px;
     height: 20px;
@@ -96,9 +104,15 @@
     color: #353535;
     text-decoration: none;
 }
+
 .routers a:hover{
     color: red;
 }
+
+.popupRouter:visited{
+    color: #170F49;
+}
+
 .headerButtons{
     display: flex;
     gap: 20px;
@@ -106,6 +120,7 @@
     position: relative;
     right: 40px;
 }
+
 .languageButton{
     display: flex;
     flex-direction: row;
@@ -120,9 +135,11 @@
     border: 1px solid #EFF0F7;
     box-shadow: 0px 5px 5px rgba(8, 15, 52, 0.04);
 }
+
 .languageSelect{
     border: none;
 }
+
 .englishButton{
     display: flex;
     flex-direction: row;
@@ -134,6 +151,7 @@
     width: 132px;
     border-radius: 12px;
 }
+
 .turkishButton{
     display: flex;
     flex-direction: row;
@@ -145,10 +163,24 @@
     width: 132px;
     border-radius: 12px;
 }
+
+.frenchButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 47px;
+    position: relative;
+    width: 132px;
+    border-radius: 12px;
+}
+
 .languageFlag{
     width: 36px;
     height: 30px;
 }
+
 .languageShowButton{
     width: 8px;
     height: 4px;
@@ -156,6 +188,7 @@
     position: relative;
     right: 10px;
 }
+
 .mediaCenterButton{
     width: 125px;
     height: 34px;
@@ -164,6 +197,7 @@
     border: none;
     cursor: pointer;
 }
+
 .mediaCenterButton:hover,
 .mediaCenterButton:hover a {
   background-color: red;
@@ -177,6 +211,7 @@
 .mediaCenterButton:hover a {
   color: white;
 }
+
 .mediaCenterButton a{
     font-style: normal;
     font-weight: 600;
@@ -185,6 +220,7 @@
     text-align: center;
     color: #FFFFFF;
 }
+
 .productServicesPopup {
     width: 208px;
     height: 140px;
@@ -197,8 +233,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
 }
+
 .productServicesPopup a {
     font-size: 13px;
     cursor: pointer;
@@ -212,12 +248,15 @@
     border-radius: 8px;
     text-decoration: none;
 }
+
 .popupOption:hover{
     background: #FFE9E7;
 }
+
 .productServicesPopup a:visited{
     color: #000000;
 }
+
 .popupOption{
     display: flex;
     position: relative;
@@ -227,19 +266,23 @@
     left: 6px;
     top: 5px;
 }
+
 .popupVector{
     width: 10px;
     position: relative;
     left: 20px;
 }
+
 .popupLine{
     width: 200px;
     position: relative;
     left: 5px;
 }
+
 .popupLineSmall{
     width: 150px;
 }
+
 .secondPopup{
     display: flex;
     flex-direction: column;
@@ -258,9 +301,11 @@
     top: 160px;
     justify-content: space-around;
 }
+
 .secondPopup a{
     text-decoration: none;
 }
+
 .firstPopup a{
     text-decoration: none;
 }
@@ -268,13 +313,16 @@
 .secondPopup a:visited{
     color: #000000;
 }
+
 .firstPopup a:visited{
     color: #000000;
 }
+
 .secondPopupFirstOption:hover,
 .secondPopupSecondOption:hover{
     background: #F3E7E6;
 }
+
 .secondPopupFirstOption{
     display: flex;
     width: 150px;
@@ -282,6 +330,7 @@
     height: 22px;
     align-items: center;
 }
+
 .secondPopupSecondOption{
     display: flex;
     width: 150px;
@@ -289,11 +338,13 @@
     height: 22px;
     align-items: center;
 }
+
 .firstPopupFirstOption:hover,
 .firstPopupSecondOption:hover,
 .firstPopupThirdOption:hover{
     background: #F3E7E6;
 }
+
 .firstPopupFirstOption{
     display: flex;
     width: 150px;
@@ -301,6 +352,7 @@
     height: 22px;
     align-items: center;
 }
+
 .firstPopupSecondOption{
     display: flex;
     width: 150px;
@@ -308,6 +360,7 @@
     height: 22px;
     align-items: center;
 }
+
 .firstPopupThirdOption{
     display: flex;
     width: 150px;
@@ -315,6 +368,7 @@
     height: 22px;
     align-items: center;
 }
+
 .firstPopup{
     display: flex;
     flex-direction: column;
@@ -331,10 +385,13 @@
     top: 70px;
     justify-content: space-around;
 }
+
 #popupEnglishButton:hover,
-#popupTurkishButton:hover{
+#popupTurkishButton:hover,
+#popupFrenchButton:hover{
     background: #F3E7E6;
 }
+
 .languagePopup{
     display: flex;
     top: 60px;
@@ -346,15 +403,17 @@
     z-index: 6;
     background: white;
     width: 150px;
-    height: 130px;
+    height: 200px;
     border-radius: 12px;
 }
+
 .headerShowButton{
     display: flex;
     width: 50px;
     position: relative;
     left: 10px;
 }
+
 .mobileHeaderPopup{
     display: flex;
     flex-direction: column;
@@ -369,6 +428,7 @@
     gap: 10px;
     top: 71px;
 }
+
 .backToHome{
     display: flex;
     gap: 10px;
@@ -376,6 +436,7 @@
     position: relative;
     left: 5px;
 }
+
 .backToHomeInput{
     height: 40px;
     width: 264px;
@@ -384,10 +445,12 @@
     border-radius: 8px;
     border: none;
 }
+
 .backToHomeInput::placeholder{
     position: relative;
     left: 10px;
 }
+
 .backToHomeSpan{
     width: 125px;
     height: 24px;
@@ -401,25 +464,31 @@
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: #353535;
 }
+
 .popupRightButton{
     width: 10px;
     cursor: pointer;
 }
+
 .popupRouter:hover{
     color: red;
 }
+
 .popupRightButton:hover{
     color: red;
 }
+
 .backToHomeArrow{
     cursor: pointer;
 }
+
 .askYourQuestionRobot{
     position: absolute;
     left: 1250px;
     top: 580px;
     cursor: pointer;
 }
+
 @media screen and (max-width: 500px) {
     .headerContainer{
         justify-content: normal;
@@ -449,7 +518,6 @@
     .languagePopup{
         right: 0px;
     }
-
     .productServicesPopup{
         left: 300px;
         top: 230px !important;
