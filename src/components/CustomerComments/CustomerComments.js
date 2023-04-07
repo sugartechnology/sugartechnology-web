@@ -72,12 +72,12 @@ export const CustomerComments = props =>{
                         <div className='commentSpans'>
                             <a className='firstCommentSpan'>{t("trustedByMillionsOfCompany")}</a>
                             <a className='secondCommentSpan'>“</a>
-                            <a className='thirdCommentSpan'>Lorem ipsum dolor sit amet consectetur. A id rhoncus orci eget donec rhoncus. Vitae vitae quisque scelerisque velit in blandit dictum netus sed. Amet suspendisse sit morbi sagittis sed et. Odio etiam tristique in diam. Feugiat purus erat diam sit pharetra duis. Habitasse aenean ligula tincidunt amet ut ac lorem.</a>
+                            <a className='thirdCommentSpan'>{t("firstCommentSpan")}</a>
                         </div>
                         <div className='commentCustomer'>
                             <img className='customerPhoto' alt='' src={'assets/img/TepeHomePhoto.svg'}></img>
-                            <h1>Lorem ipsum</h1>
-                            <a>Tepe Home</a>
+                            <h1>{t("firstCommentHeader")}</h1>
+                            <a>{t("firstCommentAuthor")}</a>
                             <img alt='' src={'assets/img/Star.svg'}></img>
                         </div>
                     </div>
@@ -85,12 +85,12 @@ export const CustomerComments = props =>{
                         <div className='commentSpans'>
                             <a className='firstCommentSpan'>{t("trustedByMillionsOfCompany")}</a>
                             <a className='secondCommentSpan'>“</a>
-                            <a className='thirdCommentSpan'>Lorem ipsum dolor sit amet consectetur. A id rhoncus orci eget donec rhoncus. Vitae vitae quisque scelerisque velit in blandit dictum netus sed. Amet suspendisse sit morbi sagittis sed et. Odio etiam tristique in diam. Feugiat purus erat diam sit pharetra duis. Habitasse aenean ligula tincidunt amet ut ac lorem.</a>
+                            <a className='thirdCommentSpan'>{t("secondCommentSpan")}</a>
                         </div>
                         <div className='commentCustomer'>
                             <img className='customerPhoto' alt='' src={'assets/img/TepeHomePhoto.svg'}></img>
-                            <h1>Lorem ipsum</h1>
-                            <a>Tepe Home</a>
+                            <h1>{t("secondCommentHeader")}</h1>
+                            <a>{t("secondCommentAuthor")}</a>
                             <img alt='' src={'assets/img/Star.svg'}></img>
                         </div>
                     </div>
@@ -98,12 +98,12 @@ export const CustomerComments = props =>{
                         <div className='commentSpans'>
                             <a className='firstCommentSpan'>{t("trustedByMillionsOfCompany")}</a>
                             <a className='secondCommentSpan'>“</a>
-                            <a className='thirdCommentSpan'>Lorem ipsum dolor sit amet consectetur. A id rhoncus orci eget donec rhoncus. Vitae vitae quisque scelerisque velit in blandit dictum netus sed. Amet suspendisse sit morbi sagittis sed et. Odio etiam tristique in diam. Feugiat purus erat diam sit pharetra duis. Habitasse aenean ligula tincidunt amet ut ac lorem.</a>
+                            <a className='thirdCommentSpan'>{t("thirdCommentSpan")}</a>
                         </div>
                         <div className='commentCustomer'>
                             <img className='customerPhoto' alt='' src={'assets/img/TepeHomePhoto.svg'}></img>
-                            <h1>Lorem ipsum</h1>
-                            <a>Tepe Home</a>
+                            <h1>{t("thirdCommentHeader")}</h1>
+                            <a>{t("thirdCommentAuthor")}</a>
                             <img alt='' src={'assets/img/Star.svg'}></img>
                         </div>
                     </div>

@@ -13,8 +13,8 @@ export const Joint = props =>{
                 <img className='bubble5' alt='' src={'./assets/img/ShowAtHomeImg5.svg'} style={{position: "relative", left: "1205px", bottom: "300px"}}></img>
             </div>
             <div className='jointSpans'>
-                <a className='showAtHomeHeader'>Lorem ipsum dolor sit amet consectetur.</a>
-                <a className='showAtHomeSpan'>Lorem ipsum dolor sit amet consectetur. Neque viverra mi at mattis nascetur eu quis risus netus.</a>
+                <a className='showAtHomeHeader'>{t("jointContainerHeader")}</a>
+                <a className='showAtHomeSpan'>{t("jointContainerSpan")}</a>
                 <div className='showAtHomeButtons'>
                     <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
                     <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>

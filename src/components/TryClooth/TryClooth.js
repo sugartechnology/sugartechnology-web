@@ -6,8 +6,8 @@ export const TryClooth = props =>{
     return(
         <div className='tryCloothContainer'>
             <div className='tryCloothElements'>
-                <a className='tryCloothHeader'>Lorem ipsum dolor sit consectetur.</a>
-                <a className='tryCloothSpan'>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. </a>
+                <a className='tryCloothHeader'>{t("tryClootContainerHeader")}</a>
+                <a className='tryCloothSpan'>{t("tryClootContainerSpan")}</a>
                 <div className='tryCloothElementImage'>
                     <img className='tryCloothElementImage1' alt='' src={'./assets/img/tryCloothElementImage1.svg'} style={{width: "407px"}}></img>
                     <img className='tryCloothElementImage2' alt='' src={'./assets/img/tryCloothElementImage2.svg'} style={{width: "421px"}}></img>

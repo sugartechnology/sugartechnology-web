@@ -75,7 +75,7 @@ export const ListenToPartner = props =>{
                     <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", left: "760px", top: "70px"}}></img>
                 </div>
                 <div className='partnerSpans' style={{display: "flex"}}>
-                    <a className='partnerSpan'>Bir “Sanat Evi” için teknolojiyle işini dönüştürmek mümkün mü? Simurg Sanatevi iş birliğiyle benzersiz sanat eserlerini dijital ortama taşıyarak ve müşterilerin zaman ve mekandan bağımsız ürünleri kendi yaşam alanlarında deneyimlemesini sağlayarak geleceği bugünden tasarlıyoruz!Simurg Sanatevi kurucu ortaklarından Sayın İbrahim Halil Şahin, SugAR teknolojisi ile dijital dönüşüm yolculuğunu, müşteri ve satış ekibi deneyiminin nasıl dönüştüğünü, teknolojiyle gelecek vizyonunu bizlerle paylaştı.</a>
+                    <a className='partnerSpan'>{t("simurgComments")}</a>
                 </div>
                 <div className='partnerVideo'>
                     <iframe className='partnerVideo'  width="804" height="411" src="https://www.youtube.com/embed/VJPmW2u43uU" frameborder="0" allowfullscreen></iframe>
@@ -89,7 +89,7 @@ export const ListenToPartner = props =>{
                     <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", left: "760px", top: "70px"}}></img>
                 </div>
                 <div className='partnerSpans' style={{display: "flex"}}>
-                    <a className='partnerSpan'>Bir “Sanat Evi” için teknolojiyle işini dönüştürmek mümkün mü? Simurg Sanatevi iş birliğiyle benzersiz sanat eserlerini dijital ortama taşıyarak ve müşterilerin zaman ve mekandan bağımsız ürünleri kendi yaşam alanlarında deneyimlemesini sağlayarak geleceği bugünden tasarlıyoruz!Simurg Sanatevi kurucu ortaklarından Sayın İbrahim Halil Şahin, SugAR teknolojisi ile dijital dönüşüm yolculuğunu, müşteri ve satış ekibi deneyiminin nasıl dönüştüğünü, teknolojiyle gelecek vizyonunu bizlerle paylaştı.</a>
+                    <a className='partnerSpan'>{t("tepeHomeComments")}</a>
                 </div>
                 <div className='partnerVideo'>
                     <iframe className='partnerVideo'  width="804" height="411" src="https://www.youtube.com/embed/C-aoRasmfX8" frameborder="0" allowfullscreen></iframe>
@@ -103,7 +103,7 @@ export const ListenToPartner = props =>{
                     <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", left: "760px", top: "70px"}}></img>
                 </div>
                 <div className='partnerSpans' style={{display: "flex"}}>
-                    <a className='partnerSpan'>Bir “Sanat Evi” için teknolojiyle işini dönüştürmek mümkün mü? Simurg Sanatevi iş birliğiyle benzersiz sanat eserlerini dijital ortama taşıyarak ve müşterilerin zaman ve mekandan bağımsız ürünleri kendi yaşam alanlarında deneyimlemesini sağlayarak geleceği bugünden tasarlıyoruz!Simurg Sanatevi kurucu ortaklarından Sayın İbrahim Halil Şahin, SugAR teknolojisi ile dijital dönüşüm yolculuğunu, müşteri ve satış ekibi deneyiminin nasıl dönüştüğünü, teknolojiyle gelecek vizyonunu bizlerle paylaştı.</a>
+                    <a className='partnerSpan'>{t("ekoHaliComments")}</a>
                 </div>
                 <div className='partnerVideo'>
                     <iframe className='partnerVideo'  width="804" height="411" src="https://www.youtube.com/embed/oKDV_wUaaOo" frameborder="0" allowfullscreen></iframe>

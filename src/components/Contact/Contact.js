@@ -12,7 +12,7 @@ export const Contact = props =>{
             <div className='leftContact'>
                 <div className='about'>
                     <img className='contactLogo' alt="" src={'assets/img/headerLogo.svg'}></img>
-                    <a className='aboutSpan'>Lorem ipsum dolor sit amet consectetur. Ipsum in neque gravida donec fringilla fames in et. </a>
+                    <a className='aboutSpan'>{t("contactAboutSpan")}</a>
                 </div>
                 <div className='communication'>
                     <div className='mailAdressContainer'>

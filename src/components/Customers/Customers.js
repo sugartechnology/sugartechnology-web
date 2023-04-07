@@ -38,14 +38,6 @@ export const Customers = props =>{
         }}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
-        breakpoints={{
-          // when window width is >= 640px
-          500: {
-            width: 500,
-            slidesPerView: 3,
-            spaceBetween: 40,
-          }
-        }}
       >
         <a className="customersSpan">{t("homePageCustomersSpan")}</a>
         <SwiperSlide><img alt="" src={process.env.PUBLIC_URL + '/assets/img/bellona.svg'}></img></SwiperSlide>

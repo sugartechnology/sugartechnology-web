@@ -1,8 +1,6 @@
 import './ContactAddress.css';
-import { useTranslation} from "react-i18next";
 
 export const ContactAddress = props =>{
-    const {t} = useTranslation();
     return(
         <div className='contactAddressContainer'>
             <img alt='' src={'./assets/img/contactAddressBackground.svg'} style={{width:"1440px"}}></img>

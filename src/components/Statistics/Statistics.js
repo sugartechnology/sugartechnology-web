@@ -8,12 +8,12 @@ export const Statistics = props =>{
             <div className='leftStatictics'>
                 <a className='firstSpan'>90</a>
                 <a className='secondSpan'>{t("companyCustomer")}</a>
-                <a className='thirdSpan'>Lorem ipsum dolor sit amet consectetur.</a>
+                <a className='thirdSpan'>{t("companyCustomerStatisticsSpan")}</a>
             </div>
             <div className='rightStatictics'>
                 <a className='firstSpan'>100,400+</a>
                 <a className='secondSpan'>{t("project")}</a>
-                <a className='thirdSpan'>Lorem ipsum dolor sit amet consectetur.</a>
+                <a className='thirdSpan'>{t("projectStatisticsSpan")}</a>
             </div>
         </div>
     );

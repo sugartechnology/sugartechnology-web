@@ -6,8 +6,8 @@ export const BlogsInfo = props =>{
     return(
         <div className='blogsInfoContainer'>
             <div className='blogsInfoHeaders'>
-                <a className='blogsInfoHeader'>Lorem ipsum dolor sit amet consectetur.</a>
-                <a className='blogsInfoSpan'>Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. </a>
+                <a className='blogsInfoHeader'>{t("blogInfoHeader")}</a>
+                <a className='blogsInfoSpan'>{t("blogInfoSpan")}</a>
                 <button className='blogsInfoButton'><a>{t("readMore")}</a></button>
             </div>
             <div className='blogsInfoImages'>
@@ -15,16 +15,16 @@ export const BlogsInfo = props =>{
             </div>
             <div className='blogsInfoItems'>
                 <div className='blogsListItem'>
-                    <a className='blogsInfoItemHeader'>Lorem ipsum </a>
-                    <a className='blogsInfoItemSpan'>Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. </a>
+                    <a className='blogsInfoItemHeader'>{t("blogsInfoItemHeader1")}</a>
+                    <a className='blogsInfoItemSpan'>{t("blogsInfoItemSpan1")}</a>
                 </div>
                 <div className='blogsListItem'>
-                    <a className='blogsInfoItemHeader'>Lorem ipsum </a>
-                    <a className='blogsInfoItemSpan'>Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. </a>
+                    <a className='blogsInfoItemHeader'>{t("blogsInfoItemHeader2")}</a>
+                    <a className='blogsInfoItemSpan'>{t("blogsInfoItemSpan2")}</a>
                 </div>
                 <div className='blogsListItem'>
-                    <a className='blogsInfoItemHeader'>Lorem ipsum </a>
-                    <a className='blogsInfoItemSpan'>Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. </a>
+                    <a className='blogsInfoItemHeader'>{t("blogsInfoItemHeader3")}</a>
+                    <a className='blogsInfoItemSpan'>{t("blogsInfoItemSpan3")}</a>
                 </div>
             </div>
         </div>

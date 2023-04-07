@@ -13,19 +13,19 @@ export const SugarTeam = props =>{
                     <img alt='' src={'./assets/img/SugarTeamLeader1.svg'}></img>
                     <a className='leaderName'>Abdurrahman Türkeri</a>
                     <a className='leaderPosition'>{t("productManagmentHead")}</a>
-                    <a className='leaderComment'>Lorem ipsum dolor sit amet consectetur. Dignissim id congue velit eget erat eu fringilla nullam elementum.</a>
+                    <a className='leaderComment'>{t("leader1CommentSpan")}</a>
                 </div>
                 <div className='sugarTeamLeader'>
                     <img alt='' src={'./assets/img/SugarTeamLeader2.svg'}></img>
                     <a className='leaderName'>Yusuf Fatih Erol</a>
                     <a className='leaderPosition'>{t("softwareDeliveryHead")}</a>
-                    <a className='leaderComment'>Lorem ipsum dolor sit amet consectetur. Dignissim id congue velit eget erat eu fringilla nullam elementum.</a>
+                    <a className='leaderComment'>{t("leader2CommentSpan")}</a>
                 </div>
                 <div className='sugarTeamLeader'>
                     <img alt='' src={'./assets/img/SugarTeamLeader3.svg'}></img>
                     <a className='leaderName'>Farhad Faal</a>
                     <a className='leaderPosition'>{t("cgiTeamLeader")}</a>
-                    <a className='leaderComment'>Lorem ipsum dolor sit amet consectetur. Dignissim id congue velit eget erat eu fringilla nullam elementum.</a>
+                    <a className='leaderComment'>{t("leader3CommentSpan")}</a>
                 </div>
             </div>
         </div>

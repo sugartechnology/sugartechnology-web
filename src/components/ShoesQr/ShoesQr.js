@@ -50,8 +50,8 @@ export const ShoesQr = props =>{
     return(
         <div className='shoesQrContainer'>
             <div className='shoesQrElements'>
-                <a className='shoesQrHeader'>Lorem ipsum dolor sit consectetur.</a>
-                <a className='shoesQrSpan'>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. </a>
+                <a className='shoesQrHeader'>{t("shoesQrHeader")}</a>
+                <a className='shoesQrSpan'>{t("shoesQrSpan")}</a>
                 <div className='shoesQrShoes'>
                     <div style={{display: "flex", gap: "30px"}}>
                         <button className='shoesButtons' id='shoes1' onClick={selectShoes1}><img alt='' src={'./assets/img/shoes1.svg'}></img></button>

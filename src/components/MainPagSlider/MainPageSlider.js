@@ -58,8 +58,8 @@ export const MainPageSlider = (props) => {
 
         <div className="slideDetail" style={{ filter: '8px' }} key={1}>
             <div className='slideDetailElements'>
-                <a className='slideDetailFirstSpan'>Lorem ipsum dolor sit amet consectetur.</a>
-                <a className='slideDetailSecondSpan'>Lorem ipsum dolor sit amet consectetur. Erat dui quis ac mollis malesuada. Eu neque non ipsum in egestas quam mattis. Porta eget nullam tempus ut laoreet tortor lobortis. Neque iaculis vel lectus odio. </a>
+                <a className='slideDetailFirstSpan'>{t("slideDetailHeader")}</a>
+                <a className='slideDetailSecondSpan'>{t("slideDetailSpan")}</a>
                 <button className='slideDetailButton'>
                     <a>{t("readMore")}</a>
                 </button>
