@@ -34,3 +34,12 @@
     flex-direction: column;
     gap: 10px;
 }
+.cloothShadow{
+    position: absolute;
+    right: 0px;
+    left: 935px;
+    width: 300px;
+    top: 1587px;
+    z-index: -1;
+    opacity: 0.3;
+}

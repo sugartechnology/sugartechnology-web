@@ -39,7 +39,7 @@ export const Contact = props =>{
                 <div className='pages'>
                     <div className='contactHeaders'>
                         <a>{t("pages")}</a>
-                        <img alt='' src={'assets/img/littleLine.svg'}></img>
+                        <img  className='pagesLine'alt='' src={'assets/img/littleLine.svg'}></img>
                     </div>
                     <div className='contactRouters'>
                         <a>{t("home")}</a>
@@ -52,8 +52,8 @@ export const Contact = props =>{
                 </div>
                 <div className='utilityPages'>
                     <div className='contactHeaders'>
-                        <a>Utility Pages</a>
-                        <img alt='' src={'assets/img/littleLine.svg'}></img>
+                        <a>{t("utilityPages")}</a>
+                        <img className='utilityLine' alt='' src={'assets/img/littleLine.svg'}></img>
                     </div>
                     <div className='contactRouters'>
                         <a>{t("password")}</a>

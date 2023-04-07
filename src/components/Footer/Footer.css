@@ -27,3 +27,31 @@
 .footerMediaButtons img{
     cursor: pointer;
 }
+@media screen and (max-width: 500px){
+    .footerContainer{
+        width: 500px;
+        height: 60px;
+        flex-direction: row;
+    }
+    .footerLine{
+        width: 400px !important;
+        position: relative;
+        left: 40px;
+        top: 20px;
+    }
+    .footerSpan{
+        font-size: 9px;
+        position: relative;
+        top: 70px;
+        right: 340px;
+    }
+    .footerMediaButtons{
+        position: relative;
+        top: 70px;
+        right: 1390px;
+    }
+    .footerMediaButtons img{
+        width: 10px;
+        color: #808080;
+    }
+}

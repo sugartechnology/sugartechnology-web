@@ -27,23 +27,7 @@ export const SugarSquad = props =>{
                         <a className='memberPosition'>Project Management Head</a>
                     </div>
                     </div>
-                </div>
-                <div className='crew'>
-                    <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
-                    <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
-                        <a className='memberPosition'>Project Management Head</a>
-                    </div>
-                    </div>
-                    <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
-                    <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
-                        <a className='memberPosition'>Project Management Head</a>
-                    </div>
-                    </div>
-                    <div className='SugarSquadMember'>
+                    <div className='SugarSquadMemberResponsive' style={{display: "none"}}>
                     <img alt='' src={'./assets/img/member1.svg'}></img>
                     <div className='memberInformation'>
                         <a className='memberName'>Abdurrahman Türkeri</a>
@@ -52,6 +36,36 @@ export const SugarSquad = props =>{
                     </div>
                 </div>
                 <div className='crew'>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Abdurrahman Türkeri</a>
+                        <a className='memberPosition'>Project Management Head</a>
+                    </div>
+                    </div>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Abdurrahman Türkeri</a>
+                        <a className='memberPosition'>Project Management Head</a>
+                    </div>
+                    </div>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Abdurrahman Türkeri</a>
+                        <a className='memberPosition'>Project Management Head</a>
+                    </div>
+                    </div>
+                    <div className='SugarSquadMemberResponsive' style={{display: "none"}}>
+                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Abdurrahman Türkeri</a>
+                        <a className='memberPosition'>Project Management Head</a>
+                    </div>
+                    </div>
+                </div>
+                <div className='crew' id='crewResponsive'>
                     <div className='SugarSquadMember'>
                     <img alt='' src={'./assets/img/member1.svg'}></img>
                     <div className='memberInformation'>

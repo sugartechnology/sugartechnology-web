@@ -11,10 +11,7 @@ export const WhatsNew = props =>{
             </div>
             <div className='whatsNewElements'>
                 <img className='whatsNewElement' alt='' src={'./assets/img/whatsNewElement1.svg'}></img>
-                <img className='whatsNewElementShadow' alt='' src={'./assets/img/shadow.svg'}></img>
-            </div>
-            <div className='whatsNewPageButtons'>
-                <img className='whatsNewPageButton' alt='' src={'./assets/img/whatsNewPageButton.svg'}></img>
+                
             </div>
         </div>
     );

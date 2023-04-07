@@ -7,24 +7,17 @@
     position: relative;
     bottom: 80px;
 }
-.firstCommentPage{
-    display: flex;
-    z-index: 1;
-    position: relative;
-    right: 800px;
-    gap: 530px;
-}
 .commentsLeftButton{
     position: relative;
     z-index: 1;
     left: 50px;
-    top: 300px;
+    top: 283px;
     cursor: pointer;
 }
 .commentsRightButton{
     position: relative;
     bottom: 517px;
-    left: 1240px;
+    left: 1300px;
     cursor: pointer;
 }
 .commentSpans{
@@ -36,6 +29,22 @@
     top: 40px;
     left: 50px;
     gap: 20px;
+}
+.firstComment{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 800px;
+}
+.secondCustomerComment{
+    flex-direction: column;
+    position: relative;
+    right: 800px;
+}
+.thirdCustomerComment{
+    flex-direction: column;
+    position: relative;
+    right: 800px;
 }
 .firstCommentSpan{
     width: 752px;
@@ -174,4 +183,82 @@
     font-size: 10px;
     line-height: 157.4%;
     color: #000000;
+}
+.customerCommentsPageButtons{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 680px;
+    top: 690px;
+}
+.customerCommentsPageButtons img{
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media screen and (max-width: 500px){
+    .customerCommentsContainer{
+        width: 500px;
+        height: 533px;
+    }
+    .redBackground{
+        display: none;
+    }
+    .redBackgroundMobile{
+        display: flex !important;
+        width: 700px;
+        height: 580px;
+        position: relative;
+        top: 80px;
+        right: 9px;
+    }
+    .firstComment{
+        display: flex;
+        top: 70px;
+        right: 520px;
+    }
+    .secondCustomerComment{
+        top: 70px;
+        right: 520px;
+    }
+    .thirdCustomerComment{
+        top: 70px;
+        right: 520px;
+    }
+    .firstCommentSpan{
+        width: 334px;
+        height: 64px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 31px;
+        line-height: 104%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .secondCommentSpan{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        bottom: 30px;
+        right: 15px;
+    }
+    .thirdCommentSpan{
+        width: 335px;
+        height: 98px;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+    }
+    .commentsRightButton{
+        display: none;
+    }
+    .commentsLeftButton{
+        display: none;
+    }
+    .customerCommentsPageButtons{
+        left: 220px;
+        top: 620px;
+    }
 }

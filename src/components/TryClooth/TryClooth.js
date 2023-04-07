@@ -15,6 +15,7 @@ export const TryClooth = props =>{
             </div>
             <div className='tryCloothImages'>
                 <img className='tryCloothImage' alt='' src={'./assets/img/tryCloothImage.svg'} style={{width:"361px"}}></img>
+                <img className='cloothShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 <img className='tryCloothBubble' alt='' src={'./assets/img/tryCloothBubble.svg'} style={{position: "absolute", right: "0px", zIndex: "-1", top: "800px"}}></img>
             </div>
         </div>

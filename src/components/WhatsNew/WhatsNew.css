@@ -4,6 +4,7 @@
     align-items: center;
     height: 1000px;
     gap: 20px;
+    background: #F7F7F7;
 }
 .whatsNewHeader{
     width: 550px;
@@ -50,15 +51,27 @@
     position: relative;
     bottom: 1px;
 }
-.whatsNewPageButtons{
-    height: 70px;
-    width: 900px;
-    position: relative;
-    bottom: 30px;
-    background: white;
-}
-.whatsNewPageButton{
-    position: relative;
-    left: 410px;
-    top: 20px;
+
+@media screen and (max-width: 500px){
+    .WhatsNewContainer{
+        height: 700px;
+    }
+    .whatsNewHeader{
+        width: 200px;
+        font-size: 29px;
+    }
+    .whatsNewSpan{
+        width: 357px;
+        font-size: 13px;
+    }
+    .whatsNewElement{
+        width: 350px;
+        position: relative;
+        top: 100px;
+    }
+    .whatsNewElementShadow{
+        width: 350px;
+        top: 76px;
+        z-index: 1;
+    }
 }

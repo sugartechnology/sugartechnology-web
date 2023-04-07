@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 1118px;
+    margin-top: 60px;
 }
 .flyingElements{
     display: flex;
@@ -45,6 +46,70 @@
 }
 .whoSugarLogo2{
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     top: 400px;
+}
+@media screen and (max-width: 500px){
+    .WhoSugarContainer{
+        width: 500px;
+        height: 897px;
+    }
+    .whoSugarHeader{
+        width: 235px;
+        height: 35px;
+        font-size: 35px;
+    }
+    .whoSugarImg1{
+        width: 150px;
+        top: 100px !important;
+        right: 20px;
+    }
+    .whoSugarImg2{
+        width: 100px;
+        top: 20px !important;
+        right: 30px !important;
+    }
+    .whoSugarImg3{
+        width: 150px;
+        right: 260px !important;
+        bottom: 20px !important;
+    }
+    .whoSugarImg4{
+        width: 120px;
+        position: relative;
+        right: 50px;
+    }
+    .whoSugarImg41{
+        width: 50px;
+        left: 385px !important;
+        top: 115px !important;
+    }
+    .whoSugarImg5{
+        display: none;
+    }
+    .whoSugarImg51{
+        display: flex !important;
+        width: 150px;
+        top: 70px;
+        right: 300px;
+    }
+    .whoSugarImg6{
+        width: 100px;
+        right: 270px;
+        top: 100px !important;
+    }
+    .whoSugarSpans{
+        position: relative;
+        top: 50px;
+        gap: 30px;
+    }
+    .whoSugarSpan{
+        width: 356px;
+        font-size: 13px;
+    }
+    .whoSugarLogo1{
+        width: 400px;
+        left: 60px;
+        bottom: 0px;
+    }
 }

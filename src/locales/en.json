@@ -75,5 +75,15 @@
     "fullName": "Full Name",
     "howCanWeHelpYou": "How can we help you?",
     "describeYourProblem": "Describe your problem in at least 250 characters",
-    "sendMessage": "Send Message"
+    "sendMessage": "Send Message",
+    "backToHome": "Back to Home",
+    "goalsHeader":"What we have achieved and our future plans",
+    "goals1Header": "Today",
+    "goals1Span": "We offer 3D configurator and AR technologies in furniture, white goods, shoes and clothing categories.",
+    "goals2Header": "So Soon",
+    "goals2Span": "We will be a library containing 1000s of products of global brands.",
+    "goals3Header": "Soon",
+    "goals3Span": "We will enable companies to publish their 3d models on platforms such as Google Snapchat and Instagram and titktok with one click.",
+    "goals4Header": "Next",
+    "goals4Span": "We will be a global brand that provides products and product experience in the metaverse."
 }

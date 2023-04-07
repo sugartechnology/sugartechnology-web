@@ -13,13 +13,13 @@ export const Customers = props =>{
     
     const {t} = useTranslation();
     return(
-    <Swiper spaceEvenly={50}  style={{height: "270px", minHeight:"50px"}} navigation={true}  id="123"
+    <Swiper spaceBetween={50}  style={{height: "270px", minHeight:"50px"}} navigation={true}  id="123"
         cssMode={true}
         navigation={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard,Autoplay]}
         className="mySwiper"
         slidesPerView={5}
-        spaceEvenly={60}
+        spaceBetween={60}
         loop={true}
         autoplay={{
             delay: 2500,
@@ -38,6 +38,14 @@ export const Customers = props =>{
         }}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
+        breakpoints={{
+          // when window width is >= 640px
+          500: {
+            width: 500,
+            slidesPerView: 3,
+            spaceBetween: 40,
+          }
+        }}
       >
         <a className="customersSpan">{t("homePageCustomersSpan")}</a>
         <SwiperSlide><img alt="" src={process.env.PUBLIC_URL + '/assets/img/bellona.svg'}></img></SwiperSlide>

@@ -44,3 +44,30 @@
     position: relative;
     top: 100px;
 }
+@media screen and (max-width: 500px){
+    .productStatisticsContainer{
+        flex-direction: column;
+        justify-content: normal;
+        height: 533px;
+    }
+    .productStatisticsSpanElements{
+        top: 30px;
+    }
+    .productStatisticsHeader{
+        width: 327px;
+        height: 120px;
+        font-size: 29px;
+    }
+    .productStatisticsSpans{
+        width: 340px;
+        font-size: 13px;
+        gap: 10px;
+    }
+    .productStatisticsImage img{
+        width: 300px;
+    }
+    .productStatisticsImage{
+        left: 100px;
+        top: 0px;
+    }
+}

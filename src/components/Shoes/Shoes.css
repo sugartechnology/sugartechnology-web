@@ -3,10 +3,21 @@
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
+    margin-top: 60px;
 }
 .shoesImage{
     position: absolute;
     top: 72px;
     left: 700px;
     width: 665px;
+}
+@media screen and (max-width: 500px){
+    .shoesContainer{
+        height: 900px;
+    }
+    .shoesImage{
+        width: 450px;
+        left: 50px;
+        top: 468px;
+    }
 }

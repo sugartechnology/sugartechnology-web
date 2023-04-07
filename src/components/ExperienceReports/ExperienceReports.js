@@ -5,12 +5,12 @@ export const ExperienceReports = props =>{
     const {t} = useTranslation();
     return(
         <div className='experienceReportsContainer'>
-            <img className='reportsBackground' alt='' src={'./assets/img/reportsBackground.svg'}></img>
             <div className='reportsHeaders'>
                 <a className='reportsHeader'>{t("dailyAndProductBasedExperienceReports")}</a>
             </div>
             <div className='reportsSpanElement'>
                 <img className='reportsSpansImg' alt='' src={'./assets/img/reportsSpansImg.svg'}></img>
+                <img className='reportsSpangImgShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 <div className='reportsSpans'>
                     <a className='reportsSpan'>{t("experienceReportsSpan")}</a>
                     <ul className='reportList'>

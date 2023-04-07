@@ -3,9 +3,23 @@
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
+    margin-top: 60px;
 }
 .watchImage{
-    width: 665px;
+    width: 759px;
     position: relative;
     left: 90px;
+}
+@media screen and (max-width: 500px){
+    .watchContainer{
+        height: 900px;
+        justify-content: normal;
+        flex-direction: column;
+    }
+    .watchImage{
+        position: relative;
+        top: 68px;
+        left: 0px;
+        width: 500px;
+    }
 }

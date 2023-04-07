@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 70px;
 }
 .arDetailsHeader{
     width: 738px;
@@ -32,6 +33,14 @@
     letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
+}
+.arDetailsShadow{
+    position: absolute;
+    top: 1787px;
+    width: 808px;
+    left: 325px;
+    opacity: 0.6;
+    z-index: -1;
 }
 .arDetailsOptions{
     display: flex;
@@ -130,4 +139,22 @@
     color: #000000;
     position: relative;
     top: 10px;
+}
+@media screen and (max-width: 500px){
+    .arDetailsContainer{
+        height: 700px;
+    }
+    .arDetailsHeader{
+        width: 243px;
+        font-size: 29px;
+    }
+    .arDetailsSpan{
+        width: 357px;
+        font-size: 13px;
+    }
+    .showAtHomeImg{
+        width: 400px;
+        top: 1400px !important;
+        left: 50px !important;
+    }
 }

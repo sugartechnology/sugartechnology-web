@@ -1,12 +1,15 @@
 .metaReportsContainer{
-    height: 715px;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 50px;
 }
 .metaReportsSpans{
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 40px;
 }
 .metaReportsHeader{
     height: 155px;
@@ -20,16 +23,39 @@
 }
 .metaReportsSpan{
     width: 594px;
-    height: 100px;
+    height: 70px;
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 36px;
     color: #000000;
 }
 .metaReportsList{
-    font-size: 23px;
+    font-size: 18px;
     display: flex;
     gap: 10px;
     flex-direction: column;
+}
+@media screen and (max-width: 500px){
+    .metaReportsContainer{
+        flex-direction: column-reverse;
+        height: 1000px;
+    }
+    .metaReportsHeader{
+        width: 333px;
+        font-size: 24px;
+    }
+    .metaReportsSpan{
+        width: 322px;
+        font-size: 16px;
+    }
+    .metaReportsList{
+        font-size: 16px;
+        position: relative;
+        right: 25px;
+        top: 20px;
+    }
+    .metaReportsImg img{
+        width: 320px !important;
+    }
 }

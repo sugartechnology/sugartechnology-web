@@ -13,6 +13,34 @@
     position: relative;
     right: 30px;
 }
+.partner2{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    right: 30px;
+}
+.partner3{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    right: 30px;
+}
+.partnersPageButtons{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 30px;
+}
+.partnersPageButtons img{
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 .partnerHeaders{
     display: flex;
     gap: 50px;
@@ -45,13 +73,79 @@
     position: relative;
     left: 30px;
 }
-.partnerPageButton{
+.partnerVideo{
     position: relative;
-    top: 40px;
+    left: 15px;
 }
-.partnerVideoImg{
-    position: relative;
-    left: 30px;
-    width: 700px;
-    filter: drop-shadow(1px 6px 8px rgba(66, 66, 66, 0.35));
+
+#partner1{
+    animation: slideRight 1s forwards;
+}
+#partner2{
+    animation: slideRight 1s forwards;
+}
+#partner3{
+    animation: slideRight 1s forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width: 500px){
+    .listenToPartnerContainer{
+        height: 950px;
+    }
+    .partnerHeader{
+        width: 340px;
+        font-size: 22px;
+        position: relative;
+        bottom: 20px;
+    }
+    .partnerLogo{
+        width: 139px !important;
+        position: absolute !important;
+        left: 85px !important;
+        top: 90px;
+    }
+    .partnerSpan{
+        width: 338px;
+        font-size: 13px;
+        top: 20px;
+    }
+    .partnerVideo{
+        width: 333px !important;
+        height: 424px !important;
+        position: relative;
+        top: 30px;
+    }
+    .partner1{
+        gap: 50px;
+    }
+    .containerTopLogo{
+        width: 72px;
+        bottom: 155px !important;
+        left: 0px !important;
+    }
+    .spanBottomLogo{
+        width: 37px;
+        left: 300px !important;
+        top: 50px !important;
+    }
+    .partnersPageButtons{
+        position: relative;
+        top: 70px;
+    }
 }

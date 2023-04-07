@@ -1,5 +1,6 @@
 import './MainPageSlider.css'
 import SmallSliderMenu from './SmallSliderMenu.svg'
+import { useTranslation} from "react-i18next";
 import { WheelAnimationComponent, WheelAnimationComponentItem } from '../WheelAnimation/WheelAnimationComponent';
 import { useState, useEffect, useRef } from 'react';
 import * as React from 'react';
@@ -10,7 +11,8 @@ export const MainPageSlider = (props) => {
     const [prevIndex, setPrevIndex] = useState(0);
     const [timeOutId, setTimeOutId] = useState(0);
     const indexRef = useRef(index);
-
+    const {t} = useTranslation();
+    
     useEffect(() => {
         indexRef.current = index;
         clearTimeout(timeOutId);
@@ -59,7 +61,7 @@ export const MainPageSlider = (props) => {
                 <a className='slideDetailFirstSpan'>Lorem ipsum dolor sit amet consectetur.</a>
                 <a className='slideDetailSecondSpan'>Lorem ipsum dolor sit amet consectetur. Erat dui quis ac mollis malesuada. Eu neque non ipsum in egestas quam mattis. Porta eget nullam tempus ut laoreet tortor lobortis. Neque iaculis vel lectus odio. </a>
                 <button className='slideDetailButton'>
-                    <a>Read More</a>
+                    <a>{t("readMore")}</a>
                 </button>
             </div>
         </div>

@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
+    margin-top: 60px;
 }
 .jointSpans{
     display: flex;
@@ -16,4 +17,21 @@
     top: 300px;
     left: 600px;
     width: 700px;
+}
+@media screen and (max-width: 500px){
+    .jointContainer{
+        height: 900px;
+        justify-content: normal;
+    }
+    .jointSpans{
+        right: 0px;
+        justify-content: normal;
+        gap: 20px;
+        top: 70px;
+    }
+    .jointImage{
+        width: 450px;
+        top: 550px;
+        left: 20px;
+    }
 }

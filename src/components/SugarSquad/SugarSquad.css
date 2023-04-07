@@ -44,3 +44,35 @@
     letter-spacing: -0.035em;
     color: #000000;
 }
+@media screen and (max-width: 500px){
+    .SugarSquadContainer{
+        height: 477px;
+    }
+    .sugarSquadButtonPrev{
+        display: none;
+    }
+    
+    .sugarSquadButtonNext{
+        display: none;
+    }
+    .SugarSquadMember img{
+        width: 50px;
+    }
+    .memberName{
+        width: 111px;
+        font-size: 11px;
+    }
+    .memberPosition{
+        width: 111px;
+        font-size: 8px;
+    }
+    #crewResponsive{
+        display: none;
+    }
+    .SugarSquadMemberResponsive{
+        display: flex !important;
+    }
+    .SugarSquadMemberResponsive img{
+        width: 50px;
+    }
+}

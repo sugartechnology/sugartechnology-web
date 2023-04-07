@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background: white;
 }
 .sugarTeamHeader a{
     width: 550px;

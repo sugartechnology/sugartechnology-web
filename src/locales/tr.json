@@ -76,5 +76,15 @@
     "fullName": "İsim",
     "howCanWeHelpYou": "Size nasıl yardımcı olabiliriz?",
     "describeYourProblem": "Sorununuzu en az 250 karakterle açıklayın",
-    "sendMessage": "Mesaj Gönder"
+    "sendMessage": "Mesaj Gönder",
+    "backToHome": "Anasayfaya Dön",
+    "goalsHeader":"Ne Başardık ve Gelecek Planlarımız",
+    "goals1Header": "Bugün",
+    "goals1Span": "Mobilya, beyaz eşya ayakkabı ve giyim kategorilerinde 3D konfigüratör ve AR teknolojilerini sunuyoruz.",
+    "goals2Header": "Çok Yakında",
+    "goals2Span": "Global markaların 1000 lerce ürününü bulunduran bir kütüphane olacağız.",
+    "goals3Header": "Yakında",
+    "goals3Span": "Şirketlerin 3d modellerini, Google Snapchat ve Instagram ve titktok gibi platformlarda yayınlamalarını tek click ile sağlayacağız.",
+    "goals4Header": "Gelecekte",
+    "goals4Span": "Metaversede ürün ve ürün deneyimi sağlayan global bir marka olacağız."
 }

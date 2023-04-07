@@ -4,7 +4,7 @@ export const Footer = props =>{
     return(
         <div className='footerContainer'>
             <div>
-                <img style={{width: "1440px"}} alt='' src={'assets/img/bigLine.svg'}></img>
+                <img className='footerLine' style={{width: "1440px"}} alt='' src={'assets/img/bigLine.svg'}></img>
             </div>
             <div className='footerElements'>
                 <div className='footerSpan'>

@@ -1,5 +1,5 @@
 .jointAboutContainer{
-    height: 1000px;
+    height: 900px;
     display: flex;
     flex-direction: column;
 }
@@ -8,10 +8,10 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 50px;
+    top: 90px;
 }
 .jointAboutHeader{
-    height: 155px;
+    height: 100px;
     width: 769px;
     font-style: normal;
     font-weight: 700;
@@ -23,7 +23,7 @@
 }
 .jointAboutSpan{
     width: 652px;
-    height: 196px;
+    height: 150px;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -33,11 +33,46 @@
     text-transform: capitalize;
     color: #000000;
 }
-.jointAboutImage{
-    filter: drop-shadow(1px 6px 8px rgba(66, 66, 66, 0.35));
-}
 .jointAboutBubble{
     position: absolute;
     left: 630px;
     z-index: -1;
+}
+.jointShadow{
+    position: absolute;
+    top: 684px;
+    width: 770px;
+    z-index: -1;
+    opacity: 0.5;
+}
+@media screen and (max-width: 500px){
+    .jointAboutContainer{
+        height: 600px;
+    }
+    .jointAboutHeader{
+        width: 341px;
+        font-size: 29px;
+        position: relative;
+        bottom: 50px;
+    }
+    .jointAboutSpan{
+        width: 364px;
+        font-size: 13px;
+        position: relative;
+        bottom: 20px;
+    }
+    .jointAboutImage{
+        position: relative;
+        top: none;
+        bottom: 30px;
+        width: 370px;
+    }
+    .jointShadow{
+        top: 428px;
+        width: 370px;
+    }
+    .jointAboutBubble{
+        top: 900px;
+        left: 0px;
+    }
 }

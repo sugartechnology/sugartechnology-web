@@ -21,6 +21,7 @@
     text-align: center;
     letter-spacing: -0.01666em;
     color: #ED401A;
+    position: relative;
 }
 .secondSpan{
     width: 300px;
@@ -30,6 +31,7 @@
     line-height: 0px;
     color: #252F40;
     text-align: center;
+    position: relative;
 }
 .thirdSpan{
     width: 300px;
@@ -42,9 +44,29 @@
     align-items: center;
     text-align: center;
     color: #67748E;
+    position: relative;
 }
 .rightStatictics{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+}
+@media screen and (max-width: 500px){
+    .statisticsContainer{
+        width: 500px;
+        height: 150px;
+    }
+    .firstSpan{
+        font-size: 30px;
+        top: 20px;
+    }
+    .secondSpan{
+        font-size: 15px;
+    }
+    .thirdSpan{
+        width: 126px;
+        font-size: 12px;
+        left: 90px;
+        bottom: 20px;
+    }
 }

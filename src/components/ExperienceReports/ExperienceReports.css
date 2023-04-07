@@ -1,12 +1,8 @@
 .experienceReportsContainer{
-    height: 1023px;
+    height: 619px;
     display: flex;
     flex-direction: column;
-}
-.reportsBackground{
-    position: absolute;
-    width: 1440px;
-    z-index: -1;
+    background: #EFEFEF;
 }
 .reportsSpanElement{
     display: flex;
@@ -25,7 +21,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: #FFFFFF;
+    color: #000000;
 }
 .reportsHeader{
     width: 1081px;
@@ -37,7 +33,7 @@
     display: flex;
     align-items: center;
     letter-spacing: -1px;
-    color: #FFFFFF;
+    color: #000000;
     position: relative;
     left: 240px;
     top: 40px;
@@ -45,4 +41,48 @@
 .reportList{
     position: relative;
     right: 70px;
+}
+.reportsSpangImgShadow{
+    position: absolute;
+    display: none;
+    opacity: 0.3;
+}
+@media screen and (max-width: 500px){
+    .experienceReportsContainer{
+        height: 800px;
+    }
+    .reportsHeader{
+        width: 333px;
+        font-size: 29px;
+        height: 70px;
+        left: 100px;
+    }
+    .reportsSpanElement{
+        flex-direction: column-reverse;
+    }
+    .reportsSpans{
+        width: 322px;
+        font-size: 13px;
+    }
+    .reportsSpan{
+        position: relative;
+        right: 100px;
+        bottom: 50px;
+    }
+    .reportList{
+        right: 130px;
+        bottom: 60px;
+    }
+    .reportsSpansImg{
+        width: 321px;
+        position: relative;
+        right: 100px;
+        bottom: 100px;
+    }
+    .reportsSpangImgShadow{
+        display: flex;
+        width: 320px;
+        right: 280px;
+        bottom: 81px;
+    }
 }

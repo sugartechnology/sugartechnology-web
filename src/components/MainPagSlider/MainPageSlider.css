@@ -1602,18 +1602,18 @@
 
 @media screen and (max-width: 500px) {
   .mainPageSliderContainer{
-    height: 858px;
+    height: 900px;
   }
   .smallSliderMenu{
-    bottom: 500px !important;
+    bottom: 540px !important;
     left: 270px !important;
     transform: rotate(90deg);
-    z-index: 1;
+    z-index: 6;
   }
   .slideDetail{
     width: 488px !important;
     height: 333px !important;
-    bottom: 40px;
+    bottom: 20px;
   }
   .slideDetailElements{
     gap: 0px !important;
@@ -1640,5 +1640,12 @@
     width: 82px;
     height: 14px;
     font-size: 13px;
+  }
+  .mainPageSliderItem{
+    top: 0px;
+    transform: rotate(-90deg);
+  }
+  .wheelAnimationItemInner{
+    right: 100px !important;
   }
 }

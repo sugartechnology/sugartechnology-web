@@ -1,11 +1,25 @@
 .headerContainer{
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: #F2F2F2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    z-index: 1;
+    z-index: 9999;
+    height: 70px;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
 .sugarLogo{
     position: relative;
     width: 160.08px;
@@ -25,6 +39,61 @@
 .routers a{
     color: #170F49;
     cursor: pointer;
+    text-decoration: none;
+}
+.popupRouters{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    left: 10px;
+}
+.popupMediaCenterButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 24px;
+    gap: 4px;
+    width: 154px;
+    height: 48px;
+    background: #ED401A;
+    border-radius: 76px;
+    border: none;
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+}
+.popupMediaCenterButton a{
+    width: 105px;
+    height: 18px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.popupRouter{
+    height: 40px;
+    width: 264px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    opacity: 0.5;
+    border-radius: 8px;
+}
+.popupRouter a{
+    width: 120px;
+    height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #353535;
     text-decoration: none;
 }
 .routers a:hover{
@@ -60,8 +129,10 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    height: 47px;
     position: relative;
-    right: 5px;
+    width: 132px;
+    border-radius: 12px;
 }
 .turkishButton{
     display: flex;
@@ -69,8 +140,10 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    height: 47px;
     position: relative;
-    right: 5px;
+    width: 132px;
+    border-radius: 12px;
 }
 .languageFlag{
     width: 36px;
@@ -80,6 +153,8 @@
     width: 8px;
     height: 4px;
     cursor: pointer;
+    position: relative;
+    right: 10px;
 }
 .mediaCenterButton{
     width: 125px;
@@ -89,8 +164,18 @@
     border: none;
     cursor: pointer;
 }
-.mediaCenterButton:hover{
-    color: red;
+.mediaCenterButton:hover,
+.mediaCenterButton:hover a {
+  background-color: red;
+  color: white;
+}
+
+.mediaCenterButton a {
+  color: red;
+}
+
+.mediaCenterButton:hover a {
+  color: white;
 }
 .mediaCenterButton a{
     font-style: normal;
@@ -164,7 +249,7 @@
     position: relative;
     width: 150px;
     height: 100px;
-    background: #ECECEC;
+    background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
     position: absolute;
@@ -179,17 +264,56 @@
 .firstPopup a{
     text-decoration: none;
 }
-.secondPopup a:hover{
-    color: red;
-}
+
 .secondPopup a:visited{
     color: #000000;
 }
 .firstPopup a:visited{
     color: #000000;
 }
-.firstPopup a:hover{
-    color: red;
+.secondPopupFirstOption:hover,
+.secondPopupSecondOption:hover{
+    background: #F3E7E6;
+}
+.secondPopupFirstOption{
+    display: flex;
+    width: 150px;
+    border-radius: 8px;
+    height: 22px;
+    align-items: center;
+}
+.secondPopupSecondOption{
+    display: flex;
+    width: 150px;
+    border-radius: 8px;
+    height: 22px;
+    align-items: center;
+}
+.firstPopupFirstOption:hover,
+.firstPopupSecondOption:hover,
+.firstPopupThirdOption:hover{
+    background: #F3E7E6;
+}
+.firstPopupFirstOption{
+    display: flex;
+    width: 150px;
+    border-radius: 8px;
+    height: 22px;
+    align-items: center;
+}
+.firstPopupSecondOption{
+    display: flex;
+    width: 150px;
+    border-radius: 8px;
+    height: 22px;
+    align-items: center;
+}
+.firstPopupThirdOption{
+    display: flex;
+    width: 150px;
+    border-radius: 8px;
+    height: 22px;
+    align-items: center;
 }
 .firstPopup{
     display: flex;
@@ -198,32 +322,103 @@
     position: relative;
     width: 155px;
     height: 74px;
-    background: #ECECEC;
+    background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
     position: absolute;
     left: 750px;
     z-index: 6;
-    top: 25px;
+    top: 70px;
     justify-content: space-around;
+}
+#popupEnglishButton:hover,
+#popupTurkishButton:hover{
+    background: #F3E7E6;
 }
 .languagePopup{
     display: flex;
     top: 60px;
-    right: 209px;
-    z-index: 2;
+    right: 135px;
     position: absolute;
-    width: 20px;
-    height: 20px;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
     z-index: 6;
+    background: white;
+    width: 150px;
+    height: 130px;
+    border-radius: 12px;
 }
 .headerShowButton{
-    display: none;
+    display: flex;
     width: 50px;
     position: relative;
     left: 10px;
+}
+.mobileHeaderPopup{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+    position: relative;
+    width: 280px;
+    height: 440px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
+    border-radius: 12px;
+    gap: 10px;
+    top: 71px;
+}
+.backToHome{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    position: relative;
+    left: 5px;
+}
+.backToHomeInput{
+    height: 40px;
+    width: 264px;
+    background: #E0E0E0;
+    opacity: 0.5;
+    border-radius: 8px;
+    border: none;
+}
+.backToHomeInput::placeholder{
+    position: relative;
+    left: 10px;
+}
+.backToHomeSpan{
+    width: 125px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0168em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #353535;
+}
+.popupRightButton{
+    width: 10px;
+    cursor: pointer;
+}
+.popupRouter:hover{
+    color: red;
+}
+.popupRightButton:hover{
+    color: red;
+}
+.backToHomeArrow{
+    cursor: pointer;
+}
+.askYourQuestionRobot{
+    position: absolute;
+    left: 1250px;
+    top: 580px;
+    cursor: pointer;
 }
 @media screen and (max-width: 500px) {
     .headerContainer{
@@ -231,8 +426,11 @@
         gap: 100px;
         width: 499px !important;
     }
+    .headerShowButtons{
+        display: flex !important;
+    }
     .headerShowButton{
-        display: flex;
+        display: flex !important;
     }
     .routers{
         display: none;
@@ -240,7 +438,7 @@
     .mediaCenterButton{
         display: none;
     }
-    .languageSpan{
+    #headerLanguage{
         display: none;
     }
     .languageButton{
@@ -250,9 +448,15 @@
     }
     .languagePopup{
         right: 0px;
-        left: 55px;
     }
-    .languageLine{
 
+    .productServicesPopup{
+        left: 300px;
+        top: 230px !important;
+    }
+    .askYourQuestionRobot{
+        left: 340px;
+        top: 590px;
+        width: 150px;
     }
 }

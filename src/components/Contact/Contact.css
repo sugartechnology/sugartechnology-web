@@ -9,7 +9,7 @@
 .contactLine{
     position: relative;
     right: 45px;
-    bottom: 20px;
+    bottom: 45px;
 }
 .contactElements{
     display: flex;
@@ -39,6 +39,7 @@
     line-height: 148.4%;
     letter-spacing: -0.02em;
     color: #797979;
+    position: relative;
 }
 .communication{
     display: flex;
@@ -87,7 +88,7 @@
 }
 .contactHeaders a{
     display: flex;
-    width: 200px;
+    width: 250px;
     height: 38px;
     font-style: normal;
     font-weight: 700;
@@ -104,7 +105,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 160px;
+    width: 110px;
     height: 336px;
     font-style: normal;
     font-weight: 400;
@@ -195,4 +196,76 @@
     text-align: center;
     letter-spacing: -0.04em;
     color: #FFFFFF;
+}
+.sendButton:hover{
+  background-color: red;
+}
+@media screen and (max-width: 500px){
+    .contactContainer{
+        width: 500px;
+        height: 270px;
+    }
+    .contactLine{
+        display: none;
+    }
+    .contactLogo{
+        width: 91px !important;
+        left: 0px !important;
+    }
+    .rightContact{
+        display: none;
+    }
+    .utilityLine{
+        display: none;
+    }
+    .contactHeaders a{
+        font-size: 15px;
+        height: 20px;
+    }
+    .leftContact{
+        width: 50%;
+        left: 0px;
+        top: 10px;
+    }
+    .middleContact{
+        top: 10px;
+        width: 50%;
+    }
+    .contactRouters{
+        font-size: 11px;
+        gap: 0px;
+    }
+    .aboutSpan{
+        font-size: 11px;
+        width: 140px;
+    }
+    .mailAdressLogo img{
+        width: 17px;
+    }
+    .phoneNumberLogo img{
+        width: 16px;
+    }
+    .mailAdressSpan a{
+        width: 99px;
+        font-size: 11px;
+    }
+    .phoneNumberSpan a{
+        width: 104px;
+        font-size: 11px;
+    }
+    .pagesLine{
+       display: none;
+    }
+    .pages{
+        width: 100px;
+    }
+    .about{
+        gap: 0px;
+    }
+    .aboutSpan{
+        bottom: 30px;
+    }
+    .communication{
+        bottom: 60px;
+    }
 }

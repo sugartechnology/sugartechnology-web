@@ -6,7 +6,7 @@ export const MetaReports = props =>{
     return(
         <div className='metaReportsContainer'>
            <div className='metaReportsImg'>
-                <img alt='' src={'./assets/img/metaReportsImage.svg'}></img>
+                <img alt='' src={'./assets/img/metaReportsImage.svg'} style={{width: "500px", position: "relative", top: "40px"}}></img>
            </div>
            <div className='metaReportsSpans'>
                 <a className='metaReportsHeader'>{t("dailyAndProductBasedExperienceReports")}</a>

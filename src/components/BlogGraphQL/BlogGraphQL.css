@@ -1,5 +1,6 @@
 .blogGraphQLContainer{
     height: 920px;
+    margin-top: 60px;
 }
 .blogGraphSpans{
     display: flex;

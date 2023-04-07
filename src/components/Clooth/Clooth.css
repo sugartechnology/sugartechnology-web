@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
+    margin-top: 60px;
 }
 .cloothImage{
     position: absolute;

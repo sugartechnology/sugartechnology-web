@@ -76,33 +76,41 @@
     text-align: center;
     color: #ED401A;
 }
-  @keyframes slideInRight {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideOutRight {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(100%);
-    }
-  }
+.solutionPageButtons{
+    display: flex;
+    gap: 10px;
+}
+.solutionPageButtons img{
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
+.solution1Button{
+    background: #ED401A;
+}
+.solution2Button{
+    background: #CCCCCC;
+}
+.solution3Button{
+    background: #CCCCCC;
+}
+.solution4Button{
+    background: #CCCCCC;
+}
 
 #rightSpans {
-    animation: slideLeft 1s backwards;
+    animation: slideRight 1s forwards;
+}
+.solutionShadow{
+    animation: slideRight 1s forwards;
 }
 #leftSpans{
     animation: slideRight 1s forwards;
 }
 #rightImage{
-    animation: slideRight 1s backwards;
+    animation: slideRight 1s forwards;
 }
 #leftImage{
     animation: slideRight 1s forwards;
@@ -122,5 +130,54 @@
     }
     to {
         transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .sectoralSolutionContainer{
+        height: 850px;
+    }
+    .sectoralSolutionSpan{
+        font-size: 29px;
+    }
+    .sectoralSolutionLine{
+        position: relative;
+        left: 170px;
+        width: 350px;
+    }
+    .solutionHeader{
+        width: 326px;
+        font-size: 24px;
+    }
+    .solutionSpan{
+        width: 354px;
+        font-size: 13px;
+    }
+    #solution2,
+    #solution3,
+    #solution4{
+        display: none;
+    }
+    .solution{
+        flex-direction: column;
+    }
+    .solutionSpans{
+        position: relative;
+        left: 30px;
+        gap: 40px;
+    }
+    #rightImage{
+        width: 400px;
+    }
+    .solutionShadow{
+        display: flex !important;
+        width: 389px;
+        position: relative;
+        left: 5px;
+        bottom: 10px;
+        opacity: 0.5;
+    }
+    .solutionPageButtons{
+        display: flex !important;
     }
 }
