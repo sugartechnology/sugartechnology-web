@@ -7,7 +7,7 @@
 }
 .metaverseImage{
     position: relative;
-    left: 100px;
+    left: 93px;
     width: 650px;
     bottom: 3px;
 }
@@ -20,7 +20,7 @@
     .metaverseImage{
         width: 400px;
         bottom: none;
-        top: 98px;
-        left: 100px;
+        top: 234px;
+        left: 13px;
     }
 }

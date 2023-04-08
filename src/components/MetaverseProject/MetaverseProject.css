@@ -44,7 +44,8 @@
 }
 @media screen and (max-width: 500px){
     .MetaverseProjectContainer{
-        width: 500px;
+        width: 414px;
+        height: 400px;
     }
     .metaverseProjectHeader{
         width: 258px;
@@ -53,11 +54,22 @@
     }
     .metaverseProjectSpan{
         width: 348px;
-        font: 13px;
+        font-size: 13px;
+    }
+    .metaverseProjectElements{
+        top: 20px;
     }
     .metaverseProjectElement{
-        width: 370px;
+        width: 320px;
         position: relative;
-        top: 100px;
+        bottom: 140px;
+    }
+    .metaverseProjectBackground{
+        display: none;
+    }
+    .metaverseProjectBackgroundMobile{
+        display: flex !important;
+        width: 414px;
+        position: absolute;
     }
 }

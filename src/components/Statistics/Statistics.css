@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    position: relative;
 }
 .firstSpan{
     width: 300px;
@@ -50,10 +51,11 @@
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    position: relative;
 }
 @media screen and (max-width: 500px){
     .statisticsContainer{
-        width: 500px;
+        width: 414px;
         height: 150px;
     }
     .firstSpan{
@@ -68,5 +70,11 @@
         font-size: 12px;
         left: 90px;
         bottom: 20px;
+    }
+    .leftStatictics{
+        left: 40px;
+    }
+    .rightStatictics{
+        right: 40px;
     }
 }

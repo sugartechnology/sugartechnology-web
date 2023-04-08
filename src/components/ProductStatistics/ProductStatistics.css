@@ -57,17 +57,21 @@
         width: 327px;
         height: 120px;
         font-size: 29px;
+        position: relative;
+        right: 50px;
     }
     .productStatisticsSpans{
         width: 340px;
         font-size: 13px;
         gap: 10px;
+        position: relative;
+        right: 50px;
     }
     .productStatisticsImage img{
         width: 300px;
     }
     .productStatisticsImage{
-        left: 100px;
+        left: 50px;
         top: 0px;
     }
 }

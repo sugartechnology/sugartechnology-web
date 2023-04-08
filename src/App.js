@@ -31,6 +31,15 @@ i18n
       },
       fr: {
         translation: require("../src/locales/fr.json")
+      },
+      de: {
+        translation: require("../src/locales/de.json")
+      },
+      it: {
+        translation: require("../src/locales/it.json")
+      },
+      ar: {
+        translation: require("../src/locales/ar.json")
       }
     }
   });

@@ -17,7 +17,8 @@
     }
     .shoesImage{
         width: 450px;
-        left: 50px;
+        left: none;
+        right: 10px;
         top: 468px;
     }
 }

@@ -57,5 +57,6 @@
     }
     .metaReportsImg img{
         width: 320px !important;
+        right: 10px;
     }
 }

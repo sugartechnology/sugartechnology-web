@@ -188,29 +188,34 @@
     display: flex;
     gap: 10px;
     position: absolute;
-    left: 680px;
-    top: 690px;
+    left: 705px;
+    top: 700px;
 }
 .customerCommentsPageButtons img{
-    width: 13px;
-    height: 13px;
+    width: 10px;
+    height: 10px;
     border-radius: 10px;
     cursor: pointer;
 }
+.commentStar{
+    width: 100px;
+    position: relative;
+    left: 40px;
+}
 @media screen and (max-width: 500px){
     .customerCommentsContainer{
-        width: 500px;
-        height: 533px;
+        width: 414px;
+        height: 550px;
     }
     .redBackground{
         display: none;
     }
     .redBackgroundMobile{
         display: flex !important;
-        width: 700px;
         height: 580px;
+        width: 590px;
         position: relative;
-        top: 80px;
+        top: 50px;
         right: 9px;
     }
     .firstComment{
@@ -226,22 +231,41 @@
         top: 70px;
         right: 520px;
     }
+    .customerPhoto{
+        width: 100px;
+        position: relative;
+        left: 90px;
+    }
+    .commentCustomer h1{
+        font-size: 15px;
+        position: relative;
+        left: 80px;
+    }
+    .commentCustomer a{
+        left: 80px;
+        font-size: 13px;
+    }
+    .commentStar{
+        left: 90px;
+    }
     .firstCommentSpan{
         width: 334px;
         height: 64px;
         font-style: normal;
         font-weight: 800;
-        font-size: 31px;
+        font-size: 27px;
         line-height: 104%;
         text-align: center;
         color: #FFFFFF;
+        position: relative;
+        left: 60px;
     }
     .secondCommentSpan{
         width: 30px;
         height: 30px;
         position: relative;
         bottom: 30px;
-        right: 15px;
+        left: 60px;
     }
     .thirdCommentSpan{
         width: 335px;
@@ -250,6 +274,8 @@
         font-weight: 600;
         font-size: 14px;
         line-height: 100%;
+        position: relative;
+        left: 60px;
     }
     .commentsRightButton{
         display: none;
@@ -258,7 +284,7 @@
         display: none;
     }
     .customerCommentsPageButtons{
-        left: 220px;
-        top: 620px;
+        left: 185px;
+        top: 570px;
     }
 }

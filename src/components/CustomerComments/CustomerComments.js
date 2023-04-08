@@ -49,7 +49,7 @@ export const CustomerComments = props => {
                         <img className='customerPhoto' alt='' src={'assets/img/TepeHomePhoto.svg'}></img>
                         <h1>{t(array[index].commentHeader)}</h1>
                         <a>{array[index].commentAuthor}</a>
-                        <img alt='' src={'assets/img/Star.svg'}></img>
+                        <img className='commentStar' alt='' src={'assets/img/Star.svg'}></img>
                     </div>
                 </div>
 

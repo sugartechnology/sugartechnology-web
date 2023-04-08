@@ -152,9 +152,14 @@
         width: 357px;
         font-size: 13px;
     }
+    .arDetailsShadow{
+        top: 1654px;
+        width: 376px;
+        left: 12px;
+    }
     .showAtHomeImg{
         width: 400px;
         top: 1400px !important;
-        left: 50px !important;
+        left: 0px !important;
     }
 }

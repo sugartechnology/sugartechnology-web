@@ -14,4 +14,7 @@
     .tryWatchContainer{
         height: 700px;
     }
+    .watchShadow{
+        display: none;
+    }
 }

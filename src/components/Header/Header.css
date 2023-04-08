@@ -175,6 +175,39 @@
     width: 132px;
     border-radius: 12px;
 }
+.germanButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 47px;
+    position: relative;
+    width: 132px;
+    border-radius: 12px;
+}
+.italianButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 47px;
+    position: relative;
+    width: 132px;
+    border-radius: 12px;
+}
+.arabicButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 47px;
+    position: relative;
+    width: 132px;
+    border-radius: 12px;
+}
 
 .languageFlag{
     width: 36px;
@@ -388,7 +421,10 @@
 
 #popupEnglishButton:hover,
 #popupTurkishButton:hover,
-#popupFrenchButton:hover{
+#popupFrenchButton:hover,
+#popupGermanButton:hover,
+#popupItalianButton:hover,
+#popupArabicButton:hover{
     background: #F3E7E6;
 }
 
@@ -403,7 +439,7 @@
     z-index: 6;
     background: white;
     width: 150px;
-    height: 200px;
+    height: 400px;
     border-radius: 12px;
 }
 
@@ -493,7 +529,7 @@
     .headerContainer{
         justify-content: normal;
         gap: 100px;
-        width: 499px !important;
+        width: 414px !important;
     }
     .headerShowButtons{
         display: flex !important;
@@ -513,17 +549,21 @@
     .languageButton{
         gap: 0px;
         width: 60px;
-        left: 40px;
+        right: 20px;
     }
     .languagePopup{
-        right: 0px;
+        right: 30px;
+
     }
     .productServicesPopup{
         left: 300px;
         top: 230px !important;
     }
+    .sugarLogo{
+        left: 0px;
+    }
     .askYourQuestionRobot{
-        left: 340px;
+        left: 260px;
         top: 590px;
         width: 150px;
     }

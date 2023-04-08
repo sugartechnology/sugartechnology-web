@@ -218,6 +218,10 @@
         width: 91px !important;
         left: 0px !important;
     }
+    .contactElements{
+        position: relative;
+        right: 30px;
+    }
     .rightContact{
         display: none;
     }
@@ -225,7 +229,7 @@
         display: none;
     }
     .contactHeaders a{
-        font-size: 15px;
+        font-size: 13px;
         height: 20px;
     }
     .leftContact{

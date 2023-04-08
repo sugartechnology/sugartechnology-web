@@ -144,8 +144,6 @@
     "simurgComments": "",
     "tepeHomeComments": "",
     "ekoHaliComments": "",
-    "slideDetailHeader": "asd",
-    "slideDetailSpan": "",
     "metaverseContainerHeader": "",
     "metaverseContainerSpan": "",
     "metaverseProjectSpan": "",
@@ -188,5 +186,17 @@
     "watchContainerSpan": "",
     "whatsNewContainerSpan": "",
     "whoSugarSpan1": "",
-    "whoSugarSpan2": ""
+    "whoSugarSpan2": "",
+    "slideDetailHeader": "",
+    "slideDetailSpan": "",
+    "slideDetailHeader2": "",
+    "slideDetailSpan2": "",
+    "slideDetailHeader3": "",
+    "slideDetailSpan3": "",
+    "slideDetailHeader4": "",
+    "slideDetailSpan4": "",
+    "slideDetailHeader5": "",
+    "slideDetailSpan5": "",
+    "slideDetailHeader6": "",
+    "slideDetailSpan6": ""
 }

@@ -74,6 +74,7 @@
     .aboutSpans{
         gap: 40px;
         top: 20px;
+        left: 40px;
     }
     .aboutSpans h1{
         width: 300px;
@@ -87,11 +88,11 @@
     .firstAboutLogo{
         width: 300px;
         top: 100px;
-        left: 100px;
+        left: 60px;
     }
     .secondAboutLogo{
         bottom: 350px;
-        right: 400px;
+        right: 518px;
     }
     .aboutButton{
         width: 126px;

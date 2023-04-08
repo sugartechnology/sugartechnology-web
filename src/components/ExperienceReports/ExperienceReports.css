@@ -55,7 +55,7 @@
         width: 333px;
         font-size: 29px;
         height: 70px;
-        left: 100px;
+        left: 50px;
     }
     .reportsSpanElement{
         flex-direction: column-reverse;
@@ -66,23 +66,23 @@
     }
     .reportsSpan{
         position: relative;
-        right: 100px;
+        right: 150px;
         bottom: 50px;
     }
     .reportList{
-        right: 130px;
+        right: 180px;
         bottom: 60px;
     }
     .reportsSpansImg{
         width: 321px;
         position: relative;
-        right: 100px;
+        right: 150px;
         bottom: 100px;
     }
     .reportsSpangImgShadow{
         display: flex;
         width: 320px;
-        right: 280px;
+        right: 243px;
         bottom: 81px;
     }
 }
