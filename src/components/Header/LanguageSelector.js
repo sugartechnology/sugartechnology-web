@@ -108,7 +108,7 @@ function LanguageSelector() {
         frenchButton.style.display = "none";
         arabicButton.style.display = "none";
         popup.style.display = "none";
-        i18n.changeLanguage('fr');
+        i18n.changeLanguage('it');
       }
       else{
         italianButton.style.display = "none";
@@ -130,7 +130,7 @@ function LanguageSelector() {
         italianButton.style.display = "none";
         frenchButton.style.display = "none";
         popup.style.display = "none";
-        i18n.changeLanguage('fr');
+        i18n.changeLanguage('ar');
       }
       else{
         arabicButton.style.display = "none";
