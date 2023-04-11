@@ -6,8 +6,8 @@ export const CloothPatern = props =>{
     return(
         <div className='cloothPaternContainer'>
             <div className='cloothPaternSpans'>
-                <a className='cloothPaternHeader'>{t("cloothPaternHeader")}</a>
-                <a className='cloothPaternSpan'>{t("cloothPaternSpan")}</a>
+                <a className='cloothPaternHeader'>ghqwauhjkvbfb</a>
+                <a className='cloothPaternSpan'>jnvadhjbvngjbefhjbjkvngjbefhjbjkfdbnjdgnbjdfkbsdfnbjdsvngjbefhjbjkfdbnjdgnbjdfkbsdfnbjdsfdbnjdgnbjdfkbsdfnbjdsfdbaf</a>
             </div>
             <div className='cloothPaternElements'>
                 <img className='cloothPaternImage1' alt='' src={'./assets/img/cloothPaternImage1.svg'}></img>

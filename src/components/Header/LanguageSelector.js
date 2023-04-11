@@ -157,52 +157,52 @@ function LanguageSelector() {
               <a className="languageSpan" id="headerLanguage">Turkish</a>
             </div>
             <div className='frenchButton' id="frenchButton" style={{display: "none", right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
-              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
+              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/frenchFlag.svg'}></img>
               <a className="languageSpan" id="headerLanguage">French</a>
             </div>
             <div className='germanButton' id="germanButton" style={{display: "none", right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
-              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
+              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/germanFlag.svg'}></img>
               <a className="languageSpan" id="headerLanguage">German</a>
             </div>
             <div className='italianButton' id="italianButton" style={{display: "none", right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
-              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
+              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/italianFlag.svg'}></img>
               <a className="languageSpan" id="headerLanguage">Italian</a>
             </div>
             <div className='arabicButton' id="arabicButton" style={{display: "none", right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
-              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
+              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/arabicFlag.svg'}></img>
               <a className="languageSpan" id="headerLanguage">Arabic</a>
             </div>
             <img className='languageShowButton' alt='' src={'assets/img/Chevron.svg'} onClick={openLanguagePopup}></img>
           </div>
           
           <div className="languagePopup" id="languagePopup" style={{display: "none"}}>
-            <div id="popupEnglishButton" className='englishButton' onClick={toggleEnglish} style={{cursor: "pointer", left: "10px"}}>
-              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag.svg'}></img>
-              <a className="languageSpan">English</a>
-            </div>
-            <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{width: "125px", position: "relative", left: "11px"}}></img>
             <div id="popupTurkishButton" className='turkishButton' onClick={toggleTurkish} style={{cursor: "pointer", left: "10px"}}>
               <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
               <a className="languageSpan">Turkish</a>
             </div>
             <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{width: "125px", position: "relative", left: "11px"}}></img>
+            <div id="popupEnglishButton" className='englishButton' onClick={toggleEnglish} style={{cursor: "pointer", left: "10px"}}>
+              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag.svg'}></img>
+              <a className="languageSpan">English</a>
+            </div>
+            <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{width: "125px", position: "relative", left: "11px"}}></img>
             <div id="popupFrenchButton" className='frenchButton' onClick={toggleFrench} style={{cursor: "pointer", left: "10px"}}>
-              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
+              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/frenchFlag.svg'}></img>
               <a className="languageSpan">French</a>
             </div>
             <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{width: "125px", position: "relative", left: "11px"}}></img>
             <div id="popupGermanButton" className='germanButton' onClick={toggleGerman} style={{cursor: "pointer", left: "10px"}}>
-              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
+              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/germanFlag.svg'} style={{left: "3px"}}></img>
               <a className="languageSpan">German</a>
             </div>
             <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{width: "125px", position: "relative", left: "11px"}}></img>
             <div id="popupItalianButton" className='italianButton' onClick={toggleItalian} style={{cursor: "pointer", left: "10px"}}>
-              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
+              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/italianFlag.svg'} style={{right: "4px"}}></img>
               <a className="languageSpan">Italian</a>
             </div>
             <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{width: "125px", position: "relative", left: "11px"}}></img>
             <div id="popupArabicButton" className='arabicButton' onClick={toggleArabic} style={{cursor: "pointer", left: "10px"}}>
-              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
+              <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/arabicFlag.svg'} ></img>
               <a className="languageSpan">Arabic</a>
             </div>
           </div>

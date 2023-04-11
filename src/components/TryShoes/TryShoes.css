@@ -12,6 +12,15 @@
 }
 @media screen and (max-width: 500px){
     .tryShoesContainer{
-        height: 700px;
+        height: 600px;
+    }
+    .shoeShadow{
+        top: 412px;
+        width: 300px;
+    }
+    #shoeBubble{
+        top: 1200px;
+        transform: rotate(30deg);
+        left: 180px;
     }
 }

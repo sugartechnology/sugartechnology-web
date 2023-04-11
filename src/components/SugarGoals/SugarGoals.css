@@ -154,8 +154,11 @@
         bottom: 180px;
     }
     .goalsLine{
-        width: 500px !important;
+        width: 414px !important;
         position: relative;
         bottom: 162px;
+    }
+    .goalsShadow{
+        width: 500px;
     }
 }

@@ -80,6 +80,53 @@
     text-align: center;
     color: #FFFFFF;
 }
+.popupRouterMobile{
+    height: 40px;
+    width: 264px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    position: relative;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.firstMobilePopup a{
+    width: 250px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.0032em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #000000;
+    cursor: pointer;
+}
+
+.firstMobilePopup{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.firstChildPopup a{
+    cursor: pointer;
+}
+.firstChildPopup a:hover,
+.firstMobilePopup a:hover{
+    color: #ED401A;
+}
+.firstChildPopup{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.secondChildPopup{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
 
 .popupRouter{
     height: 40px;
@@ -88,12 +135,12 @@
     justify-content: space-between;
     align-items: center;
     background: #FFFFFF;
-    opacity: 0.5;
     border-radius: 8px;
+    position: relative;
 }
 
 .popupRouter a{
-    width: 120px;
+    width: 240px;
     height: 20px;
     font-style: normal;
     font-weight: 400;
@@ -110,7 +157,7 @@
 }
 
 .popupRouter:visited{
-    color: #170F49;
+    color: #353535;
 }
 
 .headerButtons{
@@ -212,6 +259,41 @@
 .languageFlag{
     width: 36px;
     height: 30px;
+    position: relative;
+}
+
+.robotSpans{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px 8px 34px;
+    gap: 8px;
+    position: absolute;
+    width: 151px;
+    height: 34px;
+    background: #FFF3F3;
+    border: 1px solid #9E1908;
+    border-radius: 8px;
+    right: 0px;
+    bottom: 40px;
+}
+.robotSpan{
+    width: 400px;
+    height: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size:  13px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #9E1908;
+}
+.robot{
+    height: 64px;
+    width: 77px;
+    position: relative;
+    left: 40px;
+    top: 30px;
 }
 
 .languageShowButton{
@@ -231,8 +313,22 @@
     cursor: pointer;
 }
 
+.popupMediaCenterButton:hover,
+.popupMediaCenterButton a:hover{
+  background-color: #F3E7E6;
+  color: red;
+}
+
+.popupMediaCenterButton a {
+  color: white;
+}
+
+.popupMediaCenterButton:hover a {
+  color: red;
+}
+
 .mediaCenterButton:hover,
-.mediaCenterButton:hover a {
+.mediaCenterButton a:hover{
   background-color: red;
   color: white;
 }
@@ -287,7 +383,7 @@
 }
 
 .productServicesPopup a:visited{
-    color: #000000;
+    color: #353535;
 }
 
 .popupOption{
@@ -337,18 +433,25 @@
 
 .secondPopup a{
     text-decoration: none;
+    color: #545454;
 }
 
 .firstPopup a{
     text-decoration: none;
+    color: #545454;
 }
-
+.firstPopup a:hover{
+    color: #ED401A;
+}
+.secondPopup a:hover{
+    color: #ED401A;
+}
 .secondPopup a:visited{
-    color: #000000;
+    color: #353535;
 }
 
 .firstPopup a:visited{
-    color: #000000;
+    color: #353535;
 }
 
 .secondPopupFirstOption:hover,
@@ -430,7 +533,7 @@
 
 .languagePopup{
     display: flex;
-    top: 60px;
+    top: 40px;
     right: 135px;
     position: absolute;
     flex-direction: column;
@@ -462,9 +565,15 @@
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
     gap: 10px;
-    top: 71px;
+    top: 60px;
 }
-
+.mobileHeaderPopup a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.mobileHeaderPopup a:hover{
+    color: #ED401A;
+}
 .backToHome{
     display: flex;
     gap: 10px;
@@ -480,6 +589,7 @@
     opacity: 0.5;
     border-radius: 8px;
     border: none;
+    caret-color: red;
 }
 
 .backToHomeInput::placeholder{
@@ -488,7 +598,7 @@
 }
 
 .backToHomeSpan{
-    width: 125px;
+    width: 200px;
     height: 24px;
     font-style: normal;
     font-weight: 400;
@@ -504,6 +614,8 @@
 .popupRightButton{
     width: 10px;
     cursor: pointer;
+    position: relative;
+    right: 10px;
 }
 
 .popupRouter:hover{
@@ -556,8 +668,13 @@
 
     }
     .productServicesPopup{
-        left: 300px;
-        top: 230px !important;
+        display: flex;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        height: 120px;
+        z-index: 6;
+        box-shadow: none;
     }
     .sugarLogo{
         left: 0px;
@@ -566,5 +683,12 @@
         left: 260px;
         top: 590px;
         width: 150px;
+    }
+    .robotSpans{
+        display: none;
+    }
+    .robot{
+        width: 57px;
+        left: 90px;
     }
 }

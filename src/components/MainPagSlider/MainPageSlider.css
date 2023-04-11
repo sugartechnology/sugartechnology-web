@@ -94,6 +94,7 @@
   display: flex;
   justify-content: space-around;
   width: 353px;
+  z-index: 9;
 }
 
 .slideDetail {
@@ -1545,7 +1546,14 @@
 
   }
 }
-
+@keyframes slideRight {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
 
 .slideDetailFirstSpan {
   width: 484px;
@@ -1557,6 +1565,10 @@
   letter-spacing: -1px;
   text-transform: capitalize;
   color: #000000;
+}
+
+.slideDetail{
+  animation: slideRight 1s forwards;
 }
 
 .slideDetailElements {

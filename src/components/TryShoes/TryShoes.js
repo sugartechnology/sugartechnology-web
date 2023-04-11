@@ -11,7 +11,7 @@ export const TryShoes = props =>{
                 <img className='jointAboutImage' alt='' src={'./assets/img/tryShoesImage.svg'}></img>
                 <img className='shoeShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
             </div>
-            <img className='jointAboutBubble' alt='' src={'./assets/img/jointAboutBubble.svg'}></img>
+            <img className='jointAboutBubble' id='shoeBubble' alt='' src={'./assets/img/jointAboutBubble.svg'}></img>
         </div>
     );
 }

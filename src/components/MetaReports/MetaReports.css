@@ -10,13 +10,14 @@
     flex-direction: column;
     position: relative;
     top: 40px;
+    gap: 30px;
 }
 .metaReportsHeader{
     height: 155px;
-    width: 587px;
+    width: 600px;
     font-style: normal;
     font-weight: 700;
-    font-size: 51px;
+    font-size: 40px;
     line-height: 66px;
     letter-spacing: -1px;
     color: #000000;

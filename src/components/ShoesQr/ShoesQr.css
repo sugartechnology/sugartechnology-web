@@ -53,3 +53,45 @@
     position: relative;
     top: 65px;
 }
+@media screen and (max-width: 500px){
+    .shoesQrContainer{
+        height: 765px;
+    }
+    .shoesQrHeader{
+        height: 70px;
+        width: 304px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 35px;
+        letter-spacing: -1px;
+        text-transform: capitalize;
+        color: #000000;
+        position: relative;
+        left: 350px;
+        bottom: 50px;
+    }
+    .shoesQrSpan{
+        display: none;
+    }
+    .shoesQrPhone{
+        width: 300px;
+        position: relative;
+        top: 335px;
+    }
+    .shoesQr{
+        right: 125px !important;
+        top: 440px !important;
+        width: 100px;
+    }.shoesButtons{
+        width: 142.25px;
+        height: 101.66px;
+    }
+    .shoesButtons img{
+        width: 130px;
+    }
+    .shoesQrShoes{
+        position: relative;
+        left: 350px;
+    }
+}

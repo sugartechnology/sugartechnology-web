@@ -44,3 +44,40 @@
 .cloothPaternImage2{
     width: 200px;
 }
+@media screen and (max-width: 500px){
+    .cloothPaternContainer{
+        height: 900px;
+    }
+    .cloothPaternHeader{
+        height: 70px;
+        width: 356px;
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 35px;
+    }
+    .cloothPaternSpan{
+        width: 345px;
+        height: 135px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 19px;
+    }
+    .cloothPaternElements{
+        flex-direction: column;
+    }
+    .cloothPaternImage1{
+        width: 250px;
+    }
+    .cloothPaternVector{
+        width: 30px;
+        position: relative;
+        left: 110px;
+        transform: rotate(90deg);
+    }
+    .cloothPaternImage2{
+        width: 150px;
+        position: relative;
+        left: 50px;
+    }
+}

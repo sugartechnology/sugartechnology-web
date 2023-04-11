@@ -107,70 +107,70 @@ export const SectoralSolution = props =>{
             </div>
             <div className='solution' id='solution1'>
                 <div className='solutionSpans' id='leftSpans'>
-                    <a className='solutionHeader'>{t("areYouAFurnitureSeller")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
-                    <a className='solutionSpan'>{t("furnitureSellerSpan")}</a>
+                    <a className='solutionHeader'>{t("solutionHeader1")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
+                    <a className='solutionSpan'>{t("solutionSpan1")}</a>
                     <button className='solutionButton'><a>{t("readMore")}</a></button>
                 </div>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/sugar-model-viewer.svg'} id='rightImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg1.svg'} id='rightImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
             </div>
 
             <div className='solution' id='solution2'>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImage2.svg'} id='leftImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg2.svg'} id='leftImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
                 <div className='solutionSpans' style={{position: "relative", left: "100px"}} id='rightSpans'>
-                    <a className='solutionHeader'>{t("areYouArchitect")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
-                    <a className='solutionSpan'>{t("architectSpan")}</a>
+                    <a className='solutionHeader'>{t("solutionHeader2")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
+                    <a className='solutionSpan'>{t("solutionSpan2")}</a>
                     <button className='solutionButton'><a>{t("readMore")}</a></button>
                 </div>
             </div>
             <div className='solution' id='solution2v1' style={{display: "none"}}>
                 <div className='solutionSpans' style={{position: "relative", left: "10px"}} id='leftSpans'>
-                    <a className='solutionHeader'>{t("areYouArchitect")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
-                    <a className='solutionSpan'>{t("architectSpan")}</a>
+                    <a className='solutionHeader'>{t("solutionHeader2")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
+                    <a className='solutionSpan'>{t("solutionSpan2")}</a>
                     <button className='solutionButton'><a>{t("readMore")}</a></button>
                 </div>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImage2.svg'} id='rightImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg2.svg'} id='rightImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none",bottom: "12px"}}></img>
                 </div>
             </div>
 
             <div className='solution' id='solution3'> 
                 <div className='solutionSpans' id='leftSpans'>
-                    <a className='solutionHeader'>{t("areYouShoeSeller")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
-                    <a className='solutionSpan'>{t("shoeSellerSpan")}</a>
+                    <a className='solutionHeader'>{t("solutionHeader3")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
+                    <a className='solutionSpan'>{t("solutionSpan3")}</a>
                     <button className='solutionButton'><a>{t("readMore")}</a></button>
                 </div>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImage3.svg'} id='rightImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg3.svg'} id='rightImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
             </div>
 
             <div className='solution' id='solution4'>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImage4.svg'} id='leftImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg4.svg'} id='leftImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
                 <div className='solutionSpans' style={{position: "relative", left: "100px"}} id='rightSpans'>
-                    <a className='solutionHeader'>{t("doYouWantMetaverse")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
-                    <a className='solutionSpan'>{t("youWantMetaverseSpan")}</a>
+                    <a className='solutionHeader'>{t("solutionHeader4")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
+                    <a className='solutionSpan'>{t("solutionSpan4")}</a>
                     <button className='solutionButton'><a>{t("readMore")}</a></button>
                 </div>
             </div>
             <div className='solution' id='solution4v1' style={{display: "none"}}>
                 <div className='solutionSpans' style={{position: "relative", left: "10px"}} id='leftSpans'>
-                    <a className='solutionHeader'>{t("doYouWantMetaverse")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
-                    <a className='solutionSpan'>{t("youWantMetaverseSpan")}</a>
+                    <a className='solutionHeader'>{t("solutionHeader4")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
+                    <a className='solutionSpan'>{t("solutionSpan4")}</a>
                     <button className='solutionButton'><a>{t("readMore")}</a></button>
                 </div>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImage4.svg'} id='rightImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg4.svg'} id='rightImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none",bottom: "12px"}}></img>
                 </div>
             </div>

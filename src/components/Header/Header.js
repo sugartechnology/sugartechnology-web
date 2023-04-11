@@ -19,30 +19,87 @@ export const Header = props => {
             popupOption2.style.display = "none";
         }
     }
-    const showPopupOption1 = () => {
-        var popupOption1 =  document.getElementById("firstPopup");
-        var popupOption2 = document.getElementById("secondPopup");
-        if(popupOption1.style.display === "none"){
-            popupOption1.style.display = "flex";
-            popupOption2.style.display = "none";
-        }else {
-            popupOption1.style.display = "none";
+    const showPopupMobile = ()=>{
+        var motherPopup = document.getElementById("mobileHeaderPopup");
+        var firstMobilePopup = document.getElementById("firstMobilePopup");
+        var firstChildPopup = document.getElementById("firstChildPopup");
+        var secondChildPopup = document.getElementById("secondChildPopup");
+        var span = document.getElementById("routerProductSpan");
+        var div = document.getElementById("routerProduct");
+        var btn = document.getElementById("productMobileButton");
+        if(firstMobilePopup.style.display === "none"){
+            firstMobilePopup.style.display = "flex";
+            motherPopup.style.height = "650px";
+            btn.style.transform = "rotate(+90deg)";
+            span.style.color = "#ED401A";
+            btn.style.transform = "rotate(+90deg)";
+            div.style.background = "#F8EDEB";
         }
-        
+        else{
+            firstMobilePopup.style.display = "none";
+            motherPopup.style.height = "570px";
+            firstChildPopup.style.display = "none";
+            secondChildPopup.style.display = "none";
+            div.style.background = "#FFFFFF";
+            span.style.color = "#000000";
+            btn.style.transform = "none";
+        }
     }
-    const showPopupOption2  = () => {
-        var popupOption1 =  document.getElementById("firstPopup");
-        var popupOption2 = document.getElementById("secondPopup");
-        if(popupOption2.style.display === "none"){
-            popupOption1.style.display = "none";
-            popupOption2.style.display = "flex";
-        }else {
-            popupOption2.style.display = "none";
+    const showFirstChildPopup = () => {
+       var firstChildPopup = document.getElementById("firstChildPopup");
+       var motherPopup = document.getElementById("mobileHeaderPopup");
+       var secondChildPopup = document.getElementById("secondChildPopup");
+       var span = document.getElementById("routerShowAtHomeMobileSpan");
+       var btn = document.getElementById("showAtHomeMobileButton");
+       var btn2 = document.getElementById("vtonMobileButton");
+        var span2 = document.getElementById("routerVtonMobileSpan");
+       if(firstChildPopup.style.display === "none"){
+        motherPopup.style.height = "650px";
+        firstChildPopup.style.display = "flex";
+        secondChildPopup.style.display = "none";
+        btn.style.transform = "rotate(+90deg)";
+        span.style.color = "#ED401A";
+        btn2.style.transform = "none";
+        span2.style.color = "#000000";
+       }
+       else{
+        firstChildPopup.style.display = "none";
+        btn.style.transform = "none";
+        motherPopup.style.height = "570px";
+        span.style.color = "#000000";
+       }
+    }
+    const showSecondChildPopup = () => {
+        var firstChildPopup = document.getElementById("firstChildPopup");
+        var motherPopup = document.getElementById("mobileHeaderPopup");
+        var secondChildPopup = document.getElementById("secondChildPopup");
+        var btn = document.getElementById("vtonMobileButton");
+        var span = document.getElementById("routerVtonMobileSpan");
+        var span2 = document.getElementById("routerShowAtHomeMobileSpan");
+        var btn2 = document.getElementById("showAtHomeMobileButton");
+        if(secondChildPopup.style.display === "none"){
+            motherPopup.style.height = "650px";
+            secondChildPopup.style.display = "flex";
+            firstChildPopup.style.display = "none";
+            btn.style.transform = "rotate(+90deg)";
+            span.style.color = "#ED401A";
+            btn2.style.transform = "none";
+        span2.style.color = "#000000";
+        }
+        else{
+            secondChildPopup.style.display = "none";
+            btn.style.transform = "none";
+            motherPopup.style.height = "570px";
+            span.style.color = "#000000";
         }
     }
     const showMobilePopup = () => {
         var popup = document.getElementById("mobileHeaderPopup");
         var overlay = document.getElementById("overlay");
+        var span = document.getElementById("routerProductSpan");
+        var div = document.getElementById("routerProduct");
+        var btn = document.getElementById("productMobileButton");
+        var firstMobilePopup = document.getElementById("firstMobilePopup");
         if (popup.style.display === "none"){
             popup.style.display = "flex";
             overlay.style.width = "1000%";
@@ -52,14 +109,41 @@ export const Header = props => {
             popup.style.display = "none";
             overlay.style.width = "0%";
             overlay.style.height = "0%";
+            div.style.background = "#FFFFFF";
+            span.style.color = "#000000";
+            btn.style.transform = "none";
+            firstMobilePopup.style.display = "none";
         }
-    } 
+    }
+    const showPopupOption1 = () => {
+        var popupOption1 = document.getElementById("firstPopup");
+        var popupOption2 = document.getElementById("secondPopup");
+        if(popupOption1.style.display === "none"){
+            popupOption1.style.display = "flex";
+            popupOption2.style.display = "none";
+        }
+        else{
+            popupOption1.style.display = "none";
+        }
+    }
+    const showPopupOption2 = () => {
+        var popupOption1 = document.getElementById("firstPopup");
+        var popupOption2 = document.getElementById("secondPopup");
+        if(popupOption2.style.display === "none"){
+            popupOption2.style.display = "flex";
+            popupOption1.style.display = "none";
+        }
+        else{
+            popupOption2.style.display = "none";
+        }
+    }
+    
     return(
         <div className="headerContainer">
-            <div class="overlay" id='overlay'></div>
-            <div className='mobileHeaderPopup' id='mobileHeaderPopup' style={{display: "none", position: "absolute"}}>
-                <div className='backToHome'>
-                    <img className='backToHomeArrow' onClick={showMobilePopup} alt='' src={'./assets/img/arrow-left.svg'}></img>
+            <div class="overlay" id='overlay' style={{zIndex: "1"}}></div>
+            <div className='mobileHeaderPopup' id='mobileHeaderPopup' style={{display: "none", position: "absolute", zIndex: "2"}}>
+                <div className='backToHome' onClick={showMobilePopup}>
+                    <img className='backToHomeArrow' alt='' src={'./assets/img/arrow-left.svg'}></img>
                     <a className='backToHomeSpan'>{t("backToHome")}</a>
                 </div>
                 <img alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px"}}></img>
@@ -69,30 +153,67 @@ export const Header = props => {
                 </div>
                 <img alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px"}}></img>
                 <div className="popupRouters">
-                    <div className='popupRouter'>
+                    <div className='popupRouter' id='routerHome'>
                         <a href='/'>{t("home")}</a>
-                        <img className='popupRightButton' alt='' src={'./assets/img/popupRightButton.svg'}></img>
+                        <img className='popupRightButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
-                    <div className='popupRouter'>
-                        <a>{t("productServices")}</a>
-                        <img onMouseOver={showPopup} className='popupRightButton' alt='' src={'./assets/img/popupRightButton.svg'}></img>
+                    <div className='popupRouter' id='routerProduct' onClick={showPopupMobile}>
+                        <a id='routerProductSpan'>{t("productServices")}</a>
+                        <img className='popupRightButton' id='productMobileButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
-                    <div className='popupRouter'>
+                    <div className='firstMobilePopup' id='firstMobilePopup' style={{display: "none"}}>
+                        <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "200px"}}></img>
+                        <div className='popupRouterMobile' id='routerShowAtHomeMobile' onClick={showFirstChildPopup}>
+                            <a id='routerShowAtHomeMobileSpan'>{t("showAtHome")}</a>
+                            <img className='popupRightButton' id='showAtHomeMobileButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
+                        </div>
+                        <div className='firstChildPopup' id='firstChildPopup' style={{display: "none"}}>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
+                            <div className='popupRouterMobile' id='routerShowFurnitureMobile'>
+                                <a href='/productAr'>{t("showFurniture")}</a>
+                            </div>
+                            <div className='popupRouterMobile' id='routerJointMobile'>
+                                <a href='/productJoint'>{t("createProduct")}</a>
+                            </div>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
+                        </div>
+                        <div className='popupRouterMobile' id='routerMetaverseMobile'>
+                            <a href='/productMeta'>{t("metaverse")}</a>
+                        </div>
+                        <div className='popupRouterMobile' id='routerVtonMobile' onClick={showSecondChildPopup}>
+                            <a id='routerVtonMobileSpan'>{t("vton")}</a>
+                            <img className='popupRightButton' id='vtonMobileButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
+                        </div>
+                        <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "200px"}}></img>
+                        <div className='secondChildPopup' id='secondChildPopup' style={{display: "none"}}>
+                            <div className='popupRouterMobile' id='routerWatchMobile'>
+                                <a href='/productWatch'>{t("dressWatch")}</a>
+                            </div>
+                            <div className='popupRouterMobile' id='routerShoesMobile'>
+                                <a href='/productShoes'>{t("dressShoe")}</a>
+                            </div>
+                            <div className='popupRouterMobile' id='routerCloothMobile'>
+                                <a href='/productClooth'>{t("dressClooth")}</a>
+                            </div>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
+                        </div>
+                    </div>
+                    <div className='popupRouter' id='routerAbout'>
                         <a href='/aboutUs'>{t("aboutUs")}</a>
-                        <img className='popupRightButton' alt='' src={'./assets/img/popupRightButton.svg'}></img>
+                        <img className='popupRightButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
-                    <div className='popupRouter'>
-                        <a href='/sugarBlog'>{t("blog")}</a>
-                        <img className='popupRightButton' alt='' src={'./assets/img/popupRightButton.svg'}></img>
+                    <div className='popupRouter' id='routerBlog'>
+                        <a href='/blogs'>{t("blog")}</a>
+                        <img className='popupRightButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
-                    <div className='popupRouter'>
+                    <div className='popupRouter' id='routerContact'>
                         <a href='/contactUs'>{t("contactUs")}</a>
-                        <img className='popupRightButton' alt='' src={'./assets/img/popupRightButton.svg'}></img>
+                        <img className='popupRightButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
                 </div>
-                <img alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px"}}></img>
+                <img id='mobilePopupLine3' alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px", position: "relative"}}></img>
                 <div className='mobileMediaCenterButtons'>
-                    <button className='popupMediaCenterButton'>
+                    <button className='popupMediaCenterButton' id='popupMediaCenterButton'>
                         <a>{t("mediaCenter")}</a>
                     </button>
                 </div>
@@ -108,7 +229,7 @@ export const Header = props => {
                 <a href='/'>{t("home")}</a>
                 <a onMouseOver={showPopup}>{t("productServices")}</a>
                 <a href='/aboutUs'>{t("aboutUs")}</a>
-                <a href='/sugarBlog'>{t("blog")}</a>
+                <a href='/blogs'>{t("blog")}</a>
                 <a href='/contactUs'>{t("contactUs")}</a>
             </div>
             <div className="headerButtons">
@@ -136,7 +257,12 @@ export const Header = props => {
                 <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
                 <div className='firstPopupThirdOption'><a href='/productClooth' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressClooth")}</a></div>
             </div>
-            <img className='askYourQuestionRobot' alt='' src={'./assets/img/askYourQuestions.svg'}></img>
+            <div className='askYourQuestionRobot'>
+                <div className='robotSpans'>
+                    <a className='robotSpan'>{t("askYourQuestions")}</a>
+                </div>
+                <img className='robot' alt='' src={'./assets/img/askYourQuestionsRobot.svg'}></img>
+            </div>
         </div>  
     );
 }

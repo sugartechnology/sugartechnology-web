@@ -1,11 +1,14 @@
 .WhoSugarContainer{
     display: flex;
     flex-direction: column;
-    height: 1118px;
+    height: 980px;
     margin-top: 60px;
 }
-.flyingElements{
+.flyingElements1{
     display: flex;
+}
+.flyingElements1 img{
+    width: 200px;
 }
 .whoSugarSpans{
     display: flex;
@@ -17,12 +20,15 @@
     height: 139px;
     font-style: normal;
     font-weight: 700;
-    font-size: 74px;
+    font-size: 44px;
     line-height: 52px;
     text-align: center;
     letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
+    position: relative;
+    left: 20px;
+    bottom: 50px;
 }
 .whoSugarSpan{
     width: 806px;
@@ -40,14 +46,15 @@
     display: flex;
 }
 .whoSugarLogo1{
-    position: relative;
+    position: absolute;
     left: 440px;
-    bottom: 100px;
+    top: 600px;
+    z-index: -1;
 }
 .whoSugarLogo2{
     position: absolute;
     z-index: -1;
-    top: 400px;
+    top: 300px;
 }
 @media screen and (max-width: 500px){
     .WhoSugarContainer{
@@ -58,50 +65,50 @@
         width: 235px;
         height: 35px;
         font-size: 35px;
+        left: 0px;
+        bottom: 0px;
     }
-    .whoSugarImg1{
-        width: 150px;
-        top: 100px !important;
-        right: 20px;
-    }
-    .whoSugarImg2{
-        width: 100px;
-        top: 20px !important;
-        right: 30px !important;
-    }
-    .whoSugarImg3{
-        width: 150px;
-        right: 260px !important;
-        bottom: 20px !important;
-    }
-    .whoSugarImg4{
-        width: 120px;
-        position: relative;
-        right: 50px;
-    }
-    .whoSugarImg41{
-        width: 50px;
-        left: 385px !important;
-        top: 115px !important;
-    }
-    .whoSugarImg5{
+    .flyingElements1{
         display: none;
     }
-    .whoSugarImg51{
+    .flyingElements2{
         display: flex !important;
-        width: 150px;
-        top: 70px;
-        right: 300px;
     }
-    .whoSugarImg6{
-        width: 100px;
-        right: 270px;
-        top: 100px !important;
+    .mobileBubble1{
+        position: relative;
+        top: 100px;
+        right: 5px;
+    }
+    .mobileBubble2{
+        position: relative;
+        right: 120px;
+        bottom: 10px;
+    }
+    .mobileBubble3{
+        position: relative;
+        right: 150px;
+        top: 20px;
+    }
+    .mobileBubble4{
+        position: relative;
+        right: 200px;
+        top: 70px;
+    }
+    .mobileBubble5{
+        position: relative;
+        right: 250px;
+        bottom: 20px;
+    }
+    .mobileBubble6{
+        position: relative;
+        right: 325px;
+        top: 100px;
     }
     .whoSugarSpans{
         position: relative;
         top: 50px;
         gap: 30px;
+        right: 30px;
     }
     .whoSugarSpan{
         width: 356px;
@@ -109,7 +116,7 @@
     }
     .whoSugarLogo1{
         width: 400px;
-        left: 60px;
+        left: 10px;
         bottom: 0px;
     }
 }

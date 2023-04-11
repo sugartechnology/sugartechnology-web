@@ -44,10 +44,17 @@ export const MainPageSlider = (props) => {
 
     },];
 
+    const ref = useRef();
     useEffect(() => {
         indexRef.current = index;
         clearTimeout(timeOutId);
+        ref.current.classList.remove("slideDetail");
+        setTimeout(() => {
+            ref.current.classList.add("slideDetail");
+        }, 50);
+        console.log("ref is ", ref);
         setTimeOutId(setTimeout(() => {
+            
             setIndex((indexRef.current + 1) % props.children.length);
             setPrevIndex(indexRef.current);
         }, 5000));
@@ -87,7 +94,7 @@ export const MainPageSlider = (props) => {
                 })}
         </div>
 
-        <div className="slideDetail" style={{ filter: '8px' }} key={1}>
+        <div className="slideDetail" style={{ filter: '8px' }} key={1} ref={ref}>
             <div className='slideDetailElements'>
                 <a className='slideDetailFirstSpan'>{t(array[index].header)}</a>
                 <a className='slideDetailSecondSpan'>{t(array[index].span)}</a>

@@ -36,10 +36,56 @@
 }
 .cloothShadow{
     position: absolute;
-    right: 0px;
     left: 935px;
     width: 300px;
-    top: 1587px;
+    top: 1574px;
     z-index: -1;
     opacity: 0.3;
+}
+@media screen and (max-width: 500px){
+    .tryCloothContainer{
+        height: 713px;
+        flex-direction: column;
+    }
+    .tryCloothHeader{
+        height: 70px;
+        width: 356px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: -1px;
+        text-transform: capitalize;
+    }
+    .tryCloothSpan{
+        width: 345px;
+        height: 95px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 19px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .tryCloothImage{
+        width: 200px !important;
+        bottom: 20px;
+        position: relative;
+    }
+    .cloothShadow{
+        left: 118px;
+        width: 180px;
+        top: 1656px;
+    }
+    .tryCloothElementImage1{
+        width: 207px !important;
+        position: relative;
+        left: 70px;
+    }
+    .tryCloothElementImage2{
+        width: 221px !important;
+        position: relative;
+        left: 65px;
+    }
 }

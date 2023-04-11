@@ -13,15 +13,15 @@ export const CustomerComments = props => {
     },
 
     {
-        trustedByMillionsOfCompany: "trustedByMillionsOfCompany1",
-        commentSpan: "commentSpan1",
-        commentHeader: "commentHeader1",
+        trustedByMillionsOfCompany: "trustedByMillionsOfCompany2",
+        commentSpan: "commentSpan2",
+        commentHeader: "commentHeader2",
         commentAuthor: "Abdurrahman  Türkeri"
     },
     {
         trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
         commentSpan: "commentSpan3",
-        commentHeader: "commentHeader4",
+        commentHeader: "commentHeader3",
         commentAuthor: "Ali  Yalcin "
     }];
 

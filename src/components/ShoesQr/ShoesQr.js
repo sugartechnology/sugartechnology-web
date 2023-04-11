@@ -64,8 +64,8 @@ export const ShoesQr = props =>{
                 </div>
             </div>
             <div className='shoesQrImg'>
-                <img alt='' src={'./assets/img/shoesQrImagePhone.svg'}></img>
-                <img alt='' src={'./assets/img/QR.svg'} style={{position: "absolute",right: "227px", top: "200px"}}></img>
+                <img className='shoesQrPhone' alt='' src={'./assets/img/shoesQrImagePhone.svg'}></img>
+                <img className='shoesQr' alt='' src={'./assets/img/QR.svg'} style={{position: "absolute",right: "227px", top: "200px"}}></img>
             </div>
         </div>
     );

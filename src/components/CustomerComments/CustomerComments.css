@@ -87,15 +87,20 @@
 }
 .customerPhoto{
     border-radius: 100px;
+    position: relative;
+    left: 35px;
 }
 .commentCustomer h1{
     color: #FFFFFF;
     font-size: 23px;
+    position: relative;
+    left: 35px;
 }
 .commentCustomer a{
     color: #FFFFFF;
     position: relative;
     bottom: 10px;
+    left: 35px;
 }
 .commentPageButtons{
     position: relative;
@@ -188,8 +193,8 @@
     display: flex;
     gap: 10px;
     position: absolute;
-    left: 705px;
-    top: 700px;
+    left: 695px;
+    top: 680px;
 }
 .customerCommentsPageButtons img{
     width: 10px;
