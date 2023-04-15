@@ -7,7 +7,6 @@
 .reportsSpanElement{
     display: flex;
     position: relative;
-    left: 200px;
     top: 150px;
     gap: 100px;
 }
@@ -22,6 +21,8 @@
     align-items: center;
     flex-direction: column;
     color: #000000;
+    position: relative;
+    left: 200px;
 }
 .reportsHeader{
     width: 1081px;
@@ -41,6 +42,10 @@
 .reportList{
     position: relative;
     right: 70px;
+}
+.reportsSpansImg{
+    position: relative;
+    left: 200px;
 }
 .reportsSpangImgShadow{
     position: absolute;

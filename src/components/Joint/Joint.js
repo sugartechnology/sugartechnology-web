@@ -5,13 +5,23 @@ export const Joint = props =>{
     const {t} = useTranslation();
     return(
         <div className='jointContainer'>
-            <div className='showAtHomeBubbles'>
-                <img className='bubble1' alt='' src={'./assets/img/ShowAtHomeImg1.svg'}></img>
-                <img className='bubble2' alt='' src={'./assets/img/ShowAtHomeImg2.svg'} style={{position: "relative", top: "280px", right: "610px"}}></img>
-                <img className='bubble3' alt='' src={'./assets/img/ShowAtHomeImg3.svg'} style={{position: "relative", right: "200px", bottom: "200px"}}></img>
-                <img className='bubble4' alt='' src={'./assets/img/ShowAtHomeImg4.svg'} style={{position: "relative", left: "100px", bottom: "270px"}}></img>
-                <img className='bubble5' alt='' src={'./assets/img/ShowAtHomeImg5.svg'} style={{position: "relative", left: "1205px", bottom: "300px"}}></img>
-            </div>
+            <div className='mainPageTopLeftFigure rotate'></div>
+        <div className='mainPageTopRightFigure rotate'></div>
+        <div className='mainPageMiddleFigure rotate'></div>
+        <div className='mainPageSmallFigure bright' style={{
+            width: '243px',
+            height: '233px',
+            left: '498px',
+            top: '136px'
+        }}></div>
+        <div className='mainPageSmallFigure '></div>
+        <div className='mainPageSmallFigure ' style={{
+            width: '629px',
+            height: '665px',
+            left: '170px',
+            top: '316px'
+        }}></div>
+        <div className='mainPageSmallFigure0 '></div>
             <div className='jointSpans'>
                 <a className='showAtHomeHeader'>{t("jointContainerHeader")}</a>
                 <a className='showAtHomeSpan'>{t("jointContainerSpan")}</a>

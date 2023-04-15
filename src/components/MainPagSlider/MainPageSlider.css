@@ -50,7 +50,6 @@
   background-image: url(/public/MainPageSliderBackground/top_right.png);
   width: 695px;
   height: 770px;
-  right: -55px;
   top: -448px;
   background-size: cover;
 }
@@ -1616,6 +1615,7 @@
 @media screen and (max-width: 500px) {
   .mainPageSliderContainer{
     height: 900px;
+    width: 414px;
   }
   .smallSliderMenu{
     bottom: 540px !important;

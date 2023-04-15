@@ -22,6 +22,7 @@
     .jointContainer{
         height: 900px;
         justify-content: normal;
+        width: 414px;
     }
     .jointSpans{
         right: 0px;

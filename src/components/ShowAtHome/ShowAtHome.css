@@ -122,6 +122,7 @@
         flex-direction: column-reverse;
         justify-content: flex-end;
         height: 900px;
+        width: 414px;
     }
     .showAtHomeImage{
         width: 328px;

@@ -13,7 +13,7 @@ export const Header = props => {
         var popupOption2 =  document.getElementById("secondPopup");
         if(popup.style.display === "none"){
             popup.style.display = "flex";
-        }else { 
+        }else {
             popup.style.display = "none";
             popupOption1.style.display = "none";
             popupOption2.style.display = "none";
@@ -123,6 +123,7 @@ export const Header = props => {
             popupOption2.style.display = "none";
         }
         else{
+            
             popupOption1.style.display = "none";
         }
     }

@@ -207,12 +207,32 @@
     position: relative;
     left: 40px;
 }
+.redBackgroundCircle1{
+    position: absolute;
+
+}
+.redBackgroundCircle2{
+    position: absolute;
+    left: 1128px;
+    top: 58px;
+}
+.redBackgroundCircle3{
+    position: absolute;
+    left: 1290px;
+    top: 310px;
+}
+
 @media screen and (max-width: 500px){
     .customerCommentsContainer{
         width: 414px;
         height: 550px;
     }
     .redBackground{
+        display: none;
+    }
+    .redBackgroundCircle1,
+    .redBackgroundCircle2,
+    .redBackgroundCircle3{
         display: none;
     }
     .redBackgroundMobile{

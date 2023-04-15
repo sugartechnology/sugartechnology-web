@@ -5,13 +5,23 @@ export const ContactInput = props =>{
     const {t} = useTranslation();
     return(
         <div className='contactInputContainer'>
-            <div className='showAtHomeBubbles'>
-                <img alt='' src={'./assets/img/ShowAtHomeImg1.svg'} style={{position: "relative", top: "50px", left: "70px", zIndex: "-1"}}></img>
-                <img alt='' src={'./assets/img/ShowAtHomeImg2.svg'} style={{position: "relative", right: "610px", top: "400px"}}></img>
-                <img alt='' src={'./assets/img/contactInputBubble3.svg'} style={{position: "relative", left: "800px", bottom: "600px", zIndex: "-1"}}></img>
-                <img alt='' src={'./assets/img/ShowAtHomeImg4.svg'} style={{position: "relative", left: "100px", bottom: "270px"}}></img>
-                <img alt='' src={'./assets/img/contactInputBubble4.svg'} style={{position: "relative", left: "400px", bottom: "50px"}}></img>
-            </div>
+            <div className='mainPageTopLeftFigure rotate'></div>
+        <div className='mainPageTopRightFigure rotate'></div>
+        <div className='mainPageMiddleFigure rotate'></div>
+        <div className='mainPageSmallFigure bright' style={{
+            width: '243px',
+            height: '233px',
+            left: '498px',
+            top: '136px'
+        }}></div>
+        <div className='mainPageSmallFigure '></div>
+        <div className='mainPageSmallFigure ' style={{
+            width: '629px',
+            height: '665px',
+            left: '170px',
+            top: '316px'
+        }}></div>
+        <div className='mainPageSmallFigure0 '></div>
             <div className='contactInputs'>
                 <div className='contactInputHeaders'>
                     <a className='contactInputHeader'>{t("contactUs")}</a>

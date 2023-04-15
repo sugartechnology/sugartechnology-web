@@ -8,7 +8,10 @@ export const ArDetails = props =>{
             <div className='arDetailsSpans'>
                 <a className='arDetailsHeader'>{t("ArDetails")}</a>
                 <a className='arDetailsSpan'>{t("arDetailsSpan")}</a>
-                <img className='showAtHomeImg' id='option1Img' alt='' src={'./assets/img/sugar-model-viewer2.svg'} style={{display: "flex",position: "absolute", top: "1240px", left: "300px"}}></img>
+                <sugar-model-viewer class="modelViewer" id="sugar" style={{ width:"76%" ,height: "400px" ,margin: "auto" ,display: "block" ,marginBottom: "60px" ,paddingBottom: "60px"}} ar="" shadow-intensity="1" show-model-group
+                    ar-scale="fixed" show-option="" camera-controls="" ar-status="not-presenting" camera-down-lock="true"  camera-orbit="15deg 55deg auto" template="advanced"
+                    product_id="Designer_34874" company_id="43" exposure="1" joint-show="">
+                </sugar-model-viewer>
             </div>
             <img className='arDetailsShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
             <img alt='' src={'./assets/img/ArDetailsImg2.svg'} style={{position: "absolute", top: "1100px", right: "700px", zIndex: "-1"}}></img>

@@ -38,7 +38,10 @@ export const CustomerComments = props => {
             <img className='commentsLeftButton' alt='' src={'assets/img/commentsLeftButton.svg'} onClick={() => { prev(); }}></img>
             <div className='firstCommnetBackground'>
                 <img className='redBackgroundMobile' alt='' src={'./assets/img/customerCommentMobileBackground.svg'} style={{ display: "none" }}></img>
-                <img className='redBackground' alt='' src={'assets/img/customerCommentRedBackground.svg'}></img>
+                <img className='redBackground' alt='' src={'assets/img/customerCommentBackground.svg'}></img>
+                <img className='redBackgroundCircle1' alt='' src={'./assets/img/circle1.svg'}></img>
+                <img className='redBackgroundCircle2' alt='' src={'./assets/img/circle2.svg'}></img>
+                <img className='redBackgroundCircle3' alt='' src={'./assets/img/circle3.svg'}></img>
                 <div className='firstComment' id='firstComment'>
                     <div className='commentSpans'>
                         <a className='firstCommentSpan'>{t(array[index].trustedByMillionsOfCompany)}</a>
