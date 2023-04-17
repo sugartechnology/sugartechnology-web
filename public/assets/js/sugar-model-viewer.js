@@ -66809,8 +66809,9 @@ const sugarModelContainerStyle = `
 #sugar-model-container{
     display: flex;
     flex-direction: column;
-    /* flex: 1 1; */
-    height: 100%;
+	width: 1200px;
+	height: 629px;
+	position: relative;
 }
 
 #sugar-joint-container{
@@ -72523,10 +72524,9 @@ advenced_feature_template.innerHTML = `
         display: flex;
     }
     .info {
-        width: 23%;
-        height: 100vh;
+        width: 25%;
+        height: 597px;
         padding: 1em;
-        bottom: 0px;
         right: 0px;
         display: flex;
         flex-direction: column;
@@ -72663,7 +72663,6 @@ advenced_feature_template.innerHTML = `
         height: 100%;
         margin: 0px;
         font-family: 'Inter', sans-serif;
-        overflow-y: hidden;
         transition: 0.5s;
     }
 
@@ -72698,6 +72697,7 @@ advenced_feature_template.innerHTML = `
     #sugar-model-container {
         display: flex;
         flex-direction: column;
+		border: 1px solid #000000;
     }
 
     .showAtHome {
@@ -72705,8 +72705,8 @@ advenced_feature_template.innerHTML = `
         flex-direction: row;
         align-items: center;
         position: absolute;
-        left: 420px;
-        top: 600px;
+        left: 370px;
+        top: 500px;
         background: #E74D35;
         border-radius: 50px;
         cursor: pointer;
@@ -72719,8 +72719,8 @@ advenced_feature_template.innerHTML = `
         align-items: center;
         padding: 16px 24px;
         gap: 16px;
-        top: 15%;
-        left: 27.5%;
+        top: 10%;
+        left: 26%;
         position: absolute;
         width: 250px;
         height: 400px;
@@ -72787,10 +72787,6 @@ advenced_feature_template.innerHTML = `
         border-color: #E74D35;
     }
 
-    .modelViewer{
-        right: 250px;
-        height: 550px;
-    }
     .infoCloseButtonDiv{
         display: none;
         position: absolute;
@@ -72945,28 +72941,8 @@ advenced_feature_template.innerHTML = `
         }
 
     }
-
     </style>
-    <div class="infoCloseButtonDiv" id="infoCloseButtonDiv">
-    <svg class="infoCloseButton" id="infoShowButton" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" onclick = "closeInfo()">
-        <g filter="url(#filter0_d_18_332)">
-            <rect x="8" y="4" width="32" height="32" rx="16" fill="#EEEEEE"/>
-        </g>
-        <path d="M20.1527 13.9781C20.712 13.4741 21.6188 13.4741 22.178 13.9781L27.8471 19.0875C28.4064 19.5915 28.4064 20.4087 27.8471 20.9127L22.1781 26.0221C21.8988 26.2736 21.5313 26.4001 21.1655 26.4001C20.7998 26.4001 20.4323 26.2738 20.153 26.0222C19.5937 25.5181 19.5936 24.7009 20.1529 24.1968L23.3773 21.2907L24.8468 20.0001L23.3772 18.7094L20.1527 15.8034C19.5935 15.2993 19.5935 14.4821 20.1527 13.9781Z" fill="#E74D35"/>
-        <defs>
-            <filter id="filter0_d_18_332" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dx="-4"/>
-                <feGaussianBlur stdDeviation="2"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_18_332"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_18_332" result="shape"/>
-            </filter>
-        </defs>
-    </svg>
-    </div>
+
     <div class="showAtHome" id="showAtHome">
         <svg xmlns="http://www.w3.org/2000/svg" width="187" height="48" viewBox="0 0 187 48" fill="none">
         <rect width="187" height="48" rx="24" fill="#E74D35"/>
@@ -72980,7 +72956,7 @@ advenced_feature_template.innerHTML = `
         <div class="closeArea">
             <span>Evinde Görüntüle</span>
             <button>
-                <svg id="closePopupButton" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="cursor: pointer; position: relative; left: 10px;" onclick="closePopup()">
+                <svg id="closePopupButton" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="cursor: pointer; position: relative; left: 10px;">
                     <path d="M18.3 5.70998C18.2075 5.61728 18.0976 5.54373 17.9766 5.49355C17.8556 5.44337 17.7259 5.41754 17.595 5.41754C17.464 5.41754 17.3343 5.44337 17.2134 5.49355C17.0924 5.54373 16.9825 5.61728 16.89 5.70998L12 10.59L7.10998 5.69998C7.0174 5.6074 6.90749 5.53396 6.78652 5.48385C6.66556 5.43375 6.53591 5.40796 6.40498 5.40796C6.27405 5.40796 6.1444 5.43375 6.02344 5.48385C5.90247 5.53396 5.79256 5.6074 5.69998 5.69998C5.6074 5.79256 5.53396 5.90247 5.48385 6.02344C5.43375 6.1444 5.40796 6.27405 5.40796 6.40498C5.40796 6.53591 5.43375 6.66556 5.48385 6.78652C5.53396 6.90749 5.6074 7.0174 5.69998 7.10998L10.59 12L5.69998 16.89C5.6074 16.9826 5.53396 17.0925 5.48385 17.2134C5.43375 17.3344 5.40796 17.464 5.40796 17.595C5.40796 17.7259 5.43375 17.8556 5.48385 17.9765C5.53396 18.0975 5.6074 18.2074 5.69998 18.3C5.79256 18.3926 5.90247 18.466 6.02344 18.5161C6.1444 18.5662 6.27405 18.592 6.40498 18.592C6.53591 18.592 6.66556 18.5662 6.78652 18.5161C6.90749 18.466 7.0174 18.3926 7.10998 18.3L12 13.41L16.89 18.3C16.9826 18.3926 17.0925 18.466 17.2134 18.5161C17.3344 18.5662 17.464 18.592 17.595 18.592C17.7259 18.592 17.8556 18.5662 17.9765 18.5161C18.0975 18.466 18.2074 18.3926 18.3 18.3C18.3926 18.2074 18.466 18.0975 18.5161 17.9765C18.5662 17.8556 18.592 17.7259 18.592 17.595C18.592 17.464 18.5662 17.3344 18.5161 17.2134C18.466 17.0925 18.3926 16.9826 18.3 16.89L13.41 12L18.3 7.10998C18.68 6.72998 18.68 6.08998 18.3 5.70998Z" fill="#1E1E1E"/>
                 </svg>
             </button>
@@ -73092,7 +73068,7 @@ advenced_feature_template.innerHTML = `
         </div>
 
         <div class="infoShowButtonDiv">
-        <svg class="infoShowButton" id="infoShowButton" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" onclick = "closeInfo()">
+        <svg class="infoShowButton" id="infoShowButton" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
             <g filter="url(#filter0_d_18_332)">
                 <rect x="8" y="4" width="32" height="32" rx="16" fill="#EEEEEE"/>
             </g>
@@ -73342,7 +73318,7 @@ class TemplateMananagerAdvanced {
         if (featureContainer.style.display == "none") {
             featureContainer.style.display = "flex";
             featureButtons.style.transform = 'rotate(-180deg)';
-            featureButtons.style.left = "0px";
+            featureButtons.style.left = "266px";
             featureButtons.style.bottom = "none";
             featureButton.style.left = "20px";
         }
@@ -73350,7 +73326,7 @@ class TemplateMananagerAdvanced {
             featureContainer.style.display = "none";
             featureButtons.style.transform = "none";
             featureButtons.style.position = "relative";
-            featureButtons.style.left = "300px";
+            featureButtons.style.left = "280px";
             featureButtons.style.bottom = "20px";
             featureButton.style.left = "0px";
         }
