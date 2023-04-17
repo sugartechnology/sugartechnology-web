@@ -9,7 +9,7 @@ export const ArDetails = props =>{
                 <a className='arDetailsHeader'>{t("ArDetails")}</a>
                 <a className='arDetailsSpan'>{t("arDetailsSpan")}</a>
                 <sugar-model-viewer class="modelViewer" id="sugar" style={{ width:"76%" ,height: "500px" ,margin: "auto" ,display: "block" ,marginBottom: "60px" ,paddingBottom: "60px"}} ar="" shadow-intensity="1" 
-                    ar-scale="fixed" show-option="" camera-controls="" ar-status="not-presenting" camera-down-lock="true"  camera-orbit="15deg 55deg auto" template="advanced"
+                    ar-scale="fixed" show-option="" camera-controls="" ar-status="not-presenting" camera-down-lock="true"  camera-orbit="15deg 55deg auto" template="advanced" showDimension="true"
                     product_id="Designer_34874" company_id="43" exposure="1" joint-show="">
                 </sugar-model-viewer>
             </div>

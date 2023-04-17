@@ -66007,14 +66007,14 @@ class DimensionHotspot {
         this.showHotspots = true;
         this.minWidth = 0.001;
         this.maxWidth = 0.003;
-        this.showDimension = "basic";
+		this.showDimension = "true";
         this.element = element;
         this.scene = scene;
         this.textureLoader = new TextureLoader();
         this.showDimension = this.element.getAttribute("showDimension");
         if (this.showDimension != "true")
             return;
-        this.element.addEventListener("init-model-load", this.getAdvencedDimensionLine.bind(this), false);
+        this.element.addEventListener("init-model-load", this.getDimensionLine.bind(this), false);
         this.element.addEventListener("ar-status", this.onARSession.bind(this), true);
         this.element.addEventListener("hotspots-populated", this.handleHotspotVisibility.bind(this));
         this.element.addEventListener("camera-change", this.onCameraChange.bind(this), true);
@@ -66246,49 +66246,32 @@ class DimensionHotspot {
         this.drawLines(startVector2, start, name);
         this.drawLines(endVector2, end, name);
     }
-    showAdvancedControlButton() {
-        this.sugarControlToggleTemplate = advanced_control_button_template.content.cloneNode(true);
-        this.sugarControlToggle = this.sugarControlToggleTemplate.querySelector(".dimension_button");
-        this.element.parentElement.appendChild(this.sugarControlToggleTemplate);
-        this.sugarControlToggle.addEventListener('click', this.toggleControlButton.bind(this));
-    }
-    toggleControlButton() {
-        let toggle = this.sugarControlToggle.querySelector(".dimension_control_button");
-        let classList = toggle.classList;
-        let isToggled = classList.contains("button_active");
-        if (isToggled) {
-            classList.remove("button_active");
-            this.showHotspots = false;
-            this.hideDimensionHotspot();
-            this.element.dispatchEvent(new CustomEvent("hotspots-hide"));
-            return;
-        }
-        this.showHotspots = true;
-        this.showDimensionHotspot();
-        this.element.dispatchEvent(new CustomEvent("hotspots-show"));
-        classList.add("button_active");
-    }
     showControlButton() {
-        this.hotspotControlToggleTemplate = hotspot_control_button_template.content.cloneNode(true);
-        this.hotspotControlToggle = this.hotspotControlToggleTemplate.querySelector(".annototaion_control_toggle");
-        this.element.shadowRoot.appendChild(this.hotspotControlToggleTemplate);
-        this.hotspotControlToggle.addEventListener("click", this.toggleShowButton.bind(this));
+		let elementTemplate = this.element.template;
+        if (elementTemplate === "advanced") {
+            const modelInfo = this.element.parentElement.querySelector("#modelInfo");
+            const dimensionButton = modelInfo.querySelector(".dimension_button");
+            dimensionButton.addEventListener("click", this.toggleShowButton.bind(this));
+        }
+        else {
+            this.hotspotControlToggleTemplate = hotspot_control_button_template.content.cloneNode(true);
+            this.hotspotControlToggle = this.hotspotControlToggleTemplate.querySelector(".annototaion_control_toggle");
+            this.element.shadowRoot.appendChild(this.hotspotControlToggleTemplate);
+            this.hotspotControlToggle.addEventListener("click", this.toggleShowButton.bind(this));
+        }
     }
     toggleShowButton() {
-        let toggle = this.hotspotControlToggle.querySelector(".toggle");
-        let classList = toggle.classList;
-        let isToggled = classList.contains("toggle_active");
-        if (isToggled) {
-            classList.remove("toggle_active");
+        if (this.showHotspots === true) {
             this.showHotspots = false;
             this.hideDimensionHotspot();
             this.element.dispatchEvent(new CustomEvent("hotspots-hide"));
             return;
         }
-        this.showHotspots = true;
-        this.showDimensionHotspot();
-        this.element.dispatchEvent(new CustomEvent("hotspots-show"));
-        classList.add("toggle_active");
+        else {
+            this.showHotspots = true;
+            this.showDimensionHotspot();
+            this.element.dispatchEvent(new CustomEvent("hotspots-show"));
+        }
     }
     handleHotspotVisibility() {
         this.hideDimensionHotspot();
@@ -72646,7 +72629,7 @@ advenced_feature_template.innerHTML = `
         flex-direction: row;
         flex-wrap: wrap;
         position: relative;
-        left: 30px;
+        left: 10px;
         height: 150px;
         animation: slideRight 1s forwards;
     }
