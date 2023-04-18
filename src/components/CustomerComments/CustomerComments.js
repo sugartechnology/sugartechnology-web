@@ -9,20 +9,30 @@ export const CustomerComments = props => {
         trustedByMillionsOfCompany: "trustedByMillionsOfCompany",
         commentSpan: "commentSpan",
         commentHeader: "commentHeader",
-        commentAuthor: "Yusuf Fatih Erol"
+        commentAuthor: "Ceren Evcimen",
+        customerImg : "assets/img/cereen_evcimen.jpeg"
     },
 
     {
         trustedByMillionsOfCompany: "trustedByMillionsOfCompany2",
         commentSpan: "commentSpan2",
         commentHeader: "commentHeader2",
-        commentAuthor: "Abdurrahman  Türkeri"
+        commentAuthor: "Abdurrahman  Türkeri",
+        customerImg : "assets/img/cereen_evcimen.jpeg"
     },
     {
         trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
         commentSpan: "commentSpan3",
         commentHeader: "commentHeader3",
-        commentAuthor: "Ali  Yalcin "
+        commentAuthor: "Halil İbrahim Şahin  ",
+        customerImg : "assets/img/cereen_evcimen.jpeg"
+    },
+    {
+        trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
+        commentSpan: "commentSpan3",
+        commentHeader: "commentHeader3",
+        commentAuthor: "Ebru Uzluer ",
+        customerImg : "assets/img/cereen_evcimen.jpeg"
     }];
 
     const next = () => {
@@ -46,10 +56,9 @@ export const CustomerComments = props => {
                         <a className='thirdCommentSpan'>{t(array[index].commentSpan)}</a>
                     </div>
                     <div className='commentCustomer'>
-                        <img className='customerPhoto' alt='' src={'assets/img/TepeHomePhoto.svg'}></img>
+                        <img className='customerPhoto' alt='' src={t(array[index].customerImg)}></img>
                         <h1>{t(array[index].commentHeader)}</h1>
                         <a>{array[index].commentAuthor}</a>
-                        <img className='commentStar' alt='' src={'assets/img/Star.svg'}></img>
                     </div>
                 </div>
 

@@ -15,31 +15,37 @@ export const MainPageSlider = (props) => {
     const array = [{
         header: "slideDetailHeader",
         span: "slideDetailSpan",
+        buttonLabel: "slideButtonLabel1",
         link: "route"
 
     }, {
         header: "slideDetailHeader2",
         span: "slideDetailSpan2",
+        buttonLabel: "slideButtonLabel3",
         link: "route"
 
     }, {
         header: "slideDetailHeader3",
         span: "slideDetailSpan3",
+        buttonLabel: "slideButtonLabel3",
         link: "route"
 
     }, {
         header: "slideDetailHeader4",
         span: "slideDetailSpan4",
+        buttonLabel: "slideButtonLabel4",
         link: "route"
 
     }, {
         header: "slideDetailHeader5",
         span: "slideDetailSpan5",
+        buttonLabel: "slideButtonLabel5",
         link: "route"
 
     }, {
         header: "slideDetailHeader6",
         span: "slideDetailSpan6",
+        buttonLabel: "slideButtonLabel6",
         link: "route"
 
     },];
@@ -99,7 +105,7 @@ export const MainPageSlider = (props) => {
                 <a className='slideDetailFirstSpan'>{t(array[index].header)}</a>
                 <a className='slideDetailSecondSpan'>{t(array[index].span)}</a>
                 <button className='slideDetailButton'>
-                    <a>{t("readMore")}</a>
+                    <a>{t(array[index].buttonLabel)}</a>
                 </button>
             </div>
         </div>
