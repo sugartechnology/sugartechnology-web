@@ -102,7 +102,7 @@ export const Header = props => {
         var firstMobilePopup = document.getElementById("firstMobilePopup");
         if (popup.style.display === "none"){
             popup.style.display = "flex";
-            overlay.style.width = "1000%";
+            overlay.style.width = "100%";
             overlay.style.height = "100%";
         }
         else{

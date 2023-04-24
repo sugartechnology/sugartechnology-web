@@ -1,9 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-function LanguageSelector() {
+function LanguageSelector(){
     const { i18n } = useTranslation();
-
     function toggleEnglish(){
       var englishButton = document.querySelector('.englishButton');
       var turkishButton = document.querySelector('.turkishButton');
