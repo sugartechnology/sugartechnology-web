@@ -34,7 +34,6 @@
         flex-direction: row;
     }
     .footerLine{
-        width: 350px !important;
         position: relative;
         left: 30px;
         top: 20px;

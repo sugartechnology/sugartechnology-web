@@ -22,7 +22,7 @@
     width: 510px;
     font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 60px;
     line-height: 66px;
     letter-spacing: -1px;
     color: #000000;
@@ -50,25 +50,42 @@
     position: relative;
     bottom: 50px;
 }
-.showAtHomeButton1{
-    height: 60px;
-    width: 170px;
-    background: #FFFFFF;
-    border-radius: 100px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.slideDetailButton{
     border: none;
-    filter: drop-shadow(1px 6px 8px rgba(66, 66, 66, 0.35));
+    width: 129px;
+    height: 44px;
+    background: #ED401A;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
 }
-.showAtHomeButton1:hover,
-.showAtHomeButton1 a:hover{
+  
+.showAtHomeButton1 a{
+    width: 83px;
+    height: 18px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15.9998px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+  }
+.showAtHomeButton1{
+    border: none;
+    width: 129px;
+    height: 44px;
+    background: #ED401A;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.showAtHomeButton1:hover{
     background: red;
     color: white;
 }
 .showAtHomeButton1 a {
-  color: red;
+  color: white;
 }
 .showAtHomeButton1:hover a {
   color: white;
@@ -88,16 +105,18 @@
     height: 26px;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
+    width: 110px;
     line-height: 26px;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    color: #ED401A;
+    color: white;
 }
 .showAtHomeButton2{
-    height: 60px;
-    width: 170px;
+    width: 129px;
+    height: 44px;
     border: 2px solid #ED401A;
     border-radius: 100px;
     cursor: pointer;
@@ -106,13 +125,14 @@
     justify-content: center;
 }
 .showAtHomeButton2 a{
-    width: 109px;
     height: 26px;
     font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    width: 150px;
     line-height: 26px;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     color: #ED401A;
@@ -132,6 +152,7 @@
     .showAtHomeSpans{
         gap: 40px;
         top: 50px;
+        left: 0px;
     }
     .showAtHomeHeader{
         width: 300px;

@@ -24,10 +24,28 @@ export const Contact = props =>{
         xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(form));
-        inputPopup();
+        if ((this.status == 200) && (this.status < 300)) {
+            inputDonePopup();
+        }
+        else{
+            inputErrorPopup();
+        }
     }
-    function inputPopup() {
-        let inputPopup = document.getElementById('inputPopup');
+    function inputDonePopup() {
+        let inputPopup = document.getElementById('inputDonePopup');
+        let overlay = document.getElementById("overlay");
+        let btn = document.getElementById('inputPopupCloseButton');
+        inputPopup.style.display = "flex";
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        btn.addEventListener('click', function closeInputPopup(){
+            inputPopup.style.display = "none";
+            overlay.style.width = "0%";
+            overlay.style.height = "0%";
+        });
+    }
+    function inputErrorPopup(){
+        let inputPopup = document.getElementById('inputErrorPopup');
         let overlay = document.getElementById("overlay");
         let btn = document.getElementById('inputPopupCloseButton');
         inputPopup.style.display = "flex";
@@ -117,7 +135,7 @@ export const Contact = props =>{
                 </div>
             </div>
             </div>
-            <div className='inputPopup' id='inputPopup'>
+            <div className='inputDonePopup' id='inputDonePopup'>
                 <div className='inputPopupButton'>
                     <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                 </div>
@@ -125,6 +143,18 @@ export const Contact = props =>{
                     <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
                     <a className='inputPopupHeader'>Thank You!</a>
                     <a className='inputPopupSpan'>Your submission has been sent.</a>
+                </div>
+            </div>
+            <div className='inputDonePopup' id='inputErrorPopup'>
+                <div className='inputPopupButton'>
+                    <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                </div>
+                <div className='inputPopupSpans'>
+                    <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
+                    <a className='inputPopupHeader'>OOPS!</a>
+                    <a className='inputPopupSpan'>Your submission has been sent.</a>
+                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                    <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
                 </div>
             </div>
         </div>

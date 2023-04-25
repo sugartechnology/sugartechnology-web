@@ -20,7 +20,7 @@
 }
 @media screen and (max-width: 500px){
     .jointContainer{
-        height: 900px;
+        height: 760px;
         justify-content: normal;
         width: 414px;
     }

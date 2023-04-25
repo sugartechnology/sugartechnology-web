@@ -1,47 +1,61 @@
 .experienceReportsContainer{
-    height: 619px;
+    height: 520px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background: #EFEFEF;
 }
 .reportsSpanElement{
     display: flex;
     position: relative;
-    top: 150px;
     gap: 100px;
 }
 .reportsSpans{
-    width: 651px;
+    width: 594px;
     height: 268px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 25px;
     line-height: 36px;
+    position: relative;
+    color: #000000;
+    left: 200px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.reportsFirstSpan{
+    width: 523px;
+    height: 77px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    letter-spacing: -1px;
+    color: #ED401A;
+}
+.reportsSecondSpan{
+    width: 478px;
+    height: 135px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
     color: #000000;
-    position: relative;
-    left: 200px;
 }
 .reportsHeader{
-    width: 1081px;
+    width: 490px;
     height: 66px;
     font-style: normal;
     font-weight: 700;
-    font-size: 51px;
+    font-size: 38px;
     line-height: 66px;
     display: flex;
     align-items: center;
     letter-spacing: -1px;
     color: #000000;
-    position: relative;
-    left: 240px;
-    top: 40px;
-}
-.reportList{
-    position: relative;
-    right: 70px;
 }
 .reportsSpansImg{
     position: relative;
@@ -57,17 +71,28 @@
         height: 800px;
     }
     .reportsHeader{
-        width: 333px;
-        font-size: 29px;
+        width: 400px;
+        font-size: 23px;
         height: 70px;
         left: 50px;
     }
+    .reportsFirstSpan{
+        width: 400px;
+        font-size: 25px;
+    }
+    .reportsSecondSpan{
+        width: 390px;
+    }
     .reportsSpanElement{
         flex-direction: column-reverse;
+        height: 100%;
     }
     .reportsSpans{
         width: 322px;
         font-size: 13px;
+        top: 30px;
+        position: absolute;
+        left: 30px;
     }
     .reportsSpan{
         position: relative;
@@ -80,14 +105,14 @@
     }
     .reportsSpansImg{
         width: 321px;
-        position: relative;
-        right: 150px;
+        position: absolute;
+        left: 40px;
         bottom: 100px;
     }
     .reportsSpangImgShadow{
         display: flex;
-        width: 320px;
-        right: 243px;
+        width: 321px;
+        right: 53px;
         bottom: 81px;
     }
 }

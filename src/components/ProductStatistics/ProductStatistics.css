@@ -7,7 +7,7 @@
 }
 .productStatisticsHeader{
     display: flex;
-    height: 203px;
+    height: 170px;
     width: 409px;
     line-height: 57px;  
     text-align: left;
@@ -19,12 +19,12 @@
     color: #000000;
 }
 .productStatisticsSpans{
-    width: 418px;
+    width: 448px;
     display: flex;
     height: 130px;
     font-style: normal;
-    font-weight: 300;
-    font-size: 17px;
+    font-weight: lighter;
+    font-size: 20px;
     line-height: 26px;
     text-align: justify;
     letter-spacing: -1px;

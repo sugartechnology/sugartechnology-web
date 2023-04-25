@@ -6,13 +6,13 @@ export const WhoSugar = props =>{
     return(
         <div className='WhoSugarContainer'>
             <div className='flyingElements1'>
-                <img className='whoSugarImg1' alt='' src={'./assets/img/WhoSugarLogos1.svg'} style={{position:"relative", top:"200px"}}></img>
-                <img className='whoSugarImg2' alt='' src={'./assets/img/WhoSugarLogos2.svg'} style={{position:"relative", top:"50px", left:"50px", width: "150px"}}></img>
-                <img className='whoSugarImg3' alt='' src={'./assets/img/WhoSugarLogos3.svg'} style={{position:"relative", left:"160px"}}></img>
-                <img className='whoSugarImg4' alt='' src={'./assets/img/WhoSugarLogos4.svg'} style={{position: "relative", left: "300px", width: "150px", top: "30px"}}></img>
-                <img className='whoSugarImg41' alt='' src={'./assets/img/shoeImg.svg'} style={{position: "absolute", left: "893px", top: "170px", width: "60px"}}></img>
-                <img className='whoSugarImg5' alt='' src={'./assets/img/WhoSugarLogos5.svg'} style={{position:"relative", left:"400px"}}></img>
-                <img className='whoSugarImg6' alt='' src={'./assets/img/WhoSugarLogos6.svg'} style={{position:"relative", top: "180px", left: "370px", width: "150px"}}></img>
+                <a href='/productAr'><img className='whoSugarImg1' alt='' src={'./assets/img/WhoSugarLogos1.svg'} style={{position:"relative", top:"200px"}}></img></a>
+                <a href='/productJoint'><img className='whoSugarImg2' alt='' src={'./assets/img/WhoSugarLogos2.svg'} style={{position:"relative", top:"50px", left:"50px", width: "150px"}}></img></a>
+                <a href='/productMeta'><img className='whoSugarImg3' alt='' src={'./assets/img/WhoSugarLogos3.svg'} style={{position:"relative", left:"160px"}}></img></a>
+                <a href='/productShoes'><img className='whoSugarImg4' alt='' src={'./assets/img/WhoSugarLogos4.svg'} style={{position: "relative", left: "300px", width: "150px", top: "30px"}}></img></a>
+                <a href='/productShoes'><img className='whoSugarImg41' alt='' src={'./assets/img/shoeImg.svg'} style={{position: "absolute", left: "893px", top: "135px", width: "60px"}}></img></a>
+                <a href='/productWatch'><img className='whoSugarImg5' alt='' src={'./assets/img/WhoSugarLogos5.svg'} style={{position:"relative", left:"400px"}}></img></a>
+                <a href='/productClooth'><img className='whoSugarImg6' alt='' src={'./assets/img/WhoSugarLogos6.svg'} style={{position:"relative", top: "180px", left: "370px", width: "150px"}}></img></a>
             </div>
             <div className='flyingElements2' style={{display: "none"}}>
                 <img className='mobileBubble1' alt='' src={'./assets/img/mobileBubble1.svg'}></img>

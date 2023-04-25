@@ -3,7 +3,7 @@ import './ContactAddress.css';
 export const ContactAddress = props =>{
     return(
         <div className='contactAddressContainer'>
-            <img className='contactBackground' alt='' src={'./assets/img/contactAddressBackground.svg'} style={{width:"1440px"}}></img>
+            <img className='contactBackground' alt='' src={'./assets/img/contactAddressBackground.svg'} style={{width:"100%"}}></img>
             <div className='contactAddressInformation'>
                 <div className='contactAddress'>
                     <img className='contactLogo' alt='' src={'./assets/img/headerLogo.svg'}></img>

@@ -6,17 +6,17 @@ export const CustomerComments = props => {
     const { t } = useTranslation();
     const [index, setIndex] = useState(0);
     const array = [{
-        trustedByMillionsOfCompany: "trustedByMillionsOfCompany",
+        trustedByMillionsOfCompany: "Evinde Gör ile Binlerce Müşterimize Ulaştık",
         commentSpan: "commentSpan",
-        commentHeader: "commentHeader",
-        commentAuthor: "Yusuf Fatih Erol"
+        commentHeader: "Timurg Sanat Evi",
+        commentAuthor: "Tuğba Karayel Özcan"
     },
 
     {
-        trustedByMillionsOfCompany: "trustedByMillionsOfCompany2",
+        trustedByMillionsOfCompany: "Mağazalarımızda Tüm Müşterilerimize Konsept Çalışıyoruz.",
         commentSpan: "commentSpan2",
-        commentHeader: "commentHeader2",
-        commentAuthor: "Abdurrahman  Türkeri"
+        commentHeader: "Tepe Home",
+        commentAuthor: "Yesim Korkmaz"
     },
     {
         trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
@@ -50,17 +50,12 @@ export const CustomerComments = props => {
                     </div>
                     <div className='commentCustomer'>
                         <img className='customerPhoto' alt='' src={'assets/img/TepeHomePhoto.svg'}></img>
-                        <h1>{t(array[index].commentHeader)}</h1>
-                        <a>{array[index].commentAuthor}</a>
+                        <h1>{t(array[index].commentAuthor)}</h1>
+                        <a>{array[index].commentHeader}</a>
                         <img className='commentStar' alt='' src={'assets/img/Star.svg'}></img>
                     </div>
                 </div>
 
-                <div className='customerCommentsPageButtons'>
-                    <img onClick={() => { setIndex(0); }} className='solution1Button' id='comment1Button'></img>
-                    <img onClick={() => { setIndex(1); }} className='solution2Button' id='comment2Button'></img>
-                    <img onClick={() => { setIndex(2); }} className='solution3Button' id='comment3Button'></img>
-                </div>
             </div>
 
             <img className='commentsRightButton' alt='' src={'assets/img/commentsRightButton.svg'} onClick={() => { next(); }}></img>

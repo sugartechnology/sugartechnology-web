@@ -68,6 +68,16 @@
     letter-spacing: -0.035em;
     color: #000000;
 }
+.sugarTeamLeaderDeskop{
+    display: flex;
+}
+.deskopLeaders{
+    display: flex;
+    gap: 200px;
+}
+.mobileLeaders{
+    display: none;
+}
 @media screen and (max-width: 500px){
     .teamsLeftButton{
         display: flex !important;
@@ -85,5 +95,11 @@
     }
     .sugarTeamLeaders{
         gap: 220px;
+    }
+    .mobileLeaders{
+        display: flex;
+    }
+    .deskopLeaders{
+        display: none;
     }
 }

@@ -137,8 +137,12 @@ function LanguageSelector(){
     }
     function openLanguagePopup() {
       var popup = document.getElementById("languagePopup");
+      var headerContainer = document.getElementById("headerContainer");
       if(popup.style.display === "none"){
         popup.style.display = "flex";
+        headerContainer.addEventListener('mouseleave', () => {
+          popup.style.display = "none";
+        })
       }
       else {
         popup.style.display = "none";

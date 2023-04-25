@@ -1661,4 +1661,16 @@
   .wheelAnimationItemInner{
     right: 100px !important;
   }
+  .mainPageSmallFigure{
+    display: none;
+  }
+  .mainPageMiddleFigure{
+    left: calc(-20%);
+  }
+  .mainPageTopRightFigure{
+    display: none;
+  }
+  .mainPageTopLeftFigure{
+    left: calc(-340px);
+  }
 }

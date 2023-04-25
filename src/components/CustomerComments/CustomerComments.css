@@ -84,23 +84,23 @@
     position: relative;
     top: 50px;
     text-align: center;
+    width: 130px;
 }
 .customerPhoto{
     border-radius: 100px;
     position: relative;
-    left: 35px;
 }
 .commentCustomer h1{
     color: #FFFFFF;
     font-size: 23px;
     position: relative;
-    left: 35px;
+    right: 25px;
+    width: 180px;
 }
 .commentCustomer a{
     color: #FFFFFF;
     position: relative;
     bottom: 10px;
-    left: 35px;
 }
 .commentPageButtons{
     position: relative;
@@ -205,7 +205,7 @@
 .commentStar{
     width: 100px;
     position: relative;
-    left: 40px;
+    left: 20px;
 }
 .redBackgroundCircle1{
     position: absolute;

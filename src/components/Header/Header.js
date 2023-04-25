@@ -11,13 +11,15 @@ export const Header = props => {
         var popup = document.getElementById("productServicesPopup");
         var popupOption1 =  document.getElementById("firstPopup");
         var popupOption2 =  document.getElementById("secondPopup");
-        if(popup.style.display === "none"){
-            popup.style.display = "flex";
-        }else {
+        var headerContainer = document.getElementById('headerContainer');
+        popup.style.display = "flex";
+        headerContainer.addEventListener('mouseleave', () => {
             popup.style.display = "none";
             popupOption1.style.display = "none";
             popupOption2.style.display = "none";
-        }
+        })
+        
+        
     }
     const showPopupMobile = ()=>{
         var motherPopup = document.getElementById("mobileHeaderPopup");
@@ -118,29 +120,19 @@ export const Header = props => {
     const showPopupOption1 = () => {
         var popupOption1 = document.getElementById("firstPopup");
         var popupOption2 = document.getElementById("secondPopup");
-        if(popupOption1.style.display === "none"){
-            popupOption1.style.display = "flex";
-            popupOption2.style.display = "none";
-        }
-        else{
-            
-            popupOption1.style.display = "none";
-        }
+        popupOption1.style.display = "flex";
+        popupOption2.style.display = "none";
     }
     const showPopupOption2 = () => {
         var popupOption1 = document.getElementById("firstPopup");
         var popupOption2 = document.getElementById("secondPopup");
-        if(popupOption2.style.display === "none"){
-            popupOption2.style.display = "flex";
-            popupOption1.style.display = "none";
-        }
-        else{
-            popupOption2.style.display = "none";
-        }
+        popupOption2.style.display = "flex";
+        popupOption1.style.display = "none";
+        
     }
     
     return(
-        <div className="headerContainer">
+        <div className="headerContainer" id='headerContainer'>
             <div class="overlay" id='overlay' style={{zIndex: "1"}}></div>
             <div className='mobileHeaderPopup' id='mobileHeaderPopup' style={{display: "none", position: "absolute", zIndex: "2"}}>
                 <div className='backToHome' onClick={showMobilePopup}>
@@ -223,8 +215,8 @@ export const Header = props => {
             <div className='headerShowButtons' style={{display: "none"}}>
                 <img className='headerShowButton' id='headerShowButton' alt='' src={'./assets/img/headerOpenButton.svg'} onClick={showMobilePopup} style={{width: "50px", position: "relative", cursor: "pointer"}}></img>
             </div>
-            <div className="sugarLogo">
-                <img alt="" src={'assets/img/headerLogo.svg'}></img>
+            <div className="sugarLogo" >
+                <a href='/'><img alt="" src={'assets/img/headerLogo.svg'}></img></a>
             </div>
             <div className="routers">
                 <a href='/'>{t("home")}</a>

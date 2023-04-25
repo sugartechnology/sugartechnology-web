@@ -1,24 +1,28 @@
 .SugarSquadContainer{
-    height: 391px;
+    height: 517px;
     background: #F7F7F7;
     display: flex;
     gap: 200px;
 }
-.sugarSquads{
+.sugarSquadsDeskop{
     display: flex;
-    align-items: center;
-    gap: 100px;
+    align-items: flex-start;
+    gap: 80px;
     position: relative;
     left: 50px;
 }
 .SugarSquadMember{
     display: flex;
     flex-direction: row;
+    gap: 15px;
 }
 .crew{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-top: 50px;
+    margin-left: 20px;
+    animation: slideRight 1s forwards;
 }
 .memberInformation{
     display: flex;
@@ -44,9 +48,24 @@
     letter-spacing: -0.035em;
     color: #000000;
 }
+.SugarSquadMember img{
+    background: #EBEBEB;
+    border-radius: 100px;
+}
+.squadPageButtons{
+    display: none;
+    gap: 10px;
+}
+.squadPageButtons img{
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 @media screen and (max-width: 500px){
     .SugarSquadContainer{
         height: 477px;
+        position: relative;
     }
     .sugarSquadButtonPrev{
         display: none;
@@ -56,27 +75,31 @@
         display: none;
     }
     .SugarSquadMember img{
-        width: 50px;
+        width: 70px;
     }
     .memberName{
         width: 111px;
-        font-size: 11px;
+        font-size: 10px;
     }
     .memberPosition{
         width: 111px;
         font-size: 8px;
     }
+    .sugarSquadsDeskop{
+        left: 5px;
+        gap: 0px;
+    }
+    .SugarSquadMember{
+        gap: 5px;
+    }
     #crewResponsive{
         display: none;
     }
-    .SugarSquadMemberResponsive{
+    .squadPageButtons{
         display: flex !important;
-    }
-    .SugarSquadMemberResponsive img{
-        width: 50px;
-    }
-    .sugarSquads{
-        left: 5px;
-        gap: 50px;
+        position: absolute;
+        left: 180px;
+        bottom: 10px;
+        z-index: 1;
     }
 }

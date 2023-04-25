@@ -72554,11 +72554,16 @@ advenced_feature_template.innerHTML = `
         gap: 5px;
     }
 
+	.carouselSpans{
+		cursor: pointer;
+	}
+
     .featureButtons{
         position: relative;
         left: 280px;
         bottom: 20px;
         width: 30px;
+		cursor: pointer;
     }
 
     .featurePageButton{
@@ -72630,7 +72635,6 @@ advenced_feature_template.innerHTML = `
         position: absolute;
         bottom: 10px;
         left: 90px;
-		background: white;
     	z-index: 1;
     }
 
@@ -72690,6 +72694,7 @@ advenced_feature_template.innerHTML = `
         top: 70px !important;
 		bottom: 0px;
 		overflow: scroll;
+		width: 330px;
     }
 
     .littleSpan {
@@ -72709,6 +72714,7 @@ advenced_feature_template.innerHTML = `
         display: flex;
         flex-direction: column;
 		border: 1px solid #000000;
+		background: #F5F5F5;
     }
 
     .showAtHome {
@@ -73046,17 +73052,8 @@ advenced_feature_template.innerHTML = `
                 </div>
                
             </div>
-
-            
-                      
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="10" viewBox="0 0 48 10" fill="none" class="threePoint">
-                <circle cx="4.13793" cy="4.99999" r="4.13793" fill="#E74D35" id="fabricCircleOne" class="circles"/>
-                <circle cx="24" cy="4.99999" r="4.13793" fill="#D9D9D9" id="fabricCircleTwo" class="circles"/>
-            </svg>
-
         </div>
-
-        <div class="createRenderDiv">
+		<div class="createRenderDiv" id="createRenderDiv">
             <img class="createRenderButton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="170" height="49" viewBox="0 0 198 49" fill="none"
                     style="cursor: pointer;" class="createRender" id="createRenderButton">
@@ -73065,7 +73062,7 @@ advenced_feature_template.innerHTML = `
                     <rect x="0.75" y="0.75" width="196.5" height="47.5" rx="11.25" stroke="#E74D35" stroke-width="1.5" />
                 </svg>
             </img>
-        </div>
+        	</div>
 
         <div class="infoShowButtonDiv">
         <svg class="infoShowButton" id="infoShowButton" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
