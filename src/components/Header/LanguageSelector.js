@@ -1,9 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-function LanguageSelector() {
+function LanguageSelector(){
     const { i18n } = useTranslation();
-
     function toggleEnglish(){
       var englishButton = document.querySelector('.englishButton');
       var turkishButton = document.querySelector('.turkishButton');
@@ -138,8 +137,12 @@ function LanguageSelector() {
     }
     function openLanguagePopup() {
       var popup = document.getElementById("languagePopup");
+      var headerContainer = document.getElementById("headerContainer");
       if(popup.style.display === "none"){
         popup.style.display = "flex";
+        headerContainer.addEventListener('mouseleave', () => {
+          popup.style.display = "none";
+        })
       }
       else {
         popup.style.display = "none";

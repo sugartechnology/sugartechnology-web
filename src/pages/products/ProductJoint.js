@@ -1,3 +1,4 @@
+import { CreateYourProduct } from "../../components/CreateYourProduct/CreateYourProduct";
 import { Joint } from "../../components/Joint/Joint";
 import { JointAbout } from "../../components/JointAbout/JointAbout";
 import { ListenToPartner } from "../../components/ListenToPartner/ListenToPartner";
@@ -10,6 +11,7 @@ export const ProductJoint = props =>{
             <Joint></Joint>
             <ProductsCustomer></ProductsCustomer>
             <JointAbout></JointAbout>
+            <CreateYourProduct></CreateYourProduct>
             <ListenToPartner></ListenToPartner>
         </div>
     );

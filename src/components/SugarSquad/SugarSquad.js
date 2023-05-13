@@ -3,88 +3,150 @@ import { useTranslation} from "react-i18next";
 
 export const SugarSquad = props =>{
     const {t} = useTranslation();
+    function crews1(){
+        let crews1 = document.getElementById('crew1');
+        let crewResponsive = document.getElementById("crewResponsive");
+        let squad1Button = document.getElementById("squad1Button");
+        let squad2Button = document.getElementById("squad2Button");
+        if(crews1.style.display === "none"){
+            crews1.style.display = "flex";
+            crewResponsive.style.display = "none"
+            squad1Button.style.background = "#ED401A";
+            squad2Button.style.background = "#CCCCCC";
+        }
+        else{
+            crews1.style.display = "none";
+        }
+    }
+    function crewsResponsive(){
+        let crews1 = document.getElementById('crew1');
+        let crewResponsive = document.getElementById("crewResponsive");
+        let squad1Button = document.getElementById("squad1Button");
+        let squad2Button = document.getElementById("squad2Button");
+        if(crewResponsive.style.display === "none"){
+            crewResponsive.style.display = "flex";
+            crews1.style.display = "none";
+            squad2Button.style.background = "#ED401A";
+            squad1Button.style.background = "#CCCCCC";
+        }
+        else{
+            crewResponsive.style.display = "none";
+        }
+    }
     return(
         <div className='SugarSquadContainer'>
-            <img className='sugarSquadButtonPrev' alt='' src={'./assets/img/SugarSquadButtonPrev.svg'} style={{width:"20px",position: "relative", left: "70px"}}></img>
-            <div className='sugarSquads'>
-                <div className='crew'>
+            <div className='sugarSquadsDeskop'>
+                <div className='crew' id='crew1'>
                     <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <img alt='' src={'./assets/img/almiraPp.svg'}></img>
                     <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
+                        <a className='memberName'>Elmira Ghoreishi</a>
                         <a className='memberPosition'>{t("sugarSquadMember1Position")}</a>
                     </div>
                     </div>
                     <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <img alt='' src={'./assets/img/aliPp.svg'}></img>
                     <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
-                        <a className='memberPosition'>{t("sugarSquadMember2Position")}</a>
-                    </div>
-                    </div>
-                    <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
-                    <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
-                        <a className='memberPosition'>{t("sugarSquadMember3Position")}</a>
-                    </div>
-                    </div>
-                    <div className='SugarSquadMemberResponsive' style={{display: "none"}}>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
-                    <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
-                        <a className='memberPosition'>{t("sugarSquadMember4Position")}</a>
-                    </div>
-                    </div>
-                </div>
-                <div className='crew'>
-                    <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
-                    <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
+                        <a className='memberName'>Ali Rıza Yalçın</a>
                         <a className='memberPosition'>{t("sugarSquadMember5Position")}</a>
                     </div>
                     </div>
                     <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <img alt='' src={'./assets/img/selcukPp.svg'}></img>
                     <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
+                        <a className='memberName'>Selçuk Taşlı</a>
+                        <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
+                    </div>
+                    </div>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/eyadPp.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Muhammad Eyad</a>
+                        <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
+                    </div>
+                    </div>
+                </div>
+                <div className='crew' id='crew1'>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/kubraPp.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Kübra Yıldız</a>
+                        <a className='memberPosition'>{t("sugarSquadMember2Position")}</a>
+                    </div>
+                    </div>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/tugrulPp.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Tuğrul Subekçi</a>
                         <a className='memberPosition'>{t("sugarSquadMember6Position")}</a>
                     </div>
                     </div>
                     <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <img alt='' src={'./assets/img/erenPp.svg'}></img>
                     <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
+                        <a className='memberName'>Muhammed Eren Baş</a>
                         <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
                     </div>
                     </div>
-                    <div className='SugarSquadMemberResponsive' style={{display: "none"}}>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/hakkiPp.svg'}></img>
                     <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
-                        <a className='memberPosition'>{t("sugarSquadMember8Position")}</a>
+                        <a className='memberName'>Hakkı Altan Cebeci</a>
+                        <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
                     </div>
                     </div>
                 </div>
                 <div className='crew' id='crewResponsive'>
                     <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <img alt='' src={'./assets/img/erdemPp.svg'}></img>
                     <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
-                        <a className='memberPosition'>{t("sugarSquadMember9Position")}</a>
+                        <a className='memberName'>Şükrü Erdem Şahin</a>
+                        <a className='memberPosition'>{t("sugarSquadMember3Position")}</a>
                     </div>
                     </div>
                     <div className='SugarSquadMember'>
-                    <img alt='' src={'./assets/img/member1.svg'}></img>
+                    <img alt='' src={'./assets/img/fatihPp.svg'}></img>
                     <div className='memberInformation'>
-                        <a className='memberName'>Abdurrahman Türkeri</a>
-                        <a className='memberPosition'>{t("sugarSquadMember10Position")}</a>
+                        <a className='memberName'>Fatih Özdemir</a>
+                        <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
+                    </div>
+                    </div>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/utkuPp.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Utku Sert</a>
+                        <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
+                    </div>
+                    </div>
+                </div>
+                <div className='crew' id='crewResponsive'>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/sametPp.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Abdülsamet Sarıkoç</a>
+                        <a className='memberPosition'>{t("sugarSquadMember4Position")}</a>
+                    </div>
+                    </div>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/ibrahimPp.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>İbrahim Aktaş</a>
+                        <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
+                    </div>
+                    </div>
+                    <div className='SugarSquadMember'>
+                    <img alt='' src={'./assets/img/nisaPp.svg'}></img>
+                    <div className='memberInformation'>
+                        <a className='memberName'>Nisa Nur Çakıcı</a>
+                        <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
                     </div>
                     </div>
                 </div>
             </div>
-            <img className='sugarSquadButtonNext' alt='' src={'./assets/img/SugarSquadButtonNext.svg'} style={{width:"20px"}}></img>
+            <div className='squadPageButtons' style={{display: "none"}}>
+                <img onClick={crews1} className='solution1Button' id='squad1Button'></img>
+                <img onClick={crewsResponsive} className='solution2Button' id='squad2Button'></img>
+            </div>
         </div>
     );
 }

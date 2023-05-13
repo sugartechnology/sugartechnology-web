@@ -8,11 +8,12 @@
 .watchImage{
     width: 759px;
     position: relative;
-    left: 90px;
+    left: 57px;
 }
 @media screen and (max-width: 500px){
     .watchContainer{
         height: 900px;
+        width: 414px;
         justify-content: normal;
         flex-direction: column;
     }

@@ -68,11 +68,10 @@
         width: 300px;
     }
     .jointShadow{
-        top: 428px;
-        width: 370px;
+        top: 387px;
+        width: 300px;
     }
     .jointAboutBubble{
-        top: 900px;
-        left: 0px;
+        display: none;
     }
 }

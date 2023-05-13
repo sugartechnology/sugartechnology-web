@@ -16,12 +16,13 @@ import { ProductClooth } from './pages/products/ProductClooth';
 import { Blog } from './pages/blogs/Blog';
 import { Blogs } from './pages/blogs/Blogs';
 import { ContactUs } from './pages/contactUs/ContactUs';
+import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
   .use(initReactI18next)
+  .use(I18nextBrowserLanguageDetector)
   .init({
-    lng: "tr", // default language
-    fallbackLng: "en", // backup language
+    fallbackLng: "tr",
     resources: {
       en: {
         translation: require("../src/locales/en.json")

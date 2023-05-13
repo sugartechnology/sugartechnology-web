@@ -84,24 +84,23 @@
     position: relative;
     top: 50px;
     text-align: center;
+    width: 130px;
 }
 .customerPhoto{
     border-radius: 100px;
     position: relative;
-    max-width: 200px;
-    left: 35px;
 }
 .commentCustomer h1{
     color: #FFFFFF;
     font-size: 23px;
     position: relative;
-    left: 35px;
+    right: 25px;
+    width: 180px;
 }
 .commentCustomer a{
     color: #FFFFFF;
     position: relative;
     bottom: 10px;
-    left: 35px;
 }
 .commentPageButtons{
     position: relative;
@@ -206,14 +205,34 @@
 .commentStar{
     width: 100px;
     position: relative;
-    left: 40px;
+    left: 20px;
 }
+.redBackgroundCircle1{
+    position: absolute;
+
+}
+.redBackgroundCircle2{
+    position: absolute;
+    left: 1128px;
+    top: 58px;
+}
+.redBackgroundCircle3{
+    position: absolute;
+    left: 1290px;
+    top: 310px;
+}
+
 @media screen and (max-width: 500px){
     .customerCommentsContainer{
         width: 414px;
         height: 550px;
     }
     .redBackground{
+        display: none;
+    }
+    .redBackgroundCircle1,
+    .redBackgroundCircle2,
+    .redBackgroundCircle3{
         display: none;
     }
     .redBackgroundMobile{

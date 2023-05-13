@@ -14,10 +14,11 @@
 @media screen and (max-width: 500px){
     .shoesContainer{
         height: 900px;
+        width: 414px;
     }
     .shoesImage{
-        width: 450px;
+        width: 400px;
         left: 0px;
-        top: 468px;
+        top: 523px;
     }
 }

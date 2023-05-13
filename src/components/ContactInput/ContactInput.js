@@ -1,40 +1,132 @@
 import './ContactInput.css';
+import { useState } from 'react';
 import { useTranslation} from "react-i18next";
 
 export const ContactInput = props =>{
     const {t} = useTranslation();
+
+    const [name, setName] = useState("");
+    const [mail, setMail] = useState("");
+    const [message, setMessage] = useState("");
+
+    function submitForm() {
+        const form = {
+          name: name,
+          email: mail,
+          message: message,
+        }
+        sendFormData(form);
+    }
+  
+    function sendFormData(form) {
+        var thizz = this;
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(form));
+        inputDonePopup();
+        // if (this.readyState === 4) {
+        //     if ((this.status == 200) && (this.status < 300)) {
+        //         inputDonePopup();
+        //     }
+        //     else{
+        //         inputErrorPopup();
+        //     }
+        // }
+        
+    }
+    function inputDonePopup() {
+        let inputPopup = document.getElementById('inputDonePopup');
+        let overlay = document.getElementById("overlay");
+        let btn = document.getElementById('inputPopupCloseButton');
+        inputPopup.style.display = "flex";
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        btn.addEventListener('click', function closeInputPopup(){
+            inputPopup.style.display = "none";
+            overlay.style.width = "0%";
+            overlay.style.height = "0%";
+        });
+    }
+    function inputErrorPopup(){
+        let inputPopup = document.getElementById('inputErrorPopup');
+        let overlay = document.getElementById("overlay");
+        let btn = document.getElementById('inputPopupCloseButton');
+        inputPopup.style.display = "flex";
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        btn.addEventListener('click', function closeInputPopup(){
+            inputPopup.style.display = "none";
+            overlay.style.width = "0%";
+            overlay.style.height = "0%";
+        });
+    }
     return(
         <div className='contactInputContainer'>
-            <div className='showAtHomeBubbles'>
-                <img alt='' src={'./assets/img/ShowAtHomeImg1.svg'} style={{position: "relative", top: "50px", left: "70px", zIndex: "-1"}}></img>
-                <img alt='' src={'./assets/img/ShowAtHomeImg2.svg'} style={{position: "relative", right: "610px", top: "400px"}}></img>
-                <img alt='' src={'./assets/img/contactInputBubble3.svg'} style={{position: "relative", left: "800px", bottom: "600px", zIndex: "-1"}}></img>
-                <img alt='' src={'./assets/img/ShowAtHomeImg4.svg'} style={{position: "relative", left: "100px", bottom: "270px"}}></img>
-                <img alt='' src={'./assets/img/contactInputBubble4.svg'} style={{position: "relative", left: "400px", bottom: "50px"}}></img>
-            </div>
+            <div className='mainPageTopLeftFigure rotate'></div>
+        <div className='mainPageTopRightFigure rotate'></div>
+        <div className='mainPageMiddleFigure rotate'></div>
+        <div className='mainPageSmallFigure bright' style={{
+            width: '243px',
+            height: '233px',
+            left: '498px',
+            top: '136px'
+        }}></div>
+        <div className='mainPageSmallFigure '></div>
+        <div className='mainPageSmallFigure ' style={{
+            width: '629px',
+            height: '665px',
+            left: '170px',
+            top: '316px'
+        }}></div>
+        <div className='mainPageSmallFigure0 '></div>
             <div className='contactInputs'>
                 <div className='contactInputHeaders'>
                     <a className='contactInputHeader'>{t("contactUs")}</a>
                     <a className='contactInputSpan'>{t("contactPageSpan")}</a>
                 </div>
-                <div className='contactInputInputs'>
+                <div className='contactInputInputs' onSubmit={(e)=>{return false;}}>
                     <div className='nameEmailInputs'>
                         <div className='nameInputs'>
                             <a className='nameInputSpan'>{t("fullName")}</a>
-                            <input className='nameEmailInput' placeholder={t("fullName")}></input>
+                            <input className='nameEmailInput' placeholder={t("fullName")} value={name} onChange={(e)=>setName(e.target.value)}></input>
                         </div>
                         <div className='emailInputs'>
                             <a className='emailInputSpan'>{t("email")}</a>
-                            <input className='nameEmailInput' placeholder='hello@creative-tim.com'></input>
+                            <input className='nameEmailInput' placeholder='hello@creative-tim.com' value={mail} onChange={(e)=>setMail(e.target.value)}></input>
                         </div>
                     </div>
                     <div className='descriptionInputs'>
                         <a className='descriptionInputSpan'>{t("howCanWeHelpYou")}</a>
-                        <textarea className='descriptionInput' type="text" placeholder={t("describeYourProblem")}></textarea>
+                        <textarea className='descriptionInput' type="text" placeholder={t("describeYourProblem")} value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                     </div>
                 </div>
                 <div className='contactInputButtons'>
-                    <button className='sendMessageButton'><a>{t("sendMessage")}</a></button>
+                    <button className='sendMessageButton' onClick={(e)=>{submitForm()}}><a>{t("sendMessage")}</a></button>
+                </div>
+            </div>
+            <div className='inputDonePopup' id='inputDonePopup'>
+                <div className='inputPopupButton'>
+                    <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                </div>
+                <div className='inputPopupSpans'>
+                    <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
+                    <a className='inputPopupHeader'>Thank You!</a>
+                    <a className='inputPopupSpan'>Your submission has been sent.</a>
+                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                    <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
+                </div>
+            </div>
+            <div className='inputDonePopup' id='inputErrorPopup'>
+                <div className='inputPopupButton'>
+                    <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                </div>
+                <div className='inputPopupSpans'>
+                    <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
+                    <a className='inputPopupHeader'>OOPS!</a>
+                    <a className='inputPopupSpan'>Your submission has been sent.</a>
+                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                    <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
                 </div>
             </div>
         </div>

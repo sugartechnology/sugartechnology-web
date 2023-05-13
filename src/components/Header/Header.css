@@ -425,7 +425,7 @@
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
     position: absolute;
-    left: 750px;
+    left: 743px;
     z-index: 6;
     top: 160px;
     justify-content: space-around;
@@ -456,7 +456,7 @@
 
 .secondPopupFirstOption:hover,
 .secondPopupSecondOption:hover{
-    background: #F3E7E6;
+    background: #FFE9E7;
 }
 
 .secondPopupFirstOption{
@@ -478,7 +478,7 @@
 .firstPopupFirstOption:hover,
 .firstPopupSecondOption:hover,
 .firstPopupThirdOption:hover{
-    background: #F3E7E6;
+    background: #FFE9E7;
 }
 
 .firstPopupFirstOption{
@@ -516,7 +516,7 @@
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
     position: absolute;
-    left: 750px;
+    left: 743px;
     z-index: 6;
     top: 70px;
     justify-content: space-around;
@@ -632,7 +632,7 @@
 
 .askYourQuestionRobot{
     position: absolute;
-    left: 1250px;
+    left: 1300px;
     top: 580px;
     cursor: pointer;
 }

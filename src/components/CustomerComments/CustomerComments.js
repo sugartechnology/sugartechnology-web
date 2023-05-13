@@ -6,33 +6,23 @@ export const CustomerComments = props => {
     const { t } = useTranslation();
     const [index, setIndex] = useState(0);
     const array = [{
-        trustedByMillionsOfCompany: "trustedByMillionsOfCompany",
+        trustedByMillionsOfCompany: "Evinde Gör ile Binlerce Müşterimize Ulaştık",
         commentSpan: "commentSpan",
-        commentHeader: "commentHeader",
-        commentAuthor: "Ceren Evcimen",
-        customerImg : "assets/img/cereen_evcimen.jpeg"
+        commentHeader: "Timurg Sanat Evi",
+        commentAuthor: "Tuğba Karayel Özcan"
     },
 
     {
-        trustedByMillionsOfCompany: "trustedByMillionsOfCompany2",
+        trustedByMillionsOfCompany: "Mağazalarımızda Tüm Müşterilerimize Konsept Çalışıyoruz.",
         commentSpan: "commentSpan2",
-        commentHeader: "commentHeader2",
-        commentAuthor: "Abdurrahman  Türkeri",
-        customerImg : "assets/img/cereen_evcimen.jpeg"
+        commentHeader: "Tepe Home",
+        commentAuthor: "Yesim Korkmaz"
     },
     {
         trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
         commentSpan: "commentSpan3",
         commentHeader: "commentHeader3",
-        commentAuthor: "Halil İbrahim Şahin  ",
-        customerImg : "assets/img/cereen_evcimen.jpeg"
-    },
-    {
-        trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
-        commentSpan: "commentSpan3",
-        commentHeader: "commentHeader3",
-        commentAuthor: "Ebru Uzluer ",
-        customerImg : "assets/img/cereen_evcimen.jpeg"
+        commentAuthor: "Ali  Yalcin "
     }];
 
     const next = () => {
@@ -48,7 +38,10 @@ export const CustomerComments = props => {
             <img className='commentsLeftButton' alt='' src={'assets/img/commentsLeftButton.svg'} onClick={() => { prev(); }}></img>
             <div className='firstCommnetBackground'>
                 <img className='redBackgroundMobile' alt='' src={'./assets/img/customerCommentMobileBackground.svg'} style={{ display: "none" }}></img>
-                <img className='redBackground' alt='' src={'assets/img/customerCommentRedBackground.svg'}></img>
+                <img className='redBackground' alt='' src={'assets/img/customerCommentBackground.svg'}></img>
+                <img className='redBackgroundCircle1' alt='' src={'./assets/img/circle1.svg'}></img>
+                <img className='redBackgroundCircle2' alt='' src={'./assets/img/circle2.svg'}></img>
+                <img className='redBackgroundCircle3' alt='' src={'./assets/img/circle3.svg'}></img>
                 <div className='firstComment' id='firstComment'>
                     <div className='commentSpans'>
                         <a className='firstCommentSpan'>{t(array[index].trustedByMillionsOfCompany)}</a>
@@ -56,17 +49,13 @@ export const CustomerComments = props => {
                         <a className='thirdCommentSpan'>{t(array[index].commentSpan)}</a>
                     </div>
                     <div className='commentCustomer'>
-                        <img className='customerPhoto' alt='' src={t(array[index].customerImg)}></img>
-                        <h1>{t(array[index].commentHeader)}</h1>
-                        <a>{array[index].commentAuthor}</a>
+                        <img className='customerPhoto' alt='' src={'assets/img/TepeHomePhoto.svg'}></img>
+                        <h1>{t(array[index].commentAuthor)}</h1>
+                        <a>{array[index].commentHeader}</a>
+                        <img className='commentStar' alt='' src={'assets/img/Star.svg'}></img>
                     </div>
                 </div>
 
-                <div className='customerCommentsPageButtons'>
-                    <img onClick={() => { setIndex(0); }} className='solution1Button' id='comment1Button'></img>
-                    <img onClick={() => { setIndex(1); }} className='solution2Button' id='comment2Button'></img>
-                    <img onClick={() => { setIndex(2); }} className='solution3Button' id='comment3Button'></img>
-                </div>
             </div>
 
             <img className='commentsRightButton' alt='' src={'assets/img/commentsRightButton.svg'} onClick={() => { next(); }}></img>

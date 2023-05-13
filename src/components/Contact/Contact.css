@@ -88,7 +88,7 @@
 }
 .contactHeaders a{
     display: flex;
-    width: 250px;
+    width: 260px;
     height: 38px;
     font-style: normal;
     font-weight: 700;
@@ -205,6 +205,80 @@
 }
 .sendButton:hover{
   background-color: red;
+}
+.inputPopupButton{
+    position: relative;
+}
+.inputPopupButton img{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.inputDonePopup{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 455px;
+    height: 444px;
+    gap: 80px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 26px;
+}
+.inputPopupHeader{
+    width: 684px;
+    height: 20.3px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02666em;
+    color: #ED401A;
+}
+.inputPopupSpan{
+    width: 300px;
+    height: 25.74px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #727272;
+}
+.inputPopupImg{
+    width: 80px;
+}
+.inputPopupSpans{
+    position: relative;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.inputPopupLine{
+    width: 300px;
+    height: 1px;
+}
+.inputPopupSecondSpan{
+    width: 336px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #727272;
 }
 @media screen and (max-width: 500px){
     .contactContainer{

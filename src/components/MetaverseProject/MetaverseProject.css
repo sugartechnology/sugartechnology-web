@@ -2,7 +2,7 @@
     height: 898px;
 }
 .metaverseProjectBackground{
-    width: 1440px;
+    width: 100%;
     z-index: -1;
     position: absolute;
 }

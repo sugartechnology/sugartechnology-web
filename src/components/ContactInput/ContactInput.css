@@ -161,6 +161,7 @@ textarea {
     position: relative;
     left: 5px;
 }
+
 @media screen and (max-width: 500px){
     .contactInputContainer{
         height: 850px;
@@ -178,6 +179,6 @@ textarea {
         align-items: center;
     }
     .descriptionInput{
-        width: 395px;
+        width: 295px;
     }
 }

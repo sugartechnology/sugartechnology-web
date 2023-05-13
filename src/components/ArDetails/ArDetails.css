@@ -24,7 +24,7 @@
 }
 .arDetailsSpan{
     width: 978px;
-    height: 141px;
+    height: 160px;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
@@ -142,11 +142,12 @@
 }
 @media screen and (max-width: 500px){
     .arDetailsContainer{
-        height: 700px;
+        height: 1200px;
     }
     .arDetailsHeader{
         width: 243px;
         font-size: 29px;
+        height: 150px;
     }
     .arDetailsSpan{
         width: 357px;

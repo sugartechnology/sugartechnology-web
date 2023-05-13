@@ -19,7 +19,7 @@ export const SugarGoals = props =>{
                 <img className='goals4v1' alt='' src={'./assets/img/goals4v1.svg'} style={{display: "none",position: "relative"}}></img>
             </div>
             <img className='goalsShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
-            <img className='goalsLine' alt='' src={'./assets/img/goalsLine.svg'} style={{width: "1440px"}}></img>
+            <img className='goalsLine' alt='' src={'./assets/img/goalsLine.svg'} style={{width: "100%"}}></img>
             <div className='sugarGoalsElements1'>
                 <div className='sugarGoalsElement'>
                     <img className='sugarGoalsImage' alt='' src={'./assets/img/goals1Logo.svg'}></img>

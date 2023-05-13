@@ -5,21 +5,13 @@ export const ExperienceReports = props =>{
     const {t} = useTranslation();
     return(
         <div className='experienceReportsContainer'>
-            <div className='reportsHeaders'>
-                <a className='reportsHeader'>{t("dailyAndProductBasedExperienceReports")}</a>
-            </div>
             <div className='reportsSpanElement'>
                 <img className='reportsSpansImg' alt='' src={'./assets/img/reportsSpansImg.svg'}></img>
                 <img className='reportsSpangImgShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 <div className='reportsSpans'>
-                    <a className='reportsSpan'>{t("experienceReportsSpan")}</a>
-                    <ul className='reportList'>
-                        <li>{t("reportsList1")}</li>
-                        <li>{t("reportsList2")}</li>
-                        <li>{t("reportsList3")}</li>
-                        <li>{t("reportsList4")}</li>
-                        <li>{t("reportsList5")}</li>
-                    </ul>
+                    <a className='reportsHeader'>{t("")}Raporlar & Müşteri Yönetimi</a>
+                    <a className='reportsFirstSpan'>{t("")}Müşterileri takip etme, çalışanların performansını izleme</a>
+                    <a className='reportsSecondSpan'>{t("")}Rapid Render kullanan bayiiler; çalıştığı proje üzerinden müşterilerini kayıt altında tutabilir, çalışılan proje ve verilen teklifler kontrol edilerek çalışan performansı program üzerinden incelenebilir.</a>
                 </div>
             </div>
         </div>
