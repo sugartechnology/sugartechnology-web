@@ -84,6 +84,7 @@
 .customerPhoto{
     width: 100px;
     border-radius: 100px;
+    max-width: 200px;
     position: relative;
 }
 .commentCustomer h1{

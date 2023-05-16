@@ -35,7 +35,6 @@ export const MainPage = ()=>{
           </MainPageSlider>
           <About></About>
           <Customers></Customers>
-          <Statistics></Statistics>
           <CustomerComments></CustomerComments>
     </div>);
 }

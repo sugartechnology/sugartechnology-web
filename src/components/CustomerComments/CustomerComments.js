@@ -12,19 +12,19 @@ export const CustomerComments = props => {
         commentAuthor: "Tuğba Karayel Özcan",
         customerPhoto: "https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/tugba_karayel.jpeg"
     },
-
     {
-        trustedByMillionsOfCompany: "Mağazalarımızda Tüm Müşterilerimize Konsept Çalışıyoruz.",
+        trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
         commentSpan: "commentSpan2",
         commentHeader: "Tepe Home",
         commentAuthor: "Yesim Korkmaz",
-        customerPhoto: "https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/yesim_korkmaz.jpeg"
+        customerPhoto : "https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/yesim_korkmaz.jpeg"
     },
     {
-        trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
+        trustedByMillionsOfCompany: "commentHeader3",
         commentSpan: "commentSpan3",
-        commentHeader: "commentHeader3",
-        commentAuthor: "Ali  Yalcin "
+        commentHeader: "Eko Halı",
+        commentAuthor: "Ceren Evcimen",
+        customerPhoto : "assets/img/cereen_evcimen.jpeg"
     }];
 
     const next = () => {

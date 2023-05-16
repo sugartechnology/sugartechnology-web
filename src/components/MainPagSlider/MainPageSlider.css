@@ -1556,7 +1556,7 @@
 
 .slideDetailFirstSpan {
   width: 484px;
-  height: 139px;
+  height: 99px;
   font-style: normal;
   font-weight: 700;
   font-size: 42px;
@@ -1593,20 +1593,23 @@
 
 .slideDetailButton{
   border: none;
-  width: 129px;
+  width: 160px;
   height: 44px;
   background: #ED401A;
   border-radius: 30px;
   cursor: pointer;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slideDetailButton a{
-  width: 83px;
+  width: 120px;
   height: 18px;
   font-style: normal;
   font-weight: 700;
-  font-size: 15.9998px;
+  font-size: 13px;
   line-height: 18px;
   text-transform: capitalize;
   color: #FFFFFF;
