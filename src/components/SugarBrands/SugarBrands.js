@@ -70,20 +70,23 @@ export const SugarBrands = props =>{
                     <img className='sugarBrandHomeImg' alt='' src={'./assets/img/istikbalHome.svg'}></img>
                     <a className='sugarBrandSpan'>{t("sugarBrand1Span")}</a>
                     <img className='sugarBrandLogo' alt='' src={'./assets/img/istikbalHomeLogo.svg'}></img>
+                    <img className='sugarBrandShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 </div>
-                <img className='sugarBrandShadow1' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
+                
                 <div className='sugarBrand' id='brand2'>
                     <img className='sugarBrandHomeImg' alt='' src={'./assets/img/tepehomeHome.svg'}></img>
                     <a className='sugarBrandSpan'>{t("sugarBrand2Span")}</a>
                     <img className='sugarBrandLogo' alt='' src={'./assets/img/tepehomeHomeLogo.svg'}></img>
+                    <img className='sugarBrandShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 </div>
-                <img className='sugarBrandShadow2' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
+                
                 <div className='sugarBrand' id='brand3'>
                     <img className='sugarBrandHomeImg' alt='' src={'./assets/img/bellonaHome.svg'}></img>
                     <a className='sugarBrandSpan'>{t("sugarBrand3Span")}</a>
                     <img className='sugarBrandLogo' alt='' src={'./assets/img/bellonaHomeLogo.svg'}></img>
+                    <img className='sugarBrandShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 </div>
-                <img className='sugarBrandShadow3' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
+                
             </div>
             <div className='brandsPageButton' style={{display: "none"}}>
                 <img onClick={showBrand1} className='solution1Button' id='brand1Button'></img>

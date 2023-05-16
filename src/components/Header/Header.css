@@ -79,6 +79,7 @@
     line-height: 18px;
     text-align: center;
     color: #FFFFFF;
+    text-decoration: none;
 }
 .popupRouterMobile{
     height: 40px;
@@ -632,63 +633,62 @@
 
 .askYourQuestionRobot{
     position: absolute;
-    left: 1300px;
+    right: 40px;
     top: 580px;
     cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
-    .headerContainer{
-        justify-content: normal;
-        gap: 100px;
-        width: 414px !important;
-    }
-    .headerShowButtons{
-        display: flex !important;
-    }
-    .headerShowButton{
-        display: flex !important;
-    }
-    .routers{
-        display: none;
-    }
-    .mediaCenterButton{
-        display: none;
-    }
-    #headerLanguage{
-        display: none;
-    }
-    .languageButton{
-        gap: 0px;
-        width: 60px;
-        right: 20px;
-    }
-    .languagePopup{
-        right: 30px;
 
-    }
-    .productServicesPopup{
-        display: flex;
-        position: absolute;
-        top: 90px;
-        left: 0px;
-        height: 120px;
-        z-index: 6;
-        box-shadow: none;
-    }
-    .sugarLogo{
-        left: 0px;
-    }
-    .askYourQuestionRobot{
-        left: 260px;
-        top: 590px;
-        width: 150px;
-    }
-    .robotSpans{
-        display: none;
-    }
-    .robot{
-        width: 57px;
-        left: 90px;
-    }
+
+.mobile .headerContainer{
+    justify-content: normal;
+    gap: 100px;
+}
+.mobile .headerShowButtons{
+    display: flex !important;
+}
+.mobile .headerShowButton{
+    display: flex !important;
+}
+.mobile .routers{
+    display: none;
+}
+.mobile .mediaCenterButton{
+    display: none;
+}
+.mobile #headerLanguage{
+    display: none;
+}
+.mobile .languageButton{
+    gap: 0px;
+    width: 60px;
+    right: 20px;
+}
+.mobile .languagePopup{
+    right: 30px;
+
+}
+.mobile .productServicesPopup{
+    display: flex;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    height: 120px;
+    z-index: 6;
+    box-shadow: none;
+}
+.mobile .sugarLogo{
+    left: 0px;
+}
+.mobile .askYourQuestionRobot{
+    left: auto;
+    top: 590px;
+    width: 150px;
+}
+.mobile .robotSpans{
+    display: none;
+}
+.mobile .robot{
+    width: 57px;
+    left: 90px;
 }

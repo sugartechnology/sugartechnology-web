@@ -1615,11 +1615,11 @@
 @media screen and (max-width: 500px) {
   .mainPageSliderContainer{
     height: 900px;
-    width: 414px;
   }
   .smallSliderMenu{
     bottom: 540px !important;
-    left: 200px !important;
+    left: auto;
+    right: -130px;
     transform: rotate(90deg);
     z-index: 6;
   }

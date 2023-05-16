@@ -13,7 +13,7 @@
 }
 @media screen and (max-width: 500px){
     .cloothContainer{
-        width: 414px;
+        width: 100%;
         height: 900px;
     }
     .cloothImage{

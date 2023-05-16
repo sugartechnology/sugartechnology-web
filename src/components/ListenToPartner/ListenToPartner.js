@@ -70,9 +70,9 @@ export const ListenToPartner = props =>{
             <div className='partner1' id='partner1'>
                 <div className='partnerHeaders'>
                     <img className='containerTopLogo' alt='' src={'./assets/img/ListenToPartnerImg1.svg'} style={{position: "absolute", bottom: "140px", left: "30px"}}></img>
-                    <img className='partnerLogo' alt='' src={'./assets/img/partnerSimurg.svg'} style={{width: "170px", position: "relative", left: "30px"}}></img>
                     <a className='partnerHeader'>{t("listenToPartnerHeader")}</a>
-                    <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", left: "760px", top: "70px"}}></img>
+                    <img className='partnerLogo' alt='' src={'./assets/img/partnerSimurg.svg'} style={{width: "170px", position: "absolute", left: "0px"}}></img>
+                    <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", right: "10px", top: "70px"}}></img>
                 </div>
                 <div className='partnerSpans' style={{display: "flex"}}>
                     <a className='partnerSpan'>{t("simurgComments")}</a>
@@ -84,9 +84,9 @@ export const ListenToPartner = props =>{
             <div className='partner2' id='partner2'>
                 <div className='partnerHeaders'>
                     <img className='containerTopLogo' alt='' src={'./assets/img/ListenToPartnerImg1.svg'} style={{position: "absolute", bottom: "140px", left: "30px"}}></img>
-                    <img className='partnerLogo' alt='' src={'./assets/img/tepehomeHomeLogo.svg'} style={{width: "170px", position: "relative", left: "30px"}}></img>
                     <a className='partnerHeader'>{t("listenToPartnerHeader")}</a>
-                    <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", left: "760px", top: "70px"}}></img>
+                    <img className='partnerLogo' alt='' src={'./assets/img/tepehomeHomeLogo.svg'} style={{width: "170px", position: "absolute", left: "0px"}}></img>
+                    <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", right: "10px", top: "70px"}}></img>
                 </div>
                 <div className='partnerSpans' style={{display: "flex"}}>
                     <a className='partnerSpan'>{t("tepeHomeComments")}</a>
@@ -98,9 +98,9 @@ export const ListenToPartner = props =>{
             <div className='partner3' id='partner3'>
                 <div className='partnerHeaders'>
                     <img className='containerTopLogo' alt='' src={'./assets/img/ListenToPartnerImg1.svg'} style={{position: "absolute", bottom: "140px", left: "30px"}}></img>
-                    <img className='partnerLogo' alt='' src={'./assets/img/ekohalilogo.png'} style={{width: "170px", position: "relative", left: "30px"}}></img>
                     <a className='partnerHeader'>{t("listenToPartnerHeader")}</a>
-                    <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", left: "760px", top: "70px"}}></img>
+                    <img className='partnerLogo' alt='' src={'./assets/img/ekohalilogo.png'} style={{width: "170px", position: "absolute", left: "0px"}}></img>
+                    <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", right: "10px", top: "70px"}}></img>
                 </div>
                 <div className='partnerSpans' style={{display: "flex"}}>
                     <a className='partnerSpan'>{t("ekoHaliComments")}</a>

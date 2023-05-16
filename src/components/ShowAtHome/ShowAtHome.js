@@ -3,8 +3,9 @@ import { useTranslation} from "react-i18next";
 
 export const ShowAtHome = props =>{
     const {t} = useTranslation();
+
     return(
-        <div className='ShowAtHomeContainer'>
+        <div className="ShowAtHomeContainer">
             <div className='mainPageTopLeftFigure rotate'></div>
         <div className='mainPageTopRightFigure rotate'></div>
         <div className='mainPageMiddleFigure rotate'></div>
@@ -30,7 +31,7 @@ export const ShowAtHome = props =>{
                     <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>
                 </div>
             </div>
-            <div>
+            <div className='showAtHomeImageDiv'>
                 <img className='showAtHomeImage' alt='' src={'./assets/img/ShowAtHomeImage.svg'}></img>
             </div>
         </div>

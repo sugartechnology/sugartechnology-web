@@ -1,40 +1,34 @@
 .customerCommentsContainer{
-    width: 1434px;
+    width: 100%;
     height: 707px;
-}
-.firstCommnetBackground{
-    display: flex;
     position: relative;
-    bottom: 80px;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(pink,#ED401A);
 }
 .commentsLeftButton{
-    position: relative;
+    position: absolute;
     z-index: 1;
     left: 50px;
-    top: 283px;
     cursor: pointer;
 }
 .commentsRightButton{
-    position: relative;
-    bottom: 517px;
-    left: 1300px;
+    position: absolute;
+    right: 50px;
     cursor: pointer;
 }
 .commentSpans{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50px;
-    position: relative;
-    top: 40px;
-    left: 50px;
+    width: 100%;
     gap: 20px;
+    position: absolute;
+    top: 70px;
 }
 .firstComment{
     display: flex;
     flex-direction: column;
-    position: relative;
-    right: 800px;
 }
 .secondCustomerComment{
     flex-direction: column;
@@ -47,7 +41,7 @@
     right: 800px;
 }
 .firstCommentSpan{
-    width: 752px;
+    width: 100%;
     height: 55px;
     font-style: normal;
     font-weight: 800;
@@ -57,8 +51,8 @@
     color: #FFFFFF;
 }
 .secondCommentSpan{
-    width: 47px;
-    height: 110px;
+    width: 100%;
+    height: 70px;
     font-style: normal;
     font-weight: 800;
     font-size: 100px;
@@ -67,7 +61,7 @@
     color: #FFFFFF;
 }
 .thirdCommentSpan{
-    width: 961px;
+    width: 80%;
     height: 156px;
     font-style: italic;
     font-weight: 600;
@@ -81,20 +75,20 @@
 .commentCustomer{
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 50px;
     text-align: center;
-    width: 130px;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
 }
 .customerPhoto{
+    width: 100px;
     border-radius: 100px;
     position: relative;
 }
 .commentCustomer h1{
     color: #FFFFFF;
     font-size: 23px;
-    position: relative;
-    right: 25px;
     width: 180px;
 }
 .commentCustomer a{
@@ -204,112 +198,51 @@
 }
 .commentStar{
     width: 100px;
-    position: relative;
-    left: 20px;
+    z-index: 1;
 }
 .redBackgroundCircle1{
     position: absolute;
-
+    left: 0px;
+    top: 0px;
 }
 .redBackgroundCircle2{
     position: absolute;
-    left: 1128px;
-    top: 58px;
+    right: 0px;
+    bottom: 0px;
 }
 .redBackgroundCircle3{
     position: absolute;
-    left: 1290px;
-    top: 310px;
+    right: 0px;
+    bottom: 0px;
 }
 
-@media screen and (max-width: 500px){
-    .customerCommentsContainer{
-        width: 414px;
-        height: 550px;
-    }
-    .redBackground{
-        display: none;
-    }
-    .redBackgroundCircle1,
-    .redBackgroundCircle2,
-    .redBackgroundCircle3{
-        display: none;
-    }
-    .redBackgroundMobile{
-        display: flex !important;
-        height: 580px;
-        width: 590px;
-        position: relative;
-        top: 50px;
-        right: 9px;
-    }
-    .firstComment{
-        display: flex;
-        top: 70px;
-        right: 520px;
-    }
-    .secondCustomerComment{
-        top: 70px;
-        right: 520px;
-    }
-    .thirdCustomerComment{
-        top: 70px;
-        right: 520px;
-    }
-    .customerPhoto{
-        width: 100px;
-        position: relative;
-        left: 90px;
-    }
-    .commentCustomer h1{
-        font-size: 15px;
-        position: relative;
-        left: 80px;
-    }
-    .commentCustomer a{
-        left: 80px;
-        font-size: 13px;
-    }
-    .commentStar{
-        left: 90px;
-    }
-    .firstCommentSpan{
-        width: 334px;
-        height: 64px;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 27px;
-        line-height: 104%;
-        text-align: center;
-        color: #FFFFFF;
-        position: relative;
-        left: 60px;
-    }
-    .secondCommentSpan{
-        width: 30px;
-        height: 30px;
-        position: relative;
-        bottom: 30px;
-        left: 60px;
-    }
-    .thirdCommentSpan{
-        width: 335px;
-        height: 98px;
-        font-style: italic;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 100%;
-        position: relative;
-        left: 60px;
-    }
-    .commentsRightButton{
-        display: none;
-    }
-    .commentsLeftButton{
-        display: none;
-    }
-    .customerCommentsPageButtons{
-        left: 185px;
-        top: 570px;
-    }
+.tablet .commentsLeftButton{
+    left: 10px;
+}
+
+.tablet .commentsRightButton{
+    right: 10px;
+}
+
+.tablet .firstCommentSpan{
+    font-size: 30px;
+}
+
+.tablet .thirdCommentSpan{
+    font-size: 18px;
+}
+
+.mobile .firstCommentSpan{
+    font-size: 20px;
+}
+.mobile .thirdCommentSpan{
+    font-size: 15px;
+}
+.mobile .commentsRightButton{
+    right: 10px;
+    width: 50px;
+}
+.mobile .commentsLeftButton{
+    left: 10px;
+    width: 50px;
 }

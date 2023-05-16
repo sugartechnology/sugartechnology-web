@@ -76,6 +76,7 @@
     "contactPageSpan": "Ortaklık fırsatları da dahil olmak üzere diğer sorularınız için lütfen Sugar@sugartech.io'ya e-posta gönderin veya iletişim formumuzu kullanarak iletişime geçin.",
     "fullName": "İsim",
     "howCanWeHelpYou": "Size nasıl yardımcı olabiliriz?",
+    "yourMessage":"Mesajınız",
     "describeYourProblem": "Sorununuzu en az 250 karakterle açıklayın",
     "sendMessage": "Mesaj Gönder",
     "backToHome": "Anasayfaya Dön",
@@ -195,7 +196,16 @@
     "slideDetailSpan5": "span5",
     "slideDetailHeader6": "header6",
     "slideDetailSpan6": "span6",
-    "leaderName1":"Abdurrahman Türkeri",
-    "leaderName2":"Yusuf Fatih Erol",
-    "leaderName3":"Farhad Faal"
+    "leaderName1": "Abdurrahman Türkeri",
+    "leaderName2": "Yusuf Fatih Erol",
+    "leaderName3": "Farhad Faal",
+    "addCv": "CV Ekle",
+    "contactCvHeader": "Gelecek için başvurun!",
+    "contactCvSpan": "Hayalinizdeki pozisyonu tekliflerimizde bulamadıysanız, gelecek için bize CV / iletişim bilgilerinizi bırakın!",
+    "jobTitle": "Meslek",
+    "careers": "Kariyer",
+    "phone": "Telefon",
+    "cvAlert": "20 MB'a kadar dosya ekleyebilirsiniz.",
+    "submit": "Gönder",
+    "fileChoosen": "Dosya Eklenmedi"
 }

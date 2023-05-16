@@ -1,9 +1,11 @@
 .ShowAtHomeContainer{
+    width: 100%;
     height: 730px;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
     margin-top: 60px;
+    position: relative;
 }
 .showAtHomeBubbles{
     position: absolute;
@@ -12,10 +14,11 @@
 .showAtHomeSpans{
     display: flex;
     flex-direction: column;
-    position: relative;
-    left: 40px;
+    position: absolute;
+    left: 100px;
     top: 80px;
     gap: 100px;
+    flex: 50%;
 }
 .showAtHomeHeader{
     height: 100px;
@@ -39,8 +42,6 @@
 }
 .showAtHomeImage{
     position: relative;
-    top: 50px;
-    left: 50px;
     width: 500px;
 }
 .showAtHomeButtons{
@@ -137,74 +138,70 @@
     text-align: center;
     color: #ED401A;
 }
-@media screen and (max-width: 500px){
-    .ShowAtHomeContainer{
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        height: 900px;
-        width: 414px;
-    }
-    .showAtHomeImage{
-        width: 328px;
-        left: 40px;
-        top: 40px;
-    }
-    .showAtHomeSpans{
-        gap: 40px;
-        top: 50px;
-        left: 0px;
-    }
-    .showAtHomeHeader{
-        width: 300px;
-        font-size: 29px;
-        position: relative;
-        left: 90px;
-    }
-    .showAtHomeSpan{
-        width: 246px;
-        font-size: 17px;
-        position: relative;
-        left: 100px;
-    }
-    .showAtHomeButtons{
-        bottom: 0px;
-        left: 90px;
-    }
-    .showAtHomeButton1{
-        width: 100px;
-        height: 35px;
-    }
-    .showAtHomeButton1 a{
-        width: 90px;
-        height: 26px;
-        font-size: 13px;
-    }
-    .showAtHomeButton2{
-        width: 100px;
-        height: 35px;
-    }
-    .showAtHomeButton2 a{
-        width: 71px;
-        height: 26px;
-        font-size: 13px;
-    }
-    .bubble1{
-        width: 300px;
-        position: relative;
-        right: 100px;
-    }
-    .bubble2{
-        width: 150px;
-        top: 650px !important;
-        right: 300px !important;
-    }
-    .bubble3{
-        bottom: 00px !important;
-        right: 100px !important;
-    }
-    .bubble5{
-        width: 200px;
-        bottom: 10px !important;
-        left: 214px !important;
-    }
+.showAtHomeImageDiv{
+    position: absolute;
+    right: 100px;
+    flex: 50%;
+}
+.tablet .ShowAtHomeContainer{
+    height: 1000px;
+}
+.tablet .showAtHomeSpans{
+    top: auto;
+    bottom: 0px;
+    left: auto;
+}
+.tablet .showAtHomeImageDiv{
+    right: auto;
+}
+.mobile .ShowAtHomeContainer{
+    height: 900px;
+}
+.mobile .showAtHomeHeader{
+    width: 300px;
+    font-size: 29px;
+    position: relative;
+}
+.mobile .showAtHomeSpan{
+    width: 246px;
+    font-size: 17px;
+    position: relative;
+}
+.mobile .showAtHomeButtons{
+    bottom: 0px;
+}
+.mobile .showAtHomeButton1{
+    width: 100px;
+    height: 35px;
+}
+.mobile .showAtHomeButton1 a{
+    width: 90px;
+    height: 26px;
+    font-size: 13px;
+}
+.mobile .showAtHomeButton2{
+    width: 100px;
+    height: 35px;
+}
+.mobile .showAtHomeButton2 a{
+    width: 71px;
+    height: 26px;
+    font-size: 13px;
+}
+.mobile .showAtHomeImageDiv{
+    top: 40px;
+    right: auto;
+    width: auto;
+}
+.mobile .showAtHomeImage{
+    width: 400px;
+    left: auto;
+    top: auto;
+}
+.mobile .showAtHomeSpans{
+    gap: 40px;
+    bottom: 30px;
+    top: auto;
+    left: auto;
+    position: absolute;
 }

@@ -1,9 +1,28 @@
 import './Footer.css'
+import React, { useState, useEffect } from 'react';
 
 export const Footer = props =>{
+    const [isTablet, setIsTablet] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 800);
+            setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+            
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return(
-        <div className='footerContainer'>
-            <div>
+        <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} footerContainer`}>
+            <div style={{width: "100%", height: "0%"}}>
                 <img className='footerLine' style={{width: "100%"}} alt='' src={'assets/img/bigLine.svg'}></img>
             </div>
             <div className='footerElements'>
