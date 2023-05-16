@@ -1,0 +1,134 @@
+.contactCvContainer{
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.contactCvInputs{
+    width: 770px;
+    height: 887px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+.jobTitleInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.jobTitleSelect{
+    height: 40px;
+    width: 656px;
+    background: #FFFFFF;
+    border: 1px solid #D2D6DA;
+    border-radius: 8px;
+}
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border: none;
+    border: 2px solid #ED401A;
+    background: #FFFFFF;
+    padding: 5px 5px;
+    border-radius: 10px;
+    color: #ED401A;
+    cursor: pointer;
+  }
+.cvAlert{
+    height: 22px;
+    width: 300px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 7px;
+    display: flex;
+    align-items: center;
+    color: #737373;
+    position: absolute;
+    bottom: -20px;
+}
+.addCvInput{
+    width: 150px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    color: #252F40;
+}
+.contactCvHeader{
+    width: 500px;
+    height: 41px;
+    font-style: normal;
+    position: relative;
+    left: 100px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02666em;
+    background: linear-gradient(135deg, #FFA895 15.1%, #FF2E00 67.71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.emailInputs{
+    position: relative;
+}
+.submitButton{
+    height: 40px;
+    width: 626px;
+    background: linear-gradient(135deg, #FFA895 15.1%, #FF2E00 67.71%);
+    box-shadow: 0px 4px 7px -1px rgba(0, 0, 0, 0.11), 0px 2px 4px -1px rgba(0, 0, 0, 0.07);
+    border-radius: 21px;
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+.contactOptions{
+    position: absolute;
+    bottom: 220px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contactOption{
+    display: flex;
+    gap: 10px;
+}
+.contactOption img{
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #CCCCCC;
+}
+.contactOption a{
+    width: 566px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #717171;
+}

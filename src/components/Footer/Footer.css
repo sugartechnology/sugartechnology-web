@@ -1,24 +1,27 @@
 .footerContainer{
     display: flex;
     flex-direction: column;
+    width: 100%;
     height: 120px;
     gap: 50px;
+    position: relative;
 }
 .footerElements{
+    width: 100%;
     display: flex;
     justify-content: space-around;
     position: relative;
     bottom: 10px;
-    gap: 500px;
 }
 .footerSpan{
-    width: 638px;
+    width: 80%;
     height: 35px;
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
     line-height: 157.4%;
     color: #797979;
+    display: flex;
 }
 .footerMediaButtons{
     display: flex;
@@ -27,30 +30,24 @@
 .footerMediaButtons img{
     cursor: pointer;
 }
-@media screen and (max-width: 500px){
-    .footerContainer{
-        width: 500px;
-        height: 60px;
-        flex-direction: row;
-    }
-    .footerLine{
-        position: relative;
-        left: 30px;
-        top: 20px;
-    }
-    .footerSpan{
-        font-size: 9px;
-        position: relative;
-        top: 70px;
-        right: 340px;
-    }
-    .footerMediaButtons{
-        position: relative;
-        top: 70px;
-        right: 1390px;
-    }
-    .footerMediaButtons img{
-        width: 10px;
-        color: #808080;
-    }
+.tablet .footerElements{
+    flex-direction: column;
+    align-self: center;
+}
+.tablet .footerSpan{
+    justify-content: center;
+}
+.tablet .footerMediaButtons{
+    justify-content: center;
+}
+
+.mobile .footerElements{
+    flex-direction: column;
+    align-self: center;
+}
+.mobile .footerSpan{
+    justify-content: center;
+}
+.mobile .footerMediaButtons{
+    justify-content: center;
 }

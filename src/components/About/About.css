@@ -1,6 +1,7 @@
 .aboutContainer{
     display: flex;
     height: 542px;
+    position: relative;
 }
 .aboutSpans{
     display: flex;
@@ -8,10 +9,11 @@
     justify-content: space-evenly;
     position: relative;
     left: 100px;
+    position: absolute;
 }
 .aboutSpans h1{
     width: 501px;
-    height: 0px;
+    height: 50px;
     font-style: normal;
     font-weight: 500;
     font-size: 38px;
@@ -53,12 +55,12 @@
     color: #FFFFFF;
 }
 .firstAboutLogo{
-    position: relative;
-    left: 250px;
-    top: 90px;
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
 }
 .secondAboutLogo{
-    position: relative;
+    position: absolute;
     bottom: 550px;
     filter: blur(7.5px);
     z-index: -1;
@@ -66,7 +68,7 @@
 
 @media screen and (max-width: 500px) {
     .aboutContainer{
-        width: 500px;
+        width: 100%;
         height: 670px;
         flex-direction: column;
         gap: 20px;
@@ -87,8 +89,7 @@
     }
     .firstAboutLogo{
         width: 300px;
-        top: 100px;
-        left: 60px;
+        right: 10px;
     }
     .secondAboutLogo{
         bottom: 350px;

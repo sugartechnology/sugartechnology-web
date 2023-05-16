@@ -10,12 +10,10 @@
     transform: scaleY(-1);
     width: 200px;
 }
-@media screen and (max-width: 500px){
-    .productsCustomerContainer{
-        height: 43px;
-        gap: 20px;
-    }
-    .productsCustomerContainer img{
-        width: 70px;
-    }
+.mobile .productsCustomerContainer{
+    height: 43px;
+    gap: 20px;
+}
+.mobile .productsCustomerContainer img{
+    width: 20%;
 }

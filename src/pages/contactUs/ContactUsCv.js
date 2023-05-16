@@ -1,10 +1,8 @@
-import { ListenToPartner } from "../../components/ListenToPartner/ListenToPartner";
-import { ProductsCustomer } from "../../components/ProductsCustomers/ProductsCustomers";
-import { TryWatch } from "../../components/TryWatch/TryWatch";
-import { Watch } from "../../components/Watch/Watch";
+import { ContactAddress } from "../../components/ContactAddress/ContactAddress";
+import { ContactCv } from "../../components/ContactCv/ContactCv";
 import React, { useState, useEffect } from 'react';
 
-export const ProductWatch = props =>{
+export const ContactUsCv = props =>{
     const [isTablet, setIsTablet] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -24,11 +22,9 @@ export const ProductWatch = props =>{
         };
     }, []);
     return(
-        <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ProductWatch`}>
-            <Watch></Watch>
-            <ProductsCustomer></ProductsCustomer>
-            <TryWatch></TryWatch>
-            <ListenToPartner></ListenToPartner>
+        <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} contactUsCv`}>
+            <ContactCv></ContactCv>
+            <ContactAddress></ContactAddress>
         </div>
     );
 }

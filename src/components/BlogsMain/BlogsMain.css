@@ -27,11 +27,11 @@
     cursor: pointer;
 }
 .squareButton a{
-    width: 68px;
+    width: 100px;
     height: 26px;
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 10px;
     line-height: 26px;
     display: flex;
     align-items: center;

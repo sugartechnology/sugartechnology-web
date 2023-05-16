@@ -1,11 +1,29 @@
 import './Header.css'
 import { useTranslation} from "react-i18next";
 import LanguageSelector from './LanguageSelector';
-
+import React, { useState, useEffect } from 'react';
 
 
 export const Header = props => {
     const {t} = useTranslation();
+    const [isTablet, setIsTablet] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 870);
+            setIsTablet(window.innerWidth > 870 && window.innerWidth <= 1100);
+            
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const showPopup = ()=>{
         var popup = document.getElementById("productServicesPopup");
@@ -132,7 +150,7 @@ export const Header = props => {
     }
     
     return(
-        <div className="headerContainer" id='headerContainer'>
+        <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} headerContainer`} id='headerContainer'>
             <div class="overlay" id='overlay' style={{zIndex: "1"}}></div>
             <div className='mobileHeaderPopup' id='mobileHeaderPopup' style={{display: "none", position: "absolute", zIndex: "2"}}>
                 <div className='backToHome' onClick={showMobilePopup}>
@@ -207,7 +225,7 @@ export const Header = props => {
                 <img id='mobilePopupLine3' alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px", position: "relative"}}></img>
                 <div className='mobileMediaCenterButtons'>
                     <button className='popupMediaCenterButton' id='popupMediaCenterButton'>
-                        <a>{t("mediaCenter")}</a>
+                        <a>{t("careers")}</a>
                     </button>
                 </div>
             </div>
@@ -228,7 +246,7 @@ export const Header = props => {
             <div className="headerButtons">
                 <LanguageSelector></LanguageSelector>
                 <button className='mediaCenterButton'>
-                    <a>{t("mediaCenter")}</a>
+                    <a href='/contactCv'>{t("careers")}</a>
                 </button>
             </div>
             <div className='productServicesPopup' id='productServicesPopup' style={{ display: "none" , position:"absolute", top:"70px", zIndex:"6"}}>

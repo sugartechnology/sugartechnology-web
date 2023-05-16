@@ -1,10 +1,27 @@
-import { useState } from 'react';
 import './Contact.css';
 import { useTranslation} from "react-i18next";
-import { func } from 'prop-types';
+import React, { useState, useEffect } from 'react';
 
 export const Contact = props =>{
     const {t} = useTranslation();
+    const [isTablet, setIsTablet] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 800);
+            setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+            
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
@@ -59,15 +76,15 @@ export const Contact = props =>{
     }
 
     return(
-        <div className='contactContainer'>
+        <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} contactContainer`}>
             <div className='contactLine'>
-                <img style={{width: "1430px"}} alt='' src={'assets/img/bigLine.svg'}></img>
+                <img style={{width: "100%"}} alt='' src={'assets/img/bigLine.svg'}></img>
             </div>
             <div className='contactElements'>
             <div className='leftContact'>
                 <div className='about'>
                     <img className='contactLogo' alt="" src={'assets/img/headerLogo.svg'}></img>
-                    <a className='aboutSpan'>{t("contactAboutSpan")}</a>
+                    <a className='aboutSpan'>{t("contactAboutSpan")}fbosnbjuıkgnjshbgıu rsjnhfbvıjfkbjfsbık</a>
                 </div>
                 <div className='communication'>
                     <div className='mailAdressContainer'>
@@ -98,11 +115,11 @@ export const Contact = props =>{
                     </div>
                     <div className='contactRouters'>
                         <a href='/'>{t("home")}</a>
+                        <a href='/'>{t("productServices")}</a>
                         <a href='/aboutUs'>{t("aboutUs")}</a>
-                        <a>{t("integrations")}</a>
-                        <a>{t("pricing")}</a>
-                        <a>{t("features")}</a>
+                        <a href='/blogs'>{t("blog")}</a>
                         <a href='/contactUs'>{t("contactUs")}</a>
+                        <a href='/contactCv'>{t("careers")}</a>
                     </div>
                 </div>
                 <div className='utilityPages'>
@@ -111,18 +128,18 @@ export const Contact = props =>{
                         <img className='utilityLine' alt='' src={'assets/img/littleLine.svg'}></img>
                     </div>
                     <div className='contactRouters'>
-                        <a>{t("password")}</a>
-                        <a>{t("protected")}</a>
-                        <a>{t("notFound")}</a>
-                        <a>{t("styleGuide")}</a>
-                        <a>{t("licences")}</a>
-                        <a>{t("changelog")}</a>
+                        <a href='/productAr'>{t("showFurniture")}</a>
+                        <a href='/productJoint'>{t("createProduct")}</a>
+                        <a href='/productMeta'>{t("metaverse")}</a>
+                        <a href='/productWatch'>{t("dressWatch")}</a>
+                        <a href='/productShoes'>{t("dressShoe")}</a>
+                        <a href='/productClooth'>{t("dressClooth")}</a>
                     </div>
                 </div>
             </div>
             <div className='rightContact'>
                 <div className='contactHeaders'>
-                    <a>{t("Contact Us")}</a>
+                    <a>{t("contactUs")}</a>
                 </div>
                 <div className='rightContactInputs' onSubmit={(e)=>{return false;}}>
                     <a>{t("enterYourNameAndEmail")}</a>

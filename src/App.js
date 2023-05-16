@@ -17,6 +17,7 @@ import { Blog } from './pages/blogs/Blog';
 import { Blogs } from './pages/blogs/Blogs';
 import { ContactUs } from './pages/contactUs/ContactUs';
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
+import { ContactCv } from './components/ContactCv/ContactCv';
 
 i18n
   .use(initReactI18next)
@@ -61,6 +62,7 @@ function App() {
           <Route path='/sugarBlog' element={<Blog></Blog>}></Route>
           <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
+          <Route path='/contactCv' element={<ContactCv></ContactCv>}></Route>
         </Routes>
         <Contact></Contact>
         <Footer></Footer>

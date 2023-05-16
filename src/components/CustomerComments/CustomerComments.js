@@ -9,20 +9,22 @@ export const CustomerComments = props => {
         trustedByMillionsOfCompany: "Evinde Gör ile Binlerce Müşterimize Ulaştık",
         commentSpan: "commentSpan",
         commentHeader: "Timurg Sanat Evi",
-        commentAuthor: "Tuğba Karayel Özcan"
-    },
-
-    {
-        trustedByMillionsOfCompany: "Mağazalarımızda Tüm Müşterilerimize Konsept Çalışıyoruz.",
-        commentSpan: "commentSpan2",
-        commentHeader: "Tepe Home",
-        commentAuthor: "Yesim Korkmaz"
+        commentAuthor: "Tuğba Karayel Özcan",
+        customerPhoto: "https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/tugba_karayel.jpeg"
     },
     {
         trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
+        commentSpan: "commentSpan2",
+        commentHeader: "Tepe Home",
+        commentAuthor: "Yesim Korkmaz",
+        customerPhoto : "https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/yesim_korkmaz.jpeg"
+    },
+    {
+        trustedByMillionsOfCompany: "commentHeader3",
         commentSpan: "commentSpan3",
-        commentHeader: "commentHeader3",
-        commentAuthor: "Ali  Yalcin "
+        commentHeader: "Eko Halı",
+        commentAuthor: "Ceren Evcimen",
+        customerPhoto : "assets/img/cereen_evcimen.jpeg"
     }];
 
     const next = () => {
@@ -37,8 +39,6 @@ export const CustomerComments = props => {
         <div className='customerCommentsContainer'>
             <img className='commentsLeftButton' alt='' src={'assets/img/commentsLeftButton.svg'} onClick={() => { prev(); }}></img>
             <div className='firstCommnetBackground'>
-                <img className='redBackgroundMobile' alt='' src={'./assets/img/customerCommentMobileBackground.svg'} style={{ display: "none" }}></img>
-                <img className='redBackground' alt='' src={'assets/img/customerCommentBackground.svg'}></img>
                 <img className='redBackgroundCircle1' alt='' src={'./assets/img/circle1.svg'}></img>
                 <img className='redBackgroundCircle2' alt='' src={'./assets/img/circle2.svg'}></img>
                 <img className='redBackgroundCircle3' alt='' src={'./assets/img/circle3.svg'}></img>
@@ -49,7 +49,7 @@ export const CustomerComments = props => {
                         <a className='thirdCommentSpan'>{t(array[index].commentSpan)}</a>
                     </div>
                     <div className='commentCustomer'>
-                        <img className='customerPhoto' alt='' src={'assets/img/TepeHomePhoto.svg'}></img>
+                        <img className='customerPhoto' alt=''src={t(array[index].customerPhoto)}></img>
                         <h1>{t(array[index].commentAuthor)}</h1>
                         <a>{array[index].commentHeader}</a>
                         <img className='commentStar' alt='' src={'assets/img/Star.svg'}></img>

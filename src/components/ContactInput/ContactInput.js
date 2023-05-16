@@ -1,6 +1,7 @@
 import './ContactInput.css';
 import { useState } from 'react';
 import { useTranslation} from "react-i18next";
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export const ContactInput = props =>{
     const {t} = useTranslation();
@@ -8,6 +9,20 @@ export const ContactInput = props =>{
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [message, setMessage] = useState("");
+    const [isHuman, setIsHuman] = useState(false);
+
+    const handleRecaptchaChange = (value) => {
+        setIsHuman(true);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (isHuman) {
+            submitForm();
+        } else {
+            alert("Please verify that you are a human!");
+        }
+    }
 
     function submitForm() {
         const form = {
@@ -25,15 +40,6 @@ export const ContactInput = props =>{
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(form));
         inputDonePopup();
-        // if (this.readyState === 4) {
-        //     if ((this.status == 200) && (this.status < 300)) {
-        //         inputDonePopup();
-        //     }
-        //     else{
-        //         inputErrorPopup();
-        //     }
-        // }
-        
     }
     function inputDonePopup() {
         let inputPopup = document.getElementById('inputDonePopup');
@@ -101,8 +107,11 @@ export const ContactInput = props =>{
                         <textarea className='descriptionInput' type="text" placeholder={t("describeYourProblem")} value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                     </div>
                 </div>
+                <ReCAPTCHA style={{position: "absolute", bottom: "80px"}}
+                    sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
+                    onChange={handleRecaptchaChange}/>
                 <div className='contactInputButtons'>
-                    <button className='sendMessageButton' onClick={(e)=>{submitForm()}}><a>{t("sendMessage")}</a></button>
+                    <button className='sendMessageButton' onClick={(e)=>{handleSubmit.bind(this)}}><a>{t("sendMessage")}</a></button>
                 </div>
             </div>
             <div className='inputDonePopup' id='inputDonePopup'>

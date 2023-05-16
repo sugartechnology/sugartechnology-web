@@ -31,6 +31,7 @@
     border-radius: 16px;
     justify-content: space-evenly;
     flex-direction: column;
+    position: relative;
 }
 .sugarBrandHomeImg{
     position: relative;
@@ -39,25 +40,11 @@
     bottom: 27px;
     border-radius: 16px 16px 0px 0px;
 }
-.sugarBrandShadow1{
-    position: absolute;
-    top: 2683px;
-    width: 260px;
-    left: 225px;
-    opacity: 0.1;
-}
-.sugarBrandShadow2{
+.sugarBrandShadow{
     position: absolute;
     width: 260px;
-    top: 2683px;
-    left: 590px;
-    opacity: 0.1;
-}
-.sugarBrandShadow3{
-    position: absolute;
-    width: 260px;
-    top: 2683px;
-    left: 955px;
+    bottom: -15px;
+    left: 30px;
     opacity: 0.1;
 }
 .sugarBrandSpan{
@@ -117,32 +104,62 @@
         transform: translateX(0);
     }
 }
-@media screen and (max-width: 500px){
-    .sugarBrandsHeader{
-        width: 336px;
-        font-size: 27px;
-    }
-    #brand2,
-    #brand3{
-        display: none;
-    }
-    .sugarBrandShadow2,
-    .sugarBrandShadow3{
-        display: none;
-    }
-    .brandsPageButton{
-        display: flex !important;
-    }
-    .sugarBrandShadow1{
-        top: 2420px;
-        left: 120px;
-    }
-    .sugarBrandShadow2{
-        top: 2420px;
-        left: 120px;
-    }
-    .sugarBrandShadow3{
-        top: 2420px;
-        left: 120px;
-    }
+
+.mobile .sugarBrandsHeader{
+    width: 336px;
+    font-size: 27px;
+}
+.mobile #brand2,
+.mobile #brand3{
+    display: none;
+}
+.mobile .sugarBrandShadow1,
+.mobile .sugarBrandShadow2,
+.mobile .sugarBrandShadow3{
+    display: none;
+}
+.mobile .brandsPageButton{
+    display: flex !important;
+}
+.mobile .sugarBrandShadow1{
+    top: 2420px;
+    left: 120px;
+}
+.mobile .sugarBrandShadow2{
+    top: 2420px;
+    left: 120px;
+}
+.mobile .sugarBrandShadow3{
+    top: 2420px;
+    left: 120px;
+}
+
+
+.tablet .sugarBrandsHeader{
+    width: 336px;
+    font-size: 27px;
+}
+.tablet #brand2,
+.tablet #brand3{
+    display: none;
+}
+.tablet .sugarBrandShadow1,
+.tablet .sugarBrandShadow2,
+.tablet .sugarBrandShadow3{
+    display: none;
+}
+.tablet .brandsPageButton{
+    display: flex !important;
+}
+.tablet .sugarBrandShadow1{
+    top: 2420px;
+    left: 120px;
+}
+.tablet .sugarBrandShadow2{
+    top: 2420px;
+    left: 120px;
+}
+.tablet .sugarBrandShadow3{
+    top: 2420px;
+    left: 120px;
 }
