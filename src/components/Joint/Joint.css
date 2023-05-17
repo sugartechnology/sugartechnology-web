@@ -4,35 +4,44 @@
     justify-content: space-evenly;
     background: #EBEBEB;
     margin-top: 60px;
+    align-items: center;
 }
 .jointSpans{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
-    right: 150px;
+    position: absolute;
+    left: 100px;
+    gap: 70px;
 }
 .jointImage{
-    position: absolute;
-    top: 300px;
-    left: 600px;
-    width: 700px;
+    width: 100%;
 }
-@media screen and (max-width: 500px){
-    .jointContainer{
-        height: 760px;
-        justify-content: normal;
-        width: 414px;
-    }
-    .jointSpans{
-        right: 0px;
-        justify-content: normal;
-        gap: 20px;
-        top: 70px;
-    }
-    .jointImage{
-        width: 400px;
-        top: 550px;
-        left: 0px;
-    }
+.jointImageDiv{
+    position: absolute;
+    right: 0px;
+}
+
+.tablet .jointContainer{
+    height: 740px;
+}
+.tablet .jointSpans{
+    left: auto;
+    bottom: 50px;
+}
+.tablet .jointImageDiv{
+    right: auto;
+    top: 50px;
+}
+
+.mobile .jointContainer{
+    height: 740px;
+}
+.mobile .jointSpans{
+    left: auto;
+    bottom: 50px;
+    gap: 30px;
+}
+.mobile .jointImageDiv{
+    right: auto;
+    top: 100px;
 }

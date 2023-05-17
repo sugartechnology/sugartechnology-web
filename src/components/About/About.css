@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    position: relative;
-    left: 100px;
+    left: 50px;
+    top: 30px;
     position: absolute;
 }
 .aboutSpans h1{
@@ -54,6 +54,11 @@
     text-transform: capitalize;
     color: #FFFFFF;
 }
+.aboutLogos{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
 .firstAboutLogo{
     position: absolute;
     right: 10px;
@@ -66,38 +71,74 @@
     z-index: -1;
 }
 
-@media screen and (max-width: 500px) {
-    .aboutContainer{
-        width: 100%;
-        height: 670px;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .aboutSpans{
-        gap: 40px;
-        top: 20px;
-        left: 40px;
-    }
-    .aboutSpans h1{
-        width: 300px;
-        font-size: 29px;
-    }
-    .aboutSpans a{
-        width: 300px;
-        height: 170px;
-        font-size: 13px;
-    }
-    .firstAboutLogo{
-        width: 300px;
-        right: 10px;
-    }
-    .secondAboutLogo{
-        bottom: 350px;
-        right: 518px;
-    }
-    .aboutButton{
-        width: 126px;
-        height: 35px;
-        top: 70px;
-    }
+.tablet .aboutContainer{
+    height: 700px;
+}
+
+.tablet .aboutSpans{
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    align-items: center;
+}
+
+.tablet .aboutLogos{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+}
+
+.tablet .firstAboutLogo{
+    width: 400px;
+}
+
+.tablet .aboutSpans h1{
+    width: 100%;
+    text-align: center;
+}
+
+.tablet .aboutSpans a{
+    width: 100%;
+    text-align: center;
+}
+
+.tablet .firstAboutLogo{
+    right: auto;
+}
+
+.mobile .aboutContainer{
+    height: 700px;
+}
+
+.mobile .aboutSpans{
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    align-items: center;
+}
+
+.mobile .aboutSpans a{
+    width: 100%;
+    text-align: center;
+}
+
+.mobile .firstAboutLogo{
+    width: 100%;
+}
+
+.mobile .aboutSpans h1{
+    width: 100%;
+    text-align: center;
+}
+
+.mobile .aboutLogos{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+}
+
+.mobile .firstAboutLogo{
+    right: auto;
 }

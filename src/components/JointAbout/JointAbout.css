@@ -12,7 +12,7 @@
 }
 .jointAboutHeader{
     height: 100px;
-    width: 769px;
+    width: 100%;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
@@ -22,7 +22,7 @@
     color: #000000;
 }
 .jointAboutSpan{
-    width: 652px;
+    width: 50%;
     height: 150px;
     font-style: normal;
     font-weight: 400;
@@ -40,38 +40,39 @@
 }
 .jointShadow{
     position: absolute;
-    top: 684px;
-    width: 770px;
+    bottom: -46px;
+    width: 769px;
     z-index: -1;
     opacity: 0.5;
 }
-@media screen and (max-width: 500px){
-    .jointAboutContainer{
-        height: 600px;
-    }
-    .jointAboutHeader{
-        width: 341px;
-        font-size: 29px;
-        position: relative;
-        bottom: 50px;
-    }
-    .jointAboutSpan{
-        width: 364px;
-        font-size: 13px;
-        position: relative;
-        bottom: 20px;
-    }
-    .jointAboutImage{
-        position: relative;
-        top: none;
-        bottom: 30px;
-        width: 300px;
-    }
-    .jointShadow{
-        top: 387px;
-        width: 300px;
-    }
-    .jointAboutBubble{
-        display: none;
-    }
+
+.mobile .jointAboutContainer{
+    height: 600px;
 }
+.mobile .jointAboutHeader{
+    width: 341px;
+    font-size: 29px;
+    position: relative;
+    bottom: 50px;
+}
+.mobile .jointAboutSpan{
+    width: 364px;
+    font-size: 13px;
+    position: relative;
+    bottom: 20px;
+}
+.mobile .jointAboutImage{
+    position: relative;
+    top: none;
+    bottom: 30px;
+    width: 300px;
+}
+.mobile .jointShadow{
+    top: 387px;
+    width: 300px;
+}
+.mobile .jointAboutBubble{
+    display: none;
+}
+
+

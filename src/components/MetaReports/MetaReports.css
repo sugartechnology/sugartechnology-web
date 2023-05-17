@@ -1,15 +1,14 @@
 .metaReportsContainer{
     height: 800px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 50px;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .metaReportsSpans{
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 40px;
     gap: 30px;
 }
 .metaReportsHeader{
@@ -37,27 +36,41 @@
     gap: 10px;
     flex-direction: column;
 }
-@media screen and (max-width: 500px){
-    .metaReportsContainer{
-        flex-direction: column-reverse;
-        height: 1000px;
-    }
-    .metaReportsHeader{
-        width: 333px;
-        font-size: 24px;
-    }
-    .metaReportsSpan{
-        width: 322px;
-        font-size: 16px;
-    }
-    .metaReportsList{
-        font-size: 16px;
-        position: relative;
-        right: 25px;
-        top: 20px;
-    }
-    .metaReportsImg img{
-        width: 320px !important;
-        right: 10px;
-    }
+
+.metaReportsImage{
+    width: 500px;
+}
+
+
+.tablet .metaReportsContainer{
+    height: 800px;
+}
+
+.tablet .metaReportsImg{
+    position: absolute;
+    bottom: 100px;
+}
+
+.tablet .metaReportsImage{
+    width: 300px;
+}
+
+.tablet .metaReportsSpans{
+    position: absolute;
+    top: 10px;
+    right: auto;
+    align-items: center;
+}
+
+.tablet .metaReportsHeader{
+    font-size: 30px;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+
+.tablet .metaReportsSpan{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
 }

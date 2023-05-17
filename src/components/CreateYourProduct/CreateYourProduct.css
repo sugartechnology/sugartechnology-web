@@ -34,7 +34,6 @@
 }
 .sugarModelViewer{
     width: 1200px;
-    height: 926px;
     position: absolute;
     top: 200px;
     left: 130px;
@@ -43,7 +42,7 @@
     bottom: 0px !important;
     position: absolute;
 }
-@media screen and (max-width: 500px){
+/* @media screen and (max-width: 500px){
     .createYourProductContainer{
         height: 600px;
     }
@@ -68,4 +67,4 @@
     .corner4{
         width: 100px;
     }
-}
+} */

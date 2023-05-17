@@ -4,24 +4,38 @@
     justify-content: space-evenly;
     background: #EBEBEB;
     margin-top: 60px;
+    align-items: center;
+    position: relative;
 }
 .metaverseImage{
-    position: relative;
-    left: 93px;
-    width: 650px;
-    bottom: 3px;
+    width: 550px;
 }
-@media screen and (max-width: 500px){
-    .MetaverseContainer{
-        flex-direction: column;
-        justify-content: normal;
-        height: 900px;
-        width: 414px;
-    }
-    .metaverseImage{
-        width: 400px;
-        bottom: none;
-        top: 234px;
-        left: 13px;
-    }
+.metaverseImageDiv{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.tablet .MetaverseContainer{
+    height: 900px;
+}
+
+.tablet .metaverseImage{
+    width: 350px;
+}
+
+.tablet .metaverseImageDiv{
+    right: auto;
+}
+
+.mobile .MetaverseContainer{
+    height: 900px;
+}
+
+.mobile .metaverseImage{
+    width: 350px;
+}
+
+.mobile .metaverseImageDiv{
+    right: auto;
 }

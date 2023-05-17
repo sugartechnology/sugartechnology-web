@@ -30,7 +30,7 @@ export const Joint = props =>{
                     <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>
                 </div>
             </div>
-            <div>
+            <div className='jointImageDiv'>
                 <img className='jointImage' alt='' src={'./assets/img/jointImage.svg'}></img>
             </div>
         </div>
