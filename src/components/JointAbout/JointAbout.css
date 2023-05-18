@@ -2,6 +2,7 @@
     height: 900px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .jointAboutElements{
     display: flex;
@@ -40,11 +41,15 @@
 }
 .jointShadow{
     position: absolute;
-    bottom: -46px;
-    width: 769px;
+    bottom: -43px;
+    width: 700px;
     z-index: -1;
     opacity: 0.5;
 }
+.jointAboutImage{
+    width: 700px;
+}
+
 
 .mobile .jointAboutContainer{
     height: 600px;
@@ -65,14 +70,18 @@
     position: relative;
     top: none;
     bottom: 30px;
-    width: 300px;
+    width: 400px;
 }
 .mobile .jointShadow{
-    top: 387px;
-    width: 300px;
+    bottom: 7px;
+    width: 400px;
 }
 .mobile .jointAboutBubble{
     display: none;
 }
 
+
+.tablet .jointAboutBubble{
+    display: none;
+}
 

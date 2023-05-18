@@ -5,13 +5,24 @@
     background: #EBEBEB;
     margin-top: 60px;
     align-items: center;
+    position: relative;
 }
 .jointSpans{
     display: flex;
     flex-direction: column;
     position: absolute;
     left: 100px;
-    gap: 70px;
+    gap: 100px;
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 613px;
+    height: 516px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 42px;
 }
 .jointImage{
     width: 100%;
@@ -26,11 +37,11 @@
 }
 .tablet .jointSpans{
     left: auto;
-    bottom: 50px;
+    top: 50px;
 }
 .tablet .jointImageDiv{
     right: auto;
-    top: 50px;
+    bottom: 50px;
 }
 
 .mobile .jointContainer{
@@ -38,10 +49,10 @@
 }
 .mobile .jointSpans{
     left: auto;
-    bottom: 50px;
+    top: 50px;
     gap: 30px;
 }
 .mobile .jointImageDiv{
     right: auto;
-    top: 100px;
+    bottom: 100px;
 }

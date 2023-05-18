@@ -4,12 +4,13 @@
     flex-direction: column;
     align-items: center;
     background: #E9E9E9;
+    position: relative;
 }
 .cloothPaternSpans{
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 50px;
+    top: 20px;
 }
 .cloothPaternHeader{
     height: 100px;
@@ -44,40 +45,85 @@
 .cloothPaternImage2{
     width: 200px;
 }
-@media screen and (max-width: 500px){
-    .cloothPaternContainer{
-        height: 900px;
-    }
-    .cloothPaternHeader{
-        height: 70px;
-        width: 356px;
-        font-weight: 700;
-        font-size: 29px;
-        line-height: 35px;
-    }
-    .cloothPaternSpan{
-        width: 345px;
-        height: 135px;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 13px;
-        line-height: 19px;
-    }
-    .cloothPaternElements{
-        flex-direction: column;
-    }
-    .cloothPaternImage1{
-        width: 250px;
-    }
-    .cloothPaternVector{
-        width: 30px;
-        position: relative;
-        left: 110px;
-        transform: rotate(90deg);
-    }
-    .cloothPaternImage2{
-        width: 150px;
-        position: relative;
-        left: 50px;
-    }
+
+
+
+.tablet .cloothPaternContainer{
+    height: 1000px;
 }
+
+.tablet .cloothPaternSpans{
+    width: 100%;
+    align-items: center;
+}
+
+.tablet .cloothPaternHeader{
+    width: 100%;
+}
+
+.tablet .cloothPaternSpan{
+    width: 80%;
+    height: 150px;
+}
+
+.tablet .cloothPaternVector{
+    width: 30px;
+    position: relative;
+    transform: rotate(90deg);
+}
+
+.tablet .cloothPaternElements{
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.tablet .cloothPaternImage1{
+    width: 60%;
+}
+
+.tablet .cloothPaternImage2{
+    width: 50%;
+}
+
+
+
+
+.mobile .cloothPaternVector{
+    width: 30px;
+    position: relative;
+    transform: rotate(90deg);
+}
+
+.mobile .cloothPaternContainer{
+    height: 1000px;
+}
+
+.mobile .cloothPaternSpans{
+    width: 100%;
+    align-items: center;
+}
+
+.mobile .cloothPaternHeader{
+    width: 100%;
+}
+
+.mobile .cloothPaternSpan{
+    width: 80%;
+    height: 150px;
+}
+
+.mobile .cloothPaternElements{
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.mobile .cloothPaternImage1{
+    width: 60%;
+}
+
+.mobile .cloothPaternImage2{
+    width: 50%;
+}
+

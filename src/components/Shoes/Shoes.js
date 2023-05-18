@@ -23,14 +23,14 @@ export const Shoes = props =>{
         }}></div>
         <div className='mainPageSmallFigure0 '></div>
             <div className='jointSpans'>
-                <a className='showAtHomeHeader'>{t("shoesContainerHeader")}</a>
-                <a className='showAtHomeSpan'>{t("shoesContainerSpan")}</a>
+                <a className='showAtHomeHeader'>{t("shoesContainerHeader")}Lorem ipsum dolor sit amet consectetur.</a>
+                <a className='showAtHomeSpan'>{t("shoesContainerSpan")}Lorem ipsum dolor sit amet consectetur. Neque viverra mi at mattis nascetur eu quis risus netus.</a>
                 <div className='showAtHomeButtons'>
                     <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
                     <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>
                 </div>
             </div>
-            <div>
+            <div className='shoesImageDiv'>
                 <img className='shoesImage' alt='' src={'./assets/img/shoesImage.svg'}></img>
             </div>
         </div>

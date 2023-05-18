@@ -3,6 +3,7 @@
     height: 820px;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
 }
 .tryCloothElements{
     display: flex;
@@ -34,58 +35,87 @@
     flex-direction: column;
     gap: 10px;
 }
-.cloothShadow{
-    position: absolute;
-    left: 935px;
-    width: 300px;
-    top: 1574px;
-    z-index: -1;
-    opacity: 0.3;
+
+
+.tablet .tryCloothContainer{
+    height: 1000px;
 }
-@media screen and (max-width: 500px){
-    .tryCloothContainer{
-        height: 713px;
-        flex-direction: column;
-    }
-    .tryCloothHeader{
-        height: 70px;
-        width: 356px;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 29px;
-        line-height: 35px;
-        text-align: center;
-        letter-spacing: -1px;
-        text-transform: capitalize;
-    }
-    .tryCloothSpan{
-        width: 345px;
-        height: 95px;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 13px;
-        line-height: 19px;
-        text-align: center;
-        text-transform: capitalize;
-    }
-    .tryCloothImage{
-        width: 200px !important;
-        bottom: 20px;
-        position: relative;
-    }
-    .cloothShadow{
-        left: 118px;
-        width: 180px;
-        top: 1656px;
-    }
-    .tryCloothElementImage1{
-        width: 207px !important;
-        position: relative;
-        left: 70px;
-    }
-    .tryCloothElementImage2{
-        width: 221px !important;
-        position: relative;
-        left: 65px;
-    }
+
+.tablet .tryCloothElements{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+}
+
+.tablet .tryCloothImages{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.tablet .tryCloothImage{
+    width: 35% !important;
+}
+
+.tablet .tryCloothHeader{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.tablet .tryCloothSpan{
+    width: 70%;
+    height: 150px;
+    text-align: center;
+}
+
+.tablet .tryCloothBubble{
+    display: none;
+}
+
+
+
+.mobile .tryCloothContainer{
+    height: 1000px;
+}
+
+.mobile .tryCloothElements{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+}
+
+.mobile .tryCloothImages{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile .tryCloothImage{
+    width: 35% !important;
+}
+
+.mobile .tryCloothHeader{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.mobile .tryCloothSpan{
+    width: 80%;
+    height: 180px;
+    text-align: center;
+}
+
+.mobile .tryCloothBubble{
+    display: none;
 }

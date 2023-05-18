@@ -6,26 +6,18 @@ export const WhoSugar = props =>{
     return(
         <div className='WhoSugarContainer'>
             <div className='flyingElements1'>
-                <a href='/productAr'><img className='whoSugarImg1' alt='' src={'./assets/img/WhoSugarLogos1.svg'} style={{position:"relative", top:"200px"}}></img></a>
-                <a href='/productJoint'><img className='whoSugarImg2' alt='' src={'./assets/img/WhoSugarLogos2.svg'} style={{position:"relative", top:"50px", left:"50px", width: "150px"}}></img></a>
-                <a href='/productMeta'><img className='whoSugarImg3' alt='' src={'./assets/img/WhoSugarLogos3.svg'} style={{position:"relative", left:"160px"}}></img></a>
-                <a href='/productShoes'><img className='whoSugarImg4' alt='' src={'./assets/img/WhoSugarLogos4.svg'} style={{position: "relative", left: "300px", width: "150px", top: "30px"}}></img></a>
-                <a href='/productShoes'><img className='whoSugarImg41' alt='' src={'./assets/img/shoeImg.svg'} style={{position: "absolute", left: "893px", top: "135px", width: "60px"}}></img></a>
-                <a href='/productWatch'><img className='whoSugarImg5' alt='' src={'./assets/img/WhoSugarLogos5.svg'} style={{position:"relative", left:"400px"}}></img></a>
-                <a href='/productClooth'><img className='whoSugarImg6' alt='' src={'./assets/img/WhoSugarLogos6.svg'} style={{position:"relative", top: "180px", left: "370px", width: "150px"}}></img></a>
-            </div>
-            <div className='flyingElements2' style={{display: "none"}}>
-                <img className='mobileBubble1' alt='' src={'./assets/img/mobileBubble1.svg'}></img>
-                <img className='mobileBubble2' alt='' src={'./assets/img/mobileBubble2.svg'}></img>
-                <img className='mobileBubble3' alt='' src={'./assets/img/mobileBubble3.svg'}></img>
-                <img className='mobileBubble4' alt='' src={'./assets/img/mobileBubble4.svg'}></img>
-                <img className='mobileBubble5' alt='' src={'./assets/img/mobileBubble5.svg'}></img>
-                <img className='mobileBubble6' alt='' src={'./assets/img/mobileBubble6.svg'}></img>
+                <a className='whoSugarImg1' href='/productAr'><img alt='' src={'./assets/img/WhoSugarLogos1.svg'}></img></a>
+                <a className='whoSugarImg2' href='/productJoint'><img alt='' src={'./assets/img/WhoSugarLogos2.svg'} ></img></a>
+                <a className='whoSugarImg3' href='/productMeta'><img alt='' src={'./assets/img/WhoSugarLogos3.svg'}></img></a>
+                <a className='whoSugarImg4' href='/productShoes'><img alt='' src={'./assets/img/WhoSugarLogos4.svg'}></img></a>
+                <a className='whoSugarImg41' href='/productShoes'><img alt='' src={'./assets/img/shoeImg.svg'}></img></a>
+                <a className='whoSugarImg5' href='/productWatch'><img alt='' src={'./assets/img/WhoSugarLogos5.svg'}></img></a>
+                <a className='whoSugarImg6' href='/productClooth'><img alt='' src={'./assets/img/WhoSugarLogos6.svg'}></img></a>
             </div>
             <div className='whoSugarSpans'>
                 <a className='whoSugarHeader'>{t("whoIsSugar")}</a>
-                <a className='whoSugarSpan'>{t("whoSugarSpan1")}</a>
-                <a className='whoSugarSpan'>{t("whoSugarSpan2")}</a>
+                <a className='whoSugarSpan'>{t("whoSugarSpan1")}Sugar Technology AR, VR, Yapay zeka ve dijital ikiz alanlarında uzmanlaşmış bir teknoloji şirketidir. Sugar sağladığı teknolojiler ile şirketlerin müşterilerine interaktif ve sürükleyici ürün deneyimi sunmalarını sağlar.</a>
+                <a className='whoSugarSpan'>{t("whoSugarSpan2")}2019 yılından günümüze Sugar, 22.000'nin üzerinde ürünün dijital ikizini oluşturmuş, müşterileri için bu 3D modellerin, e-ticaret, sosyal medya, Cad programları ve BIM için uygun formatlarda hedef kitlelere ulaştırılmasını sağlamıştır.</a>
             </div>
             <div className='whoSugarLogos'>
                 <img className='whoSugarLogo1' alt='' src={'./assets/img/sketch_business.svg'}></img>

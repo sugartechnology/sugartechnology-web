@@ -3,7 +3,7 @@
     justify-content: space-evenly;
     gap: 50px;
     height: 89px;
-    background: rgba(237, 64, 26, 0.8);
+    background: coral;
     transform: matrix(1, 0, 0, -1, 0, 0);
 }
 .productsCustomerContainer img{

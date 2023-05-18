@@ -65,7 +65,7 @@
     cursor: pointer;
 }
 .solutionButton a{
-    width: 110px;
+    width: 130px;
     height: 26px;
     font-style: normal;
     font-weight: 700;
@@ -125,51 +125,98 @@
     }
 }
 
-@media screen and (max-width: 500px){
-    .sectoralSolutionContainer{
-        height: 850px;
-    }
-    .sectoralSolutionSpan{
-        font-size: 29px;
-    }
-    .sectoralSolutionLine{
-        position: relative;
-        left: 170px;
-        width: 350px;
-    }
-    .solutionHeader{
-        width: 326px;
-        font-size: 24px;
-    }
-    .solutionSpan{
-        width: 354px;
-        font-size: 13px;
-    }
-    #solution2,
-    #solution3,
-    #solution4{
-        display: none;
-    }
-    .solution{
-        flex-direction: column;
-    }
-    .solutionSpans{
-        position: relative;
-        left: 30px;
-        gap: 40px;
-    }
-    #rightImage{
-        width: 400px;
-    }
-    .solutionShadow{
-        display: flex !important;
-        width: 389px;
-        position: relative;
-        left: 5px;
-        bottom: 10px;
-        opacity: 0.5;
-    }
-    .solutionPageButtons{
-        display: flex !important;
-    }
+.tablet .sectoralSolutionContainer{
+    height: 930px;
+}
+.tablet .sectoralSolutionSpan{
+    font-size: 29px;
+}
+.tablet .sectoralSolutionLine{
+    position: relative;
+    left: 170px;
+    width: 350px;
+}
+.tablet .solutionHeader{
+    width: 326px;
+    font-size: 24px;
+}
+.tablet .solutionSpan{
+    width: 354px;
+    font-size: 13px;
+}
+.tablet #solution2,
+.tablet #solution3,
+.tablet #solution4{
+    display: none;
+}
+.tablet .solution{
+    flex-direction: column;
+}
+.tablet .solutionSpans{
+    position: relative;
+    left: 30px;
+    gap: 40px;
+}
+.tablet #rightImage{
+    width: 100%;
+}
+.tablet .solutionShadow{
+    display: flex !important;
+    position: relative;
+    left: 5px;
+    width: 474px;
+    bottom: 12px;
+    opacity: 0.5;
+}
+.tablet .solutionPageButtons{
+    display: flex !important;
+}
+
+
+
+.mobile .sectoralSolutionContainer{
+    height: 930px;
+}
+.mobile .sectoralSolutionSpan{
+    font-size: 29px;
+}
+.mobile .sectoralSolutionLine{
+    position: relative;
+    left: 170px;
+    width: 350px;
+}
+.mobile .solutionHeader{
+    width: 326px;
+    font-size: 24px;
+}
+.mobile .solutionSpan{
+    width: 354px;
+    font-size: 13px;
+}
+.mobile #solution2,
+.mobile #solution3,
+.mobile #solution4{
+    display: none;
+}
+.mobile .solution{
+    flex-direction: column;
+}
+.mobile .solutionSpans{
+    position: relative;
+    left: 30px;
+    gap: 40px;
+}
+.mobile #rightImage{
+    width: 100%;
+}
+.mobile .solutionShadow{
+    display: flex !important;
+    width: 389px;
+    position: relative;
+    left: 5px;
+    bottom: 10px;
+    opacity: 0.5;
+}
+.mobile .solutionPageButtons{
+    display: flex !important;
 }

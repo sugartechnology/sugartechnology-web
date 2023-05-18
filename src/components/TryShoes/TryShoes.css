@@ -1,7 +1,8 @@
 .tryShoesContainer{
-    height: 1000px;
+    height: 900px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .shoeShadow{
     position: absolute;
@@ -10,17 +11,8 @@
     z-index: -1;
     opacity: 0.9;
 }
-@media screen and (max-width: 500px){
-    .tryShoesContainer{
-        height: 600px;
-    }
-    .shoeShadow{
-        top: 412px;
-        width: 300px;
-    }
-    #shoeBubble{
-        top: 1200px;
-        transform: rotate(30deg);
-        left: 180px;
-    }
+
+
+.mobile .tryShoesContainer{
+    height: 650px;
 }

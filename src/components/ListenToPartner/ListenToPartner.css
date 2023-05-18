@@ -72,10 +72,9 @@
 .partnerSpans{
     width: 75%;
     justify-content: center;
-    height: 20%;
 }
 .partnerSpan{
-    width: 80%;
+    width: 86%;
     height: 144px;
     font-style: normal;
     font-weight: 400;
@@ -90,7 +89,8 @@
 .partnerVideo{
     position: absolute;
     bottom: 40px;
-    width: 90%;
+    width: 80%;
+    height: 75%;
     display: flex;
     justify-content: center;
 }

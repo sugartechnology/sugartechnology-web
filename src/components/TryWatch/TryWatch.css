@@ -1,20 +1,34 @@
 .tryWatchContainer{
-    height: 1000px;
+    height: 900px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
-.watchShadow{
-    position: absolute;
-    top: 748px;
-    width: 771px;
-    z-index: -1;
-    opacity: 0.9;
+
+.tryWatchElements{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-@media screen and (max-width: 500px){
-    .tryWatchContainer{
-        height: 700px;
-    }
-    .watchShadow{
-        display: none;
-    }
+
+
+.tryWatchImageDiv{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.tryWatchImage{
+    width: 60%;
+}
+
+.tablet .tryWatchContainer{
+    height: 870px;
+}
+
+.mobile .tryWatchContainer{
+    height: 690px;
 }

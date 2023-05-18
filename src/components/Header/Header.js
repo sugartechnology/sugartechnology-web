@@ -57,7 +57,7 @@ export const Header = props => {
         }
         else{
             firstMobilePopup.style.display = "none";
-            motherPopup.style.height = "570px";
+            motherPopup.style.height = "430px";
             firstChildPopup.style.display = "none";
             secondChildPopup.style.display = "none";
             div.style.background = "#FFFFFF";
@@ -74,7 +74,7 @@ export const Header = props => {
        var btn2 = document.getElementById("vtonMobileButton");
         var span2 = document.getElementById("routerVtonMobileSpan");
        if(firstChildPopup.style.display === "none"){
-        motherPopup.style.height = "650px";
+        motherPopup.style.height = "666px";
         firstChildPopup.style.display = "flex";
         secondChildPopup.style.display = "none";
         btn.style.transform = "rotate(+90deg)";
@@ -98,7 +98,7 @@ export const Header = props => {
         var span2 = document.getElementById("routerShowAtHomeMobileSpan");
         var btn2 = document.getElementById("showAtHomeMobileButton");
         if(secondChildPopup.style.display === "none"){
-            motherPopup.style.height = "650px";
+            motherPopup.style.height = "666px";
             secondChildPopup.style.display = "flex";
             firstChildPopup.style.display = "none";
             btn.style.transform = "rotate(+90deg)";
@@ -239,6 +239,25 @@ export const Header = props => {
             <div className="routers">
                 <a href='/'>{t("home")}</a>
                 <a onMouseOver={showPopup}>{t("productServices")}</a>
+                <div className='productServicesPopup' id='productServicesPopup' style={{ display: "none", position: "absolute", top: "45px", left: "70px", zIndex: "6"}}>
+                    <div className='popupOption' id='firstPopupOption' onMouseOver={showPopupOption1}><a>{t("showAtHome")}</a><img className='popupVector' id='vector1' alt='' src={'./assets/img/popupVector.svg'}></img></div>
+                    <div className='firstPopup' id='firstPopup' style={{display: "none"}}>
+                        <div className='secondPopupFirstOption'><a href='/productAr' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("showFurniture")}</a></div>
+                        <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
+                        <div className='secondPopupSecondOption'><a href='/productJoint' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("createProduct")}</a></div>
+                    </div>
+                    <img className='popupLine' alt='' src={'./assets/img/popupLine.svg'}></img>
+                    <div className='popupOption' style={{top: "0px"}}><a href='/productMeta'>{t("metaverse")}</a></div>
+                    <img className='popupLine' alt='' src={'./assets/img/popupLine.svg'}></img>
+                    <div className='popupOption' id='thirdPopupOption' onMouseOver={showPopupOption2} style={{top: "0px"}}><a>{t("vton")}</a><img className='popupVector' id='vector2' alt='' src={'./assets/img/popupVector.svg'}></img></div>
+                    <div className='secondPopup' id='secondPopup' style={{display: "none"}}>
+                        <div className='firstPopupFirstOption'><a href='/productWatch' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressWatch")}</a></div>
+                        <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
+                        <div className='firstPopupSecondOption'><a href='/productShoes' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressShoe")}</a></div>
+                        <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
+                        <div className='firstPopupThirdOption'><a href='/productClooth' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressClooth")}</a></div>
+                    </div>
+                </div>
                 <a href='/aboutUs'>{t("aboutUs")}</a>
                 <a href='/blogs'>{t("blog")}</a>
                 <a href='/contactUs'>{t("contactUs")}</a>
@@ -249,25 +268,8 @@ export const Header = props => {
                     <a href='/contactCv'>{t("careers")}</a>
                 </button>
             </div>
-            <div className='productServicesPopup' id='productServicesPopup' style={{ display: "none" , position:"absolute", top:"70px", zIndex:"6"}}>
-                <div className='popupOption' id='firstPopupOption' onMouseOver={showPopupOption1}><a>{t("showAtHome")}</a><img className='popupVector' id='vector1' alt='' src={'./assets/img/popupVector.svg'}></img></div>
-                <img className='popupLine' alt='' src={'./assets/img/popupLine.svg'}></img>
-                <div className='popupOption' style={{top: "0px"}}><a href='/productMeta'>{t("metaverse")}</a></div>
-                <img className='popupLine' alt='' src={'./assets/img/popupLine.svg'}></img>
-                <div className='popupOption' id='thirdPopupOption' onMouseOver={showPopupOption2} style={{top: "0px"}}><a>{t("vton")}</a><img className='popupVector' id='vector2' alt='' src={'./assets/img/popupVector.svg'}></img></div>
-            </div>
-            <div className='firstPopup' id='firstPopup' style={{display: "none"}}>
-                <div className='secondPopupFirstOption'><a href='/productAr' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("showFurniture")}</a></div>
-                <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
-                <div className='secondPopupSecondOption'><a href='/productJoint' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("createProduct")}</a></div>
-            </div>
-            <div className='secondPopup' id='secondPopup' style={{display: "none"}}>
-                <div className='firstPopupFirstOption'><a href='/productWatch' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressWatch")}</a></div>
-                <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
-                <div className='firstPopupSecondOption'><a href='/productShoes' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressShoe")}</a></div>
-                <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
-                <div className='firstPopupThirdOption'><a href='/productClooth' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressClooth")}</a></div>
-            </div>
+            
+            
             <div className='askYourQuestionRobot'>
                 <div className='robotSpans'>
                     <a className='robotSpan'>{t("askYourQuestions")}</a>
