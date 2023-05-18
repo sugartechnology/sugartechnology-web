@@ -5,7 +5,7 @@ export const TryWatch = props =>{
     const {t} = useTranslation();
     return(
         <div className='tryWatchContainer'>
-            <div className='jointAboutElements' style={{top: "30px"}}>
+            <div className='jointAboutElements'>
                 <a className='jointAboutHeader'>{t("tryWatchContainerHeader")}Birliktelik Kuralları</a>
                 <a className='jointAboutSpan'>{t("tryWatchContainerSpan")}Birliktelik kuralları ile ürünlerin birleşimleri müşteri tarafından yapılabilir. Müşteri kendi köşesini (koltuk, gardrop vb.) yaratabilir.</a>
                 <img className='jointAboutImage' alt='' src={'./assets/img/tryWatchImage.svg'}></img>

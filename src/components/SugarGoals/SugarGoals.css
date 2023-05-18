@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 }
 .sugarGoalHeader{
     width: 686px;
@@ -13,7 +14,6 @@
     font-size: 50px;
     line-height: 61px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }
@@ -37,13 +37,12 @@
 }
 .sugarGoalsHeader{
     height: 34px;
-    width: 150px;
+    width: 190px;
     font-style: normal;
     font-weight: 600;
     font-size: 27px;
     line-height: 66px;
     text-align: center;
-    letter-spacing: -1px;
 }
 .sugarGoalsSpan{
     height: 74px;

@@ -43,29 +43,23 @@
     bottom: 0px !important;
     position: absolute;
 }
-/* @media screen and (max-width: 500px){
-    .createYourProductContainer{
-        height: 600px;
-    }
-    #sugar-model-container{
-        width: 400px !important;
-        top: 150px;
-    }
+
+.tablet .sugarModelViewer{
+    top: 200px;
+    left: 59px;
+    width: 86%;
+}
+
+.mobile .sugarModelViewer{
+    top: 200px;
+    left: 59px;
+    width: 80%;
+}
+
+@media screen and (max-width: 1200px) {
     .sugarModelViewer{
-        left: 60px;
-        top: 0px;
-        width: 100%;
+        width: 90%;
+        top: 200px;
+        left: 59px;
     }
-    .corner1{
-        width: 100px;
-    }
-    .corner2{
-        width: 100px;
-    }
-    .corner3{
-        width: 100px;
-    }
-    .corner4{
-        width: 100px;
-    }
-} */
+}

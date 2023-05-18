@@ -7,52 +7,44 @@
     align-items: center;
     position: relative;
 }
-.jointSpans{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 100px;
-    gap: 100px;
-    flex: 50%;
-    justify-content: center;
-    align-items: center;
-    width: 613px;
-    height: 516px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(15px);
-    border-radius: 42px;
-}
 .jointImage{
-    width: 100%;
+    width: 80%;
 }
 .jointImageDiv{
     position: absolute;
     right: 0px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .tablet .jointContainer{
     height: 740px;
 }
-.tablet .jointSpans{
-    left: auto;
-    top: 50px;
-}
 .tablet .jointImageDiv{
     right: auto;
     bottom: 50px;
+    justify-content: center;
+}
+
+.tablet .jointImage{
+    width: 80%;
 }
 
 .mobile .jointContainer{
     height: 740px;
 }
-.mobile .jointSpans{
-    left: auto;
-    top: 50px;
-    gap: 30px;
-}
 .mobile .jointImageDiv{
     right: auto;
-    bottom: 100px;
+    bottom: 10px;
+    justify-content: center;
+}
+
+.mobile .jointImage{
+    width: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+    .jointImage{
+        width: 60%;
+    }
 }

@@ -2,7 +2,6 @@ import { About } from "../../components/About/About";
 import { CustomerComments } from "../../components/CustomerComments/CustomerComments";
 import { Customers } from "../../components/Customers/Customers";
 import { MainPageSlider, MainPageSliderItem } from "../../components/MainPagSlider/MainPageSlider";
-import { Statistics } from "../../components/Statistics/Statistics";
 import React, { useState, useEffect } from 'react';
 
 export const MainPage = ()=>{

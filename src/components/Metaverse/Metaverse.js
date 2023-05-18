@@ -23,8 +23,10 @@ export const Metaverse = props =>{
             }}></div>
             <div className='mainPageSmallFigure0 '></div>
             <div className='showAtHomeSpans'>
-                <a className='showAtHomeHeader'>{t("metaverseContainerHeader")}hgvfjsbfb gbhhjfsb vjhfb jf bfhb vfhgbfhb</a>
-                <a className='showAtHomeSpan'>{t("metaverseContainerSpan")}fv bhjbgfbhjfbghfjgf fgfghfj fhgghjbfgsfv bhjbgfbhjfbghfjgf fgfghfj fhgghjbfgsfv bhjbgfbhjfbghfjgf fgfghfj fhgghjbfgs</a>
+                <div className='showAtHomeSpanElements'>
+                    <a className='showAtHomeHeader'>{t("metaverseContainerHeader")}hgvfjsbfb gbhhjfsb vjhfb jf bfhb vfhgbfhb</a>
+                    <a className='showAtHomeSpan'>{t("metaverseContainerSpan")}fv bhjbgfbhjfbghfjgf fgfghfj fhgghjbfgsfv bhjbgfbhjfbghfjgf fgfghfj fhgghjbfgsfv bhjbgfbhjfbghfjgf fgfghfj fhgghjbfgs</a>
+                </div>
                 <div className='showAtHomeButtons'>
                     <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
                     <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>

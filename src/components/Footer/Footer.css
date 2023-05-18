@@ -9,12 +9,12 @@
 .footerElements{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     position: relative;
     bottom: 10px;
 }
 .footerSpan{
-    width: 80%;
+    width: 75%;
     height: 35px;
     font-family: 'Nunito';
     font-style: normal;

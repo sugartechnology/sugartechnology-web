@@ -24,8 +24,10 @@ export const ShowAtHome = props =>{
         }}></div>
         <div className='mainPageSmallFigure0 '></div>
             <div className='showAtHomeSpans'>
-                <a className='showAtHomeHeader'>{t("showAtHomeHeader")}</a>
-                <a className='showAtHomeSpan'>{t("showAtHomeSpan")}</a>
+                <div className='showAtHomeSpanElements'>
+                    <a className='showAtHomeHeader'>{t("showAtHomeHeader")}</a>
+                    <a className='showAtHomeSpan'>{t("showAtHomeSpan")}</a>
+                </div>
                 <div className='showAtHomeButtons'>
                     <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
                     <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>

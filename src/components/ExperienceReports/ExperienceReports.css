@@ -1,7 +1,6 @@
 .experienceReportsContainer{
-    height: 520px;
+    height: 595px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     background: #EFEFEF;
     position: relative;
@@ -10,16 +9,16 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50px;
-    gap: 50px;
-    width: 50%;
-    height: 100%;
-    right: 0px;
+    bottom: 10px;
+    gap: 26px;
+    width: 40%;
+    height: 80%;
+    right: 84px;
 }
 .reportsSpanImages{
     position: absolute;
     bottom: auto;
-    left: 0px;
+    left: 13px;
     width: 50%;
     height: 100%;
     display: flex;
@@ -29,39 +28,41 @@
 }
 .reportsFirstSpan{
     width: 100%;
-    height: 77px;
+    height: 105px;
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
     line-height: 38px;
-    letter-spacing: -1px;
     color: #ED401A;
 }
 .reportsSecondSpan{
     width: 100%;
-    height: 135px;
+    display: flex;
+    height: 130px;
     font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 28px;
+    font-weight: 250;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: justify;
+    text-transform: capitalize;
     color: #000000;
+    gap: 20px;
+    flex-direction: column;
 }
 .reportsHeader{
     width: 100%;
-    height: 66px;
+    height: 110px;
     font-style: normal;
     font-weight: 700;
     font-size: 38px;
     line-height: 66px;
-    letter-spacing: -1px;
     color: #000000;
 }
 .reportsSpangImgShadow{
     position: absolute;
-    display: none;
     opacity: 0.3;
-    width: 321px;
-    bottom: 135px;
+    width: 76%;
+    bottom: 82px;
 }
 
 
@@ -94,9 +95,11 @@
     align-items: center;
     text-align: center;
     gap: 0px;
+    top: 0px;
+    right: auto;
 }
 .tablet .reportsSpansImg{
-    width: 321px;
+    width: 321px !important;
 }
 .tablet .reportsSpangImgShadow{
     display: flex;
@@ -124,6 +127,7 @@
 }
 .mobile .reportsFirstSpan{
     font-size: 25px;
+    height: 115px;
 }
 .mobile .reportsSecondSpan{
     width: 60%;
@@ -134,9 +138,11 @@
     align-items: center;
     text-align: center;
     gap: 0px;
+    top: 0px;
+    right: 0px;
 }
 .mobile .reportsSpansImg{
-    width: 321px;
+    width: 350px !important;
 }
 .mobile .reportsSpangImgShadow{
     display: flex;

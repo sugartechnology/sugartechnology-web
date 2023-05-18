@@ -79,6 +79,8 @@ export const ListenToPartner = props =>{
                 </div>
                 <div className='partnerVideo'>
                     <iframe className='partnerVideo'  width="804" height="411" src="https://www.youtube.com/embed/VJPmW2u43uU" frameborder="0" allowfullscreen></iframe>
+                    <img className='partnerVideoShadow' id='deskopVideoShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
+                    <img className='partnerVideoShadow' id='mobileVideoShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
                 </div>
             </div>
             <div className='partner2' id='partner2'>
@@ -93,6 +95,8 @@ export const ListenToPartner = props =>{
                 </div>
                 <div className='partnerVideo'>
                     <iframe className='partnerVideo'  width="804" height="411" src="https://www.youtube.com/embed/C-aoRasmfX8" frameborder="0" allowfullscreen></iframe>
+                    <img className='partnerVideoShadow' id='deskopVideoShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
+                    <img className='partnerVideoShadow' id='mobileVideoShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
                 </div>
             </div>
             <div className='partner3' id='partner3'>
@@ -107,6 +111,8 @@ export const ListenToPartner = props =>{
                 </div>
                 <div className='partnerVideo'>
                     <iframe className='partnerVideo'  width="804" height="411" src="https://www.youtube.com/embed/oKDV_wUaaOo" frameborder="0" allowfullscreen></iframe>
+                    <img className='partnerVideoShadow' id='deskopVideoShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
+                    <img className='partnerVideoShadow' id='mobileVideoShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
                 </div>
             </div>
             <div className='partnersPageButtons'>

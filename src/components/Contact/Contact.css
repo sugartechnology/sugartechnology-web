@@ -5,12 +5,6 @@
     height: 550px;
     top: 60px;
 }
-
-.contactLine{
-    position: relative;
-    right: 45px;
-    bottom: 45px;
-}
 .contactElements{
     display: flex;
     position: relative;
@@ -21,7 +15,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 50px;
+    left: 110px;
     gap: 50px;
     width: 33%;
 }
@@ -138,7 +132,6 @@
     width: 160.08px;
     height: 58.46px;
     position: relative;
-    left: 30px;
 }
 .middleContact{
     display: flex;
@@ -176,6 +169,7 @@
     border: 1px solid #D2D6DA;
     border-radius: 8px;
     padding: 8px;
+    font-family: 'Nunito';
 }
 .emailInput{
     width: 307.5px;
@@ -184,6 +178,7 @@
     border: 1px solid #D2D6DA;
     border-radius: 8px;
     padding: 8px;
+    font-family: 'Nunito';
 }
 .messageInput{
     width: 307.5px;
@@ -192,6 +187,7 @@
     border: 1px solid #D2D6DA;
     border-radius: 8px;
     padding: 8px;
+    font-family: 'Nunito';
 }
 .sendButton{
     width: 325px;
@@ -301,7 +297,7 @@
     justify-content: space-around;
 }
 .tablet .leftContact{
-    left: auto;
+    left: 40px;
 }
 
 .mobile.contactContainer{
@@ -309,7 +305,7 @@
 }
 .mobile .contactLogo{
     width: 91px !important;
-    left: 0px !important;
+    bottom: 20px;
 }
 .mobile .contactElements{
     position: relative;
@@ -326,6 +322,7 @@
 }
 .mobile .leftContact{
     width: 40%;
+    left: 40px;
 }
 .mobile .middleContact{
     width: 50%;
@@ -337,6 +334,7 @@
 .mobile .aboutSpan{
     font-size: 11px;
     width: 140px;
+    height: 40px;
 }
 .mobile .mailAdressLogo img{
     width: 17px;
@@ -366,6 +364,7 @@
 }
 .mobile .aboutSpan{
     bottom: 30px;
+    height: 40px;
 }
 .mobile .communication{
     bottom: 60px;

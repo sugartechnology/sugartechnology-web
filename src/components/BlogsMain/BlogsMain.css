@@ -1,6 +1,6 @@
 .blogsMainContainer{
     background: #EBEBEB;
-    height: 2600px;
+    height: 2700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@
     display: flex;
     gap: 20px;
     position: relative;
-    top: 150px;
+    top: 90px;
     width: 100%;
     justify-content: center;
 }
@@ -20,7 +20,7 @@
     justify-content: center;
     padding: 16px 0px 3px;
     gap: 164px;
-    width: 30%;
+    width: 346px;
 }
 .squareButton{
     width: 94px;
@@ -74,7 +74,6 @@
 }
 .squareImg{
     position: absolute;
-    width: 30%;
 }
 
 @media screen and (max-width: 1200px) {

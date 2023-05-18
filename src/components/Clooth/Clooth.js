@@ -22,9 +22,11 @@ export const Clooth = props =>{
             top: '316px'
         }}></div>
         <div className='mainPageSmallFigure0 '></div>
-            <div className='jointSpans'>
-                <a className='showAtHomeHeader'>{t("cloothContainerHeader")}Lorem ipsum dolor  consectetur.</a>
-                <a className='showAtHomeSpan'>{t("cloothContainerSpan")}Lorem ipsum dolor sit amet consectetur. Erat dui quis ac mollis malesuada. Eu neque non ipsum in egestas quam mattis. </a>
+            <div className='showAtHomeSpans'>
+                <div className='showAtHomeSpanElements'>
+                    <a className='showAtHomeHeader'>{t("cloothContainerHeader")}Lorem ipsum dolor  consectetur.</a>
+                    <a className='showAtHomeSpan'>{t("cloothContainerSpan")}Lorem ipsum dolor sit amet consectetur. Erat dui quis ac mollis malesuada. Eu neque non ipsum in egestas quam mattis. </a>
+                </div>
                 <div className='showAtHomeButtons'>
                     <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
                     <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>

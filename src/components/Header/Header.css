@@ -318,7 +318,7 @@
 .popupMediaCenterButton:hover,
 .popupMediaCenterButton a:hover{
   background-color: #F3E7E6;
-  color: red;
+  color: #d23b1a;
 }
 
 .popupMediaCenterButton a {
@@ -331,7 +331,7 @@
 
 .mediaCenterButton:hover,
 .mediaCenterButton a:hover{
-  background-color: red;
+  background-color: #d23b1a;
   color: white;
 }
 

@@ -10,7 +10,7 @@
   
   .swiper-slide img {
     display: block;
-    width: 120px!important;
+    width: 170px!important;
     height: auto;
     object-fit: cover;
   }
@@ -90,6 +90,14 @@
     left: 10px !important;
   }
 
+  .tablet .swiper-slide img{
+    width: 120px !important;
+  }
+
+  .mobile .swiper-slide img{
+    width: 120px !important;
+  }
+
   .mobile .swiper-wrapper{
     width: 60% !important;
     left: 20% !important;
@@ -102,9 +110,8 @@
   .mobile .swiper-button-prev{
     left: 10px !important;
   }
-  @media screen and (max-width: 800px) {
-    
-  }
+
+
 @media screen and (max-width: 500px){
   .swiper-container {
     width: 500px;

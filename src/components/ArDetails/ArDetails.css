@@ -21,19 +21,17 @@
     font-size: 44px;
     line-height: 52px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }
 .arDetailsSpan{
-    width: 90%;
+    width: 76%;
     height: 160px;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 26px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }
@@ -136,7 +134,7 @@
     top: 10px;
 }
 .arDetailsModelViewer{
-    width: 83%;
+    width: 76%;
     height: 60%;
     border: 1px solid;
 }
@@ -164,4 +162,12 @@
 }
 .tablet .showAtHomeImg{
     display: none;
+}
+
+.tablet .modelViewerShadow{
+    bottom: 71px;
+}
+
+.mobile .modelViewerShadow{
+    bottom: 71px;
 }

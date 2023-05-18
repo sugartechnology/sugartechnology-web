@@ -24,18 +24,16 @@
     font-weight: 700;
     font-size: 45px;
     line-height: 56px;
-    letter-spacing: -1px;
     color: #000000;
 }
 .shoesQrSpan{
     width: 451px;
-    height: 72px;
+    height: 90px;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 26px;
     text-align: justify;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }

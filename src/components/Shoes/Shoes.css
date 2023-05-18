@@ -12,11 +12,15 @@
     position: absolute;
     right: 0px;
     width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .shoesImage{
     position: relative;
-    width: 100%;
+    width: 92%;
 }
 
 .tablet .shoesContainer{
@@ -51,4 +55,5 @@
 .mobile .shoesImage{
     position: absolute;
     bottom: 0px;
+    width: 90%;
 }

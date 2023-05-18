@@ -10,7 +10,6 @@ export const WhoSugar = props =>{
                 <a className='whoSugarImg2' href='/productJoint'><img alt='' src={'./assets/img/WhoSugarLogos2.svg'} ></img></a>
                 <a className='whoSugarImg3' href='/productMeta'><img alt='' src={'./assets/img/WhoSugarLogos3.svg'}></img></a>
                 <a className='whoSugarImg4' href='/productShoes'><img alt='' src={'./assets/img/WhoSugarLogos4.svg'}></img></a>
-                <a className='whoSugarImg41' href='/productShoes'><img alt='' src={'./assets/img/shoeImg.svg'}></img></a>
                 <a className='whoSugarImg5' href='/productWatch'><img alt='' src={'./assets/img/WhoSugarLogos5.svg'}></img></a>
                 <a className='whoSugarImg6' href='/productClooth'><img alt='' src={'./assets/img/WhoSugarLogos6.svg'}></img></a>
             </div>

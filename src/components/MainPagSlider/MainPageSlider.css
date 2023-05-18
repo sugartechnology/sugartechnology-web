@@ -1,8 +1,4 @@
 /* ENDLESS ROTATE */
-.rotate {
-  animation: rotate 90s linear infinite;
-  animation-direction: alternate;
-}
 
 .bright {
   animation: bright 5s linear infinite;
@@ -50,8 +46,8 @@
   background-image: url(/public/MainPageSliderBackground/top_right.png);
   width: 695px;
   height: 770px;
-  top: -448px;
-  right: 300px;
+  top: -550px;
+  right: 123px;
   background-size: cover;
 }
 
@@ -84,6 +80,11 @@
   right: 63px;
   top: 50px;
   background-size: cover;
+}
+
+.mobile .mainPageSmallFigure0{
+  right: 24px;
+  top: 298px;
 }
 
 .smallSliderMenu {
@@ -1561,7 +1562,6 @@
   font-weight: 700;
   font-size: 42px;
   line-height: 52px;
-  letter-spacing: -1px;
   text-transform: capitalize;
   color: #000000;
 }
@@ -1587,7 +1587,6 @@
   font-weight: 300;
   font-size: 19px;
   line-height: 32px;
-  letter-spacing: -1px;
   text-transform: capitalize;
   color: #000000;
 }
@@ -1637,6 +1636,10 @@
 
 .tablet .mainPageSliderItem{
   transform: rotate(-90deg);
+}
+
+.tablet .mainPageTopRightFigure{
+  display: none;
 }
 
 .mobile .mainPageSliderContainer{
@@ -1698,10 +1701,12 @@
 }
 .mobile .mainPageMiddleFigure{
   left: calc(-20%);
+  top: calc(30%);
 }
 .mobile .mainPageTopRightFigure{
   display: none;
 }
 .mobile .mainPageTopLeftFigure{
-  left: calc(-340px);
+  left: calc(-460px);
+  left: calc(-372px);;
 }

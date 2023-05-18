@@ -77,9 +77,6 @@ export const Contact = props =>{
 
     return(
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} contactContainer`}>
-            <div className='contactLine'>
-                <img style={{width: "100%"}} alt='' src={'assets/img/bigLine.svg'}></img>
-            </div>
             <div className='contactElements'>
             <div className='leftContact'>
                 <div className='about'>
@@ -147,7 +144,7 @@ export const Contact = props =>{
                     <textarea id='email' className='emailInput' placeholder='Email' value={mail} onChange={(e)=>setMail(e.target.value)}></textarea>
                     <textarea id='message' className='messageInput' placeholder='Message' value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                     <button className='sendButton' onClick={(e)=>{submitForm()}}>
-                        <a>Send</a>
+                        <a>{t("sendMessage")}</a>
                     </button>
                 </div>
             </div>

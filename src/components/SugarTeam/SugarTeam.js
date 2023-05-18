@@ -10,7 +10,7 @@ export const SugarTeam = props =>{
                 <a>{t("sugarTeam")}</a>
             </div>
             <div className='sugarTeamLeaders'>
-                <div className='sugarTeamLeader' id='leader1' style={{position: "absolute", left: "10px"}}>
+                <div className='sugarTeamLeader' id='leader1'>
                     <img alt='' src={'./assets/img/SugarTeamLeader1.svg'}></img>
                     <a className='leaderName'>Abdurrahman Türkeri</a>
                     <a className='leaderPosition'>{t("productManagmentHead")}</a>
@@ -22,7 +22,7 @@ export const SugarTeam = props =>{
                     <a className='leaderPosition'>{t("softwareDeliveryHead")}</a>
                     <a className='leaderComment'>{t("leader2CommentSpan")}</a>
                 </div>
-                <div className='sugarTeamLeader' id='leader3' style={{position: "absolute", right: "10px"}}>
+                <div className='sugarTeamLeader' id='leader3'>
                     <img alt='' src={'./assets/img/SugarTeamLeader3.svg'}></img>
                     <a className='leaderName'>Farhad Faal</a>
                     <a className='leaderPosition'>{t("cgiTeamLeader")}</a>

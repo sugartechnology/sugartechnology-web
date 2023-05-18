@@ -19,7 +19,6 @@
     font-size: 45px;
     line-height: 56px;
     text-align: center;
-    letter-spacing: -1px;
     color: #000000;
 }
 .jointAboutSpan{
@@ -30,7 +29,6 @@
     font-size: 20px;
     line-height: 27px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }
@@ -59,12 +57,15 @@
     font-size: 29px;
     position: relative;
     bottom: 50px;
+    height: 41px;
 }
 .mobile .jointAboutSpan{
-    width: 364px;
+    width: 410px;
     font-size: 13px;
     position: relative;
     bottom: 20px;
+    height: 120px;
+    line-height: 24px;
 }
 .mobile .jointAboutImage{
     position: relative;
