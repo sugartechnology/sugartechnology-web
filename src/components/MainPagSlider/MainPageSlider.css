@@ -101,9 +101,8 @@
 .slideDetail {
   position: absolute;
   width: 670px;
-  height: 400px;
   right: -100px;
-  bottom: 120px;
+  bottom: 150px;
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(255, 255, 255, 0.7);
@@ -1557,7 +1556,7 @@
 }
 
 .slideDetailFirstSpan {
-  width: 484px;
+  width: 80%;
   font-style: normal;
   font-weight: 700;
   font-size: 42px;
@@ -1574,15 +1573,13 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  gap: 10px;
-  top: 40px;
-  left: 70px;
-  height: 80%;
+  width: 88%;
+  margin: auto;
+  gap: 5px;
 }
 
 .slideDetailSecondSpan {
   width: 439px;
-  height: 135px;
   font-style: normal;
   font-weight: 300;
   font-size: 19px;
@@ -1623,7 +1620,7 @@
 }
 
 .tablet .slideDetail{
-  bottom: 10px;
+  top:51vh;
 }
 
 .tablet .smallSliderMenu{
@@ -1647,9 +1644,8 @@
 }
 
 .mobile .slideDetail{
-  bottom: 10px;
+  bottom: 17vh;
   width: 488px !important;
-  height: 333px !important;
 }
 
 .mobile .smallSliderMenu{
@@ -1664,25 +1660,19 @@
   transform: rotate(-90deg);
 }
 
-.mobile .slideDetailElements{
-  gap: 0px !important;
-  top: 20px !important;
-}
 .mobile .slideDetailFirstSpan{
-  width: 268px !important;
+  width: 80% !important;
   font-size: 29px !important;
   line-height: 35px !important;
 }
 .mobile .slideDetailSecondSpan{
-  width: 255px !important;
-  height: 108px !important;
+  width: 80% !important;
   font-size: 14px !important;
   line-height: 24px !important;
 }
 .mobile .slideDetailButton{
   width: 99px;
   height: 35px;
-  top: 30px;
 }
 .mobile .slideDetailButton a{
   width: 120px;
