@@ -1,5 +1,5 @@
 .shareBlogContainer{
-    height: 305px;
+    height: 60vh;
     background: #F7F7F7;
     display: flex;
     flex-direction: column;
@@ -8,8 +8,6 @@
     gap: 30px;
 }
 .shareBlogHeader{
-    height: 58px;
-    width: 700px;
     font-style: normal;
     font-weight: 700;
     font-size: 37px;
@@ -18,8 +16,7 @@
     color: #000000;
 }
 .shareBlogSpan{
-    height: 82px;
-    width: 745px;
+    width: 80%;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -49,4 +46,16 @@
     align-items: center;
     text-align: center;
     color: #ED401A;
+}
+
+.mobile .shareBlogHeader{
+    font-size: 30px;
+    line-height: 40px;
+}
+
+
+@media screen and (max-width: 499px) {
+    .shareBlogContainer{
+        height: 60vh !important;
+    }
 }

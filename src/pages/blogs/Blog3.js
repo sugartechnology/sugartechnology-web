@@ -1,8 +1,9 @@
-import { ContactAddress } from "../../components/ContactAddress/ContactAddress";
-import { ContactCv } from "../../components/ContactCv/ContactCv";
+import { BlogGraphQL3 } from "../../components/BlogGraphQL/BlogGraphQL3";
+import { BlogParagraphs3 } from "../../components/BlogParagraphs/BlogParagraphs3";
+import { YouAlsoLike } from "../../components/YouAlsoLike/YouAlsoLike";
 import React, { useState, useEffect } from 'react';
 
-export const ContactUsCv = props =>{
+export const Blog3 = props =>{
     const [isTablet, setIsTablet] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -20,10 +21,13 @@ export const ContactUsCv = props =>{
         return () => {
         window.removeEventListener('resize', handleResize);
         };
+        
     }, []);
     return(
-        <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} contactUsCv`}>
-            <ContactCv></ContactCv>
+        <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} Blog3`}>
+            <BlogGraphQL3></BlogGraphQL3>
+            <BlogParagraphs3></BlogParagraphs3>
+            <YouAlsoLike></YouAlsoLike>
         </div>
     );
 }

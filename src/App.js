@@ -13,11 +13,13 @@ import { ProductJoint } from './pages/products/ProductJoint';
 import { ProductWatch } from './pages/products/ProductWatch';
 import { ProductShoes } from './pages/products/ProductShoes';
 import { ProductClooth } from './pages/products/ProductClooth';
-import { Blog } from './pages/blogs/Blog';
+import { Blog1 } from './pages/blogs/Blog1';
 import { Blogs } from './pages/blogs/Blogs';
 import { ContactUs } from './pages/contactUs/ContactUs';
+import { ContactUsCv } from './pages/contactUs/ContactUsCv';
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
-import { ContactCv } from './components/ContactCv/ContactCv';
+import { Blog2 } from './pages/blogs/Blog2';
+import { Blog3 } from './pages/blogs/Blog3';
 
 i18n
   .use(initReactI18next)
@@ -59,10 +61,12 @@ function App() {
           <Route path='/productShoes' element={<ProductShoes></ProductShoes>}></Route>
           <Route path='/productClooth' element={<ProductClooth></ProductClooth>}></Route>
           <Route path='/aboutUs' element={<AboutUs></AboutUs>}></Route>
-          <Route path='/sugarBlog' element={<Blog></Blog>}></Route>
+          <Route path='/sugarBlog1' element={<Blog1></Blog1>}></Route>
+          <Route path='/sugarBlog2' element={<Blog2></Blog2>}></Route>
+          <Route path='/sugarBlog3' element={<Blog3></Blog3>}></Route>
           <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
-          <Route path='/contactCv' element={<ContactCv></ContactCv>}></Route>
+          <Route path='/contactCv' element={<ContactUsCv></ContactUsCv>}></Route>
         </Routes>
         <Contact></Contact>
         <Footer></Footer>

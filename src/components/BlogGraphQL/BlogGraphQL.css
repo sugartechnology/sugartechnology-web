@@ -1,6 +1,8 @@
 .blogGraphQLContainer{
-    height: 85vh;
-    margin-top: 60px;
+    height: 92vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 .blogGraphSpans{
     display: flex;
@@ -8,16 +10,17 @@
     align-items: center;
     gap: 30px;
     position: relative;
-    top: 200px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
 }
 .blogGraphBackground{
     position: absolute;
     z-index: -1;
     width: 100%;
+    height: 100%;
 }
 .blogGraphHeader{
-    width: 1057.8px;
-    height: 152.43px;
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
@@ -28,8 +31,6 @@
     color: #F5F5F5;
 }
 .blogGraphSpan{
-    width: 901px;
-    height: 180px;
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
@@ -38,4 +39,44 @@
     align-items: center;
     text-align: center;
     color: #D0C8C8;
+}
+
+
+
+.tablet .blogGraphQLContainer{
+    height: 80vh;
+}
+
+.tablet .blogGraphHeader{
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.tablet .blogGraphSpan{
+    font-size: 15px;
+    line-height: 26px;
+}
+
+@media screen and (max-width: 500px) {
+    .blogGraphQLContainer{
+        height: 110vh;
+    }
+}
+
+
+
+
+
+.mobile .blogGraphQLContainer{
+    height: 80vh;
+}
+
+.mobile .blogGraphHeader{
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.mobile .blogGraphSpan{
+    font-size: 15px;
+    line-height: 26px;
 }

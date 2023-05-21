@@ -1,7 +1,5 @@
 .contactAddressInformation{
     position: absolute;
-    top: 1170px;
-    left: 300px;
     display: flex;
     width: 843px;
     height: 410px;
@@ -10,11 +8,19 @@
     box-shadow: 0px 4px 40px #000000;
     border-radius: 29px;
 }
+
+.contactAddressContainer{
+    height: 100vh;
+}
 .addressContainer{
     display: flex;
     gap: 10px;
     position: relative;
     left: 40px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 .addressSpan{
     display: flex;
@@ -52,7 +58,6 @@
     display: flex;
     gap: 20px;
     position: relative;
-    right: 30px;
 }
 .addressSpanMobile{
     height: 19px;
@@ -96,12 +101,10 @@
 .contactLogoMobile{
     position: relative;
     width: 90px;
-    left: 150px;
     bottom: 0px;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 800px){
     .contactAddressContainer{
-        height: 610px;
         display: flex;
         flex-direction: column;
     }
@@ -112,12 +115,9 @@
         display: none;
     }
     .locationMobile{
-        width: 414px;
+        width: 100%;
         height: 298px;
         display: block;
-    }
-    .contactBackground{
-        width: 414px !important;
     }
     .contactAddressInformationMobile{
         display: flex;
@@ -129,10 +129,25 @@
         opacity: 0.8;
         box-shadow: 0px 4px 40px #000000;
         border-radius: 29px;
-        left: 24px;
-        top: 950px;
+        justify-content: center;
+        align-items: center;
+        top: 200px;
     }
-    .contactAddressContainer{
-        left: 10px;
+    .addressContainer{
+        left: auto;
+    }
+    .phoneNumberContainer{
+        left: auto;
+    }
+    .mailAdressContainer{
+        left: auto;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .contactAddressInformationMobile{
+        top: 117px ;
+        width: 350px ;
+        height: 143px ;
     }
 }

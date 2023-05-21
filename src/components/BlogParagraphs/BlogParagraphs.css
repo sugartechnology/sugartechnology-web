@@ -1,17 +1,33 @@
 .blogParagraphsContainer{
-    height: 3220px;
+    height: 115vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    position: relative;
+}
+.blogParagraphs2Container{
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+.blogParagraphs3Container{
+    height: 255vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
 }
 .paragraph{
     display: flex;
     flex-direction: column;
+    width: 70%;
 }
 .paragraphHeader{
-    width: 849px;
-    height: 80px;
     font-style: normal;
     font-weight: 700;
     font-size: 31px;
@@ -21,12 +37,10 @@
     color: #000000;
 }
 .paragraphSpan{
-    width: 1057px;
-    height: 248px;
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 28px;
     display: flex;
     align-items: center;
     color: #8C8C8C;
@@ -39,20 +53,21 @@
 .secondParagraphList{
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 21px;
+    line-height: 15px;
     color: #8C8C8C;
 }
 .author{
     width: 657.3px;
-    height: 176.14px;
+    height: 176px;
     border: 2px solid #BFBFBF;
     border-radius: 7px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    position: relative;
-    right: 200px;
+    position: absolute;
+    bottom: 50px;
+    left: 200px;
 }
 .authorSpans{
     display: flex;
@@ -60,8 +75,6 @@
     gap: 20px;
 }
 .authorHeader{
-    width: 292.13px;
-    height: 34.36px;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -71,8 +84,6 @@
     color: #ED401A;
 }
 .authorSpan{
-    width: 424.06px;
-    height: 58.41px;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -80,4 +91,115 @@
     display: flex;
     align-items: center;
     color: #000000;
+}
+
+.tablet .blogParagraphsContainer{
+    height: 215vh;
+}
+
+.tablet .blogParagraphs2Container{
+    height: 445vh;
+}
+
+.tablet .blogParagraphs3Container{
+    height: 220vh;
+}
+
+.tablet .paragraphHeader{
+    line-height: 37px;
+    font-size: 28px;
+}
+
+.tablet .secondParagraphLists{
+    gap: 14px;
+}
+
+.tablet .secondParagraphList{
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.tablet .author{
+    width: 290px;
+}
+
+.tablet .authorHeader{
+    font-size: 20px;
+}
+
+.tablet .authorSpan{
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.tablet .authorImage{
+    width: auto !important;
+}
+
+.tablet .paragraphSpan{
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+
+
+
+.mobile .blogParagraphsContainer{
+    height: 215vh;
+}
+
+.mobile .blogParagraphs2Container{
+    height: 220vh;
+}
+
+.mobile .blogParagraphs3Container{
+    height: 225vh;
+}
+
+.mobile .paragraphHeader{
+    line-height: 37px;
+    font-size: 28px;
+}
+
+.mobile .secondParagraphLists{
+    gap: 14px;
+}
+
+.mobile .secondParagraphList{
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.mobile .author{
+    width: 290px;
+    left: 50px;
+}
+
+.mobile .authorHeader{
+    font-size: 20px;
+}
+
+.mobile .authorSpan{
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.mobile .authorImage{
+    width: auto !important;
+}
+
+.mobile .paragraphSpan{
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+@media screen and (max-width: 499px) {
+    .blogParagraphs2Container{
+        height: 445vh;
+    }
+    .blogParagraphs3Container{
+        height: 355vh !important;
+    }
 }

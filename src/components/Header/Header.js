@@ -225,7 +225,7 @@ export const Header = props => {
                 <img id='mobilePopupLine3' alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px", position: "relative"}}></img>
                 <div className='mobileMediaCenterButtons'>
                     <button className='popupMediaCenterButton' id='popupMediaCenterButton'>
-                        <a>{t("careers")}</a>
+                        <a href='/contactCv'>{t("careers")}</a>
                     </button>
                 </div>
             </div>

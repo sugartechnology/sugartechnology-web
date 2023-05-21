@@ -80,7 +80,7 @@
 
 
 .mobile .blogsListContainer{
-    height: 190vh;
+    height: 130vh;
     justify-content: normal;
 }
 
@@ -91,4 +91,10 @@
 .mobile .blogsListHeader{
     font-size: 33px;
     text-align: center;
+}
+
+@media screen and (max-width: 499px) {
+    .blogsListContainer{
+        height: 190vh !important;
+    }
 }

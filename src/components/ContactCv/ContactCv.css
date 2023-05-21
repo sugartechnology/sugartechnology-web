@@ -1,5 +1,5 @@
 .contactCvContainer{
-    height: 1100px;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +69,7 @@ input[type=file]::file-selector-button {
     color: #252F40;
 }
 .contactCvHeader{
-    width: 500px;
+    width: 70%;
     height: 41px;
     font-style: normal;
     position: relative;
@@ -122,8 +122,6 @@ input[type=file]::file-selector-button {
     background: #CCCCCC;
 }
 .contactOption a{
-    width: 566px;
-    height: 24px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -131,4 +129,43 @@ input[type=file]::file-selector-button {
     display: flex;
     align-items: center;
     color: #717171;
+}
+
+.mobile .contactCvContainer{
+    height: 150vh;
+}
+
+.mobile .contactCvInputs{
+    width: 370px;
+    height: 1260px;
+    gap: 30px;
+}
+
+.mobile .jobTitleSelect{
+    width: 310px;
+}
+
+.mobile .contactCvRecaptcha{
+    right: auto !important;
+}
+
+.mobile .submitButton{
+    width: 200px;
+}
+
+.mobile .contactOptions{
+    gap: 20px;
+    left: 20px;
+    bottom: 190px;
+}
+
+.mobile .contactCvHeader{
+    left: auto;
+    width: auto;
+}
+
+@media screen and (max-width: 499px) {
+    .contactCvContainer{
+        height: 200vh !important;
+    }
 }

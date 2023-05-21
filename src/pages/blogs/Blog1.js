@@ -3,7 +3,7 @@ import { BlogParagraphs } from "../../components/BlogParagraphs/BlogParagraphs";
 import { YouAlsoLike } from "../../components/YouAlsoLike/YouAlsoLike";
 import React, { useState, useEffect } from 'react';
 
-export const Blog = props =>{
+export const Blog1 = props =>{
     const [isTablet, setIsTablet] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -23,7 +23,7 @@ export const Blog = props =>{
         };
     }, []);
     return(
-        <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} Blog`}>
+        <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} Blog1`}>
             <BlogGraphQL></BlogGraphQL>
             <BlogParagraphs></BlogParagraphs>
             <YouAlsoLike></YouAlsoLike>

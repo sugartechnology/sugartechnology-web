@@ -166,7 +166,7 @@ export const ContactCv = props =>{
                     <a className='descriptionInputSpan'>{t("howCanWeHelpYou")}</a>
                     <textarea className='descriptionInput' type="text" placeholder={t("describeYourProblem")} value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                 </div>
-                <ReCAPTCHA style={{position: "relative" ,right: "174px" ,top: "130px"}}
+                <ReCAPTCHA className='contactCvRecaptcha' style={{position: "relative" ,right: "174px" ,top: "130px"}}
                     sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
                     onChange={handleRecaptchaChange}/>
                 <div className='contactOptions'>

@@ -19,7 +19,7 @@
 
 .mainPageSliderContainer {
   width: 100%;
-  height: 627px;
+  height: 100vh;
   background-color: #EBEBEB;
   position: relative;
   max-height: 826px;
@@ -1577,12 +1577,11 @@
   gap: 10px;
   top: 40px;
   left: 70px;
-  height: 80%;
+  height: 100%;
 }
 
 .slideDetailSecondSpan {
   width: 439px;
-  height: 135px;
   font-style: normal;
   font-weight: 300;
   font-size: 19px;
@@ -1599,7 +1598,7 @@
   border-radius: 30px;
   cursor: pointer;
   position: absolute;
-  bottom: 0px;
+  bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1616,10 +1615,6 @@
   text-transform: capitalize;
   color: #FFFFFF;
   text-decoration: none;
-}
-
-.tablet .mainPageSliderContainer{
-  height: 1000px;
 }
 
 .tablet .slideDetail{
@@ -1640,10 +1635,6 @@
 
 .tablet .mainPageTopRightFigure{
   display: none;
-}
-
-.mobile .mainPageSliderContainer{
-  height: 1000px;
 }
 
 .mobile .slideDetail{
@@ -1675,14 +1666,12 @@
 }
 .mobile .slideDetailSecondSpan{
   width: 255px !important;
-  height: 108px !important;
   font-size: 14px !important;
   line-height: 24px !important;
 }
 .mobile .slideDetailButton{
   width: 99px;
   height: 35px;
-  top: 30px;
 }
 .mobile .slideDetailButton a{
   width: 120px;
