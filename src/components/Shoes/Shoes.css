@@ -1,5 +1,5 @@
 .shoesContainer{
-    height: 730px;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
@@ -23,9 +23,6 @@
     width: 92%;
 }
 
-.tablet .shoesContainer{
-    height: 900px;
-}
 
 .tablet .shoesImageDiv{
     position: absolute;
@@ -40,10 +37,6 @@
     bottom: 0px;
 }
 
-.mobile .shoesContainer{
-    height: 720px;
-}
-
 .mobile .shoesImageDiv{
     position: absolute;
     right: auto;
@@ -55,5 +48,5 @@
 .mobile .shoesImage{
     position: absolute;
     bottom: 0px;
-    width: 90%;
+    width: 200px;
 }

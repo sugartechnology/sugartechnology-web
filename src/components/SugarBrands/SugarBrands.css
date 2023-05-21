@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 830px;
+    justify-content: space-evenly;
+    height: 100vh;
     background: #EFEFEF;
 }
 .sugarBrandsHeader{
@@ -104,8 +104,13 @@
     }
 }
 
+.mobile .sugarBrandsContainer{
+    height: 110vh;
+}
+
 .mobile .sugarBrandsHeader{
-    font-size: 27px;
+    width: 100%;
+    font-size: 19px;
 }
 .mobile #brand2,
 .mobile #brand3{
@@ -134,7 +139,7 @@
 
 
 .tablet .sugarBrandsHeader{
-    width: 336px;
+    width: 100%;
     font-size: 27px;
 }
 .tablet #brand2,

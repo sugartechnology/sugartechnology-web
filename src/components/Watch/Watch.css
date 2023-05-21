@@ -1,5 +1,5 @@
 .watchContainer{
-    height: 730px;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
@@ -21,13 +21,9 @@
     height: 100%;
 }
 
-.tablet .watchContainer{
-    height: 900px;
-}
-
 .tablet .watchImage{
-    width: 700px;
     right: 0px;
+    width: 70%;
 }
 
 .tablet .watchImageDiv{
@@ -38,14 +34,10 @@
 }
 
 .mobile .watchImage{
-    width: 400px;
-    width: 450px;
+    width: 100%;
     right: 0px;
 }
 
-.mobile .watchContainer{
-    height: 790px;
-}
 
 .mobile .watchImageDiv{
     width: 100%;

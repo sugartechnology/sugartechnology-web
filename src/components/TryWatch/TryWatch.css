@@ -1,5 +1,5 @@
 .tryWatchContainer{
-    height: 900px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -25,10 +25,7 @@
     width: 60%;
 }
 
-.tablet .tryWatchContainer{
-    height: 870px;
-}
 
 .mobile .tryWatchContainer{
-    height: 600px;
+    height: 85vh;
 }

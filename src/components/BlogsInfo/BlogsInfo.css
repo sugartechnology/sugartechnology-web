@@ -10,11 +10,9 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-top: 30px;
+    width: 100%;
 }
 .blogsInfoHeader{
-    height: 38px;
-    width: 700px;
     font-style: normal;
     font-weight: 700;
     font-size: 37px;
@@ -24,8 +22,6 @@
     justify-content: center;
 }
 .blogsInfoSpan{
-    height: 82px;
-    width: 745px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -47,8 +43,6 @@
     cursor: pointer;
 }
 .blogsInfoButton a{
-    width: 82px;
-    height: 26px;
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -59,16 +53,13 @@
     color: #ED401A;
 }
 .blogsInfoImage{
-    width: 1066px;
-    height: 623px;
+    width: 100%;
 }
 .blogsInfoItems{
     display: flex;
     gap: 60px;
 }
 .blogsInfoItemHeader{
-    height: 38px;
-    width: 256px;
     font-style: normal;
     font-weight: 700;
     font-size: 27px;
@@ -76,12 +67,57 @@
     color: #000000;
 }
 .blogsInfoItemSpan{
-    height: 183px;
-    width: 312px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     color: #8A8A8A;
     mix-blend-mode: normal;
+}
+
+.tablet .blogsInfoContainer{
+    height: 190vh;
+}
+
+.tablet .blogsInfoItems{
+    flex-direction: column;
+    gap: 0px;
+}
+
+.tablet .blogsInfoHeader{
+    font-size: 32px;
+    width: 90%;
+    text-align: center;
+}
+
+.tablet .blogsInfoSpan{
+    width: 90%;
+}
+
+
+
+
+.mobile .blogsInfoContainer{
+    height: 170vh;
+}
+
+.mobile .blogsInfoItems{
+    flex-direction: column;
+    gap: 0px;
+}
+
+.mobile .blogsInfoHeader{
+    font-size: 32px;
+    width: 90%;
+    text-align: center;
+}
+
+.mobile .blogsInfoSpan{
+    width: 90%;
+}
+
+@media screen and (max-width: 500px) {
+    .blogsInfoContainer{
+        height: 220vh;
+    }
 }

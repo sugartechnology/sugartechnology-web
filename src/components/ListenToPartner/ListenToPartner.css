@@ -205,10 +205,11 @@
     font-size: 14px;
     top: 28px;
     width: 92%;
+    height: 180px;
 }
 .mobile .partnerVideo{
     width: 90%;
-    height: 424px !important;
+    height: 375px !important;
     position: absolute;
     bottom: 30px;
     display: flex;
@@ -228,4 +229,7 @@
 .mobile .partnersPageButtons{
     bottom: 30px;
 }
-
+.mobile .partnerHeaders{
+    height: auto;
+    width: 94%;
+}

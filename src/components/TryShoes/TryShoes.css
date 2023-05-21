@@ -1,5 +1,5 @@
 .tryShoesContainer{
-    height: 900px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -13,6 +13,7 @@
 }
 
 
-.mobile .tryShoesContainer{
-    height: 650px;
-}
+
+
+
+

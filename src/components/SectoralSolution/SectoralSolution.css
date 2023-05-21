@@ -12,8 +12,6 @@
     margin-top: 40px;
 }
 .sectoralSolutionSpan{
-    width: 702px;
-    height: 89px;
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
@@ -38,8 +36,7 @@
     justify-content: space-evenly;
 }
 .solutionHeader{
-    width: 559px;
-    height: 38px;
+    width: 80%;
     font-style: normal;
     font-weight: 700;
     font-size: 27px;
@@ -175,22 +172,21 @@
 
 
 .mobile .sectoralSolutionContainer{
-    height: 930px;
+    height: 145vh;
 }
 .mobile .sectoralSolutionSpan{
     font-size: 29px;
 }
 .mobile .sectoralSolutionLine{
     position: relative;
-    left: 170px;
-    width: 350px;
+    width: 100%;
 }
 .mobile .solutionHeader{
-    width: 326px;
+    width: 80%;
     font-size: 24px;
 }
 .mobile .solutionSpan{
-    width: 354px;
+    width: 70%;
     font-size: 13px;
 }
 .mobile #solution2,
@@ -200,10 +196,12 @@
 }
 .mobile .solution{
     flex-direction: column;
+    align-items: center;
+    width: 90%;
 }
 .mobile .solutionSpans{
     position: relative;
-    left: 30px;
+    width: 80%;
     gap: 40px;
 }
 .mobile #rightImage{
@@ -211,7 +209,7 @@
 }
 .mobile .solutionShadow{
     display: flex !important;
-    width: 389px;
+    width: 97%;
     position: relative;
     left: 5px;
     bottom: 10px;
@@ -219,4 +217,8 @@
 }
 .mobile .solutionPageButtons{
     display: flex !important;
+}
+
+.mobile .soluttinImage{
+    width: 100%;
 }

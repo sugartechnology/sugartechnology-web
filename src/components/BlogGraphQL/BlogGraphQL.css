@@ -1,5 +1,5 @@
 .blogGraphQLContainer{
-    height: 920px;
+    height: 85vh;
     margin-top: 60px;
 }
 .blogGraphSpans{
@@ -13,6 +13,7 @@
 .blogGraphBackground{
     position: absolute;
     z-index: -1;
+    width: 100%;
 }
 .blogGraphHeader{
     width: 1057.8px;

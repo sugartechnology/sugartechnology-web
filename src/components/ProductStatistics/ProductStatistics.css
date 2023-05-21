@@ -1,5 +1,5 @@
 .productStatisticsContainer{
-    height: 536px;
+    height: 60vh;
     display: flex;
     background: white;
     gap: 50px;
@@ -45,46 +45,52 @@
     bottom: 106px;
 }
 
-.tablet .productStatisticsContainer{
-    flex-direction: column;
-    justify-content: normal;
-    height: 533px;
-    align-items: center;
-}
-.tablet .productStatisticsSpanElements{
-    left: auto;
-}
-.tablet .productStatisticsHeader{
-    height: 120px;
-    font-size: 29px;
-    position: relative;
-}
-.tablet .productStatisticsSpans{
-    font-size: 13px;
-    gap: 10px;
-    position: relative;
-}
-.tablet .productStatisticsImage img{
-    width: 300px;
-}
-.tablet .productStatisticsImage{
-    top: 150px;
+@media screen and (max-width: 1200px) {
+
+    .productStatisticsContainer{
+        flex-direction: column;
+        justify-content: normal;
+        height: 533px;
+        align-items: center;
+    }
+    .productStatisticsSpanElements{
+        left: auto;
+    }
+    .productStatisticsHeader{
+        height: 120px;
+        font-size: 29px;
+        position: relative;
+    }
+    .productStatisticsSpans{
+        font-size: 13px;
+        gap: 10px;
+        position: relative;
+    }
+    .productStatisticsImage img{
+        width: 300px;
+    }
+    .productStatisticsImage{
+        top: 150px;
+    }
 }
 
 .mobile .productStatisticsContainer{
     flex-direction: column;
     justify-content: normal;
-    height: 730px;
+    height: 55vh;
     align-items: center;
 }
 .mobile .productStatisticsSpanElements{
     left: auto;
-    right: 40px;
+    top: auto;
+    align-items: center;
+    width: 100%;
 }
 .mobile .productStatisticsHeader{
-    height: 120px;
+    width: 100%;
+    height: auto;
     font-size: 29px;
-    position: relative;
+    text-align: center;
 }
 .mobile .productStatisticsSpans{
     font-size: 13px;
@@ -102,4 +108,10 @@
 .mobile .productStatisticsSpanElementsDiv{
     height: 100% !important;
     justify-content: center !important;
+}
+
+@media screen and (max-width: 500px) {
+    .productStatisticsContainer{
+        height: 90vh !important;
+    }
 }

@@ -8,8 +8,6 @@
     background: #f1f1f1;
 }
 .whatsNewHeader{
-    width: 550px;
-    height: 80px;
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
@@ -21,7 +19,6 @@
 }
 .whatsNewSpan{
     width: 70%;
-    height: 200px;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
@@ -60,4 +57,8 @@
 
 .mobile .WhatsNewContainer{
     height: 780px;
+}
+
+.mobile .whatsNewElements{
+    bottom: 50px;
 }

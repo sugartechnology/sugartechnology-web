@@ -66150,7 +66150,7 @@ class DimensionHotspot {
     showControlButton() {
         let elementTemplate = this.element.template;
         if (elementTemplate === "advanced") {
-            const modelInfo = this.element.parentElement.querySelector("#modelInfo");
+            const modelInfo = this.element.parentElement.querySelector(".sugar-model-viewer-info");
             const dimensionButton = modelInfo.querySelector(".dimension_button");
             dimensionButton.addEventListener("click", this.toggleShowButton.bind(this), true);
         }

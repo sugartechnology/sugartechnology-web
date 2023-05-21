@@ -1,6 +1,6 @@
 .ShowAtHomeContainer{
     width: 100%;
-    height: 730px;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
@@ -31,8 +31,7 @@
     z-index: 1;
 }
 .showAtHomeHeader{
-    height: 100px;
-    width: 510px;
+    width: 80%;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -40,7 +39,7 @@
     color: #000000;
 }
 .showAtHomeSpan{
-    width: 497px;
+    width: 80%;
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
@@ -50,7 +49,7 @@
     color: #000000;
 }
 .showAtHomeImage{
-    width: 500px;
+    width: 100%;
 }
 .showAtHomeButtons{
     display: flex;
@@ -68,6 +67,7 @@
     flex-direction: column;
     justify-content: center;
     height: 80%;
+    width: 82%;
 }
 
 .slideDetailButton{
@@ -159,7 +159,7 @@
 }
 .showAtHomeImageDiv{
     position: absolute;
-    right: 100px;
+    right: 10px;
     flex: 50%;
 }
 .tablet .ShowAtHomeContainer{
@@ -171,7 +171,8 @@
     height: 390px;
 }
 .tablet .showAtHomeHeader{
-    font-size: 20px;
+    font-size: 27px;
+    line-height: 42px;
 }
 .tablet .showAtHomeSpan{
     font-size: 20px;
@@ -179,18 +180,20 @@
 .tablet .showAtHomeImageDiv{
     right: auto;
     bottom: 0px;
+    display: flex;
+    justify-content: center;
 }
 .mobile .ShowAtHomeContainer{
     height: 900px;
 }
 .mobile .showAtHomeHeader{
-    width: 300px;
-    font-size: 29px;
-    line-height: 40px;
+    width: auto;
+    font-size: 27px;
+    line-height: 35px;
     position: relative;
 }
 .mobile .showAtHomeSpan{
-    width: 246px;
+    line-height: 25px;
     font-size: 17px;
     position: relative;
 }
@@ -220,9 +223,10 @@
     bottom: 0px;
     right: auto;
     width: auto;
+    display: flex;
+    justify-content: center;
 }
 .mobile .showAtHomeImage{
-    width: 400px;
     left: auto;
     top: auto;
 }
@@ -230,8 +234,18 @@
     top: 56px;
     left: auto;
     height: 390px;
-    width: 410px;
+    width: 80%;
 }
 .mobile .showAtHomeButtons{
     gap: 20px;
+}
+
+.mobile .mainPageTopLeftFigure{
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .showAtHomeImage{
+        width: 80%;
+    }
 }

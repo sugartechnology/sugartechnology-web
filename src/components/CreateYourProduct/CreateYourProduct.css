@@ -2,6 +2,9 @@
     height: 900px;
     background: #EFEFEF;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .corner1{
     position: absolute;
@@ -33,11 +36,10 @@
     justify-content: flex-end;
 }
 .sugarModelViewer{
-    width: 1200px;
+    width: 90%;
     height: 70%;
     position: absolute;
     top: 200px;
-    left: 130px;
 }
 #sugar-joint-container{
     bottom: 0px !important;
@@ -47,19 +49,31 @@
 .tablet .sugarModelViewer{
     top: 200px;
     left: 59px;
-    width: 86%;
 }
 
 .mobile .sugarModelViewer{
     top: 200px;
-    left: 59px;
     width: 80%;
+}
+
+.mobile .corner1{
+    left: 20px;
+}
+
+.mobile .corner2{
+    right: 20px;
+}
+
+.mobile .corner3{
+    left: 20px;
+}
+
+.mobile .corner4{
+    right: 20px;
 }
 
 @media screen and (max-width: 1200px) {
     .sugarModelViewer{
-        width: 90%;
         top: 200px;
-        left: 59px;
     }
 }

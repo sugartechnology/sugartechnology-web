@@ -92,3 +92,7 @@
 .mobile .sugarTeamLeader{
     gap: 0px;
 }
+
+.mobile .sugarTeamLeaders img{
+    width: 130px;
+}

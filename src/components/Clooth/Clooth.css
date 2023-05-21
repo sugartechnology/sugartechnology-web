@@ -1,5 +1,5 @@
 .cloothContainer{
-    height: 730px;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
@@ -18,11 +18,6 @@
     width: 50%;
     height: 100%;
 }
-
-.tablet .cloothContainer{
-    height: 900px;
-}
-
 .tablet .cloothImageDiv{
     width: 100%;
     height: 50%;

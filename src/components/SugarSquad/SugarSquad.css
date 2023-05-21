@@ -110,4 +110,10 @@
     .SugarSquadMember img{
         width: 20%;
     }
+    .SugarSquadMember{
+        gap: 5px;
+    }
+    .memberInformation{
+        width: auto;
+    }
 }

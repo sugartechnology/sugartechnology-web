@@ -1,5 +1,5 @@
 .metaReportsContainer{
-    height: 800px;
+    height: 70vh;
     display: flex;
     gap: 50px;
     position: relative;
@@ -12,7 +12,6 @@
     gap: 30px;
 }
 .metaReportsHeader{
-    height: 155px;
     width: 600px;
     font-style: normal;
     font-weight: 700;
@@ -22,7 +21,6 @@
 }
 .metaReportsSpan{
     width: 594px;
-    height: 70px;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -42,7 +40,7 @@
 
 
 .tablet .metaReportsContainer{
-    height: 800px;
+    height: 85vh;
 }
 
 .tablet .metaReportsImg{
@@ -64,13 +62,11 @@
 .tablet .metaReportsHeader{
     font-size: 30px;
     width: 100%;
-    height: 70px;
     text-align: center;
 }
 
 .tablet .metaReportsSpan{
     width: 80%;
-    height: 50px;
     font-size: 16px;
     text-align: center;
 }
@@ -78,7 +74,7 @@
 
 
 .mobile .metaReportsContainer{
-    height: 800px;
+    height: 93vh;
 }
 
 .mobile .metaReportsImg{
@@ -100,13 +96,11 @@
 .mobile .metaReportsHeader{
     font-size: 30px;
     width: 100%;
-    height: 70px;
     text-align: center;
 }
 
 .mobile .metaReportsSpan{
     width: 80%;
-    height: 50px;
     font-size: 16px;
     text-align: center;
 }

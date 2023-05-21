@@ -664,11 +664,9 @@
 .mobile .languageButton{
     gap: 0px;
     width: 60px;
-    right: 20px;
 }
 .mobile .languagePopup{
-    right: 30px;
-
+    right: 10px;
 }
 .mobile .productServicesPopup{
     display: flex;
@@ -693,4 +691,7 @@
 .mobile .robot{
     width: 57px;
     left: 90px;
+}
+.mobile .headerButtons{
+    right: 0px;
 }

@@ -9,13 +9,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 70px;
+    justify-content: space-evenly;
     width: 100%;
     height: 100%;
 }
 .arDetailsHeader{
     width: 100%;
-    height: 10%;
     font-style: normal;
     font-weight: 700;
     font-size: 44px;
@@ -26,7 +25,6 @@
 }
 .arDetailsSpan{
     width: 76%;
-    height: 160px;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
@@ -152,7 +150,7 @@
     display: none;
 }
 .tablet .arDetailsContainer{
-    height: 960px;
+    height: 150vh;
 }
 .tablet .arDetailsHeader{
     font-size: 29px;
@@ -170,4 +168,16 @@
 
 .mobile .modelViewerShadow{
     bottom: 71px;
+}
+
+.tablet .arDetailsBubble{
+    display: none;
+}
+
+.mobile .arDetailsBubble{
+    display: none;
+}
+
+.mobile .arDetailsModelViewer{
+    height: 40%;
 }

@@ -8,8 +8,7 @@
     gap: 50px;
 }
 .blogsListHeader{
-    height: 38px;
-    width: 700px;
+    display: flex;
     font-style: normal;
     font-weight: 700;
     font-size: 37px;
@@ -28,8 +27,6 @@
     gap: 40px;
 }
 .blogsListItemHeader{
-    height: 38px;
-    width: 256px;
     font-style: normal;
     font-weight: 700;
     font-size: 27px;
@@ -37,8 +34,6 @@
     color: #000000;
 }
 .blogsListItemSpan{
-    height: 183px;
-    width: 312px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -59,8 +54,6 @@
     cursor: pointer;
 }
 .blogsListItemButton a{
-    width: 82px;
-    height: 26px;
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -69,4 +62,33 @@
     align-items: center;
     text-align: center;
     color: #ED401A;
+}
+
+.tablet .blogsListContainer{
+    height: 130vh;
+    justify-content: normal;
+}
+
+.tablet .blogsListItems{
+    flex-direction: column;
+}
+
+.tablet .blogsListHeader{
+    font-size: 33px;
+    text-align: center;
+}
+
+
+.mobile .blogsListContainer{
+    height: 190vh;
+    justify-content: normal;
+}
+
+.mobile .blogsListItems{
+    flex-direction: column;
+}
+
+.mobile .blogsListHeader{
+    font-size: 33px;
+    text-align: center;
 }

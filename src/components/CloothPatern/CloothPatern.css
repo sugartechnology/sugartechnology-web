@@ -1,5 +1,5 @@
 .cloothPaternContainer{
-    height: 700px;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,6 @@
     top: 20px;
 }
 .cloothPaternHeader{
-    height: 100px;
     width: 769px;
     font-style: normal;
     font-weight: 700;
@@ -47,7 +46,7 @@
 
 
 .tablet .cloothPaternContainer{
-    height: 1000px;
+    height: 110vh;
 }
 
 .tablet .cloothPaternSpans{
@@ -57,11 +56,13 @@
 
 .tablet .cloothPaternHeader{
     width: 100%;
+    font-size: 30px;
 }
 
 .tablet .cloothPaternSpan{
     width: 80%;
-    height: 150px;
+    font-size: 16px;
+    line-height: 25px;
 }
 
 .tablet .cloothPaternVector{
@@ -94,7 +95,7 @@
 }
 
 .mobile .cloothPaternContainer{
-    height: 1000px;
+    height: 130vh;
 }
 
 .mobile .cloothPaternSpans{
@@ -104,11 +105,13 @@
 
 .mobile .cloothPaternHeader{
     width: 100%;
+    font-size: 30px;
 }
 
 .mobile .cloothPaternSpan{
     width: 80%;
-    height: 150px;
+    font-size: 16px;
+    line-height: 25px;
 }
 
 .mobile .cloothPaternElements{

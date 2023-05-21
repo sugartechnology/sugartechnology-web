@@ -2,22 +2,22 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 550px;
-    top: 60px;
+    height: 70vh;
 }
 .contactElements{
     display: flex;
     position: relative;
     width: 100%;
     height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .leftContact{
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 110px;
     gap: 50px;
-    width: 33%;
 }
 .communication a{
     color: #797979;
@@ -73,7 +73,6 @@
     gap: 10px;
 }
 .headers{
-    width: 118px;
     height: 38px;
     font-style: normal;
     font-weight: 700;
@@ -88,7 +87,6 @@
 }
 .contactHeaders a{
     display: flex;
-    width: 260px;
     height: 38px;
     font-style: normal;
     font-weight: 700;
@@ -106,7 +104,6 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    height: 336px;
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
@@ -136,16 +133,13 @@
 .middleContact{
     display: flex;
     justify-content: space-evenly;
-    width: 33%;
     position: relative;
     font-family: 'Nunito';
-    right: 30px;
 }
 .rightContact{
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 50px;
     font-family: 'Nunito';
 }
 .rightContactInputs{
@@ -296,9 +290,7 @@
 .tablet .contactElements{
     justify-content: space-around;
 }
-.tablet .leftContact{
-    left: 40px;
-}
+
 
 .mobile.contactContainer{
     height: 340px;
@@ -322,10 +314,10 @@
 }
 .mobile .leftContact{
     width: 40%;
-    left: 40px;
 }
 .mobile .middleContact{
     width: 50%;
+    height: 70%;
 }
 .mobile .contactRouters{
     font-size: 11px;

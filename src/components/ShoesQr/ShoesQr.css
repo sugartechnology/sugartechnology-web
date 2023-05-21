@@ -1,6 +1,6 @@
 .shoesQrContainer{
     display: flex;
-    height: 750px;
+    height: 80vh;
     background: #E9E9E9;
     flex-direction: row;
     justify-content: space-evenly;
@@ -10,6 +10,7 @@
 .qrGroup{
     display: flex;
     gap: 30px;
+    justify-content: center;
 }
 .shoesQrElements{
     display: flex;
@@ -18,7 +19,6 @@
     position: relative;
 }
 .shoesQrHeader{
-    height: 155px;
     width: 516px;
     font-style: normal;
     font-weight: 700;
@@ -28,7 +28,6 @@
 }
 .shoesQrSpan{
     width: 451px;
-    height: 90px;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
@@ -38,8 +37,7 @@
     color: #000000;
 }
 .shoesButtons{
-    width: 207px;
-    height: 157px;
+    width: 40%;
     background: #FFFFFF;
     border: 2px solid #AAAAAA;
     border-radius: 20px;
@@ -55,8 +53,12 @@
     position: relative;
 }
 
-.tablet  .shoesQrContainer{
-    height: 1000px;
+.shoesButtons img{
+    width: 100%;
+}
+
+.tablet .shoesQrContainer{
+    height: 100vh;
 }
 
 .tablet .shoesQrElements{
@@ -91,10 +93,6 @@
 
 
 
-.mobile .shoesQrContainer{
-    height: 900px;
-}
-
 .mobile .shoesQrElements{
     position: absolute;
     top: 0px;
@@ -119,18 +117,24 @@
 
 }
 
+.mobile .shoesButtons{
+    width: 30%;
+}
+
+
 .mobile .shoesQr{
     position: absolute;
     width: 20%;
-    top: 150px !important;
+    top: 100px !important;
     left: 35%;
     right: auto !important;
 }
 
 .mobile .shoesQrHeader{
-    height: 96px;
     width: 100%;
-    font-size: 35px;
+    font-size: 27px;
+    text-align: center;
+    line-height: 44px;
 }
 
 

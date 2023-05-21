@@ -1,6 +1,6 @@
 .aboutContainer{
     display: flex;
-    height: 542px;
+    height: 70vh;
     position: relative;
 }
 .aboutSpans{
@@ -23,7 +23,6 @@
 }
 .aboutSpans a{
     width: 442px;
-    height: 200px;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
@@ -72,7 +71,7 @@
 }
 
 .tablet .aboutContainer{
-    height: 700px;
+    height: 90vh;
 }
 
 .tablet .aboutSpans{
@@ -108,7 +107,7 @@
 }
 
 .mobile .aboutContainer{
-    height: 700px;
+    height: 90vh;
 }
 
 .mobile .aboutSpans{

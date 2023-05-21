@@ -8,7 +8,7 @@ export const ExperienceReports = props =>{
            <div style={{display: "flex", width: "88%", height: "100%", position: "relative"}}>
             <div className='reportsSpanImages'>
                     <img className='reportsSpansImg' style={{width: "76%"}} alt='' src={'./assets/img/reportsSpansImg.svg'}></img>
-                    <img className='reportsSpangImgShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
+                    <img className='reportsSpangImgShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
                 </div>
                 <div className='reportsSpanElement'>
                     <a className='reportsHeader'>{t("")}Raporlar & Müşteri Yönetimi</a>

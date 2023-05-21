@@ -1,5 +1,5 @@
 .MetaverseProjectContainer{
-    height: 898px;
+    height: 100vh;
     position: relative;
     background: radial-gradient(#DBB7DC,#B194C9, #6F6EAC);
 }
@@ -30,7 +30,6 @@
 }
 .metaverseProjectSpan{
     width: 70%;
-    height: 141px;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -46,7 +45,7 @@
 }
 
 .tablet .MetaverseProjectContainer{
-    height: 723px;
+    height: 80vh;
 }
 
 .tablet .metaverseProjectElements{
@@ -61,12 +60,9 @@
     height: 100px;
 }
 
-.mobile .MetaverseProjectContainer{
-    height: 630px;
-}
-
 .mobile .metaverseProjectSpan{
     font-size: 15px;
+    line-height: 20px;
 }
 
 .mobile .metaverseProjectHeader{

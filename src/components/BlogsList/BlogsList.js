@@ -6,7 +6,7 @@ export const BlogsList = props =>{
     return(
         <div className='blogsListContainer'>
             <div className='blogsListHeaders'>
-                <a className='blogsListHeader'>{t("blogListHeader")}</a>
+                <a className='blogsListHeader'>{t("blogListHeader")}Lorem ipsum dolor sit amet consectetur.</a>
             </div>
             <div className='blogsListItems'>
                 <div className='blogsListItem'>

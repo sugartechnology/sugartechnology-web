@@ -55,7 +55,6 @@
     position: absolute;
     top: 30px;
     width: 100%;
-    height: 37px;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -95,7 +94,7 @@
   }
 
   .mobile .swiper-slide img{
-    width: 120px !important;
+    width: 65px !important;
   }
 
   .mobile .swiper-wrapper{
@@ -109,6 +108,10 @@
 
   .mobile .swiper-button-prev{
     left: 10px !important;
+  }
+
+  .mobile .customersSpan{
+    font-size: 14px;
   }
 
 
@@ -127,12 +130,6 @@
   }
   .swiper-wrapper{
     left: 50px;
-  }
-  .customersSpan{
-    display: flex;
-    bottom: 240px;
-    left: 25px;
-    width: 375px;
   }
 }
   
