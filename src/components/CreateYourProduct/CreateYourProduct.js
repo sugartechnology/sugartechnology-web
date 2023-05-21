@@ -2,7 +2,6 @@ import './CreateYourProduct.css';
 import { useTranslation} from "react-i18next";
 
 export const CreateYourProduct = props =>{
-    const {t} = useTranslation();
     return(
         <div className='createYourProductContainer'>
             <img className='corner1' alt='' src={'./assets/img/corner1.svg'}></img>
@@ -11,7 +10,7 @@ export const CreateYourProduct = props =>{
             <img className='corner4' alt='' src={'./assets/img/corner4.svg'}></img>
             <div className='sugarModelViewer'>
                 <sugar-model-viewer product-id="1104_7053" company-id="27" shadow-intensity=" 2" camera-controls
-                    style={{width: "500px",height: "70%", bottom: "250px"}} interaction-prompt="none" feature-on="hidden" joint-show>
+                    style={{width: "100%",height: "70%", bottom: "250px"}} interaction-prompt="none" feature-on="hidden" joint-show>
                 </sugar-model-viewer>
             </div>
             

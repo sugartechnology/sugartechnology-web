@@ -22,15 +22,17 @@ export const Joint = props =>{
             top: '316px'
         }}></div>
         <div className='mainPageSmallFigure0 '></div>
-            <div className='jointSpans'>
-                <a className='showAtHomeHeader'>{t("jointContainerHeader")}</a>
-                <a className='showAtHomeSpan'>{t("jointContainerSpan")}</a>
+            <div className='showAtHomeSpans'>
+                <div className='showAtHomeSpanElements'>
+                    <a className='showAtHomeHeader'>{t("jointContainerHeader")}</a>
+                    <a className='showAtHomeSpan'>{t("jointContainerSpan")}</a>
+                </div>
                 <div className='showAtHomeButtons'>
                     <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
                     <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>
                 </div>
             </div>
-            <div>
+            <div className='jointImageDiv'>
                 <img className='jointImage' alt='' src={'./assets/img/jointImage.svg'}></img>
             </div>
         </div>

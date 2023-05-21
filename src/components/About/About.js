@@ -13,7 +13,7 @@ export const About = props =>{
                 </button>
             </div>
             <div className='aboutLogos'>
-                <img className='firstAboutLogo' alt='' src={'assets/img/sketch_business.svg'}></img>
+                <img className='firstAboutLogo' alt='' src={'./assets/img/firstAboutLogo.svg'}></img>
                 <img className='secondAboutLogo' alt='' src={'assets/img/Objeto_inteligente.svg'}></img>
             </div>
         </div>

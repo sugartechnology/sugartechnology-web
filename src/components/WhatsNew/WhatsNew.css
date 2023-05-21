@@ -4,47 +4,45 @@
     align-items: center;
     height: 1000px;
     gap: 20px;
-    background: #F7F7F7;
+    position: relative;
+    background: #f1f1f1;
 }
 .whatsNewHeader{
-    width: 550px;
-    height: 80px;
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 52px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
     position: relative;
-    top: 40px;
 }
 .whatsNewSpan{
-    width: 800px;
-    height: 144px;
+    width: 70%;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 26px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
-    margin-top: 50px;
 }
 .whatsNewSpans{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 50px;
 }
 .whatsNewElements{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    bottom: 100px;
 }
 .whatsNewElement{
-    width: 700px;
+    width: 90%;
 }
 .whatsNewElementShadow{
     height: 65.9px;
@@ -52,26 +50,15 @@
     bottom: 1px;
 }
 
-@media screen and (max-width: 500px){
-    .WhatsNewContainer{
-        height: 700px;
-    }
-    .whatsNewHeader{
-        width: 200px;
-        font-size: 29px;
-    }
-    .whatsNewSpan{
-        width: 357px;
-        font-size: 13px;
-    }
-    .whatsNewElement{
-        width: 350px;
-        position: relative;
-        top: 100px;
-    }
-    .whatsNewElementShadow{
-        width: 350px;
-        top: 76px;
-        z-index: 1;
-    }
+
+.tablet .WhatsNewContainer{
+    height: 1000px;
+}
+
+.mobile .WhatsNewContainer{
+    height: 780px;
+}
+
+.mobile .whatsNewElements{
+    bottom: 50px;
 }

@@ -6,150 +6,36 @@ export const BlogsMain = props =>{
     return(
         <div className='blogsMainContainer'>
             <div className='squares'>
-                <div className='square' style={{width: "346px", height: "479px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader1")}</a>
+                <div className='square' style={{height: "479px"}}>
+                    <button className='squareButton'><a href='/sugarBlog'>{t("readMore")}</a></button>
+                    <a className='squareHeader'>{t("squareHeader1")}Mobilya seçimi için kolay ve hızlı bir yol</a>
                     <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
+                        <a className='squareHistory'>Feb 1, 2023</a>
+                        <a className='squareHistory'>by Şükrü Erdem Şahin</a>
                     </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
+                    <img className='squareImg' alt='' src={'https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/renders/render_top_view_rapid_render.jpg'}></img>
                 </div>
-                <div className='square' style={{width: "305px", height: "479px"}}>
+                <div className='square' style={{height: "479px"}}>
                     <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader2")}</a>
+                    <a className='squareHeader' style={{color: "black"}}>{t("squareHeader2")}Neden Ürünlerimin Kaliteli 3D modeli Olmalı</a>
                     <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
+                        <a className='squareHistory' style={{color: "black"}}>Mar 23, 2023</a>
+                        <a className='squareHistory' style={{color: "black"}}>by Abdurrahman Türkeri</a>
                     </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
+                    <img className='squareImg' alt='' src={'https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/urun_dijital_ikizleri_nb.png'}></img>
                 </div>
-                <div className='square' style={{width: "429px", height: "479px", position: "relative", left: "40px"}}>
+                <div className='square' style={{height: "479px"}}>
                     <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader3")}</a>
+                    <a className='squareHeader'>{t("squareHeader3")}AR ve 3D teknolojileri yatırımları için, Neden en doğru zamandayız?</a>
                     <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
                         <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
+                        <a className='squareHistory'>by Abdurrahman Türkeri</a>
                     </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg3.svg'}></img>
-                </div>
-            </div>
-            <div className='squares' style={{position: "relative", left: "40px"}}>
-                <div className='square' style={{width: "429px", height: "479px", position: "relative", right: "40px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader4")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg3.svg'}></img>
-                </div>
-                <div className='square' style={{width: "305px", height: "479px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader5")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
-                </div>
-                <div className='square' style={{width: "346px", height: "479px", position: "relative", left: "40px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader6")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
+                    <img className='squareImg' alt='' src={'./assets/img/Augmented_reality_illustration_basic.png'}></img>
                 </div>
             </div>
-            <div className='squares'>
-                <div className='square' style={{width: "346px", height: "479px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader7")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
-                </div>
-                <div className='square' style={{width: "305px", height: "479px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader8")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
-                </div>
-                <div className='square' style={{width: "429px", height: "479px", position: "relative", left: "40px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader9")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg3.svg'}></img>
-                </div>
-            </div>
-            <div className='squares' style={{position: "relative", left: "40px"}}>
-                <div className='square' style={{width: "429px", height: "479px", position: "relative", right: "40px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader10")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg3.svg'}></img>
-                </div>
-                <div className='square' style={{width: "305px", height: "479px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader11")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
-                </div>
-                <div className='square' style={{width: "346px", height: "479px", position: "relative", left: "40px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader12")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
-                </div>
-            </div>
-            <div className='squares'>
-                <div className='square' style={{width: "346px", height: "479px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader13")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
-                </div>
-                <div className='square' style={{width: "305px", height: "479px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader14")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg1.svg'}></img>
-                </div>
-                <div className='square' style={{width: "429px", height: "479px", position: "relative", left: "40px"}}>
-                    <button className='squareButton'><a>{t("readMore")}</a></button>
-                    <a className='squareHeader'>{t("squareHeader15")}</a>
-                    <div style={{display: "flex", zIndex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Sugar Team</a>
-                    </div>
-                    <img className='squareImg' alt='' src={'./assets/img/squareImg3.svg'}></img>
-                </div>
-            </div>
+
+
         </div>
     );
 }

@@ -1,15 +1,18 @@
 .blogsMainContainer{
     background: #EBEBEB;
-    height: 2600px;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 .squares{
     display: flex;
-    gap: 20px;
+    gap: 30px;
     position: relative;
     top: 90px;
+    width: 100%;
+    justify-content: center;
 }
 .square{
     display: flex;
@@ -17,6 +20,7 @@
     justify-content: center;
     padding: 16px 0px 3px;
     gap: 164px;
+    position: relative;
 }
 .squareButton{
     width: 94px;
@@ -27,7 +31,6 @@
     cursor: pointer;
 }
 .squareButton a{
-    width: 100px;
     height: 26px;
     font-style: normal;
     font-weight: 400;
@@ -37,9 +40,9 @@
     align-items: center;
     text-align: center;
     color: #FFFFFF;
+    text-decoration: none;
 }
 .squareHeader{
-    width: 346px;
     height: 80px;
     font-style: normal;
     font-weight: 700;
@@ -51,10 +54,8 @@
     color: #F5F5F5;
     z-index: 1;
     position: relative;
-    top: 120px;
 }
 .squareHistory{
-    width: 110px;
     height: 26px;
     font-style: normal;
     font-weight: 400;
@@ -66,8 +67,38 @@
     color: #FFFFFF;
     z-index: 1;
     position: relative;
-    left: 10px;
 }
+
 .squareImg{
     position: absolute;
+    width: 100%;
+    height: 97%;
+}
+
+.tablet .blogsMainContainer{
+    height: 200vh;
+}
+
+.tablet .squares{
+    width: 90%;
+    flex-direction: column;
+}
+
+.tablet .squareHeader{
+    justify-content: center;
+}
+
+.mobile .blogsMainContainer{
+    height: 200vh;
+}
+
+.mobile .squares{
+    width: 90%;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 500px) {
+    .blogsMainContainer{
+        height: 250vh !important;
+    }
 }

@@ -9,30 +9,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 70px;
+    justify-content: space-evenly;
     width: 100%;
+    height: 100%;
 }
 .arDetailsHeader{
     width: 100%;
-    height: 10%;
     font-style: normal;
     font-weight: 700;
     font-size: 44px;
     line-height: 52px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }
 .arDetailsSpan{
-    width: 90%;
-    height: 160px;
+    width: 76%;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 26px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }
@@ -134,15 +131,12 @@
     position: relative;
     top: 10px;
 }
-
-#sugar-model-container{
-    display: flex;
-    flex-direction: column;
-    flex: 1 1;
-    width: 80%;
-    height: 100%;
+.arDetailsModelViewer{
+    width: 76%;
+    height: 60%;
     border: 1px solid;
 }
+
 .mobile .arDetailsContainer{
     height: 960px;
 }
@@ -156,7 +150,7 @@
     display: none;
 }
 .tablet .arDetailsContainer{
-    height: 960px;
+    height: 150vh;
 }
 .tablet .arDetailsHeader{
     font-size: 29px;
@@ -166,4 +160,24 @@
 }
 .tablet .showAtHomeImg{
     display: none;
+}
+
+.tablet .modelViewerShadow{
+    bottom: 71px;
+}
+
+.mobile .modelViewerShadow{
+    bottom: 71px;
+}
+
+.tablet .arDetailsBubble{
+    display: none;
+}
+
+.mobile .arDetailsBubble{
+    display: none;
+}
+
+.mobile .arDetailsModelViewer{
+    height: 40%;
 }

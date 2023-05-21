@@ -9,17 +9,17 @@
 .footerElements{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     position: relative;
     bottom: 10px;
 }
 .footerSpan{
-    width: 80%;
+    width: 75%;
     height: 35px;
+    font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
-    line-height: 157.4%;
     color: #797979;
     display: flex;
 }
@@ -29,12 +29,15 @@
 }
 .footerMediaButtons img{
     cursor: pointer;
+    opacity: 0.5;
 }
 .tablet .footerElements{
     flex-direction: column;
     align-self: center;
 }
 .tablet .footerSpan{
+    width: 100%;
+    font-size: 11px;
     justify-content: center;
 }
 .tablet .footerMediaButtons{
@@ -46,6 +49,8 @@
     align-self: center;
 }
 .mobile .footerSpan{
+    width: 100%;
+    font-size: 11px;
     justify-content: center;
 }
 .mobile .footerMediaButtons{

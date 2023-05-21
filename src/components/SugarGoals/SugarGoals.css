@@ -4,16 +4,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 }
 .sugarGoalHeader{
-    width: 686px;
-    height: 139px;
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 61px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }
@@ -37,13 +35,12 @@
 }
 .sugarGoalsHeader{
     height: 34px;
-    width: 150px;
+    width: 190px;
     font-style: normal;
     font-weight: 600;
     font-size: 27px;
     line-height: 66px;
     text-align: center;
-    letter-spacing: -1px;
 }
 .sugarGoalsSpan{
     height: 74px;
@@ -62,11 +59,10 @@
 }
 .goalsBubble{
     position: absolute;
-    left: 750px;
-    top: 1500px;
+    right: 0px;
     z-index: -1;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 1200px){
     .SugarGoalsContainer{
         height: 750px;
     }
@@ -120,11 +116,8 @@
     }
     .sugarGoalHeader{
         display: flex;
-        width: 347px;
-        height: 70px;
         font-size: 26px;
         position: relative;
-        top: 200px;
     }
     .sugarGoalsHeader{
         width: 120px;
@@ -150,8 +143,8 @@
         display: none;
     }
     .goalsShadow{
-        position: relative;
-        bottom: 180px;
+        position: absolute;
+        bottom: 60px;
     }
     .goalsLine{
         width: 414px !important;
@@ -159,6 +152,71 @@
         bottom: 162px;
     }
     .goalsShadow{
-        width: 500px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .SugarGoalsContainer{
+        justify-content: normal;
+    }
+    .sugarGoalsElements2{
+        height: 100%;
+        gap: 55px;
+    }
+    .sugarGoals{
+        position: absolute;
+        top: auto;
+    }
+    .sugarGoalsElementsGroup{
+        top: auto;
+        justify-content: center;
+    }
+    .sugarGoalsElement{
+        gap: 0px;
+        bottom: 5px;
+        left: 5px;
+    }
+    .sugarGoalsImage{
+        top: auto;
+        height: auto;
+    }
+    .sugarGoalsHeader{
+        width: auto;
+        height: auto;
+    }
+    .sugarGoalsSpan{
+        width: 134px;
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .goals1v1{
+        width: 188px !important;
+        top: 165px;
+        right: 87px;
+    }
+    .goals2v1{
+        bottom: 25px;
+        left: 100px;
+        width: 170px !important;
+    }
+    .goals3v1{
+        width: 190px !important;
+        left: 80px;
+        bottom: 40px;
+    }
+    .goals4v1{
+        bottom: 230px;
+        right: 86px;
+        width: 170px !important;
+    }
+    .goalsShadow{
+        width: 250px;
+    }
+    .sugarGoals{
+        width: 53%;
+    }
+    .goalsLine{
+        width: 100% !important;
     }
 }

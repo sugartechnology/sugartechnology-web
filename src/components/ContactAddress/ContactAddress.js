@@ -6,7 +6,7 @@ export const ContactAddress = props =>{
             <img className='contactBackground' alt='' src={'./assets/img/contactAddressBackground.svg'} style={{width:"100%"}}></img>
             <div className='contactAddressInformation'>
                 <div className='contactAddress'>
-                    <img className='contactLogo' alt='' src={'./assets/img/headerLogo.svg'}></img>
+                    <img className='contactLogo2' alt='' src={'./assets/img/headerLogo.svg'}></img>
                     <div className='addressContainer'>
                         <div className='addressLogo'>
                             <img alt="" src={'assets/img/addressVector.svg'}></img>

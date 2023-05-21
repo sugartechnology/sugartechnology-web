@@ -281,6 +281,7 @@
 .robotSpan{
     width: 400px;
     height: 30px;
+    font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
     font-size:  13px;
@@ -317,7 +318,7 @@
 .popupMediaCenterButton:hover,
 .popupMediaCenterButton a:hover{
   background-color: #F3E7E6;
-  color: red;
+  color: #d23b1a;
 }
 
 .popupMediaCenterButton a {
@@ -330,12 +331,13 @@
 
 .mediaCenterButton:hover,
 .mediaCenterButton a:hover{
-  background-color: red;
+  background-color: #d23b1a;
   color: white;
 }
 
 .mediaCenterButton a {
   color: red;
+  text-decoration: none;
 }
 
 .mediaCenterButton:hover a {
@@ -426,9 +428,9 @@
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
     position: absolute;
-    left: 743px;
+    left: 208px;
     z-index: 6;
-    top: 160px;
+    top: 90px;
     justify-content: space-around;
 }
 
@@ -517,9 +519,9 @@
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
     position: absolute;
-    left: 743px;
+    left: 208px;
     z-index: 6;
-    top: 70px;
+    top: 0px;
     justify-content: space-around;
 }
 
@@ -633,7 +635,7 @@
 
 .askYourQuestionRobot{
     position: absolute;
-    right: 40px;
+    right: 100px;
     top: 580px;
     cursor: pointer;
 }
@@ -662,11 +664,9 @@
 .mobile .languageButton{
     gap: 0px;
     width: 60px;
-    right: 20px;
 }
 .mobile .languagePopup{
-    right: 30px;
-
+    right: 10px;
 }
 .mobile .productServicesPopup{
     display: flex;
@@ -681,7 +681,7 @@
     left: 0px;
 }
 .mobile .askYourQuestionRobot{
-    left: auto;
+    right: 40px;
     top: 590px;
     width: 150px;
 }
@@ -691,4 +691,7 @@
 .mobile .robot{
     width: 57px;
     left: 90px;
+}
+.mobile .headerButtons{
+    right: 0px;
 }

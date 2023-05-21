@@ -23,14 +23,16 @@ export const Watch = props =>{
         }}></div>
         <div className='mainPageSmallFigure0 '></div>
             <div className='showAtHomeSpans'>
-                <a className='showAtHomeHeader'>{t("watchContainerHeader")}</a>
-                <a className='showAtHomeSpan'>{t("watchContainerSpan")}</a>
+                <div className='showAtHomeSpanElements'>
+                    <a className='showAtHomeHeader'>{t("watchContainerHeader")}Lorem ipsum dolor  consectetur.</a>
+                    <a className='showAtHomeSpan'>{t("watchContainerSpan")}Lorem ipsum dolor sit amet consectetur. Erat dui quis ac mollis malesuada. Eu neque non ipsum in egestas quam mattis. </a>
+                </div>
                 <div className='showAtHomeButtons'>
                     <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
                     <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>
                 </div>
             </div>
-            <div>
+            <div className='watchImageDiv'>
                 <img className='watchImage' alt='' src={'./assets/img/watchImage.svg'}></img>
             </div>
         </div>

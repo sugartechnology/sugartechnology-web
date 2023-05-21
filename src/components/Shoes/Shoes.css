@@ -1,24 +1,52 @@
 .shoesContainer{
-    height: 730px;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
     margin-top: 60px;
+    position: relative;
+    align-items: center;
 }
-.shoesImage{
+
+.shoesImageDiv{
     position: absolute;
-    top: 72px;
-    left: 700px;
-    width: 665px;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
-@media screen and (max-width: 500px){
-    .shoesContainer{
-        height: 900px;
-        width: 414px;
-    }
-    .shoesImage{
-        width: 400px;
-        left: 0px;
-        top: 523px;
-    }
+
+.shoesImage{
+    position: relative;
+    width: 92%;
+}
+
+
+.tablet .shoesImageDiv{
+    position: absolute;
+    right: auto;
+    width: 40%;
+    bottom: 0px;
+    height: 50%;
+}
+
+.tablet .shoesImage{
+    position: absolute;
+    bottom: 0px;
+}
+
+.mobile .shoesImageDiv{
+    position: absolute;
+    right: auto;
+    width: 40%;
+    bottom: 0px;
+    height: 50%;
+}
+
+.mobile .shoesImage{
+    position: absolute;
+    bottom: 0px;
+    width: 200px;
 }

@@ -1,5 +1,5 @@
 .productStatisticsContainer{
-    height: 536px;
+    height: 60vh;
     display: flex;
     background: white;
     gap: 50px;
@@ -7,92 +7,90 @@
 }
 .productStatisticsHeader{
     display: flex;
-    height: 170px;
-    width: 100%;
+    height: 140px;
+    width: 80%;
     line-height: 57px;  
     text-align: left;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
     line-height: 56px;
-    letter-spacing: -1px;
     color: #000000;
 }
 .productStatisticsSpans{
-    width: 100%;
+    width: 60%;
     display: flex;
     height: 130px;
     font-style: normal;
-    font-weight: lighter;
+    font-weight: 250;
     font-size: 20px;
     line-height: 26px;
     text-align: justify;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
-    gap: 40px;
+    gap: 20px;
     flex-direction: column;
 }
 .productStatisticsSpanElements{
     display: flex;
     flex-direction: column;
-    position: relative;
-    left: 100px;
+    position: absolute;
+    left: 80px;
     top: 100px;
+    width: 60%;
 }
 .productStatisticsImage{
-    position: relative;
-    top: 100px;
+    position: absolute;
+    right: 70px;
+    bottom: 106px;
 }
 
-.tablet .productStatisticsContainer{
-    flex-direction: column;
-    justify-content: normal;
-    height: 533px;
-    align-items: center;
-}
-.tablet .productStatisticsHeaders{
-    height: 50%;
-}
-.tablet .productStatisticsSpanElements{
-    top: 30px;
-    left: auto;
-}
-.mobtabletile .productStatisticsHeader{
-    height: 120px;
-    font-size: 29px;
-    position: relative;
-}
-.tablet .productStatisticsSpans{
-    font-size: 18px;
-    gap: 10px;
-    position: relative;
-    height: 50%;
-}
-.tablet .productStatisticsImage img{
-    width: 300px;
-}
-.tablet .productStatisticsImage{
-    top: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+@media screen and (max-width: 1200px) {
+
+    .productStatisticsContainer{
+        flex-direction: column;
+        justify-content: normal;
+        height: 533px;
+        align-items: center;
+    }
+    .productStatisticsSpanElements{
+        left: auto;
+    }
+    .productStatisticsHeader{
+        height: 120px;
+        font-size: 29px;
+        position: relative;
+    }
+    .productStatisticsSpans{
+        font-size: 13px;
+        gap: 10px;
+        position: relative;
+    }
+    .productStatisticsImage img{
+        width: 300px;
+    }
+    .productStatisticsImage{
+        top: 150px;
+    }
 }
 
 .mobile .productStatisticsContainer{
     flex-direction: column;
     justify-content: normal;
-    height: 533px;
+    height: 55vh;
     align-items: center;
 }
 .mobile .productStatisticsSpanElements{
-    top: 30px;
     left: auto;
+    top: auto;
+    align-items: center;
+    width: 100%;
 }
 .mobile .productStatisticsHeader{
-    height: 120px;
+    width: 100%;
+    height: auto;
     font-size: 29px;
-    position: relative;
+    text-align: center;
 }
 .mobile .productStatisticsSpans{
     font-size: 13px;
@@ -103,5 +101,17 @@
     width: 300px;
 }
 .mobile .productStatisticsImage{
-    top: 0px;
+    top: auto;
+    bottom: 40px;
+    right: auto;
+}
+.mobile .productStatisticsSpanElementsDiv{
+    height: 100% !important;
+    justify-content: center !important;
+}
+
+@media screen and (max-width: 500px) {
+    .productStatisticsContainer{
+        height: 90vh !important;
+    }
 }

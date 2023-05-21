@@ -1,30 +1,26 @@
 .metaReportsContainer{
-    height: 800px;
+    height: 70vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 .metaReportsSpans{
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 40px;
     gap: 30px;
 }
 .metaReportsHeader{
-    height: 155px;
     width: 600px;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 66px;
-    letter-spacing: -1px;
     color: #000000;
 }
 .metaReportsSpan{
     width: 594px;
-    height: 70px;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -37,27 +33,74 @@
     gap: 10px;
     flex-direction: column;
 }
-@media screen and (max-width: 500px){
-    .metaReportsContainer{
-        flex-direction: column-reverse;
-        height: 1000px;
-    }
-    .metaReportsHeader{
-        width: 333px;
-        font-size: 24px;
-    }
-    .metaReportsSpan{
-        width: 322px;
-        font-size: 16px;
-    }
-    .metaReportsList{
-        font-size: 16px;
-        position: relative;
-        right: 25px;
-        top: 20px;
-    }
-    .metaReportsImg img{
-        width: 320px !important;
-        right: 10px;
-    }
+
+.metaReportsImage{
+    width: 500px;
+}
+
+
+.tablet .metaReportsContainer{
+    height: 85vh;
+}
+
+.tablet .metaReportsImg{
+    position: absolute;
+    bottom: 100px;
+}
+
+.tablet .metaReportsImage{
+    width: 300px;
+}
+
+.tablet .metaReportsSpans{
+    position: absolute;
+    top: 10px;
+    right: auto;
+    align-items: center;
+}
+
+.tablet .metaReportsHeader{
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.tablet .metaReportsSpan{
+    width: 80%;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+.mobile .metaReportsContainer{
+    height: 93vh;
+}
+
+.mobile .metaReportsImg{
+    position: absolute;
+    bottom: 100px;
+}
+
+.mobile .metaReportsImage{
+    width: 300px;
+}
+
+.mobile .metaReportsSpans{
+    position: absolute;
+    top: 10px;
+    right: auto;
+    align-items: center;
+}
+
+.mobile .metaReportsHeader{
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile .metaReportsSpan{
+    width: 80%;
+    font-size: 16px;
+    text-align: center;
 }

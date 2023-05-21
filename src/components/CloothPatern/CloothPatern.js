@@ -7,7 +7,7 @@ export const CloothPatern = props =>{
         <div className='cloothPaternContainer'>
             <div className='cloothPaternSpans'>
                 <a className='cloothPaternHeader'>ghqwauhjkvbfb</a>
-                <a className='cloothPaternSpan'>jnvadhjbvngjbefhjbjkvngjbefhjbjkfdbnjdgnbjdfkbsdfnbjdsvngjbefhjbjkfdbnjdgnbjdfkbsdfnbjdsfdbnjdgnbjdfkbsdfnbjdsfdbaf</a>
+                <a className='cloothPaternSpan'>jnvadhjbvngjbe fhjbjkvngjbefhjb jkfdbnjdgnbjdfk bsdfnbjdsvngjbefhj jkfdbnjdgnbjd fkbsdfnbjdsfdbnjdgnbjd fkbsdfnbjdsfdbaf</a>
             </div>
             <div className='cloothPaternElements'>
                 <img className='cloothPaternImage1' alt='' src={'./assets/img/cloothPaternImage1.svg'}></img>

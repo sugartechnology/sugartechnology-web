@@ -1,11 +1,12 @@
 .ShowAtHomeContainer{
     width: 100%;
-    height: 730px;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
     margin-top: 60px;
     position: relative;
+    align-items: center;
 }
 .showAtHomeBubbles{
     position: absolute;
@@ -16,22 +17,29 @@
     flex-direction: column;
     position: absolute;
     left: 100px;
-    top: 80px;
     gap: 100px;
     flex: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 613px;
+    height: 516px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 42px;
+    z-index: 1;
 }
 .showAtHomeHeader{
-    height: 100px;
-    width: 510px;
+    width: 80%;
     font-style: normal;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 40px;
     line-height: 66px;
-    letter-spacing: -1px;
     color: #000000;
 }
 .showAtHomeSpan{
-    width: 497px;
+    width: 80%;
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
@@ -41,15 +49,25 @@
     color: #000000;
 }
 .showAtHomeImage{
-    position: relative;
-    width: 500px;
+    width: 100%;
 }
 .showAtHomeButtons{
     display: flex;
     flex-direction: row;
     gap: 30px;
-    position: relative;
-    bottom: 50px;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+}
+
+.showAtHomeSpanElements{
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    width: 82%;
 }
 
 .slideDetailButton{
@@ -70,6 +88,10 @@
     font-size: 15.9998px;
     line-height: 18px;
     text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: #FFFFFF;
   }
 .showAtHomeButton1{
@@ -82,22 +104,32 @@
     position: relative;
 }
 .showAtHomeButton1:hover{
-    background: red;
+    background: #ED401A;
     color: white;
 }
-.showAtHomeButton1 a {
+.showAtHomeButton1 a{
   color: white;
 }
-.showAtHomeButton1:hover a {
+.showAtHomeButton1:hover a{
   color: white;
 }
 .showAtHomeButton2:hover,
 .showAtHomeButton2 a:hover{
-    background: red;
+    background: #ED401A;
     color: white;
 }
-.showAtHomeButton2 a {
-  color: red;
+.showAtHomeButton2 a{
+  height: 26px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    width: 200px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ED401A;
 }
 .showAtHomeButton2:hover a {
   color: white;
@@ -125,54 +157,52 @@
     align-items: center;
     justify-content: center;
 }
-.showAtHomeButton2 a{
-    height: 26px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    width: 150px;
-    line-height: 26px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ED401A;
-}
 .showAtHomeImageDiv{
     position: absolute;
-    right: 100px;
+    right: 10px;
     flex: 50%;
 }
 .tablet .ShowAtHomeContainer{
     height: 1000px;
 }
 .tablet .showAtHomeSpans{
-    top: auto;
-    bottom: 0px;
+    top: 35px;
     left: auto;
+    height: 390px;
+}
+.tablet .showAtHomeHeader{
+    font-size: 27px;
+    line-height: 42px;
+}
+.tablet .showAtHomeSpan{
+    font-size: 20px;
 }
 .tablet .showAtHomeImageDiv{
     right: auto;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
 }
 .mobile .ShowAtHomeContainer{
     height: 900px;
 }
 .mobile .showAtHomeHeader{
-    width: 300px;
-    font-size: 29px;
+    width: auto;
+    font-size: 27px;
+    line-height: 35px;
     position: relative;
 }
 .mobile .showAtHomeSpan{
-    width: 246px;
+    line-height: 25px;
     font-size: 17px;
     position: relative;
 }
-.mobile .showAtHomeButtons{
-    bottom: 0px;
-}
 .mobile .showAtHomeButton1{
-    width: 100px;
+    width: 110px;
     height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .mobile .showAtHomeButton1 a{
     width: 90px;
@@ -180,28 +210,42 @@
     font-size: 13px;
 }
 .mobile .showAtHomeButton2{
-    width: 100px;
+    width: 110px;
     height: 35px;
 }
 .mobile .showAtHomeButton2 a{
-    width: 71px;
+    width: 100px;
     height: 26px;
-    font-size: 13px;
+    font-size: 11px;
+    line-height: 12px;
 }
 .mobile .showAtHomeImageDiv{
-    top: 40px;
+    bottom: 0px;
     right: auto;
     width: auto;
+    display: flex;
+    justify-content: center;
 }
 .mobile .showAtHomeImage{
-    width: 400px;
     left: auto;
     top: auto;
 }
 .mobile .showAtHomeSpans{
-    gap: 40px;
-    bottom: 30px;
-    top: auto;
+    top: 56px;
     left: auto;
-    position: absolute;
+    height: 390px;
+    width: 80%;
+}
+.mobile .showAtHomeButtons{
+    gap: 20px;
+}
+
+.mobile .mainPageTopLeftFigure{
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .showAtHomeImage{
+        width: 80%;
+    }
 }

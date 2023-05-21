@@ -2,76 +2,85 @@
     height: 900px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .jointAboutElements{
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 90px;
+    height: 100%;
+    justify-content: space-evenly;
 }
 .jointAboutHeader{
     height: 100px;
-    width: 769px;
+    width: 100%;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
     line-height: 56px;
     text-align: center;
-    letter-spacing: -1px;
     color: #000000;
 }
 .jointAboutSpan{
-    width: 652px;
+    width: 50%;
     height: 150px;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
     text-align: center;
-    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }
 .jointAboutBubble{
     position: absolute;
-    left: 630px;
+    right: 0px;
     z-index: -1;
 }
 .jointShadow{
     position: absolute;
-    top: 684px;
-    width: 770px;
+    bottom: -43px;
+    width: 700px;
     z-index: -1;
     opacity: 0.5;
 }
-@media screen and (max-width: 500px){
-    .jointAboutContainer{
-        height: 600px;
-    }
-    .jointAboutHeader{
-        width: 341px;
-        font-size: 29px;
-        position: relative;
-        bottom: 50px;
-    }
-    .jointAboutSpan{
-        width: 364px;
-        font-size: 13px;
-        position: relative;
-        bottom: 20px;
-    }
-    .jointAboutImage{
-        position: relative;
-        top: none;
-        bottom: 30px;
-        width: 300px;
-    }
-    .jointShadow{
-        top: 387px;
-        width: 300px;
-    }
-    .jointAboutBubble{
-        display: none;
-    }
+.jointAboutImage{
+    width: 700px;
 }
+
+
+.mobile .jointAboutContainer{
+    height: 70vh;
+}
+.mobile .jointAboutHeader{
+    width: 341px;
+    font-size: 29px;
+}
+.mobile .jointAboutSpan{
+    width: 80%;
+    font-size: 13px;
+    position: relative;
+    bottom: 20px;
+    height: 120px;
+    line-height: 24px;
+}
+.mobile .jointAboutImage{
+    position: relative;
+    top: auto;
+    bottom: 30px;
+    width: 80%;
+}
+.mobile .jointShadow{
+    bottom: 7px;
+    width: 400px;
+}
+.mobile .jointAboutBubble{
+    display: none;
+}
+
+
+.tablet .jointAboutBubble{
+    display: none;
+}
+

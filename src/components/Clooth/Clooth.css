@@ -1,24 +1,47 @@
 .cloothContainer{
-    height: 730px;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
     margin-top: 60px;
+    align-items: center;
+    position: relative;
 }
 .cloothImage{
     position: absolute;
-    top: 100px;
-    left: 800px;
     width: 500px;
+    right: 0px;
 }
-@media screen and (max-width: 500px){
-    .cloothContainer{
-        width: 100%;
-        height: 900px;
-    }
-    .cloothImage{
-        top: 422px;
-        left: 0px;
-        width: 400px;
-    }
+.cloothImageDiv{
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+}
+.tablet .cloothImageDiv{
+    width: 100%;
+    height: 50%;
+    right: auto;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.tablet .cloothImage{
+    width: 30%;
+    position: relative;
+}
+
+.mobile .cloothImageDiv{
+    width: 100%;
+    height: 50%;
+    right: auto;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile .cloothImage{
+    width: 30%;
+    position: relative;
 }

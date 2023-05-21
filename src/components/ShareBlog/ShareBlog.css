@@ -15,7 +15,6 @@
     font-size: 37px;
     line-height: 66px;
     text-align: center;
-    letter-spacing: -1px;
     color: #000000;
 }
 .shareBlogSpan{
@@ -42,8 +41,6 @@
     cursor: pointer;
 }
 .shareBlogButton a{
-    width: 82px;
-    height: 26px;
     font-style: normal;
     font-weight: 700;
     font-size: 15px;

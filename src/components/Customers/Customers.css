@@ -1,4 +1,4 @@
-.swiper-slide {
+  .swiper-slide {
     text-align: center;
     font-size: 18px;
     /* Center slide text vertically */
@@ -10,7 +10,7 @@
   
   .swiper-slide img {
     display: block;
-    width: 200px!important;
+    width: 170px!important;
     height: auto;
     object-fit: cover;
   }
@@ -52,11 +52,9 @@
   }
 
   .customersSpan{
-    position: relative;
-    bottom: 240px;
-    left: 490px;
-    width: 875px;
-    height: 37px;
+    position: absolute;
+    top: 30px;
+    width: 100%;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -77,6 +75,46 @@
   .swiper-button-prev{
     left: 60px !important;
   }
+
+  .tablet .swiper-wrapper{
+    width: 100% !important;
+    left: 15%;
+  }
+
+  .tablet .swiper-button-next{
+    right: 10px !important;
+  }
+
+  .tablet .swiper-button-prev{
+    left: 10px !important;
+  }
+
+  .tablet .swiper-slide img{
+    width: 120px !important;
+  }
+
+  .mobile .swiper-slide img{
+    width: 65px !important;
+  }
+
+  .mobile .swiper-wrapper{
+    width: 60% !important;
+    left: 20% !important;
+  }
+
+  .mobile .swiper-button-next{
+    right: 10px !important;
+  }
+
+  .mobile .swiper-button-prev{
+    left: 10px !important;
+  }
+
+  .mobile .customersSpan{
+    font-size: 14px;
+  }
+
+
 @media screen and (max-width: 500px){
   .swiper-container {
     width: 500px;
@@ -92,12 +130,6 @@
   }
   .swiper-wrapper{
     left: 50px;
-  }
-  .customersSpan{
-    display: flex;
-    bottom: 240px;
-    left: 25px;
-    width: 375px;
   }
 }
   
