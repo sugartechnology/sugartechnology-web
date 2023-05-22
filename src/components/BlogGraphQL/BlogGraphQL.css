@@ -1,5 +1,5 @@
 .blogGraphQLContainer{
-    height: 92vh;
+    height: 95vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -18,7 +18,6 @@
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 100%;
 }
 .blogGraphHeader{
     font-style: normal;
@@ -38,7 +37,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #D0C8C8;
+    color: #F5F5F5;
 }
 
 

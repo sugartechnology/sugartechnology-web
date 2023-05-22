@@ -148,6 +148,19 @@ export const Header = props => {
         popupOption1.style.display = "none";
         
     }
+    const closePopupOption1 = () => {
+        var popupOption1 = document.getElementById("firstPopup");
+        popupOption1.style.display = "none";
+    }
+    const closePopupOption2 = () => {
+        var popupOption2 = document.getElementById("secondPopup");
+        popupOption2.style.display = "none";
+    }
+
+    const closePopups = () => {
+        closePopupOption1();
+        closePopupOption2();
+    }
     
     return(
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} headerContainer`} id='headerContainer'>
@@ -247,7 +260,7 @@ export const Header = props => {
                         <div className='secondPopupSecondOption'><a href='/productJoint' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("createProduct")}</a></div>
                     </div>
                     <img className='popupLine' alt='' src={'./assets/img/popupLine.svg'}></img>
-                    <div className='popupOption' style={{top: "0px"}}><a href='/productMeta'>{t("metaverse")}</a></div>
+                    <div className='popupOption' onMouseOver={closePopups} style={{top: "0px"}}><a href='/productMeta'>{t("metaverse")}</a></div>
                     <img className='popupLine' alt='' src={'./assets/img/popupLine.svg'}></img>
                     <div className='popupOption' id='thirdPopupOption' onMouseOver={showPopupOption2} style={{top: "0px"}}><a>{t("vton")}</a><img className='popupVector' id='vector2' alt='' src={'./assets/img/popupVector.svg'}></img></div>
                     <div className='secondPopup' id='secondPopup' style={{display: "none"}}>

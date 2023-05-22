@@ -6,26 +6,34 @@ export const CustomerComments = props => {
     const { t } = useTranslation();
     const [index, setIndex] = useState(0);
     const array = [{
-        trustedByMillionsOfCompany: "Evinde Gör ile Binlerce Müşterimize Ulaştık",
+        trustedByMillionsOfCompany: "commentHeader",
         commentSpan: "commentSpan",
-        commentHeader: "Timurg Sanat Evi",
+        commentHeader: "Simurg Sanat Evi",
         commentAuthor: "Tuğba Karayel Özcan",
         customerPhoto: "https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/tugba_karayel.jpeg"
     },
     {
-        trustedByMillionsOfCompany: "trustedByMillionsOfCompany3",
-        commentSpan: "commentSpan2",
+        trustedByMillionsOfCompany: "commentHeader3",
+        commentSpan: "commentSpan3",
         commentHeader: "Tepe Home",
         commentAuthor: "Yesim Korkmaz",
         customerPhoto : "https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/yesim_korkmaz.jpeg"
     },
     {
         trustedByMillionsOfCompany: "commentHeader3",
-        commentSpan: "commentSpan3",
+        commentSpan: "commentSpan2",
         commentHeader: "Eko Halı",
-        commentAuthor: "Ceren Evcimen",
+        commentAuthor: "Zeynep Yücel",
         customerPhoto : "assets/img/cereen_evcimen.jpeg"
-    }];
+    },
+    {
+        trustedByMillionsOfCompany: "commentHeader4",
+        commentSpan: "commentSpan4",
+        commentHeader: "KYS",
+        commentAuthor: "Serçil Tombak",
+        customerPhoto : "assets/img/kys.JPG"
+    }
+];
 
     const next = () => {
         setIndex((index + 1) % array.length);
@@ -52,7 +60,6 @@ export const CustomerComments = props => {
                         <img className='customerPhoto' alt=''src={t(array[index].customerPhoto)}></img>
                         <h1>{t(array[index].commentAuthor)}</h1>
                         <a>{array[index].commentHeader}</a>
-                        <img className='commentStar' alt='' src={'assets/img/Star.svg'}></img>
                     </div>
                 </div>
 

@@ -10,17 +10,17 @@
 }
 
 .contactAddressContainer{
-    height: 100vh;
+    height: 140vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .addressContainer{
     display: flex;
     gap: 10px;
     position: relative;
     left: 40px;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
 }
 .addressSpan{
     display: flex;
@@ -33,19 +33,18 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 50px;
+    justify-content: center;
 }
 .contactLogo2{
     position: relative;
-    width: 160.08px;
-    height: 58.46px;
+    width: 60%;
     cursor: pointer;
-    bottom: 30px;
+    left: 50px;
 }
 .location{
     position: relative;
     left: 100px;
-    width: 500px;
+    width: 470px;
     height: 298px;
     border-radius: 20px;
     border: 2px solid #A5A5A5;

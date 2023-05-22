@@ -5,19 +5,29 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 export const ContactInput = props =>{
     const {t} = useTranslation();
-
+    const [recaptchaResponse, setRecaptchaResponse] = useState("");
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [message, setMessage] = useState("");
     const [isHuman, setIsHuman] = useState(false);
 
-    const handleRecaptchaChange = (value) => {
-        setIsHuman(true);
+    const handleRecaptchaChange = (response) => {
+        setRecaptchaResponse(response);
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (isHuman) {
+
+        const response =  fetch("/api/verify-recaptcha", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ recaptchaResponse })
+        });
+
+        const result = response.json();
+        if (result.success) {
             submitForm();
         } else {
             alert("Please verify that you are a human!");
@@ -34,14 +44,17 @@ export const ContactInput = props =>{
     }
   
     function sendFormData(form) {
-        var thizz = this;
+        
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(form));
-        inputDonePopup();
+        xhr.onreadystatechange = 
+        
+        inputDonePopup.bind(xhr);
     }
-    function inputDonePopup() {
+    
+    function inputDonePopup(e) {
         let inputPopup = document.getElementById('inputDonePopup');
         let overlay = document.getElementById("overlay");
         let btn = document.getElementById('inputPopupCloseButton');
@@ -111,7 +124,7 @@ export const ContactInput = props =>{
                     sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
                     onChange={handleRecaptchaChange}/>
                 <div className='contactInputButtons'>
-                    <button className='sendMessageButton' onClick={(e)=>{handleSubmit.bind(this)}}><a>{t("sendMessage")}</a></button>
+                    <button className='sendMessageButton' onClick={handleSubmit}><a>{t("sendMessage")}</a></button>
                 </div>
             </div>
             <div className='inputDonePopup' id='inputDonePopup'>

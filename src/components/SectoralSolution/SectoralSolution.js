@@ -103,7 +103,6 @@ export const SectoralSolution = props =>{
         <div className='sectoralSolutionContainer'>
             <div className='sectoralSolutionHeader'>
                 <a className='sectoralSolutionSpan'>{t("sectoralSolution")}</a>
-                <img className='sectoralSolutionLine' alt='' src={'./assets/img/sectoralSolutionLine.svg'}></img>
             </div>
             <div className='solution' id='solution1'>
                 <div className='solutionSpans' id='leftSpans'>
@@ -122,7 +121,7 @@ export const SectoralSolution = props =>{
                     <img alt='' src={'./assets/img/solutionImg2.svg'} id='leftImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
-                <div className='solutionSpans' style={{position: "relative", left: "100px"}} id='rightSpans'>
+                <div className='solutionSpans' id='rightSpans'>
                     <a className='solutionHeader'>{t("solutionHeader2")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
                     <a className='solutionSpan'>{t("solutionSpan2")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. Euismod morbi placerat mi iaculis augue accumsan.</a>
                     <button className='solutionButton'><a>{t("readMore")}</a></button>
@@ -157,7 +156,7 @@ export const SectoralSolution = props =>{
                     <img alt='' src={'./assets/img/solutionImg4.svg'} id='leftImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
-                <div className='solutionSpans' style={{position: "relative", left: "100px"}} id='rightSpans'>
+                <div className='solutionSpans' id='rightSpans'>
                     <a className='solutionHeader'>{t("solutionHeader4")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
                     <a className='solutionSpan'>{t("solutionSpan4")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. Euismod morbi placerat mi iaculis augue accumsan.</a>
                     <button className='solutionButton'><a>{t("readMore")}</a></button>

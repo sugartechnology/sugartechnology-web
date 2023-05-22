@@ -38,7 +38,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
-    line-height: 0px;
+    line-height: 60px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -49,6 +49,7 @@
     background-clip: text;
 }
 .contactInputSpan{
+    width: 90%;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -68,7 +69,6 @@
     gap: 10px;
 }
 .nameInputSpan{
-    width: 85px;
     height: 19px;
     font-style: normal;
     font-weight: 700;
@@ -104,6 +104,7 @@
 .descriptionInputs{
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .descriptionInput{
     height: 150px;
@@ -112,6 +113,7 @@
     border: 1px solid #D2D6DA;
     border-radius: 8px;
     padding: 8px;
+    font-family: 'Inter';
 }
 textarea {
     resize: none;
@@ -141,17 +143,14 @@ textarea {
     color: #FFFFFF;
 }
 .descriptionInputSpan{
-    width: 200px;
     height: 19px;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 106px;
+    line-height: 66px;
     display: flex;
-    color: #252F40;
     align-items: center;
-    position: relative;
-    bottom: 5px;
+    color: #252F40;
 }
 .nameEmailInput::placeholder{
     position: relative;

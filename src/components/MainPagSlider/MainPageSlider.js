@@ -52,13 +52,10 @@ export const MainPageSlider = (props) => {
         setTimeout(() => {
             ref.current.classList.add("slideDetail");
         }, 50);
-        console.log("ref is ", ref);
         setTimeOutId(setTimeout(() => {
-            
             setIndex((indexRef.current + 1) % props.children.length);
             setPrevIndex(indexRef.current);
         }, 5000));
-        console.log("index", index);
     }, [index]);
 
     return (<div className='mainPageSliderContainer'>

@@ -28,6 +28,12 @@ export const SugarTeam = props =>{
                     <a className='leaderPosition'>{t("cgiTeamLeader")}</a>
                     <a className='leaderComment'>{t("leader3CommentSpan")}</a>
                 </div>
+                <div className='sugarTeamLeader' id='leader4'>
+                    <img alt='' src={'./assets/img/erdemPp.svg'}></img>
+                    <a className='leaderName'>Şükrü Erdem Şahin</a>
+                    <a className='leaderPosition'>{t("cgiTeamLeader")}</a>
+                    <a className='leaderComment'>{t("leader3CommentSpan")}</a>
+                </div>
             </div>
         </div>
     );

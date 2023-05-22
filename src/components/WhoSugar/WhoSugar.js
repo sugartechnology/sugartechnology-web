@@ -19,7 +19,7 @@ export const WhoSugar = props =>{
                 <a className='whoSugarSpan'>{t("whoSugarSpan2")}2019 yılından günümüze Sugar, 22.000'nin üzerinde ürünün dijital ikizini oluşturmuş, müşterileri için bu 3D modellerin, e-ticaret, sosyal medya, Cad programları ve BIM için uygun formatlarda hedef kitlelere ulaştırılmasını sağlamıştır.</a>
             </div>
             <div className='whoSugarLogos'>
-                <img className='whoSugarLogo1' alt='' src={'./assets/img/sketch_business.svg'}></img>
+                <img className='whoSugarLogo1' alt='' src={'./assets/img/whoSugarImage.svg'}></img>
                 <img className='whoSugarLogo2' alt='' src={'./assets/img/WhoSugarLogo7.svg'}></img>
             </div>
         </div>

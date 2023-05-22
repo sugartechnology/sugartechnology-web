@@ -1,10 +1,10 @@
 .contactCvContainer{
-    height: 120vh;
+    height: 130vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 90px;
 }
 .contactCvInputs{
     width: 770px;
@@ -69,11 +69,9 @@ input[type=file]::file-selector-button {
     color: #252F40;
 }
 .contactCvHeader{
-    width: 70%;
     height: 41px;
     font-style: normal;
     position: relative;
-    left: 100px;
     font-weight: 700;
     font-size: 30px;
     line-height: 0px;
@@ -105,14 +103,25 @@ input[type=file]::file-selector-button {
 .contactOptions{
     position: absolute;
     bottom: 220px;
-    left: 60px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 85%;
+}
+.contactCvSpan{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #67748E;
 }
 .contactOption{
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 .contactOption img{
     width: 13px;
