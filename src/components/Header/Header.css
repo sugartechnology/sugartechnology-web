@@ -678,9 +678,9 @@
     box-shadow: none;
 }
 .tablet .askYourQuestionRobot{
-    right: 40px;
-    top: 590px;
     width: 150px;
+    right: 5vh;
+    top: 92vh;
 }
 .tablet .robotSpans{
     display: none;
@@ -692,7 +692,6 @@
 .tablet .headerButtons{
     right: 0px;
 }
-
 
 .mobile .headerContainer{
     justify-content: normal;

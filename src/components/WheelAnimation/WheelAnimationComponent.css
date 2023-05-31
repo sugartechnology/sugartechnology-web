@@ -60,8 +60,8 @@
 }
 
 .tablet .wheelAnimationItemsContainer{
-    right: auto;
-    bottom: 60px;
+    right: 0vh;
+    bottom: 0vh;
 }
 
 .mobile .wheelAnimationItemsContainer{

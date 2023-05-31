@@ -10,8 +10,8 @@ export const MainPage = ()=>{
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 800);
-            setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+            setIsMobile(window.innerWidth <= 700);
+            setIsTablet(window.innerWidth > 700 && window.innerWidth <= 1100);
             
         };
 
