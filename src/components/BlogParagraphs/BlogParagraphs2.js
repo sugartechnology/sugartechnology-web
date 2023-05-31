@@ -6,7 +6,7 @@ export const BlogParagraphs2 = props =>{
     return(
         <div className='blogParagraphs2Container'>
             <div className='paragraph' style={{marginTop: "40px"}}>
-                <a className='paragraphHeader'>{t("paragraphHeader2")}Konsept Üretmek…</a>
+                <a className='paragraphHeader'>{t("paragraphHeader2")}</a>
                 <a className='secondParagraphList'>{t("paragraphList2Span1")}</a>
                 <a className='secondParagraphList'>{t("paragraphList2Span2")}</a>
                 <a className='secondParagraphList'>{t("paragraphList2Span3Part1")}  <a style={{textDecoration: "none", color: "#039be5"}} href="https://bigumigu.com/haber/netfax-ten-aaskanaklarla-sekillenen-kisiye-ozel-gorsel-dunya/">{t("paragraphList2Span3Part2")}</a> {t("paragraphList2Span3Part2")} </a>

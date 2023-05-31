@@ -162,12 +162,12 @@ textarea {
 }
 
 .mobile .contactInputContainer{
-    height: 120vh;
+    height: 100vh;
 }
 
 .mobile .contactInputs{
     width: 370px;
-    height: 790px;
+    height: 810px;
 }
 .mobile .contactInputSpan{
     width: 300px;

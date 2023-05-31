@@ -79,12 +79,12 @@
 
 .mobile .sugarTeamLeaders{
     flex-direction: column;
-    gap: 0px;
+    gap: -1px;
     height: 100%;
 }
 
 .mobile .SugarTeamContainer{
-    height: 130vh;
+    height: 140vh;
     justify-content: flex-start;
 }
 

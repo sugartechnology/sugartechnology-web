@@ -141,12 +141,12 @@ input[type=file]::file-selector-button {
 }
 
 .mobile .contactCvContainer{
-    height: 150vh;
+    height: 145vh;
 }
 
 .mobile .contactCvInputs{
     width: 370px;
-    height: 1260px;
+    height: 1210px;
     gap: 30px;
 }
 
@@ -173,8 +173,6 @@ input[type=file]::file-selector-button {
     width: auto;
 }
 
-@media screen and (max-width: 499px) {
-    .contactCvContainer{
-        height: 200vh !important;
-    }
+.mobile .contactOption a{
+    font-size: 14px;
 }

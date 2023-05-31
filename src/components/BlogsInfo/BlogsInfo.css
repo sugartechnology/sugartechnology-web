@@ -116,9 +116,3 @@
 .mobile .blogsInfoSpan{
     width: 90%;
 }
-
-@media screen and (max-width: 500px) {
-    .blogsInfoContainer{
-        height: 180vh !important;
-    }
-}

@@ -1733,7 +1733,7 @@ visibility: hidden;
 }
 
 .tablet .slideDetail{
-  top:51vh;
+  bottom: 5vh;
 } 
 
 .tablet .smallSliderMenu{
@@ -1758,12 +1758,12 @@ visibility: hidden;
 }
 
 .mobile .mainPageSliderContainer{
-  height: 1000px;
+  height: 93vh;
 }
 
 .mobile .slideDetail{
-  bottom: 17vh;
-  width: 488px !important;
+  bottom: 5vh;
+  width: 460px !important;
 }
 
 .mobile .smallSliderMenu{

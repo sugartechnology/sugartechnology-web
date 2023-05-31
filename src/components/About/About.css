@@ -151,7 +151,10 @@
 }
 
 @media screen and (max-width: 500px) {
+    .aboutContainer{
+        height: 75vh;
+    }
     .aboutSpans{
-        height: auto;
+        height: 80% !important;
     }
 }

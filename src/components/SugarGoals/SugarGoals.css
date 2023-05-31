@@ -64,7 +64,7 @@
 }
 @media screen and (max-width: 1200px){
     .SugarGoalsContainer{
-        height: 750px;
+        height: 84vh;
     }
     .sugarGoals img{
         width: 200px;
@@ -163,6 +163,7 @@
     .sugarGoalsElements2{
         height: 100%;
         gap: 55px;
+        left: 40px;
     }
     .sugarGoals{
         position: absolute;
@@ -212,9 +213,6 @@
     }
     .goalsShadow{
         width: 250px;
-    }
-    .sugarGoals{
-        width: 53%;
     }
     .goalsLine{
         width: 100% !important;

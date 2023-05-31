@@ -164,7 +164,7 @@ export const Header = props => {
     
     return(
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} headerContainer`} id='headerContainer'>
-            <div class="overlay" id='overlay' style={{zIndex: "1"}}></div>
+            <div class="overlay" id='overlay' style={{zIndex: "1"}} onClick={showMobilePopup}></div>
             <div className='mobileHeaderPopup' id='mobileHeaderPopup' style={{display: "none", position: "absolute", zIndex: "2"}}>
                 <div className='backToHome' onClick={showMobilePopup}>
                     <img className='backToHomeArrow' alt='' src={'./assets/img/arrow-left.svg'}></img>

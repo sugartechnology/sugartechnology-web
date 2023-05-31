@@ -115,6 +115,7 @@
 .mobile .squares{
     width: 90%;
     flex-direction: column;
+    margin-top: 4vh;
 }
 .mobile .square{
     width: auto !important;
@@ -141,7 +142,7 @@
 
 @media screen and (max-width: 500px) {
     .blogsMainContainer{
-        height: 205vh !important;
+        height: 188vh !important;
     }
 
 }

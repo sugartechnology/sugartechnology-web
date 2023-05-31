@@ -208,13 +208,13 @@
 
 @media screen and (max-width: 499px) {
     .blogParagraphsContainer{
-        height: 160vh !important;
+        height: 137vh !important;
     }
     .blogParagraphs2Container{
-        height: 326vh !important;
+        height: 255vh !important;
     }
     .blogParagraphs3Container{
-        height: 310vh !important;
+        height: 275vh !important;
     }
     .author{
         left: auto;

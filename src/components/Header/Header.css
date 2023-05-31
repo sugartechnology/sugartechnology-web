@@ -715,7 +715,7 @@
 .mobile .languageButton{
     gap: 0px;
     width: 60px;
-    right: 20px;
+    right: 0px;
 }
 .mobile .languagePopup{
     right: 10px;

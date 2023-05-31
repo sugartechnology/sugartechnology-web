@@ -40,13 +40,14 @@
 .mobile .shoesImageDiv{
     position: absolute;
     right: auto;
-    width: 40%;
+    width: 100%;
     bottom: 0px;
     height: 50%;
+    justify-content: center;
 }
 
 .mobile .shoesImage{
     position: absolute;
     bottom: 0px;
-    width: 200px;
+    width: 90%;
 }

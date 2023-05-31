@@ -66150,9 +66150,7 @@ class DimensionHotspot {
     showControlButton() {
         let elementTemplate = this.element.template;
         if (elementTemplate === "advanced") {
-            const modelInfo = this.element.parentElement.querySelector(".sugar-model-viewer-info");
-            const dimensionButton = modelInfo.querySelector(".dimension_button");
-            dimensionButton.addEventListener("click", this.toggleShowButton.bind(this), true);
+            const dimensionOpenButton = document.querySelector(".dimension_close_button").addEventListener("click", this.toggleDimension.bind(this), true);
         }
         else {
             this.hotspotControlToggleTemplate = hotspot_control_button_template.content.cloneNode(true);
@@ -66160,6 +66158,22 @@ class DimensionHotspot {
             this.element.shadowRoot.appendChild(this.hotspotControlToggleTemplate);
             this.hotspotControlToggle.addEventListener("click", this.toggleShowButton.bind(this));
         }
+    }
+    toggleDimension() {
+        let dimensionOpenButton = document.querySelector(".dimension_close_button");
+        let dimensionCloseButton = document.querySelector(".dimension_open_button");
+        this.showHotspots = true;
+        this.showDimensionHotspot();
+        this.element.dispatchEvent(new CustomEvent("hotspots-show"));
+        dimensionOpenButton.style.display = "none";
+        dimensionCloseButton.style.display = "block";
+        dimensionCloseButton.addEventListener("click", () => {
+            this.showHotspots = false;
+            this.hideDimensionHotspot();
+            this.element.dispatchEvent(new CustomEvent("hotspots-hide"));
+            dimensionCloseButton.style.display = "none";
+            dimensionOpenButton.style.display = "block";
+        });
     }
     toggleShowButton() {
         if (this.showHotspots === true) {
@@ -70118,8 +70132,16 @@ const translations = {
         "openqrarmode": "Devam Etmek için lütfen tıklayınız.",
         "place-modal": "Lütfen telefonunuzu hareket ettirmeye devam edin ve zemini tarayın.",
         "ar-screen-shot": "Güç ve Sesi azaltma düğmelerine aynı anda basın.\n \n Bu işe yaramazsa Güç düğmesini birkaç saniye süreyle basılı tutun.\n Ardından Ekran görüntüsü'ne dokunun.",
-        "ar_button": "Evinizde Gör",
-        "createRender": "Render Al"
+        "ar_button": "Evinizde Görün",
+        "createRender": "Render Al",
+        "informationHeader": "Yanda gördüğünüz ürünü evinizde görebilmek için;",
+        "informationSpan1": "QR Kodunu Taratın",
+        "informationSpan2": "Kameraya İzin Ver",
+        "informationSpan3": "Işıklı bir ortamda zemin tebiti yapın",
+        "informationSpan4": "Ürünü yerleştirin ve taşıyın",
+        "informationSpan5": "Ürünü çift parmakla veya altından çevirin",
+        "informationSpan6": "Fotoğraf çekin veya video kaydı alın",
+        "qrInformText": "*Bu özelliği kullanabilmek için arttırılmış gerçeklik destekleyen akıllı telefona ihtiyacınız var.*"
     },
     "en": {
         "select-fabric-button": "Select Fabric",
@@ -70133,8 +70155,16 @@ const translations = {
         "continue": "Continue.",
         "place-modal": "Please move your phone, and scan the floor.",
         "ar-screen-shot": "Press Power and Volume down buttons at the same time.\n \n If that doesn’t work, press and hold the Power button for a few seconds. Then tap Screenshot.",
-        "ar_button": "View In Space",
-        "createRender": "Create Render"
+        "ar_button": "View In Your Space",
+        "createRender": "Create Render",
+        "informationHeader": "In order to see the product you see on the side in your home;",
+        "informationSpan1": "Scan QR Code",
+        "informationSpan2": "Allow Camera",
+        "informationSpan3": "Check the ground in a lighted environment",
+        "informationSpan4": "Place and move the product",
+        "informationSpan5": "Twist the product with two fingers or under",
+        "informationSpan6": "Take a photo or record a video",
+        "qrInformText": "*To use this feature, you need a smartphone that supports augmmented reality.*"
     },
 };
 
@@ -71881,6 +71911,11 @@ const feature_template = document.createElement('template');
 feature_template.innerHTML = `   
 
     <style>
+
+        .modelContainer{
+            height: 100% !important;
+        }
+        
         .feature_container::-webkit-scrollbar {
             display: none;
         }
@@ -71989,7 +72024,7 @@ feature_template.innerHTML = `
 
             .modelContainer {
                 flex-wrap: wrap;
-                height:auto !important;
+                height: 100% !important;
             }
 
             .model {
@@ -72148,12 +72183,12 @@ sugar_button_template.innerHTML = `
     z-index: 3222;
     width: 35%;
     max-width: 200px;
-    gap: 8px;
+    gap: 5px;
     width: 85%;
-    height: 40px;
+    height: 45px;
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 40px;
     background: #ED401A;
     color: white;
     border-radius: 10px;
@@ -72177,9 +72212,9 @@ sugar_button_template.innerHTML = `
 }
 
 .sugar_ar_button span{
-    font-size: 12px;
     color: white;
-    font-weight: 550;
+    font-weight: 400;
+    font-size: 16px;
   }
 
 </style>
@@ -72405,49 +72440,186 @@ advenced_feature_template.innerHTML = `
 
     <style>
 
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
     .sugar-model-viewer-popup-container{
-        font-family:Inter;
-        position:fixed;
-        width:100%;
-        height:100%;
-        background-color:#000000BB;
+        font-family: 'Inter';
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #000000BB;
         display:flex;
-        flex-direction:column;
+        flex-direction: column;
         top: 0px;
         left: 0px;
         display: none;
+        z-index: 9999;
     }
 
     .sugar-model-viewer-popup-container.open{
         display: flex;
-       
     }
 
+    .sugar-model-viewer-popup-content.fullscreen{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    } 
+
     .sugar-model-viewer-popup-content{
-        font-family:Inter;
-        width: 90%;
-        height: 90%;
+        font-family: 'Inter';
+        width: 95%;
+        height: 95%;
         margin: auto;
         background-color: white;
-        overflow: scroll;
-         border-radius: 10px;
-         position:relative;
+        border-radius: 10px;
+        position: relative;
     }
 
-    .sugar-model-viewer-popup-content{
-        font-family:Inter;
+    .dimension_open_button{
+        display: none;
     }
 
-    .sugar-model-viewer-popup-close{
-        position:absolute;
-        right:5px;
-        top:5px;
+    .sugarInformationContainer{
+        display: none;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        position: relative;
+        align-items: center;
+    }
+
+    .sugarInformationContainer.open{
+        display: flex;
+    }
+
+    .sugarModelSlider{
+        position: relative;
+        top: 0px;
+        width: 100%;
+        height: 56%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .modelSliderSpan{
+        position: absolute;
+        top: 0px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        color: #1E1E1E;
+        margin: 10px;
+        width: 100%;
+        margin-top: 90px;
+    }
+
+    #modelSliderSpanMobile{
+        display: none;
+    }
+
+
+    .sugar-model-viewer-popup-container.open .icons{
+        left: 16px;
+        margin-top: 17px;
+    }
+    
+    .modelSliderImgButtons{
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        bottom: 0px;
         z-index: 1;
+    }
+    
+    .modelSliderImgButton{
+        width: 13px;
+        height: 13px;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #D9D9D9;
+    }
+
+    .modelSliderImgContainer{
+        position: relative;
+        margin: 4%;
+        width: 100%;
+        height: 100%;
+        overflow-x: scroll;
+    }
+
+    .modelSliderImages{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.5s ease;
+    }
+
+    .modelSliderImageSpans{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        gap: 10px;
+        position: relative;
+        width: 70%;
+        height: 36px;
+    }
+
+    .modelSliderImageSpan{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #1E1E1E;
+    }
+
+    .modelSliderImg{
+        display: flex;
+        position: relative;
+        width: 75%;
+    }
+
+    .open .sugar-model-viewer-popup-buttons{
+        display: flex;
+    }
+    .sugar-model-viewer-popup-buttons{
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1;
+        gap: 10px;
+    }
+
+    .sugar-model-viewer-popup-buttons img{
+        cursor: pointer;
+    }
+
+
+    .mobile .featurePagesDiv{
+        justify-content: flex-start;
+        overflow-x: scroll;
 
     }
 
-    .sugar-model-viewer-container{
-        font-family:Inter;
+    .featurePagesDiv{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
     }
 
     .sugar-model-viewer-container{
@@ -72455,22 +72627,24 @@ advenced_feature_template.innerHTML = `
         display: flex;
         flex-direction: row;
         overflow: hidden;
+        height: 95vh !important;
+        font-family: 'Inter';
     }
 
     .sugar-model-viewer-content{
         flex: 100%;
-        height:100%;
+        height: 100%;
         position: relative;
     }
 
     .sugar-model-viewer-instance{
         display: flex;
-        height:100%;
+        height: 100%;
     }
 
-    .sugar-model-viewer-info {
+    .sugar-model-viewer-info{
         flex: 20%;
-        min-width:305px;
+        min-width: 370px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -72478,50 +72652,45 @@ advenced_feature_template.innerHTML = `
         background-color: white;
         align-items: flex-start;
         box-shadow: -4px 0px 9px rgba(0, 0, 0, 0.15);
-        position:relative;
-        
+        position: relative;
     }
 
-     .sugar-model-viewer-info .item{
+    
+    .mobile .sugar-model-viewer-info .item {
         margin: auto;
         width: calc(100% - 40px) !important;
-     }
+    }
 
-     .sugar-model-viewer-info.close {
-        flex: 0%;
-        min-width:0;
-        transform:translateX(100%);
+    .sugar-model-viewer-info .item{
+        margin: auto;
+        width: calc(100% - 75px) !important;
+    }
+
+    .sugar-model-viewer-info.close{
+        flex: 1%;
+        min-width: 0;
+        transform: translateX(100%);
         flex-direction: column; 
     }
 
-    .mobile .sugar-model-viewer-info.close {
-        transform:translateY(100%);
+    .feature_thumbnail{
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
     }
 
-    .mobile.sugar-model-viewer-container{
-        position: relative;
-        display: flex;
-        flex-direction: column;
+    .modelViewer{
+        right: 250px;
+        height: 550px;
     }
 
-    .mobile .sugar-model-viewer-content{
-        
-    }
-
-    .mobile .sugar-model-viewer-instance{
-        display: flex;
-    }
-
-    .mobile .sugar-model-viewer-info{
-        flex: 30%;
-        min-height:300px;
-        display: flex;
-    }
-
-    .mobile .sugar-model-viewer-info.close{
-        flex: 0%;
-        min-height:0px;
-        display: flex;
+    .createRenderSpan{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ED401A;
     }
 
     .sugar-model-viewer-info .summary{
@@ -72539,37 +72708,32 @@ advenced_feature_template.innerHTML = `
        position: relative;
     }
 
-    .mobile .sugar-model-viewer-info .summary-span{
-        flex: 60%;
-    }
-
-    .mobile .sugar-model-viewer-info .summary-button{
-       flex: 40%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-    }
-
-
     .sugar-model-viewer-info .createRenderDiv{
         width: 100%;
-        flex: 10%;
+        flex: 16%;
         position: relative;
         display: flex;
         justify-content: center;
-		bottom: 20px;
+        align-items: center;
     }
 
-    .sugar-model-viewer-info .carousels {
-       
+    .sugar-model-viewer-info .carousels{
         width: 100%;
         flex: 80%;
-		overflow: scroll;
+		overflow-y: scroll;
     }
 
     .create-render-button-up{
         display: none;
+        align-items: center;
+        border: 2px solid #ED401A;
+        border-radius: 8px;
         transition: 0.5s;
+        gap: 9px;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        justify-content: center;
     }
     
     .mobileRenderSpan{
@@ -72577,75 +72741,48 @@ advenced_feature_template.innerHTML = `
     }
 
     .create-render-button-down{
-        display: block;
+        display: flex;
+        align-items: center;
+        border: 2px solid #ED401A;
+        border-radius: 8px;
         transition: 0.5s;
+        gap: 9px;
+        width: 158px;
+        height: 39px;
+        cursor: pointer;
+        justify-content: center;
     }
 
-    .mobile .create-render-button-down{
-        display: none;
-    }
-
-    .mobile .createRenderSpan{
-        display: none;
-    }
-
-    .mobile .create-render-button-up{
-        display: block;
-    }
-
-    .close .create-render-button-up{
-        display: none;
-    }
-
-
-    .close .create-render-button-down{
-        display: none;
-    }
-
-    .close .create-render-button-down{
-        display: none;
-    }
-
-
-    .row {
+    .row{
         display: flex;
         justify-content: space-between;
     }
 
-    
     #sugar{
         position: absolute;
         left: 0px;
     }
     
-    
-    #model {
+    #model{
         margin: auto;
         height: 70vh;
         width: 90%;
     }
-
     
     .casoruselSpans{
         display: flex;
     }
     
-
     .feature{
         display: flex;
         gap: 5px;
     }
-
 
     .featureButtons{
         position: absolute;
         right:0px;
         width: 14px;
         cursor: pointer;
-    }
-
-    .carousel.open .featureButtons{
-        transform:rotate(180deg);
     }
 
     .carouselSpans{
@@ -72655,17 +72792,20 @@ advenced_feature_template.innerHTML = `
         border-bottom-color: darkgray;
     }
 
+    .tiliaStill{
+        background: #D9D9D9;
+        color: #D9D9D9;
+    }
+
     .featurePageButton{
         background: #D9D9D9;
     }
 
     .featurePageButtons{
-        position: absolute;
         display: flex;
         gap: 10px;
-        bottom: 0px;
-        left: calc(50%);
-        transform: translateX(-50%);
+        z-index: 1;
+        justify-content: center;
     }
 
     .bigSpan{
@@ -72679,30 +72819,9 @@ advenced_feature_template.innerHTML = `
         color: #707070;
     }
 
-
     .spanLine{
         color: #707070;
     }
-
-    #modelInfo.slide-right {
-        left: 100%;
-        animation: slide-right 1s ease-in-out;
-    }
-      
-    @keyframes slide-right {
-        0% {
-          left: 77%;
-        }
-        100% {
-          left: 100%;
-        }
-    }
-    
-    #icons.slide-right{
-        right: -300px;
-        animation: slide-right-icons 1s ease-in-out;
-    }
-
 
     .productName{
         font-style: normal;
@@ -72712,21 +72831,19 @@ advenced_feature_template.innerHTML = `
         color: #000000;
     }
 
-    .mobile .productName{
-        font-size: 27px;
-        line-height: 33px;
-    }
 
-
-    .icons {
+    .icons{
         display: flex;
-        justify-content: flex-end;
         gap: 12px;
+        justify-content: flex-end;
+        z-index: 1;
+        margin-top: 10px;
         position: absolute;
-        right: 25px;
-        top: 12px;
+        left: 10px;
+        top: 0px;    
     }
-
+    
+    
 
     .featurePageButton{
         width: 8px;
@@ -72735,65 +72852,40 @@ advenced_feature_template.innerHTML = `
         cursor: pointer;
         border: none;
         margin-right: 1px;
+        background: #D9D9D9;
     }
-
 
     .feature_page{
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
+        flex-direction: row;
+        width: 264px;
+        height: 100%;
+        transition: transform 0.3s ease-in;
         justify-content: space-between;
-        align-content: space-between;
-        height: 130px;
-		width: 264px;
-        margin: auto;
         position: absolute;
-		transition: transform 0.3s ease-in;
-    }
-
-    .mobile .feature_page{
-        flex-wrap: nowrap;
-        height: 60px;
-        width: 580px;
     }
 
     .feature_container{
+        display: none;
         position: relative;
-        height: 160px;
-        overflow: hidden;
         margin-top: 20px;
-        display:none;
+        height: 235px;
+        overflow: hidden;
     }
 
-    .carousel.open .feature_container{
-        display:block;
-    }
-
-    .mobile .feature_container{
-        height: 90px;
-    }
-
-
-    .carousel {
+    .carousel{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         font-size: 14px;
         gap: 2px;
-        width: 100%;
 		overflow: hidden;
         margin-bottom: 40px;
         position: relative;
     }
 
-
-
-    .mobile .carousel.open{
-        margin-bottom: 10px;
-    }
-
-
-    .littleSpan {
+    .littleSpan{
         height: 2px;
         width: 200px;
         opacity: 0.4;
@@ -72805,7 +72897,6 @@ advenced_feature_template.innerHTML = `
         color: #959595;
     }
 
-
     .closeArea{
         display: flex;
         align-items: center;
@@ -72813,7 +72904,6 @@ advenced_feature_template.innerHTML = `
         position: relative;
         top: 5px;
     }
-
 
     .closeArea button{
         border: none;
@@ -72827,34 +72917,29 @@ advenced_feature_template.innerHTML = `
         color: rgba(30, 30, 30, 0.8);
     }
 
-
     .feature_child{
-        height: 60px;
+        height: 50%;
         cursor: pointer;
+        gap: 2px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
     }
 
     .feature_child.selected{
-        border: 1px solid #E74D35;
-        border-radius: 6px;
-        width: 62px;
-        height: 62px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        color: red;
     }
-
 
     .feature_name{
-        text-align: center;
-        max-width: 5em;
+        max-width: min-content;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: -0.03em;
+        color: #707070;
+        font-family: 'Inter';
     }
-
-    .line{
-        position: absolute;
-        width: 100%;
-        height: 2px;
-    }
-
     
     .infoShowButtonDiv{
         display: block;
@@ -72866,47 +72951,159 @@ advenced_feature_template.innerHTML = `
         cursor: pointer;
     }
 
+    #closeInfoButton{
+        display: none;
+    }
+
+    #fabricOpenButton{
+        display: none;
+    }
+    .icons div{
+        cursor: pointer;
+    }
+
+    .sugarBottomLogo{
+        display: flex;
+        width: 100%;
+        height: 10%;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 15px;
+    }
+
+    .sugarTechLogo{
+        width: 50%;
+    }
+
+    .sugar-model-viewer-info.close .sugarBottomLogo{
+        display: none;
+    }
+
+    .mobile .modelSliderImg{
+        width: 60%;
+    }
+
+    .mobile .modelSliderImgContainer{
+        display: flex;
+        align-items: center;
+    }
+
+    .sugar-model-viewer-popup-fabric-open{
+        display: none;
+    }
+
+    .sugar-model-viewer-popup-information-close{
+        display: none;
+    }
+
+    .mobile .sugar-model-viewer-info .modelSlierImages{
+        width: 77%;
+    }
+
+    .mobile .sugar-model-viewer-info .sugarModelSlider{
+        height: 100%;
+    }
+    
+    .mobile .modelSliderImgButtons{
+        bottom: 13%;
+    }
+
+
+    .sugar-model-viewer-popup-container.open .mobile .sugar-model-viewer-info .sugarBottomLogo{
+        width: 92%;
+        bottom: 5px;
+    }
+
+    .sugar-model-viewer-popup-container.open .mobile .sugar-model-viewer-info .sugarTechLogo{
+        width: 40%;
+    }
+    .sugar-model-viewer-popup-container.open .mobile .sugar-model-viewer-info .icons{
+        margin-top: auto;
+        position: absolute;
+        top: -162%;
+        width: 77%;
+    }
+
+    .mobile .sugar-model-viewer-info.close{
+        transform: translateY(100%);
+    }
+
+    .mobile.sugar-model-viewer-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile .sugar-model-viewer-content{
+        
+    }
+
+    .mobile .sugar-model-viewer-instance{
+        display: flex;
+    }
+
+    .mobile .sugarTechLogo{
+        width: 40%
+    }
+
+    .mobile .sugar-model-viewer-info{
+        flex: 30%;
+        min-height: 435px;
+        display: flex;
+    }
+
+    .mobile .sugar-model-viewer-info.close{
+        flex: 0%;
+        min-height: 0px;
+        display: flex;
+    }
+
+    .mobile .sugar-model-viewer-info .summary-span{
+        flex: 60%;
+    }
+
+    .mobile .sugar-model-viewer-info .summary-button{
+       flex: 40%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .mobile .sugar-model-viewer-info .modelSliderSpan{
+        display: none;
+    }
+    .mobile .sugar-model-viewer-info #modelSliderSpanMobile{
+        display: block;
+        margin-top: 20px;
+        top: 16px;
+    }
+
+    .mobile .create-render-button-down{
+        display: none;
+    }
+
+    .mobile .create-render-button-up{
+        display: flex;
+    }
+
+    .mobile .productName{
+        font-size: 27px;
+        line-height: 33px;
+    }
+
     .mobile .infoShowButtonDiv{
         top: 0px;
         left: 50%;
         transform: translate(-50%, -50%) rotate(90deg);
     }
 
-
-    .close .infoShowButtonDiv{
-        transform: translate(-50%, -50%) rotate(180deg);
-        transition: 0.5s;
-    }
-
-    .mobile .close .infoShowButtonDiv{
-        transform: translate(-50%, -50%) rotate(270deg);
-        transition: 0.5s;
-    }
-
-
-    .feature_thumbnail{
-        width: 60px;
-        height: 60px;
-        border-radius:5px;
-    }
-
-    .modelViewer{
-        right: 250px;
-        height: 550px;
-    }
-
-    .createRenderSpan{
-        position: absolute;
-        top: 15px;
-        left: 107px;
-        width: 100%;
-        height: 17px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 17px;
-        color: #E74D35;
+    .mobile .feature_page{
+        flex-wrap: nowrap;
+        height: 100%;
+        width: 580px;
+        gap: 13px;
+        justify-content: flex-start;
     }
 
     .mobile .mobileRenderSpan{
@@ -72924,44 +73121,65 @@ advenced_feature_template.innerHTML = `
         color: #E74D35;
     }
 
+    .mobile .feature_container{
+        height: 115px;
+    }
+    .mobile .carousel.open{
+        margin-bottom: 10px;
+    }
 
-    </style>
+    .mobile .close .infoShowButtonDiv{
+        transform: translate(-50%, -50%) rotate(270deg);
+        transition: 0.5s;
+    }
+    
+    .close .infoShowButtonDiv{
+        transform: translate(-50%, -50%) rotate(180deg);
+        transition: 0.5s;
+    }
 
-     <div class="icons" id="icons">
-        <div class="info_buttons">
-            <svg class="info_button" id="openInfoButton" xmlns="http://www.w3.org/2000/svg" width="33" height="31" viewBox="0 0 33 31" fill="none" style="cursor: pointer;">
-                <path d="M16.5 22.7499V22.8136M12.6267 11.0372C12.6267 8.99732 14.3616 7.34371 16.5017 7.34371C18.6418 7.34371 20.3767 8.99732 20.3767 11.0372C20.3767 13.077 18.6418 14.7306 16.5017 14.7306C16.5017 14.7306 16.5 15.833 16.5 17.1929M32 6.43747L32 24.5625C32 27.5656 29.3977 30 26.1875 30H6.8125C3.60235 30 1 27.5656 1 24.5625V6.43747C1 3.43444 3.60235 1 6.8125 1H26.1875C29.3977 1 32 3.43444 32 6.43747Z" stroke="#E74D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </div>
-        <div class="dimension_button" id="dimension_button">
-            <svg class="dimension_control_button" id="toggle" xmlns="http://www.w3.org/2000/svg" width="33" height="31" viewBox="0 0 33 31" fill="none" style="cursor: pointer;">
-                <path d="M5 22.9371C5.14841 22.7788 5.29213 22.6163 5.44571 22.4631C11.4993 16.4073 17.5542 10.3523 23.6092 4.29741C23.681 4.22554 23.7515 4.1518 23.8318 4.09027C23.9863 3.97237 24.1497 3.96908 24.3075 4.08557C24.3761 4.1363 24.4381 4.19689 24.4987 4.25748C25.9133 5.67129 27.3275 7.08556 28.7417 8.5003C29.0878 8.84694 29.0869 9.00476 28.7342 9.35704C22.6074 15.4838 16.481 21.6106 10.3542 27.737C10.2617 27.8295 10.1602 27.9126 10.0625 28H9.82818C9.71875 27.9131 9.59992 27.8361 9.50129 27.7384C8.08571 26.3269 6.67248 24.9136 5.26113 23.4979C5.16344 23.3997 5.08642 23.2809 5 23.1715C5 23.0935 5 23.015 5 22.9371ZM14.7794 14.3387C14.205 14.9127 13.6452 15.4716 13.0501 16.0663C13.6856 16.6966 14.3379 17.3439 14.9616 17.9629C14.7869 18.1471 14.6122 18.3316 14.4168 18.5383C13.7696 17.8882 13.1205 17.2368 12.4874 16.6008C11.9299 17.1602 11.3743 17.7177 10.8112 18.2828C11.2607 18.7304 11.7242 19.1917 12.1803 19.6459C11.983 19.8521 11.8069 20.0362 11.6157 20.2358C11.1498 19.7675 10.6891 19.3044 10.2457 18.8582C9.67178 19.4359 9.11428 19.9963 8.53049 20.5834C9.16313 21.2147 9.81362 21.8638 10.4373 22.4866C10.2673 22.6712 10.0954 22.8577 9.90098 23.0686C9.24438 22.4105 8.59577 21.76 7.95937 21.1221C7.30278 21.7811 6.65417 22.4321 6.02294 23.0658C7.32156 24.3654 8.63288 25.6783 9.90802 26.9544C15.9226 20.9404 21.9508 14.9117 27.9587 8.90378C26.6747 7.62055 25.3662 6.31337 24.0873 5.03531C23.4481 5.6741 22.7943 6.32699 22.1029 7.01745C22.7356 7.64498 23.3875 8.29223 24.0074 8.90707C23.8355 9.09307 23.6632 9.28001 23.4683 9.49091C22.8201 8.83473 22.1738 8.1795 21.5492 7.54681C20.987 8.10998 20.4309 8.66658 19.8579 9.24008C20.306 9.68489 20.7695 10.1452 21.2373 10.6102C21.0387 10.8056 20.8574 10.9846 20.654 11.1851C20.1947 10.7225 19.7339 10.2584 19.2995 9.82111C18.7302 10.389 18.1704 10.9475 17.5838 11.5327C18.2155 12.164 18.865 12.8136 19.4935 13.4411C19.3239 13.6229 19.1506 13.8079 18.9524 14.0207C18.2953 13.3617 17.6472 12.7117 17.0117 12.0738C16.4495 12.6356 15.8939 13.1912 15.3219 13.7633C15.7732 14.2133 16.2358 14.675 16.6881 15.1259C16.504 15.3237 16.3307 15.5101 16.148 15.706C15.6765 15.2344 15.2139 14.7727 14.7794 14.3382V14.3387Z" fill="#E74D35" stroke="#E74D35" stroke-width="0.5" stroke-linejoin="round" />
-                <path d="M6.8125 30C3.60234 30 1 27.5656 1 24.5625V6.43747C1 3.43444 3.60234 1 6.8125 1H26.1875C29.3977 1 32 3.43444 32 6.43747L32 24.5625C32 27.5656 29.3977 30 26.1875 30H6.8125Z" stroke="#E74D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </div>
-        <div class="wallpaper_button">
-            <svg class="change_wallpaper_button" xmlns="http://www.w3.org/2000/svg" width="33" height="31" viewBox="0 0 33 31" fill="none" style="cursor: pointer;">
-                <path d="M2.25434 26.551C1.85103 26.9283 1.82993 27.5611 2.20723 27.9644C2.58453 28.3677 3.21734 28.3888 3.62066 28.0115L2.25434 26.551ZM10.6875 20.0312L11.3707 19.301C10.9862 18.9413 10.3888 18.9413 10.0043 19.301L10.6875 20.0312ZM14.5625 23.6562L13.8793 24.3865C14.2638 24.7462 14.8612 24.7462 15.2457 24.3865L14.5625 23.6562ZM23.2812 15.5L23.9644 14.7697C23.58 14.4101 22.9825 14.4101 22.5981 14.7697L23.2812 15.5ZM30.3481 23.4803C30.7514 23.8576 31.3842 23.8365 31.7615 23.4332C32.1388 23.0298 32.1177 22.397 31.7144 22.0197L30.3481 23.4803ZM3.62066 28.0115L11.3707 20.7615L10.0043 19.301L2.25434 26.551L3.62066 28.0115ZM10.0043 20.7615L13.8793 24.3865L15.2457 22.926L11.3707 19.301L10.0043 20.7615ZM15.2457 24.3865L23.9644 16.2303L22.5981 14.7697L13.8793 22.926L15.2457 24.3865ZM22.5981 16.2303L30.3481 23.4803L31.7144 22.0197L23.9644 14.7697L22.5981 16.2303ZM6.8125 2H26.1875V0H6.8125V2ZM31 6.4375V24.5625H33V6.4375H31ZM26.1875 29H6.8125V31H26.1875V29ZM2 24.5625V6.4375H0V24.5625H2ZM6.8125 29C4.09076 29 2 26.9515 2 24.5625H0C0 28.1796 3.11393 31 6.8125 31V29ZM31 24.5625C31 26.9515 28.9092 29 26.1875 29V31C29.8861 31 33 28.1796 33 24.5625H31ZM26.1875 2C28.9092 2 31 4.04851 31 6.4375H33C33 2.82039 29.8861 0 26.1875 0V2ZM6.8125 0C3.11393 0 0 2.82039 0 6.4375H2C2 4.04851 4.09076 2 6.8125 2V0ZM11.625 9.15625C11.625 10.0437 10.8354 10.875 9.71875 10.875V12.875C11.8122 12.875 13.625 11.2718 13.625 9.15625H11.625ZM9.71875 10.875C8.60209 10.875 7.8125 10.0437 7.8125 9.15625H5.8125C5.8125 11.2718 7.62525 12.875 9.71875 12.875V10.875ZM7.8125 9.15625C7.8125 8.26878 8.60209 7.4375 9.71875 7.4375V5.4375C7.62525 5.4375 5.8125 7.04067 5.8125 9.15625H7.8125ZM9.71875 7.4375C10.8354 7.4375 11.625 8.26878 11.625 9.15625H13.625C13.625 7.04067 11.8122 5.4375 9.71875 5.4375V7.4375Z" fill="#E74D35" />
-            </svg>
-        </div>
-    </div> 
-   
+    .close .create-render-button-up{
+        display: none;
+    }
+
+    .close .create-render-button-down{
+        display: none;
+    }
+
+    .carousel.open .featureButtons{
+        transform: rotate(180deg);
+    }
+
+    .featurePageButton.open{
+        background: #E74D35;
+    }
+
+    .carousel.open .feature_container{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+</style>
+
+    
 
     <div class="sugar-model-viewer-info" id="modelInfo">
 
+
+
         <div class="summary item">
-        <div class="summary-span">
-             <h2 class="productName" id="productName"></h2>
-        </div>
-        <div class="summary-button">
-            <svg xmlns="http://www.w3.org/2000/svg" class="create-render-button-up" width="198" height="49" viewBox="0 0 198 49" fill="none">
-                <path d="M38.4 16.1701V17.1701C38.738 17.1701 39.0532 16.9994 39.2377 16.7162L38.4 16.1701ZM41.06 12.0901V11.0901C40.7221 11.0901 40.4069 11.2608 40.2224 11.5439L41.06 12.0901ZM50.94 12.0901L51.7777 11.5439C51.5931 11.2608 51.278 11.0901 50.94 11.0901V12.0901ZM53.6 16.1701L52.7624 16.7162C52.9469 16.9994 53.2621 17.1701 53.6 17.1701V16.1701ZM31.8 33.5101V19.5701H29.8V33.5101H31.8ZM34.6 17.1701H38.4V15.1701H34.6V17.1701ZM39.2377 16.7162L41.8977 12.6362L40.2224 11.5439L37.5624 15.6239L39.2377 16.7162ZM41.06 13.0901H50.94V11.0901H41.06V13.0901ZM50.1024 12.6362L52.7624 16.7162L54.4377 15.6239L51.7777 11.5439L50.1024 12.6362ZM53.6 17.1701H57.4V15.1701H53.6V17.1701ZM60.2 19.5701V33.5101H62.2V19.5701H60.2ZM60.2 33.5101C60.2 34.7339 59.0539 35.9101 57.4 35.9101V37.9101C59.9435 37.9101 62.2 36.0418 62.2 33.5101H60.2ZM57.4 17.1701C59.0539 17.1701 60.2 18.3463 60.2 19.5701H62.2C62.2 17.0383 59.9435 15.1701 57.4 15.1701V17.1701ZM31.8 19.5701C31.8 18.3463 32.9462 17.1701 34.6 17.1701V15.1701C32.0566 15.1701 29.8 17.0383 29.8 19.5701H31.8ZM34.6 35.9101C32.9462 35.9101 31.8 34.7339 31.8 33.5101H29.8C29.8 36.0418 32.0566 37.9101 34.6 37.9101V35.9101ZM50.7 25.6901C50.7 27.8528 48.7033 29.7901 46 29.7901V31.7901C49.5929 31.7901 52.7 29.1607 52.7 25.6901H50.7ZM46 29.7901C43.2968 29.7901 41.3 27.8528 41.3 25.6901H39.3C39.3 29.1607 42.4072 31.7901 46 31.7901V29.7901ZM41.3 25.6901C41.3 23.5274 43.2968 21.5901 46 21.5901V19.5901C42.4072 19.5901 39.3 22.2195 39.3 25.6901H41.3ZM46 21.5901C48.7033 21.5901 50.7 23.5274 50.7 25.6901H52.7C52.7 22.2195 49.5929 19.5901 46 19.5901V21.5901ZM57.4 35.9101H34.6V37.9101H57.4V35.9101Z" fill="#E74D35"/>
-                 <rect x="0.75" y="0.75" width="196.5" height="47.5" rx="11.25" stroke="#E74D35" stroke-width="1.5"/>
-            </svg>
-            <span class="mobileRenderSpan" sugar-localization-key="createRender"></span>
-        </div>
-           
-                
+            <div class="summary-span">
+                <h2 class="productName" id="productName"></h2>
+            </div>
+            <div class="summary-button" id="createRenderDiv">
+                <div class="create-render-button-up" id="sugarStrokeForInfoShowButton">
+                    <svg class="sugarStroke" xmlns="http://www.w3.org/2000/svg" width="34" height="27" viewBox="0 0 34 27">
+                        <path class="sugarStroke" d="M9.40005 5.17009V6.17009C9.73803 6.17009 10.0532 5.99936 10.2377 5.71623L9.40005 5.17009ZM12.06 1.09009V0.0900879C11.7221 0.0900879 11.4069 0.260816 11.2224 0.543945L12.06 1.09009ZM21.94 1.09009L22.7777 0.543946C22.5931 0.260816 22.278 0.0900879 21.94 0.0900879V1.09009ZM24.6 5.17009L23.7624 5.71623C23.9469 5.99936 24.2621 6.17009 24.6 6.17009V5.17009ZM2.80005 22.5101V8.57008H0.800049V22.5101H2.80005ZM5.60005 6.17009H9.40005V4.17009H5.60005V6.17009ZM10.2377 5.71623L12.8977 1.63623L11.2224 0.543945L8.56236 4.62394L10.2377 5.71623ZM12.06 2.09009H21.94V0.0900879H12.06V2.09009ZM21.1024 1.63623L23.7624 5.71623L25.4377 4.62395L22.7777 0.543946L21.1024 1.63623ZM24.6 6.17009H28.4V4.17009H24.6V6.17009ZM31.2 8.57009V22.5101H33.2V8.57009H31.2ZM31.2 22.5101C31.2 23.7339 30.0539 24.9101 28.4 24.9101V26.9101C30.9435 26.9101 33.2 25.0418 33.2 22.5101H31.2ZM28.4 6.17009C30.0539 6.17009 31.2 7.3463 31.2 8.57009H33.2C33.2 6.03834 30.9435 4.17009 28.4 4.17009V6.17009ZM2.80005 8.57008C2.80005 7.34629 3.94615 6.17009 5.60005 6.17009V4.17009C3.05658 4.17009 0.800049 6.03834 0.800049 8.57008H2.80005ZM5.60005 24.9101C3.94615 24.9101 2.80005 23.7339 2.80005 22.5101H0.800049C0.800049 25.0418 3.05658 26.9101 5.60005 26.9101V24.9101ZM21.7 14.6901C21.7 16.8528 19.7033 18.7901 17 18.7901V20.7901C20.5929 20.7901 23.7 18.1607 23.7 14.6901H21.7ZM17 18.7901C14.2968 18.7901 12.3 16.8528 12.3 14.6901H10.3C10.3 18.1607 13.4072 20.7901 17 20.7901V18.7901ZM12.3 14.6901C12.3 12.5274 14.2968 10.5901 17 10.5901V8.59009C13.4072 8.59009 10.3 11.2195 10.3 14.6901H12.3ZM17 10.5901C19.7033 10.5901 21.7 12.5274 21.7 14.6901H23.7C23.7 11.2195 20.5929 8.59009 17 8.59009V10.5901ZM28.4 24.9101H5.60005V26.9101H28.4V24.9101Z" />
+                    </svg>
+                    <span class="createRenderSpan" id="createRenderSpan" sugar-localization-key="createRender"></span>
+                </div>
+            </div> 
         </div>
 
         <div class="carousels item">
@@ -72972,67 +73190,123 @@ advenced_feature_template.innerHTML = `
                     <span class="spanLine">-</span>
                     <span class="littleSpan"></span>
                 </div>
-
                 <div class="featureButtons">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none" style="&#10;">
-                        <path d="M11.8 1L13 2.16667L7 8L1 2.16667L2.2 1L7 5.66667L11.8 1Z" fill="#707070" stroke="white" stroke-width="0.5"/>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"  style="&#10;">
+                        <path d="M11.8 1L13 2.16667L7 8L1 2.16667L2.2 1L7 5.66667L11.8 1Z" stroke-width="0.5"/>
                     </svg>
                 </div>
-                
-
                 <div class="feature_container">
-                
                 </div>
-               
             </div>
-
-            
-                      
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="10" viewBox="0 0 48 10" fill="none" class="threePoint">
-                <circle cx="4.13793" cy="4.99999" r="4.13793" fill="#E74D35" id="fabricCircleOne" class="circles"/>
-                <circle cx="24" cy="4.99999" r="4.13793" fill="#D9D9D9" id="fabricCircleTwo" class="circles"/>
-            </svg>
-
         </div>
 
-        <div class="createRenderDiv item">
-                <svg xmlns="http://www.w3.org/2000/svg" class="create-render-button-down" width="198" height="49" viewBox="0 0 198 49" fill="none">
-                    <path d="M38.4 16.1701V17.1701C38.738 17.1701 39.0532 16.9994 39.2377 16.7162L38.4 16.1701ZM41.06 12.0901V11.0901C40.7221 11.0901 40.4069 11.2608 40.2224 11.5439L41.06 12.0901ZM50.94 12.0901L51.7777 11.5439C51.5931 11.2608 51.278 11.0901 50.94 11.0901V12.0901ZM53.6 16.1701L52.7624 16.7162C52.9469 16.9994 53.2621 17.1701 53.6 17.1701V16.1701ZM31.8 33.5101V19.5701H29.8V33.5101H31.8ZM34.6 17.1701H38.4V15.1701H34.6V17.1701ZM39.2377 16.7162L41.8977 12.6362L40.2224 11.5439L37.5624 15.6239L39.2377 16.7162ZM41.06 13.0901H50.94V11.0901H41.06V13.0901ZM50.1024 12.6362L52.7624 16.7162L54.4377 15.6239L51.7777 11.5439L50.1024 12.6362ZM53.6 17.1701H57.4V15.1701H53.6V17.1701ZM60.2 19.5701V33.5101H62.2V19.5701H60.2ZM60.2 33.5101C60.2 34.7339 59.0539 35.9101 57.4 35.9101V37.9101C59.9435 37.9101 62.2 36.0418 62.2 33.5101H60.2ZM57.4 17.1701C59.0539 17.1701 60.2 18.3463 60.2 19.5701H62.2C62.2 17.0383 59.9435 15.1701 57.4 15.1701V17.1701ZM31.8 19.5701C31.8 18.3463 32.9462 17.1701 34.6 17.1701V15.1701C32.0566 15.1701 29.8 17.0383 29.8 19.5701H31.8ZM34.6 35.9101C32.9462 35.9101 31.8 34.7339 31.8 33.5101H29.8C29.8 36.0418 32.0566 37.9101 34.6 37.9101V35.9101ZM50.7 25.6901C50.7 27.8528 48.7033 29.7901 46 29.7901V31.7901C49.5929 31.7901 52.7 29.1607 52.7 25.6901H50.7ZM46 29.7901C43.2968 29.7901 41.3 27.8528 41.3 25.6901H39.3C39.3 29.1607 42.4072 31.7901 46 31.7901V29.7901ZM41.3 25.6901C41.3 23.5274 43.2968 21.5901 46 21.5901V19.5901C42.4072 19.5901 39.3 22.2195 39.3 25.6901H41.3ZM46 21.5901C48.7033 21.5901 50.7 23.5274 50.7 25.6901H52.7C52.7 22.2195 49.5929 19.5901 46 19.5901V21.5901ZM57.4 35.9101H34.6V37.9101H57.4V35.9101Z" fill="#E74D35"/>
-                    <rect x="0.75" y="0.75" width="196.5" height="47.5" rx="11.25" stroke="#E74D35" stroke-width="1.5"/>
+        <div class="createRenderDiv item" id="createRenderDiv">
+            <div class="create-render-button-down" id="sugarStrokeForInfoShowButton">
+                <svg class="sugarStroke" xmlns="http://www.w3.org/2000/svg" width="34" height="27" viewBox="0 0 34 27">
+                    <path class="sugarStroke" d="M9.40005 5.17009V6.17009C9.73803 6.17009 10.0532 5.99936 10.2377 5.71623L9.40005 5.17009ZM12.06 1.09009V0.0900879C11.7221 0.0900879 11.4069 0.260816 11.2224 0.543945L12.06 1.09009ZM21.94 1.09009L22.7777 0.543946C22.5931 0.260816 22.278 0.0900879 21.94 0.0900879V1.09009ZM24.6 5.17009L23.7624 5.71623C23.9469 5.99936 24.2621 6.17009 24.6 6.17009V5.17009ZM2.80005 22.5101V8.57008H0.800049V22.5101H2.80005ZM5.60005 6.17009H9.40005V4.17009H5.60005V6.17009ZM10.2377 5.71623L12.8977 1.63623L11.2224 0.543945L8.56236 4.62394L10.2377 5.71623ZM12.06 2.09009H21.94V0.0900879H12.06V2.09009ZM21.1024 1.63623L23.7624 5.71623L25.4377 4.62395L22.7777 0.543946L21.1024 1.63623ZM24.6 6.17009H28.4V4.17009H24.6V6.17009ZM31.2 8.57009V22.5101H33.2V8.57009H31.2ZM31.2 22.5101C31.2 23.7339 30.0539 24.9101 28.4 24.9101V26.9101C30.9435 26.9101 33.2 25.0418 33.2 22.5101H31.2ZM28.4 6.17009C30.0539 6.17009 31.2 7.3463 31.2 8.57009H33.2C33.2 6.03834 30.9435 4.17009 28.4 4.17009V6.17009ZM2.80005 8.57008C2.80005 7.34629 3.94615 6.17009 5.60005 6.17009V4.17009C3.05658 4.17009 0.800049 6.03834 0.800049 8.57008H2.80005ZM5.60005 24.9101C3.94615 24.9101 2.80005 23.7339 2.80005 22.5101H0.800049C0.800049 25.0418 3.05658 26.9101 5.60005 26.9101V24.9101ZM21.7 14.6901C21.7 16.8528 19.7033 18.7901 17 18.7901V20.7901C20.5929 20.7901 23.7 18.1607 23.7 14.6901H21.7ZM17 18.7901C14.2968 18.7901 12.3 16.8528 12.3 14.6901H10.3C10.3 18.1607 13.4072 20.7901 17 20.7901V18.7901ZM12.3 14.6901C12.3 12.5274 14.2968 10.5901 17 10.5901V8.59009C13.4072 8.59009 10.3 11.2195 10.3 14.6901H12.3ZM17 10.5901C19.7033 10.5901 21.7 12.5274 21.7 14.6901H23.7C23.7 11.2195 20.5929 8.59009 17 8.59009V10.5901ZM28.4 24.9101H5.60005V26.9101H28.4V24.9101Z" />
                 </svg>
-                <span class="createRenderSpan" sugar-localization-key="createRender"></span>
+                <span class="createRenderSpan" id="createRenderSpan" sugar-localization-key="createRender"></span>
+            </div>
         </div>
 
         <div class="infoShowButtonDiv">
-        <svg class="infoShowButton" id="infoShowButton" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
             <g filter="url(#filter0_d_18_332)">
-                <rect x="8" y="4" width="32" height="32" rx="16" fill="#EEEEEE"/>
+            <rect style=" fill: #EEEEEE" " x="8" y="4" width="32" height="32" rx="16" />
             </g>
-            <path d="M20.1527 13.9781C20.712 13.4741 21.6188 13.4741 22.178 13.9781L27.8471 19.0875C28.4064 19.5915 28.4064 20.4087 27.8471 20.9127L22.1781 26.0221C21.8988 26.2736 21.5313 26.4001 21.1655 26.4001C20.7998 26.4001 20.4323 26.2738 20.153 26.0222C19.5937 25.5181 19.5936 24.7009 20.1529 24.1968L23.3773 21.2907L24.8468 20.0001L23.3772 18.7094L20.1527 15.8034C19.5935 15.2993 19.5935 14.4821 20.1527 13.9781Z" fill="#E74D35"/>
+            <path class="sugarStrokeForInfoShowButton"  d="M20.1527 13.9781C20.712 13.4741 21.6188 13.4741 22.178 13.9781L27.8471 19.0875C28.4064 19.5915 28.4064 20.4087 27.8471 20.9127L22.1781 26.0221C21.8988 26.2736 21.5313 26.4001 21.1655 26.4001C20.7998 26.4001 20.4323 26.2738 20.153 26.0222C19.5937 25.5181 19.5936 24.7009 20.1529 24.1968L23.3773 21.2907L24.8468 20.0001L23.3772 18.7094L20.1527 15.8034C19.5935 15.2993 19.5935 14.4821 20.1527 13.9781Z" />
             <defs>
-                <filter id="filter0_d_18_332" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-4"/>
-                    <feGaussianBlur stdDeviation="2"/>
-                    <feComposite in2="hardAlpha" operator="out"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_18_332"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_18_332" result="shape"/>
-                </filter>
+            <filter id="filter0_d_18_332" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dx="-4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_18_332"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_18_332" result="shape"/>
+            </filter>
             </defs>
-        </svg>
+            </svg>
         </div>
-</div>
-       
-
-    
+    </div>
 `;
 const close_button_svg = `
-    <svg class="sugarPopupCloseBtn" xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 14 14" fill="none">
-        <path d="M13.3 0.70998C13.2075 0.617276 13.0976 0.543728 12.9766 0.493547C12.8557 0.443366 12.726 0.417535 12.595 0.417535C12.464 0.417535 12.3344 0.443366 12.2134 0.493547C12.0924 0.543728 11.9825 0.617276 11.89 0.70998L7.00001 5.58998L2.11001 0.699979C2.01743 0.607397 1.90752 0.533957 1.78655 0.483852C1.66559 0.433747 1.53594 0.407959 1.40501 0.407959C1.27408 0.407959 1.14443 0.433747 1.02347 0.483852C0.902502 0.533957 0.792592 0.607397 0.70001 0.699979C0.607428 0.792561 0.533988 0.902472 0.483883 1.02344C0.433778 1.1444 0.40799 1.27405 0.40799 1.40498C0.40799 1.53591 0.433778 1.66556 0.483883 1.78652C0.533988 1.90749 0.607428 2.0174 0.70001 2.10998L5.59001 6.99998L0.70001 11.89C0.607428 11.9826 0.533988 12.0925 0.483883 12.2134C0.433778 12.3344 0.40799 12.464 0.40799 12.595C0.40799 12.7259 0.433778 12.8556 0.483883 12.9765C0.533988 13.0975 0.607428 13.2074 0.70001 13.3C0.792592 13.3926 0.902502 13.466 1.02347 13.5161C1.14443 13.5662 1.27408 13.592 1.40501 13.592C1.53594 13.592 1.66559 13.5662 1.78655 13.5161C1.90752 13.466 2.01743 13.3926 2.11001 13.3L7.00001 8.40998L11.89 13.3C11.9826 13.3926 12.0925 13.466 12.2135 13.5161C12.3344 13.5662 12.4641 13.592 12.595 13.592C12.7259 13.592 12.8556 13.5662 12.9766 13.5161C13.0975 13.466 13.2074 13.3926 13.3 13.3C13.3926 13.2074 13.466 13.0975 13.5161 12.9765C13.5662 12.8556 13.592 12.7259 13.592 12.595C13.592 12.464 13.5662 12.3344 13.5161 12.2134C13.466 12.0925 13.3926 11.9826 13.3 11.89L8.41001 6.99998L13.3 2.10998C13.68 1.72998 13.68 1.08998 13.3 0.70998Z" fill="#707070" fill-opacity="0.8"></path>
+    <svg class="sugarPopupCloseBtn" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" >
+    <path class="sugarStroke"  d="M19.45 0.565C19.3112 0.425945 19.1464 0.315623 18.9649 0.240351C18.7835 0.165079 18.589 0.126333 18.3925 0.126333C18.196 0.126333 18.0015 0.165079 17.8201 0.240351C17.6386 0.315623 17.4738 0.425945 17.335 0.565L10 7.885L2.665 0.549999C2.52613 0.411127 2.36126 0.300967 2.17981 0.225809C1.99837 0.150652 1.8039 0.111969 1.6075 0.111969C1.4111 0.111969 1.21663 0.150652 1.03518 0.225809C0.853738 0.300967 0.688872 0.411127 0.549999 0.549999C0.411127 0.688872 0.300967 0.853738 0.225809 1.03518C0.150652 1.21663 0.111969 1.4111 0.111969 1.6075C0.111969 1.8039 0.150652 1.99837 0.225809 2.17981C0.300967 2.36126 0.411127 2.52613 0.549999 2.665L7.885 10L0.549999 17.335C0.411127 17.4739 0.300967 17.6387 0.225809 17.8202C0.150652 18.0016 0.111969 18.1961 0.111969 18.3925C0.111969 18.5889 0.150652 18.7834 0.225809 18.9648C0.300967 19.1463 0.411127 19.3111 0.549999 19.45C0.688872 19.5889 0.853738 19.699 1.03518 19.7742C1.21663 19.8493 1.4111 19.888 1.6075 19.888C1.8039 19.888 1.99837 19.8493 2.17981 19.7742C2.36126 19.699 2.52613 19.5889 2.665 19.45L10 12.115L17.335 19.45C17.4739 19.5889 17.6387 19.699 17.8202 19.7742C18.0016 19.8493 18.1961 19.888 18.3925 19.888C18.5889 19.888 18.7834 19.8493 18.9648 19.7742C19.1463 19.699 19.3111 19.5889 19.45 19.45C19.5889 19.3111 19.699 19.1463 19.7742 18.9648C19.8493 18.7834 19.888 18.5889 19.888 18.3925C19.888 18.1961 19.8493 18.0016 19.7742 17.8202C19.699 17.6387 19.5889 17.4739 19.45 17.335L12.115 10L19.45 2.665C20.02 2.095 20.02 1.135 19.45 0.565Z"  fill-opacity="0.8"/>
     </svg>
 `;
+const advanced_icons = document.createElement('template');
+advanced_icons.innerHTML = `
+<div class="icons" id="icons">
+    <div class="info_buttons">
+        <div id="closeInfoButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                <path class="sugarInformationButtonPathActive"
+                    d="M13.2667 21.3333C13.7333 21.3333 14.128 21.172 14.4507 20.8493C14.7724 20.5276 14.9333 20.1333 14.9333 19.6667C14.9333 19.2 14.7724 18.8058 14.4507 18.484C14.128 18.1613 13.7333 18 13.2667 18C12.8 18 12.4053 18.1613 12.0827 18.484C11.7609 18.8058 11.6 19.2 11.6 19.6667C11.6 20.1333 11.7609 20.5276 12.0827 20.8493C12.4053 21.172 12.8 21.3333 13.2667 21.3333ZM13.4667 7.6C14.0889 7.6 14.5889 7.772 14.9667 8.116C15.3444 8.46089 15.5333 8.91111 15.5333 9.46667C15.5333 9.84445 15.4058 10.2276 15.1507 10.616C14.8947 11.0053 14.5333 11.4111 14.0667 11.8333C13.4 12.4111 12.9111 12.9667 12.6 13.5C12.2889 14.0333 12.1333 14.5667 12.1333 15.1C12.1333 15.4111 12.2502 15.672 12.484 15.8827C12.7169 16.0942 12.9889 16.2 13.3 16.2C13.6111 16.2 13.8889 16.0889 14.1333 15.8667C14.3778 15.6444 14.5333 15.3667 14.6 15.0333C14.6667 14.6556 14.8169 14.3058 15.0507 13.984C15.2836 13.6613 15.6667 13.2444 16.2 12.7333C16.8889 12.0889 17.3724 11.5 17.6507 10.9667C17.928 10.4333 18.0667 9.84444 18.0667 9.2C18.0667 8.06667 17.6391 7.13867 16.784 6.416C15.928 5.69422 14.8222 5.33333 13.4667 5.33333C12.5333 5.33333 11.7058 5.51111 10.984 5.86667C10.2613 6.22222 9.7 6.76667 9.3 7.5C9.14445 7.78889 9.08889 8.072 9.13333 8.34933C9.17778 8.62756 9.33333 8.85556 9.6 9.03333C9.88889 9.21111 10.2058 9.26667 10.5507 9.2C10.8947 9.13333 11.1778 8.94445 11.4 8.63333C11.6444 8.3 11.9391 8.04445 12.284 7.86667C12.628 7.68889 13.0222 7.6 13.4667 7.6ZM13.3333 26.6667C11.5111 26.6667 9.78889 26.3164 8.16667 25.616C6.54444 24.9164 5.128 23.9667 3.91733 22.7667C2.70578 21.5667 1.75022 20.1556 1.05067 18.5333C0.350222 16.9111 0 15.1778 0 13.3333C0 11.4889 0.350222 9.75556 1.05067 8.13333C1.75022 6.51111 2.70578 5.1 3.91733 3.9C5.128 2.7 6.54444 1.74978 8.16667 1.04933C9.78889 0.349778 11.5111 0 13.3333 0C15.2 0 16.9444 0.349778 18.5667 1.04933C20.1889 1.74978 21.6 2.7 22.8 3.9C24 5.1 24.9444 6.51111 25.6333 8.13333C26.3222 9.75556 26.6667 11.4889 26.6667 13.3333C26.6667 15.1778 26.3222 16.9111 25.6333 18.5333C24.9444 20.1556 24 21.5667 22.8 22.7667C21.6 23.9667 20.1889 24.9164 18.5667 25.616C16.9444 26.3164 15.2 26.6667 13.3333 26.6667Z" />
+            </svg>
+        </div>
+        <div id="openInfoButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <path class="sugarInformationButtonPath"
+                    d="M13.1481 22C13.6148 22 14.0095 21.8387 14.3321 21.516C14.6539 21.1942 14.8148 20.8 14.8148 20.3333C14.8148 19.8667 14.6539 19.4724 14.3321 19.1507C14.0095 18.828 13.6148 18.6667 13.1481 18.6667C12.6815 18.6667 12.2868 18.828 11.9641 19.1507C11.6424 19.4724 11.4815 19.8667 11.4815 20.3333C11.4815 20.8 11.6424 21.1942 11.9641 21.516C12.2868 21.8387 12.6815 22 13.1481 22ZM13.3481 8.26667C13.9704 8.26667 14.4704 8.43867 14.8481 8.78267C15.2259 9.12756 15.4148 9.57778 15.4148 10.1333C15.4148 10.5111 15.2873 10.8942 15.0321 11.2827C14.7761 11.672 14.4148 12.0778 13.9481 12.5C13.2815 13.0778 12.7926 13.6333 12.4815 14.1667C12.1704 14.7 12.0148 15.2333 12.0148 15.7667C12.0148 16.0778 12.1317 16.3387 12.3655 16.5493C12.5984 16.7609 12.8704 16.8667 13.1815 16.8667C13.4926 16.8667 13.7704 16.7556 14.0148 16.5333C14.2593 16.3111 14.4148 16.0333 14.4815 15.7C14.5481 15.3222 14.6984 14.9724 14.9321 14.6507C15.165 14.328 15.5481 13.9111 16.0815 13.4C16.7704 12.7556 17.2539 12.1667 17.5321 11.6333C17.8095 11.1 17.9481 10.5111 17.9481 9.86667C17.9481 8.73333 17.5206 7.80533 16.6655 7.08267C15.8095 6.36089 14.7037 6 13.3481 6C12.4148 6 11.5873 6.17778 10.8655 6.53333C10.1428 6.88889 9.58148 7.43333 9.18148 8.16667C9.02593 8.45556 8.97037 8.73867 9.01481 9.016C9.05926 9.29422 9.21481 9.52222 9.48148 9.7C9.77037 9.87778 10.0873 9.93333 10.4321 9.86667C10.7761 9.8 11.0593 9.61111 11.2815 9.3C11.5259 8.96667 11.8206 8.71111 12.1655 8.53333C12.5095 8.35556 12.9037 8.26667 13.3481 8.26667Z"
+                    fill="#395699" />
+                <circle class="sugarInformationButtonCircle" cx="13.5" cy="13.5" r="12.5" stroke="#395699"
+                    stroke-width="2" />
+            </svg>
+        </div>
+    </div>
+    <div class="fabricButtons">
+        <div id="fabricOpenButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <circle class="sugarInformationButtonCircle" cx="13.5" cy="13.5" r="12.5" stroke="#395699"
+                    stroke-width="2" />
+                <path class="sugarStrokeForInfoShowButton"
+                    d="M11.323 7.90863C11.7877 7.81099 12.2292 7.68882 12.6795 7.63062C13.4445 7.53153 14.0921 7.87304 14.7183 8.25014C14.889 8.35308 14.8837 8.50267 14.7179 8.67053C14.3223 9.07024 13.9223 9.4661 13.5238 9.86245C12.8458 10.5368 12.1732 11.2165 11.4845 11.8797C11.3152 12.0428 11.2838 12.2068 11.3844 12.4651C11.4681 12.3646 11.544 12.2564 11.6364 12.1645C12.7796 11.0241 13.9281 9.88842 15.0675 8.74413C15.2305 8.58011 15.3731 8.53922 15.5995 8.61811C16.41 8.90093 17.2456 8.88169 18.0842 8.77491C18.1722 8.76385 18.266 8.73403 18.3473 8.75375C18.4609 8.78116 18.6099 8.82061 18.6587 8.9043C18.6955 8.96683 18.6263 9.13422 18.5557 9.20829C18.1838 9.59742 17.7969 9.97211 17.4149 10.3516C15.4486 12.3069 13.4847 14.2641 11.5126 16.2135C11.3394 16.3843 11.2664 16.5536 11.3375 16.8095C11.4076 16.7436 11.4695 16.6873 11.529 16.6286C14.0655 14.1072 16.6024 11.5868 19.136 9.06255C19.2772 8.9221 19.4083 8.89131 19.5872 8.97645C20.2401 9.28765 20.7421 9.76096 21.1043 10.3781C21.2972 10.7061 21.2576 10.925 20.993 11.1886C19.6148 12.5613 18.2365 13.9336 16.8578 15.3049C15.6739 16.4829 14.491 17.6618 13.299 18.8316C13.2095 18.9196 13.0543 18.9528 12.9232 18.986C12.5832 19.0726 12.2389 19.1404 11.8985 19.2251C11.6905 19.2765 11.4869 19.3448 11.2809 19.4049C11.2504 19.4136 11.2108 19.4078 11.1881 19.4252C10.6943 19.8013 10.1024 19.8571 9.51868 19.9095C8.61676 19.9898 7.71533 19.9759 6.82986 19.7503C6.6901 19.7147 6.55324 19.6642 6.42074 19.6074C6.13541 19.4858 5.99904 19.289 6.00001 18.9557C6.01016 15.2847 6.00919 11.6133 6.00339 7.94182C6.00339 7.6691 6.10978 7.4767 6.34675 7.39445C6.70896 7.26891 7.08085 7.14866 7.45806 7.09334C8.47023 6.94472 9.48241 6.96732 10.4825 7.20638C10.6227 7.24005 10.7615 7.28863 10.8926 7.34779C11.147 7.46275 11.351 7.6234 11.323 7.90863ZM11.323 18.961C11.4502 18.91 11.528 18.872 11.6098 18.848C11.985 18.7373 12.3569 18.607 12.7394 18.5339C12.9092 18.5016 13.0349 18.4497 13.151 18.3328C13.9049 17.5776 14.6613 16.8244 15.4181 16.0716C17.1431 14.3554 18.8667 12.6378 20.5965 10.9269C20.7401 10.785 20.7551 10.6739 20.6439 10.5147C20.3648 10.1154 20.035 9.77202 19.6138 9.51661C19.4876 9.44013 19.4102 9.45071 19.3053 9.55557C16.6832 12.1679 14.0573 14.7763 11.4342 17.3876C11.3863 17.4357 11.3288 17.504 11.3278 17.5642C11.3186 18.011 11.323 18.4579 11.323 18.96V18.961ZM11.3327 15.671C13.4745 13.5392 15.6101 11.4137 17.7447 9.2891C17.7007 9.29102 17.6407 9.29294 17.5808 9.29727C16.9168 9.34633 16.2601 9.30545 15.6202 9.11353C15.4674 9.06784 15.3746 9.10103 15.2653 9.21069C13.9939 10.4834 12.7158 11.7494 11.4463 13.024C11.3728 13.0976 11.3264 13.2304 11.3249 13.3367C11.3143 14.0413 11.3191 14.7465 11.3201 15.4516C11.3201 15.5276 11.3283 15.6031 11.3322 15.671H11.3327ZM6.4836 13.5661C6.5692 13.4973 6.6311 13.4507 6.68913 13.3997C7.24479 12.9129 7.80286 12.4286 8.3532 11.9355C8.52923 11.7778 8.67189 11.7672 8.85421 11.9312C9.43356 12.4517 10.0236 12.961 10.6097 13.4738C10.6716 13.5281 10.7383 13.5762 10.822 13.6426V9.49448C10.732 9.56952 10.6721 9.6181 10.6135 9.66908C10.0279 10.1828 9.43936 10.6931 8.85856 11.2126C8.68108 11.3713 8.53794 11.3742 8.35755 11.2126C7.78981 10.7027 7.21287 10.204 6.63836 9.70227C6.5958 9.66476 6.54454 9.63686 6.48312 9.59405V13.5661H6.4836ZM6.48167 18.1168C6.55131 18.0678 6.59822 18.0408 6.63787 18.0057C7.19256 17.519 7.74628 17.0303 8.30097 16.543C8.58726 16.2915 8.62547 16.29 8.90499 16.5368C9.36828 16.9456 9.82818 17.3578 10.292 17.7657C10.4564 17.91 10.6276 18.0466 10.8283 18.214V14.0495C10.7364 14.1246 10.6754 14.1707 10.6179 14.2212C10.0381 14.7292 9.45919 15.2381 8.87936 15.746C8.6332 15.9615 8.58291 15.962 8.33095 15.7422C7.77482 15.2559 7.22061 14.7677 6.66447 14.2809C6.61514 14.2376 6.5605 14.2006 6.48119 14.1395V18.1164L6.48167 18.1168ZM8.60709 16.8994C7.91361 17.5089 7.23077 18.1039 6.55421 18.7065C6.39172 18.8513 6.44105 19.1077 6.64126 19.1923C6.77376 19.2486 6.91304 19.2934 7.05328 19.3251C7.86235 19.5093 8.6835 19.5218 9.50223 19.441C9.8983 19.4021 10.29 19.2943 10.6759 19.189C10.8728 19.1351 10.9129 18.9307 10.763 18.797C10.0516 18.163 9.33297 17.5368 8.60709 16.8994ZM6.49569 8.40214C6.40671 8.75278 6.49666 9.00483 6.79069 9.21935C7.11373 9.45456 7.39906 9.7422 7.70082 10.0063C8.00017 10.2689 8.3 10.531 8.60854 10.8009C9.29187 10.2006 9.94521 9.60704 10.6222 9.04186C10.8466 8.85476 10.8679 8.65899 10.8191 8.4055C9.37505 8.78309 7.94021 8.78934 6.49569 8.40166V8.40214ZM10.3244 13.8528C9.74597 13.3444 9.18161 12.848 8.60757 12.3429C8.03112 12.849 7.46773 13.3444 6.88886 13.8523C7.47257 14.3646 8.03596 14.8586 8.60661 15.3593C9.18934 14.848 9.74838 14.3578 10.3239 13.8528H10.3244ZM14.1893 8.5017C13.3038 7.93124 12.4169 7.98463 11.5145 8.41609C11.3742 8.48343 11.3143 8.5599 11.3162 8.72344C11.3259 9.53248 11.3196 10.3415 11.3211 11.1506C11.3211 11.2078 11.3351 11.2655 11.3438 11.3343C12.3008 10.3819 13.2385 9.44831 14.1893 8.5017ZM6.52713 7.84899C7.2564 8.36077 10.2774 8.31604 10.7818 7.84274C10.1928 7.35934 7.17612 7.34923 6.52713 7.84899Z"
+                    fill="#395699" stroke="#395699" stroke-width="0.5" />
+                <path class="sugarStrokeForInfoShowButton"
+                    d="M21.2263 13.5055C21.2263 13.9784 21.2369 14.4512 21.2195 14.9235C21.2147 15.0534 21.1586 15.2136 21.0686 15.3035C19.6517 16.7253 18.2236 18.1356 16.8037 19.555C16.6674 19.6916 16.5252 19.7455 16.3366 19.7527C15.4922 19.7854 14.6875 19.6253 13.9138 19.2953C13.5902 19.1572 13.5588 19.0134 13.8069 18.7676C14.8041 17.7797 15.8041 16.7946 16.7989 15.8042C18.0732 14.5358 19.3441 13.2631 20.6164 11.9928C20.645 11.9644 20.6692 11.9274 20.7035 11.9101C20.8239 11.8499 20.9472 11.7965 21.0701 11.7408C21.1218 11.8649 21.2132 11.987 21.218 12.1126C21.2359 12.5767 21.2253 13.0419 21.2253 13.5065H21.2263V13.5055ZM14.3316 18.9528C14.9811 19.2135 15.6494 19.3136 16.3385 19.2765C16.4062 19.2727 16.4802 19.2078 16.5344 19.1539C17.9015 17.7975 19.2677 16.4396 20.6276 15.076C20.6972 15.0062 20.748 14.8841 20.7494 14.7855C20.7596 14.113 20.7548 13.4401 20.7533 12.7672C20.7533 12.708 20.7407 12.6494 20.734 12.5897C18.5965 14.7138 16.4715 16.8263 14.3316 18.9528Z"
+                    fill="#395699" stroke="#395699" stroke-width="0.5" />
+                <path class="sugarStrokeForInfoShowButton"
+                    d="M21.2252 17.6224C21.2252 18.063 21.2315 18.5041 21.2237 18.9442C21.2097 19.7619 20.5747 20.1943 19.8005 19.9153C19.1742 19.6897 18.532 19.5627 17.8632 19.5608C17.7631 19.5608 17.6083 19.4925 17.5788 19.417C17.5484 19.3386 17.6108 19.1856 17.6823 19.1135C18.4324 18.354 19.1921 17.6041 19.949 16.8514C20.2222 16.5801 20.4887 16.3016 20.7716 16.0409C20.8422 15.9759 20.9945 15.9134 21.0579 15.9466C21.1401 15.9899 21.2136 16.1284 21.217 16.2285C21.2334 16.6926 21.2242 17.1578 21.2242 17.6224H21.2252ZM20.7522 16.7806C19.9572 17.57 19.1825 18.3396 18.4454 19.0716C18.9658 19.2135 19.5205 19.365 20.0761 19.5156C20.421 19.6089 20.7396 19.3958 20.7474 19.0283C20.7638 18.2852 20.7522 17.5416 20.7522 16.7806Z"
+                    fill="#395699" stroke="#395699" stroke-width="0.5" />
+            </svg>
+        </div>
+        <div id="fabricCloseButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <path class="sugarDimensionButtonCircle"
+                    d="M13.3333 26.6667C11.5111 26.6667 9.78889 26.3164 8.16667 25.616C6.54444 24.9164 5.128 23.9667 3.91733 22.7667C2.70578 21.5667 1.75022 20.1556 1.05067 18.5333C0.350222 16.9111 0 15.1778 0 13.3333C0 11.4889 0.350222 9.75556 1.05067 8.13333C1.75022 6.51111 2.70578 5.1 3.91733 3.9C5.128 2.7 6.54444 1.74978 8.16667 1.04933C9.78889 0.349778 11.5111 0 13.3333 0C15.2 0 16.9444 0.349778 18.5667 1.04933C20.1889 1.74978 21.6 2.7 22.8 3.9C24 5.1 24.9444 6.51111 25.6333 8.13333C26.3222 9.75556 26.6667 11.4889 26.6667 13.3333C26.6667 15.1778 26.3222 16.9111 25.6333 18.5333C24.9444 20.1556 24 21.5667 22.8 22.7667C21.6 23.9667 20.1889 24.9164 18.5667 25.616C16.9444 26.3164 15.2 26.6667 13.3333 26.6667Z" />
+                <path class="sugarFabricButtonPathActive"
+                    d="M11.1419 7.04842C11.6781 6.93576 12.1876 6.79479 12.7071 6.72764C13.5898 6.61331 14.337 7.00735 15.0596 7.44247C15.2566 7.56124 15.2505 7.73385 15.0591 7.92754C14.6026 8.38874 14.1412 8.8455 13.6814 9.30282C12.899 10.0809 12.1229 10.8651 11.3283 11.6305C11.133 11.8186 11.0967 12.0079 11.2128 12.3059C11.3093 12.1899 11.3969 12.065 11.5035 11.959C12.8226 10.6431 14.1478 9.33279 15.4625 8.01245C15.6505 7.8232 15.8152 7.77603 16.0763 7.86704C17.0115 8.19338 17.9757 8.17118 18.9433 8.04797C19.0449 8.03521 19.1531 8.0008 19.2468 8.02355C19.378 8.05519 19.5498 8.1007 19.6062 8.19727C19.6486 8.26942 19.5688 8.46256 19.4873 8.54803C19.0582 8.99702 18.6118 9.42936 18.171 9.86725C15.9022 12.1233 13.6362 14.3816 11.3606 16.631C11.1609 16.828 11.0766 17.0234 11.1586 17.3186C11.2396 17.2426 11.311 17.1777 11.3796 17.11C14.3063 14.2007 17.2336 11.2925 20.1569 8.37986C20.3199 8.2178 20.4711 8.18228 20.6776 8.28052C21.4309 8.6396 22.0101 9.18572 22.428 9.89778C22.6506 10.2763 22.6049 10.5288 22.2997 10.8329C20.7094 12.4169 19.1191 14.0003 17.5282 15.5826C16.1622 16.9418 14.7974 18.3021 13.4219 19.6518C13.3187 19.7534 13.1395 19.7917 12.9883 19.83C12.5961 19.9299 12.1988 20.0082 11.8059 20.1058C11.566 20.1652 11.3311 20.244 11.0934 20.3134C11.0582 20.3234 11.0124 20.3167 10.9862 20.3367C10.4165 20.7707 9.73352 20.8351 9.06001 20.8956C8.01934 20.9883 6.97923 20.9722 5.95753 20.7119C5.79627 20.6708 5.63836 20.6125 5.48547 20.5471C5.15625 20.4066 4.99889 20.1796 5.00001 19.795C5.01172 15.5593 5.01061 11.323 5.00391 7.08672C5.00391 6.77204 5.12667 6.55004 5.40009 6.45513C5.81803 6.31028 6.24713 6.17153 6.68237 6.1077C7.85027 5.93621 9.01816 5.9623 10.1721 6.23813C10.3339 6.27698 10.4941 6.33303 10.6453 6.4013C10.9388 6.53394 11.1743 6.71931 11.1419 7.04842ZM11.1419 19.8011C11.2887 19.7423 11.3785 19.6985 11.4728 19.6707C11.9058 19.5431 12.3349 19.3927 12.7763 19.3083C12.9721 19.2711 13.1172 19.2112 13.2511 19.0763C14.1211 18.205 14.9938 17.3358 15.867 16.4673C17.8574 14.487 19.8461 12.5052 21.8421 10.531C22.0078 10.3673 22.0251 10.2391 21.8968 10.0554C21.5748 9.59475 21.1943 9.19848 20.7082 8.90378C20.5626 8.81553 20.4733 8.82774 20.3522 8.94873C17.3268 11.9629 14.2968 14.9727 11.2702 17.9857C11.215 18.0412 11.1486 18.1201 11.1475 18.1894C11.1369 18.705 11.1419 19.2206 11.1419 19.8V19.8011ZM11.1531 16.005C13.6244 13.5452 16.0886 11.0927 18.5516 8.64127C18.5008 8.64349 18.4316 8.6457 18.3624 8.6507C17.5963 8.70731 16.8385 8.66014 16.1003 8.43869C15.924 8.38597 15.8168 8.42426 15.6907 8.5508C14.2237 10.0193 12.7489 11.4801 11.2842 12.9508C11.1994 13.0357 11.1458 13.1889 11.1441 13.3116C11.1319 14.1246 11.1374 14.9383 11.1386 15.7519C11.1386 15.8396 11.148 15.9267 11.1525 16.005H11.1531ZM5.55801 13.5763C5.65677 13.4969 5.7282 13.4431 5.79516 13.3843C6.4363 12.8226 7.08023 12.2637 7.71523 11.6949C7.91834 11.5128 8.08295 11.5006 8.29332 11.6899C8.9618 12.2904 9.64256 12.8781 10.3189 13.4697C10.3903 13.5325 10.4673 13.588 10.5638 13.6645V8.87825C10.46 8.96483 10.3908 9.02088 10.3233 9.07971C9.64758 9.67245 8.9685 10.2613 8.29834 10.8607C8.09355 11.0438 7.92839 11.0472 7.72025 10.8607C7.06516 10.2724 6.39947 9.69687 5.73657 9.11801C5.68746 9.07472 5.62831 9.04253 5.55745 8.99313V13.5763H5.55801ZM5.55577 18.8271C5.63613 18.7705 5.69025 18.7394 5.73601 18.6989C6.37603 18.1373 7.01494 17.5734 7.65497 17.0112C7.9853 16.7209 8.02938 16.7192 8.35191 17.004C8.88647 17.4757 9.41713 17.9513 9.95225 18.422C10.142 18.5885 10.3395 18.7461 10.5711 18.9392V14.1341C10.4651 14.2206 10.3947 14.2739 10.3283 14.3322C9.6593 14.9183 8.99138 15.5055 8.32233 16.0915C8.03831 16.3402 7.98028 16.3407 7.68956 16.0871C7.04786 15.526 6.4084 14.9627 5.7667 14.401C5.70978 14.3511 5.64673 14.3083 5.55522 14.2379V18.8266L5.55577 18.8271ZM8.00818 17.4224C7.20801 18.1256 6.42011 18.8121 5.63947 19.5075C5.45199 19.6746 5.5089 19.9704 5.73991 20.0681C5.8928 20.133 6.05351 20.1846 6.21533 20.2213C7.14886 20.4338 8.09634 20.4483 9.04104 20.355C9.49804 20.3101 9.95002 20.1858 10.3953 20.0642C10.6224 20.0021 10.6687 19.7662 10.4957 19.6119C9.67492 18.8804 8.84574 18.1578 8.00818 17.4224ZM5.57196 7.61785C5.46928 8.02244 5.57307 8.31326 5.91233 8.56079C6.28508 8.83218 6.6143 9.16407 6.96249 9.46877C7.30789 9.77179 7.65385 10.0743 8.00985 10.3856C8.79831 9.69298 9.55217 9.00812 10.3334 8.356C10.5923 8.1401 10.6168 7.91422 10.5605 7.62174C8.89428 8.05741 7.2387 8.06462 5.57196 7.6173V7.61785ZM9.98964 13.9071C9.32227 13.3204 8.67108 12.7477 8.00874 12.1649C7.3436 12.7488 6.69353 13.3204 6.02561 13.9065C6.69911 14.4976 7.34918 15.0676 8.00762 15.6453C8.68001 15.0554 9.32506 14.4898 9.98908 13.9071H9.98964ZM14.4492 7.73274C13.4275 7.07451 12.4041 7.13611 11.3629 7.63395C11.2011 7.71165 11.1319 7.79989 11.1341 7.98859C11.1453 8.92209 11.138 9.8556 11.1397 10.7891C11.1397 10.8551 11.1559 10.9217 11.1659 11.0011C12.2702 9.90222 13.3521 8.82497 14.4492 7.73274ZM5.60823 6.9796C6.44969 7.57012 9.93551 7.51851 10.5175 6.97239C9.83786 6.41462 6.35706 6.40296 5.60823 6.9796Z"
+                    fill="white" />
+                <path class="sugarFabricButtonPathActive"
+                    d="M22.5687 13.5064C22.5687 14.0519 22.581 14.5975 22.5609 15.1425C22.5553 15.2924 22.4906 15.4772 22.3868 15.581C20.7519 17.2215 19.1041 18.8488 17.4658 20.4866C17.3084 20.6442 17.1444 20.7063 16.9268 20.7147C15.9525 20.7524 15.024 20.5676 14.1312 20.1869C13.7579 20.0276 13.7216 19.8616 14.0079 19.578C15.1585 18.4381 16.3124 17.3014 17.4602 16.1587C18.9305 14.6952 20.397 13.2267 21.8651 11.7609C21.898 11.7282 21.9259 11.6854 21.9655 11.6655C22.1044 11.5961 22.2467 11.5345 22.3885 11.4701C22.4482 11.6133 22.5536 11.7543 22.5592 11.8991C22.5799 12.4347 22.5676 12.9714 22.5676 13.5075H22.5687V13.5064ZM14.6133 19.7917C15.3627 20.0925 16.1338 20.208 16.929 20.1652C17.0071 20.1608 17.0925 20.0859 17.155 20.0237C18.7325 18.4586 20.3088 16.8919 21.8779 15.3184C21.9582 15.238 22.0168 15.097 22.0185 14.9832C22.0302 14.2073 22.0246 13.4309 22.023 12.6545C22.023 12.5862 22.0085 12.5185 22.0007 12.4497C19.5343 14.9005 17.0824 17.3381 14.6133 19.7917Z"
+                    fill="white" />
+                <path class="sugarFabricButtonPathActive"
+                    d="M22.5675 18.2566C22.5675 18.765 22.5748 19.2739 22.5658 19.7817C22.5497 20.7252 21.817 21.2242 20.9237 20.9023C20.201 20.642 19.46 20.4954 18.6883 20.4932C18.5728 20.4932 18.3942 20.4144 18.3602 20.3273C18.3251 20.2368 18.397 20.0603 18.4796 19.9771C19.3451 19.1007 20.2217 18.2355 21.095 17.3669C21.4102 17.0539 21.7177 16.7326 22.0441 16.4318C22.1256 16.3568 22.3014 16.2847 22.3745 16.323C22.4693 16.3729 22.5541 16.5328 22.558 16.6482C22.577 17.1838 22.5664 17.7205 22.5664 18.2566H22.5675ZM22.0218 17.2853C21.1044 18.1961 20.2105 19.0841 19.3601 19.9288C19.9606 20.0925 20.6006 20.2673 21.2417 20.4411C21.6396 20.5487 22.0073 20.3029 22.0162 19.8788C22.0352 19.0214 22.0218 18.1634 22.0218 17.2853Z"
+                    fill="white" />
+            </svg>
+        </div>
+    </div>
+    <div class="dimension_open_button" id="dimension_button">
+        <svg class="dimension_control_button" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+            viewBox="0 0 27 27">
+            <circle class="sugarDimensionButtonCircle" cx="13.5" cy="13.5" r="12.5" stroke-width="2" />
+            <path fill="white"
+                d="M5 17.6247C5.10513 17.5192 5.20693 17.4108 5.31571 17.3088C9.60364 13.2715 13.8926 9.23489 18.1815 5.19827C18.2324 5.15036 18.2823 5.1012 18.3392 5.06018C18.4486 4.98158 18.5644 4.97939 18.6762 5.05705C18.7248 5.09087 18.7687 5.13126 18.8116 5.17165C19.8136 6.11419 21.4909 7.93259 22.4926 8.87575C22.7378 9.10685 22.7371 9.21206 22.4873 9.44691C18.1475 13.5314 13.808 17.616 9.46816 21.7002C9.40263 21.7619 9.33077 21.8173 9.26157 21.8756H9.09556C9.01805 21.8176 8.93388 21.7663 8.86402 21.7011C7.86132 20.7602 6.18468 18.9424 5.18497 17.9986C5.11577 17.9332 5.06121 17.8539 5 17.781C5 17.729 5 17.6767 5 17.6247ZM11.9271 11.8925C11.5202 12.2751 11.1237 12.6478 10.7022 13.0442C11.1523 13.4644 11.6144 13.8959 12.0562 14.3086C11.9324 14.4314 11.8086 14.5544 11.6703 14.6922C11.2118 14.2588 10.7521 13.8245 10.3036 13.4005C9.90871 13.7735 9.51515 14.1452 9.11626 14.5219C9.43464 14.8203 9.76299 15.1278 10.086 15.4306C9.9463 15.568 9.82154 15.6908 9.68614 15.8239C9.35612 15.5117 9.02976 15.2029 8.71571 14.9055C8.30918 15.2906 7.91428 15.6642 7.50076 16.0556C7.94888 16.4765 8.40965 16.9092 8.85145 17.3244C8.73102 17.4475 8.60926 17.5718 8.47153 17.7124C8.00644 17.2737 7.547 16.84 7.09622 16.4148C6.63113 16.8541 6.1717 17.2881 5.72458 17.7105C6.64444 18.577 8.24889 20.3277 9.15212 21.1785C13.4124 17.1691 17.6824 13.15 21.938 9.14474C21.0285 8.28925 19.426 6.54225 18.5202 5.69021C18.0674 6.11607 17.6043 6.55133 17.1146 7.01164C17.5627 7.42998 18.0245 7.86148 18.4636 8.27138C18.3418 8.39538 18.2197 8.52001 18.0817 8.6606C17.6226 8.22315 17.1648 7.78633 16.7223 7.36454C16.3241 7.73999 15.9302 8.11105 15.5244 8.49339C15.8417 8.78993 16.1701 9.0968 16.5014 9.4068C16.3607 9.53707 16.2323 9.65637 16.0883 9.79008C15.7629 9.48164 15.4365 9.17227 15.1288 8.88074C14.7256 9.25932 14.329 9.63164 13.9135 10.0218C14.361 10.4427 14.8211 10.8757 15.2662 11.2941C15.1461 11.4153 15.0233 11.5386 14.883 11.6805C14.4175 11.2411 13.9584 10.8078 13.5083 10.3825C13.1101 10.757 12.7165 11.1275 12.3113 11.5089C12.631 11.8089 12.9587 12.1167 13.2791 12.4173C13.1487 12.5491 13.0259 12.6734 12.8965 12.804C12.5625 12.4896 12.2348 12.1821 11.9271 11.8925Z"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
+    <div class="dimension_close_button" id="dimension_button">
+        <svg class="dimension_control_button" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+            viewBox="0 0 27 27">
+            <circle class="sugarDimensionCloseButtonActive" cx="13.5" cy="13.5" r="12.5" stroke-width="2" />
+            <path class="sugarDimensionCloseButtonActive"
+                d="M5 17.6247C5.10513 17.5192 5.20693 17.4108 5.31571 17.3088C9.60364 13.2715 13.8926 9.23489 18.1815 5.19827C18.2324 5.15036 18.2823 5.1012 18.3392 5.06018C18.4486 4.98158 18.5644 4.97939 18.6762 5.05705C18.7248 5.09087 18.7687 5.13126 18.8116 5.17165C19.8136 6.11419 21.4909 7.93259 22.4926 8.87575C22.7378 9.10685 22.7371 9.21206 22.4873 9.44691C18.1475 13.5314 13.808 17.616 9.46816 21.7002C9.40263 21.7619 9.33077 21.8173 9.26157 21.8756H9.09556C9.01805 21.8176 8.93388 21.7663 8.86402 21.7011C7.86132 20.7602 6.18468 18.9424 5.18497 17.9986C5.11577 17.9332 5.06121 17.8539 5 17.781C5 17.729 5 17.6767 5 17.6247ZM11.9271 11.8925C11.5202 12.2751 11.1237 12.6478 10.7022 13.0442C11.1523 13.4644 11.6144 13.8959 12.0562 14.3086C11.9324 14.4314 11.8086 14.5544 11.6703 14.6922C11.2118 14.2588 10.7521 13.8245 10.3036 13.4005C9.90871 13.7735 9.51515 14.1452 9.11626 14.5219C9.43464 14.8203 9.76299 15.1278 10.086 15.4306C9.9463 15.568 9.82154 15.6908 9.68614 15.8239C9.35612 15.5117 9.02976 15.2029 8.71571 14.9055C8.30918 15.2906 7.91428 15.6642 7.50076 16.0556C7.94888 16.4765 8.40965 16.9092 8.85145 17.3244C8.73102 17.4475 8.60926 17.5718 8.47153 17.7124C8.00644 17.2737 7.547 16.84 7.09622 16.4148C6.63113 16.8541 6.1717 17.2881 5.72458 17.7105C6.64444 18.577 8.24889 20.3277 9.15212 21.1785C13.4124 17.1691 17.6824 13.15 21.938 9.14474C21.0285 8.28925 19.426 6.54225 18.5202 5.69021C18.0674 6.11607 17.6043 6.55133 17.1146 7.01164C17.5627 7.42998 18.0245 7.86148 18.4636 8.27138C18.3418 8.39538 18.2197 8.52001 18.0817 8.6606C17.6226 8.22315 17.1648 7.78633 16.7223 7.36454C16.3241 7.73999 15.9302 8.11105 15.5244 8.49339C15.8417 8.78993 16.1701 9.0968 16.5014 9.4068C16.3607 9.53707 16.2323 9.65637 16.0883 9.79008C15.7629 9.48164 15.4365 9.17227 15.1288 8.88074C14.7256 9.25932 14.329 9.63164 13.9135 10.0218C14.361 10.4427 14.8211 10.8757 15.2662 11.2941C15.1461 11.4153 15.0233 11.5386 14.883 11.6805C14.4175 11.2411 13.9584 10.8078 13.5083 10.3825C13.1101 10.757 12.7165 11.1275 12.3113 11.5089C12.631 11.8089 12.9587 12.1167 13.2791 12.4173C13.1487 12.5491 13.0259 12.6734 12.8965 12.804C12.5625 12.4896 12.2348 12.1821 11.9271 11.8925Z"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
+</div>`;
 
 class TemplateMananagerAdvanced {
     constructor(element) {
@@ -73048,6 +73322,7 @@ class TemplateMananagerAdvanced {
         this.featureContainer = (_a = this.element.parentElement) === null || _a === void 0 ? void 0 : _a.querySelector(".feature_container");
         this.featureLoading = (_b = this.element.parentElement) === null || _b === void 0 ? void 0 : _b.querySelector(".feature_loading");
         var sugarArButton = (_c = this.element.shadowRoot) === null || _c === void 0 ? void 0 : _c.querySelector(".showAtHome");
+        this.element.shadowRoot.appendChild(this.creaeteSelectionColorTemmplate());
         if (!sugarArButton) {
             var slotArButtonList = this.element.querySelectorAll('[slot="ar-button"]');
             if (slotArButtonList == null || slotArButtonList.length == 0) {
@@ -73060,8 +73335,76 @@ class TemplateMananagerAdvanced {
             }
         }
     }
+    creaeteSelectionColorTemmplate() {
+        let selectColor = this.element.getAttribute("selectColor");
+        selectColor = selectColor ? selectColor : "#E74D35";
+        const template_selection_color = document.createElement('template');
+        template_selection_color.innerHTML = `
+        <style> 
+            .sugarStroke{
+                stroke: ` + selectColor + `;
+                border-color: ` + selectColor + `;
+            }
+            #sugarStroke{
+                stroke: ` + selectColor + `;
+                border-color: ` + selectColor + `;
+            }
+            .sugar_ar_button{
+                background: ` + selectColor + `;
+            }
+        
+            .sugarStrokeForInfoShowButton{
+                stroke: ` + selectColor + `;
+                fill: ` + selectColor + `;
+                border-color: ` + selectColor + `;
+            }
+        
+            #sugarStrokeForInfoShowButton{
+                stroke: ` + selectColor + `;
+                fill: ` + selectColor + `;
+                border-color: ` + selectColor + `;
+            }
+        
+            #sugarStrokeForFeaturePageButtons{
+                background: ` + selectColor + `;
+            }
+            .modelSliderImgButton.active{
+                background: ` + selectColor + `;
+            }
+
+            #createRenderSpan{
+                color: ` + selectColor + `;
+            }
+            .sugar_ar_button{
+                background: ` + selectColor + ` !important;
+            }
+            .sugarInformationButtonPath{
+                fill: ` + selectColor + `;
+            }
+        
+            .sugarInformationButtonCircle{
+                stroke: ` + selectColor + `
+            }
+            .sugarInformationButtonPathActive{
+                fill: ` + selectColor + `;
+            }
+        
+            .sugarInformationButtonCircleActive{
+                fill: ` + selectColor + `;
+            }
+            .sugarDimensionButtonCircle{
+                fill: ` + selectColor + `;
+            }
+            .sugarDimensionCloseButtonActive{
+                stroke: ` + selectColor + `;
+                fill: white;
+            }
+        </style>
+        `;
+        return template_selection_color.content.cloneNode(true);
+    }
     initialize() {
-        let rootElement = this.createCotainerElement();
+        let rootElement = this.createContainerElement();
         let container = document.createElement("div");
         container.className = "sugar-model-viewer-container";
         container.style.height = this.element.style.height;
@@ -73086,6 +73429,8 @@ class TemplateMananagerAdvanced {
             loading.src = loadingSlots[0].src;
         }
         this.element.appendChild(this.template_sugar_loading);
+        this.sugarModelViewerContent.appendChild(this.template_content_main);
+        this.sugarModelViewerContent.appendChild(this.creaeteSelectionColorTemmplate());
         var ro = new ResizeObserver(entries => {
             this.onResize();
         });
@@ -73106,7 +73451,7 @@ class TemplateMananagerAdvanced {
         else
             this.sugarModelViewerPopupContainer.classList.remove("open");
     }
-    createCotainerElement() {
+    createContainerElement() {
         let popupContent = this.element.parentElement;
         if (this.element.popupId) {
             let popupTriggerElement = document.body.querySelector(this.element.popupId);
@@ -73118,11 +73463,14 @@ class TemplateMananagerAdvanced {
                 popupContent = document.createElement("div");
                 popupContent.classList.add("sugar-model-viewer-popup-content");
                 this.sugarModelViewerPopupContainer.appendChild(popupContent);
+                let popupButtonsContent = document.createElement("div");
+                popupButtonsContent.classList.add('sugar-model-viewer-popup-buttons');
                 let closeContent = document.createElement("img");
                 closeContent.src = 'data:image/svg+xml;base64,' + btoa(close_button_svg.trim());
                 closeContent.classList.add('sugar-model-viewer-popup-close');
                 closeContent.addEventListener("click", this.onPopupTriggerElementClick.bind(this));
-                popupContent.appendChild(closeContent);
+                popupButtonsContent.appendChild(closeContent);
+                popupContent.appendChild(popupButtonsContent);
             }
         }
         return popupContent;
@@ -73138,9 +73486,7 @@ class TemplateMananagerAdvanced {
     populateContainer() {
         let parent = this.sugarModelViewerContainer;
         this.modelInfoContainer = parent === null || parent === void 0 ? void 0 : parent.querySelector('#modelInfo');
-        if (!this.modelInfoContainer) {
-            this.createCarouselButtonContainer();
-        }
+        this.element.parentElement.appendChild((advanced_icons).content.cloneNode(true));
         let parts = this.element.serviceData.parts;
         let productName = parent === null || parent === void 0 ? void 0 : parent.querySelector('#productName');
         productName.innerHTML = this.element.serviceData.name;
@@ -73163,41 +73509,41 @@ class TemplateMananagerAdvanced {
             var featurePageButtons = document.createElement("div");
             featurePageButtons.className = "featurePageButtons";
             childElementNode.appendChild(featurePageButtons);
+            var featurePagesDiv = document.createElement("div");
+            featurePagesDiv.classList.add("featurePagesDiv");
+            childElementNode.appendChild(featurePagesDiv);
+            var numPages = Math.ceil(part.materials.length / 8);
             part.materials.forEach((materialId, index) => {
-                if (index % 8 == 0) {
+                if (index % 8 === 0) {
                     currentPageElement = document.createElement("div");
                     currentPageElement.className = "feature_page";
                     currentPageElement.id = index;
                     currentPageElement.setAttribute("index", "" + index / 8);
-                    childElementNode.appendChild(currentPageElement);
-                    var pageButton = document.createElement("button");
-                    pageButton.className = "featurePageButton";
-                    pageButton.id = index;
-                    pageButton.setAttribute("index", "" + index / 8);
-                    const count = (Math.round(index / 8));
-                    const calcString = "translateX(calc(" + count * 100 + "% " + (count < 0 ? "- " : "+ ") + count * 2 + "px))";
-                    currentPageElement.style.transform = calcString;
-                    featurePageButtons.appendChild(pageButton);
-                    pageButton.addEventListener("click", this.showFeaturePages.bind(this), true);
-                    pageButton["pageElement"] = childElementNode;
+                    featurePagesDiv.appendChild(currentPageElement);
+                    if (numPages > 1) {
+                        var pageButton = document.createElement("button");
+                        pageButton.className = "featurePageButton";
+                        pageButton.id = index;
+                        pageButton.setAttribute("index", "" + index / 8);
+                        var count = Math.round(index / 8);
+                        const calcString = "translateX(calc(" + count * 100 + "% " + (count < 0 ? "- " : "+ ") + Math.abs(count) * 40 + "px))";
+                        currentPageElement.style.transform = calcString;
+                        featurePageButtons.appendChild(pageButton);
+                        pageButton.addEventListener("click", this.showFeaturePages.bind(this), true);
+                        pageButton["pageElement"] = childElementNode;
+                        if (index === 0) {
+                            pageButton.id = "sugarStrokeForFeaturePageButtons";
+                        }
+                    }
                 }
                 this.createFeaturePageButtons(materialId, i);
-                currentPageElement.appendChild(this.createMaterialFeatureButtonForPart(part, materialId, childElementNode));
+                currentPageElement.appendChild(this.createMaterialFeatureButtonForPart(part, materialId));
             });
         });
         this.onResize();
-    }
-    createCarouselButtonContainer() {
-        let parent = this.sugarModelViewerContent;
-        parent.appendChild(this.template_content_main);
-        this.modelInfoContainer = parent.querySelector("#modelInfo");
-        var infoCloseButton = parent === null || parent === void 0 ? void 0 : parent.querySelector(".infoCloseButtonDiv");
-        var infoShowButton = parent === null || parent === void 0 ? void 0 : parent.querySelector(".infoShowButtonDiv");
-        if (infoShowButton && infoCloseButton) {
-            infoShowButton.style.display = "block";
-            infoShowButton.addEventListener('click', this.actionCarouselContainer.bind(this), false);
-            infoCloseButton.addEventListener('click', this.actionCarouselContainer.bind(this), false);
-        }
+        this.populateInformationContainer();
+        this.setPageIndex;
+        this.selectOrderImage();
     }
     moveFeatures() {
         let parent = this.sugarModelViewerContent;
@@ -73224,13 +73570,13 @@ class TemplateMananagerAdvanced {
         for (var i = 0; i < div.length; i++) {
             if (i == parseInt(index)) {
                 div[i].style.display = "flex";
-                buttons[i].style.background = "#E74D35";
+                buttons[i].id = ("sugarStrokeForFeaturePageButtons");
             }
             else {
-                buttons[i].style.background = "#D9D9D9";
+                buttons[i].id = ("");
             }
             const count = (i - this.selectedPageIndex);
-            const calcString = "translateX(calc(" + count * 100 + "% " + (count < 0 ? "- " : "+ ") + count * 2 + "px))";
+            const calcString = "translateX(calc(" + count * 100 + "% " + (count < 0 ? "- " : "+ ") + Math.abs(count) * 40 + "px))";
             div[i].style.transform = calcString;
         }
     }
@@ -73238,6 +73584,9 @@ class TemplateMananagerAdvanced {
         var _a;
         var carouselElement = template.querySelector(".carousel").cloneNode(true);
         carouselElement.setAttribute("index", "" + i);
+        if (i === 0) {
+            carouselElement.classList.add("open");
+        }
         var nameElement = carouselElement.querySelector(".bigSpan");
         nameElement.innerHTML = part.name;
         var featureButtonElement = carouselElement.querySelector(".featureButtons");
@@ -73250,7 +73599,7 @@ class TemplateMananagerAdvanced {
         var childElementNode = carouselElement.querySelector(".feature_container");
         return childElementNode;
     }
-    createMaterialFeatureButtonForPart(part, materialId, parentElement) {
+    createMaterialFeatureButtonForPart(part, materialId) {
         var groupName = part.code;
         var material = this.element.serviceData.materials.filter(e => { return e.id == materialId; })[0];
         var featureChildElement = document.createElement("div");
@@ -73259,9 +73608,13 @@ class TemplateMananagerAdvanced {
         featureChildElement.setAttribute("group", "" + groupName);
         featureChildElement.addEventListener("click", this.changeFabric.bind(this), true);
         var imageElement = document.createElement("img");
+        var spanElement = document.createElement("a");
+        featureChildElement.appendChild(spanElement);
         featureChildElement.appendChild(imageElement);
         imageElement.src = material.thumbnailFile;
+        spanElement.innerHTML = material.name;
         imageElement.classList.add("feature_thumbnail");
+        spanElement.classList.add("feature_name");
         return featureChildElement;
     }
     selectFeatures(event) {
@@ -73272,6 +73625,151 @@ class TemplateMananagerAdvanced {
         }
         else {
             carousel.classList.add("open");
+        }
+    }
+    populateInformationContainer() {
+        let parent = this.sugarModelViewerContainer;
+        let sugarModelInfo = parent.querySelector(".sugar-model-viewer-info");
+        let sugarInformationContainer = document.createElement("div");
+        sugarInformationContainer.classList.add("sugarInformationContainer");
+        let sugarModelSlider = document.createElement("div");
+        sugarModelSlider.classList.add("sugarModelSlider");
+        let modelSliderSpan = document.createElement("a");
+        modelSliderSpan.classList.add("modelSliderSpan");
+        modelSliderSpan.id = ("modelSliderSpan");
+        modelSliderSpan.innerHTML = "Yanda gördüğünüz ürünü evinizde görebilmek için;";
+        let modelSliderSpanMobile = document.createElement("a");
+        modelSliderSpanMobile.classList.add("modelSliderSpan");
+        modelSliderSpanMobile.id = ("modelSliderSpanMobile");
+        modelSliderSpanMobile.innerHTML = "Yukarıda gördüğünüz ürünü evinizde görebilmek için;";
+        let modelSliderImgContainer = document.createElement("div");
+        modelSliderImgContainer.classList.add("modelSliderImgContainer");
+        let modelSliderImgButtons = document.createElement("div");
+        modelSliderImgButtons.classList.add("modelSliderImgButtons");
+        let sugarBottomLogo = document.createElement("div");
+        sugarBottomLogo.classList.add("sugarBottomLogo");
+        let sugarTechLogo = document.createElement("img");
+        sugarTechLogo.classList.add("sugarTechLogo");
+        sugarTechLogo.src = 'https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sugarTechLogo.svg';
+        let sugarDataURl = this.element.getQrImage();
+        const array = [
+            {
+                url: sugarDataURl,
+                span: "QR Kodunu Taratın"
+            },
+            {
+                url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage2.png",
+                span: "Kameraya İzin Ver"
+            },
+            {
+                url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage3.png",
+                span: "Işıklı bir ortamda zemin tebiti yapın"
+            },
+            {
+                url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage4.png",
+                span: "Ürünü yerleştirin ve taşıyın"
+            },
+            {
+                url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage5.png",
+                span: "Ürünü çift parmakla veya altından çevirin"
+            },
+            {
+                url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage6.png",
+                span: "Fotoğraf çekin veya video kaydı alın"
+            }
+        ];
+        array.forEach((item, i) => {
+            if (i == 0 && window.innerWidth < 500) {
+                return;
+            }
+            let inn = window.innerWidth < 500 ? -1 : 0;
+            let modelSliderImages = document.createElement("div");
+            let helpImage = document.createElement("img");
+            let modelSliderImageSpans = document.createElement("div");
+            let modelSliderImageSpan = document.createElement("a");
+            let modelSliderImgButton = document.createElement("div");
+            modelSliderImgButton.className = "modelSliderImgButton";
+            modelSliderImages.className = "modelSliderImages";
+            modelSliderImages.setAttribute("index", "" + (i + inn));
+            modelSliderImgButton.setAttribute("index", "" + (i + inn));
+            if (i + inn === 0) {
+                modelSliderImgButton.classList.add("active");
+            }
+            modelSliderImgButton.addEventListener("click", this.setPageIndex.bind(this));
+            helpImage.className = "modelSliderImg";
+            helpImage.setAttribute("index", "" + (i + inn));
+            if (i + inn === 0) {
+                helpImage.style.width = "65%";
+                helpImage.style.marginLeft = "35px";
+            }
+            helpImage.src = item.url;
+            modelSliderImageSpans.className = "modelSliderImageSpans";
+            modelSliderImageSpan.className = "modelSliderImageSpan";
+            modelSliderImageSpan.innerHTML = item.span;
+            modelSliderImgButtons.appendChild(modelSliderImgButton);
+            modelSliderImgContainer.appendChild(modelSliderImages);
+            modelSliderImgContainer.style.position = "relative";
+            modelSliderImages.appendChild(helpImage);
+            modelSliderImages.append(modelSliderImageSpans);
+            modelSliderImageSpans.appendChild(modelSliderImageSpan);
+        });
+        sugarModelSlider.appendChild(modelSliderImgButtons);
+        sugarModelSlider.appendChild(modelSliderImgContainer);
+        sugarBottomLogo.appendChild(sugarTechLogo);
+        sugarInformationContainer.appendChild(modelSliderSpanMobile);
+        sugarInformationContainer.appendChild(modelSliderSpan);
+        sugarInformationContainer.appendChild(sugarModelSlider);
+        sugarModelInfo.appendChild(sugarInformationContainer);
+        sugarInformationContainer.appendChild(sugarBottomLogo);
+        let info_button = document.querySelector("#openInfoButton");
+        info_button.addEventListener("click", this.showSugarInformation);
+    }
+    showSugarInformation() {
+        let carousels = document.querySelector(".carousels");
+        let summary = document.querySelector(".summary");
+        let sugarInformationContainer = document.querySelector(".sugarInformationContainer");
+        let createRenderButton = document.querySelector(".createRenderDiv");
+        let createRenderButtonMobile = document.querySelector(".summary-button");
+        let informationOpenButton = document.querySelector("#openInfoButton");
+        let informationCloseButton = document.querySelector("#closeInfoButton");
+        let fabricOpenButton = document.querySelector("#fabricOpenButton");
+        let fabricCloseButton = document.querySelector("#fabricCloseButton");
+        summary.style.display = "none";
+        carousels.style.display = "none";
+        sugarInformationContainer.classList.add("open");
+        createRenderButton.style.display = "none";
+        createRenderButtonMobile.style.display = "none";
+        informationOpenButton.style.display = "none";
+        informationCloseButton.style.display = "block";
+        fabricOpenButton.style.display = "block";
+        fabricCloseButton.style.display = "none";
+        fabricOpenButton.addEventListener("click", () => {
+            summary.style.display = "flex";
+            carousels.style.display = "";
+            sugarInformationContainer.classList.remove("open");
+            createRenderButton.style.display = "";
+            createRenderButtonMobile.style.display = "";
+            informationOpenButton.style.display = "block";
+            informationCloseButton.style.display = "none";
+            fabricOpenButton.style.display = "none";
+            fabricCloseButton.style.display = "block";
+        });
+    }
+    setPageIndex(e) {
+        this.selectedPageIndex = parseInt(e.target.getAttribute("index"));
+        this.selectOrderImage();
+    }
+    selectOrderImage() {
+        let modelSliderImages = document.querySelectorAll(".modelSliderImages");
+        let buttons = document.querySelectorAll(".modelSliderImgButton");
+        for (let i = 0; i < modelSliderImages.length; i++) {
+            if (i == this.selectedPageIndex) {
+                buttons[i].classList.add("active");
+            }
+            else {
+                buttons[i].classList.remove("active");
+            }
+            modelSliderImages[i].style.transform = "translateX(" + (i - this.selectedPageIndex) * 130 + "%)";
         }
     }
     downloadImage(type) {
@@ -73305,6 +73803,7 @@ class TemplateMananagerAdvanced {
         let material = this.element.serviceData.materials.filter(e => { return e.id == code; })[0];
         let carouselElement = element.closest(".carousel");
         let littleSpanElement = carouselElement.querySelector(".littleSpan");
+        let selectColor = this.element.getAttribute("selectColor");
         littleSpanElement.innerHTML = material.name;
         this.element.changeMaterialByGroup(code, group);
         let featureChild = element.parentElement.querySelectorAll(".feature_child");
@@ -73312,6 +73811,14 @@ class TemplateMananagerAdvanced {
             e.classList.remove("selected");
         });
         element.classList.add("selected");
+        let feature_name = element.parentElement.querySelectorAll(".feature_child a");
+        feature_name.forEach(feature_name => {
+            feature_name.style.color = "";
+            feature_name.style.fontWeight = "";
+        });
+        let selectedFeature_name = element.querySelector("a");
+        selectedFeature_name.style.color = selectColor;
+        selectedFeature_name.style.fontWeight = "500";
     }
     actionCarouselContainer(event) {
         let parent = this.sugarModelViewerContainer;
@@ -73520,11 +74027,11 @@ class SugarModelViewerElementBase extends ModelViewerElementBase {
         }
         this.createProductParameters();
         this.populateDefaultMaterial();
-        this.templateManager.populateContainer();
         adjustSugarCookie(this.company_id, this.product_id);
         let productId = this.productId ? this.productId : this.product_id;
         ProductTrackManager.singleton.add(productId, data.version);
         this.dispatchEvent(new CustomEvent("sugar-content-loaded"));
+        this.templateManager.populateContainer();
     }
     createProductParameters() {
         let parameters = this.serviceData.dynamicTagParameters;
@@ -76340,80 +76847,6 @@ VanillaQR.prototype = {
 }, VanillaQR.adelta = [0, 11, 15, 19, 23, 27, 31, 16, 18, 20, 22, 24, 26, 28, 20, 22, 24, 24, 26, 28, 28, 22, 24, 24, 26, 26, 28, 28, 24, 24, 26, 26, 26, 28, 28, 24, 26, 26, 26, 28, 28], VanillaQR.vpat = [3220, 1468, 2713, 1235, 3062, 1890, 2119, 1549, 2344, 2936, 1117, 2583, 1330, 2470, 1667, 2249, 2028, 3780, 481, 4011, 142, 3098, 831, 3445, 592, 2517, 1776, 2234, 1951, 2827, 1070, 2660, 1345, 3177], VanillaQR.fmtword = [30660, 29427, 32170, 30877, 26159, 25368, 27713, 26998, 21522, 20773, 24188, 23371, 17913, 16590, 20375, 19104, 13663, 12392, 16177, 14854, 9396, 8579, 11994, 11245, 5769, 5054, 7399, 6608, 1890, 597, 3340, 2107], VanillaQR.eccblocks = [1, 0, 19, 7, 1, 0, 16, 10, 1, 0, 13, 13, 1, 0, 9, 17, 1, 0, 34, 10, 1, 0, 28, 16, 1, 0, 22, 22, 1, 0, 16, 28, 1, 0, 55, 15, 1, 0, 44, 26, 2, 0, 17, 18, 2, 0, 13, 22, 1, 0, 80, 20, 2, 0, 32, 18, 2, 0, 24, 26, 4, 0, 9, 16, 1, 0, 108, 26, 2, 0, 43, 24, 2, 2, 15, 18, 2, 2, 11, 22, 2, 0, 68, 18, 4, 0, 27, 16, 4, 0, 19, 24, 4, 0, 15, 28, 2, 0, 78, 20, 4, 0, 31, 18, 2, 4, 14, 18, 4, 1, 13, 26, 2, 0, 97, 24, 2, 2, 38, 22, 4, 2, 18, 22, 4, 2, 14, 26, 2, 0, 116, 30, 3, 2, 36, 22, 4, 4, 16, 20, 4, 4, 12, 24, 2, 2, 68, 18, 4, 1, 43, 26, 6, 2, 19, 24, 6, 2, 15, 28, 4, 0, 81, 20, 1, 4, 50, 30, 4, 4, 22, 28, 3, 8, 12, 24, 2, 2, 92, 24, 6, 2, 36, 22, 4, 6, 20, 26, 7, 4, 14, 28, 4, 0, 107, 26, 8, 1, 37, 22, 8, 4, 20, 24, 12, 4, 11, 22, 3, 1, 115, 30, 4, 5, 40, 24, 11, 5, 16, 20, 11, 5, 12, 24, 5, 1, 87, 22, 5, 5, 41, 24, 5, 7, 24, 30, 11, 7, 12, 24, 5, 1, 98, 24, 7, 3, 45, 28, 15, 2, 19, 24, 3, 13, 15, 30, 1, 5, 107, 28, 10, 1, 46, 28, 1, 15, 22, 28, 2, 17, 14, 28, 5, 1, 120, 30, 9, 4, 43, 26, 17, 1, 22, 28, 2, 19, 14, 28, 3, 4, 113, 28, 3, 11, 44, 26, 17, 4, 21, 26, 9, 16, 13, 26, 3, 5, 107, 28, 3, 13, 41, 26, 15, 5, 24, 30, 15, 10, 15, 28, 4, 4, 116, 28, 17, 0, 42, 26, 17, 6, 22, 28, 19, 6, 16, 30, 2, 7, 111, 28, 17, 0, 46, 28, 7, 16, 24, 30, 34, 0, 13, 24, 4, 5, 121, 30, 4, 14, 47, 28, 11, 14, 24, 30, 16, 14, 15, 30, 6, 4, 117, 30, 6, 14, 45, 28, 11, 16, 24, 30, 30, 2, 16, 30, 8, 4, 106, 26, 8, 13, 47, 28, 7, 22, 24, 30, 22, 13, 15, 30, 10, 2, 114, 28, 19, 4, 46, 28, 28, 6, 22, 28, 33, 4, 16, 30, 8, 4, 122, 30, 22, 3, 45, 28, 8, 26, 23, 30, 12, 28, 15, 30, 3, 10, 117, 30, 3, 23, 45, 28, 4, 31, 24, 30, 11, 31, 15, 30, 7, 7, 116, 30, 21, 7, 45, 28, 1, 37, 23, 30, 19, 26, 15, 30, 5, 10, 115, 30, 19, 10, 47, 28, 15, 25, 24, 30, 23, 25, 15, 30, 13, 3, 115, 30, 2, 29, 46, 28, 42, 1, 24, 30, 23, 28, 15, 30, 17, 0, 115, 30, 10, 23, 46, 28, 10, 35, 24, 30, 19, 35, 15, 30, 17, 1, 115, 30, 14, 21, 46, 28, 29, 19, 24, 30, 11, 46, 15, 30, 13, 6, 115, 30, 14, 23, 46, 28, 44, 7, 24, 30, 59, 1, 16, 30, 12, 7, 121, 30, 12, 26, 47, 28, 39, 14, 24, 30, 22, 41, 15, 30, 6, 14, 121, 30, 6, 34, 47, 28, 46, 10, 24, 30, 2, 64, 15, 30, 17, 4, 122, 30, 29, 14, 46, 28, 49, 10, 24, 30, 24, 46, 15, 30, 4, 18, 122, 30, 13, 32, 46, 28, 48, 14, 24, 30, 42, 32, 15, 30, 20, 4, 117, 30, 40, 7, 47, 28, 43, 22, 24, 30, 10, 67, 15, 30, 19, 6, 118, 30, 18, 31, 47, 28, 34, 34, 24, 30, 20, 61, 15, 30], VanillaQR.glog = [255, 0, 1, 25, 2, 50, 26, 198, 3, 223, 51, 238, 27, 104, 199, 75, 4, 100, 224, 14, 52, 141, 239, 129, 28, 193, 105, 248, 200, 8, 76, 113, 5, 138, 101, 47, 225, 36, 15, 33, 53, 147, 142, 218, 240, 18, 130, 69, 29, 181, 194, 125, 106, 39, 249, 185, 201, 154, 9, 120, 77, 228, 114, 166, 6, 191, 139, 98, 102, 221, 48, 253, 226, 152, 37, 179, 16, 145, 34, 136, 54, 208, 148, 206, 143, 150, 219, 189, 241, 210, 19, 92, 131, 56, 70, 64, 30, 66, 182, 163, 195, 72, 126, 110, 107, 58, 40, 84, 250, 133, 186, 61, 202, 94, 155, 159, 10, 21, 121, 43, 78, 212, 229, 172, 115, 243, 167, 87, 7, 112, 192, 247, 140, 128, 99, 13, 103, 74, 222, 237, 49, 197, 254, 24, 227, 165, 153, 119, 38, 184, 180, 124, 17, 68, 146, 217, 35, 32, 137, 46, 55, 63, 209, 91, 149, 188, 207, 205, 144, 135, 151, 178, 220, 252, 190, 97, 242, 86, 211, 171, 20, 42, 93, 158, 132, 60, 57, 83, 71, 109, 65, 162, 31, 45, 67, 216, 183, 123, 164, 118, 196, 23, 73, 236, 127, 12, 111, 246, 108, 161, 59, 82, 41, 157, 85, 170, 251, 96, 134, 177, 187, 204, 62, 90, 203, 89, 95, 176, 156, 169, 160, 81, 11, 245, 22, 235, 122, 117, 44, 215, 79, 174, 213, 233, 230, 231, 173, 232, 116, 214, 244, 234, 168, 80, 88, 175], VanillaQR.gexp = [1, 2, 4, 8, 16, 32, 64, 128, 29, 58, 116, 232, 205, 135, 19, 38, 76, 152, 45, 90, 180, 117, 234, 201, 143, 3, 6, 12, 24, 48, 96, 192, 157, 39, 78, 156, 37, 74, 148, 53, 106, 212, 181, 119, 238, 193, 159, 35, 70, 140, 5, 10, 20, 40, 80, 160, 93, 186, 105, 210, 185, 111, 222, 161, 95, 190, 97, 194, 153, 47, 94, 188, 101, 202, 137, 15, 30, 60, 120, 240, 253, 231, 211, 187, 107, 214, 177, 127, 254, 225, 223, 163, 91, 182, 113, 226, 217, 175, 67, 134, 17, 34, 68, 136, 13, 26, 52, 104, 208, 189, 103, 206, 129, 31, 62, 124, 248, 237, 199, 147, 59, 118, 236, 197, 151, 51, 102, 204, 133, 23, 46, 92, 184, 109, 218, 169, 79, 158, 33, 66, 132, 21, 42, 84, 168, 77, 154, 41, 82, 164, 85, 170, 73, 146, 57, 114, 228, 213, 183, 115, 230, 209, 191, 99, 198, 145, 63, 126, 252, 229, 215, 179, 123, 246, 241, 255, 227, 219, 171, 75, 150, 49, 98, 196, 149, 55, 110, 220, 165, 87, 174, 65, 130, 25, 50, 100, 200, 141, 7, 14, 28, 56, 112, 224, 221, 167, 83, 166, 81, 162, 89, 178, 121, 242, 249, 239, 195, 155, 43, 86, 172, 69, 138, 9, 18, 36, 72, 144, 61, 122, 244, 245, 247, 243, 251, 235, 203, 139, 11, 22, 44, 88, 176, 125, 250, 233, 207, 131, 27, 54, 108, 216, 173, 71, 142, 0], VanillaQR.N1 = 3, VanillaQR.N2 = 3, VanillaQR.N3 = 40, VanillaQR.N4 = 10;
 
 const sugar_QRButton_template = document.createElement('template');
-const hand = `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100px" height="100px" version="1.1"
- style="shape-rendering:geometricPrecision; 
- text-rendering:geometricPrecision; 
- image-rendering:optimizeQuality; 
- fill-rule:evenodd; 
- background:white;
- clip-rule:evenodd"
-viewBox="3250 4100 2029.56 2647.04" 
- xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
- <defs>
-  <style type="text/css">
-   <![CDATA[
-    .str2 {stroke:black;stroke-width:20.83;stroke-miterlimit:2.61313}
-    .str0 {stroke:black;stroke-width:20.83;stroke-miterlimit:2.61313}
-    .str1 {stroke:black;stroke-width:6.95;stroke-miterlimit:2.61313}
-    .fil0 {fill:none}
-    .fil1 {fill:black}
-   ]]>
-  </style>
- </defs>
- <g id="Layer_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0 str0" d="M4348.74 6608.73c29.34,0.8 71.11,30.05 125.33,87.72 459.53,-284.07 689.29,-426.1 689.29,-426.1 -25.06,-41.77 -37.61,-62.67 -37.61,-62.67 10.84,-368.2 -81.07,-785.95 -275.71,-1253.26 -188.95,-92.54 -301.74,-159.39 -338.38,-200.52 -75.66,7.27 -104.9,57.39 -87.73,150.39 14.66,89.38 81.51,168.75 200.52,238.11 32.31,19.43 49.01,111.34 50.13,275.71 -25.06,-8.35 -37.59,-12.53 -37.59,-12.53 0,526.37 0,789.55 0,789.55 -25.97,51.82 -63.57,81.06 -112.8,87.73 -426.1,0 -639.15,0 -639.15,0 199.05,182.47 353.61,291.09 463.7,325.85l0.01 0.01z"/>
-  <path class="fil1" d="M3564.28 5072.33c25.06,25.06 32.5,32.5 32.5,32.5 0,-434.47 0,-651.7 0,-651.7 11.72,-34.4 28.43,-46.94 50.14,-37.59 576.5,0 864.75,0 864.75,0 35.03,1.17 47.56,13.7 37.59,37.59 0,200.52 0,300.78 0,300.78 33.42,16.71 50.13,25.06 50.13,25.06 0,-250.66 0,-375.98 0,-375.98 -2.98,-61.14 -32.22,-98.74 -87.73,-112.8 -584.85,0 -877.28,0 -877.28,0 -41.45,19.28 -62.34,44.34 -62.66,75.2l0 350.91c-5.31,116.93 -7.44,238.94 -7.44,356l0 0z"/>
-  <path class="fil0 str0" d="M3371.2 5205.08c-7.25,-126.52 47.05,-180.84 162.93,-162.93 9.7,45.71 43.13,100.03 100.26,162.93 5.79,116.87 -19.29,175.35 -75.2,175.46 -25.72,4.07 -50.8,-0.11 -75.19,-12.53 -79.26,-68.64 -116.86,-122.94 -112.8,-162.93z"/>
-  <path class="fil0 str0" d="M3534.13 5693.85c69.61,-10.69 98.86,-48.27 87.73,-112.8 5.83,-56.2 -23.4,-114.69 -87.73,-175.46 -45.54,-27.38 -91.49,-14.85 -137.85,37.59 -20.24,42.06 -16.06,96.37 12.53,162.93 54.21,57.68 95.99,86.92 125.32,87.73z"/>
-  <path class="fil0 str0" d="M3509.06 5994.64c77.3,14.2 114.9,-15.05 112.79,-87.73 0.68,-68.71 -45.28,-135.56 -137.85,-200.52 -62.67,12.53 -100.26,50.13 -112.8,112.79 21.58,76.09 67.54,134.57 137.86,175.46l0 0.01z"/>
-  <path class="fil1" d="M3571.72 6182.63c0,-108.62 0,-162.93 0,-162.93 25.06,0 37.59,0 37.59,0 0,50.13 0,75.19 0,75.19 10.59,36.5 31.48,49.03 62.66,37.61 559.79,0 839.68,0 839.68,0 23.13,-2.79 35.67,-19.5 37.59,-50.13 0,-634.98 0,-952.47 0,-952.47 33.42,16.71 50.13,25.06 50.13,25.06 0,668.39 0,1002.61 0,1002.61 -16.96,50.53 -46.2,79.77 -87.73,87.72 -584.85,8.35 -877.28,12.53 -877.28,12.53 -31.53,-11 -52.41,-36.07 -62.66,-75.19l0.02 -0.01z"/>
-  <path class="fil1 str1" d="M3759.71 4791.51l636.75 0c-15.06,35.88 -21.19,86.49 -6.49,135.11 13.82,45.7 46.05,89.64 84.09,123.57l0 618.61c0,41.36 -33.84,75.19 -75.19,75.19l-639.17 0c-41.36,0 -75.19,-33.84 -75.19,-75.19l0 -802.09c0,-41.36 33.84,-75.19 75.19,-75.19l0.01 -0.01zm30.44 200.52l578.29 0c37.41,0 68.04,30.61 68.04,68.04l0 578.3c0,37.42 -30.61,68.04 -68.04,68.04l-578.29 0c-37.42,0 -68.04,-30.61 -68.04,-68.04l0 -578.3c0,-37.41 30.61,-68.04 68.04,-68.04z"/>
-  <rect class="fil0 str1" x="3784.78" y="5054.69" width="175.46" height="175.46"/>
-  <rect class="fil0 str1" x="4210.89" y="5054.69" width="162.93" height="162.93"/>
-  <rect class="fil0 str1" x="3784.78" y="5455.74" width="175.46" height="175.46"/>
-  <rect class="fil1 str1" x="3834.9" y="5092.3" width="75.19" height="75.19"/>
-  <rect class="fil1 str1" x="3834.9" y="5505.87" width="75.19" height="75.19"/>
-  <rect class="fil1 str1" x="4248.48" y="5092.3" width="75.19" height="87.73"/>
-  <polyline class="fil0 str2" points="4123.15,5054.69 4073.03,5054.69 4066.76,5111.1 4141.96,5111.1 4141.96,5173.76 "/>
-  <line class="fil0 str2" x1="4123.15" y1="5205.08" x2="4073.03" y2= "5205.08" />
-  <polyline class="fil0 str2" points="4010.37,5142.43 4047.96,5142.43 4041.7,5186.29 "/>
-  <polyline class="fil0 str2" points="4010.37,5192.55 4022.9,5230.16 4054.22,5261.49 "/>
-  <line class="fil0 str2" x1="4022.9" y1="5292.81" x2="3960.24" y2= "5292.81" />
-  <polyline class="fil0 str2" points="3997.83,5305.35 3985.3,5405.61 3953.97,5399.34 "/>
-  <polyline class="fil0 str2" points="4047.96,5405.61 4047.96,5342.94 3891.31,5336.69 3891.31,5399.34 3841.17,5399.34 3791.05,5349.22 3791.05,5274.02 3866.24,5274.02 3841.17,5311.61 "/>
-  <polyline class="fil0 str2" points="4110.62,5280.28 4110.62,5330.41 4204.62,5324.15 4229.68,5349.22 "/>
-  <line class="fil0 str1" x1="4204.62" y1="5324.15" x2="4223.42" y2= "5280.28" />
-  <line class="fil0 str2" x1="4134.15" y1="5328.85" x2="4135.69" y2= "5430.68" />
-  <line class="fil0 str2" x1="4104.36" y1="5369.65" x2="4198.35" y2= "5380.54" />
-  <path class="fil0 str2" d="M4273.55 5280.28c9.28,0.26 10.64,5.44 18.16,12.95 19.5,19.48 15,16.28 24.32,37.58 2.94,6.73 0.67,67.4 0.53,60.74 -0.15,-7.06 2.35,-17.41 2.35,-28.49 0,-10 -2.94,-27.25 -16.68,-21.34 -10.13,4.35 -58.93,0.46 15.51,0.46 11.93,0 -12.84,28.59 18.77,28.59 1.38,0 32.96,0.39 25.56,0.39 -17.75,0 -18.44,-0.91 -33.02,-13.33 -6.58,-5.61 -12.28,-29.96 -9.82,-39.55 2.81,-10.98 13.96,-21.96 22.61,-29.21l-5.62 3.76"/>
-  <path class="fil0 str2" d="M4311.14 5405.61c-3.3,8.56 0.94,14.67 6.87,22.45 4.52,5.91 10.69,8.95 16.9,15.18 4.97,4.97 4.26,6.54 -0.75,15.28 -3.63,6.33 -12.7,6.2 -21.29,17.23 -17.02,21.87 -83.3,-3.29 -64.58,25.4 3.36,5.17 8.06,4.86 14.02,12.56 9.77,12.61 14.6,15.91 19.59,32.09 1.3,4.19 16.83,29.61 19.52,32.44 15.66,16.53 12.83,13.3 22.16,28.67 2.54,4.2 24.43,45.15 11.84,18.49 -6.31,-13.35 -22.24,-24.88 -26.49,-35.73 -1.9,-4.85 -3.65,-3.13 -7.12,-13.9 -2.3,-7.13 -5.19,-10.05 -7.95,-20.49 -4.61,-17.42 -11.49,-25.99 12.43,-30.51 5.41,-1.02 18.36,4.35 8.82,-12.14 -6.24,-10.78 -24.77,-35.92 -41.26,-29.47 -28.8,11.28 -18.46,-29.6 -8.92,-36.25 2.62,-1.83 27.9,-11.61 25.46,-21.02 -1.08,-4.18 -33.36,25.93 -33.53,25.98 -8.75,3.02 -21.2,-6.4 -22.02,-16.22 -0.92,-11.02 -3.87,-29.94 -18.28,-31.39 2.27,10.93 6.37,3.66 5.97,25.54 0,0.05 2.43,11.99 0.86,0.88"/>
-  <path class="fil0 str2" d="M4160.76 5468.27c4.52,-8.02 4.43,-12.67 -6.74,-19.2 -3.64,-2.12 -37.03,-8.24 -39.09,10.25 -3.23,28.84 -16.76,-25.13 -28.46,-25.13 -5.89,0 -21.73,-0.41 -21.73,3.07 0,26.34 2.18,31.45 -35.18,14.37 -3.04,-1.39 -6.33,-22.47 -6.33,-26.05 0,5.48 1.57,13.38 -0.31,17.64"/>
-  <path class="fil0 str2" d="M4022.9 5643.73c-1.06,-12.79 -10.45,-72.83 -0.4,-76.65 45.1,-17.13 5.92,-24.22 -4.77,-48.15 -0.57,-1.28 -2.58,-1.18 5.17,-0.51"/>
-  <path class="fil0 str2" d="M4073.03 5480.8c-10.17,5.13 12.28,60.41 33.62,61.36l3.98 1.3"/>
-  <path class="fil0 str2" d="M4085.56 5643.73c-6.48,-6.72 19.69,-43.33 25.11,-51.38 2.95,-4.38 25.42,-12.24 21.62,19.35 -5.78,48.07 18.55,-12.24 24.74,-12.24 31.36,0 45.09,-8.13 48.63,21.8 2.19,18.49 36.18,24.77 0.79,-8.95 -27.2,-25.91 38.35,-37.27 -4.5,-49.93 -5.1,-1.51 -28.13,-14.71 -29.25,-18.33 -1.16,-3.77 -6.56,-32.24 0.6,-25.65"/>
-  <path class="fil0 str0" d="M3333.61 4791.51c51.07,110.53 126.26,177.37 225.58,200.52l12.53 -275.71c-65.1,-34.65 -119.41,-47.19 -162.93,-37.61 -55.73,24.93 -80.8,62.52 -75.2,112.8l0.01 0z"/>
- </g>
-</svg>
- `;
-var CloseIcon$3 = `
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35px" height="35px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 2355.28 2329.4"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
- <defs>
-  <style type="text/css">
-   <![CDATA[
-    .fil0c {fill:#DF2027}
-   ]]>
-  </style>
- </defs>
- <g id="Layer_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0c" d="M589.15 356.22l581.61 595.38 583.18 -569.43 219.19 207.03 -569.17 581.83 569.15 582.92 -207.03 219.19 -581.83 -569.17 -595.29 582.63 -232.74 -220.47 575.54 -575.54 -569.41 -595.29 226.8 -239.08zm-589.16 -97.39l0 1837.64c0,163.95 171.05,232.94 207.06,232.94l1941.16 0c35.82,0 130.13,-62.37 149.46,-83.48 40.41,-44.12 57.6,-121.07 57.6,-201.22l0 -1734.11c0,-220.68 -186.1,-310.59 -232.94,-310.59l-1889.4 0c-101.38,0 -232.94,144.28 -232.94,258.83z"/>
- </g>
-</svg>`;
 sugar_QRButton_template.innerHTML = `
 
 <style>
@@ -76434,90 +76867,98 @@ sugar_QRButton_template.innerHTML = `
 }
 
 /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  z-index: 1; /* Sit on top */
-  padding: 1em;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  box-shadow: 1px 1px 1px 1px grey;
-  border-radius: 3.5px;
-}
-  overflow: auto; /* Enable scroll if needed */
 
+.modal{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 16px;
+    position: absolute;
+    background: #ffff;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15), 0px 5px 17px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
 }
 
-/* Modal Content */
-.modalContent{
-  background-color: #fefefe;
-  margin: auto;
-  border: 1px solid #888;
-  width: 25%;
-  height: 75%
-  padding-right: 20px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-
+.closeArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 100%;
 }
+
+.QrInformTest{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: rgba(30, 30, 30, 0.8);
+}
+
 .QRImage{
-    width: 50%;
-    heigth:50%;
+    width: 70%;
     margin: auto;
 }
 
 /* The Close Button */
 
-.closeArea{
-    right: 0em;
-    z-index: 3;
-    top: 0em;
-    position: absolute;
-}
-
 .closeQRPopup {
-
     cursor:pointer;
     float:right;
     right: 10px;
     top: 2px;
 }
 
-.QrInformTest{
-    font-size: 12px;
-    width: 100%;
-
-}
 .hand{
     text-align: center;
 }
+
 .qrCode{
-    text-align:center
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    margin-left: 40px;
+    margin-top: 60px;
 }
 
+.qrCloseButton{
+    background: none;
+    border: none;
+}
+
+.popupBackground{
+    position: absolute;
+    bottom: 80px;
+    width: 70%;
+}
 </style>
 
-
 <div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="closeArea"> <span class="closeQRPopup">${CloseIcon$3}</span> </div>
-    <div class ="modalContent">
-        <div id="qrCode" class="qrCode">
-        </div>
-
-        <div class="hand">${hand}</div>
-
-        <div class="QrInformTest" slot="QrInformTest" sugar-localization-key="qr-info-text">
-        Ürünü evinizde görmek için telefonunuzla QR kodunu tarayın.
-        </div>
-    </div>    
+    <div class="closeArea">
+        <span sugar-localization-key="ar_button"></span>
+        <button class="qrCloseButton">
+            <svg class="closeQRPopup"xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="cursor: pointer; position: relative; left: 10px;">
+                <path d="M18.3 5.70998C18.2075 5.61728 18.0976 5.54373 17.9766 5.49355C17.8556 5.44337 17.7259 5.41754 17.595 5.41754C17.464 5.41754 17.3343 5.44337 17.2134 5.49355C17.0924 5.54373 16.9825 5.61728 16.89 5.70998L12 10.59L7.10998 5.69998C7.0174 5.6074 6.90749 5.53396 6.78652 5.48385C6.66556 5.43375 6.53591 5.40796 6.40498 5.40796C6.27405 5.40796 6.1444 5.43375 6.02344 5.48385C5.90247 5.53396 5.79256 5.6074 5.69998 5.69998C5.6074 5.79256 5.53396 5.90247 5.48385 6.02344C5.43375 6.1444 5.40796 6.27405 5.40796 6.40498C5.40796 6.53591 5.43375 6.66556 5.48385 6.78652C5.53396 6.90749 5.6074 7.0174 5.69998 7.10998L10.59 12L5.69998 16.89C5.6074 16.9826 5.53396 17.0925 5.48385 17.2134C5.43375 17.3344 5.40796 17.464 5.40796 17.595C5.40796 17.7259 5.43375 17.8556 5.48385 17.9765C5.53396 18.0975 5.6074 18.2074 5.69998 18.3C5.79256 18.3926 5.90247 18.466 6.02344 18.5161C6.1444 18.5662 6.27405 18.592 6.40498 18.592C6.53591 18.592 6.66556 18.5662 6.78652 18.5161C6.90749 18.466 7.0174 18.3926 7.10998 18.3L12 13.41L16.89 18.3C16.9826 18.3926 17.0925 18.466 17.2134 18.5161C17.3344 18.5662 17.464 18.592 17.595 18.592C17.7259 18.592 17.8556 18.5662 17.9765 18.5161C18.0975 18.466 18.2074 18.3926 18.3 18.3C18.3926 18.2074 18.466 18.0975 18.5161 17.9765C18.5662 17.8556 18.592 17.7259 18.592 17.595C18.592 17.464 18.5662 17.3344 18.5161 17.2134C18.466 17.0925 18.3926 16.9826 18.3 16.89L13.41 12L18.3 7.10998C18.68 6.72998 18.68 6.08998 18.3 5.70998Z" fill="#1E1E1E"/>
+            </svg>
+        </button>
+    </div>
+    <div id="qrCode" class="qrCode">
+        
+    </div>
+    <img class="popupBackground" src="src/png/popupBackground.svg" alt="">
+    <div class="QrInformTest" slot="QrInformTest" sugar-localization-key="qr-info-text">
+        <span sugar-localization-key="qrInformText">*Bu özelliği kullanabilmek için arttırılmış gerçeklik destekleyen akıllı telefona ihtiyacınız var.*</span>
+    </div>
 </div>
-  
-
 
  `;
 
@@ -76613,12 +77054,7 @@ const QrMixin = (ModelViewerElement) => {
                 noBorder: false,
                 borderSize: 4
             });
-            this.qrElement = qr.toImage("png");
-            const canvas = document.createElement("canvas");
-            canvas.width = this.qrElement.width;
-            canvas.height = this.qrElement.height;
-            canvas.getContext("2d").drawImage(this.qrElement, 0, 0);
-            return canvas.toDataURL("jpg");
+            return qr.domElement.toDataURL("jpg");
         }
         async sendQrButtonRequest() {
             let productId = this.productId ? this.productId : this.product_id;

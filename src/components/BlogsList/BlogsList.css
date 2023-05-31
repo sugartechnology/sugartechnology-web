@@ -95,6 +95,6 @@
 
 @media screen and (max-width: 499px) {
     .blogsListContainer{
-        height: 150vh !important;
+        height: 135vh !important;
     }
 }
