@@ -8,9 +8,7 @@ export const About = props =>{
             <div className='aboutSpans'>
                 <a className='aboutSpansHeader'>{t("aboutSugar")}</a>
                 <a className='aboutSpan'>{t("aboutSugarSpan")}</a>
-                <button className='aboutButton'>
-                    <a>{t("readMore")}</a>
-                </button>
+                <a href='/aboutUs'><button className='aboutButton'><a>{t("readMore")}</a></button></a>
             </div>
             <div className='aboutLogos'>
                 <img className='firstAboutLogo' alt='' src={'./assets/img/firstAboutLogo.svg'}></img>

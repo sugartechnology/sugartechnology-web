@@ -90,9 +90,11 @@ export const MainPageSlider = (props) => {
             <div className='slideDetailElements'>
                 <a className='slideDetailFirstSpan'>{t(array[index].header)}</a>
                 <a className='slideDetailSecondSpan'>{t(array[index].span)}</a>
-                <button className='slideDetailButton'>
-                    <a href={t(array[index].link)}>{t("readMore")}</a>
-                </button>
+                <a href={t(array[index].link)}>
+                    <button className='slideDetailButton'>
+                        <a>{t("readMore")}</a>
+                    </button>
+                </a>
             </div>
         </div>
 

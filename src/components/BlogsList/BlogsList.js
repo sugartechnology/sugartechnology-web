@@ -12,17 +12,17 @@ export const BlogsList = props =>{
                 <div className='blogsListItem'>
                     <a className='blogsListItemHeader'>{t("blogListItemHeader")}Lorem ipsum </a>
                     <a className='blogsListItemSpan'>{t("blogListItemSpan1")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. </a>
-                    <button className='blogsListItemButton'><a>{t("readMore")}</a></button>
+                    <a href='/'><button className='blogsListItemButton'><a>{t("readMore")}</a></button></a>
                 </div>
                 <div className='blogsListItem'>
                     <a className='blogsListItemHeader'>{t("blogListItemHeader")}Lorem ipsum </a>
                     <a className='blogsListItemSpan'>{t("blogListItemSpan2")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. </a>
-                    <button className='blogsListItemButton'><a>{t("readMore")}</a></button>
+                    <a href='/'><button className='blogsListItemButton'><a>{t("readMore")}</a></button></a>
                 </div>
                 <div className='blogsListItem'>
                     <a className='blogsListItemHeader'>{t("blogListItemHeader")}Lorem ipsum </a>
                     <a className='blogsListItemSpan'>{t("blogListItemSpan3")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. </a>
-                    <button className='blogsListItemButton'><a>{t("readMore")}</a></button>
+                    <a href='/'><button className='blogsListItemButton'><a>{t("readMore")}</a></button></a>
                 </div>
             </div>
         </div>

@@ -28,8 +28,8 @@ export const Shoes = props =>{
                     <a className='showAtHomeSpan'>{t("shoesContainerSpan")}Lorem ipsum dolor sit amet consectetur. Neque viverra mi at mattis nascetur eu quis risus netus.</a>
                 </div>
                 <div className='showAtHomeButtons'>
-                    <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
-                    <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>
+                    <a href='/'><button className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
+                    <a href='/'><button className='showAtHomeButton2'><a>{t("readMore")}</a></button></a>
                 </div>
             </div>
             <div className='shoesImageDiv'>

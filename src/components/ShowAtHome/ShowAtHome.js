@@ -29,8 +29,8 @@ export const ShowAtHome = props =>{
                     <a className='showAtHomeSpan'>{t("showAtHomeSpan")}</a>
                 </div>
                 <div className='showAtHomeButtons'>
-                    <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
-                    <button className='showAtHomeButton2'><a>{t("usecase")}</a></button>
+                    <a href='/'><button className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
+                    <a href='/'><button className='showAtHomeButton2'><a>{t("usecase")}</a></button></a>
                 </div>
             </div>
             <div className='showAtHomeImageDiv'>

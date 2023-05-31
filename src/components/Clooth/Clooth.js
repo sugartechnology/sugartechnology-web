@@ -28,8 +28,8 @@ export const Clooth = props =>{
                     <a className='showAtHomeSpan'>{t("cloothContainerSpan")}Lorem ipsum dolor sit amet consectetur. Erat dui quis ac mollis malesuada. Eu neque non ipsum in egestas quam mattis. </a>
                 </div>
                 <div className='showAtHomeButtons'>
-                    <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
-                    <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>
+                    <a href='/'><button className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
+                    <a href='/'><button className='showAtHomeButton2'><a>{t("readMore")}</a></button></a>
                 </div>
             </div>
             <div className='cloothImageDiv'>

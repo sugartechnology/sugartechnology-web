@@ -7,7 +7,7 @@ export const BlogsMain = props =>{
         <div className='blogsMainContainer'>
             <div className='squares'>
                 <div className='square' style={{height: "479px"}}>
-                    <button className='squareButton'><a href='/sugarBlog1'>{t("readMore")}</a></button>
+                    <a href='/sugarBlog1'><button className='squareButton'><a>{t("readMore")}</a></button></a>
                     <a className='squareHeader' href='/sugarBlog1'>{t("squareHeader1")}</a>
                     <div className='blogAuthor' id='blogAuthor1' style={{gap: "120px"}}>
                         <a className='squareHistory'>Feb 1, 2023</a>
@@ -16,7 +16,7 @@ export const BlogsMain = props =>{
                     <img className='squareImg' alt='' src={'./assets/img/blog1background.svg'}></img>
                 </div>
                 <div className='square' style={{height: "479px", width: "22%"}}>
-                    <button className='squareButton'><a href='/sugarBlog2'>{t("readMore")}</a></button>
+                    <a href='/sugarBlog2'><button className='squareButton'><a>{t("readMore")}</a></button></a>
                     <a className='squareHeader' href='/sugarBlog2'>{t("squareHeader2")}</a>
                     <div className='blogAuthor' id='blogAuthor2' style={{gap: "60px"}}>
                         <a className='squareHistory'>Mar 23, 2023</a>
@@ -26,7 +26,7 @@ export const BlogsMain = props =>{
                     <img className='squareImg' id='squareImgMobile' alt='' src={'./assets/img/blog2backgroundMobile.svg'}></img>
                 </div>
                 <div className='square' style={{height: "479px", width: "31%"}}>
-                    <button className='squareButton'><a href='/sugarBlog3'>{t("readMore")}</a></button>
+                    <a href='/sugarBlog3'><button className='squareButton'><a>{t("readMore")}</a></button></a>
                     <a className='squareHeader' href='/sugarBlog3'>{t("squareHeader3")}</a>
                     <div className='blogAuthor' id='blogAuthor3' style={{gap: "190px"}}>
                         <a className='squareHistory'>May 12, 2023</a>

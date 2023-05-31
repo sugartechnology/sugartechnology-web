@@ -8,7 +8,9 @@ export const BlogsInfo = props =>{
             <div className='blogsInfoHeaders'>
                 <a className='blogsInfoHeader'>{t("blogInfoHeader")}Lorem ipsum dolor sit amet consectetur.</a>
                 <a className='blogsInfoSpan'>{t("blogInfoSpan")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. </a>
-                <button className='blogsInfoButton'><a>{t("readMore")}</a></button>
+                <a href='/'>
+                    <button className='blogsInfoButton'><a>{t("readMore")}</a></button>
+                </a>
             </div>
             <div className='blogsInfoImages'>
                 <img className='blogsInfoImage' alt='' src={'./assets/img/blogsInfoImage.svg'}></img>

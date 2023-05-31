@@ -28,8 +28,8 @@ export const Metaverse = props =>{
                     <a className='showAtHomeSpan'>{t("metaverseContainerSpan")}fv bhjbgfbhjfbghfjgf fgfghfj fhgghjbfgsfv bhjbgfbhjfbghfjgf fgfghfj fhgghjbfgsfv bhjbgfbhjfbghfjgf fgfghfj fhgghjbfgs</a>
                 </div>
                 <div className='showAtHomeButtons'>
-                    <button className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
-                    <button className='showAtHomeButton2'><a>{t("readMore")}</a></button>
+                    <a href='/'><button className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
+                    <a href='/'><button className='showAtHomeButton2'><a>{t("readMore")}</a></button></a>
                 </div>
             </div>
             <div className='metaverseImageDiv'>
