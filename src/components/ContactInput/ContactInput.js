@@ -9,7 +9,6 @@ export const ContactInput = props =>{
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [message, setMessage] = useState("");
-    const [isHuman, setIsHuman] = useState(false);
 
     const handleRecaptchaChange = (response) => {
         setRecaptchaResponse(response);

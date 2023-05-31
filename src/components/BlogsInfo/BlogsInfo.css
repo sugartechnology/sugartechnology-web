@@ -119,6 +119,6 @@
 
 @media screen and (max-width: 500px) {
     .blogsInfoContainer{
-        height: 220vh !important;
+        height: 180vh !important;
     }
 }

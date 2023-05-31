@@ -187,7 +187,7 @@
 
 
 .mobile .listenToPartnerContainer{
-    height: 870px;
+    height: 130vh;
 }
 .mobile .partnerHeader{
     width: 100%;
@@ -223,7 +223,7 @@
 .mobile .spanBottomLogo{
     width: 37px;
     right: 0px !important;
-    bottom: 10px;
+    bottom: -150px !important;
     top: auto !important;
 }
 .mobile .partnersPageButtons{

@@ -25,7 +25,7 @@
     position: relative;
     width: 160.08px;
     height: 58.46px;
-    top: 5px;
+    top: 15px;
     left: 30px;
     cursor: pointer;
 }
@@ -641,6 +641,58 @@
 }
 
 
+.tablet .headerContainer{
+    justify-content: normal;
+    gap: 100px;
+}
+.tablet .headerShowButtons{
+    display: flex !important;
+}
+.tablet .headerShowButton{
+    display: flex !important;
+}
+.tablet .routers{
+    display: none;
+}
+.tablet .mediaCenterButton{
+    display: none;
+}
+.tablet #headerLanguage{
+    display: none;
+}
+.tablet .languageButton{
+    gap: 0px;
+    width: 60px;
+    right: 20px;
+}
+.tablet .languagePopup{
+    right: 10px;
+}
+.tablet .productServicesPopup{
+    display: flex;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    height: 120px;
+    z-index: 6;
+    box-shadow: none;
+}
+.tablet .askYourQuestionRobot{
+    right: 40px;
+    top: 590px;
+    width: 150px;
+}
+.tablet .robotSpans{
+    display: none;
+}
+.tablet .robot{
+    width: 57px;
+    left: 90px;
+}
+.tablet .headerButtons{
+    right: 0px;
+}
+
 
 .mobile .headerContainer{
     justify-content: normal;
@@ -677,9 +729,6 @@
     height: 120px;
     z-index: 6;
     box-shadow: none;
-}
-.mobile .sugarLogo{
-    left: 0px;
 }
 .mobile .askYourQuestionRobot{
     right: 40px;

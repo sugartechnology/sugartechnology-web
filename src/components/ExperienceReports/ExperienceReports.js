@@ -11,9 +11,9 @@ export const ExperienceReports = props =>{
                     <img className='reportsSpangImgShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
                 </div>
                 <div className='reportsSpanElement'>
-                    <a className='reportsHeader'>{t("")}Raporlar & Müşteri Yönetimi</a>
-                    <a className='reportsFirstSpan'>{t("")}Müşterileri takip etme, çalışanların performansını izleme</a>
-                    <a className='reportsSecondSpan'>{t("")}Rapid Render kullanan bayiiler; çalıştığı proje üzerinden müşterilerini kayıt altında tutabilir, çalışılan proje ve verilen teklifler kontrol edilerek çalışan performansı program üzerinden incelenebilir.</a>
+                    <a className='reportsHeader'>{t("reportsHeader")}</a>
+                    <a className='reportsFirstSpan'>{t("reportsFirstSpan")}</a>
+                    <a className='reportsSecondSpan'>{t("reportsSecondSpan")}</a>
                 </div>
            </div>
         </div>

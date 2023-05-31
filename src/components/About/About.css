@@ -10,19 +10,21 @@
     left: 90px;
     top: 30px;
     position: absolute;
-    height: 70%;
+    gap: 10px;
+    height: 75%;
+    z-index: 1;
 }
-.aboutSpans h1{
-    width: 501px;
+.aboutSpansHeader{
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 38px;
-    line-height: 30px;
+    letter-spacing: -1px;
     text-transform: capitalize;
     color: #000000;
 }
-.aboutSpans a{
-    width: 442px;
+.aboutSpan{
+    width: 42%;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
@@ -71,15 +73,16 @@
 }
 
 .tablet .aboutContainer{
-    height: 90vh;
+    height: 100vh;
 }
 
 .tablet .aboutSpans{
     width: 100%;
-    height: 100%;
+    height: 40%;
     left: 0px;
     top: 0px;
     align-items: center;
+    z-index: 1;
 }
 
 .tablet .aboutLogos{
@@ -93,12 +96,8 @@
     width: 400px;
 }
 
-.tablet .aboutSpans h1{
-    width: 100%;
-    text-align: center;
-}
 
-.tablet .aboutSpans a{
+.tablet .aboutSpan{
     width: 80%;
     text-align: center;
 }
@@ -119,18 +118,20 @@
     align-items: center;
 }
 
-.mobile .aboutSpans a{
+.mobile .aboutSpan{
     width: 80%;
     text-align: center;
+    line-height: 20px;
 }
 
 .mobile .firstAboutLogo{
-    width: 50%;
+    width: 40%;
+    right: auto;
 }
 
-.mobile .aboutSpans h1{
-    width: 100%;
-    text-align: center;
+.tablet .firstAboutLogo{
+    width: 40%;
+    right: auto;
 }
 
 .mobile .aboutLogos{
@@ -140,6 +141,17 @@
     justify-content: center;
 }
 
-.mobile .firstAboutLogo{
-    right: auto;
+
+.tablet .aboutButton{
+    margin-top: 0px;
+}
+
+.mobile .aboutSpansHeader{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 500px) {
+    .aboutSpans{
+        height: auto;
+    }
 }

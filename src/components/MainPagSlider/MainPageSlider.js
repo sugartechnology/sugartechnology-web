@@ -1,5 +1,4 @@
 import './MainPageSlider.css'
-import SmallSliderMenu from './SmallSliderMenu.svg'
 import { useTranslation } from "react-i18next";
 import { WheelAnimationComponent, WheelAnimationComponentItem } from '../WheelAnimation/WheelAnimationComponent';
 import { useState, useEffect, useRef } from 'react';
@@ -48,10 +47,7 @@ export const MainPageSlider = (props) => {
     useEffect(() => {
         indexRef.current = index;
         clearTimeout(timeOutId);
-        ref.current.classList.remove("slideDetail");
-        setTimeout(() => {
-            ref.current.classList.add("slideDetail");
-        }, 50);
+        
         setTimeOutId(setTimeout(() => {
             setIndex((indexRef.current + 1) % props.children.length);
             setPrevIndex(indexRef.current);
@@ -77,7 +73,6 @@ export const MainPageSlider = (props) => {
         }}></div>
         <div className='mainPageSmallFigure0 '></div>
         <div className="smallSliderMenu" >
-            <img src={SmallSliderMenu} style={{ position: 'absolute' }}></img>
             {React.Children.map(props.children,
                 (e, k) => {
                     return React.cloneElement(e,

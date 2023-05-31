@@ -1,5 +1,5 @@
 .SugarTeamContainer{
-    height: 450px;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,7 +8,6 @@
     position: relative;
 }
 .sugarTeamHeader a{
-    width: 550px;
     height: 73px;
     font-style: normal;
     font-weight: 700;
@@ -85,7 +84,7 @@
 }
 
 .mobile .SugarTeamContainer{
-    height: 960px;
+    height: 130vh;
     justify-content: flex-start;
 }
 

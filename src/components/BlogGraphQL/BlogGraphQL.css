@@ -40,10 +40,18 @@
     color: #F5F5F5;
 }
 
+.blogGraphBackgroundMobile{
+    display: none;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
 
 
 .tablet .blogGraphQLContainer{
     height: 80vh;
+    margin-top: 70px;
 }
 
 .tablet .blogGraphHeader{
@@ -56,10 +64,27 @@
     line-height: 26px;
 }
 
+.tablet .blogGraphBackground{
+    display: none;
+}
+
+.tablet .blogGraphBackgroundMobile{
+    display: block;
+}
+
+.tablet .blogGraphSpans{
+    position: absolute;
+}
+
+
+
+
+
 @media screen and (max-width: 500px) {
     .blogGraphQLContainer{
         height: 110vh;
     }
+    
 }
 
 
@@ -67,7 +92,9 @@
 
 
 .mobile .blogGraphQLContainer{
-    height: 80vh;
+    align-items: center;
+    height: 64vh;
+    margin-top: 70px;
 }
 
 .mobile .blogGraphHeader{
@@ -78,4 +105,16 @@
 .mobile .blogGraphSpan{
     font-size: 15px;
     line-height: 26px;
+}
+
+.mobile .blogGraphBackground{
+    display: none;
+}
+
+.mobile .blogGraphBackgroundMobile{
+    display: block;
+}
+
+.mobile .blogGraphSpans{
+    position: absolute;
 }

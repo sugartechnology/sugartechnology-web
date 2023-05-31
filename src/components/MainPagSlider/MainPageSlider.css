@@ -88,13 +88,19 @@
 }
 
 .smallSliderMenu {
-  position: absolute;
+  width: 30% ;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 8px rgba(255, 255, 255, 0.9);
+  filter: blur(0.2px);
+  border-radius: 20px;
+  padding: 1px 5px;
   left: 160px;
   bottom: 33px;
-  height: 54px;
+  position: absolute;
   display: flex;
   justify-content: space-around;
-  width: 353px;
   z-index: 9;
 }
 
@@ -199,6 +205,44 @@
     visibility: hidden;
   }
 }
+
+/* @media screen and (max-width: 420px) {
+  @keyframes sofa0 {
+    to {
+      width: 273.4px;
+      height: 156.56px;
+      left: 124.2px;
+      top: 278px;
+    }
+  }
+  
+  @keyframes sofa1 {
+    to {
+      width: 184.8px;
+      height: 152.29px;
+      left: 228px;
+      top: 306px;
+    }
+  }
+  
+  @keyframes sofa2 {
+    from {
+      width: 184.8px;
+      height: 122.29px;
+      left: 228px;
+      top: 306px;
+    }
+  
+    to {
+      width: 184.8px;
+      height: 112.29px;
+      left: -347px;
+      top: 780px;
+      visibility: hidden;
+    }
+  
+}
+} */
 
 .animationIphone {
   position: absolute;
@@ -1619,14 +1663,14 @@
 }
 
 .tablet .slideDetail{
-  top:51vh;
+ bottom:10vh;
 }
 
 .tablet .smallSliderMenu{
   right: -100px;
   left: auto;
   bottom: auto;
-  top: 170px;
+  top: 21vh;
   transform: rotate(90deg);
 }
 
@@ -1643,8 +1687,8 @@
 }
 
 .mobile .slideDetail{
-  bottom: 17vh;
-  width: 488px !important;
+  bottom: 2vh;
+  width: 460px !important;
 }
 
 .mobile .smallSliderMenu{
@@ -1665,7 +1709,7 @@
   line-height: 35px !important;
 }
 .mobile .slideDetailSecondSpan{
-  width: 80% !important;
+  width: 75% !important;
   font-size: 14px !important;
   line-height: 24px !important;
 }
@@ -1696,6 +1740,5 @@
   display: none;
 }
 .mobile .mainPageTopLeftFigure{
-  left: calc(-460px);
-  left: calc(-372px);;
+  display: none;
 }

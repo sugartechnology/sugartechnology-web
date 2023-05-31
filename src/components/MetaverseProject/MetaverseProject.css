@@ -60,6 +60,10 @@
     height: 100px;
 }
 
+.mobile .MetaverseProjectContainer{
+    height: 90vh;
+}
+
 .mobile .metaverseProjectSpan{
     font-size: 15px;
     line-height: 20px;
@@ -67,4 +71,8 @@
 
 .mobile .metaverseProjectHeader{
     font-size: 30px;
+}
+
+.mobile .metaverseProjectElement{
+    width: 60%;
 }

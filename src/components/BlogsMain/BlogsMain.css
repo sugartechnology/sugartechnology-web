@@ -91,6 +91,10 @@
     width: 100%;
 }
 
+#squareImgMobile{
+    display: none;
+}
+
 .tablet .blogsMainContainer{
     height: 200vh;
 }
@@ -112,9 +116,32 @@
     width: 90%;
     flex-direction: column;
 }
+.mobile .square{
+    width: auto !important;
+    height: 470px !important;
+}
+.mobile #squareImgDeskop{
+    display: none;
+}
+.mobile #squareImgMobile{
+    display: block;
+}
+
+.mobile #blogAuthor1{
+    gap: 90px !important;
+}
+
+.mobile #blogAuthor2{
+    gap: 80px !important;
+}
+
+.mobile #blogAuthor3{
+    gap: 80px !important;
+}
 
 @media screen and (max-width: 500px) {
     .blogsMainContainer{
-        height: 250vh !important;
+        height: 205vh !important;
     }
+
 }

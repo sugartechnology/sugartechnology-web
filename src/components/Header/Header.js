@@ -11,8 +11,8 @@ export const Header = props => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 870);
-            setIsTablet(window.innerWidth > 870 && window.innerWidth <= 1100);
+            setIsMobile(window.innerWidth <= 900);
+            setIsTablet(window.innerWidth > 900 && window.innerWidth <= 1100);
             
         };
 
@@ -237,9 +237,11 @@ export const Header = props => {
                 </div>
                 <img id='mobilePopupLine3' alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px", position: "relative"}}></img>
                 <div className='mobileMediaCenterButtons'>
-                    <button className='popupMediaCenterButton' id='popupMediaCenterButton'>
-                        <a href='/contactCv'>{t("careers")}</a>
-                    </button>
+                    <a href='/contactCv'>
+                        <button className='popupMediaCenterButton' id='popupMediaCenterButton'>
+                            <a>{t("careers")}</a>
+                        </button>
+                    </a>
                 </div>
             </div>
 
@@ -277,9 +279,11 @@ export const Header = props => {
             </div>
             <div className="headerButtons">
                 <LanguageSelector></LanguageSelector>
-                <button className='mediaCenterButton'>
-                    <a href='/contactCv'>{t("careers")}</a>
-                </button>
+                <a href='/contactCv'>
+                    <button className='mediaCenterButton'>
+                        <a>{t("careers")}</a>
+                    </button>
+                </a>
             </div>
             
             

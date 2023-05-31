@@ -51,29 +51,26 @@ i18n
 function App() {
   return (
         <div>
-        <Header></Header>
-        <Routes>
-          <Route path='/' element={<MainPage></MainPage>}></Route>
-          <Route path='/productAr' element={<ProductAr></ProductAr>}></Route>
-          <Route path='/productMeta' element={<ProductMeta></ProductMeta>}></Route>
-          <Route path='/productJoint' element={<ProductJoint></ProductJoint>}></Route>
-          <Route path='/productWatch' element={<ProductWatch></ProductWatch>}></Route>
-          <Route path='/productShoes' element={<ProductShoes></ProductShoes>}></Route>
-          <Route path='/productClooth' element={<ProductClooth></ProductClooth>}></Route>
-          <Route path='/aboutUs' element={<AboutUs></AboutUs>}></Route>
-          <Route path='/sugarBlog1' element={<Blog1></Blog1>}></Route>
-          <Route path='/sugarBlog2' element={<Blog2></Blog2>}></Route>
-          <Route path='/sugarBlog3' element={<Blog3></Blog3>}></Route>
-          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-          <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
-          <Route path='/contactCv' element={<ContactUsCv></ContactUsCv>}></Route>
-        </Routes>
-        <Contact></Contact>
-        <Footer></Footer>
-        </div>
-         
- 
-   
+          <Header></Header>
+          <Routes>
+            <Route path='/' element={<MainPage></MainPage>}></Route>
+            <Route path='/productAr' element={<ProductAr></ProductAr>}></Route>
+            <Route path='/productMeta' element={<ProductMeta></ProductMeta>}></Route>
+            <Route path='/productJoint' element={<ProductJoint></ProductJoint>}></Route>
+            <Route path='/productWatch' element={<ProductWatch></ProductWatch>}></Route>
+            <Route path='/productShoes' element={<ProductShoes></ProductShoes>}></Route>
+            <Route path='/productClooth' element={<ProductClooth></ProductClooth>}></Route>
+            <Route path='/aboutUs' element={<AboutUs></AboutUs>}></Route>
+            <Route path='/sugarBlog1' element={<Blog1></Blog1>}></Route>
+            <Route path='/sugarBlog2' element={<Blog2></Blog2>}></Route>
+            <Route path='/sugarBlog3' element={<Blog3></Blog3>}></Route>
+            <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+            <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
+            <Route path='/contactCv' element={<ContactUsCv></ContactUsCv>}></Route>
+          </Routes>
+          <Contact></Contact>
+          <Footer></Footer>
+        </div>  
   );
 }
 

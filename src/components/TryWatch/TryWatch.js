@@ -6,8 +6,8 @@ export const TryWatch = props =>{
     return(
         <div className='tryWatchContainer'>
             <div className='jointAboutElements'>
-                <a className='jointAboutHeader'>{t("tryWatchContainerHeader")}Birliktelik Kuralları</a>
-                <a className='jointAboutSpan'>{t("tryWatchContainerSpan")}Birliktelik kuralları ile ürünlerin birleşimleri müşteri tarafından yapılabilir. Müşteri kendi köşesini (koltuk, gardrop vb.) yaratabilir.</a>
+                <a className='jointAboutHeader'>{t("tryWatchContainerHeader")}</a>
+                <a className='jointAboutSpan'>{t("tryWatchContainerSpan")}</a>
                 <img className='jointAboutImage' alt='' src={'./assets/img/tryWatchImage.svg'}></img>
                 <img className='jointShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
             </div>

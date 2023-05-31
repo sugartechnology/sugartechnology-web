@@ -16,7 +16,7 @@
     position: relative;
 }
 .blogParagraphs3Container{
-    height: 328vh;
+    height: 335vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,10 +207,16 @@
 
 
 @media screen and (max-width: 499px) {
+    .blogParagraphsContainer{
+        height: 160vh !important;
+    }
     .blogParagraphs2Container{
-        height: 445vh;
+        height: 326vh !important;
     }
     .blogParagraphs3Container{
-        height: 355vh !important;
+        height: 310vh !important;
+    }
+    .author{
+        left: auto;
     }
 }

@@ -19,6 +19,7 @@ export const ContactCv = props =>{
         const file = event.target.files[0];
         const fileSize = file.size;
         const maxSize = 20 * 1024 * 1024;
+
         if (fileSize > maxSize) {
           alert('Dosya boyutu 20 MB\'tan büyük olamaz.');
           event.target.value = null;

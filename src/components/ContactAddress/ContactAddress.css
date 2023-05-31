@@ -144,8 +144,11 @@
 }
 
 @media screen and (max-width: 499px) {
+    .contactAddressContainer{
+        height: 68vh;
+    }
     .contactAddressInformationMobile{
-        top: 117px ;
+        top: 60px ;
         width: 350px ;
         height: 143px ;
     }

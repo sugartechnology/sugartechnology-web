@@ -6,8 +6,8 @@ export const About = props =>{
     return(
         <div className='aboutContainer'>
             <div className='aboutSpans'>
-                <h1>{t("aboutSugar")}</h1>
-                <a>{t("aboutSugarSpan")}</a>
+                <a className='aboutSpansHeader'>{t("aboutSugar")}</a>
+                <a className='aboutSpan'>{t("aboutSugarSpan")}</a>
                 <button className='aboutButton'>
                     <a>{t("readMore")}</a>
                 </button>

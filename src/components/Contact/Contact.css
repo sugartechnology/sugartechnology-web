@@ -28,7 +28,7 @@
     display: grid;
     gap: 40px;
 }
-.aboutSpan{
+.contactAboutSpan{
     width: 200px;
     height: 100px;
     font-family: 'Nunito';
@@ -324,10 +324,10 @@
     font-size: 11px;
     gap: 0px;
 }
-.mobile .aboutSpan{
+.mobile .contactAboutSpan{
     font-size: 11px;
     width: 140px;
-    height: 40px;
+    bottom: 30px;
 }
 .mobile .mailAdressLogo img{
     width: 17px;
@@ -355,10 +355,7 @@
 .mobile .about{
     gap: 0px;
 }
-.mobile .aboutSpan{
-    bottom: 30px;
-    height: 40px;
-}
 .mobile .communication{
     bottom: 60px;
+    right: auto;
 }

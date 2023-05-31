@@ -15,8 +15,8 @@ export const WhoSugar = props =>{
             </div>
             <div className='whoSugarSpans'>
                 <a className='whoSugarHeader'>{t("whoIsSugar")}</a>
-                <a className='whoSugarSpan'>{t("whoSugarSpan1")}Sugar Technology AR, VR, Yapay zeka ve dijital ikiz alanlarında uzmanlaşmış bir teknoloji şirketidir. Sugar sağladığı teknolojiler ile şirketlerin müşterilerine interaktif ve sürükleyici ürün deneyimi sunmalarını sağlar.</a>
-                <a className='whoSugarSpan'>{t("whoSugarSpan2")}2019 yılından günümüze Sugar, 22.000'nin üzerinde ürünün dijital ikizini oluşturmuş, müşterileri için bu 3D modellerin, e-ticaret, sosyal medya, Cad programları ve BIM için uygun formatlarda hedef kitlelere ulaştırılmasını sağlamıştır.</a>
+                <a className='whoSugarSpan'>{t("whoSugarSpan1")}</a>
+                <a className='whoSugarSpan'>{t("whoSugarSpan2")}</a>
             </div>
             <div className='whoSugarLogos'>
                 <img className='whoSugarLogo1' alt='' src={'./assets/img/whoSugarImage.svg'}></img>

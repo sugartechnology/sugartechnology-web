@@ -81,7 +81,7 @@ export const Contact = props =>{
             <div className='leftContact'>
                 <div className='about'>
                     <img className='contactLogo' alt="" src={'assets/img/headerLogo.svg'}></img>
-                    <a className='aboutSpan'>{t("contactAboutSpan")}fbosnbjuıkgnjshbgıu rsjnhfbvıjfkbjfsbık</a>
+                    <a className='contactAboutSpan'>{t("contactAboutSpan")}fbosnbjuıkgnjshbgıu rsjnhfbvıjfkbjfsbık</a>
                 </div>
                 <div className='communication'>
                     <div className='mailAdressContainer'>
