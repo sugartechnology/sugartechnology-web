@@ -47,7 +47,7 @@
   width: 695px;
   height: 770px;
   top: -550px;
-  right: 123px;
+  right: 0%;
   background-size: cover;
 }
 
@@ -100,7 +100,7 @@
 
 .slideDetail {
   position: absolute;
-  width: 670px;
+  width: 45rem;
   right: -100px;
   bottom: 150px;
   background: rgba(255, 255, 255, 0.3);
@@ -120,6 +120,8 @@
   bottom: -50px;
   right: 100px;
   transform: rotate(-15deg);
+  visibility: hidden;
+
 }
 
 .wheelAnimationCamera {
@@ -130,6 +132,8 @@
   bottom: -109px;
   right: 140px;
   transform: rotate(68deg) translate(85px, -35px);
+  visibility: hidden;
+
 }
 
 .wheelAnimationShoe {
@@ -140,6 +144,8 @@
   bottom: -109px;
   right: 140px;
   transform: rotate(344deg) translate(125px, -20px);
+  visibility: hidden;
+
 }
 
 .animationSofa {
@@ -152,6 +158,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
+  visibility: hidden;
+
 }
 
 .animationStartSofa {
@@ -167,6 +175,7 @@
 
 @keyframes sofa0 {
   to {
+    visibility: visible;
     width: 373.4px;
     height: 186.56px;
     left: 124.2px;
@@ -189,6 +198,7 @@
     height: 142.29px;
     left: 228px;
     top: 306px;
+    visibility: visible;
   }
 
   to {
@@ -214,6 +224,7 @@
 
 }
 
+
 .animationStartIphone {
   animation:1s ihpone0 1s ease-out, 1.4s ihpone01 1.5s ease-out, infinite;
   animation-fill-mode: forwards;
@@ -235,6 +246,7 @@
 
   }
 }
+
 
 @keyframes ihpone01 {
   to {
@@ -268,6 +280,8 @@
   }
 }
 
+
+
 .animationFloor {
   background: url(/public/assets/svg/fantasy/floor.svg);
   background-repeat: no-repeat;
@@ -278,6 +292,8 @@
   left: -826px;
   top: 593px;
   z-index: -2;
+  visibility: hidden;
+
 }
 
 .animationStartFloor {
@@ -296,6 +312,7 @@
     height: 193px;
     left: -787px;
     top: 601px;
+    visibility: visible;
   }
 }
 
@@ -314,6 +331,7 @@
     height: 106px;
     left: 50px;
     top: 415px;
+    visibility: visible;
   }
 
   to {
@@ -337,8 +355,10 @@
   top: -160px;
 
   filter: blur(2.5px);
+  visibility: hidden;
   transform: rotate(14.55deg);
 }
+
 
 .animationStartFlower {
   animation: 1s flower01 1s ease-out, 1.4s flower02 1.5s ease-out, infinite;
@@ -352,6 +372,7 @@
 
 @keyframes flower01 {
   to {
+    visibility: visible;
     width: 132.32px;
     height: 123.86px;
     left: 39.32px;
@@ -381,6 +402,7 @@
     top: 285px;
     filter: blur(0px);
     transform: rotate(0deg);
+    visibility: visible;
   }
 
   to {
@@ -405,6 +427,8 @@
 
   filter: blur(3.5px);
   transform: rotate(-21.76deg);
+  visibility: hidden;
+
 }
 
 .animationStartDrawer {
@@ -426,6 +450,7 @@
 
     filter: blur(3.5px);
     transform: rotate(-21.76deg);
+    visibility: visible;
   }
 }
 
@@ -448,6 +473,7 @@
     top: 381.29px;
     filter: blur(0px);
     transform: rotate(0deg);
+    visibility: visible;
   }
 
   to {
@@ -470,6 +496,8 @@
   left: -468px;
   width: 278.18px;
   height: 31.18px;
+  visibility: hidden;
+
 }
 
 .animationStartCarpet {
@@ -484,6 +512,7 @@
 
 @keyframes carpet01 {
   to {
+    visibility: visible;
     left: -451px;
     top: 563px;
   }
@@ -500,6 +529,7 @@
   from {
     left: 239px;
     top: 476px;
+    visibility: visible;
   }
 
   to {
@@ -520,6 +550,8 @@
   left: -64px;
   top: -211px;
   border-radius: 0px;
+  visibility: hidden;
+
 }
 
 .animationStartWindow {
@@ -539,6 +571,7 @@
     left: -64px;
     top: -211px;
     border-radius: 0px;
+    visibility: visible;
   }
 }
 
@@ -559,6 +592,7 @@
     left: 455px;
     top: 179px;
     border-radius: 0px;
+    visibility: visible;
   }
 
   to {
@@ -580,7 +614,7 @@
   height: 619px;
   left: 30px;
   top: -585.57px;
-
+visibility: hidden;
   filter: blur(3.5px);
   transform: rotate(-21.76deg);
 }
@@ -604,6 +638,7 @@
     border-radius: 0px;
     filter: blur(0px);
     transform: rotate(10deg);
+    visibility: visible;
   }
 }
 
@@ -638,7 +673,7 @@
   height: 150px;
   left: 480px;
   top: -585.57px;
-
+  visibility: hidden;
   filter: blur(3.5px);
   transform: rotate(-21.76deg);
 }
@@ -662,6 +697,7 @@
     border-radius: 0px;
     filter: blur(2px);
     transform: rotate(0deg);
+    visibility: visible;
   }
 }
 
@@ -709,7 +745,7 @@
   height: 150px;
   left: -300px;
   top: -585.57px;
-
+  visibility: hidden;
   filter: blur(3.5px);
   transform: rotate(-21.76deg);
 }
@@ -734,6 +770,7 @@
     border-radius: 0px;
     filter: blur(03px);
     transform: rotate(-120deg);
+    visibility: visible;
   }
 }
 
@@ -784,6 +821,8 @@
 
   filter: blur(3.5px);
   transform: rotate(-21.76deg);
+  visibility: hidden;
+
 }
 
 .animationStartWoman {
@@ -805,6 +844,7 @@
     border-radius: 0px;
     filter: blur(0px);
     transform: rotate(0deg);
+    visibility: visible;
   }
 }
 
@@ -856,6 +896,7 @@
   background-size: contain;
   transform: rotate(9.86deg);
   z-index: 2;
+  visibility: hidden;
 }
 
 .animationStartIphone2 {
@@ -880,7 +921,7 @@
     height: 300px;
     left: 300px;
     top: 300px;
-
+    visibility: visible;
     transform: rotate(30deg);
   }
 }
@@ -945,6 +986,8 @@
   transform: rotate(9.86deg);
   z-index: 1;
   opacity: 0%;
+  visibility: hidden;
+
 }
 
 .animationStartDress {
@@ -965,6 +1008,7 @@
     top: 270px;
     opacity: 100%;
     transform: rotate(30deg);
+    visibility: visible;
   }
 }
 
@@ -1014,6 +1058,8 @@
   opacity: 0%;
   filter: blur(0.5px);
   transform: rotate(-21.76deg);
+  visibility: hidden;
+
 }
 
 .animationStartWatch {
@@ -1036,6 +1082,7 @@
     opacity: 100%;
     transform: rotate(30deg);
     filter: blur(0px);
+    visibility: visible;
   }
 }
 
@@ -1100,6 +1147,8 @@
   top: -500px;
   filter: blur(2.5px);
   transform: rotate(-21.76deg);
+  visibility: hidden;
+
 }
 
 .animationStartArm {
@@ -1121,6 +1170,7 @@
     top: 250px;
     transform: rotate(30deg);
     filter: blur(0px);
+    visibility: visible;
   }
 }
 
@@ -1170,6 +1220,8 @@
   top: -500px;
   filter: blur(2.5px);
   transform: rotate(-40deg);
+  visibility: hidden;
+
 }
 
 .animationStartFoot {
@@ -1190,6 +1242,7 @@
     top: 100px;
     transform: rotate(20deg);
     filter: blur(0px);
+    visibility: visible;
   }
 }
 
@@ -1240,6 +1293,8 @@
   opacity: 0%;
   filter: blur(0.5px);
   transform: rotate(-21.76deg);
+  visibility: hidden;
+
 }
 
 .animationStartSneaker {
@@ -1262,6 +1317,7 @@
     opacity: 100%;
     transform: rotate(20deg);
     filter: blur(0px);
+    visibility: visible;
   }
 }
 
@@ -1324,6 +1380,8 @@
   top: -500px;
   filter: blur(2.5px);
   transform: rotate(-40deg);
+  visibility: hidden;
+
 }
 
 .animationStartCorner {
@@ -1345,6 +1403,7 @@
     opacity: 100%;
     transform: rotate(0deg);
     filter: blur(0px);
+    visibility: visible;
   }
 }
 
@@ -1397,6 +1456,8 @@
   top: -500px;
   filter: blur(2.5px);
   transform: rotate(-40deg);
+  visibility: hidden;
+
 }
 
 .animationStartJoint {
@@ -1418,6 +1479,7 @@
     opacity: 100%;
     transform: rotate(0deg);
     filter: blur(0px);
+    visibility: visible;
   }
 }
 
@@ -1485,6 +1547,8 @@
   top: -500px;
   filter: blur(2.5px);
   transform: rotate(-40deg);
+  visibility: hidden;
+
 }
 
 .animationStartLeftSofa {
@@ -1506,6 +1570,7 @@
     opacity: 100%;
     transform: rotate(0deg);
     filter: blur(0px);
+    visibility: visible;
   }
 }
 
@@ -1549,9 +1614,11 @@
 @keyframes slideRight {
   from {
       transform: translateX(100%);
+      visibility: hidden;
   }
   to {
       transform: translateX(0);
+      visibility: visible;
   }
 }
 
@@ -1563,11 +1630,13 @@
   line-height: 52px;
   text-transform: capitalize;
   color: #000000;
+  
 }
 
 .slideDetail{
-  animation: slideRight 1s forwards;
+  animation: 1s slideRight 0s forwards;
 }
+
 
 .slideDetailElements {
   display: flex;
@@ -1615,20 +1684,21 @@
 }
 
 .tablet .mainPageSliderContainer{
-  height: 1000px;
+  height: 95vh;
+  max-height: 100%;
 }
 
 .tablet .slideDetail{
   top:51vh;
-}
+} 
 
 .tablet .smallSliderMenu{
   right: -100px;
   left: auto;
   bottom: auto;
-  top: 170px;
+  top: 17%;
   transform: rotate(90deg);
-}
+} 
 
 .tablet .mainPageSliderItem{
   transform: rotate(-90deg);
@@ -1638,21 +1708,27 @@
   display: none;
 }
 
+.tablet .wheelAnimationItemInner{
+  top: 40vh;
+  left: 40vh;
+}
+
 .mobile .mainPageSliderContainer{
   height: 1000px;
 }
 
 .mobile .slideDetail{
-  bottom: 17vh;
+  bottom: 8vh;
   width: 488px !important;
 }
 
 .mobile .smallSliderMenu{
-  right: -135px;
+  right: -125px;
   left: auto;
   bottom: auto;
   top: 170px;
   transform: rotate(90deg);
+  width: 80%;
 }
 
 .mobile .mainPageSliderItem{
@@ -1683,7 +1759,7 @@
   transform: rotate(-90deg);
 }
 .mobile .wheelAnimationItemInner{
-  right: 100px !important;
+  right: 10vh;
 }
 .mobile .mainPageSmallFigure{
   display: none;
@@ -1698,4 +1774,1973 @@
 .mobile .mainPageTopLeftFigure{
   left: calc(-460px);
   left: calc(-372px);;
+}
+
+
+/* Animation Tablet screen */
+/* 
+@media screen and (max-width:1000px){
+  
+
+  @keyframes sofa0 {
+    to {
+      visibility: visible;
+      width: 30vw;
+      height: 30vw;
+      left: 65vw;
+      top: 45vw;
+    }
+  }
+  
+  @keyframes sofa1 {
+    to {
+      width: 45vw;
+      height: 45vw;
+      left: 65vw;
+      top: 55vw;
+    }
+  }
+  
+  @keyframes sofa2 {
+    from {
+      width: 45vw;
+      height: 45vw;
+      left: 65vw;
+      top: 55vw;
+      visibility: visible;
+    }
+  
+    to {
+      width: 40%;
+      height: 40%;
+      left: -347px;
+      top: 780px;
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes ihpone0 {
+    to {
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 27vw;
+      transform: rotate(105.22deg);
+      visibility: visible;
+  
+    }
+  }
+  
+  
+  @keyframes ihpone01 {
+    to {
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 27vw;
+      visibility: visible;
+      transform: rotate(89.46deg);
+    }
+  }
+  
+  @keyframes ihpone02 {
+    from {
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 27vw;
+      visibility: visible;
+      transform: rotate(89.46deg);
+    }
+  
+    to {
+      width: 32%;
+      height: 65%;
+      left: -277.44px;
+      top: 475px;
+  
+      transform: rotate(29.72deg);
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes floor01 {
+    to {
+      width: 70vw;
+      height: 70vw;
+      left: 50vw;
+      top: 75vw;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes floor02 {
+    to {
+      width: 70vw;
+      height: 70vw;
+      left: 50vw;
+      top: 75vw;
+    }
+  }
+  
+  @keyframes floor03 {
+    from {
+      width: 70vw;
+      height: 70vw;
+      left: 50vw;
+      top: 75vw;
+      visibility: visible;
+    }
+  
+    to {
+      width: 70%;
+      height: 70%;
+      left: -688px;
+      top: 995px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+
+  
+  @keyframes flower01 {
+    to {
+      visibility: visible;
+      width: 18vw;
+      height: 18vw;
+      left: 45vw;
+      top: 20vw;
+  
+      filter: blur(2.5px);
+      transform: rotate(14.55deg);
+    }
+  }
+  
+  @keyframes flower02 {
+    to {
+      width: 18vw;
+      height: 18vw;
+      left: 48vw;
+      top: 49vw;
+      filter: blur(0px);
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes flower03 {
+    from {
+      width: 18vw;
+      height: 18vw;
+      left: 48vw;
+      top: 49vw;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: visible;
+    }
+  
+    to {
+      left: -504px;
+      top: 585px;
+  
+      filter: blur(2.5px);
+      transform: rotate(-9.92deg);
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes drawer01 {
+    to {
+      width: 16vw;
+      height: 16vw;
+      left: 50vw;
+      top: 66vw;
+  
+      filter: blur(3.5px);
+      transform: rotate(-21.76deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes drawer02 {
+    to {
+      width: 16vw;
+      height: 16vw;
+      left: 50vw;
+      top: 66vw;
+      filter: blur(0px);
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes drawer03 {
+    from {
+      width: 16vw;
+      height: 16vw;
+      left: 50vw;
+      top: 66vw;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: visible;
+    }
+  
+    to {
+      width: 20%;
+      height: 20%;
+      left: -208.36px;
+      top: 549px;
+      filter: blur(3.5px);
+      transform: rotate(7.17deg);
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes carpet01 {
+    to {
+      visibility: visible;
+      width: 60vw;
+      left: 55vw;
+      top: 70vw;
+    }
+  }
+  
+  @keyframes carpet02 {
+    to {
+      width: 60vw;
+      left: 55vw;
+      top: 78vw;
+    }
+  }
+  
+  @keyframes carpet03 {
+    from {
+      width: 60vw;
+      left: 55vw;
+      top: 78vw;
+      visibility: visible;
+    }
+  
+    to {
+      left: -306px;
+      top: 938px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+ 
+  
+  @keyframes window01 {
+    to {
+      height: 30vw;
+      width: 40vw;
+      left: 50vw;
+      top: 20vw;
+      border-radius: 0px;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes window02 {
+    to {
+      height: 30vw;
+      width: 30vw;
+      left: 90vw;
+      top: 33vw;
+      border-radius: 0px;
+    }
+  }
+  
+  @keyframes window03 {
+    from {
+      height: 30vw;
+      width: 30vw;
+      left: 90vw;
+      top: 33vw;
+      border-radius: 0px;
+      visibility: visible;
+    }
+  
+    to {
+      height: 129.489990234375px;
+      width: 161.83245849609375px;
+      left: -373px;
+      top: -273px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+ 
+  
+  @keyframes man01 {
+    to {
+      height: 90vw;
+      width: 90vw;
+      left: 42vw;
+      top: 27vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(10deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes man02 {
+    from {
+      height: 90vw;
+      width: 90vw;
+      left: 42vw;
+      top: 27vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(10deg);
+      visibility: visible;
+    }
+  
+    to {
+      height: 519px;
+      width: 519px;
+      left: -550px;
+      top: 500px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes joy2_01 {
+    to {
+      height: 25vw;
+      width: 35vw;
+      left: 100vw;
+      top: 50vw;
+      border-radius: 0px;
+      filter: blur(2px);
+      transform: rotate(0deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes joy2_02 {
+    to {
+      height: 20vw;
+      width: 30vw;
+      left: 83vw;
+      top: 82vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(-35deg);
+    }
+  }
+  
+  @keyframes joy2_03 {
+    from {
+      height: 20vw;
+      width: 30vw;
+      left: 83vw;
+      top: 82vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(-35deg);
+      visibility: visible;
+  
+    }
+  
+    to {
+      height: 135px;
+      width: 155px;
+      left: -250px;
+      top: 900px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes joy_01 {
+    to {
+      height: 15vw;
+      width: 25vw;
+      left: 35vw;
+      top: 30vw;
+      border-radius: 0px;
+      filter: blur(03px);
+      transform: rotate(-120deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes joy_02 {
+    to {
+      height: 15vw;
+      width: 25vw;
+      left: 40vw;
+      top: 50vw;
+      border-radius: 0px;
+      filter: blur(01.5px);
+      transform: rotate(-110deg);
+    }
+  }
+  
+  @keyframes joy_03 {
+    from {
+      height: 15vw;
+      width: 25vw;
+      left: 40vw;
+      top: 50vw;
+      border-radius: 0px;
+      filter: blur(01.5px);
+      transform: rotate(-110deg);
+      visibility: visible;
+  
+    }
+  
+    to {
+      height: 95px;
+      width: 115px;
+      left: -400px;
+      top: 800px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes Woman01 {
+    to {
+      height: 50vw;
+      width: 50vw;
+      left: 80vw;
+      top: 40vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes Woman02 {
+    to {
+      height: 65vw;
+      width: 65vw;
+      left: 50vw;
+      top: 35vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes Woman03 {
+    from {
+      height: 65vw;
+      width: 65vw;
+      left: 50vw;
+      top: 35vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: visible;
+  
+    }
+  
+    to {
+      height: 430px;
+      width: 430px;
+      left: -450px;
+      top: 500px;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes ihpone04 {
+    to {
+      background-repeat: no-repeat;
+      width: 30vw;
+      height: 60vw;
+      left: 70vw;
+      top: 50vw;
+      visibility: visible;
+      transform: rotate(30deg);
+    }
+  }
+  
+  @keyframes ihpone05 {
+    to {
+      background-repeat: no-repeat;
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 30vw;
+  
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes ihpone06 {
+    to {
+      background-repeat: no-repeat;
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 40vw;
+  
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes ihpone07 {
+    from {
+      background-repeat: no-repeat;
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 40vw;
+      transform: rotate(0deg);
+      visibility: visible;
+    
+  }
+  
+    to {
+      background-repeat: no-repeat;
+      width: 170px;
+      height: 320px;
+      left: -400px;
+      top: 500px;
+  
+      transform: rotate(0deg);
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes dress01 {
+    to {
+      width: 60vw;
+      height: 60vw;
+      left: 55vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(30deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes dress02 {
+    to {
+      width: 85vw;
+      height: 85vw;
+      left: 39vw;
+      top: 30vw;
+      opacity: 100%;
+      transform: rotate(2deg);
+    }
+  }
+  
+  @keyframes dress03 {
+    from {
+      width: 85vw;
+      height: 85vw;
+      left: 39vw;
+      top: 30vw;
+      opacity: 100%;
+      transform: rotate(2deg);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 430px;
+      height: 430px;
+      left: -450px;
+      top: 500px;
+      opacity: 100%;
+      transform: rotate(2deg);
+      visibility: hidden;
+    }
+  }
+  
+
+  
+  @keyframes watch_01 {
+    to {
+      width: 32vw;
+      height: 32vw;
+      left: 70vw;
+      top: 75vw;
+      opacity: 100%;
+      transform: rotate(30deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes watch_02 {
+    to {
+      width: 35vw;
+      height: 35vw;
+      left: 70vw;
+      top: 45vw;
+      opacity: 100%;
+      transform: rotate(-10deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes watch_03 {
+    to {
+      width: 25vw;
+      height: 25vw;
+      left: 73vw;
+      top: 63vw;
+      opacity: 100%;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes watch_04 {
+    from {
+      width: 25vw;
+      height: 25vw;
+      left: 73vw;
+      top: 63vw;
+      opacity: 100%;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 110px;
+      height: 110px;
+      left: -380px;
+      top: 620px;
+      opacity: 100%;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  
+  @keyframes Arm_01 {
+    to {
+      width: 60vw;
+      height: 60vw;
+      left: 90vw;
+      top: 50vw;
+      transform: rotate(30deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes Arm_02 {
+    to {
+      width: 80vw;
+      height: 80vw;
+      left: 55vw;
+      top: 50vw;
+      transform: rotate(75deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes Arm_03 {
+    from {
+      width: 80vw;
+      height: 80vw;
+      left: 55vw;
+      top: 50vw;
+      transform: rotate(75deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 400px;
+      height: 400px;
+      left: -400px;
+      top: 500px;
+      transform: rotate(75deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  
+  @keyframes Foot_01 {
+    to {
+      width: 50vw;
+      height: 50vw;
+      left: 95vw;
+      top: 45vw;
+      transform: rotate(20deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes Foot_02 {
+    to {
+      width: 55vw;
+      height: 55vw;
+      left: 53vw;
+      top: 40vw;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes Foot_03 {
+    from {
+      width: 50vw;
+      height: 50vw;
+      left: 53vw;
+      top: 40vw;
+      transform: rotate(-15deg);
+      filter: blur(0px);    
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 270px;
+      height: 270px;
+      left: -440px;
+      top: 520px;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  
+  @keyframes Sneaker_01 {
+    to {
+      width: 35vw;
+      height: 35vw;
+      left: 50vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(30deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes Sneaker_02 {
+    to {
+      width: 25vw;
+      height: 25vw;
+      left: 70vw;
+      top: 60vw;
+      opacity: 100%;
+      transform: rotate(5deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes Sneaker_03 {
+    to {
+      width: 32vw;
+      height: 32vw;
+      left: 68vw;
+      top: 76vw;
+      opacity: 100%;
+      transform: rotate(-6deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes Sneaker_04 {
+    from {
+      width: 32vw;
+      height: 32vw;
+      left: 68vw;
+      top: 76vw;
+      opacity: 100%;
+      transform: rotate(-6deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 150px;
+      height: 150px;
+      left: -350px;
+      top: 700px;
+      opacity: 100%;
+      transform: rotate(2deg);
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes corner_01 {
+    to {
+      width: 38vw;
+      height: 38vw;
+      left: 85vw;
+      top: 30vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes corner_02 {
+    to {
+      width: 38vw;
+      height: 38vw;
+      left: 80vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes corner_03 {
+    from {
+      width: 38vw;
+      height: 38vw;
+      left: 80vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 180px;
+      height: 180px;
+      left: -350px;
+      top: 600px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  
+  @keyframes joint_01 {
+    to {
+      width: 15vw;
+      height: 15vw;
+      left: 80vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes joint_02 {
+    to {
+      width: 20vw;
+      height: 20vw;
+      left: 80vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      filter: invert(60%);
+      
+  
+    }
+  }
+  
+  @keyframes joint_03 {
+    to {
+      width: 15vw;
+      height: 15vw;
+      left: 80vw;
+      top: 60vw;
+      opacity: 70%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes joint_04 {
+    from {
+      width: 15vw;
+      height: 15vw;
+      left: 80vw;
+      top: 60vw;
+      opacity: 70%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 50px;
+      height: 50px;
+      left: -270px;
+      top: 650px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  @keyframes leftSofa_01 {
+    to {
+      width: 40vw;
+      height: 40vw;
+      left: 50vw;
+      top: 60vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes leftSofa_02 {
+    to {
+      width: 40vw;
+      height: 40vw;
+      left: 56.5vw;
+      top: 54.5vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes leftSofa_03 {
+    from {
+      width: 40vw;
+      height: 40vw;
+      left: 56.5vw;
+      top: 54.5vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 190px;
+      height: 190px;
+      left: -238px;
+      top: 500px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+} */
+
+/* Animation Mobile screen */
+@media screen and (max-width:700px){
+  
+
+  @keyframes sofa0 {
+    to {
+      visibility: visible;
+      width: 30vw;
+      height: 30vw;
+      left: 65vw;
+      top: 45vw;
+    }
+  }
+  
+  @keyframes sofa1 {
+    to {
+      width: 45vw;
+      height: 45vw;
+      left: 65vw;
+      top: 55vw;
+    }
+  }
+  
+  @keyframes sofa2 {
+    from {
+      width: 45vw;
+      height: 45vw;
+      left: 65vw;
+      top: 55vw;
+      visibility: visible;
+    }
+  
+    to {
+      width: 40%;
+      height: 40%;
+      left: -347px;
+      top: 780px;
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes ihpone0 {
+    to {
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 27vw;
+      transform: rotate(105.22deg);
+      visibility: visible;
+  
+    }
+  }
+  
+  
+  @keyframes ihpone01 {
+    to {
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 27vw;
+      visibility: visible;
+      transform: rotate(89.46deg);
+    }
+  }
+  
+  @keyframes ihpone02 {
+    from {
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 27vw;
+      visibility: visible;
+      transform: rotate(89.46deg);
+    }
+  
+    to {
+      width: 32%;
+      height: 65%;
+      left: -277.44px;
+      top: 475px;
+  
+      transform: rotate(29.72deg);
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes floor01 {
+    to {
+      width: 70vw;
+      height: 70vw;
+      left: 50vw;
+      top: 75vw;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes floor02 {
+    to {
+      width: 70vw;
+      height: 70vw;
+      left: 50vw;
+      top: 75vw;
+    }
+  }
+  
+  @keyframes floor03 {
+    from {
+      width: 70vw;
+      height: 70vw;
+      left: 50vw;
+      top: 75vw;
+      visibility: visible;
+    }
+  
+    to {
+      width: 70%;
+      height: 70%;
+      left: -688px;
+      top: 995px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+
+  
+  @keyframes flower01 {
+    to {
+      visibility: visible;
+      width: 18vw;
+      height: 18vw;
+      left: 45vw;
+      top: 20vw;
+  
+      filter: blur(2.5px);
+      transform: rotate(14.55deg);
+    }
+  }
+  
+  @keyframes flower02 {
+    to {
+      width: 18vw;
+      height: 18vw;
+      left: 48vw;
+      top: 49vw;
+      filter: blur(0px);
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes flower03 {
+    from {
+      width: 18vw;
+      height: 18vw;
+      left: 48vw;
+      top: 49vw;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: visible;
+    }
+  
+    to {
+      left: -504px;
+      top: 585px;
+  
+      filter: blur(2.5px);
+      transform: rotate(-9.92deg);
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes drawer01 {
+    to {
+      width: 16vw;
+      height: 16vw;
+      left: 50vw;
+      top: 66vw;
+  
+      filter: blur(3.5px);
+      transform: rotate(-21.76deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes drawer02 {
+    to {
+      width: 16vw;
+      height: 16vw;
+      left: 50vw;
+      top: 66vw;
+      filter: blur(0px);
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes drawer03 {
+    from {
+      width: 16vw;
+      height: 16vw;
+      left: 50vw;
+      top: 66vw;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: visible;
+    }
+  
+    to {
+      width: 20%;
+      height: 20%;
+      left: -208.36px;
+      top: 549px;
+      filter: blur(3.5px);
+      transform: rotate(7.17deg);
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes carpet01 {
+    to {
+      visibility: visible;
+      width: 60vw;
+      left: 55vw;
+      top: 70vw;
+    }
+  }
+  
+  @keyframes carpet02 {
+    to {
+      width: 60vw;
+      left: 55vw;
+      top: 78vw;
+    }
+  }
+  
+  @keyframes carpet03 {
+    from {
+      width: 60vw;
+      left: 55vw;
+      top: 78vw;
+      visibility: visible;
+    }
+  
+    to {
+      left: -306px;
+      top: 938px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+ 
+  
+  @keyframes window01 {
+    to {
+      height: 30vw;
+      width: 40vw;
+      left: 50vw;
+      top: 20vw;
+      border-radius: 0px;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes window02 {
+    to {
+      height: 30vw;
+      width: 30vw;
+      left: 90vw;
+      top: 33vw;
+      border-radius: 0px;
+    }
+  }
+  
+  @keyframes window03 {
+    from {
+      height: 30vw;
+      width: 30vw;
+      left: 90vw;
+      top: 33vw;
+      border-radius: 0px;
+      visibility: visible;
+    }
+  
+    to {
+      height: 129.489990234375px;
+      width: 161.83245849609375px;
+      left: -373px;
+      top: -273px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+ 
+  
+  @keyframes man01 {
+    to {
+      height: 90vw;
+      width: 90vw;
+      left: 42vw;
+      top: 27vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(10deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes man02 {
+    from {
+      height: 90vw;
+      width: 90vw;
+      left: 42vw;
+      top: 27vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(10deg);
+      visibility: visible;
+    }
+  
+    to {
+      height: 519px;
+      width: 519px;
+      left: -550px;
+      top: 500px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes joy2_01 {
+    to {
+      height: 25vw;
+      width: 35vw;
+      left: 100vw;
+      top: 50vw;
+      border-radius: 0px;
+      filter: blur(2px);
+      transform: rotate(0deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes joy2_02 {
+    to {
+      height: 20vw;
+      width: 30vw;
+      left: 83vw;
+      top: 82vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(-35deg);
+    }
+  }
+  
+  @keyframes joy2_03 {
+    from {
+      height: 20vw;
+      width: 30vw;
+      left: 83vw;
+      top: 82vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(-35deg);
+      visibility: visible;
+  
+    }
+  
+    to {
+      height: 135px;
+      width: 155px;
+      left: -250px;
+      top: 900px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes joy_01 {
+    to {
+      height: 15vw;
+      width: 25vw;
+      left: 35vw;
+      top: 30vw;
+      border-radius: 0px;
+      filter: blur(03px);
+      transform: rotate(-120deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes joy_02 {
+    to {
+      height: 15vw;
+      width: 25vw;
+      left: 40vw;
+      top: 50vw;
+      border-radius: 0px;
+      filter: blur(01.5px);
+      transform: rotate(-110deg);
+    }
+  }
+  
+  @keyframes joy_03 {
+    from {
+      height: 15vw;
+      width: 25vw;
+      left: 40vw;
+      top: 50vw;
+      border-radius: 0px;
+      filter: blur(01.5px);
+      transform: rotate(-110deg);
+      visibility: visible;
+  
+    }
+  
+    to {
+      height: 95px;
+      width: 115px;
+      left: -400px;
+      top: 800px;
+      border-radius: 0px;
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes Woman01 {
+    to {
+      height: 50vw;
+      width: 50vw;
+      left: 80vw;
+      top: 40vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes Woman02 {
+    to {
+      height: 65vw;
+      width: 65vw;
+      left: 50vw;
+      top: 35vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes Woman03 {
+    from {
+      height: 65vw;
+      width: 65vw;
+      left: 50vw;
+      top: 35vw;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: visible;
+  
+    }
+  
+    to {
+      height: 430px;
+      width: 430px;
+      left: -450px;
+      top: 500px;
+      border-radius: 0px;
+      filter: blur(0px);
+      transform: rotate(0deg);
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes ihpone04 {
+    to {
+      background-repeat: no-repeat;
+      width: 30vw;
+      height: 60vw;
+      left: 70vw;
+      top: 50vw;
+      visibility: visible;
+      transform: rotate(30deg);
+    }
+  }
+  
+  @keyframes ihpone05 {
+    to {
+      background-repeat: no-repeat;
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 30vw;
+  
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes ihpone06 {
+    to {
+      background-repeat: no-repeat;
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 40vw;
+  
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes ihpone07 {
+    from {
+      background-repeat: no-repeat;
+      width: 35vw;
+      height: 70vw;
+      left: 65vw;
+      top: 40vw;
+      transform: rotate(0deg);
+      visibility: visible;
+    
+  }
+  
+    to {
+      background-repeat: no-repeat;
+      width: 170px;
+      height: 320px;
+      left: -400px;
+      top: 500px;
+  
+      transform: rotate(0deg);
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes dress01 {
+    to {
+      width: 60vw;
+      height: 60vw;
+      left: 55vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(30deg);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes dress02 {
+    to {
+      width: 85vw;
+      height: 85vw;
+      left: 39vw;
+      top: 30vw;
+      opacity: 100%;
+      transform: rotate(2deg);
+    }
+  }
+  
+  @keyframes dress03 {
+    from {
+      width: 85vw;
+      height: 85vw;
+      left: 39vw;
+      top: 30vw;
+      opacity: 100%;
+      transform: rotate(2deg);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 430px;
+      height: 430px;
+      left: -450px;
+      top: 500px;
+      opacity: 100%;
+      transform: rotate(2deg);
+      visibility: hidden;
+    }
+  }
+  
+
+  
+  @keyframes watch_01 {
+    to {
+      width: 32vw;
+      height: 32vw;
+      left: 70vw;
+      top: 75vw;
+      opacity: 100%;
+      transform: rotate(30deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes watch_02 {
+    to {
+      width: 35vw;
+      height: 35vw;
+      left: 70vw;
+      top: 45vw;
+      opacity: 100%;
+      transform: rotate(-10deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes watch_03 {
+    to {
+      width: 25vw;
+      height: 25vw;
+      left: 73vw;
+      top: 63vw;
+      opacity: 100%;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes watch_04 {
+    from {
+      width: 25vw;
+      height: 25vw;
+      left: 73vw;
+      top: 63vw;
+      opacity: 100%;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 110px;
+      height: 110px;
+      left: -380px;
+      top: 620px;
+      opacity: 100%;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  
+  @keyframes Arm_01 {
+    to {
+      width: 60vw;
+      height: 60vw;
+      left: 90vw;
+      top: 50vw;
+      transform: rotate(30deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes Arm_02 {
+    to {
+      width: 80vw;
+      height: 80vw;
+      left: 55vw;
+      top: 50vw;
+      transform: rotate(75deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes Arm_03 {
+    from {
+      width: 80vw;
+      height: 80vw;
+      left: 55vw;
+      top: 50vw;
+      transform: rotate(75deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 400px;
+      height: 400px;
+      left: -400px;
+      top: 500px;
+      transform: rotate(75deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  
+  @keyframes Foot_01 {
+    to {
+      width: 50vw;
+      height: 50vw;
+      left: 95vw;
+      top: 45vw;
+      transform: rotate(20deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes Foot_02 {
+    to {
+      width: 55vw;
+      height: 55vw;
+      left: 53vw;
+      top: 40vw;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes Foot_03 {
+    from {
+      width: 50vw;
+      height: 50vw;
+      left: 53vw;
+      top: 40vw;
+      transform: rotate(-15deg);
+      filter: blur(0px);    
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 270px;
+      height: 270px;
+      left: -440px;
+      top: 520px;
+      transform: rotate(-15deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  
+  @keyframes Sneaker_01 {
+    to {
+      width: 35vw;
+      height: 35vw;
+      left: 50vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(30deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes Sneaker_02 {
+    to {
+      width: 25vw;
+      height: 25vw;
+      left: 70vw;
+      top: 60vw;
+      opacity: 100%;
+      transform: rotate(5deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes Sneaker_03 {
+    to {
+      width: 32vw;
+      height: 32vw;
+      left: 68vw;
+      top: 76vw;
+      opacity: 100%;
+      transform: rotate(-6deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes Sneaker_04 {
+    from {
+      width: 32vw;
+      height: 32vw;
+      left: 68vw;
+      top: 76vw;
+      opacity: 100%;
+      transform: rotate(-6deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 150px;
+      height: 150px;
+      left: -350px;
+      top: 700px;
+      opacity: 100%;
+      transform: rotate(2deg);
+      visibility: hidden;
+    }
+  }
+  
+  
+  @keyframes corner_01 {
+    to {
+      width: 38vw;
+      height: 38vw;
+      left: 85vw;
+      top: 30vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes corner_02 {
+    to {
+      width: 38vw;
+      height: 38vw;
+      left: 80vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes corner_03 {
+    from {
+      width: 38vw;
+      height: 38vw;
+      left: 80vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 180px;
+      height: 180px;
+      left: -350px;
+      top: 600px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  
+  @keyframes joint_01 {
+    to {
+      width: 15vw;
+      height: 15vw;
+      left: 80vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes joint_02 {
+    to {
+      width: 20vw;
+      height: 20vw;
+      left: 80vw;
+      top: 50vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      filter: invert(60%);
+      
+  
+    }
+  }
+  
+  @keyframes joint_03 {
+    to {
+      width: 15vw;
+      height: 15vw;
+      left: 80vw;
+      top: 60vw;
+      opacity: 70%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes joint_04 {
+    from {
+      width: 15vw;
+      height: 15vw;
+      left: 80vw;
+      top: 60vw;
+      opacity: 70%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 50px;
+      height: 50px;
+      left: -270px;
+      top: 650px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
+  @keyframes leftSofa_01 {
+    to {
+      width: 40vw;
+      height: 40vw;
+      left: 50vw;
+      top: 60vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+    }
+  }
+  
+  @keyframes leftSofa_02 {
+    to {
+      width: 40vw;
+      height: 40vw;
+      left: 56.5vw;
+      top: 54.5vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes leftSofa_03 {
+    from {
+      width: 40vw;
+      height: 40vw;
+      left: 56.5vw;
+      top: 54.5vw;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: visible;
+  
+    }
+  
+    to {
+      width: 190px;
+      height: 190px;
+      left: -238px;
+      top: 500px;
+      opacity: 100%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+      visibility: hidden;
+  
+    }
+  }
+  
 }

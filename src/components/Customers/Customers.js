@@ -13,7 +13,8 @@ export const Customers = props =>{
     
     const {t} = useTranslation();
     return(
-    <Swiper spaceBetween={50}  style={{height: "270px", minHeight:"50px"}} navigation={true}  id="123"
+      <div></div>)
+    /*<Swiper spaceBetween={50}  style={{height: "270px", minHeight:"50px"}} navigation={true}  id="123"
         cssMode={true}
         navigation={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard,Autoplay]}
@@ -56,5 +57,5 @@ export const Customers = props =>{
         <SwiperSlide><img alt="" src={process.env.PUBLIC_URL + '/assets/img/lazzoni-logo.svg'}></img></SwiperSlide>
         <SwiperSlide><img alt="" src={process.env.PUBLIC_URL + '/assets/img/creavit_logo-min.svg'}></img></SwiperSlide>
         <SwiperSlide><img alt="" src={process.env.PUBLIC_URL + '/assets/img/ekohalilogo.png'}></img></SwiperSlide>
-    </Swiper>);
+    </Swiper>);*/
 }

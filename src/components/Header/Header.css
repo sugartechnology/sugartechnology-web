@@ -641,6 +641,11 @@
 }
 
 
+.tablet .askYourQuestionRobot
+{
+    right: 5vh;
+    top: 92vh;
+}
 
 .mobile .headerContainer{
     justify-content: normal;
