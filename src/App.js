@@ -20,6 +20,7 @@ import { ContactUsCv } from './pages/contactUs/ContactUsCv';
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
 import { Blog2 } from './pages/blogs/Blog2';
 import { Blog3 } from './pages/blogs/Blog3';
+import LiveChatWidget from './liveChat/LiveChatWidget';
 
 i18n
   .use(initReactI18next)
@@ -68,6 +69,7 @@ function App() {
             <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
             <Route path='/contactCv' element={<ContactUsCv></ContactUsCv>}></Route>
           </Routes>
+          <LiveChatWidget></LiveChatWidget>
           <Contact></Contact>
           <Footer></Footer>
         </div>  
