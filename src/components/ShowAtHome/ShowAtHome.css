@@ -163,6 +163,10 @@
 
 /* Reeponsive Mobile Settings */
 
+.mobile .ShowAtHomeContainer{
+    flex-direction: column;
+}
+
 .mobile .showAtHomeHeader{
     width: auto;
     font-size: 27px;

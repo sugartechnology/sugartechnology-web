@@ -14,6 +14,7 @@
     z-index: 1;
     width: 41%;
     height: 100%;
+    display: flex;
 }
 
 /* Reeponsive Mobile Settings */
