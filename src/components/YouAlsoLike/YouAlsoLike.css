@@ -15,9 +15,13 @@
     color: #ED401A;
 }
 
+/* Reeponsive Mobile Settings */
+
 .mobile .youAlsoLikeSpan{
     font-size: 25px;
 }
+
+/* Reeponsive Tablet Settings */
 
 .tablet .youAlsoLikeSpan{
     font-size: 25px;

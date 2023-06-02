@@ -1,47 +1,35 @@
 .cloothContainer{
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     background: #EBEBEB;
     margin-top: 60px;
     align-items: center;
     position: relative;
 }
-.cloothImage{
-    position: absolute;
-    width: 500px;
-    right: 0px;
-}
 .cloothImageDiv{
-    position: absolute;
-    right: 0px;
-    width: 50%;
+    z-index: 1;
     height: 100%;
-}
-.tablet .cloothImageDiv{
-    width: 100%;
-    height: 50%;
-    right: auto;
-    bottom: 0px;
     display: flex;
-    justify-content: center;
 }
 
-.tablet .cloothImage{
-    width: 30%;
-    position: relative;
+
+/* Reeponsive Tablet Settings */
+
+.tablet .cloothContainer{
+    flex-direction: column;
+}
+
+.tablet .cloothImageDiv{
+    height: 50%;
+}
+
+/* Reeponsive Mobile Settings */
+
+.mobile .cloothContainer{
+    flex-direction: column;
 }
 
 .mobile .cloothImageDiv{
-    width: 100%;
-    height: auto;
-    right: auto;
-    bottom: 0px;
-    display: flex;
-    justify-content: center;
-}
-
-.mobile .cloothImage{
-    width: 70%;
-    position: relative;
+    height: 50%;
 }

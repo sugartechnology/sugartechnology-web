@@ -11,7 +11,7 @@ export const ProductStatistics = props =>{
                         <a className='productStatisticsHeader'>{t("productStatisticsHeader")}</a>
                     </div>
                     <div className='productStatisticsSpans'>
-                        <a className='productStatisticsSpan'>{t("productStatisticsSpan1")}</a>
+                        <a className='productStatisticsSpan'>{t("productStatisticsSpan1")} <a href='https://www.facebook.com/business/success/2-made-com' target='_blank'>Made.com UseCase</a></a>
                         <a className='productStatisticsSpan'>{t("productStatisticsSpan2")}</a>
                     </div>
                 </div>

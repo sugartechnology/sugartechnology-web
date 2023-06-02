@@ -1,50 +1,34 @@
 .jointContainer{
-    height: 730px;
+    height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     background: #EBEBEB;
     margin-top: 60px;
-    align-items: center;
     position: relative;
+    align-items: center;
 }
 .jointImage{
-    width: 80%;
+    width: 100%;
 }
 .jointImageDiv{
-    position: absolute;
-    right: 0px;
-    display: flex;
-    justify-content: flex-end;
+    width: 40%;
+    z-index: 1;
 }
 
-.tablet .jointContainer{
-    height: 740px;
-}
+/* Reeponsive Tablet Settings */
+
 .tablet .jointImageDiv{
     right: auto;
     bottom: 50px;
     justify-content: center;
 }
 
-.tablet .jointImage{
-    width: 80%;
-}
+/* Reeponsive Mobile Settings */
 
 .mobile .jointContainer{
-    height: 740px;
+    flex-direction: column;
 }
 .mobile .jointImageDiv{
-    right: auto;
-    bottom: 10px;
-    justify-content: center;
-}
-
-.mobile .jointImage{
     width: 80%;
 }
 
-@media screen and (max-width: 1200px) {
-    .jointImage{
-        width: 60%;
-    }
-}

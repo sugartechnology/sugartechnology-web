@@ -104,6 +104,8 @@
     margin: 15px;
 }
 
+/* Reeponsive Tablet Settings */
+
 .tablet .blogParagraphsContainer{
     height: 215vh;
 }
@@ -152,9 +154,7 @@
     line-height: 25px;
 }
 
-
-
-
+/* Reeponsive Mobile Settings */
 
 .mobile .blogParagraphsContainer{
     height: 215vh;

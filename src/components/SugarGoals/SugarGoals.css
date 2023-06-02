@@ -62,6 +62,9 @@
     right: 0px;
     z-index: -1;
 }
+
+/* Reeponsive Tablet Settings */
+
 @media screen and (max-width: 1200px){
     .SugarGoalsContainer{
         height: 84vh;
@@ -156,6 +159,8 @@
     }
 }
 
+/* Reeponsive Mobile Settings */
+
 @media screen and (max-width: 500px) {
     .SugarGoalsContainer{
         justify-content: normal;
@@ -163,14 +168,12 @@
     .sugarGoalsElements2{
         height: 100%;
         gap: 55px;
-        left: 40px;
     }
     .sugarGoals{
         position: absolute;
         top: auto;
     }
     .sugarGoalsElementsGroup{
-        top: auto;
         justify-content: center;
     }
     .sugarGoalsElement{

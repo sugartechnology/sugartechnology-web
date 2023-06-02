@@ -1,6 +1,6 @@
 .shoesQrContainer{
     display: flex;
-    height: 80vh;
+    height: 100vh;
     background: #E9E9E9;
     flex-direction: row;
     justify-content: space-evenly;
@@ -57,6 +57,8 @@
     width: 100%;
 }
 
+/* Reeponsive Tablet Settings */
+
 .tablet .shoesQrContainer{
     height: 100vh;
 }
@@ -91,7 +93,7 @@
     right: auto !important;
 }
 
-
+/* Reeponsive Mobile Settings */
 
 .mobile .shoesQrElements{
     position: absolute;

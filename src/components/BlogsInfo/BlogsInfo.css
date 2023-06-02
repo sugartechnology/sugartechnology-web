@@ -76,6 +76,8 @@
     mix-blend-mode: normal;
 }
 
+/* Reeponsive Tablet Settings */
+
 .tablet .blogsInfoContainer{
     height: 190vh;
 }
@@ -95,8 +97,7 @@
     width: 90%;
 }
 
-
-
+/* Reeponsive Mobile Settings */
 
 .mobile .blogsInfoContainer{
     height: 170vh;

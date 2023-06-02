@@ -1,5 +1,5 @@
 .watchContainer{
-    height: 100vh;
+    height: 93vh;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
@@ -9,35 +9,27 @@
 }
 .watchImage{
     width: 100%;
-    position: absolute;
-    bottom: 5px;
 }
 
 .watchImageDiv{
-    position: absolute;
-    right: 0px;
-    bottom: -5px;
+    z-index: 1;
     width: 50%;
     height: 100%;
-}
-
-.tablet .watchImage{
-    right: 0px;
-    width: 70%;
-}
-
-.tablet .watchImageDiv{
-    width: 100%;
-    height: 50%;
     display: flex;
-    justify-content: center;
+    align-items: flex-end;
 }
 
-.mobile .watchImage{
-    width: 100%;
-    right: 0px;
+/* Reeponsive Tablet Settings */
+
+.tablet .watchContainer{
+    flex-direction: column;
 }
 
+/* Reeponsive Mobile Settings */
+
+.mobile .watchContainer{
+    flex-direction: column;
+}
 
 .mobile .watchImageDiv{
     width: 100%;

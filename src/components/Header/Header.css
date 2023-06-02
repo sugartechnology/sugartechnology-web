@@ -633,13 +633,7 @@
     cursor: pointer;
 }
 
-.askYourQuestionRobot{
-    position: absolute;
-    right: 100px;
-    top: 580px;
-    cursor: pointer;
-}
-
+/* Reeponsive Tablet Settings */
 
 .tablet .headerContainer{
     justify-content: normal;
@@ -677,21 +671,11 @@
     z-index: 6;
     box-shadow: none;
 }
-.tablet .askYourQuestionRobot{
-    width: 150px;
-    right: 5vh;
-    top: 92vh;
-}
-.tablet .robotSpans{
-    display: none;
-}
-.tablet .robot{
-    width: 57px;
-    left: 90px;
-}
 .tablet .headerButtons{
     right: 0px;
 }
+
+/* Reeponsive Mobile Settings */
 
 .mobile .headerContainer{
     justify-content: normal;
@@ -729,18 +713,7 @@
     z-index: 6;
     box-shadow: none;
 }
-.mobile .askYourQuestionRobot{
-    right: 40px;
-    top: 590px;
-    width: 150px;
-}
-.mobile .robotSpans{
-    display: none;
-}
-.mobile .robot{
-    width: 57px;
-    left: 90px;
-}
+
 .mobile .headerButtons{
     right: 0px;
 }

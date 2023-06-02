@@ -104,6 +104,8 @@
     }
 }
 
+/* Reeponsive Mobile Settings */
+
 .mobile .sugarBrandsContainer{
     height: 110vh;
 }
@@ -137,6 +139,7 @@
     left: 120px;
 }
 
+/* Reeponsive Tablet Settings */
 
 .tablet .sugarBrandsHeader{
     width: 100%;

@@ -66470,7 +66470,7 @@ const contentTemplate = `
             style="enable-background:new 0 0 32 32;" xml:space="preserve">
             <style type="text/css">
                 .circle {
-                    fill: #2c3e50;
+                    fill: #ed401a;
                 }
 
                 .icon,svg-icon {

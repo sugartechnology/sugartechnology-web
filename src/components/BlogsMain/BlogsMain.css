@@ -95,6 +95,8 @@
     display: none;
 }
 
+/* Reeponsive Tablet Settings */
+
 .tablet .blogsMainContainer{
     height: 200vh;
 }
@@ -107,6 +109,8 @@
 .tablet .squareHeader{
     justify-content: center;
 }
+
+/* Reeponsive Mobile Settings */
 
 .mobile .blogsMainContainer{
     height: 200vh;

@@ -1,5 +1,5 @@
 .cloothPaternContainer{
-    height: 75vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@
     width: 200px;
 }
 
-
+/* Reeponsive Tablet Settings */
 
 .tablet .cloothPaternContainer{
     height: 110vh;
@@ -85,8 +85,7 @@
     width: 50%;
 }
 
-
-
+/* Reeponsive Mobile Settings */
 
 .mobile .cloothPaternVector{
     width: 30px;

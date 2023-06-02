@@ -38,6 +38,7 @@
     width: 500px;
 }
 
+/* Reeponsive Tablet Settings */
 
 .tablet .metaReportsContainer{
     height: 85vh;
@@ -71,10 +72,10 @@
     text-align: center;
 }
 
-
+/* Reeponsive Mobile Settings */
 
 .mobile .metaReportsContainer{
-    height: 100vh;
+    height: 115vh;
 }
 
 .mobile .metaReportsImg{

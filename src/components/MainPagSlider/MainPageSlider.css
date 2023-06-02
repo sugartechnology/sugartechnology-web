@@ -1,5 +1,11 @@
 /* ENDLESS ROTATE */
 
+/* .rotate {
+  animation: rotate 90s linear infinite;
+  animation-direction: alternate;
+} */
+
+
 .bright {
   animation: bright 5s linear infinite;
   animation-direction: alternate;

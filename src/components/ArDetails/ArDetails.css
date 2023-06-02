@@ -137,18 +137,8 @@
     border: 1px solid;
 }
 
-.mobile .arDetailsContainer{
-    height: 960px;
-}
-.mobile .arDetailsHeader{
-    font-size: 29px;
-}
-.mobile .arDetailsSpan{
-    font-size: 13px;
-}
-.mobile .showAtHomeImg{
-    display: none;
-}
+/* Reeponsive Tablet Settings */
+
 .tablet .arDetailsContainer{
     height: 150vh;
 }
@@ -166,12 +156,27 @@
     bottom: 71px;
 }
 
-.mobile .modelViewerShadow{
-    bottom: 71px;
-}
-
 .tablet .arDetailsBubble{
     display: none;
+}
+
+/* Reeponsive Mobile Settings */
+
+.mobile .arDetailsContainer{
+    height: 960px;
+}
+.mobile .arDetailsHeader{
+    font-size: 29px;
+}
+.mobile .arDetailsSpan{
+    font-size: 13px;
+}
+.mobile .showAtHomeImg{
+    display: none;
+}
+
+.mobile .modelViewerShadow{
+    bottom: 71px;
 }
 
 .mobile .arDetailsBubble{

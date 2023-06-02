@@ -99,6 +99,7 @@
     bottom: -34px;
 }
 
+/* Reeponsive Tablet Settings */
 
 .tablet .whoSugarImg1{
     bottom: 0px;
@@ -124,7 +125,6 @@
     bottom: -34px;
 }
 
-
 .tablet .WhoSugarContainer{
     height: 90vh;
 }
@@ -136,9 +136,7 @@
     top: 0px;
 }
 
-
-
-
+/* Reeponsive Mobile Settings */
 
 .mobile .whoSugarImg1{
     bottom: 0px;

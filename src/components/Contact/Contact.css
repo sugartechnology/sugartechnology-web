@@ -108,7 +108,7 @@
     font-size: 19px;
     line-height: 220%;
     text-transform: capitalize;
-    color: #797979;
+    color: #797979 !important;
     gap: 10px;
     position: relative;
     top: 20px;
@@ -281,6 +281,8 @@
     color: #727272;
 }
 
+/* Reeponsive Tablet Settings */
+
 .tablet .rightContact{
     display: none;
 }
@@ -291,6 +293,7 @@
     justify-content: space-around;
 }
 
+/* Reeponsive Mobile Settings */
 
 .mobile.contactContainer{
     height: 340px;

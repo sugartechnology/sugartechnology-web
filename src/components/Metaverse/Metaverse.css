@@ -1,5 +1,5 @@
 .MetaverseContainer{
-    height: 730px;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
@@ -8,34 +8,22 @@
     position: relative;
 }
 .metaverseImage{
-    width: 550px;
+    width: 100%;
 }
 .metaverseImageDiv{
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
+    z-index: 1;
+    width: 41%;
+    height: 100%;
 }
 
-.tablet .MetaverseContainer{
-    height: 900px;
-}
-
-.tablet .metaverseImage{
-    width: 350px;
-}
-
-.tablet .metaverseImageDiv{
-    right: auto;
-}
+/* Reeponsive Mobile Settings */
 
 .mobile .MetaverseContainer{
-    height: 900px;
-}
-
-.mobile .metaverseImage{
-    width: 350px;
+    flex-direction: column;
 }
 
 .mobile .metaverseImageDiv{
-    right: auto;
+    width: auto;
+    height: auto;
 }
+

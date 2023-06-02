@@ -73,9 +73,13 @@
     color: #000000;
 }
 
+/* Reeponsive Tablet Settings */
+
 .tablet .sugarTeamLeaders{
     gap: 7%;
 }
+
+/* Reeponsive Mobile Settings */
 
 .mobile .sugarTeamLeaders{
     flex-direction: column;
@@ -84,7 +88,7 @@
 }
 
 .mobile .SugarTeamContainer{
-    height: 140vh;
+    height: 160vh;
     justify-content: flex-start;
 }
 

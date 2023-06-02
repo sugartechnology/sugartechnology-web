@@ -222,5 +222,9 @@
     "cvAlert": "Puoi aggiungere un file fino a 20 MB.",
     "reportsHeader": "Report e Gestione Clienti",
     "reportsFirstSpan": "Tracciamento dei clienti, monitoraggio delle prestazioni dei dipendenti",
-    "reportsSecondSpan": "I rivenditori che utilizzano Rapid Render possono tenere traccia dei propri clienti tramite il progetto in cui lavorano, controllando i progetti in corso e le offerte fornite per valutare le prestazioni dei dipendenti attraverso il programma."
+    "reportsSecondSpan": "I rivenditori che utilizzano Rapid Render possono tenere traccia dei propri clienti tramite il progetto in cui lavorano, controllando i progetti in corso e le offerte fornite per valutare le prestazioni dei dipendenti attraverso il programma.",
+
+    "contactCvHeader": "Candidatura per il futuro",
+    "contactCvSpan": "Se non hai trovato la posizione dei tuoi sogni tra le nostre offerte, lasciaci il tuo curriculum / informazioni di contatto per il futuro!",
+    "submit": "Invia"
 }

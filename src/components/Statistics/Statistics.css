@@ -54,6 +54,9 @@
     margin-top: 30px;
     position: relative;
 }
+
+/* Reeponsive Mobile Settings */
+
 @media screen and (max-width: 500px){
     .statisticsContainer{
         height: 150px;

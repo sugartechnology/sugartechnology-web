@@ -222,5 +222,9 @@
     "cvAlert": "Vous pouvez ajouter un fichier jusqu'à 20 Mo.",
     "reportsHeader": "Rapports et gestion des clients",
     "reportsFirstSpan": "Suivi des clients, suivi des performances des employés",
-    "reportsSecondSpan": "Les revendeurs utilisant Rapid Render peuvent enregistrer leurs clients à partir des projets sur lesquels ils travaillent, examiner les projets en cours et les devis fournis pour évaluer les performances des employés."
+    "reportsSecondSpan": "Les revendeurs utilisant Rapid Render peuvent enregistrer leurs clients à partir des projets sur lesquels ils travaillent, examiner les projets en cours et les devis fournis pour évaluer les performances des employés.",
+
+    "contactCvHeader": "Postuler pour l'avenir",
+    "contactCvSpan": "Si vous ne trouvez pas le poste de vos rêves parmi nos offres, veuillez nous laisser votre CV/informations de contact pour l'avenir !",
+    "submit": "Soumettre"
 }

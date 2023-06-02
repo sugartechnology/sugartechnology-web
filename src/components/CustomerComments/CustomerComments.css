@@ -218,6 +218,8 @@
     bottom: 0px;
 }
 
+/* Reeponsive Tablet Settings */
+
 .tablet .commentsLeftButton{
     left: 10px;
 }
@@ -233,6 +235,8 @@
 .tablet .thirdCommentSpan{
     font-size: 18px;
 }
+
+/* Reeponsive Mobile Settings */
 
 .mobile .firstCommentSpan{
     font-size: 20px;

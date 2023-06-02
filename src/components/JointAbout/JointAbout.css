@@ -10,10 +10,9 @@
     align-items: center;
     position: relative;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .jointAboutHeader{
-    height: 100px;
     width: 100%;
     font-style: normal;
     font-weight: 700;
@@ -24,7 +23,6 @@
 }
 .jointAboutSpan{
     width: 50%;
-    height: 150px;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -40,47 +38,64 @@
 }
 .jointShadow{
     position: absolute;
-    bottom: -43px;
-    width: 700px;
+    bottom: -20px;
+    width: 100%;
     z-index: -1;
     opacity: 0.5;
 }
 .jointAboutImage{
-    width: 700px;
+    width: 47%;
 }
 
+/* Reeponsive Mobile Settings */
 
 .mobile .jointAboutContainer{
     height: 70vh;
 }
 .mobile .jointAboutHeader{
-    width: 341px;
     font-size: 29px;
+    line-height: 45px;
 }
 .mobile .jointAboutSpan{
     width: 80%;
     font-size: 13px;
-    position: relative;
-    bottom: 20px;
-    height: 120px;
     line-height: 24px;
 }
 .mobile .jointAboutImage{
-    position: relative;
-    top: auto;
-    bottom: 30px;
     width: 80%;
 }
-.mobile .jointShadow{
-    bottom: 7px;
-    width: 400px;
+
+.mobile .jointAboutElements{
+    justify-content: space-evenly;
 }
+
 .mobile .jointAboutBubble{
     display: none;
 }
 
+/* Reeponsive Tablet Settings */
 
 .tablet .jointAboutBubble{
     display: none;
+}
+
+.tablet .jointAboutContainer{
+    height: 70vh;
+}
+.tablet .jointAboutHeader{
+    font-size: 29px;
+    line-height: 45px;
+}
+.tablet .jointAboutSpan{
+    width: 80%;
+    font-size: 13px;
+    line-height: 24px;
+}
+.tablet .jointAboutImage{
+    width: 80%;
+}
+
+.tablet .jointAboutElements{
+    justify-content: space-evenly;
 }
 

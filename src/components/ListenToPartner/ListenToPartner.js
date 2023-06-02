@@ -12,17 +12,12 @@ export const ListenToPartner = props =>{
         var partner3 = document.getElementById("partner3");
         var btn3 = document.getElementById("partner3Button");
         
-        if(partner1.style.display === "none"){
-            partner1.style.display = "flex";
-            btn1.style.background = "#ED401A";
-            partner2.style.display = "none";
-            btn2.style.background = "#CCCCCC";
-            partner3.style.display = "none";
-            btn3.style.background = "#CCCCCC";
-        }
-        else{
-            partner1.style.display = "none"
-        }
+        partner1.style.display = "flex";
+        btn1.style.background = "#ED401A";
+        partner2.style.display = "none";
+        btn2.style.background = "#CCCCCC";
+        partner3.style.display = "none";
+        btn3.style.background = "#CCCCCC";
     }
     function showPartner2(){
         var partner1 = document.getElementById("partner1");
@@ -32,17 +27,13 @@ export const ListenToPartner = props =>{
         var partner3 = document.getElementById("partner3");
         var btn3 = document.getElementById("partner3Button");
         
-        if(partner2.style.display === "none"){
-            partner2.style.display = "flex";
-            btn2.style.background = "#ED401A";
-            partner1.style.display = "none";
-            btn1.style.background = "#CCCCCC";
-            partner3.style.display = "none";
-            btn3.style.background = "#CCCCCC";
-        }
-        else{
-            partner2.style.display = "none"
-        }
+        partner2.style.display = "flex";
+        btn2.style.background = "#ED401A";
+        partner1.style.display = "none";
+        btn1.style.background = "#CCCCCC";
+        partner3.style.display = "none";
+        btn3.style.background = "#CCCCCC";
+
     }
     function showPartner3(){
         var partner1 = document.getElementById("partner1");
@@ -51,18 +42,13 @@ export const ListenToPartner = props =>{
         var btn2 = document.getElementById("partner2Button");
         var partner3 = document.getElementById("partner3");
         var btn3 = document.getElementById("partner3Button");
-        
-        if(partner3.style.display === "none"){
-            partner3.style.display = "flex";
-            btn3.style.background = "#ED401A";
-            partner2.style.display = "none";
-            btn2.style.background = "#CCCCCC";
-            partner1.style.display = "none";
-            btn1.style.background = "#CCCCCC";
-        }
-        else{
-            partner3.style.display = "none"
-        }
+
+        partner3.style.display = "flex";
+        btn3.style.background = "#ED401A";
+        partner2.style.display = "none";
+        btn2.style.background = "#CCCCCC";
+        partner1.style.display = "none";
+        btn1.style.background = "#CCCCCC";
     }
 
     return(

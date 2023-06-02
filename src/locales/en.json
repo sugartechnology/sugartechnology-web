@@ -222,7 +222,11 @@
     "addCv": "Add CV",
     "cvAlert": "You can add a file up to 20 MB.",
 
-"reportsHeader": "Reports & Customer Management",
-"reportsFirstSpan": "Tracking customers, monitoring employee performance",
-"reportsSecondSpan": "Dealers using Rapid Render can keep a record of their customers based on the projects they work on and analyze employee performance through the program by reviewing the projects worked on and the proposals submitted."
+    "reportsHeader": "Reports & Customer Management",
+    "reportsFirstSpan": "Tracking customers, monitoring employee performance",
+    "reportsSecondSpan": "Dealers using Rapid Render can keep a record of their customers based on the projects they work on and analyze employee performance through the program by reviewing the projects worked on and the proposals submitted.",
+
+    "contactCvHeader": "Apply for the future!",
+    "contactCvSpan": "If you haven’t found your dream position in our offers, leave us your CV/contact for the future!",
+    "submit": "Submit"
 }

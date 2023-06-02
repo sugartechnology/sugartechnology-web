@@ -84,6 +84,8 @@
     left: 60px !important;
   }
 
+  /* Reeponsive Tablet Settings */
+
   .tablet .swiper-wrapper{
     width: 100% !important;
     left: 15%;
@@ -100,6 +102,8 @@
   .tablet .swiper-slide img{
     width: 120px !important;
   }
+
+  /* Reeponsive Mobile Settings */
 
   .mobile .swiper-slide img{
     width: 65px !important;

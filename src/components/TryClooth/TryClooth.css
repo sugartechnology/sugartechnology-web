@@ -1,6 +1,6 @@
 .tryCloothContainer{
     display: flex;
-    height: 80vh;
+    height: 100vh;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
@@ -31,6 +31,8 @@
     flex-direction: column;
     gap: 10px;
 }
+
+/* Reeponsive Tablet Settings */
 
 .tablet .tryCloothContainer{
     height: 120vh;
@@ -72,7 +74,7 @@
     display: none;
 }
 
-
+/* Reeponsive Mobile Settings */
 
 .mobile .tryCloothContainer{
     height: 120vh;

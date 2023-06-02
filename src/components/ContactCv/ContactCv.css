@@ -1,10 +1,10 @@
 .contactCvContainer{
-    height: 130vh;
+    height: 115vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin-top: 90px;
+    border-bottom: 1px solid lightgray;
 }
 .contactCvInputs{
     width: 770px;
@@ -109,6 +109,7 @@ input[type=file]::file-selector-button {
     width: 85%;
 }
 .contactCvSpan{
+    width: 90%;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -139,6 +140,9 @@ input[type=file]::file-selector-button {
     align-items: center;
     color: #717171;
 }
+
+
+/* Reeponsive Mobile Settings */
 
 .mobile .contactCvContainer{
     height: 145vh;

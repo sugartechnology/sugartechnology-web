@@ -4,50 +4,46 @@
     justify-content: space-evenly;
     background: #EBEBEB;
     margin-top: 60px;
-    position: relative;
     align-items: center;
+    position: relative;
 }
 
 .shoesImageDiv{
-    position: absolute;
-    right: 0px;
+    z-index: 1;
     width: 50%;
     height: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
 }
 
-.shoesImage{
-    position: relative;
-    width: 92%;
-}
+/* Reeponsive Tablet Settings */
 
+.tablet .shoesContainer{
+    flex-direction: column;
+}
 
 .tablet .shoesImageDiv{
-    position: absolute;
-    right: auto;
-    width: 40%;
-    bottom: 0px;
-    height: 50%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
 }
 
 .tablet .shoesImage{
-    position: absolute;
-    bottom: 0px;
+    width: 45%;
+}
+
+/* Reeponsive Mobile Settings */
+
+.mobile .shoesContainer{
+    flex-direction: column;
 }
 
 .mobile .shoesImageDiv{
-    position: absolute;
-    right: auto;
-    width: 100%;
-    bottom: 0px;
-    height: 50%;
+    display: flex;
     justify-content: center;
+    width: 100%;
+    height: auto;
 }
 
 .mobile .shoesImage{
-    position: absolute;
-    bottom: 0px;
-    width: 90%;
+    width: 75%;
 }

@@ -31,6 +31,9 @@
     cursor: pointer;
     opacity: 0.5;
 }
+
+/* Reeponsive Tablet Settings */
+
 .tablet .footerElements{
     flex-direction: column;
     align-self: center;
@@ -43,6 +46,8 @@
 .tablet .footerMediaButtons{
     justify-content: center;
 }
+
+/* Reeponsive Mobile Settings */
 
 .mobile .footerElements{
     flex-direction: column;

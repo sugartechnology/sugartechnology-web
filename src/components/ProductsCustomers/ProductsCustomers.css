@@ -10,6 +10,9 @@
     transform: scaleY(-1);
     width: 200px;
 }
+
+/* Reeponsive Mobile Settings */
+
 .mobile .productsCustomerContainer{
     height: 43px;
     gap: 20px;

@@ -285,14 +285,6 @@ export const Header = props => {
                     </button>
                 </a>
             </div>
-            
-            
-            <div className='askYourQuestionRobot'>
-                <div className='robotSpans'>
-                    <a className='robotSpan'>{t("askYourQuestions")}</a>
-                </div>
-                <img className='robot' alt='' src={'./assets/img/askYourQuestionsRobot.svg'}></img>
-            </div>
         </div>  
     );
 }

@@ -52,11 +52,13 @@
     bottom: 1px;
 }
 
+/* Reeponsive Tablet Settings */
 
 .tablet .WhatsNewContainer{
     height: 1000px;
 }
 
+/* Reeponsive Mobile Settings */
 
 .mobile .whatsNewElements{
     bottom: 50px;

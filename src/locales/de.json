@@ -222,5 +222,9 @@
     "cvAlert": "Sie können eine Datei von bis zu 20 MB hinzufügen.",
     "reportsHeader": "Berichte & Kundenmanagement",
     "reportsFirstSpan": "Kundenverfolgung, Überwachung der Mitarbeiterleistung",
-    "reportsSecondSpan": "Händler, die Rapid Render verwenden, können ihre Kunden anhand der Projekte, an denen sie arbeiten, aufzeichnen und die Mitarbeiterleistung über das Programm überprüfen, indem sie die bearbeiteten Projekte und die erstellten Angebote überprüfen."
+    "reportsSecondSpan": "Händler, die Rapid Render verwenden, können ihre Kunden anhand der Projekte, an denen sie arbeiten, aufzeichnen und die Mitarbeiterleistung über das Programm überprüfen, indem sie die bearbeiteten Projekte und die erstellten Angebote überprüfen.",
+    
+    "contactCvHeader": "Bewerbung für die Zukunft",
+    "contactCvSpan": "Wenn Sie die gewünschte Position nicht in unseren Angeboten finden, hinterlassen Sie uns bitte Ihren Lebenslauf/Ihre Kontaktdaten für die Zukunft!",
+    "submit": "Einreichen"
 }

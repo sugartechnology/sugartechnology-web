@@ -46,10 +46,14 @@
     position: absolute;
 }
 
+/* Reeponsive Tablet Settings */
+
 .tablet .sugarModelViewer{
     top: 200px;
     left: 59px;
 }
+
+/* Reeponsive Mobile Settings */
 
 .mobile .sugarModelViewer{
     top: 200px;

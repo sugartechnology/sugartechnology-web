@@ -64,6 +64,8 @@
     color: #ED401A;
 }
 
+/* Reeponsive Tablet Settings */
+
 .tablet .blogsListContainer{
     height: 130vh;
     justify-content: normal;
@@ -78,6 +80,7 @@
     text-align: center;
 }
 
+/* Reeponsive Mobile Settings */
 
 .mobile .blogsListContainer{
     height: 130vh;

@@ -45,7 +45,7 @@
     "reportsList4": "Kumaş ve renk tercih adetlerini",
     "reportsList5": "QR kod okutma adetlerini",
     "productStatisticsHeader": "Satışlarda ve Sayfa Kalmalarında Artış.",
-    "productStatisticsSpan1": "3D ve AR teknolojisi ile Sepete eklenme oranlarını 3 kata kadar attırın. Made.com UseCase",
+    "productStatisticsSpan1": "3D ve AR teknolojisi ile Sepete eklenme oranlarını 3 kata kadar attırın.",
     "productStatisticsSpan2": "Ziyaretçilerinizin sepet terketme oranlarını düşürüp, sayfada kalma sürelerini arttırın. Ürün iadelerini azaltın.",
     "sugarBrandsHeader": "En İyi Markalar Sugar'ın Teknolojisini Kullanıyor",
     "metaverseProject": "Metaverse Projeleri",
@@ -221,8 +221,12 @@
     "jobTitle":  "Meslek",
     "phone": "Telefon",
     "addCv": "CV Ekle",
-    "cvAlert": "You can add a file up to 20 MB.",
+    "cvAlert": "20MB'a kadar dosya ekleyebilirsin.",
     "reportsHeader": "Raporlar & Müşteri Yönetimi",
     "reportsFirstSpan": "Müşterileri takip etme, çalışanların performansını izleme",
-    "reportsSecondSpan": "Rapid Render kullanan bayiiler; çalıştığı proje üzerinden müşterilerini kayıt altında tutabilir, çalışılan proje ve verilen teklifler kontrol edilerek çalışan performansı program üzerinden incelenebilir."
+    "reportsSecondSpan": "Rapid Render kullanan bayiiler; çalıştığı proje üzerinden müşterilerini kayıt altında tutabilir, çalışılan proje ve verilen teklifler kontrol edilerek çalışan performansı program üzerinden incelenebilir.",
+
+    "contactCvHeader": "Gelecek için başvur",
+    "contactCvSpan": "Hayalinizdeki pozisyonu tekliflerimizde bulamadıysanız, gelecek için bize özgeçmişinizi/iletişim bilgilerinizi bırakın!",
+    "submit": "Gönder"
 }

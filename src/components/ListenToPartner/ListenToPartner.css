@@ -79,7 +79,7 @@
     font-style: normal;
     font-weight: 250;
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
     text-align: justify;
     text-transform: capitalize;
     color: #000000;
@@ -144,6 +144,7 @@
     }
 }
 
+/* Reeponsive Tablet Settings */
 
 .tablet .listenToPartnerContainer{
     height: 830px;
@@ -185,6 +186,7 @@
     bottom: 30px;
 }
 
+/* Reeponsive Mobile Settings */
 
 .mobile .listenToPartnerContainer{
     height: 130vh;
@@ -211,7 +213,7 @@
     width: 90%;
     height: 375px !important;
     position: absolute;
-    bottom: 30px;
+    bottom: 15px;
     display: flex;
     justify-content: center;
 }
@@ -223,7 +225,7 @@
 .mobile .spanBottomLogo{
     width: 37px;
     right: 0px !important;
-    bottom: -150px !important;
+    bottom: -200px !important;
     top: auto !important;
 }
 .mobile .partnersPageButtons{

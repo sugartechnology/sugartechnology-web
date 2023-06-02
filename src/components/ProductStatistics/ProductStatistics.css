@@ -74,6 +74,8 @@
     }
 }
 
+/* Reeponsive Mobile Settings */
+
 .mobile .productStatisticsContainer{
     flex-direction: column;
     justify-content: normal;

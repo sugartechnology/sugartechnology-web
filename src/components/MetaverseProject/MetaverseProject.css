@@ -39,10 +39,12 @@
     color: #000000;
 }
 .metaverseProjectElement{
-    width: 60%;
+    width: 40%;
     position: absolute;
     bottom: 50px;
 }
+
+/* Reeponsive Tablet Settings */
 
 .tablet .MetaverseProjectContainer{
     height: 80vh;
@@ -59,6 +61,8 @@
 .tablet .metaverseProjectSpan{
     height: 100px;
 }
+
+/* Reeponsive Mobile Settings */
 
 .mobile .MetaverseProjectContainer{
     height: 80vh;

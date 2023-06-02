@@ -130,8 +130,8 @@ export const ContactCv = props =>{
 
             <div className='contactCvInputs' onSubmit={(e)=>{return false;}}>
                 <div className='contactInputHeaders'>
-                    <a className='contactCvHeader'>{t("")}Apply for the future!</a>
-                    <a className='contactCvSpan'>{t("")}If you haven’t found your dream position in our offers, leave us your CV/contact for the future!</a>
+                    <a className='contactCvHeader'>{t("contactCvHeader")}</a>
+                    <a className='contactCvSpan'>{t("contactCvSpan")}</a>
                 </div>
                 <div className='nameEmailInputs'>
                         <div className='nameInputs'>
@@ -179,9 +179,9 @@ export const ContactCv = props =>{
                     </div>
                     <div className='contactOption'>
                         <div>
-                            <img id='secondOption' style={{width: "20px"}} onClick={toggleSecondOption} value={option} onChange={(e)=>setOption(e.target.value)}></img>
+                            <img id='secondOption' onClick={toggleSecondOption} value={option} onChange={(e)=>setOption(e.target.value)}></img>
                         </div>
-                        <a>{t("")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. </a>
+                        <a>{t("")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat.</a>
                     </div>
                 </div>
                 <div className='submitButton' onClick={handleSubmit}>

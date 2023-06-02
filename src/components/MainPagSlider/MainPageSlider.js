@@ -48,7 +48,6 @@ export const MainPageSlider = (props) => {
         indexRef.current = index;
         clearTimeout(timeOutId);
         setTimeOutId(setTimeout(() => {
-            console.log("performans check 1");
             setIndex((indexRef.current + 1) % props.children.length);
             setPrevIndex(indexRef.current);
         }, 5000));
