@@ -5,14 +5,14 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    justify-content: center;
 }
 .squares{
     display: flex;
-    gap: 30px;
     position: relative;
     top: 90px;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .square{
     display: flex;
@@ -41,7 +41,7 @@
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 40px;
+    top: 0px;
     left: 0px;
 }
 .squareButton a{
@@ -113,13 +113,14 @@
 /* Reeponsive Mobile Settings */
 
 .mobile .blogsMainContainer{
-    height: 200vh;
+    height: 210vh;
 }
 
 .mobile .squares{
     width: 90%;
     flex-direction: column;
     margin-top: 4vh;
+    top: auto;
 }
 .mobile .square{
     width: auto !important;
@@ -144,9 +145,6 @@
     gap: 80px !important;
 }
 
-@media screen and (max-width: 500px) {
-    .blogsMainContainer{
-        height: 188vh !important;
-    }
-
+.mobile .squareButton{
+    top: 50px;
 }

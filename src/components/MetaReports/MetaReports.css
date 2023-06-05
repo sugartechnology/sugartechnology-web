@@ -105,3 +105,7 @@
     font-size: 16px;
     text-align: center;
 }
+
+.mobile .metaReportsList {
+    font-size: 15px;
+}

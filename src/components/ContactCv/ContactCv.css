@@ -131,7 +131,7 @@ input[type=file]::file-selector-button {
     cursor: pointer;
     background: #CCCCCC;
 }
-.contactOption a{
+.contactOption label{
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -141,16 +141,20 @@ input[type=file]::file-selector-button {
     color: #717171;
 }
 
+input[type="radio"]:checked{
+    background-color: #ED401A;
+}
+
 
 /* Reeponsive Mobile Settings */
 
 .mobile .contactCvContainer{
-    height: 145vh;
+    height: 160vh;
 }
 
 .mobile .contactCvInputs{
     width: 370px;
-    height: 1210px;
+    height: 150vh;
     gap: 30px;
 }
 
@@ -177,6 +181,7 @@ input[type=file]::file-selector-button {
     width: auto;
 }
 
-.mobile .contactOption a{
+.mobile .contactOption label{
     font-size: 14px;
+    line-height: 19px;
 }

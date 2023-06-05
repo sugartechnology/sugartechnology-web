@@ -5,6 +5,7 @@
     align-items: center;
     background: #E9E9E9;
     position: relative;
+    justify-content: space-evenly;
 }
 .cloothPaternSpans{
     display: flex;
@@ -94,12 +95,13 @@
 }
 
 .mobile .cloothPaternContainer{
-    height: 110vh;
+    height: 120vh;
 }
 
 .mobile .cloothPaternSpans{
     width: 100%;
     align-items: center;
+    top: 0px;
 }
 
 .mobile .cloothPaternHeader{

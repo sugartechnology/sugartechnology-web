@@ -95,6 +95,10 @@
 
 /* Reeponsive Mobile Settings */
 
+.mobile .shoesQrContainer{
+    height: 70vh;
+}
+
 .mobile .shoesQrElements{
     position: absolute;
     top: 0px;

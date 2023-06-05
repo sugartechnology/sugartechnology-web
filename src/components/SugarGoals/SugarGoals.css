@@ -63,6 +63,7 @@
     z-index: -1;
 }
 
+
 /* Reeponsive Tablet Settings */
 
 @media screen and (max-width: 1200px){
@@ -124,7 +125,7 @@
     }
     .sugarGoalsHeader{
         width: 120px;
-        font-size: 22px;
+        font-size: 20px;
     }
     .sugarGoalsSpan{
         width: 148px;
@@ -156,6 +157,10 @@
     }
     .goalsShadow{
         width: 400px;
+    }
+    .sugarGoalHeaders{
+        position: absolute;
+        top: 10px;
     }
 }
 

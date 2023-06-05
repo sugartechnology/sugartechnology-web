@@ -11,3 +11,9 @@
     z-index: -1;
     opacity: 0.9;
 }
+
+/* Reeponsive Mobile Settings */
+
+.mobile .tryShoesContainer{
+    height: 75vh;
+}

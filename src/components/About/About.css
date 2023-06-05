@@ -96,6 +96,7 @@
 
 .mobile .aboutContainer{
     height: 90vh;
+    flex-direction: column;
 }
 
 .mobile .aboutSpans{

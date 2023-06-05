@@ -4,7 +4,7 @@ import { useTranslation} from "react-i18next";
 import ReCAPTCHA from 'react-google-recaptcha';
 
 export const ContactCv = props =>{
-    
+
     const {t} = useTranslation();
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
@@ -12,64 +12,69 @@ export const ContactCv = props =>{
     const [message, setMessage] = useState("");
     const [phone, setPhone] = useState("");
     const [option, setOption] = useState("");
-    const [job, setJob] = useState("");
     const [isHuman, setIsHuman] = useState(false);
+    const [job, setJob] = useState("");
 
-    function handleFileSelect(event) {
+    const handleFileSelect = (event) => {
         const file = event.target.files[0];
         const fileSize = file.size;
         const maxSize = 20 * 1024 * 1024;
 
         if (fileSize > maxSize) {
-          alert('Dosya boyutu 20 MB\'tan büyük olamaz.');
-          event.target.value = null;
+        alert('Dosya boyutu 20 MB\'tan büyük olamaz.');
+        event.target.value = null;
+        } else {
+        setCv(file);
         }
-      }
+    };
+
+    const toggleFirstOption = () => {
+        setOption('firstOption');
+    };
+
+    const toggleSecondOption = () => {
+        setOption('secondOption');
+    };
 
     const handleRecaptchaChange = (value) => {
         setIsHuman(true);
-    }
+    };
+
     function cvDoubleMethod(event){
         handleFileSelect(event);
         setCv(event.target.value);
     }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         if (isHuman) {
-            submitForm();
+        submitForm();
         } else {
-            alert("Please verify that you are a human!");
+        alert("Please verify that you are a human!");
         }
-    }
-    function submitForm() {
+    };
+
+    const submitForm = () => {
         const form = {
-          name: name,
-          email: mail,
-          message: message,
-          cv: cv,
-          phone: phone,
-          option: option,
-          job: job,
-        }
-        sendFormData(form);
-    }
-    function sendFormData(form) {
-        var thizz = this;
+            name: name,
+            email: mail,
+            message: message,
+            cv: cv,
+            phone: phone,
+            option: option,
+            job: job,
+            };
+            sendFormData(form);
+    };
+
+    const sendFormData = (form) => {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(form));
         inputDonePopup();
-        // if (this.readyState === 4) {
-        //     if ((this.status == 200) && (this.status < 300)) {
-        //         inputDonePopup();
-        //     }
-        //     else{
-        //         inputErrorPopup();
-        //     }
-        // }
-        
-    }
+    };
+
     function inputDonePopup() {
         let inputPopup = document.getElementById('inputDonePopup');
         let overlay = document.getElementById("overlay");
@@ -96,18 +101,7 @@ export const ContactCv = props =>{
             overlay.style.height = "0%";
         });
     }
-    function toggleFirstOption(){
-        let firstOption = document.querySelector("#firstOption");
-        let secondOption = document.querySelector("#secondOption");
-        firstOption.style.background = "#ED401A";
-        secondOption.style.background = "#CCCCCC";
-    }
-    function toggleSecondOption(){
-        let firstOption = document.querySelector("#firstOption");
-        let secondOption = document.querySelector("#secondOption");
-        secondOption.style.background = "#ED401A";
-        firstOption.style.background = "#CCCCCC";
-    }
+
     return(
         <div className='contactCvContainer'>
             <div className='mainPageTopLeftFigure rotate'></div>
@@ -171,17 +165,13 @@ export const ContactCv = props =>{
                     sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
                     onChange={handleRecaptchaChange}/>
                 <div className='contactOptions'>
+                <div className='contactOption'>
+                    <input id='firstOption' type='radio' onClick={toggleFirstOption} value='firstOption' checked={option === 'firstOption'} onChange={(e) => setOption(e.target.value)}/>
+                    <label htmlFor='firstOption'>I confirm that I have read the information clause.</label>
+                </div>
                     <div className='contactOption'>
-                        <div>
-                            <img id='firstOption' onClick={toggleFirstOption} value={option} onChange={(e)=>setOption(e.target.value)}></img>
-                        </div>
-                        <a>{t("")}I confirm that I have read the information clause.</a>
-                    </div>
-                    <div className='contactOption'>
-                        <div>
-                            <img id='secondOption' onClick={toggleSecondOption} value={option} onChange={(e)=>setOption(e.target.value)}></img>
-                        </div>
-                        <a>{t("")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat.</a>
+                        <input id='secondOption' type='radio' onClick={toggleSecondOption} value='secondOption' checked={option === 'secondOption'} onChange={(e) => setOption(e.target.value)} />
+                        <label htmlFor='secondOption'>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat.</label>
                     </div>
                 </div>
                 <div className='submitButton' onClick={handleSubmit}>

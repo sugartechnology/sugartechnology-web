@@ -1,5 +1,5 @@
 .blogParagraphsContainer{
-    height: 118vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,15 +107,15 @@
 /* Reeponsive Tablet Settings */
 
 .tablet .blogParagraphsContainer{
-    height: 215vh;
+    height: 160vh;
 }
 
 .tablet .blogParagraphs2Container{
-    height: 445vh;
+    height: 305vh;
 }
 
 .tablet .blogParagraphs3Container{
-    height: 220vh;
+    height: 310vh;
 }
 
 .tablet .paragraphHeader{
@@ -134,14 +134,15 @@
 
 .tablet .author{
     width: 290px;
+    left: auto;
 }
 
 .tablet .authorHeader{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .tablet .authorSpan{
-    font-size: 10px;
+    font-size: 9px;
     line-height: 14px;
 }
 
@@ -154,10 +155,14 @@
     line-height: 25px;
 }
 
+.tablet #authorImage{
+    width: 100% !important;
+}
+
 /* Reeponsive Mobile Settings */
 
 .mobile .blogParagraphsContainer{
-    height: 215vh;
+    height: 160vh;
 }
 
 .mobile .blogParagraphs2Container{
@@ -184,15 +189,15 @@
 
 .mobile .author{
     width: 290px;
-    left: 50px;
+    left: auto;
 }
 
 .mobile .authorHeader{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .mobile .authorSpan{
-    font-size: 10px;
+    font-size: 9px;
     line-height: 14px;
 }
 
@@ -205,18 +210,7 @@
     line-height: 25px;
 }
 
-
-@media screen and (max-width: 499px) {
-    .blogParagraphsContainer{
-        height: 137vh !important;
-    }
-    .blogParagraphs2Container{
-        height: 255vh !important;
-    }
-    .blogParagraphs3Container{
-        height: 275vh !important;
-    }
-    .author{
-        left: auto;
-    }
+.mobile #authorImage{
+    width: 100%;
 }
+

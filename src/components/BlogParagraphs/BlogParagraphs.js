@@ -14,7 +14,7 @@ export const BlogParagraphs = props =>{
             </div>
             
             <div className='author'>
-                <div className='authorImage'>
+                <div className='authorImage' id='authorImage'>
                     <img style={{width: "100%"}} alt='' src={'./assets/img/erdemPp.svg'}></img>
                 </div>
                 <div className='authorSpans'>

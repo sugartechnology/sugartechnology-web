@@ -50,7 +50,7 @@
     .productStatisticsContainer{
         flex-direction: column;
         justify-content: normal;
-        height: 533px;
+        height: 60vh;
         align-items: center;
     }
     .productStatisticsSpanElements{
@@ -79,7 +79,7 @@
 .mobile .productStatisticsContainer{
     flex-direction: column;
     justify-content: normal;
-    height: 65vh;
+    height: 75vh;
     align-items: center;
 }
 .mobile .productStatisticsSpanElements{

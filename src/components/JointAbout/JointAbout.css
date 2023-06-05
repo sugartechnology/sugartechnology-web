@@ -1,5 +1,5 @@
 .jointAboutContainer{
-    height: 900px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -10,7 +10,7 @@
     align-items: center;
     position: relative;
     height: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .jointAboutHeader{
     width: 100%;
@@ -38,7 +38,7 @@
 }
 .jointShadow{
     position: absolute;
-    bottom: -20px;
+    bottom: 40px;
     width: 100%;
     z-index: -1;
     opacity: 0.5;

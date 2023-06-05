@@ -93,30 +93,29 @@
     display: none;
 }
 
+.mobile .crew{
+    margin-top: 30px;
+}
+.mobile .sugarSquadsDeskop{
+    gap: 0px;
+}
+
+.mobile .SugarSquadMember img{
+    width: 20%;
+    background: none;
+}
+.mobile .SugarSquadMember{
+    gap: 5px;
+}
+.memberInformation{
+    width: auto;
+}
+
 @media screen and (max-width: 970px) {
     .sugarSquadsMobile{
         display: flex;
     }
     .sugarSquadsDeskop{
         display: none;
-    }
-}
-
-@media screen and (max-width: 530px) {
-    .crew{
-        margin-top: 30px;
-    }
-    .sugarSquadsDeskop{
-        gap: 0px;
-    }
-
-    .SugarSquadMember img{
-        width: 20%;
-    }
-    .SugarSquadMember{
-        gap: 5px;
-    }
-    .memberInformation{
-        width: auto;
     }
 }

@@ -164,11 +164,11 @@ textarea {
 /* Reeponsive Mobile Settings */
 
 .mobile .contactInputContainer{
-    height: 100vh;
+    height: 110vh;
 }
 
 .mobile .contactInputs{
-    width: 370px;
+    width: 345px;
     height: 810px;
 }
 .mobile .contactInputSpan{
