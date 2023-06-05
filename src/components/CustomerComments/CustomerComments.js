@@ -39,9 +39,17 @@ export const CustomerComments = (props) => {
       {
         trustedByMillionsOfCompany: 'commentHeader5',
         commentSpan: 'commentSpan5',
-        commentHeader: 'KYS',
+        commentHeader: 'Tasarımcı ve Şirket Yöneticisi',
         commentAuthor: 'Göksel Günaydın',
         customerPhoto: 'assets/img/kys2.JPEG',
+        companyLogo: 'assets/img/kys_design.svg'
+      },
+      {
+        trustedByMillionsOfCompany: 'commentHeader6',
+        commentSpan: 'commentSpan6',
+        commentHeader: 'Tepe Home',
+        commentAuthor: 'Ceren Evcimen',
+        customerPhoto: 'assets/img/cerenEvcimen.JPEG',
       },
     ];
 
@@ -70,6 +78,7 @@ export const CustomerComments = (props) => {
               <img className='customerPhoto' alt='' src={t(array[index].customerPhoto)}></img>
               <h1>{t(array[index].commentAuthor)}</h1>
               <a>{array[index].commentHeader}</a>
+              <img alt='' src={array[index].companyLogo}></img>
             </div>
           </div>
         </div>

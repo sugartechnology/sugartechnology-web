@@ -29,7 +29,6 @@ export const Clooth = props =>{
                 </div>
                 <div className='showAtHomeButtons'>
                     <a href='/'><button className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
-                    <a href='/'><button className='showAtHomeButton2'><a>{t("readMore")}</a></button></a>
                 </div>
             </div>
             <div className='cloothImageDiv'>

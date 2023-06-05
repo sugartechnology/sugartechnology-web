@@ -6,8 +6,8 @@ export const TryShoes = props =>{
     return(
         <div className='tryShoesContainer'>
             <div className='jointAboutElements'>
-                <a className='jointAboutHeader'>{t("tryShoesContainerHeader")}Lorem ipsum dolor sit amet consectetur.</a>
-                <a className='jointAboutSpan'>{t("tryShoesContainerSpan")}Lorem ipsum dolor sit amet consectetur. Neque viverra mi at mattis nascetur eu quis risus netus.</a>
+                <a className='jointAboutHeader'>{t("tryShoesContainerHeader")}Lorem ipsum dolor sit consectetur.</a>
+                <a className='jointAboutSpan'>{t("tryShoesContainerSpan")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc.</a>
                 <img className='jointAboutImage' alt='' src={'./assets/img/tryShoesImage.svg'}></img>
                 <img className='jointShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
             </div>

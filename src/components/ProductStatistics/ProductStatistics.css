@@ -79,7 +79,7 @@
 .mobile .productStatisticsContainer{
     flex-direction: column;
     justify-content: normal;
-    height: 75vh;
+    height: 69vh;
     align-items: center;
 }
 .mobile .productStatisticsSpanElements{
@@ -88,16 +88,23 @@
     align-items: center;
     width: 100%;
 }
+.mobile .productStatisticsHeaders{
+    margin-top: 20px;
+}
 .mobile .productStatisticsHeader{
     width: 100%;
     height: auto;
     font-size: 29px;
     text-align: center;
+    line-height: 35px;
 }
 .mobile .productStatisticsSpans{
+    line-height: 22px;
     font-size: 13px;
     gap: 10px;
     position: relative;
+    margin-top: 20px;
+    width: 88%;
 }
 .mobile .productStatisticsImage img{
     width: 300px;
@@ -110,4 +117,5 @@
 .mobile .productStatisticsSpanElementsDiv{
     height: 100% !important;
     justify-content: center !important;
+    width: 80% !important;
 }

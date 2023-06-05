@@ -27,7 +27,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
-    text-align: center;
+    text-align: justify;
     text-transform: capitalize;
     color: #000000;
 }
@@ -50,7 +50,7 @@
 /* Reeponsive Mobile Settings */
 
 .mobile .jointAboutContainer{
-    height: 70vh;
+    height: 75vh;
 }
 .mobile .jointAboutHeader{
     font-size: 29px;
@@ -58,11 +58,12 @@
 }
 .mobile .jointAboutSpan{
     width: 80%;
-    font-size: 13px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
 }
 .mobile .jointAboutImage{
-    width: 80%;
+    width: 78% !important;
+
 }
 
 .mobile .jointAboutElements{

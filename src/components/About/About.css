@@ -36,12 +36,12 @@
 }
 .aboutButton{
     border: white;
-    width: 150px;
     height: 44px;
     background: #ED401A;
     border-radius: 30px;
     cursor: pointer;
     position: relative;
+    padding: 0px 14px;
 }
 .aboutButton a{
     width: 83px;
@@ -95,7 +95,7 @@
 /* Reeponsive Mobile Settings */
 
 .mobile .aboutContainer{
-    height: 90vh;
+    height: 100vh;
     flex-direction: column;
 }
 
@@ -111,6 +111,7 @@
     width: 80%;
     text-align: center;
     line-height: 20px;
+    font-size: 14px;
 }
 
 .mobile .aboutLogos{
@@ -122,13 +123,4 @@
 
 .mobile .aboutSpansHeader{
     font-size: 30px;
-}
-
-@media screen and (max-width: 500px) {
-    .aboutContainer{
-        height: 75vh;
-    }
-    .aboutSpans{
-        height: 80% !important;
-    }
 }

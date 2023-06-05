@@ -9,7 +9,7 @@ export const MetaReports = props =>{
                 <img className='metaReportsImage' alt='' src={'./assets/img/metaReportsImage.svg'}></img>
            </div>
            <div className='metaReportsSpans'>
-                <a className='metaReportsHeader'>{t("dailyAndProductBasedExperienceReports")}</a>
+                <a className='productStatisticsHeader'>{t("dailyAndProductBasedExperienceReports")}</a>
                 <a className='metaReportsSpan'>{t("experienceReportsSpan")}</a>
                 <ul className='metaReportsList'>
                     <li>{t("reportsList1")}</li>
