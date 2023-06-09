@@ -24,7 +24,7 @@ export const MainSectoralSolution = (props) => {
                 url: "./assets/img/solutionImages/tablo.svg",
                 header: t("tableHeader"),
                 span: t("tableSpan"), 
-                link: "/productTablo",
+                link: "/productTable",
                 popupImage: "./assets/img/products/tablo.svg"
             },
             {

@@ -95,6 +95,7 @@
 }
 
 .solutionImage{
+    width: 100%;
     cursor: pointer;
 }
 
@@ -135,6 +136,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    width: 20%;
 }
 
 .solutionSpans{

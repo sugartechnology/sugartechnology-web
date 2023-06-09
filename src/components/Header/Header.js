@@ -262,9 +262,9 @@ export const Header = props => {
                         <div className='itemsPopup'>
                             <a href='/productAr' className='popupItem'>Mobilya</a>
                             <a href='/productCarpet' className='popupItem'>Halı</a>
-                            <a href='/productTablo' className='popupItem'>Tablo</a>
+                            <a href='/productTable' className='popupItem'>Tablo</a>
                             <a href='/productBathroom' className='popupItem'>Banyo Mobilya</a>
-                            <a href='/productBeyazEsya' className='popupItem'>Beyaz Eşya</a>
+                            <a href='/productWhiteGoods' className='popupItem'>Beyaz Eşya</a>
                             <a href='/productDekorasyon' className='popupItem'>Dekorasyon</a>
                             <a href='/productTekstil' className='popupItem'>Tekstil</a>
                         </div>
