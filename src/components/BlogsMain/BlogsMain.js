@@ -6,35 +6,34 @@ export const BlogsMain = props =>{
     return(
         <div className='blogsMainContainer'>
             <div className='squares'>
-                <div className='square' style={{height: "479px"}}>
-                    <a href='/sugarBlog1'><button className='squareButton'><a>{t("readMore")}</a></button></a>
-                    <a className='squareHeader' href='/sugarBlog1'>{t("squareHeader1")}</a>
-                    <div className='blogAuthor' id='blogAuthor1' style={{gap: "120px"}}>
-                        <a className='squareHistory'>Feb 1, 2023</a>
-                        <a className='squareHistory'>by Şükrü Erdem Şahin</a>
+                
+                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog1background.svg")'}}>
+                        <a href='/sugarBlog1'><button className='squareButton'><a>{t("readMore")}</a></button></a>
+                        <a className='squareHeader' href='/sugarBlog1'>{t("squareHeader1")}</a>
+                        <div className='blogAuthor' id='blogAuthor1' style={{gap: "120px"}}>
+                            <a className='squareHistory'>Feb 1, 2023</a>
+                            <a className='squareHistory'>by Şükrü Erdem Şahin</a>
+                        </div>
                     </div>
-                    <img className='squareImg' alt='' src={'./assets/img/blog1background.svg'}></img>
-                </div>
-                <div className='square' style={{height: "479px", width: "22%"}}>
-                    <a href='/sugarBlog2'><button className='squareButton'><a>{t("readMore")}</a></button></a>
-                    <a className='squareHeader' href='/sugarBlog2'>{t("squareHeader2")}</a>
-                    <div className='blogAuthor' id='blogAuthor2' style={{gap: "60px"}}>
-                        <a className='squareHistory'>Mar 23, 2023</a>
-                        <a className='squareHistory'>by Abdurrahman Türkeri</a>
+                
+               
+                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog2backgroundMobile.svg")'}}>
+                        <a href='/sugarBlog2'><button className='squareButton'><a>{t("readMore")}</a></button></a>
+                        <a className='squareHeader' href='/sugarBlog2'>{t("squareHeader2")}</a>
+                        <div className='blogAuthor' id='blogAuthor2' style={{gap: "60px"}}>
+                            <a className='squareHistory'>Mar 23, 2023</a>
+                            <a className='squareHistory'>by Abdurrahman Türkeri</a>
+                        </div>
                     </div>
-                    <img className='squareImg' id='squareImgDeskop' alt='' src={'./assets/img/blog2background.svg'}></img>
-                    <img className='squareImg' id='squareImgMobile' alt='' src={'./assets/img/blog2backgroundMobile.svg'}></img>
-                </div>
-                <div className='square' style={{height: "479px", width: "31%"}}>
-                    <a href='/sugarBlog3'><button className='squareButton'><a>{t("readMore")}</a></button></a>
-                    <a className='squareHeader' href='/sugarBlog3'>{t("squareHeader3")}</a>
-                    <div className='blogAuthor' id='blogAuthor3' style={{gap: "190px"}}>
-                        <a className='squareHistory'>May 12, 2023</a>
-                        <a className='squareHistory'>by Abdurrahman Türkeri</a>
+
+                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog3backgroundMobile.svg")'}}>
+                        <a href='/sugarBlog3'><button className='squareButton'><a>{t("readMore")}</a></button></a>
+                        <a className='squareHeader' href='/sugarBlog3'>{t("squareHeader3")}</a>
+                        <div className='blogAuthor' id='blogAuthor3' style={{gap: "190px"}}>
+                            <a className='squareHistory'>May 12, 2023</a>
+                            <a className='squareHistory'>by Abdurrahman Türkeri</a>
+                        </div>
                     </div>
-                    <img className='squareImg' id='squareImgDeskop' alt='' src={'./assets/img/blog3background.svg'}></img>
-                    <img className='squareImg' id='squareImgMobile' alt='' src={'./assets/img/blog3backgroundMobile.svg'}></img>
-                </div>
             </div>
         </div>
     );

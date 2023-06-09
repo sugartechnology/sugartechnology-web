@@ -1,0 +1,123 @@
+.cookiesContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 59vh;
+    height: 24vh;
+    justify-content: space-around;
+    z-index: 999;
+    padding: 20px 20px;
+    top: 60%;
+    left: 1%;
+    border-radius: 26px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.cookiesOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.cookiesDiv{
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    z-index: 999;
+}
+
+.cookiesCloseDiv{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cookiesSpans{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.cookiesHeader{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 0px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02666em;
+    color: #000000;
+    height: 20.3px;
+}
+
+.cookiesSpan{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #727272;
+    width: 80%;
+}
+
+.cookiesButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.cookiesButton1{
+    border: 2px solid #ED401A;
+    border-radius: 100px;
+    padding: 5px 30px;
+    cursor: pointer;
+}
+
+.cookiesButton2{
+    background: #ED401A;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 30px;
+    cursor: pointer;
+}
+
+.cookiesButton1 a{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ED401A;
+}
+
+.cookiesButton2 a{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+
+}

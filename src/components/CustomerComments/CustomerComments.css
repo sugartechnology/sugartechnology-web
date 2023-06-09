@@ -218,6 +218,11 @@
     bottom: 0px;
 }
 
+.compannyLogo{
+    width: 10%;
+    margin-top: 20px;
+}
+
 /* Reeponsive Tablet Settings */
 
 .tablet .commentsLeftButton{

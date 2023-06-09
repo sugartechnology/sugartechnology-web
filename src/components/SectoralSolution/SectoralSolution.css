@@ -147,11 +147,6 @@
     width: 354px;
     font-size: 13px;
 }
-.tablet #solution2,
-.tablet #solution3,
-.tablet #solution4{
-    display: none;
-}
 .tablet .solution{
     flex-direction: column;
 }
@@ -171,14 +166,11 @@
     bottom: 12px;
     opacity: 0.5;
 }
-.tablet .solutionPageButtons{
-    display: flex !important;
-}
 
 /* Reeponsive Mobile Settings */
 
 .mobile .sectoralSolutionContainer{
-    height: 125vh;
+    height: 370vh;
 }
 .mobile .sectoralSolutionSpan{
     font-size: 29px;
@@ -192,13 +184,8 @@
     font-size: 24px;
 }
 .mobile .solutionSpan{
-    width: 70%;
+    width: 100%;
     font-size: 13px;
-}
-.mobile #solution2,
-.mobile #solution3,
-.mobile #solution4{
-    display: none;
 }
 .mobile .solution{
     flex-direction: column;
@@ -213,6 +200,9 @@
 .mobile #rightImage{
     width: 100%;
 }
+.mobile #leftImage{
+    width: 100%;
+}
 .mobile .solutionShadow{
     display: flex !important;
     width: 97%;
@@ -221,10 +211,9 @@
     bottom: 10px;
     opacity: 0.5;
 }
-.mobile .solutionPageButtons{
-    display: flex !important;
-}
-
 .mobile .soluttinImage{
     width: 100%;
+}
+.mobile #solution2, .mobile #solution4{
+    flex-direction: column-reverse;
 }

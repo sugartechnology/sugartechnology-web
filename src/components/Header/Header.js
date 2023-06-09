@@ -194,7 +194,7 @@ export const Header = props => {
                         <div className='firstChildPopup' id='firstChildPopup' style={{display: "none"}}>
                             <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
                             <div className='popupRouterMobile' id='routerShowFurnitureMobile'>
-                                <a href='/productAr'>{t("showFurniture")}</a>
+                                <a>{t("showFurniture")}</a>
                             </div>
                             <div className='popupRouterMobile' id='routerJointMobile'>
                                 <a href='/productJoint'>{t("createProduct")}</a>
@@ -257,7 +257,17 @@ export const Header = props => {
                 <div className='productServicesPopup' id='productServicesPopup' style={{ display: "none", position: "absolute", top: "45px", left: "70px", zIndex: "6"}}>
                     <div className='popupOption' id='firstPopupOption' onMouseOver={showPopupOption1}><a>{t("showAtHome")}</a><img className='popupVector' id='vector1' alt='' src={'./assets/img/popupVector.svg'}></img></div>
                     <div className='firstPopup' id='firstPopup' style={{display: "none"}}>
-                        <div className='secondPopupFirstOption'><a href='/productAr' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("showFurniture")}</a></div>
+                        <div className='secondPopupFirstOption'><a style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("showFurniture")}</a></div>
+                        <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
+                        <div className='itemsPopup'>
+                            <a href='/productAr' className='popupItem'>Mobilya</a>
+                            <a href='/productCarpet' className='popupItem'>Halı</a>
+                            <a href='/productTablo' className='popupItem'>Tablo</a>
+                            <a href='/productBathroom' className='popupItem'>Banyo Mobilya</a>
+                            <a href='/productBeyazEsya' className='popupItem'>Beyaz Eşya</a>
+                            <a href='/productDekorasyon' className='popupItem'>Dekorasyon</a>
+                            <a href='/productTekstil' className='popupItem'>Tekstil</a>
+                        </div>
                         <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
                         <div className='secondPopupSecondOption'><a href='/productJoint' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("createProduct")}</a></div>
                     </div>

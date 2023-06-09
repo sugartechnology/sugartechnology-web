@@ -118,15 +118,6 @@ export const SugarSquad = props =>{
                             <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
                         </div>
                     </div>
-                </div>
-                <div className='crew' id='crewResponsive'>
-                    <div className='SugarSquadMember'>
-                        <img alt='' src={'./assets/img/fatihPp.svg'}></img>
-                        <div className='memberInformation'>
-                            <a className='memberName'>Fatih Özdemir</a>
-                            <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
-                        </div>
-                    </div>
                     <div className='SugarSquadMember'>
                         <img alt='' src={'./assets/img/utkuPp.svg'}></img>
                         <div className='memberInformation'>
@@ -183,31 +174,10 @@ export const SugarSquad = props =>{
                                 <a className='memberPosition'>{t("sugarSquadMember6Position")}</a>
                             </div>
                         </div>
-                        <div className='SugarSquadMember'>
-                            <img alt='' src={'./assets/img/erenPp.svg'}></img>
-                            <div className='memberInformation'>
-                                <a className='memberName'>Muhammed Eren Baş</a>
-                                <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
-                            </div>
-                        </div>
-                        <div className='SugarSquadMember'>
-                            <img alt='' src={'./assets/img/hakkiPp.svg'}></img>
-                            <div className='memberInformation'>
-                                <a className='memberName'>Hakkı Altan Cebeci</a>
-                                <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div className='mobileCrewOne'>
                     <div className='crew' id='crewResponsive'>
-                        <div className='SugarSquadMember'>
-                            <img alt='' src={'./assets/img/fatihPp.svg'}></img>
-                            <div className='memberInformation'>
-                                <a className='memberName'>Fatih Özdemir</a>
-                                <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
-                            </div>
-                        </div>
                         <div className='SugarSquadMember'>
                             <img alt='' src={'./assets/img/utkuPp.svg'}></img>
                             <div className='memberInformation'>
@@ -215,8 +185,6 @@ export const SugarSquad = props =>{
                                 <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
                             </div>
                         </div>
-                    </div>
-                    <div className='crew' id='crewResponsive'>
                         <div className='SugarSquadMember'>
                             <img alt='' src={'./assets/img/sametPp.svg'}></img>
                             <div className='memberInformation'>
@@ -235,6 +203,20 @@ export const SugarSquad = props =>{
                             <img alt='' src={'./assets/img/nisaPp.svg'}></img>
                             <div className='memberInformation'>
                                 <a className='memberName'>Nisa Nur Çakıcı</a>
+                                <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
+                            </div>
+                        </div>
+                        <div className='SugarSquadMember'>
+                            <img alt='' src={'./assets/img/hakkiPp.svg'}></img>
+                            <div className='memberInformation'>
+                                <a className='memberName'>Hakkı Altan Cebeci</a>
+                                <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
+                            </div>
+                        </div>
+                        <div className='SugarSquadMember'>
+                            <img alt='' src={'./assets/img/erenPp.svg'}></img>
+                            <div className='memberInformation'>
+                                <a className='memberName'>Muhammed Eren Baş</a>
                                 <a className='memberPosition'>{t("sugarSquadMember7Position")}</a>
                             </div>
                         </div>

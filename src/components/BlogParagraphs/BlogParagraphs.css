@@ -8,7 +8,7 @@
     margin-top: 70px;
 }
 .blogParagraphs2Container{
-    height: 210vh;
+    height: 160vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,14 @@
     align-items: center;
     color: #000000;
 }
-
+.paragraphWithImage{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.paragraphImage2{
+    width: 20%;
+}
 .paragraphImage{
     width: 70%;
 }
@@ -69,11 +76,9 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    position: absolute;
-    left: 215px;
-    bottom: 30px;
     border: 1px solid #e4e7ea;
     border-radius: 12px;
+    margin-bottom: 30px;
 }
 .authorSpans{
     display: flex;
@@ -111,7 +116,7 @@
 }
 
 .tablet .blogParagraphs2Container{
-    height: 305vh;
+    height: 290vh;
 }
 
 .tablet .blogParagraphs3Container{

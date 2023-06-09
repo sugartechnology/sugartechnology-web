@@ -1,6 +1,7 @@
 import { ContactAddress } from "../../components/ContactAddress/ContactAddress";
 import { ContactCv } from "../../components/ContactCv/ContactCv";
 import React, { useState, useEffect } from 'react';
+import { ContactInform } from "../../components/ContactInform/ContactInform";
 
 export const ContactUsCv = props =>{
     const [isTablet, setIsTablet] = useState(false);
@@ -24,6 +25,7 @@ export const ContactUsCv = props =>{
     return(
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} contactUsCv`}>
             <ContactCv></ContactCv>
+            <ContactInform></ContactInform>
         </div>
     );
 }

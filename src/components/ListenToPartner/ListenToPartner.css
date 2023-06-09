@@ -95,7 +95,7 @@
 #deskopVideoShadow{
     width: 80%;
     position: absolute;
-    bottom: -16px;
+    bottom:  0px;
     opacity: 0.3;
 }
 
@@ -130,15 +130,6 @@
     }
     to {
         transform: translateX(0);
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    #deskopVideoShadow{
-        display: none;
-    }
-    #mobileVideoShadow{
-        display: block;
     }
 }
 

@@ -13,6 +13,12 @@ import { ProductJoint } from './pages/products/ProductJoint';
 import { ProductWatch } from './pages/products/ProductWatch';
 import { ProductShoes } from './pages/products/ProductShoes';
 import { ProductClooth } from './pages/products/ProductClooth';
+import { ProductCarpet } from './pages/products/ProductCarpet';
+import { ProductTable } from './pages/products/ProductTable';
+import { ProductBathroom } from './pages/products/ProductBathroom';
+import { ProductWhiteGoods } from './pages/products/ProductWhiteGoods';
+import { ProductDecoration } from './pages/products/ProductDecoration';
+import { ProductTextile } from './pages/products/ProductTextile';
 import { Blog1 } from './pages/blogs/Blog1';
 import { Blogs } from './pages/blogs/Blogs';
 import { ContactUs } from './pages/contactUs/ContactUs';
@@ -60,6 +66,12 @@ function App() {
             <Route path='/productWatch' element={<ProductWatch></ProductWatch>}></Route>
             <Route path='/productShoes' element={<ProductShoes></ProductShoes>}></Route>
             <Route path='/productClooth' element={<ProductClooth></ProductClooth>}></Route>
+            <Route path='/productCarpet' element={<ProductCarpet></ProductCarpet>}></Route>
+            <Route path='/productTable' element={<ProductTable></ProductTable>}></Route>
+            <Route path='/productBathroom' element={<ProductBathroom></ProductBathroom>}></Route>
+            <Route path='/productWhiteGoods' element={<ProductWhiteGoods></ProductWhiteGoods>}></Route>
+            <Route path='/productDecoration' element={<ProductDecoration></ProductDecoration>}></Route>
+            <Route path='/productTextile' element={<ProductTextile></ProductTextile>}></Route>
             <Route path='/aboutUs' element={<AboutUs></AboutUs>}></Route>
             <Route path='/sugarBlog1' element={<Blog1></Blog1>}></Route>
             <Route path='/sugarBlog2' element={<Blog2></Blog2>}></Route>

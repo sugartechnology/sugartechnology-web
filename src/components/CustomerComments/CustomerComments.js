@@ -9,32 +9,34 @@ export const CustomerComments = (props) => {
       {
         trustedByMillionsOfCompany: 'commentHeader',
         commentSpan: 'commentSpan',
-        commentHeader: 'Simurg Sanat Evi',
+        commentHeader: 'Genel Müdür Yardımcısı',
         commentAuthor: 'Tuğba Karayel Özcan',
-        customerPhoto:
-          'https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/tugba_karayel.jpeg',
+        customerPhoto:'https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/tugba_karayel.jpeg',
+        companyLogo: 'assets/img/simurgLogo.svg'
+      },
+      {
+        trustedByMillionsOfCompany: 'commentHeader2',
+        commentSpan: 'commentSpan2',
+        commentHeader: 'Şatış Direktörü',
+        commentAuthor: 'Yesim Korkmaz',
+        customerPhoto:'https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/yesim_korkmaz.jpeg',
+        companyLogo: 'assets/img/tepe-home-min.svg'
       },
       {
         trustedByMillionsOfCompany: 'commentHeader3',
         commentSpan: 'commentSpan3',
-        commentHeader: 'Tepe Home',
-        commentAuthor: 'Yesim Korkmaz',
-        customerPhoto:
-          'https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/yesim_korkmaz.jpeg',
-      },
-      {
-        trustedByMillionsOfCompany: 'commentHeader3',
-        commentSpan: 'commentSpan2',
-        commentHeader: 'Eko Halı',
+        commentHeader: 'İş Geliştirme ve Pazarlama Yöneticisi',
         commentAuthor: 'Zeynep Yücel',
         customerPhoto: 'assets/img/zeynepYucel.jpeg',
+        companyLogo: 'assets/img/ekohalilogo.svg'
       },
       {
         trustedByMillionsOfCompany: 'commentHeader4',
         commentSpan: 'commentSpan4',
-        commentHeader: 'KYS',
+        commentHeader: 'İç Mimar ve Ürün Tasarımcısı',
         commentAuthor: 'Serçil Tombak',
         customerPhoto: 'assets/img/kys.JPG',
+        companyLogo: 'assets/img/kys_design.svg'
       },
       {
         trustedByMillionsOfCompany: 'commentHeader5',
@@ -47,9 +49,10 @@ export const CustomerComments = (props) => {
       {
         trustedByMillionsOfCompany: 'commentHeader6',
         commentSpan: 'commentSpan6',
-        commentHeader: 'Tepe Home',
+        commentHeader: 'Pazarlama Müdürü',
         commentAuthor: 'Ceren Evcimen',
         customerPhoto: 'assets/img/cerenEvcimen.JPEG',
+        companyLogo: 'assets/img/tepe-home-min.svg'
       },
     ];
 
@@ -78,7 +81,7 @@ export const CustomerComments = (props) => {
               <img className='customerPhoto' alt='' src={t(array[index].customerPhoto)}></img>
               <h1>{t(array[index].commentAuthor)}</h1>
               <a>{array[index].commentHeader}</a>
-              <img alt='' src={array[index].companyLogo}></img>
+              <img className='compannyLogo' alt='' src={array[index].companyLogo}></img>
             </div>
           </div>
         </div>

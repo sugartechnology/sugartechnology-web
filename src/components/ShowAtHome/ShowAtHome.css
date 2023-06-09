@@ -62,7 +62,7 @@
 }
 
 .showAtHomeButton1 a{
-    width: 83px;
+    width: 100%;
     height: 18px;
     font-style: normal;
     font-weight: 700;
@@ -77,19 +77,16 @@
   }
 .showAtHomeButton1{
     border: none;
-    width: 129px;
     height: 44px;
     background: #ED401A;
     border-radius: 30px;
     cursor: pointer;
     position: relative;
+    padding: 0px 15px;
 }
 .showAtHomeButton1:hover{
     background: #ED401A;
     color: white;
-}
-.showAtHomeButton1 a{
-  color: white;
 }
 .showAtHomeButton1:hover a{
   color: white;
@@ -114,19 +111,6 @@
 }
 .showAtHomeButton2:hover a {
   color: white;
-}
-.showAtHomeButton1 a{
-    height: 26px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    width: 110px;
-    line-height: 26px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
 }
 .showAtHomeButton2{
     width: 129px;
@@ -179,7 +163,6 @@
     position: relative;
 }
 .mobile .showAtHomeButton1{
-    width: 110px;
     height: 35px;
     display: flex;
     justify-content: center;

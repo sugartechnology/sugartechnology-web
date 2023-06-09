@@ -8,7 +8,7 @@
     display: flex;
     width: 100%;
     position: relative;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: auto;
 }
 .SugarSquadMember{
@@ -28,7 +28,7 @@
     flex-direction: column;
 }
 .memberName{
-    width: 142px;
+    width: 100%;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -60,6 +60,9 @@
     border-radius: 10px;
     cursor: pointer;
 }
+.mobileCrewOne{
+    padding: 0px 10px;
+}
 
 /* Reeponsive Tablet Settings */
 
@@ -74,7 +77,7 @@
 /* Reeponsive Mobile Settings */
 
 .mobile .SugarSquadContainer{
-    height: 850px;
+    height: 67vh;
 }
 
 .mobile .sugarSquadsDeskop{
@@ -87,15 +90,14 @@
 
 .mobile .crew{
     width: auto;
+    margin-top: 30px;
+    gap: 24px;
 }
 
 .sugarSquadsMobile{
     display: none;
 }
 
-.mobile .crew{
-    margin-top: 30px;
-}
 .mobile .sugarSquadsDeskop{
     gap: 0px;
 }

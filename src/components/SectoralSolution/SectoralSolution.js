@@ -108,7 +108,7 @@ export const SectoralSolution = props =>{
                 <div className='solutionSpans' id='leftSpans'>
                     <a className='solutionHeader'>{t("solutionHeader1")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
                     <a className='solutionSpan'>{t("solutionSpan1")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. Euismod morbi placerat mi iaculis augue accumsan.</a>
-                    <a href='/'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
+                    <a href='/productAr'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
                 </div>
                 <div className='solutionImage'>
                     <img alt='' src={'./assets/img/solutionImg1.svg'} id='rightImage'></img>
@@ -127,23 +127,12 @@ export const SectoralSolution = props =>{
                     <a href='/'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
                 </div>
             </div>
-            <div className='solution' id='solution2v1' style={{display: "none"}}>
-                <div className='solutionSpans' style={{position: "relative", left: "10px"}} id='leftSpans'>
-                    <a className='solutionHeader'>{t("solutionHeader2")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
-                    <a className='solutionSpan'>{t("solutionSpan2")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. Euismod morbi placerat mi iaculis augue accumsan.</a>
-                    <a href='/'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
-                </div>
-                <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImg2.svg'} id='rightImage'></img>
-                    <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none",bottom: "12px"}}></img>
-                </div>
-            </div>
 
             <div className='solution' id='solution3'> 
                 <div className='solutionSpans' id='leftSpans'>
                     <a className='solutionHeader'>{t("solutionHeader3")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
                     <a className='solutionSpan'>{t("solutionSpan3")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. Euismod morbi placerat mi iaculis augue accumsan.</a>
-                    <a href='/'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
+                    <a href='/productShoes'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
                 </div>
                 <div className='solutionImage'>
                     <img alt='' src={'./assets/img/solutionImg3.svg'} id='rightImage'></img>
@@ -159,25 +148,8 @@ export const SectoralSolution = props =>{
                 <div className='solutionSpans' id='rightSpans'>
                     <a className='solutionHeader'>{t("solutionHeader4")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
                     <a className='solutionSpan'>{t("solutionSpan4")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. Euismod morbi placerat mi iaculis augue accumsan.</a>
-                    <a href='/'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
+                    <a href='/productMeta'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
                 </div>
-            </div>
-            <div className='solution' id='solution4v1' style={{display: "none"}}>
-                <div className='solutionSpans' style={{position: "relative", left: "10px"}} id='leftSpans'>
-                    <a className='solutionHeader'>{t("solutionHeader4")}<a>{t("weHaveGoodSolutionForYou")}</a></a>
-                    <a className='solutionSpan'>{t("solutionSpan4")}Lorem ipsum dolor sit amet consectetur. Leo massa tincidunt senectus etiam nulla quisque in egestas. Scelerisque dictumst vulputate cras mi tortor placerat quis. Adipiscing enim placerat faucibus suscipit consequat dictumst sapien mauris. Euismod morbi placerat mi iaculis augue accumsan.</a>
-                    <a href='/'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
-                </div>
-                <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImg4.svg'} id='rightImage'></img>
-                    <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none",bottom: "12px"}}></img>
-                </div>
-            </div>
-            <div className='solutionPageButtons' style={{display: "none"}}>
-                <img onClick={showSolution1} className='solution1Button' id='solution1Button'></img>
-                <img onClick={showSolution2} className='solution2Button' id='solution2Button'></img>
-                <img onClick={showSolution3} className='solution3Button' id='solution3Button'></img>
-                <img onClick={showSolution4} className='solution4Button' id='solution4Button'></img>
             </div>
         </div>
     );

@@ -2,7 +2,6 @@ import { SectoralSolution } from '../../components/SectoralSolution/SectoralSolu
 import { SugarGoals } from '../../components/SugarGoals/SugarGoals';
 import { SugarSquad } from '../../components/SugarSquad/SugarSquad';
 import { SugarTeam } from '../../components/SugarTeam/SugarTeam';
-import { WhatsNew } from '../../components/WhatsNew/WhatsNew';
 import { WhoSugar } from '../../components/WhoSugar/WhoSugar';
 import React, { useState, useEffect } from 'react';
 
@@ -31,7 +30,6 @@ export const AboutUs = props =>{
             <SugarTeam></SugarTeam>
             <SugarSquad></SugarSquad>
             <SugarGoals></SugarGoals>
-            <WhatsNew></WhatsNew>
             <SectoralSolution></SectoralSolution>
         </div>
     );

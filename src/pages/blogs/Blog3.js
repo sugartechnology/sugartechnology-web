@@ -1,6 +1,6 @@
 import { BlogGraphQL3 } from "../../components/BlogGraphQL/BlogGraphQL3";
 import { BlogParagraphs3 } from "../../components/BlogParagraphs/BlogParagraphs3";
-import { YouAlsoLike } from "../../components/YouAlsoLike/YouAlsoLike";
+import { BlogsMain } from "../../components/BlogsMain/BlogsMain";
 import React, { useState, useEffect } from 'react';
 
 export const Blog3 = props =>{
@@ -27,7 +27,7 @@ export const Blog3 = props =>{
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} Blog3`}>
             <BlogGraphQL3></BlogGraphQL3>
             <BlogParagraphs3></BlogParagraphs3>
-            <YouAlsoLike></YouAlsoLike>
+            <BlogsMain></BlogsMain>
         </div>
     );
 }

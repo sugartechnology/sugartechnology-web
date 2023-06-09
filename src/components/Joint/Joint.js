@@ -3,6 +3,15 @@ import { useTranslation} from "react-i18next";
 
 export const Joint = props =>{
     const {t} = useTranslation();
+    function closeContactArea(){
+        let contactComponentDiv = document.querySelector(".contactComponentDiv");
+        let sendMessageButton = document.querySelector(".sendMessageButton");
+        contactComponentDiv.style.display = "flex";
+
+        sendMessageButton.addEventListener("click", () => {
+            contactComponentDiv.style.display = "none";
+        })
+    }
     return(
         <div className='jointContainer'>
             <div className='mainPageTopLeftFigure rotate'></div>
@@ -28,11 +37,12 @@ export const Joint = props =>{
                     <a className='showAtHomeSpan'>{t("jointContainerSpan")}</a>
                 </div>
                 <div className='showAtHomeButtons'>
-                    <a href='/'><button className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
+                    <a><button onClick={closeContactArea} className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
                 </div>
             </div>
             <div className='jointImageDiv'>
-                <img className='jointImage' alt='' src={'./assets/img/jointImage.svg'}></img>
+                <img className='jointImage' id='jointDeskopImage' alt='' src={'./assets/img/jointImage.svg'}></img>
+                <img className='jointImage' id='jointMobileImage' alt='' src={'./assets/img/jointImageMobile.svg'}></img>
             </div>
         </div>
     );

@@ -29,6 +29,21 @@ export const BlogParagraphs3 = props =>{
                 <a className='paragraphSpan'>{t("blogParagraph3Span8")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span9")}</a>
             </div>
+            <div className='paragraphWithImage'>
+                <img className='paragraphImage2' alt='' src={'./assets/img/sanal_gerceklik_gozlugu.png'}></img>
+                <ul className='secondParagraphLists'>
+                    <li className='secondParagraphLists'>{t("blog3ListItem1")}</li>
+                    <li className='secondParagraphLists'>{t("blog3ListItem2")}</li>
+                    <li className='secondParagraphLists'>{t("blog3ListItem3")}</li>
+                    <li className='secondParagraphLists'>{t("blog3ListItem4")}</li>
+                    <li className='secondParagraphLists'>{t("blog3ListItem5")}</li>
+                    <li className='secondParagraphLists'>{t("blog3ListItem6")}</li>
+                    <li className='secondParagraphLists'>{t("blog3ListItem7")}</li>
+                    <li className='secondParagraphLists'>{t("blog3ListItem8")}</li>
+                    <li className='secondParagraphLists'>{t("blog3ListItem9")}</li>
+                    <li className='secondParagraphLists'>{t("blog3ListItem10")}</li>
+                </ul>
+            </div>
             <div className='author'>
                 <div className='authorImage'>
                     <img style={{width: "100%"}} alt='' src={'./assets/img/SugarTeamLeader1.svg'}></img>

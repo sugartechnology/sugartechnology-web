@@ -45,6 +45,12 @@
     text-decoration: none;
 }
 
+.itemsPopup a{
+    color: #170F49;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .popupRouters{
     display: flex;
     flex-direction: column;
@@ -116,6 +122,9 @@
 }
 .firstChildPopup a:hover,
 .firstMobilePopup a:hover{
+    color: #ED401A;
+}
+.popupItem:hover{
     color: #ED401A;
 }
 .firstChildPopup{
@@ -453,10 +462,6 @@
     color: #353535;
 }
 
-.firstPopup a:visited{
-    color: #353535;
-}
-
 .secondPopupFirstOption:hover,
 .secondPopupSecondOption:hover{
     background: #FFE9E7;
@@ -464,7 +469,6 @@
 
 .secondPopupFirstOption{
     display: flex;
-    width: 150px;
     border-radius: 8px;
     height: 22px;
     align-items: center;
@@ -472,10 +476,10 @@
 
 .secondPopupSecondOption{
     display: flex;
-    width: 150px;
     border-radius: 8px;
     height: 22px;
     align-items: center;
+    padding-bottom: 5px;
 }
 
 .firstPopupFirstOption:hover,
@@ -514,7 +518,6 @@
     padding: 7px 8px;
     position: relative;
     width: 155px;
-    height: 74px;
     background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
@@ -523,6 +526,7 @@
     z-index: 6;
     top: 0px;
     justify-content: space-around;
+    padding: 10px 10px;
 }
 
 #popupEnglishButton:hover,
@@ -631,6 +635,15 @@
 
 .backToHomeArrow{
     cursor: pointer;
+}
+
+.itemsPopup{
+    display: flex;
+    flex-direction: column;
+}
+
+.popupItem{
+    padding: 2px 20px;
 }
 
 /* Reeponsive Tablet Settings */

@@ -1,0 +1,54 @@
+.contactInformContainer{
+    height: 130vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contactInform{
+    width: 115vh;
+    height: 70vh;
+    background: #FFFFFF;
+    opacity: 0.8;
+    box-shadow: 0px 4px 40px #000000;
+    border-radius: 29px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+.contactInformHeader{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 83px;
+    letter-spacing: -1px;
+    color: #000000;
+}
+
+.contactInformSpan{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #8A8A8A;
+    mix-blend-mode: normal;
+    width: 70%;
+}
+
+.contactInformOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}

@@ -2,6 +2,7 @@ import './ContactCv.css';
 import { useState } from 'react';
 import { useTranslation} from "react-i18next";
 import ReCAPTCHA from 'react-google-recaptcha';
+import { Cookies } from '../Cookies/Cookies';
 
 export const ContactCv = props =>{
 
@@ -121,7 +122,6 @@ export const ContactCv = props =>{
                 top: '316px'
             }}></div>
             <div className='mainPageSmallFigure0 '></div>
-
             <div className='contactCvInputs' onSubmit={(e)=>{return false;}}>
                 <div className='contactInputHeaders'>
                     <a className='contactCvHeader'>{t("contactCvHeader")}</a>

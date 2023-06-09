@@ -11,8 +11,12 @@
     width: 100%;
 }
 .jointImageDiv{
-    width: 40%;
+    width: 70%;
     z-index: 1;
+}
+
+#jointMobileImage{
+    display: none;
 }
 
 /* Reeponsive Tablet Settings */
@@ -32,3 +36,10 @@
     width: 80%;
 }
 
+.mobile #jointMobileImage{
+    display: block;
+}
+
+.mobile #jointDeskopImage{
+    display: none;
+}

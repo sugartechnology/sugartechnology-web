@@ -43,7 +43,7 @@ export const Customers = props => {
         <img alt="" src={process.env.PUBLIC_URL + "/assets/img/bellona.svg"}></img>
       </SwiperSlide>
       <SwiperSlide>
-        <img alt="" src={process.env.PUBLIC_URL + "/assets/img/doqu_home.webp"}></img>
+        <img alt="" src={process.env.PUBLIC_URL + "/assets/img/doqu_home.svg"}></img>
       </SwiperSlide>
       <SwiperSlide>
         <img alt="" src={process.env.PUBLIC_URL + "/assets/img/istikbal.svg"}></img>
@@ -70,7 +70,7 @@ export const Customers = props => {
         <img alt="" src={process.env.PUBLIC_URL + "/assets/img/new-logo.svg"}></img>
       </SwiperSlide>
       <SwiperSlide>
-        <img alt="" src={process.env.PUBLIC_URL + "/assets/img/simurg_sanatevi-min.png"}></img>
+        <img alt="" src={process.env.PUBLIC_URL + "/assets/img/simurgLogo.svg"}></img>
       </SwiperSlide>
       <SwiperSlide>
         <img alt="" src={process.env.PUBLIC_URL + "/assets/img/lazzoni-logo.svg"}></img>
@@ -79,7 +79,25 @@ export const Customers = props => {
         <img alt="" src={process.env.PUBLIC_URL + "/assets/img/creavit_logo-min.svg"}></img>
       </SwiperSlide>
       <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/ekohalilogo.png"}></img>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/ekohalilogo.svg"}></img>
+      </SwiperSlide>
+      <SwiperSlide>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/tilia.svg"}></img>
+      </SwiperSlide>
+      <SwiperSlide>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/kaas.svg"}></img>
+      </SwiperSlide>
+      <SwiperSlide>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/gabba.svg"}></img>
+      </SwiperSlide>
+      <SwiperSlide>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/homillia.svg"}></img>
+      </SwiperSlide>
+      <SwiperSlide>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/homeandrugs.svg"}></img>
+      </SwiperSlide>
+      <SwiperSlide>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/pasaj.svg"}></img>
       </SwiperSlide>
     </Swiper>
   );
