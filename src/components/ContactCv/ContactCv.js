@@ -149,7 +149,7 @@ export const ContactCv = props =>{
                 <div className='nameEmailInputs'>
                         <div className='nameInputs'>
                             <a className='nameInputSpan'>{t("phone")}</a>
-                            <input className='nameEmailInput' placeholder={"+90 534 284 3427"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
+                            <input className='nameEmailInput' placeholder={"+90 5** *** ** **"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
                         </div>
                         <div className='emailInputs'>
                             <a className='addCvInput'>{t("addCv")}</a>

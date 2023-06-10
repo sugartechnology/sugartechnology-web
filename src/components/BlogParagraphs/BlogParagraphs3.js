@@ -29,20 +29,47 @@ export const BlogParagraphs3 = props =>{
                 <a className='paragraphSpan'>{t("blogParagraph3Span8")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span9")}</a>
             </div>
-            <div className='paragraphWithImage'>
-                <img className='paragraphImage2' alt='' src={'./assets/img/sanal_gerceklik_gozlugu.png'}></img>
+            <div className='paragraph'>
                 <ul className='secondParagraphLists'>
-                    <li className='secondParagraphLists'>{t("blog3ListItem1")}</li>
-                    <li className='secondParagraphLists'>{t("blog3ListItem2")}</li>
-                    <li className='secondParagraphLists'>{t("blog3ListItem3")}</li>
-                    <li className='secondParagraphLists'>{t("blog3ListItem4")}</li>
-                    <li className='secondParagraphLists'>{t("blog3ListItem5")}</li>
-                    <li className='secondParagraphLists'>{t("blog3ListItem6")}</li>
-                    <li className='secondParagraphLists'>{t("blog3ListItem7")}</li>
-                    <li className='secondParagraphLists'>{t("blog3ListItem8")}</li>
-                    <li className='secondParagraphLists'>{t("blog3ListItem9")}</li>
-                    <li className='secondParagraphLists'>{t("blog3ListItem10")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem1")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem2")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem3")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem4")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem5")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem6")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem7")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem8")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem9")}</li>
+                    <li className='secondParagraphList'>{t("blog3ListItem10")}</li>
                 </ul>
+                <a className='paragraphSpan'>{t("blogParagraph3Span10")}</a>
+            </div>
+            <div className='paragraph'>
+                <a className='paragraphHeader'>{t("blogParagraph3Span11")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span12")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span13")}</a>
+            </div>
+            <div className='paragraph'>
+                <a className='paragraphHeader'>{t("blogParagraph3Span14")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span15")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span16")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span17")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span18")}</a>
+            </div>
+            <div className='paragraph'>
+                <a className='paragraphHeader'>{t("blogParagraph3Span19")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span20")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span21")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span22")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span23")}</a>
+            </div>
+            <div className='paragraph'>
+                <a className='paragraphHeader'>{t("blogParagraph3Span24")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span25")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span26")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span27")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span28")}</a>
+                <a className='paragraphSpan'>{t("blogParagraph3Span29")}</a>
             </div>
             <div className='author'>
                 <div className='authorImage'>

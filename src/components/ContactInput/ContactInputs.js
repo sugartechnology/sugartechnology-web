@@ -14,24 +14,24 @@ export const ContactInputs = props =>{
         setRecaptchaResponse(response);
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-
-        const response =  fetch("/api/verify-recaptcha", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ recaptchaResponse })
+      
+        const response = await fetch("/api/verify-recaptcha", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ recaptchaResponse })
         });
-
-        const result = response.json();
+      
+        const result = await response.json();
         if (result.success) {
-            submitForm();
+          submitForm();
         } else {
-            alert("Please verify that you are a human!");
+          alert("Please verify that you are a human!");
         }
-    }
+      }
 
     function submitForm() {
         const form = {
@@ -96,7 +96,7 @@ export const ContactInputs = props =>{
                     <div className='nameEmailInputs'>
                         <div className='nameInputs'>
                             <a className='nameInputSpan'>{t("phone")}</a>
-                            <input className='nameEmailInput' placeholder={"+90 534 284 3427"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
+                            <input className='nameEmailInput' placeholder={"+90 5** *** ** **"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
                         </div>
                         <div className='emailInputs'>
                             <a className='emailInputSpan'>{t("email")}</a>
@@ -112,7 +112,7 @@ export const ContactInputs = props =>{
                     sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
                     onChange={handleRecaptchaChange}/>
                 <div className='contactInputButtons'>
-                    <button className='sendMessageButton' onClick={handleSubmit}><a>{t("sendMessage")}</a></button>
+                    <button className='sendMessageButton' onClick={submitForm}><a>{t("sendMessage")}</a></button>
                 </div>
             </div>
     );
