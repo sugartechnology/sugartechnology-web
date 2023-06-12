@@ -108,17 +108,6 @@
 
 /* Reeponsive Tablet Settings */
 
-.tablet .blogParagraphsContainer{
-    height: 160vh;
-}
-
-.tablet .blogParagraphs2Container{
-    height: 290vh;
-}
-
-.tablet .blogParagraphs3Container{
-    height: 310vh;
-}
 
 .tablet .paragraphHeader{
     line-height: 37px;
@@ -163,18 +152,6 @@
 
 /* Reeponsive Mobile Settings */
 
-.mobile .blogParagraphsContainer{
-    height: 160vh;
-}
-
-.mobile .blogParagraphs2Container{
-    height: 220vh;
-}
-
-.mobile .blogParagraphs3Container{
-    height: 225vh;
-}
-
 .mobile .paragraphHeader{
     line-height: 37px;
     font-size: 28px;
@@ -201,10 +178,6 @@
 .mobile .authorSpan{
     font-size: 9px;
     line-height: 14px;
-}
-
-.mobile .authorImage{
-    width: auto !important;
 }
 
 .mobile .paragraphSpan{

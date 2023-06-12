@@ -1,39 +1,74 @@
 import './SugarTeam.css';
 import { useTranslation} from "react-i18next";
-import { useState } from 'react';
+import { useEffect } from 'react';
 
 export const SugarTeam = props =>{
     const {t} = useTranslation();
+
+    const array = [
+        {
+            image: "./assets/img/SugarTeamLeader1.svg",
+            name: "Abdurrahman Türkeri",
+            position: t("productManagmentHead"),
+            comment: t("leader1CommentSpan")
+        },
+        {
+            image: "./assets/img/SugarTeamLeader2.svg",
+            name: "Yusuf Fatih Erol",
+            position: t("softwareDeliveryHead"),
+            comment: t("leader2CommentSpan")
+        },
+        {
+            image: "./assets/img/SugarTeamLeader3.svg",
+            name: "Farhad Faal",
+            position: t("cgiTeamLeader"),
+            comment: t("leader2CommentSpan")
+        },
+        {
+            image: "./assets/img/erdemPp.svg",
+            name: "Şükrü Erdem Şahin",
+            position: t("sugarSquadMember3Position"),
+            comment: t("leader4CommentSpan")
+        }
+    ];
+
+    useEffect(() => {
+        let parentDiv = document.querySelector(".sugarTeamLeaders");
+        array.forEach((item) => {
+    
+            let leaderDiv = document.createElement("div");
+            leaderDiv.classList.add("sugarTeamLeader");
+    
+            let leaderImage = document.createElement("img");
+            leaderImage.src = item.image;
+    
+            let leaderName = document.createElement("a");
+            leaderName.classList.add("leaderName");
+            leaderName.innerHTML = item.name;
+    
+            let leaderPosition = document.createElement("a");
+            leaderPosition.classList.add("leaderPosition");
+            leaderPosition.innerHTML = item.position;
+    
+            let leaderComment = document.createElement("a");
+            leaderComment.classList.add("leaderComment");
+            leaderComment.innerHTML = item.comment;
+    
+            leaderDiv.appendChild(leaderImage);
+            leaderDiv.appendChild(leaderName);
+            leaderDiv.appendChild(leaderPosition);
+            leaderDiv.appendChild(leaderComment);
+    
+            parentDiv.appendChild(leaderDiv);
+        });
+    }, []);
     return(
         <div className='SugarTeamContainer'>
             <div className='sugarTeamHeader'>
                 <a>{t("sugarTeam")}</a>
             </div>
             <div className='sugarTeamLeaders'>
-                <div className='sugarTeamLeader' id='leader1'>
-                    <img alt='' src={'./assets/img/SugarTeamLeader1.svg'}></img>
-                    <a className='leaderName'>Abdurrahman Türkeri</a>
-                    <a className='leaderPosition'>{t("productManagmentHead")}</a>
-                    <a className='leaderComment'>{t("leader1CommentSpan")}Lorem ipsum dolor sit amet consectetur. Dignissim id congue velit eget erat eu fringilla nullam elementum.</a>
-                </div>
-                <div className='sugarTeamLeader' id='leader2'>
-                    <img alt='' src={'./assets/img/SugarTeamLeader2.svg'}></img>
-                    <a className='leaderName'>Yusuf Fatih Erol</a>
-                    <a className='leaderPosition'>{t("softwareDeliveryHead")}</a>
-                    <a className='leaderComment'>{t("leader2CommentSpan")}Lorem ipsum dolor sit amet consectetur. Dignissim id congue velit eget erat eu fringilla nullam elementum.</a>
-                </div>
-                <div className='sugarTeamLeader' id='leader3'>
-                    <img alt='' src={'./assets/img/SugarTeamLeader3.svg'}></img>
-                    <a className='leaderName'>Farhad Faal</a>
-                    <a className='leaderPosition'>{t("cgiTeamLeader")}</a>
-                    <a className='leaderComment'>{t("leader3CommentSpan")}Lorem ipsum dolor sit amet consectetur. Dignissim id congue velit eget erat eu fringilla nullam elementum.</a>
-                </div>
-                <div className='sugarTeamLeader' id='leader4'>
-                    <img alt='' src={'./assets/img/erdemPp.svg'}></img>
-                    <a className='leaderName'>Şükrü Erdem Şahin</a>
-                    <a className='leaderPosition'>{t("sugarSquadMember3Position")}</a>
-                    <a className='leaderComment'>{t("leader4CommentSpan")}Lorem ipsum dolor sit amet consectetur. Dignissim id congue velit eget erat eu fringilla nullam elementum.</a>
-                </div>
+                
             </div>
         </div>
     );

@@ -3,6 +3,8 @@
     position: relative;
     display: flex;
     justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .blogGraphSpans{
     display: flex;
