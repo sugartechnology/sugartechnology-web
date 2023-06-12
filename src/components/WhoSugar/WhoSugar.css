@@ -191,10 +191,10 @@
 
 @media screen and (max-width: 500px) {
     .WhoSugarContainer{
-        height: 110vh !important;
+        height: 95vh !important;
     }
     .whoSugarSpans{
-        height: 115% !important;
+        height: 105% !important;
     }
     .whoSugarImg2{
         left: 30px !important;

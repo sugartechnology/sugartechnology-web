@@ -190,12 +190,24 @@ export const Header = props => {
                         <div className='popupRouterMobile' id='routerShowAtHomeMobile' onClick={showFirstChildPopup}>
                             <a id='routerShowAtHomeMobileSpan'>{t("showAtHome")}</a>
                             <img className='popupRightButton' id='showAtHomeMobileButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
+
                         </div>
                         <div className='firstChildPopup' id='firstChildPopup' style={{display: "none"}}>
                             <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
                             <div className='popupRouterMobile' id='routerShowFurnitureMobile'>
                                 <a>{t("showFurniture")}</a>
                             </div>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
+                            <div className='itemsPopup'>
+                                <a href='/productAr' className='popupItem'>Mobilya</a>
+                                <a href='/productCarpet' className='popupItem'>Halı</a>
+                                <a href='/productTable' className='popupItem'>Tablo</a>
+                                <a href='/productBathroom' className='popupItem'>Banyo Mobilya</a>
+                                <a href='/productWhiteGoods' className='popupItem'>Beyaz Eşya</a>
+                                <a href='/productDekorasyon' className='popupItem'>Dekorasyon</a>
+                                <a href='/productTekstil' className='popupItem'>Tekstil</a>
+                            </div>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
                             <div className='popupRouterMobile' id='routerJointMobile'>
                                 <a href='/productJoint'>{t("createProduct")}</a>
                             </div>

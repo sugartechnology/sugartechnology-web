@@ -183,9 +183,9 @@
 }
 
 .mobile .popup{
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: auto;
-    padding: 0px 10px;
+    padding: 20px 10px;
     width: 100%;
 }
 

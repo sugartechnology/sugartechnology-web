@@ -15,8 +15,7 @@ export const WhoSugar = props =>{
             </div>
             <div className='whoSugarSpans'>
                 <a className='whoSugarHeader'>{t("whoIsSugar")}</a>
-                <a className='whoSugarSpan'>{t("whoSugarSpan1")}</a>
-                <a className='whoSugarSpan'>{t("whoSugarSpan2")}</a>
+                <a className='whoSugarSpan'>{t("whoSugarSpan")}</a>
             </div>
             <div className='whoSugarLogos'>
                 <img className='whoSugarLogo1' alt='' src={'./assets/img/whoSugarImage.svg'}></img>
