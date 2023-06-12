@@ -4,7 +4,11 @@ import { ContactInputs } from './ContactInputs';
 
 export const ContactInput = props =>{
     const {t} = useTranslation();
-    
+    const closePopup = () => {
+        let inputPopup = document.querySelector(".inputDonePopup");
+
+        inputPopup.style.display = "none";
+    }
     return(
         <div className='contactInputContainer'>
             <div className='mainPageTopLeftFigure rotate'></div>
@@ -27,7 +31,7 @@ export const ContactInput = props =>{
             <ContactInputs></ContactInputs>
             <div className='inputDonePopup' id='inputDonePopup'>
                 <div className='inputPopupButton'>
-                    <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    <img id='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                 </div>
                 <div className='inputPopupSpans'>
                     <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
@@ -39,7 +43,7 @@ export const ContactInput = props =>{
             </div>
             <div className='inputDonePopup' id='inputErrorPopup'>
                 <div className='inputPopupButton'>
-                    <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    <img id='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                 </div>
                 <div className='inputPopupSpans'>
                     <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>

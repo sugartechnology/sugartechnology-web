@@ -39,7 +39,7 @@
     line-height: 60px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     letter-spacing: -0.02666em;
     background: linear-gradient(135deg, #FFA895 15.1%, #FF2E00 67.71%);
     -webkit-background-clip: text;
@@ -144,7 +144,7 @@ textarea {
     line-height: 18px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     color: #FFFFFF;
 }
 .descriptionInputSpan{
@@ -176,6 +176,10 @@ textarea {
     position: absolute;
 }
 
+.tablet .contactInputs{
+    width: auto;
+}
+
 /* Reeponsive Mobile Settings */
 
 .mobile .contactInputContainer{
@@ -183,8 +187,7 @@ textarea {
 }
 
 .mobile .contactInputs{
-    width: 345px;
-    height: 810px;
+    width: 90%;
 }
 .mobile .contactInputSpan{
     width: 300px;

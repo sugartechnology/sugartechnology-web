@@ -85,7 +85,7 @@
 
 .tablet .aboutSpan{
     width: 80%;
-    text-align: center;
+    text-align: justify;
 }
 
 .tablet .aboutButton{
@@ -109,7 +109,7 @@
 
 .mobile .aboutSpan{
     width: 80%;
-    text-align: center;
+    text-align: justify;
     line-height: 20px;
     font-size: 14px;
 }

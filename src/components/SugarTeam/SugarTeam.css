@@ -13,7 +13,7 @@
     font-weight: 700;
     font-size: 40px;
     line-height: 52px;
-    text-align: center;
+    text-align: justify;
     text-transform: capitalize;
     color: #000000;
     display: flex;
@@ -45,7 +45,7 @@
     font-weight: 600;
     font-size: 19px;
     line-height: 23px;
-    text-align: center;
+    text-align: justify;
     letter-spacing: -0.035em;
     color: #ED401A;
 }
@@ -55,7 +55,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
+    text-align: justify;
     letter-spacing: -0.035em;
     color: #000000;
 }

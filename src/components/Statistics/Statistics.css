@@ -20,7 +20,7 @@
     font-size: 48px;
     line-height: 0px;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     letter-spacing: -0.01666em;
     color: #ED401A;
     position: relative;
@@ -32,7 +32,7 @@
     font-size: 20px;
     line-height: 0px;
     color: #252F40;
-    text-align: center;
+    text-align: justify;
     position: relative;
 }
 .thirdSpan{
@@ -44,7 +44,7 @@
     line-height: 20px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     color: #67748E;
     position: relative;
 }

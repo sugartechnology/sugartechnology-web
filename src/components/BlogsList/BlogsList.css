@@ -60,7 +60,7 @@
     line-height: 26px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     color: #ED401A;
 }
 
@@ -77,7 +77,7 @@
 
 .tablet .blogsListHeader{
     font-size: 33px;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Reeponsive Mobile Settings */
@@ -93,5 +93,5 @@
 
 .mobile .blogsListHeader{
     font-size: 33px;
-    text-align: center;
+    text-align: justify;
 }

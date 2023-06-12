@@ -108,6 +108,7 @@
     .contactAddressContainer{
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
     }
     .contactAddressInformation{
         display: none;
@@ -123,7 +124,6 @@
     .contactAddressInformationMobile{
         display: flex;
         flex-direction: column;
-        position: absolute;
         width: 370px;
         height: 189px;
         background: #FFFFFF;
@@ -132,7 +132,6 @@
         border-radius: 29px;
         justify-content: center;
         align-items: center;
-        top: 200px;
         gap: 10px;
     }
     .addressContainer{
@@ -148,11 +147,7 @@
 
 @media screen and (max-width: 499px) {
     .contactAddressContainer{
-        height: 68vh;
-    }
-    .contactAddressInformationMobile{
-        top: 60px ;
-        width: 350px ;
-        height: 143px ;
+        height: 90vh;
+        justify-content: space-evenly;
     }
 }

@@ -37,7 +37,7 @@
     font-weight: 700;
     font-size: 44px;
     line-height: 95px;
-    text-align: center;
+    text-align: justify;
     text-transform: capitalize;
     color: #000000;
     position: relative;
@@ -48,7 +48,7 @@
     font-weight: 300;
     font-size: 17px;
     line-height: 23px;
-    text-align: center;
+    text-align: justify;
     text-transform: capitalize;
     color: #000000;
 }

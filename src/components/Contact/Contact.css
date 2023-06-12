@@ -198,7 +198,7 @@
     font-size: 14px;
     line-height: 7px;
     position: relative;
-    text-align: center;
+    text-align: justify;
     letter-spacing: -0.04em;
     color: #FFFFFF;
 }
@@ -218,7 +218,6 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    width: 455px;
     height: 444px;
     gap: 80px;
     background: rgba(255, 255, 255, 0.6);
@@ -227,6 +226,7 @@
     backdrop-filter: blur(15px);
     border-radius: 26px;
     z-index: 999999;
+    padding: 0px 30px;
 }
 .inputPopupHeader{
     height: 20.3px;
@@ -236,7 +236,7 @@
     line-height: 0px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     letter-spacing: -0.02666em;
     color: #ED401A;
 }
@@ -249,7 +249,7 @@
     line-height: 24px;
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
     color: #727272;
 }
 .inputPopupImg{
@@ -276,7 +276,7 @@
     line-height: 16px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     color: #727272;
 }
 
@@ -359,4 +359,7 @@
 .mobile .communication{
     bottom: 60px;
     right: auto;
+}
+.mobile .inputDonePopup{
+    width: 75%;
 }

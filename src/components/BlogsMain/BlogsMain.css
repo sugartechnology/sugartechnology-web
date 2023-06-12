@@ -53,7 +53,7 @@
     line-height: 26px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -66,7 +66,7 @@
     line-height: 30px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     color: #F5F5F5;
     z-index: 1;
     position: relative;
@@ -81,7 +81,7 @@
     line-height: 26px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     color: #FFFFFF;
     z-index: 1;
     position: relative;

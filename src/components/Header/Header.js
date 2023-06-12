@@ -204,8 +204,8 @@ export const Header = props => {
                                 <a href='/productTable' className='popupItem'>Tablo</a>
                                 <a href='/productBathroom' className='popupItem'>Banyo Mobilya</a>
                                 <a href='/productWhiteGoods' className='popupItem'>Beyaz Eşya</a>
-                                <a href='/productDekorasyon' className='popupItem'>Dekorasyon</a>
-                                <a href='/productTekstil' className='popupItem'>Tekstil</a>
+                                <a href='/productDecoration' className='popupItem'>Dekorasyon</a>
+                                <a href='/productTextile' className='popupItem'>Tekstil</a>
                             </div>
                             <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
                             <div className='popupRouterMobile' id='routerJointMobile'>
@@ -277,8 +277,8 @@ export const Header = props => {
                             <a href='/productTable' className='popupItem'>Tablo</a>
                             <a href='/productBathroom' className='popupItem'>Banyo Mobilya</a>
                             <a href='/productWhiteGoods' className='popupItem'>Beyaz Eşya</a>
-                            <a href='/productDekorasyon' className='popupItem'>Dekorasyon</a>
-                            <a href='/productTekstil' className='popupItem'>Tekstil</a>
+                            <a href='/productDecoration' className='popupItem'>Dekorasyon</a>
+                            <a href='/productTextile' className='popupItem'>Tekstil</a>
                         </div>
                         <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
                         <div className='secondPopupSecondOption'><a href='/productJoint' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("createProduct")}</a></div>

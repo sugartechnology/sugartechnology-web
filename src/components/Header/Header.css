@@ -83,7 +83,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    text-align: center;
+    text-align: justify;
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -295,7 +295,7 @@
     font-weight: 700;
     font-size:  13px;
     line-height: 30px;
-    text-align: center;
+    text-align: justify;
     text-transform: capitalize;
     color: #9E1908;
 }
@@ -358,7 +358,7 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
-    text-align: center;
+    text-align: justify;
     color: #FFFFFF;
 }
 

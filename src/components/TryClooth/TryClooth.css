@@ -61,13 +61,13 @@
 .tablet .tryCloothHeader{
     height: 100px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
 }
 
 .tablet .tryCloothSpan{
     width: 70%;
     height: 150px;
-    text-align: center;
+    text-align: justify;
 }
 
 .tablet .tryCloothBubble{
@@ -103,13 +103,13 @@
 
 .mobile .tryCloothHeader{
     width: 100%;
-    text-align: center;
+    text-align: justify;
     font-size: 30px;
 }
 
 .mobile .tryCloothSpan{
     width: 80%;
-    text-align: center;
+    text-align: justify;
 }
 
 .mobile .tryCloothBubble{

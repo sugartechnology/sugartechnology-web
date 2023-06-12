@@ -27,7 +27,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
+    text-align: justify;
     color: #8A8A8A;
     mix-blend-mode: normal;
 }
@@ -50,7 +50,7 @@
     line-height: 26px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     color: #ED401A;
 }
 .blogsInfoImage{
@@ -90,7 +90,7 @@
 .tablet .blogsInfoHeader{
     font-size: 32px;
     width: 90%;
-    text-align: center;
+    text-align: justify;
 }
 
 .tablet .blogsInfoSpan{
@@ -111,7 +111,7 @@
 .mobile .blogsInfoHeader{
     font-size: 32px;
     width: 90%;
-    text-align: center;
+    text-align: justify;
 }
 
 .mobile .blogsInfoSpan{

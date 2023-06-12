@@ -79,7 +79,7 @@
 .commentCustomer{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: justify;
     width: 100%;
     align-items: center;
 }
@@ -134,7 +134,7 @@
     font-weight: 700;
     font-size: 50px;
     line-height: 52px;
-    text-align: center;
+    text-align: justify;
     text-transform: capitalize;
     color: #000000;
 }
