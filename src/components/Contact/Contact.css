@@ -268,15 +268,13 @@
     height: 1px;
 }
 .inputPopupSecondSpan{
-    width: 336px;
-    height: 26px;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     display: flex;
     align-items: center;
-    text-align: justify;
+    text-align: center;
     color: #727272;
 }
 

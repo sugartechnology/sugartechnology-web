@@ -77,9 +77,9 @@ export const ContactCv = props =>{
     };
 
     function inputDonePopup() {
-        let inputPopup = document.getElementById('inputDonePopup');
-        let overlay = document.getElementById("overlay");
-        let btn = document.getElementById('inputPopupCloseButton');
+        let inputPopup = document.querySelector('#inputDonePopup');
+        let overlay = document.querySelector("#overlay");
+        let btn = document.querySelector('#inputPopupCloseButton');
         inputPopup.style.display = "flex";
         overlay.style.width = "100%";
         overlay.style.height = "100%";
@@ -90,9 +90,9 @@ export const ContactCv = props =>{
         });
     }
     function inputErrorPopup(){
-        let inputPopup = document.getElementById('inputErrorPopup');
-        let overlay = document.getElementById("overlay");
-        let btn = document.getElementById('inputPopupCloseButton');
+        let inputPopup = document.querySelector('#inputErrorPopup');
+        let overlay = document.querySelector("#overlay");
+        let btn = document.querySelector('#inputPopupCloseButton');
         inputPopup.style.display = "flex";
         overlay.style.width = "100%";
         overlay.style.height = "100%";
@@ -201,6 +201,18 @@ export const ContactCv = props =>{
                     <a className='inputPopupSpan'>Your submission has been sent.</a>
                     <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
                     <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
+                </div>
+            </div>
+            <div className='inputDonePopup' id='inputErrorPopup2'>
+                <div className='inputPopupButton'>
+                    <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                </div>
+                <div className='inputPopupSpans'>
+                    <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
+                    <a className='inputPopupHeader'>OOPS!</a>
+                    <a className='inputPopupSpan'>Your submission has been sent.</a>
+                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                    <a className='inputPopupSecondSpan'>Görünüşe göre bazı bilgilerin eksik.</a>
                 </div>
             </div>
         </div>

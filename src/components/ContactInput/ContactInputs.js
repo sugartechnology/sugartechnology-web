@@ -9,6 +9,7 @@ export const ContactInputs = props =>{
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
+    const [error, setError] = useState("");
 
     const handleRecaptchaChange = (response) => {
         setRecaptchaResponse(response);
@@ -16,24 +17,42 @@ export const ContactInputs = props =>{
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-      
-        const response = await fetch("/api/verify-recaptcha", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ recaptchaResponse })
-        });
-      
+    
+        if (!mail || !phone) {
+            informationErrorPopup();
+            return;
+        }
+    
+        const response = await Promise.race([
+            fetch("/api/verify-recaptcha", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ recaptchaResponse })
+            }),
+            new Promise((_, reject) =>
+                setTimeout(() => reject(new Error("Request timeout")), 15000)
+            )
+        ]);
+    
+        if (!response) {
+            inputErrorPopup();
+            return;
+        }
+    
         const result = await response.json();
         if (result.success) {
-          submitForm();
+            submitForm();
         } else {
-          alert("Please verify that you are a human!");
+            inputErrorPopup();
         }
-      }
+    }
+    
+
 
     function submitForm() {
+        setError("");
         const form = {
           name: name,
           email: mail,
@@ -55,26 +74,39 @@ export const ContactInputs = props =>{
     }
     
     function inputDonePopup(e) {
-        let inputPopup = document.getElementById('inputDonePopup');
-        let overlay = document.getElementById("overlay");
-        let btn = document.getElementById('inputPopupCloseButton');
+        let inputPopup = document.querySelector('#inputDonePopup');
+        let overlay = document.querySelector(".contactOverlay");
+        let btn = document.querySelector('.inputPopupCloseButton');
         inputPopup.style.display = "flex";
         overlay.style.width = "100%";
         overlay.style.height = "100%";
-        btn.addEventListener('click', function closeInputPopup(){
+        btn.addEventListener("click", () => {
             inputPopup.style.display = "none";
             overlay.style.width = "0%";
             overlay.style.height = "0%";
         });
     }
     function inputErrorPopup(){
-        let inputPopup = document.getElementById('inputErrorPopup');
-        let overlay = document.getElementById("overlay");
-        let btn = document.getElementById('inputPopupCloseButton');
+        let inputPopup = document.querySelector('#inputErrorPopup');
+        let overlay = document.querySelector(".contactOverlay");
+        let btn = document.querySelector('.inputPopupCloseButton');
         inputPopup.style.display = "flex";
         overlay.style.width = "100%";
         overlay.style.height = "100%";
-        btn.addEventListener('click', function closeInputPopup(){
+        btn.addEventListener("click", () => {
+            inputPopup.style.display = "none";
+            overlay.style.width = "0%";
+            overlay.style.height = "0%";
+        });
+    }
+    function informationErrorPopup(){
+        let inputPopup = document.querySelector('#informationErrorPopup');
+        let overlay = document.querySelector(".contactOverlay");
+        let btn = document.querySelector('.informationErrorButton');
+        inputPopup.style.display = "flex";
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        btn.addEventListener("click", () => {
             inputPopup.style.display = "none";
             overlay.style.width = "0%";
             overlay.style.height = "0%";
@@ -96,7 +128,7 @@ export const ContactInputs = props =>{
                     <div className='nameEmailInputs'>
                         <div className='nameInputs'>
                             <a className='nameInputSpan'>{t("phone")}</a>
-                            <input className='nameEmailInput' placeholder={"+90 5** *** ** **"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
+                            <input className='nameEmailInput' placeholder={"Phone Number"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
                         </div>
                         <div className='emailInputs'>
                             <a className='emailInputSpan'>{t("email")}</a>
@@ -112,8 +144,8 @@ export const ContactInputs = props =>{
                     sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
                     onChange={handleRecaptchaChange}/>
                 <div className='contactInputButtons'>
-                    <button className='sendMessageButton' onClick={submitForm}><a>{t("sendMessage")}</a></button>
+                    <button className='sendMessageButton' onClick={handleSubmit}><a>{t("sendMessage")}</a></button>
                 </div>
-            </div>
+        </div>
     );
 }
