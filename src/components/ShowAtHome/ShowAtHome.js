@@ -48,7 +48,7 @@ export const ShowAtHome = props =>{
                 </div>
             </div>
             <div className='showAtHomeImageDiv'>
-                <img className='showAtHomeImage' alt='' src={'./assets/img/ShowAtHomeImage.svg'}></img>
+                <img className='showAtHomeImage' alt='' src={'./assets/img/ShowAtHomeImage.webp'}></img>
             </div>
         </div>
     );

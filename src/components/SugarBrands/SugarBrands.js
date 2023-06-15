@@ -56,21 +56,21 @@ export const SugarBrands = props =>{
             </div>
             <div className='sugarBrands'>
                 <div className='sugarBrand' id='brand1'>
-                    <img className='sugarBrandHomeImg' alt='' src={'./assets/img/istikbalHome.svg'}></img>
+                    <img className='sugarBrandHomeImg' alt='' src={'./assets/img/istikbalHome.webp'}></img>
                     <a className='sugarBrandSpan'>{t("sugarBrand1Span")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. Velit mattis accumsan aenean dignissim fames nisl sed pulvinar. Nullam ut tortor in ac semper enim cursus quisque. Amet felis at consectetur faucibus. At nisl dictum in eu quisque eget. </a>
                     <img className='sugarBrandLogo' alt='' src={'./assets/img/istikbalHomeLogo.svg'}></img>
                     <img className='sugarBrandShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 </div>
                 
                 <div className='sugarBrand' id='brand2'>
-                    <img className='sugarBrandHomeImg' alt='' src={'./assets/img/tepehomeHome.svg'}></img>
+                    <img className='sugarBrandHomeImg' alt='' src={'./assets/img/tepehomeHome.webp'}></img>
                     <a className='sugarBrandSpan'>{t("sugarBrand2Span")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. Velit mattis accumsan aenean dignissim fames nisl sed pulvinar. Nullam ut tortor in ac semper enim cursus quisque. Amet felis at consectetur faucibus. At nisl dictum in eu quisque eget. </a>
                     <img className='sugarBrandLogo' alt='' src={'./assets/img/tepehomeHomeLogo.svg'}></img>
                     <img className='sugarBrandShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 </div>
                 
                 <div className='sugarBrand' id='brand3'>
-                    <img className='sugarBrandHomeImg' alt='' src={'./assets/img/bellonaHome.svg'}></img>
+                    <img className='sugarBrandHomeImg' alt='' src={'./assets/img/bellonaHome.webp'}></img>
                     <a className='sugarBrandSpan'>{t("sugarBrand3Span")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc. Velit mattis accumsan aenean dignissim fames nisl sed pulvinar. Nullam ut tortor in ac semper enim cursus quisque. Amet felis at consectetur faucibus. At nisl dictum in eu quisque eget. </a>
                     <img className='sugarBrandLogo' alt='' src={'./assets/img/bellonaHomeLogo.svg'}></img>
                     <img className='sugarBrandShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>

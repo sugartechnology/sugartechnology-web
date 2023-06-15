@@ -68,7 +68,7 @@ export const SugarGoals = props =>{
                     </div>
                 </div>
             </div>
-            <img className='goalsBubble' alt='' src={'./assets/img/goalsBubble.svg'} ></img>
+            <img className='goalsBubble' alt='' src={'./assets/img/goalsBubble.webp'} ></img>
         </div>
     );
 }

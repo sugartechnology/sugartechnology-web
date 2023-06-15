@@ -6,22 +6,22 @@ export const SugarSquad = props =>{
     const {t} = useTranslation();
     const array = [
         {
-            image: "./assets/img/almiraPp.svg",
+            image: "./assets/img/almiraPp.webp",
             name: "Elmira Ghoreishi",
             position: t("sugarSquadMember1Position")
         },
         {
-            image: "./assets/img/aliPp.svg",
+            image: "./assets/img/aliPp.webp",
             name: "Ali Rıza Yalçın",
             position: t("sugarSquadMember5Position")
         },
         {
-            image: "./assets/img/selcukPp.svg",
+            image: "./assets/img/selcukPp.webp",
             name: "Selçuk Taşlı",
             position: t("sugarSquadMember7Position")
         },
         {
-            image: "./assets/img/eyadPp.svg",
+            image: "./assets/img/eyadPp.webp",
             name: "Muhammad Eyad",
             position: t("sugarSquadMember7Position")
         },
@@ -31,37 +31,37 @@ export const SugarSquad = props =>{
             position: t("sugarSquadMember2Position")
         },
         {
-            image: "./assets/img/tugrulPp.svg",
+            image: "./assets/img/tugrulPp.webp",
             name: "Tuğrul Subekçi",
             position: t("sugarSquadMember6Position")
         },
         {
-            image: "./assets/img/erenPp.svg",
+            image: "./assets/img/erenPp.webp",
             name: "Muhammed Eren Baş",
             position: t("sugarSquadMember7Position")
         },
         {
-            image: "./assets/img/hakkiPp.svg",
+            image: "./assets/img/hakkiPp.webp",
             name: "Hakkı Altan Cebeci",
             position: t("sugarSquadMember7Position")
         },
         {
-            image: "./assets/img/sametPp.svg",
+            image: "./assets/img/sametPp.webp",
             name: "Abdülsamet Sarıkoç",
             position: t("sugarSquadMember4Position")
         },
         {
-            image: "./assets/img/ibrahimPp.svg",
+            image: "./assets/img/ibrahimPp.webp",
             name: "İbrahim Aktaş",
             position: t("sugarSquadMember7Position")
         },
         {
-            image: "./assets/img/nisaPp.svg",
+            image: "./assets/img/nisaPp.webp",
             name: "Nisa Nur Çakıcı",
             position: t("sugarSquadMember7Position")
         },
         {
-            image: "./assets/img/utkuPp.svg",
+            image: "./assets/img/utkuPp.webp",
             name: "Utku Sert",
             position: t("sugarSquadMember7Position")
         },

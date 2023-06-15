@@ -111,14 +111,14 @@ export const SectoralSolution = props =>{
                     <a href='/productAr'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
                 </div>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImg1.svg'} id='rightImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg1.webp'} id='rightImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
             </div>
 
             <div className='solution' id='solution2'>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImg2.svg'} id='leftImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg2.webp'} id='leftImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
                 <div className='solutionSpans' id='rightSpans'>
@@ -135,14 +135,14 @@ export const SectoralSolution = props =>{
                     <a href='/productShoes'><button className='solutionButton'><a>{t("readMore")}</a></button></a>
                 </div>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImg3.svg'} id='rightImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg3.webp'} id='rightImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
             </div>
 
             <div className='solution' id='solution4'>
                 <div className='solutionImage'>
-                    <img alt='' src={'./assets/img/solutionImg4.svg'} id='leftImage'></img>
+                    <img alt='' src={'./assets/img/solutionImg4.webp'} id='leftImage'></img>
                     <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
                 </div>
                 <div className='solutionSpans' id='rightSpans'>

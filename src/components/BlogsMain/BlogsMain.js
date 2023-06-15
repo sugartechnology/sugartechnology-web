@@ -7,29 +7,29 @@ export const BlogsMain = props =>{
         <div className='blogsMainContainer'>
             <div className='squares'>
                 
-                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog1background.svg")'}}>
+                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog1background.webp")'}}>
                         <a href='/sugarBlog1'><button className='squareButton'><a>{t("readMore")}</a></button></a>
                         <a className='squareHeader' href='/sugarBlog1'>{t("squareHeader1")}</a>
-                        <div className='blogAuthor' id='blogAuthor1' style={{gap: "120px"}}>
+                        <div className='blogAuthor' id='blogAuthor1'>
                             <a className='squareHistory'>Feb 1, 2023</a>
                             <a className='squareHistory'>by Şükrü Erdem Şahin</a>
                         </div>
                     </div>
                 
                
-                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog2backgroundMobile.svg")'}}>
+                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog2backgroundMobile.webp")'}}>
                         <a href='/sugarBlog2'><button className='squareButton'><a>{t("readMore")}</a></button></a>
                         <a className='squareHeader' href='/sugarBlog2'>{t("squareHeader2")}</a>
-                        <div className='blogAuthor' id='blogAuthor2' style={{gap: "60px"}}>
+                        <div className='blogAuthor' id='blogAuthor2'>
                             <a className='squareHistory'>Mar 23, 2023</a>
                             <a className='squareHistory'>by Abdurrahman Türkeri</a>
                         </div>
                     </div>
 
-                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog3backgroundMobile.svg")'}}>
+                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog3backgroundMobile.webp")'}}>
                         <a href='/sugarBlog3'><button className='squareButton'><a>{t("readMore")}</a></button></a>
                         <a className='squareHeader' href='/sugarBlog3'>{t("squareHeader3")}</a>
-                        <div className='blogAuthor' id='blogAuthor3' style={{gap: "190px"}}>
+                        <div className='blogAuthor' id='blogAuthor3'>
                             <a className='squareHistory'>May 12, 2023</a>
                             <a className='squareHistory'>by Abdurrahman Türkeri</a>
                         </div>

@@ -11,7 +11,7 @@ export const JointAbout = props =>{
                 <iframe className='jointAboutImage' style={{width: "50%", height: "61%"}}  width="804" height="411" src="https://www.youtube.com/embed/2-es8M8AEgQ" frameborder="0" allowfullscreen></iframe>
                 <img className='jointShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
             </div>
-            <img className='jointAboutBubble' alt='' src={'./assets/img/jointAboutBubble.svg'}></img>
+            <img className='jointAboutBubble' alt='' src={'./assets/img/jointAboutBubble.webp'}></img>
         </div>
     );
 }

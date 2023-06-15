@@ -13,7 +13,7 @@ export const BlogsInfo = props =>{
                 </a>
             </div>
             <div className='blogsInfoImages'>
-                <img className='blogsInfoImage' alt='' src={'./assets/img/blogsInfoImage.svg'}></img>
+                <img className='blogsInfoImage' alt='' src={'./assets/img/blogsInfoImage.webp'}></img>
             </div>
             <div className='blogsInfoItems'>
                 <div className='blogsListItem'>

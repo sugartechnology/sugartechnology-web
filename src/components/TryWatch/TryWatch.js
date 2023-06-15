@@ -11,7 +11,7 @@ export const TryWatch = props =>{
                 <img className='jointAboutImage' alt='' src={'./assets/img/tryWatchImage.svg'}></img>
                 <img className='jointShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
             </div>
-            <img className='jointAboutBubble' alt='' src={'./assets/img/jointAboutBubble.svg'}></img>
+            <img className='jointAboutBubble' alt='' src={'./assets/img/jointAboutBubble.webp'}></img>
         </div>
     );
 }

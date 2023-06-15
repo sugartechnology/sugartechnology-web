@@ -4,16 +4,16 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 export const ContactInputs = props =>{
     const { t } = useTranslation();
-    const [recaptchaResponse, setRecaptchaResponse] = useState("");
+    // const [recaptchaResponse, setRecaptchaResponse] = useState("");
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
     const [error, setError] = useState("");
 
-    const handleRecaptchaChange = (response) => {
-        setRecaptchaResponse(response);
-    }
+    // const handleRecaptchaChange = (response) => {
+    //     setRecaptchaResponse(response);
+    // }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -22,34 +22,33 @@ export const ContactInputs = props =>{
             informationErrorPopup();
             return;
         }
+        submitForm();
     
-        const response = await Promise.race([
-            fetch("/api/verify-recaptcha", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ recaptchaResponse })
-            }),
-            new Promise((_, reject) =>
-                setTimeout(() => reject(new Error("Request timeout")), 15000)
-            )
-        ]);
+        // const response =  Promise.race([
+        //     fetch("/api/verify-recaptcha", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify({ recaptchaResponse })
+        //     }),
+        //     new Promise((_, reject) =>
+        //         setTimeout(() => reject(new Error("Request timeout")), 15000)
+        //     )
+        // ]);
     
-        if (!response) {
-            inputErrorPopup();
-            return;
-        }
+        // if (!response) {
+        //     inputErrorPopup();
+        //     return;
+        // }
     
-        const result = await response.json();
-        if (result.success) {
-            submitForm();
-        } else {
-            inputErrorPopup();
-        }
+        // const result = response.json();
+        // if (result.success) {
+        //     submitForm();
+        // } else {
+        //     inputErrorPopup();
+        // }
     }
-    
-
 
     function submitForm() {
         setError("");
@@ -73,7 +72,7 @@ export const ContactInputs = props =>{
         inputDonePopup.bind(xhr);
     }
     
-    function inputDonePopup(e) {
+    function inputDonePopup() {
         let inputPopup = document.querySelector('#inputDonePopup');
         let overlay = document.querySelector(".contactOverlay");
         let btn = document.querySelector('.inputPopupCloseButton');
@@ -142,7 +141,7 @@ export const ContactInputs = props =>{
                 </div>
                 <ReCAPTCHA
                     sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
-                    onChange={handleRecaptchaChange}/>
+                    /*onChange={handleRecaptchaChange}*/ />
                 <div className='contactInputButtons'>
                     <button className='sendMessageButton' onClick={handleSubmit}><a>{t("sendMessage")}</a></button>
                 </div>

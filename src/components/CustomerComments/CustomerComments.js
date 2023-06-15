@@ -35,7 +35,7 @@ export const CustomerComments = (props) => {
         commentSpan: 'commentSpan4',
         commentHeader: 'İç Mimar ve Ürün Tasarımcısı',
         commentAuthor: 'Serçil Tombak',
-        customerPhoto: 'assets/img/kys.JPG',
+        customerPhoto: 'assets/img/kys.webp',
         companyLogo: 'assets/img/kys_design.svg'
       },
       {

@@ -11,8 +11,8 @@ export const About = props =>{
                 <a href='/aboutUs'><button className='aboutButton'><a>{t("aboutButton")}</a></button></a>
             </div>
             <div className='aboutLogos'>
-                <img className='firstAboutLogo' alt='' src={'./assets/img/firstAboutLogo.svg'}></img>
-                <img className='secondAboutLogo' alt='' src={'assets/img/Objeto_inteligente.svg'}></img>
+                <img className='firstAboutLogo' alt='' src={'./assets/img/firstAboutLogo.webp'}></img>
+                <img className='secondAboutLogo' alt='' src={'assets/img/Objeto_inteligente.webp'}></img>
             </div>
         </div>
     );

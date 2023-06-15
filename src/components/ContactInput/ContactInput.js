@@ -30,7 +30,7 @@ export const ContactInput = props =>{
         <div className='mainPageSmallFigure0 '></div>
             <ContactInputs></ContactInputs>
             <div class="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
-            <div className='inputDonePopup' id='inputDonePopup'>
+                <div className='inputDonePopup' id='inputDonePopup'>
                     <div className='inputPopupButton'>
                         <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                     </div>

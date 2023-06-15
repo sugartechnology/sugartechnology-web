@@ -32,7 +32,7 @@ export const Shoes = props =>{
                 </div>
             </div>
             <div className='shoesImageDiv'>
-                <img className='shoesImage' alt='' src={'./assets/img/shoesImage.svg'}></img>
+                <img className='shoesImage' alt='' src={'./assets/img/shoesImage.webp'}></img>
             </div>
         </div>
     );

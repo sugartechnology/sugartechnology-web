@@ -5,7 +5,7 @@ export const MetaverseProject = props =>{
     const {t} = useTranslation();
     return(
         <div className='MetaverseProjectContainer'>
-            <img className='metaverseProjectBackground' alt='' src={'./assets/img/metaverseProjectBackground.svg'} style={{width: "100%"}}></img>
+            <img className='metaverseProjectBackground' alt='' src={'./assets/img/metaverseProjectBackground.webp'} style={{width: "100%"}}></img>
             
             <div className='metaverseProjectElements'>
                 <a className='metaverseProjectHeader'>{t("metaverseProject")}</a>

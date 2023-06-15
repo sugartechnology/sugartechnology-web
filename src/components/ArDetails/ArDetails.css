@@ -133,7 +133,7 @@
 }
 .arDetailsModelViewer{
     width: 76%;
-    height: 60%;
+    height: 70%;
     border: 1px solid;
 }
 
@@ -162,6 +162,10 @@
 
 /* Reeponsive Mobile Settings */
 
+.mobile .arDetailsContainer{
+    height: 140vh;
+}
+
 .mobile .arDetailsHeader{
     font-size: 29px;
 }
@@ -181,5 +185,6 @@
 }
 
 .mobile .arDetailsModelViewer{
-    height: 40%;
+    width: 90%;
+    height: 60%;
 }

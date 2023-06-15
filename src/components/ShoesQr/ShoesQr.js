@@ -54,17 +54,17 @@ export const ShoesQr = props =>{
                 <a className='shoesQrSpan'>{t("shoesQrSpan")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. </a>
                 <div className='shoesQrShoes'>
                     <div className='qrGroup'>
-                        <button className='shoesButtons' id='shoes1' onClick={selectShoes1}><img alt='' src={'./assets/img/shoes1.svg'}></img></button>
-                        <button className='shoesButtons' id='shoes2' onClick={selectShoes2}><img alt='' src={'./assets/img/shoes2.svg'}></img></button>
+                        <button className='shoesButtons' id='shoes1' onClick={selectShoes1}><img alt='' src={'./assets/img/shoes1.webp'}></img></button>
+                        <button className='shoesButtons' id='shoes2' onClick={selectShoes2}><img alt='' src={'./assets/img/shoes2.webp'}></img></button>
                     </div>
                     <div className='qrGroup'>
-                        <button className='shoesButtons' id='shoes3' onClick={selectShoes3}><img alt='' src={'./assets/img/shoes3.svg'}></img></button>
+                        <button className='shoesButtons' id='shoes3' onClick={selectShoes3}><img alt='' src={'./assets/img/shoes3.webp'}></img></button>
                         <button className='shoesButtons' id='shoes4' onClick={selectShoes4}><img alt='' src={'./assets/img/shoes4.svg'}></img></button>
                     </div>
                 </div>
             </div>
             <div className='shoesQrImg'>
-                <img className='shoesQrPhone' alt='' src={'./assets/img/shoesQrImagePhone.svg'}></img>
+                <img className='shoesQrPhone' alt='' src={'./assets/img/shoesQrImagePhone.webp'}></img>
                 <img className='shoesQr' alt='' src={'./assets/img/QR.svg'} style={{position: "absolute",right: "227px", top: "200px"}}></img>
             </div>
         </div>

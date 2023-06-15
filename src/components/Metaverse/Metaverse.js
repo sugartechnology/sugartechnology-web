@@ -32,7 +32,7 @@ export const Metaverse = props =>{
                 </div>
             </div>
             <div className='metaverseImageDiv'>
-                <img className='metaverseImage' alt='' src={'./assets/img/metaverseBackground.svg'}></img>
+                <img className='metaverseImage' alt='' src={'./assets/img/metaverseImage.webp'}></img>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import './ContactAddress.css';
 
 export const ContactAddress = props =>{
     return(
-        <div className='contactAddressContainer' style={{backgroundImage: 'URL("./assets/img/contactAddressBackground.svg")'}}>
+        <div className='contactAddressContainer' style={{backgroundImage: 'URL("./assets/img/contactAddressBackground.webp")'}}>
             <div className='contactAddressInformation'>
                 <div className='contactAddress'>
                     <img className='contactLogo2' alt='' src={'./assets/img/headerLogo.svg'}></img>

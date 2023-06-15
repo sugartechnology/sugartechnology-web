@@ -7,25 +7,25 @@ export const SugarTeam = props =>{
 
     const array = [
         {
-            image: "./assets/img/SugarTeamLeader1.svg",
+            image: "./assets/img/SugarTeamLeader1.webp",
             name: "Abdurrahman Türkeri",
             position: t("productManagmentHead"),
             comment: t("leader1CommentSpan")
         },
         {
-            image: "./assets/img/SugarTeamLeader2.svg",
+            image: "./assets/img/SugarTeamLeader2.webp",
             name: "Yusuf Fatih Erol",
             position: t("softwareDeliveryHead"),
             comment: t("leader2CommentSpan")
         },
         {
-            image: "./assets/img/SugarTeamLeader3.svg",
+            image: "./assets/img/SugarTeamLeader3.webp",
             name: "Farhad Faal",
             position: t("cgiTeamLeader"),
             comment: t("leader2CommentSpan")
         },
         {
-            image: "./assets/img/erdemPp.svg",
+            image: "./assets/img/erdemPp.webp",
             name: "Şükrü Erdem Şahin",
             position: t("sugarSquadMember3Position"),
             comment: t("leader4CommentSpan")

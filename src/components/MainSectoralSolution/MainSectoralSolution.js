@@ -11,7 +11,7 @@ export const MainSectoralSolution = (props) => {
                 header: t("furnitureHeader"),
                 span: t("furnitureSpan"),
                 link: "/productAr",
-                popupImage: "./assets/img/ShowAtHomeImage.svg"
+                popupImage: "./assets/img/ShowAtHomeImage.webp"
             },
             {
                 url: "./assets/img/solutionImages/halı.svg",
@@ -59,21 +59,21 @@ export const MainSectoralSolution = (props) => {
                 header: t("watchHeader"),
                 span: t("watchSpan"),
                 link: "/productWatch",
-                popupImage: "./assets/img/watchImage.svg"
+                popupImage: "./assets/img/watchImage.webp"
             },
             {
                 url: "./assets/img/solutionImages/ayakkabı.svg",
                 header: t("shoesHeader"),
                 span: t("shoesSpan"), 
                 link: "/productShoes",
-                popupImage: "./assets/img/shoesImage.svg"
+                popupImage: "./assets/img/shoesImage.webp"
             },
             {
                 url: "./assets/img/solutionImages/kıyafet.svg",
                 header: t("cloothHeader"),
                 span: t("cloothSpan"),
                 link: "/productClooth",
-                popupImage: "./assets/img/cloothImage.svg"
+                popupImage: "./assets/img/cloothImage.webp"
             },
             {
                 url: "./assets/img/solutionImages/tekstil.svg",

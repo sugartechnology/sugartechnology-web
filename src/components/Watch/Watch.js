@@ -32,7 +32,7 @@ export const Watch = props =>{
                 </div>
             </div>
             <div className='watchImageDiv'>
-                <img className='watchImage' alt='' src={'./assets/img/watchImage.svg'}></img>
+                <img className='watchImage' alt='' src={'./assets/img/watchImage.webp'}></img>
             </div>
         </div>
     );

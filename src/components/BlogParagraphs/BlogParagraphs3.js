@@ -15,7 +15,7 @@ export const BlogParagraphs3 = props =>{
                     <li className='secondParagraphList'>{t("paragraphList3Span3")}</li>
                     <li className='secondParagraphList'>{t("paragraphList3Span4")}</li>
                 </ul>
-                <img className='paragraphImage' alt='' src={'./assets/img/paragraphImage1.svg'}></img>
+                <img className='paragraphImage' alt='' src={'./assets/img/paragraphImage1.webp'}></img>
             </div>
             <div className='paragraph'>
                 <a className='paragraphSpan'>{t("blogParagraph3Span5")}</a>
@@ -73,7 +73,7 @@ export const BlogParagraphs3 = props =>{
             </div>
             <div className='author'>
                 <div className='authorImage'>
-                    <img style={{width: "100%"}} alt='' src={'./assets/img/SugarTeamLeader1.svg'}></img>
+                    <img style={{width: "100%"}} alt='' src={'./assets/img/SugarTeamLeader1.webp'}></img>
                 </div>
                 <div className='authorSpans'>
                     <a className='authorHeader'>Abdurrahman Türkeri</a>

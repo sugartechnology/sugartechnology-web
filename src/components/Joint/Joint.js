@@ -41,8 +41,8 @@ export const Joint = props =>{
                 </div>
             </div>
             <div className='jointImageDiv'>
-                <img className='jointImage' id='jointDeskopImage' alt='' src={'./assets/img/jointImage.svg'}></img>
-                <img className='jointImage' id='jointMobileImage' alt='' src={'./assets/img/jointImageMobile.svg'}></img>
+                <img className='jointImage' id='jointDeskopImage' alt='' src={'./assets/img/jointImage.webp'}></img>
+                <img className='jointImage' id='jointMobileImage' alt='' src={'./assets/img/jointImageMobile.webp'}></img>
             </div>
         </div>
     );

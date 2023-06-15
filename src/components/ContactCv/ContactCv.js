@@ -13,8 +13,12 @@ export const ContactCv = props =>{
     const [message, setMessage] = useState("");
     const [phone, setPhone] = useState("");
     const [option, setOption] = useState("");
-    const [isHuman, setIsHuman] = useState(false);
+    // const [recaptchaResponse, setRecaptchaResponse] = useState("");
     const [job, setJob] = useState("");
+
+    // const handleRecaptchaChange = (response) => {
+    //     setRecaptchaResponse(response);
+    // }
 
     const handleFileSelect = (event) => {
         const file = event.target.files[0];
@@ -37,23 +41,44 @@ export const ContactCv = props =>{
         setOption('secondOption');
     };
 
-    const handleRecaptchaChange = (value) => {
-        setIsHuman(true);
-    };
-
     function cvDoubleMethod(event){
         handleFileSelect(event);
         setCv(event.target.value);
     }
-
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        if (isHuman) {
-        submitForm();
-        } else {
-        alert("Please verify that you are a human!");
+    
+        if (!mail || !phone) {
+            informationErrorPopup();
+            return;
         }
-    };
+        submitForm();
+    
+        // const response = await Promise.race([
+        //     fetch("/api/verify-recaptcha", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify({ recaptchaResponse })
+        //     }),
+        //     new Promise((_, reject) =>
+        //         setTimeout(() => reject(new Error("Request timeout")), 15000)
+        //     )
+        // ]);
+    
+        // if (!response) {
+        //     inputErrorPopup();
+        //     return;
+        // }
+    
+        // const result = await response.json();
+        // if (result.success) {
+        //     submitForm();
+        // } else {
+        //     inputErrorPopup();
+        // }
+    }
 
     const submitForm = () => {
         const form = {
@@ -102,7 +127,50 @@ export const ContactCv = props =>{
             overlay.style.height = "0%";
         });
     }
+    const closePopup = () => {
+        let inputPopup = document.querySelector(".inputDonePopup");
 
+        inputPopup.style.display = "none";
+    }
+    function inputDonePopup() {
+        let inputPopup = document.querySelector('#inputDonePopup');
+        let overlay = document.querySelector(".contactOverlay");
+        let btn = document.querySelector('.inputPopupCloseButton');
+        inputPopup.style.display = "flex";
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        btn.addEventListener("click", () => {
+            inputPopup.style.display = "none";
+            overlay.style.width = "0%";
+            overlay.style.height = "0%";
+        });
+    }
+    function inputErrorPopup(){
+        let inputPopup = document.querySelector('#inputErrorPopup');
+        let overlay = document.querySelector(".contactOverlay");
+        let btn = document.querySelector('.inputPopupCloseButton');
+        inputPopup.style.display = "flex";
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        btn.addEventListener("click", () => {
+            inputPopup.style.display = "none";
+            overlay.style.width = "0%";
+            overlay.style.height = "0%";
+        });
+    }
+    function informationErrorPopup(){
+        let inputPopup = document.querySelector('#informationErrorPopup');
+        let overlay = document.querySelector(".contactOverlay");
+        let btn = document.querySelector('.informationErrorButton');
+        inputPopup.style.display = "flex";
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        btn.addEventListener("click", () => {
+            inputPopup.style.display = "none";
+            overlay.style.width = "0%";
+            overlay.style.height = "0%";
+        });
+    }
     return(
         <div className='contactCvContainer'>
             <div className='mainPageTopLeftFigure rotate'></div>
@@ -149,7 +217,7 @@ export const ContactCv = props =>{
                 <div className='nameEmailInputs'>
                         <div className='nameInputs'>
                             <a className='nameInputSpan'>{t("phone")}</a>
-                            <input className='nameEmailInput' placeholder={"+90 5** *** ** **"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
+                            <input className='nameEmailInput' placeholder={"Phone Number"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
                         </div>
                         <div className='emailInputs'>
                             <a className='addCvInput'>{t("addCv")}</a>
@@ -163,7 +231,7 @@ export const ContactCv = props =>{
                 </div>
                 <ReCAPTCHA className='contactCvRecaptcha' style={{position: "relative" ,right: "174px" ,top: "130px"}}
                     sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
-                    onChange={handleRecaptchaChange}/>
+                    /*onChange={handleRecaptchaChange}*/ />
                 <div className='contactOptions'>
                 <div className='contactOption'>
                     <input id='firstOption' type='radio' onClick={toggleFirstOption} value='firstOption' checked={option === 'firstOption'} onChange={(e) => setOption(e.target.value)}/>
@@ -180,41 +248,43 @@ export const ContactCv = props =>{
             </div>
 
             <div className='inputDonePopup' id='inputDonePopup'>
-                <div className='inputPopupButton'>
-                    <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    <div className='inputPopupButton'>
+                        <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    </div>
+                    <div className='inputPopupSpans'>
+                        <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
+                        <a className='inputPopupHeader'>Thank You!</a>
+                        <a className='inputPopupSpan'>Your submission has been sent.</a>
+                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                        <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
+                    </div>
                 </div>
-                <div className='inputPopupSpans'>
-                    <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
-                    <a className='inputPopupHeader'>Thank You!</a>
-                    <a className='inputPopupSpan'>Your submission has been sent.</a>
-                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                    <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
+                <div className='inputDonePopup' id='inputErrorPopup'>
+                    <div className='inputPopupButton'>
+                        <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    </div>
+                    <div className='inputPopupSpans'>
+                        <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
+                        <a className='inputPopupHeader'>OOPS!</a>
+                        <a className='inputPopupSpan'>Your submission has been sent.</a>
+                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                        <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
+                        <a></a>
+                    </div>
                 </div>
-            </div>
-            <div className='inputDonePopup' id='inputErrorPopup'>
-                <div className='inputPopupButton'>
-                    <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                <div className='inputDonePopup' id='informationErrorPopup'>
+                    <div class="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
+                    <div className='inputPopupButton'>
+                        <img className='informationErrorButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    </div>
+                    <div className='inputPopupSpans'>
+                        <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
+                        <a className='inputPopupHeader'>OOPS!</a>
+                        <a className='inputPopupSpan'>Your submission has been sent.</a>
+                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                        <a className='inputPopupSecondSpan'>Görünüşe göre bazı bilgilerin eksik.</a>
+                    </div>
                 </div>
-                <div className='inputPopupSpans'>
-                    <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
-                    <a className='inputPopupHeader'>OOPS!</a>
-                    <a className='inputPopupSpan'>Your submission has been sent.</a>
-                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                    <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
-                </div>
-            </div>
-            <div className='inputDonePopup' id='inputErrorPopup2'>
-                <div className='inputPopupButton'>
-                    <img id='inputPopupCloseButton' alt='' src={'./assets/img/inputPopupButton.svg'}></img>
-                </div>
-                <div className='inputPopupSpans'>
-                    <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
-                    <a className='inputPopupHeader'>OOPS!</a>
-                    <a className='inputPopupSpan'>Your submission has been sent.</a>
-                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                    <a className='inputPopupSecondSpan'>Görünüşe göre bazı bilgilerin eksik.</a>
-                </div>
-            </div>
         </div>
     );
 }

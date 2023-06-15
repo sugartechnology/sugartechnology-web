@@ -65977,7 +65977,6 @@ class DimensionHotspot {
     onClick(event) {
     }
     onCameraChange(e) {
-        console.log("onCameraChange", e.detail.source);
         let camera = this.scene.getCamera();
         let position = new Vector3();
         camera.getWorldPosition(position);
@@ -66470,7 +66469,7 @@ const contentTemplate = `
             style="enable-background:new 0 0 32 32;" xml:space="preserve">
             <style type="text/css">
                 .circle {
-                    fill: #ed401a;
+                    fill: #2c3e50;
                 }
 
                 .icon,svg-icon {
@@ -69260,6 +69259,20 @@ class TextureInfoLoader {
         }
         return false;
     }
+    isPowerOfTwo(image) {
+        return MathUtils.isPowerOfTwo(image.width) && MathUtils.isPowerOfTwo(image.height);
+    }
+    resize(image) {
+        if (this.isPowerOfTwo(image))
+            return image;
+        const canvas = document.createElement("canvas");
+        let width = MathUtils.ceilPowerOfTwo(image.width);
+        let height = MathUtils.ceilPowerOfTwo(image.height);
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0, width, height);
+        return canvas;
+    }
     load(onTextureLoad) {
         if (!this.textureInfoUris || this.textureInfoUris.length == 0) {
             return null;
@@ -69267,14 +69280,23 @@ class TextureInfoLoader {
         if (!this.checkPrevious()) {
             return null;
         }
-        const imageLoader = new TextureLoader();
+        const textureLoader = new TextureLoader();
+        const resizeFunc = this.resize.bind(this);
         return Promise.all(this.textureInfoUris.map(tex => {
             const promise = new Promise(((resolve, reject) => {
-                imageLoader.loadAsync(tex.uri).then(r => {
-                    tex.texture.data = r;
+                const texture = new Texture();
+                const loader = new ImageLoader(textureLoader.manager);
+                const url = tex.uri;
+                loader.setCrossOrigin(textureLoader.crossOrigin);
+                loader.setPath(textureLoader.path);
+                loader.load(url, function (image) {
+                    texture.image = resizeFunc(image);
+                    const isJPEG = url.search(/\.jpe?g($|\?)/i) > 0 || url.search(/^data\:image\/jpeg/) === 0;
+                    texture.format = isJPEG ? RGBFormat : RGBAFormat;
+                    texture.needsUpdate = true;
+                    tex.texture.data = texture;
                     if (onTextureLoad)
                         onTextureLoad(tex);
-                    tex.texture.data.uri = tex.uri;
                     resolve(tex);
                 });
             }));
@@ -70134,7 +70156,8 @@ const translations = {
         "ar-screen-shot": "Güç ve Sesi azaltma düğmelerine aynı anda basın.\n \n Bu işe yaramazsa Güç düğmesini birkaç saniye süreyle basılı tutun.\n Ardından Ekran görüntüsü'ne dokunun.",
         "ar_button": "Evinizde Görün",
         "createRender": "Render Al",
-        "informationHeader": "Yanda gördüğünüz ürünü evinizde görebilmek için;",
+        "informationHeader1": "Yanda gördüğünüz ürünü evinizde görebilmek için;",
+        "informationHeader2": "Yukarıda gördüğünüz ürünü evinizde görebilmek için;",
         "informationSpan1": "QR Kodunu Taratın",
         "informationSpan2": "Kameraya İzin Ver",
         "informationSpan3": "Işıklı bir ortamda zemin tebiti yapın",
@@ -70157,7 +70180,8 @@ const translations = {
         "ar-screen-shot": "Press Power and Volume down buttons at the same time.\n \n If that doesn’t work, press and hold the Power button for a few seconds. Then tap Screenshot.",
         "ar_button": "View In Your Space",
         "createRender": "Create Render",
-        "informationHeader": "In order to see the product you see on the side in your home;",
+        "informationHeader1": "In order to see the product you see on the side in your home;",
+        "informationHeader2": "In order for you to see the product you see above in your home,",
         "informationSpan1": "Scan QR Code",
         "informationSpan2": "Allow Camera",
         "informationSpan3": "Check the ground in a lighted environment",
@@ -72444,6 +72468,10 @@ advenced_feature_template.innerHTML = `
         display: none;
     }
 
+    a {
+        font-family: 'Inter' !important;
+    }
+
     .sugar-model-viewer-popup-container{
         font-family: 'Inter';
         position: fixed;
@@ -72505,20 +72533,21 @@ advenced_feature_template.innerHTML = `
         flex-direction: column;
         align-items: center;
         margin-bottom: 40px;
+        justify-content: space-evenly;
     }
 
     .modelSliderSpan{
         position: absolute;
         top: 0px;
         font-style: normal;
-        font-weight: 400;
-        font-size: 13px;
+        font-weight: 500;
+        font-size: 14px;
         line-height: 16px;
         text-align: center;
         color: #1E1E1E;
-        margin: 10px;
         width: 100%;
-        margin-top: 90px;
+        margin-top: 135px;
+        font-family: 'Inter' !important;
     }
 
     #modelSliderSpanMobile{
@@ -72534,8 +72563,6 @@ advenced_feature_template.innerHTML = `
     .modelSliderImgButtons{
         display: flex;
         gap: 10px;
-        position: absolute;
-        bottom: 0px;
         z-index: 1;
     }
     
@@ -72583,6 +72610,7 @@ advenced_feature_template.innerHTML = `
         line-height: 17px;
         text-align: center;
         color: #1E1E1E;
+        font-family: 'Inter' !important;
     }
 
     .modelSliderImg{
@@ -72653,6 +72681,7 @@ advenced_feature_template.innerHTML = `
         align-items: flex-start;
         box-shadow: -4px 0px 9px rgba(0, 0, 0, 0.15);
         position: relative;
+        border-radius: 10px;
     }
 
     
@@ -72697,6 +72726,7 @@ advenced_feature_template.innerHTML = `
         width: 100%;
         display: flex;
         flex: 10%;
+        margin-top: 30px;
     }
 
     .sugar-model-viewer-info .summary-span{
@@ -72862,8 +72892,9 @@ advenced_feature_template.innerHTML = `
         width: 264px;
         height: 100%;
         transition: transform 0.3s ease-in;
-        justify-content: space-between;
+        justify-content: flex-start;
         position: absolute;
+        gap: 6px;
     }
 
     .feature_container{
@@ -72924,6 +72955,7 @@ advenced_feature_template.innerHTML = `
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
+        max-height: 80px;
     }
 
     .feature_child.selected{
@@ -72931,14 +72963,15 @@ advenced_feature_template.innerHTML = `
     }
 
     .feature_name{
-        max-width: min-content;
+        max-width: 60px;
         font-style: normal;
         font-weight: 300;
         font-size: 11px;
         line-height: 12px;
-        letter-spacing: -0.03em;
         color: #707070;
         font-family: 'Inter';
+        text-overflow: elipsis;
+        text-align: center;
     }
     
     .infoShowButtonDiv{
@@ -72981,7 +73014,7 @@ advenced_feature_template.innerHTML = `
     }
 
     .mobile .modelSliderImg{
-        width: 60%;
+        width: 56% !important;
     }
 
     .mobile .modelSliderImgContainer{
@@ -73006,6 +73039,7 @@ advenced_feature_template.innerHTML = `
     }
     
     .mobile .modelSliderImgButtons{
+        position: absolute;
         bottom: 13%;
     }
 
@@ -73102,7 +73136,6 @@ advenced_feature_template.innerHTML = `
         flex-wrap: nowrap;
         height: 100%;
         width: 580px;
-        gap: 13px;
         justify-content: flex-start;
     }
 
@@ -73170,7 +73203,7 @@ advenced_feature_template.innerHTML = `
 
         <div class="summary item">
             <div class="summary-span">
-                <h2 class="productName" id="productName"></h2>
+                <a class="productName" id="productName"></a>
             </div>
             <div class="summary-button" id="createRenderDiv">
                 <div class="create-render-button-up" id="sugarStrokeForInfoShowButton">
@@ -73375,9 +73408,6 @@ class TemplateMananagerAdvanced {
             #createRenderSpan{
                 color: ` + selectColor + `;
             }
-            .sugar_ar_button{
-                background: ` + selectColor + ` !important;
-            }
             .sugarInformationButtonPath{
                 fill: ` + selectColor + `;
             }
@@ -73398,6 +73428,9 @@ class TemplateMananagerAdvanced {
             .sugarDimensionCloseButtonActive{
                 stroke: ` + selectColor + `;
                 fill: white;
+            }
+            span {
+                font-family: 'Inter' !important;
             }
         </style>
         `;
@@ -73435,6 +73468,11 @@ class TemplateMananagerAdvanced {
             this.onResize();
         });
         ro.observe(this.sugarModelViewerContainer);
+        const isPanelOpen = this.element.getAttribute("is-panel-open");
+        if (isPanelOpen !== "true") {
+            let sugarModelViewerInfo = document.querySelector(".sugar-model-viewer-info");
+            sugarModelViewerInfo.classList.add("close");
+        }
     }
     onResize() {
         const { width, height } = this.sugarModelViewerContainer.getBoundingClientRect();
@@ -73487,7 +73525,7 @@ class TemplateMananagerAdvanced {
         let parent = this.sugarModelViewerContainer;
         this.modelInfoContainer = parent === null || parent === void 0 ? void 0 : parent.querySelector('#modelInfo');
         this.element.parentElement.appendChild((advanced_icons).content.cloneNode(true));
-        let parts = this.element.serviceData.parts;
+        let parts = this.element.serviceData.partMaterialGroups;
         let productName = parent === null || parent === void 0 ? void 0 : parent.querySelector('#productName');
         productName.innerHTML = this.element.serviceData.name;
         let createRenderButton = parent.querySelector(".createRenderDiv");
@@ -73503,6 +73541,10 @@ class TemplateMananagerAdvanced {
         this.carouselContainer.innerHTML = "";
         parent.appendChild(this.modelInfoContainer);
         this.modelInfoContainer.insertBefore(this.carouselContainer, createRenderButton);
+		if (window.innerWidth < 500) {
+            let sugarModelViewerInfo = document.querySelector(".sugar-model-viewer-info");
+            sugarModelViewerInfo.classList.add("close");
+        }
         parts.forEach((part, i) => {
             var childElementNode = this.createCouraselButtonForPart(part, i, carouselsElementTemplate);
             var currentPageElement;
@@ -73512,8 +73554,12 @@ class TemplateMananagerAdvanced {
             var featurePagesDiv = document.createElement("div");
             featurePagesDiv.classList.add("featurePagesDiv");
             childElementNode.appendChild(featurePagesDiv);
-            var numPages = Math.ceil(part.materials.length / 8);
-            part.materials.forEach((materialId, index) => {
+            const materialsSet = this.element.serviceData.parts.filter(p => { return p.code === part.code; });
+            const materials = materialsSet && materialsSet.length > 0 ? materialsSet[0].materials : null;
+            if (!materials)
+                return;
+            var numPages = Math.ceil(materials.length / 8);
+            materials.forEach((materialId, index) => {
                 if (index % 8 === 0) {
                     currentPageElement = document.createElement("div");
                     currentPageElement.className = "feature_page";
@@ -73588,7 +73634,7 @@ class TemplateMananagerAdvanced {
             carouselElement.classList.add("open");
         }
         var nameElement = carouselElement.querySelector(".bigSpan");
-        nameElement.innerHTML = part.name;
+        nameElement.innerHTML = part.title;
         var featureButtonElement = carouselElement.querySelector(".featureButtons");
         featureButtonElement.setAttribute("index", "" + i);
         featureButtonElement.addEventListener("click", this.selectFeatures.bind(this), true);
@@ -73637,11 +73683,11 @@ class TemplateMananagerAdvanced {
         let modelSliderSpan = document.createElement("a");
         modelSliderSpan.classList.add("modelSliderSpan");
         modelSliderSpan.id = ("modelSliderSpan");
-        modelSliderSpan.innerHTML = "Yanda gördüğünüz ürünü evinizde görebilmek için;";
+        modelSliderSpan.setAttribute("sugar-localization-key", "informationHeader1");
         let modelSliderSpanMobile = document.createElement("a");
         modelSliderSpanMobile.classList.add("modelSliderSpan");
         modelSliderSpanMobile.id = ("modelSliderSpanMobile");
-        modelSliderSpanMobile.innerHTML = "Yukarıda gördüğünüz ürünü evinizde görebilmek için;";
+        modelSliderSpanMobile.setAttribute("sugar-localization-key", "informationHeader2");
         let modelSliderImgContainer = document.createElement("div");
         modelSliderImgContainer.classList.add("modelSliderImgContainer");
         let modelSliderImgButtons = document.createElement("div");
@@ -73652,32 +73698,34 @@ class TemplateMananagerAdvanced {
         sugarTechLogo.classList.add("sugarTechLogo");
         sugarTechLogo.src = 'https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sugarTechLogo.svg';
         let sugarDataURl = this.element.getQrImage();
-        const array = [
+        const arHelpersArray = this.element.serviceData.arHelpers;
+        const defaultArray = [
             {
                 url: sugarDataURl,
-                span: "QR Kodunu Taratın"
+                explanation: "QR Kodunu Taratın"
             },
             {
                 url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage2.png",
-                span: "Kameraya İzin Ver"
+                explanation: "Kameraya İzin Ver"
             },
             {
                 url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage3.png",
-                span: "Işıklı bir ortamda zemin tebiti yapın"
+                explanation: "Işıklı bir ortamda zemin tebiti yapın"
             },
             {
                 url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage4.png",
-                span: "Ürünü yerleştirin ve taşıyın"
+                explanation: "Ürünü yerleştirin ve taşıyın"
             },
             {
                 url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage5.png",
-                span: "Ürünü çift parmakla veya altından çevirin"
+                explanation: "Ürünü çift parmakla veya altından çevirin"
             },
             {
                 url: "https://s3.eu-central-1.amazonaws.com/cdn.sugartech/mottobucket/CDN/sugar-viewer/sliderImage6.png",
-                span: "Fotoğraf çekin veya video kaydı alın"
+                explanation: "Fotoğraf çekin veya video kaydı alın"
             }
         ];
+        const array = arHelpersArray === null || arHelpersArray.length === 0 ? defaultArray : arHelpersArray;
         array.forEach((item, i) => {
             if (i == 0 && window.innerWidth < 500) {
                 return;
@@ -73705,7 +73753,7 @@ class TemplateMananagerAdvanced {
             helpImage.src = item.url;
             modelSliderImageSpans.className = "modelSliderImageSpans";
             modelSliderImageSpan.className = "modelSliderImageSpan";
-            modelSliderImageSpan.innerHTML = item.span;
+            modelSliderImageSpan.innerHTML = item.explanation;
             modelSliderImgButtons.appendChild(modelSliderImgButton);
             modelSliderImgContainer.appendChild(modelSliderImages);
             modelSliderImgContainer.style.position = "relative";
@@ -73713,8 +73761,8 @@ class TemplateMananagerAdvanced {
             modelSliderImages.append(modelSliderImageSpans);
             modelSliderImageSpans.appendChild(modelSliderImageSpan);
         });
-        sugarModelSlider.appendChild(modelSliderImgButtons);
         sugarModelSlider.appendChild(modelSliderImgContainer);
+        sugarModelSlider.appendChild(modelSliderImgButtons);
         sugarBottomLogo.appendChild(sugarTechLogo);
         sugarInformationContainer.appendChild(modelSliderSpanMobile);
         sugarInformationContainer.appendChild(modelSliderSpan);
@@ -74047,6 +74095,8 @@ class SugarModelViewerElementBase extends ModelViewerElementBase {
         this.style.width = "90%";
     }
     hideSugarViewerStyle() {
+        let popupTriggerElement = document.body.querySelector(this.popupId);
+        popupTriggerElement.style.display = "none";
         let companyId = this.companyId ? this.companyId : this.company_id;
         if (companyId == "2")
             return;
@@ -75890,6 +75940,9 @@ configuration or device capabilities');
             anchor.setAttribute('download', "asset.usdz");
             anchor.click();
             anchor.removeChild(img);
+            setTimeout(() => {
+                this.hideLoading();
+            }, 5000);
         }
         [$tick](_time, _delta) {
             if (this[$cameraArRender])
@@ -76903,8 +76956,8 @@ sugar_QRButton_template.innerHTML = `
 }
 
 .QRImage{
-    width: 70%;
-    margin: auto;
+    width: 75%;
+    margin-left: 20px;
 }
 
 /* The Close Button */
@@ -76954,7 +77007,28 @@ sugar_QRButton_template.innerHTML = `
     <div id="qrCode" class="qrCode">
         
     </div>
-    <img class="popupBackground" src="src/png/popupBackground.svg" alt="">
+        <svg class="popupBackground" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="304" height="304" viewBox="0 0 304 304" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M47.2479 0.000244141H256.171C279.819 0.000244141 301.943 19.1658 301.943 45.7598V138.143C302.803 138.447 303.419 139.267 303.419 140.231V201.49C303.419 202.454 302.803 203.274 301.943 203.578V573.916C301.943 600.51 279.819 619.676 256.171 619.676H47.2479C23.6 619.676 1.47661 600.51 1.47661 573.916V213.173C0.616415 212.869 0.00012207 212.049 0.00012207 211.085V175.658C0.00012207 174.694 0.616415 173.874 1.47661 173.57V160.033C0.616415 159.729 0.00012207 158.909 0.00012207 157.945V122.518C0.00012207 121.554 0.616415 120.734 1.47661 120.43V102.464C0.616415 102.16 0.00012207 101.34 0.00012207 100.376V81.9247C0.00012207 80.9606 0.616415 80.1404 1.47661 79.8365V45.7598C1.47661 19.1658 23.6 0.000244141 47.2479 0.000244141Z" fill="#F4F4F4"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M47.2478 2.95703H256.171C279.819 2.95703 298.99 22.1226 298.99 45.7644C298.99 222.442 298.99 395.808 298.99 573.92C298.99 597.562 279.819 616.727 256.171 616.727H47.2478C23.6 616.727 4.42957 597.562 4.42957 573.92C4.42957 394.077 4.42957 219.899 4.42957 45.7644C4.42957 22.1226 23.6 2.95703 47.2478 2.95703Z" fill="url(#paint0_linear_108_1809)"/>
+        <path d="M183.914 23.2749C184.952 23.2749 185.794 22.4325 185.794 21.3934C185.794 20.3543 184.952 19.512 183.914 19.512C182.876 19.512 182.034 20.3543 182.034 21.3934C182.034 22.4325 182.876 23.2749 183.914 23.2749Z" fill="#DEDEDE"/>
+        <path d="M166.485 23.8307H137.915C136.574 23.8307 135.48 22.7358 135.48 21.3941C135.48 20.0524 136.574 18.9574 137.915 18.9574H166.485C167.826 18.9574 168.92 20.0524 168.92 21.3941C168.92 22.7358 167.826 23.8307 166.485 23.8307Z" fill="#DEDEDE"/>
+        <mask id="mask0_108_1809" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="15" y="13" width="274" height="593">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3529 45.5815C15.3224 46.1722 15.3069 46.7668 15.3069 47.3651V571.779C15.3069 590.511 30.4821 605.697 49.2018 605.697H254.489C273.209 605.697 288.384 590.511 288.384 571.779V47.3651C288.384 47.2919 288.384 47.2188 288.383 47.1457C288.265 28.514 273.136 13.4465 254.489 13.4465H214.047C211.732 13.4465 209.688 15.1409 209.688 17.9876C209.688 18.6902 209.658 21.8193 209.599 22.5077C208.903 30.653 203.301 35.936 195.802 35.936H107.889C100.528 35.936 94.9483 30.8807 94.1296 22.913C94.0454 22.0935 94.003 18.8285 94.003 17.9876C94.003 15.1409 92.2505 13.4465 89.6438 13.4465H49.2018C40.7557 13.4465 33.0312 16.5379 27.0964 21.6517C24.8102 23.6217 22.7895 25.8918 21.0956 28.4009C17.7521 33.3533 15.6814 39.2368 15.3529 45.5815Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_108_1809)">
+        <rect x="15.7012" y="13.5912" width="273.074" height="592.251" fill="url(#pattern0)"/>
+        </g>
+        <defs>
+        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlink:href="#image0_108_1809" transform="matrix(0.00361471 0 0 0.00166667 -0.584413 0)"/>
+        </pattern>
+        <linearGradient id="paint0_linear_108_1809" x1="151.393" y1="2.94194" x2="61.7692" y2="820.193" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#EBEBEB"/>
+        <stop offset="1" stop-color="#E1E1E1"/>
+        </linearGradient>
+        <image id="image0_108_1809" width="600" height="600" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYCAIAAAAxBA+LAAAAAXNSR0IArs4c6QAACOdJREFUeJzt1TEBACAMwDDAv+chY0cTBf16Z+YAQNXbDgCATUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApBmhACkGSEAaUYIQJoRApD2AaAWB63g0rRFAAAAAElFTkSuQmCC"/>
+        </defs>
+    </svg>
     <div class="QrInformTest" slot="QrInformTest" sugar-localization-key="qr-info-text">
         <span sugar-localization-key="qrInformText">*Bu özelliği kullanabilmek için arttırılmış gerçeklik destekleyen akıllı telefona ihtiyacınız var.*</span>
     </div>
@@ -77162,7 +77236,9 @@ const MaterialGroupMixin = (ModelViewerElement) => {
         async applyDefaultMaterialOnLoad() {
             if (this.serviceData.partMaterialGroups) {
                 this.serviceData.partMaterialGroups.forEach(async (partGroup) => {
-                    if (partGroup.defaultMaterialCode && partGroup.defaultMaterialCode > 0)
+                    if (partGroup.defaultMaterialCode
+                        && partGroup.defaultMaterialCode !== ""
+                        && partGroup.defaultMaterialCode !== "0")
                         await this.changeMaterialByGroup(partGroup.defaultMaterialCode, partGroup.code);
                 });
             }
@@ -77251,7 +77327,7 @@ const MaterialGroupMixin = (ModelViewerElement) => {
             let material = this.serviceData.materials.find((a) => {
                 if (lambdaFunc)
                     return lambdaFunc(a);
-                return a.id == materialCode;
+                return a.id == materialCode ||  a.groupBy_ == materialCode;
             });
             let materialLoadInputData = this.mergeMaterialAndPart(material, parts);
             let productId = this.productId ? this.productId : this.product_id;

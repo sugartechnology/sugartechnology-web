@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export const ContactInform = props =>{
     const { t } = useTranslation();
     return(
-        <div className="contactInformContainer" style={{backgroundImage: 'URL("./assets/img/contactInformBackground.svg")'}}>
+        <div className="contactInformContainer" style={{backgroundImage: 'URL("./assets/img/contactInformBackground.webp")'}}>
             <div class="contactInformOverlay" style={{zIndex: "1"}}></div>
             <div className='contactInform'>
                 <a className='contactInformHeader'>{t("")}Lorem ipsum sit amet consectetur.</a>

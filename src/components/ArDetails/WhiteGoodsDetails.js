@@ -16,7 +16,7 @@ export const WhiteGoodsDetails = props =>{
                     <img className='modelViewerShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{opacity: "0.5", position: "absolute", width: "76%", zIndex: "-1"}}></img>
                 </div>
             </div>
-            <img className='arDetailsBubble' alt='' src={'./assets/img/ArDetailsImg2.svg'} style={{position: "absolute", bottom: "0px", left: "0px", zIndex: "-1"}}></img>
+            <img className='arDetailsBubble' alt='' src={'./assets/img/ArDetailsImg2.webp'} style={{position: "absolute", bottom: "0px", left: "0px", zIndex: "-1"}}></img>
         </div>
     );
 }

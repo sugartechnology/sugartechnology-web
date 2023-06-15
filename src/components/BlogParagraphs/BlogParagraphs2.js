@@ -19,7 +19,7 @@ export const BlogParagraphs2 = props =>{
            
             <div className='author'>
                 <div className='authorImage' style={{width: "30%"}}>
-                    <img style={{width: "100%"}} alt='' src={'./assets/img/SugarTeamLeader1.svg'}></img>
+                    <img style={{width: "100%"}} alt='' src={'./assets/img/SugarTeamLeader1.webp'}></img>
                 </div>
                 <div className='authorSpans'>
                     <a className='authorHeader'>Abdurrahman Türkeri</a>
