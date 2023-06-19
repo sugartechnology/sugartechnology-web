@@ -22,6 +22,8 @@ export const ContactInputs = props =>{
             informationErrorPopup();
             return;
         }
+        showLoadingPopup();
+    
         submitForm();
     
         // const response =  Promise.race([
@@ -61,55 +63,56 @@ export const ContactInputs = props =>{
         sendFormData(form);
     }
   
-    function sendFormData(form) {
-        
+    const sendFormData = (form) => {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
-        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader("Content-Type", "application/json");
+      
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              inputDonePopup();
+            } else {
+              inputErrorPopup();
+            }
+          }
+        };
+      
         xhr.send(JSON.stringify(form));
-        xhr.onreadystatechange = 
-        
-        inputDonePopup.bind(xhr);
-    }
-    
+    };
+
     function inputDonePopup() {
         let inputPopup = document.querySelector('#inputDonePopup');
-        let overlay = document.querySelector(".contactOverlay");
-        let btn = document.querySelector('.inputPopupCloseButton');
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "none";
         inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener("click", () => {
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
     }
     function inputErrorPopup(){
         let inputPopup = document.querySelector('#inputErrorPopup');
-        let overlay = document.querySelector(".contactOverlay");
-        let btn = document.querySelector('.inputPopupCloseButton');
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "none";
         inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener("click", () => {
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
     }
     function informationErrorPopup(){
         let inputPopup = document.querySelector('#informationErrorPopup');
-        let overlay = document.querySelector(".contactOverlay");
-        let btn = document.querySelector('.informationErrorButton');
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "none";
         inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener("click", () => {
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
+    }
+    function showLoadingPopup(){
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        
+        informationLoadingPopup.style.display = "flex";
+        
     }
     return(
         <div className='contactInputs'>

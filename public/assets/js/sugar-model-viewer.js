@@ -72025,12 +72025,7 @@ feature_template.innerHTML = `
             display: none;
         }
 
-        .feature_container .feature_child a img {
-            width: 5em;
-        }
-
         .feature_container .feature_child {
-            margin: .5em;
             cursor: pointer;
         }
 
@@ -72681,7 +72676,6 @@ advenced_feature_template.innerHTML = `
         align-items: flex-start;
         box-shadow: -4px 0px 9px rgba(0, 0, 0, 0.15);
         position: relative;
-        border-radius: 10px;
     }
 
     
@@ -72889,10 +72883,10 @@ advenced_feature_template.innerHTML = `
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        width: 264px;
+        width: 100%;
         height: 100%;
         transition: transform 0.3s ease-in;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         position: absolute;
         gap: 6px;
     }
@@ -73473,6 +73467,10 @@ class TemplateMananagerAdvanced {
             let sugarModelViewerInfo = document.querySelector(".sugar-model-viewer-info");
             sugarModelViewerInfo.classList.add("close");
         }
+        if (window.innerWidth < 500) {
+            let sugarModelViewerInfo = document.querySelector(".sugar-model-viewer-info");
+            sugarModelViewerInfo.classList.add("close");
+        }
     }
     onResize() {
         const { width, height } = this.sugarModelViewerContainer.getBoundingClientRect();
@@ -73634,7 +73632,7 @@ class TemplateMananagerAdvanced {
             carouselElement.classList.add("open");
         }
         var nameElement = carouselElement.querySelector(".bigSpan");
-        nameElement.innerHTML = part.title;
+        nameElement.innerHTML = part.code;
         var featureButtonElement = carouselElement.querySelector(".featureButtons");
         featureButtonElement.setAttribute("index", "" + i);
         featureButtonElement.addEventListener("click", this.selectFeatures.bind(this), true);

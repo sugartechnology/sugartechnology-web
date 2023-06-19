@@ -210,7 +210,7 @@
 }
 .inputPopupButton img{
     position: absolute;
-    right: 10px;
+    right: 0px;
     top: 10px;
     cursor: pointer;
 }
@@ -218,7 +218,7 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    height: 444px;
+    height: 47vh;
     gap: 80px;
     background: rgba(255, 255, 255, 0.6);
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -257,7 +257,6 @@
 }
 .inputPopupSpans{
     position: relative;
-    top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,7 +270,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 7px;
     display: flex;
     align-items: center;
     text-align: center;

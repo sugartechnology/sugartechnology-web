@@ -5,9 +5,14 @@ import { ContactInputs } from './ContactInputs';
 export const ContactInput = props =>{
     const {t} = useTranslation();
     const closePopup = () => {
-        let inputPopup = document.querySelector(".inputDonePopup");
-
+        let inputPopup = document.querySelector("#inputDonePopup");
+        let inputErrorPopup = document.querySelector("#inputErrorPopup");
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        let informationErrorPopup = document.querySelector("#informationErrorPopup");
         inputPopup.style.display = "none";
+        inputErrorPopup.style.display = "none";
+        informationLoadingPopup.style.display = "none";
+        informationErrorPopup.style.display = "none";
     }
     return(
         <div className='contactInputContainer'>
@@ -36,10 +41,10 @@ export const ContactInput = props =>{
                     </div>
                     <div className='inputPopupSpans'>
                         <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
-                        <a className='inputPopupHeader'>Thank You!</a>
-                        <a className='inputPopupSpan'>Your submission has been sent.</a>
+                        <a className='inputPopupHeader'>{t("contactHeaderSuccesfuly")}</a>
+                        <a className='inputPopupSpan'>{t("contactSpanSuccesfuly")}</a>
                         <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanSuccesfuly")}</a>
                     </div>
                 </div>
                 <div className='inputDonePopup' id='inputErrorPopup'>
@@ -48,11 +53,35 @@ export const ContactInput = props =>{
                     </div>
                     <div className='inputPopupSpans'>
                         <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
-                        <a className='inputPopupHeader'>OOPS!</a>
-                        <a className='inputPopupSpan'>Your submission has been sent.</a>
+                        <a className='inputPopupHeader'>{t("contactHeaderError")}</a>
+                        <a className='inputPopupSpan'>{t("contactSpanError")}</a>
                         <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
-                        <a></a>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanError")}</a>
+                        <a className='inputPopupSecondSpan'>{t("contactThirdSpanError")}</a>
+                        <a className='inputPopupSecondSpan'>hello@sugartech.io && +905342843427</a>
+                    </div>
+                </div>
+                <div className='inputDonePopup' id='informationLoadingPopup'>
+                    <div class="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
+                    <div className='inputPopupButton'>
+                        <img className='informationLoadingButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    </div>
+                    <div className='inputPopupSpans'>
+                        <a className='inputPopupHeader'>{t("contactHeaderLoading")}</a>
+                        <div class="loading-animation">
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                        </div>
+                        <a className='inputPopupSpan'>{t("contactSpanLoading")}</a>
+                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanLoading")}</a>
                     </div>
                 </div>
                 <div className='inputDonePopup' id='informationErrorPopup'>
@@ -62,10 +91,10 @@ export const ContactInput = props =>{
                     </div>
                     <div className='inputPopupSpans'>
                         <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
-                        <a className='inputPopupHeader'>OOPS!</a>
-                        <a className='inputPopupSpan'>Your submission has been sent.</a>
+                        <a className='inputPopupHeader'>{t("contactHeaderFail")}</a>
+                        <a className='inputPopupSpan'>{t("contactSpanFail")}</a>
                         <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>Görünüşe göre bazı bilgilerin eksik.</a>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanFail")}</a>
                     </div>
                 </div>
         </div>

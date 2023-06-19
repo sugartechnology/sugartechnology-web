@@ -40,7 +40,6 @@ export const Header = props => {
         
     }
     const showPopupMobile = ()=>{
-        var motherPopup = document.getElementById("mobileHeaderPopup");
         var firstMobilePopup = document.getElementById("firstMobilePopup");
         var firstChildPopup = document.getElementById("firstChildPopup");
         var secondChildPopup = document.getElementById("secondChildPopup");
@@ -49,7 +48,6 @@ export const Header = props => {
         var btn = document.getElementById("productMobileButton");
         if(firstMobilePopup.style.display === "none"){
             firstMobilePopup.style.display = "flex";
-            motherPopup.style.height = "650px";
             btn.style.transform = "rotate(+90deg)";
             span.style.color = "#ED401A";
             btn.style.transform = "rotate(+90deg)";
@@ -57,7 +55,6 @@ export const Header = props => {
         }
         else{
             firstMobilePopup.style.display = "none";
-            motherPopup.style.height = "430px";
             firstChildPopup.style.display = "none";
             secondChildPopup.style.display = "none";
             div.style.background = "#FFFFFF";
@@ -67,14 +64,12 @@ export const Header = props => {
     }
     const showFirstChildPopup = () => {
        var firstChildPopup = document.getElementById("firstChildPopup");
-       var motherPopup = document.getElementById("mobileHeaderPopup");
        var secondChildPopup = document.getElementById("secondChildPopup");
        var span = document.getElementById("routerShowAtHomeMobileSpan");
        var btn = document.getElementById("showAtHomeMobileButton");
        var btn2 = document.getElementById("vtonMobileButton");
         var span2 = document.getElementById("routerVtonMobileSpan");
        if(firstChildPopup.style.display === "none"){
-        motherPopup.style.height = "666px";
         firstChildPopup.style.display = "flex";
         secondChildPopup.style.display = "none";
         btn.style.transform = "rotate(+90deg)";
@@ -85,20 +80,17 @@ export const Header = props => {
        else{
         firstChildPopup.style.display = "none";
         btn.style.transform = "none";
-        motherPopup.style.height = "570px";
         span.style.color = "#000000";
        }
     }
     const showSecondChildPopup = () => {
         var firstChildPopup = document.getElementById("firstChildPopup");
-        var motherPopup = document.getElementById("mobileHeaderPopup");
         var secondChildPopup = document.getElementById("secondChildPopup");
         var btn = document.getElementById("vtonMobileButton");
         var span = document.getElementById("routerVtonMobileSpan");
         var span2 = document.getElementById("routerShowAtHomeMobileSpan");
         var btn2 = document.getElementById("showAtHomeMobileButton");
         if(secondChildPopup.style.display === "none"){
-            motherPopup.style.height = "666px";
             secondChildPopup.style.display = "flex";
             firstChildPopup.style.display = "none";
             btn.style.transform = "rotate(+90deg)";
@@ -109,7 +101,6 @@ export const Header = props => {
         else{
             secondChildPopup.style.display = "none";
             btn.style.transform = "none";
-            motherPopup.style.height = "570px";
             span.style.color = "#000000";
         }
     }
@@ -169,11 +160,6 @@ export const Header = props => {
                 <div className='backToHome' onClick={showMobilePopup}>
                     <img className='backToHomeArrow' alt='' src={'./assets/img/arrow-left.svg'}></img>
                     <a className='backToHomeSpan'>{t("backToHome")}</a>
-                </div>
-                <img alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px"}}></img>
-                <div className='backToHomeInputs'>
-                    <input className='backToHomeInput' type='text' placeholder='Search for'></input>
-                    <img alt='' src={'./assets/img/search.svg'} style={{position: "absolute", right: "30px", top: "64px"}}></img>
                 </div>
                 <img alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px"}}></img>
                 <div className="popupRouters">

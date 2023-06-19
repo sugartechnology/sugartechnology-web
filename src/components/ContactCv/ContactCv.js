@@ -1,8 +1,7 @@
 import './ContactCv.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation} from "react-i18next";
 import ReCAPTCHA from 'react-google-recaptcha';
-import { Cookies } from '../Cookies/Cookies';
 
 export const ContactCv = props =>{
 
@@ -52,9 +51,7 @@ export const ContactCv = props =>{
             informationErrorPopup();
             return;
         }
-        submitForm();
-    
-        // const response = await Promise.race([
+        // const response =  Promise.race([
         //     fetch("/api/verify-recaptcha", {
         //         method: "POST",
         //         headers: {
@@ -72,12 +69,17 @@ export const ContactCv = props =>{
         //     return;
         // }
     
-        // const result = await response.json();
+        // const result = response.json();
         // if (result.success) {
         //     submitForm();
         // } else {
         //     inputErrorPopup();
         // }
+
+        showLoadingPopup();
+    
+        submitForm();
+        
     }
 
     const submitForm = () => {
@@ -92,84 +94,65 @@ export const ContactCv = props =>{
             };
             sendFormData(form);
     };
-
     const sendFormData = (form) => {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
-        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader("Content-Type", "application/json");
+      
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                inputDonePopup();
+                } else {
+                inputErrorPopup();
+                }
+            }
+        };
+      
         xhr.send(JSON.stringify(form));
-        inputDonePopup();
     };
-
-    function inputDonePopup() {
-        let inputPopup = document.querySelector('#inputDonePopup');
-        let overlay = document.querySelector("#overlay");
-        let btn = document.querySelector('#inputPopupCloseButton');
-        inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener('click', function closeInputPopup(){
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
-    }
-    function inputErrorPopup(){
-        let inputPopup = document.querySelector('#inputErrorPopup');
-        let overlay = document.querySelector("#overlay");
-        let btn = document.querySelector('#inputPopupCloseButton');
-        inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener('click', function closeInputPopup(){
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
-    }
     const closePopup = () => {
-        let inputPopup = document.querySelector(".inputDonePopup");
-
+        let inputPopup = document.querySelector("#inputDonePopup");
+        let inputErrorPopup = document.querySelector("#inputErrorPopup");
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        let informationErrorPopup = document.querySelector("#informationErrorPopup");
         inputPopup.style.display = "none";
+        inputErrorPopup.style.display = "none";
+        informationLoadingPopup.style.display = "none";
+        informationErrorPopup.style.display = "none";
     }
     function inputDonePopup() {
         let inputPopup = document.querySelector('#inputDonePopup');
-        let overlay = document.querySelector(".contactOverlay");
-        let btn = document.querySelector('.inputPopupCloseButton');
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "none";
         inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener("click", () => {
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
     }
     function inputErrorPopup(){
         let inputPopup = document.querySelector('#inputErrorPopup');
-        let overlay = document.querySelector(".contactOverlay");
-        let btn = document.querySelector('.inputPopupCloseButton');
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "none";
         inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener("click", () => {
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
     }
     function informationErrorPopup(){
         let inputPopup = document.querySelector('#informationErrorPopup');
-        let overlay = document.querySelector(".contactOverlay");
-        let btn = document.querySelector('.informationErrorButton');
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "none";
         inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener("click", () => {
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
+    }
+    function showLoadingPopup(){
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        
+        informationLoadingPopup.style.display = "flex";
+        
     }
     return(
         <div className='contactCvContainer'>
@@ -231,7 +214,7 @@ export const ContactCv = props =>{
                 </div>
                 <ReCAPTCHA className='contactCvRecaptcha' style={{position: "relative" ,right: "174px" ,top: "130px"}}
                     sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
-                    /*onChange={handleRecaptchaChange}*/ />
+                   /*onChange={handleRecaptchaChange}*/ />
                 <div className='contactOptions'>
                 <div className='contactOption'>
                     <input id='firstOption' type='radio' onClick={toggleFirstOption} value='firstOption' checked={option === 'firstOption'} onChange={(e) => setOption(e.target.value)}/>
@@ -253,10 +236,10 @@ export const ContactCv = props =>{
                     </div>
                     <div className='inputPopupSpans'>
                         <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
-                        <a className='inputPopupHeader'>Thank You!</a>
-                        <a className='inputPopupSpan'>Your submission has been sent.</a>
+                        <a className='inputPopupHeader'>{t("contactHeaderSuccesfuly")}</a>
+                        <a className='inputPopupSpan'>{t("contactSpanSuccesfuly")}</a>
                         <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanSuccesfuly")}</a>
                     </div>
                 </div>
                 <div className='inputDonePopup' id='inputErrorPopup'>
@@ -265,11 +248,35 @@ export const ContactCv = props =>{
                     </div>
                     <div className='inputPopupSpans'>
                         <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
-                        <a className='inputPopupHeader'>OOPS!</a>
-                        <a className='inputPopupSpan'>Your submission has been sent.</a>
+                        <a className='inputPopupHeader'>{t("contactHeaderError")}</a>
+                        <a className='inputPopupSpan'>{t("contactSpanError")}</a>
                         <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
-                        <a></a>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanError")}</a>
+                        <a className='inputPopupSecondSpan'>{t("contactThirdSpanError")}</a>
+                        <a className='inputPopupSecondSpan'>hello@sugartech.io && +905342843427</a>
+                    </div>
+                </div>
+                <div className='inputDonePopup' id='informationLoadingPopup'>
+                    <div class="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
+                    <div className='inputPopupButton'>
+                        <img className='informationLoadingButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    </div>
+                    <div className='inputPopupSpans'>
+                        <a className='inputPopupHeader'>{t("contactHeaderLoading")}</a>
+                        <div class="loading-animation">
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                        </div>
+                        <a className='inputPopupSpan'>{t("contactSpanLoading")}</a>
+                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanLoading")}</a>
                     </div>
                 </div>
                 <div className='inputDonePopup' id='informationErrorPopup'>
@@ -279,10 +286,10 @@ export const ContactCv = props =>{
                     </div>
                     <div className='inputPopupSpans'>
                         <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
-                        <a className='inputPopupHeader'>OOPS!</a>
-                        <a className='inputPopupSpan'>Your submission has been sent.</a>
+                        <a className='inputPopupHeader'>{t("contactHeaderFail")}</a>
+                        <a className='inputPopupSpan'>{t("contactSpanFail")}</a>
                         <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>Görünüşe göre bazı bilgilerin eksik.</a>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanFail")}</a>
                     </div>
                 </div>
         </div>
