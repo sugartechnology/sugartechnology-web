@@ -42,12 +42,14 @@ export const BlogParagraphs3 = props =>{
                     <li className='secondParagraphList'>{t("blog3ListItem9")}</li>
                     <li className='secondParagraphList'>{t("blog3ListItem10")}</li>
                 </ul>
+                <img alt='' src={'./assets/img/Ar-Filter.png'}></img>
                 <a className='paragraphSpan'>{t("blogParagraph3Span10")}</a>
             </div>
             <div className='paragraph'>
                 <a className='paragraphHeader'>{t("blogParagraph3Span11")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span12")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span13")}</a>
+                <img alt='' src={'./assets/img/iphone_evoloution.png'}></img>
             </div>
             <div className='paragraph'>
                 <a className='paragraphHeader'>{t("blogParagraph3Span14")}</a>
@@ -56,6 +58,7 @@ export const BlogParagraphs3 = props =>{
                 <a className='paragraphSpan'>{t("blogParagraph3Span17")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span18")}</a>
             </div>
+            <img alt='' src={'./assets/img/istikbal_ar_deneyim.png'}></img>
             <div className='paragraph'>
                 <a className='paragraphHeader'>{t("blogParagraph3Span19")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span20")}</a>
@@ -63,6 +66,7 @@ export const BlogParagraphs3 = props =>{
                 <a className='paragraphSpan'>{t("blogParagraph3Span22")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span23")}</a>
             </div>
+            <img alt='' src={'./assets/img/3d_animation.gif'}></img>
             <div className='paragraph'>
                 <a className='paragraphHeader'>{t("blogParagraph3Span24")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span25")}</a>
@@ -70,6 +74,7 @@ export const BlogParagraphs3 = props =>{
                 <a className='paragraphSpan'>{t("blogParagraph3Span27")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span28")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span29")}</a>
+                <img alt='' src={'./assets/img/sugar_metaverse_environment.png'}></img>
             </div>
             <div className='author'>
                 <div className='authorImage'>

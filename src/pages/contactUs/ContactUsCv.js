@@ -1,4 +1,3 @@
-import { ContactAddress } from "../../components/ContactAddress/ContactAddress";
 import { ContactCv } from "../../components/ContactCv/ContactCv";
 import React, { useState, useEffect } from 'react';
 import { ContactInform } from "../../components/ContactInform/ContactInform";

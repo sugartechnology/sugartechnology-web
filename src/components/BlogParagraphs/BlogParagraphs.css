@@ -20,6 +20,16 @@
     gap: 30px;
     position: relative;
 }
+.blogParagraphs4Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+.blogParagraphs4Container img{
+    width: 70%;
+}
 .paragraph{
     display: flex;
     flex-direction: column;
@@ -104,6 +114,11 @@
 .authorImage{
     width: 40%;
     margin: 15px;
+}
+
+.videoParagraph{
+    display: flex;
+    align-items: center;
 }
 
 /* Reeponsive Tablet Settings */
