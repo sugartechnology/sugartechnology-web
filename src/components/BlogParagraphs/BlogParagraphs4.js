@@ -28,14 +28,13 @@ export const BlogParagraphs4 = props =>{
             </video>
             </div>
             
-            
             <div className='author'>
                 <div className='authorImage'>
-                    <img style={{width: "100%"}} alt='' src={'./assets/img/SugarTeamLeader1.webp'}></img>
+                    <img style={{width: "100%"}} alt='' src={'./assets/img/kubraPp.svg'}></img>
                 </div>
                 <div className='authorSpans'>
-                    <a className='authorHeader'>Abdurrahman Türkeri</a>
-                    <a className='authorSpan'>{t("paragraphAuthor2Span")}</a>
+                    <a className='authorHeader'>Kübra Yıldız</a>
+                    <a className='authorSpan'>{t("paragraphAuthor3Span")}AR, VR, AI teknolojilerine dayalı çözümler ile gerçek hayat problemlerinin çözülmesini sağlayan ürünler geliştiriyor ve bu ürünleri müşterilerimizi dahil ederek geliştiriyoruz.</a>
                 </div>
             </div>
         </div>

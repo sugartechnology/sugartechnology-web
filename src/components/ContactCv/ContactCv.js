@@ -47,7 +47,7 @@ export const ContactCv = props =>{
     const handleSubmit = async (event) => {
         event.preventDefault();
     
-        if (!mail || !phone || !message || !name) {
+        if (!mail || !phone || !message || !name || !job || !cv || !option) {
             informationErrorPopup();
             return;
         }
@@ -91,9 +91,10 @@ export const ContactCv = props =>{
             phone: phone,
             option: option,
             job: job,
-            };
-            sendFormData(form);
+        };
+        sendFormData(form);
     };
+
     const sendFormData = (form) => {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
@@ -111,6 +112,7 @@ export const ContactCv = props =>{
       
         xhr.send(JSON.stringify(form));
     };
+
     const closePopup = () => {
         let inputPopup = document.querySelector("#inputDonePopup");
         let inputErrorPopup = document.querySelector("#inputErrorPopup");
@@ -150,9 +152,7 @@ export const ContactCv = props =>{
     }
     function showLoadingPopup(){
         let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
-        
         informationLoadingPopup.style.display = "flex";
-        
     }
     return(
         <div className='contactCvContainer'>

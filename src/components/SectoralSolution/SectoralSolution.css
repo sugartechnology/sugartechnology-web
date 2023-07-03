@@ -4,7 +4,6 @@
     align-items: center;
     gap: 60px;
     border-bottom: 1px solid lightgrey;
-    width: 90%;
     margin: auto;
 }
 .sectoralSolutionHeader{
@@ -117,6 +116,13 @@
 }
 #leftImage{
     animation: slideRight 1s forwards;
+}
+
+.solutionsDiv{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: flex-end;
 }
 
 @keyframes slideRight {

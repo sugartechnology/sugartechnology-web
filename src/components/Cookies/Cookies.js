@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
+import './Cookies.css';
 
 export const Cookies = () => {
     const { t } = useTranslation();
