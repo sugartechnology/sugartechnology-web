@@ -14,7 +14,6 @@ export const ExperienceReports = props =>{
                     <a className='reportsHeader'>{t("reportsHeader")}</a>
                     <a className='reportsFirstSpan'>{t("reportsFirstSpan")}</a>
                     <a className='reportsSecondSpan'>{t("reportsSecondSpan")}</a>
-                    <a className='reportsSecondSpan'>{t("reportsSecondSpan")}</a>
                 </div>
            </div>
         </div>

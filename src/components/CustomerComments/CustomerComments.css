@@ -7,20 +7,17 @@
     background: radial-gradient(pink,#ED401A);
     overflow: hidden;
 }
-.firstCommnetBackground{
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
 .commentsLeftButton{
     position: absolute;
     left: 120px;
     cursor: pointer;
+    z-index: 1;
 }
 .commentsRightButton{
     position: absolute;
     right: 120px;
     cursor: pointer;
+    z-index: 1;
 }
 .commentSpans{
     display: flex;
@@ -217,7 +214,7 @@
     bottom: 0px;
 }
 
-.compannyLogo{
+.companyLogo{
     width: 10%;
     margin-top: 20px;
 }

@@ -300,22 +300,22 @@
     "blog3ListItem9": "AR kann in bestehende E-Commerce-Abläufe integriert werden.",
     "blog3ListItem10": "VR und das Metaverse erfordern eine revolutionäre Veränderung, bei der Geräte, Suchmaschinen und E-Commerce neu konzipiert werden müssen, was zu Veränderungen in den Gewohnheiten führt.",
 
-    "contactHeaderSuccesfuly": "Teşekkürler!",
-    "contactSpanSuccesfuly": "Mesajınız başarıyla iletildi.",
-    "contactSecondSpanSuccesfuly": "Bizimmle iletişime geçtiğiniz için teşekkür ederiz.",
+    "contactHeaderSuccesfuly": "Danke!",
+    "contactSpanSuccesfuly": "Ihre Nachricht wurde erfolgreich übermittelt.",
+    "contactSecondSpanSuccesfuly": "Vielen Dank für Ihre Kontaktaufnahme.",
 
     "contactHeaderError": "OOPS!",
-    "contactSpanError": "Mesajınızı iletirken bir sorunla karşılaştık.",
-    "contactSecondSpanError": "Görünüşe göre bir sorunla karşılaştık.",
-    "contactThirdSpanError": " Email adresi ve telefon numarası üzerinden bizlere ulaşabilirsiniz.",
+    "contactSpanError": "Bei der Übermittlung Ihrer Nachricht ist ein Problem aufgetreten.",
+    "contactSecondSpanError": "Es scheint, dass ein Problem aufgetreten ist.",
+    "contactThirdSpanError": "Sie können uns über E-Mail-Adresse und Telefonnummer erreichen.",
 
-    "contactHeaderLoading": "Gönderiliyor!",
-    "contactSpanLoading": "Mesajınız  birazdan iletilecek.",
-    "contactSecondSpanLoading": "Beklediğiniz için teşekkür ederiz.",
+    "contactHeaderLoading": "Senden!",
+    "contactSpanLoading": "Ihre Nachricht wird in Kürze übermittelt.",
+    "contactSecondSpanLoading": "Vielen Dank für Ihre Geduld.",
 
     "contactHeaderFail": "OOPS!",
-    "contactSpanFail": "Mesajınızı iletirken bir sorunla karşılaştık.",
-    "contactSecondSpanFail": "Lütfen bütün bilgileri girdiğinizden emin olun.",
+    "contactSpanFail": "Bei der Übermittlung Ihrer Nachricht ist ein Problem aufgetreten.",
+    "contactSecondSpanFail": "Bitte stellen Sie sicher, dass Sie alle Informationen eingegeben haben.",
 
     "bathroomPartnerSpan": "",
     "cloothPartnerSpan": "",
@@ -326,5 +326,8 @@
     "tablePartnerSpan": "",
     "textilePartnerSpan": "",
     "watchPartnerSpan": "",
-    "whiteGoodsPartnerSpan": ""
+    "whiteGoodsPartnerSpan": "",
+
+    "declineButton": "Ich lehne ab",
+    "acceptButton": "Ich stimme zu"
 }

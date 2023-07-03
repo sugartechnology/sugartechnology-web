@@ -344,5 +344,8 @@
     "shoesPartnerSpan": "Ayakkabı Müşterimizin Yorumu",
     "textilePartnerSpan": "Tekstil Müşterimizin Yorumu",
     "watchPartnerSpan": "Saat Müşterimizin Yorumu",
-    "whiteGoodsPartnerSpan": "Beyaz Eşya Müşterimizin Yorumu"
+    "whiteGoodsPartnerSpan": "Beyaz Eşya Müşterimizin Yorumu",
+
+    "declineButton": "İstemiyorum",
+    "acceptButton": "Kabul Ediyorum"
 }

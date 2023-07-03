@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Cookies.css';
 import { useTranslation } from "react-i18next";
 
 export const Cookies = () => {
@@ -30,8 +29,8 @@ export const Cookies = () => {
                         <a className='cookiesSpan'>{t("cookiesSpan")}</a>
                     </div>
                     <div className='cookiesButtons'>
-                        <button onClick={closeCookies} className='cookiesButton1'><a>{t("")}I Decline</a></button>
-                        <button onClick={closeCookies} className='cookiesButton2'><a>{t("")}I Understand</a></button>
+                        <button onClick={closeCookies} className='cookiesButton1'><a>{t("declineButton")}</a></button>
+                        <button onClick={closeCookies} className='cookiesButton2'><a>{t("acceptButton")}</a></button>
                     </div>
                 </div>
             )}

@@ -300,22 +300,22 @@
     "blog3ListItem9": "AR peut être intégré au flux de commerce électronique existant.",
     "blog3ListItem10": "VR et le metaverse nécessitent un changement révolutionnaire, les appareils, les moteurs de recherche et le commerce électronique devront être repensés et les habitudes changeront.",
 
-    "contactHeaderSuccesfuly": "Teşekkürler!",
-    "contactSpanSuccesfuly": "Mesajınız başarıyla iletildi.",
-    "contactSecondSpanSuccesfuly": "Bizimmle iletişime geçtiğiniz için teşekkür ederiz.",
+    "contactHeaderSuccesfuly": "Merci !",
+    "contactSpanSuccesfuly": "Votre message a été envoyé avec succès.",
+    "contactSecondSpanSuccesfuly": "Nous vous remercions de nous avoir contacté.",
 
-    "contactHeaderError": "OOPS!",
-    "contactSpanError": "Mesajınızı iletirken bir sorunla karşılaştık.",
-    "contactSecondSpanError": "Görünüşe göre bir sorunla karşılaştık.",
-    "contactThirdSpanError": " Email adresi ve telefon numarası üzerinden bizlere ulaşabilirsiniz.",
+    "contactHeaderError": "OOPS !",
+    "contactSpanError": "Nous avons rencontré un problème lors de l'envoi de votre message.",
+    "contactSecondSpanError": "Il semble y avoir un problème.",
+    "contactThirdSpanError": "Vous pouvez nous contacter via votre adresse e-mail et votre numéro de téléphone.",
 
-    "contactHeaderLoading": "Gönderiliyor!",
-    "contactSpanLoading": "Mesajınız  birazdan iletilecek.",
-    "contactSecondSpanLoading": "Beklediğiniz için teşekkür ederiz.",
+    "contactHeaderLoading": "Envoi en cours !",
+    "contactSpanLoading": "Votre message sera envoyé dans un instant.",
+    "contactSecondSpanLoading": "Merci de votre patience.",
 
-    "contactHeaderFail": "OOPS!",
-    "contactSpanFail": "Mesajınızı iletirken bir sorunla karşılaştık.",
-    "contactSecondSpanFail": "Lütfen bütün bilgileri girdiğinizden emin olun.",
+    "contactHeaderFail": "OOPS !",
+    "contactSpanFail": "Nous avons rencontré un problème lors de l'envoi de votre message.",
+    "contactSecondSpanFail": "Veuillez vous assurer de fournir toutes les informations nécessaires.",
 
     "bathroomPartnerSpan": "",
     "cloothPartnerSpan": "",
@@ -326,5 +326,8 @@
     "tablePartnerSpan": "",
     "textilePartnerSpan": "",
     "watchPartnerSpan": "",
-    "whiteGoodsPartnerSpan": ""
+    "whiteGoodsPartnerSpan": "",
+
+    "declineButton": "Je refuse",
+    "acceptButton": "J'accepte"
 }

@@ -67,7 +67,6 @@ export const CustomerComments = (props) => {
     return (
       <div className='customerCommentsContainer'>
         <img className='commentsLeftButton' alt='' src={'assets/img/commentsLeftButton.svg'} onClick={() => {prev();}}></img>
-        <div className='firstCommnetBackground'>
           <img className='redBackgroundCircle1' alt='' src={'./assets/img/circle1.svg'}></img>
           <img className='redBackgroundCircle2' alt='' src={'./assets/img/circle2.svg'}></img>
           <img className='redBackgroundCircle3' alt='' src={'./assets/img/circle3.svg'}></img>
@@ -81,10 +80,9 @@ export const CustomerComments = (props) => {
               <img className='customerPhoto' alt='' src={t(array[index].customerPhoto)}></img>
               <h1>{t(array[index].commentAuthor)}</h1>
               <a>{array[index].commentHeader}</a>
-              <img className='compannyLogo' alt='' src={array[index].companyLogo}></img>
+              <img className='companyLogo' alt='' src={array[index].companyLogo}></img>
             </div>
           </div>
-        </div>
         <img className='commentsRightButton' alt='' src={'assets/img/commentsRightButton.svg'} onClick={() => {next();}}></img>
       </div>
     );

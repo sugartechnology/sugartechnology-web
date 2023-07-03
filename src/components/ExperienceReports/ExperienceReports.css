@@ -49,10 +49,9 @@
     color: #000000;
 }
 .reportsSpangImgShadow{
-    position: absolute;
     opacity: 0.3;
     width: 76%;
-    bottom: 82px;
+    
 }
 
 .experienceReportsDiv{
@@ -94,7 +93,6 @@
 .tablet .reportsSpangImgShadow{
     display: flex;
     width: 321px;
-    bottom: 135px;
 }
 
 /* Reeponsive Mobile Settings */
@@ -136,7 +134,6 @@
 .mobile .reportsSpangImgShadow{
     display: flex;
     width: 321px;
-    bottom: 135px;
 }
 
 .mobile .experienceReportsDiv{
