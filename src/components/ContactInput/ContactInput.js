@@ -13,7 +13,7 @@ export const ContactInput = props =>{
         inputErrorPopup.style.display = "none";
         informationLoadingPopup.style.display = "none";
         informationErrorPopup.style.display = "none";
-    }
+    }   
     return(
         <div className='contactInputContainer'>
             <div className='mainPageTopLeftFigure rotate'></div>

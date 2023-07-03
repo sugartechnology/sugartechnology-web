@@ -35,12 +35,12 @@ export const BlogsMain = props =>{
                         </div>
                     </div>
 
-                    <div className='square' style={{backgroundImage: 'URL("./assets/img/blog3backgroundMobile.webp")'}}>
+                    <div className='square' style={{backgroundImage: 'URL("./assets/img/products/tablo.svg")'}}>
                         <a href='/sugarBlog4'><button className='squareButton'><a>{t("readMore")}</a></button></a>
                         <a className='squareHeader' href='/sugarBlog4'>{t("squareHeader4")}</a>
                         <div className='blogAuthor' id='blogAuthor3'>
-                            <a className='squareHistory'>May 12, 2023</a>
-                            <a className='squareHistory'>by Abdurrahman Türkeri</a>
+                            <a className='squareHistory' >Haziran 12, 2023</a>
+                            <a className='squareHistory'>by Kübra Yıldız</a>
                         </div>
                     </div>
             </div>

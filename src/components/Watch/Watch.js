@@ -24,7 +24,7 @@ export const Watch = props =>{
         <div className='mainPageSmallFigure0 '></div>
             <div className='showAtHomeSpans'>
                 <div className='showAtHomeSpanElements'>
-                    <a className='showAtHomeHeader'>{t("watchContainerHeader")}Lorem ipsum dolor  consectetur.</a>
+                    <a className='showAtHomeHeader'>{t("watchContainerHeader")}</a>
                     <a className='showAtHomeSpan'>{t("watchContainerSpan")}Lorem ipsum dolor sit amet consectetur. Erat dui quis ac mollis malesuada. Eu neque non ipsum in egestas quam mattis. </a>
                 </div>
                 <div className='showAtHomeButtons'>

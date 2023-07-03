@@ -24,7 +24,7 @@ export const Blogs = props =>{
     return(
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} Blogs`}>
             <BlogsMain></BlogsMain>
-            <ShareBlog></ShareBlog>
+           
         </div>
     );
 }

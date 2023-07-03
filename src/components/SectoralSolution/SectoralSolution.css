@@ -4,6 +4,8 @@
     align-items: center;
     gap: 60px;
     border-bottom: 1px solid lightgrey;
+    width: 90%;
+    margin: auto;
 }
 .sectoralSolutionHeader{
     display: flex;

@@ -1678,7 +1678,7 @@ visibility: hidden;
   font-weight: 700;
   font-size: 42px;
   line-height: 52px;
-  text-transform: capitalize;
+  
   color: #000000;
   
 }
@@ -1704,7 +1704,6 @@ visibility: hidden;
   font-weight: 300;
   font-size: 19px;
   line-height: 32px;
-  text-transform: capitalize;
   color: #000000;
 }
 

@@ -72464,11 +72464,9 @@ advenced_feature_template.innerHTML = `
     }
 
     a {
-        font-family: 'Inter' !important;
     }
 
     .sugar-model-viewer-popup-container{
-        font-family: 'Inter';
         position: fixed;
         width: 100%;
         height: 100%;
@@ -72492,7 +72490,6 @@ advenced_feature_template.innerHTML = `
     } 
 
     .sugar-model-viewer-popup-content{
-        font-family: 'Inter';
         width: 95%;
         height: 95%;
         margin: auto;
@@ -72542,7 +72539,6 @@ advenced_feature_template.innerHTML = `
         color: #1E1E1E;
         width: 100%;
         margin-top: 135px;
-        font-family: 'Inter' !important;
     }
 
     #modelSliderSpanMobile{
@@ -72605,7 +72601,6 @@ advenced_feature_template.innerHTML = `
         line-height: 17px;
         text-align: center;
         color: #1E1E1E;
-        font-family: 'Inter' !important;
     }
 
     .modelSliderImg{
@@ -72651,7 +72646,6 @@ advenced_feature_template.innerHTML = `
         flex-direction: row;
         overflow: hidden;
         height: 95vh !important;
-        font-family: 'Inter';
     }
 
     .sugar-model-viewer-content{
@@ -72708,7 +72702,6 @@ advenced_feature_template.innerHTML = `
     }
 
     .createRenderSpan{
-        font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -72963,7 +72956,6 @@ advenced_feature_template.innerHTML = `
         font-size: 11px;
         line-height: 12px;
         color: #707070;
-        font-family: 'Inter';
         text-overflow: elipsis;
         text-align: center;
     }
@@ -73140,7 +73132,6 @@ advenced_feature_template.innerHTML = `
         left: 115px;
         width: 100%;
         height: 17px;
-        font-family: 'Inter';
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -73424,7 +73415,6 @@ class TemplateMananagerAdvanced {
                 fill: white;
             }
             span {
-                font-family: 'Inter' !important;
             }
         </style>
         `;

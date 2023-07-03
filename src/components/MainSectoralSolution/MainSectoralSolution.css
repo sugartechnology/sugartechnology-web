@@ -69,14 +69,9 @@
 }
 
 .popupSpan{
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 26px;
-    text-align: justify;
-    letter-spacing: -1px;
-    text-transform: capitalize;
     color: #000000;
 }
 
@@ -104,8 +99,7 @@
     font-weight: 700;
     font-size: 50px;
     line-height: 52px;
-    text-align: justify;
-    letter-spacing: -1px;
+    text-align: center;
     text-transform: capitalize;
 }
 
@@ -140,11 +134,7 @@
 }
 
 .solutionSpans{
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
     font-size: 16px;
-    text-align: justify;
     color: #000000;
 }
 
