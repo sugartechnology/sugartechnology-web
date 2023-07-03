@@ -298,5 +298,33 @@
     "blog3ListItem7": "AR fornisce una migliore visione 3D.",
     "blog3ListItem8": "La visione 3D fornita dai dispositivi VR è limitata a causa della presenza di più utenti, delle risorse utilizzate per la progettazione dell'ambiente e delle limitazioni dei dispositivi stessi.",
     "blog3ListItem9": "AR può essere integrato nel flusso di e-commerce esistente.",
-    "blog3ListItem10": "VR e il metaverso richiedono un cambiamento rivoluzionario, i dispositivi, i motori di ricerca e l'e-commerce dovranno essere ridefiniti e le abitudini cambieranno."
+    "blog3ListItem10": "VR e il metaverso richiedono un cambiamento rivoluzionario, i dispositivi, i motori di ricerca e l'e-commerce dovranno essere ridefiniti e le abitudini cambieranno.",
+    
+    "contactHeaderSuccesfuly": "Teşekkürler!",
+    "contactSpanSuccesfuly": "Mesajınız başarıyla iletildi.",
+    "contactSecondSpanSuccesfuly": "Bizimmle iletişime geçtiğiniz için teşekkür ederiz.",
+
+    "contactHeaderError": "OOPS!",
+    "contactSpanError": "Mesajınızı iletirken bir sorunla karşılaştık.",
+    "contactSecondSpanError": "Görünüşe göre bir sorunla karşılaştık.",
+    "contactThirdSpanError": " Email adresi ve telefon numarası üzerinden bizlere ulaşabilirsiniz.",
+
+    "contactHeaderLoading": "Gönderiliyor!",
+    "contactSpanLoading": "Mesajınız  birazdan iletilecek.",
+    "contactSecondSpanLoading": "Beklediğiniz için teşekkür ederiz.",
+
+    "contactHeaderFail": "OOPS!",
+    "contactSpanFail": "Mesajınızı iletirken bir sorunla karşılaştık.",
+    "contactSecondSpanFail": "Lütfen bütün bilgileri girdiğinizden emin olun.",
+
+    "bathroomPartnerSpan": "",
+    "cloothPartnerSpan": "",
+    "decorationPartnerSpan": "",
+    "jointPartnerSpan": "",
+    "metaPartnerSpan": "",
+    "shoesPartnerSpan": "",
+    "tablePartnerSpan": "",
+    "textilePartnerSpan": "",
+    "watchPartnerSpan": "",
+    "whiteGoodsPartnerSpan": ""
 }

@@ -1,7 +1,7 @@
 import { CreateYourProduct } from "../../components/CreateYourProduct/CreateYourProduct";
 import { Joint } from "../../components/Joint/Joint";
 import { JointAbout } from "../../components/JointAbout/JointAbout";
-import { ListenToPartner } from "../../components/ListenToPartner/ListenToPartner";
+import { JointPartner } from "../../components/ListenToPartner/JointPartner";
 import { ProductsCustomer } from "../../components/ProductsCustomers/ProductsCustomers";
 import React, { useState, useEffect } from 'react';
 
@@ -30,7 +30,7 @@ export const ProductJoint = props =>{
             <ProductsCustomer></ProductsCustomer>
             <JointAbout></JointAbout>
             <CreateYourProduct></CreateYourProduct>
-            <ListenToPartner></ListenToPartner>
+            <JointPartner></JointPartner>
         </div>
     );
 }

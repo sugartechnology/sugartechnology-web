@@ -1,4 +1,4 @@
-import { ListenToPartner } from "../../components/ListenToPartner/ListenToPartner";
+import { WatchPartner } from "../../components/ListenToPartner/WatchPartner";
 import { ProductsCustomer } from "../../components/ProductsCustomers/ProductsCustomers";
 import { TryWatch } from "../../components/TryWatch/TryWatch";
 import { Watch } from "../../components/Watch/Watch";
@@ -28,7 +28,7 @@ export const ProductWatch = props =>{
             <Watch></Watch>
             <ProductsCustomer></ProductsCustomer>
             <TryWatch></TryWatch>
-            <ListenToPartner></ListenToPartner>
+            <WatchPartner></WatchPartner>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import { Clooth } from "../../components/Clooth/Clooth";
 import { CloothPatern } from "../../components/CloothPatern/CloothPatern";
-import { ListenToPartner } from "../../components/ListenToPartner/ListenToPartner";
+import { CloothPartner } from "../../components/ListenToPartner/CloothPartner";
 import { ProductsCustomer } from "../../components/ProductsCustomers/ProductsCustomers";
 import { TryClooth } from "../../components/TryClooth/TryClooth";
 import React, { useState, useEffect } from 'react';
@@ -30,7 +30,7 @@ export const ProductClooth = props =>{
             <ProductsCustomer></ProductsCustomer>
             <TryClooth></TryClooth>
             <CloothPatern></CloothPatern>
-            <ListenToPartner></ListenToPartner>
+            <CloothPartner></CloothPartner>
         </div>
     );
 }

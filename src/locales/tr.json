@@ -334,5 +334,15 @@
 
     "contactHeaderFail": "OOPS!",
     "contactSpanFail": "Mesajınızı iletirken bir sorunla karşılaştık.",
-    "contactSecondSpanFail": "Lütfen bütün bilgileri girdiğinizden emin olun."
+    "contactSecondSpanFail": "Lütfen bütün bilgileri girdiğinizden emin olun.",
+
+    "bathroomPartnerSpan": "Banyo Müşterimizin Yorumu",
+    "cloothPartnerSpan": "Kıyafet Müşterimizin Yorumu",
+    "decorationPartnerSpan": "Dekorasyon Müşterimizin Yorumu",
+    "jointPartnerSpan": "Joint Müşterimizin Yorumu",
+    "metaPartnerSpan": "Metaverse Müşterimizin Yorumu",
+    "shoesPartnerSpan": "Ayakkabı Müşterimizin Yorumu",
+    "textilePartnerSpan": "Tekstil Müşterimizin Yorumu",
+    "watchPartnerSpan": "Saat Müşterimizin Yorumu",
+    "whiteGoodsPartnerSpan": "Beyaz Eşya Müşterimizin Yorumu"
 }

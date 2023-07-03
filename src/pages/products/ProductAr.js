@@ -1,6 +1,6 @@
 import { ArDetails } from '../../components/ArDetails/ArDetails';
 import { ExperienceReports } from '../../components/ExperienceReports/ExperienceReports';
-import { ListenToPartner } from '../../components/ListenToPartner/ListenToPartner';
+import { FurniturePartner } from '../../components/ListenToPartner/FurniturePartner';
 import { ProductsCustomer } from '../../components/ProductsCustomers/ProductsCustomers';
 import { ProductStatistics } from '../../components/ProductStatistics/ProductStatistics';
 import { ShowAtHome } from '../../components/ShowAtHome/ShowAtHome';
@@ -34,7 +34,7 @@ export const ProductAr = props =>{
             <SugarBrands></SugarBrands>
             <ProductStatistics></ProductStatistics>
             <ExperienceReports></ExperienceReports>
-            <ListenToPartner></ListenToPartner>
+            <FurniturePartner></FurniturePartner>
         </div>
     );
 }

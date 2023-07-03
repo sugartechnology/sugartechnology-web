@@ -5,7 +5,7 @@ export const ProductStatistics = props =>{
     const {t} = useTranslation();
     return(
         <div className='productStatisticsContainer'>
-            <div className='productStatisticsSpanElementsDiv' style={{display: "flex", width: "88%", position: "relative"}}>
+            <div className='productStatisticsSpanElementsDiv'>
                 <div className='productStatisticsSpanElements'>
                     <div className='productStatisticsHeaders'>
                         <a className='productStatisticsHeader'>{t("productStatisticsHeader")}</a>

@@ -1,5 +1,5 @@
 import { BathroomDetails } from '../../components/ArDetails/BathroomDetails';
-import { ListenToPartner } from '../../components/ListenToPartner/ListenToPartner';
+import { BathroomPartner } from '../../components/ListenToPartner/BathroomPartner';
 import { Bathroom } from '../../components/Products/Bathroom';
 import React, { useState, useEffect } from 'react';
 
@@ -26,7 +26,7 @@ export const ProductBathroom = props =>{
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ProductBathroom`}>
             <Bathroom></Bathroom>
             <BathroomDetails></BathroomDetails>
-            <ListenToPartner></ListenToPartner>
+            <BathroomPartner></BathroomPartner>
         </div>
     );
 }

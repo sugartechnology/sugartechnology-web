@@ -299,5 +299,33 @@
     "blog3ListItem7": "AR provides better 3D visuals.",
     "blog3ListItem8": "The 3D visuals provided by VR devices are limited due to multiple users, asset limitations in environment design, and device constraints.",
     "blog3ListItem9": "AR can be integrated into existing e-commerce flows.",
-    "blog3ListItem10": "VR and the metaverse require a revolutionary change where devices, search engines, and e-commerce will need to be reimagined, leading to changes in habits."
+    "blog3ListItem10": "VR and the metaverse require a revolutionary change where devices, search engines, and e-commerce will need to be reimagined, leading to changes in habits.",
+
+    "contactHeaderSuccesfuly": "Teşekkürler!",
+    "contactSpanSuccesfuly": "Mesajınız başarıyla iletildi.",
+    "contactSecondSpanSuccesfuly": "Bizimmle iletişime geçtiğiniz için teşekkür ederiz.",
+
+    "contactHeaderError": "OOPS!",
+    "contactSpanError": "Mesajınızı iletirken bir sorunla karşılaştık.",
+    "contactSecondSpanError": "Görünüşe göre bir sorunla karşılaştık.",
+    "contactThirdSpanError": " Email adresi ve telefon numarası üzerinden bizlere ulaşabilirsiniz.",
+
+    "contactHeaderLoading": "Gönderiliyor!",
+    "contactSpanLoading": "Mesajınız  birazdan iletilecek.",
+    "contactSecondSpanLoading": "Beklediğiniz için teşekkür ederiz.",
+
+    "contactHeaderFail": "OOPS!",
+    "contactSpanFail": "Mesajınızı iletirken bir sorunla karşılaştık.",
+    "contactSecondSpanFail": "Lütfen bütün bilgileri girdiğinizden emin olun.",
+
+    "bathroomPartnerSpan": "",
+    "cloothPartnerSpan": "",
+    "decorationPartnerSpan": "",
+    "jointPartnerSpan": "",
+    "metaPartnerSpan": "",
+    "shoesPartnerSpan": "",
+    "tablePartnerSpan": "",
+    "textilePartnerSpan": "",
+    "watchPartnerSpan": "",
+    "whiteGoodsPartnerSpan": ""
 }

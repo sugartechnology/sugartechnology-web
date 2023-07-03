@@ -1,4 +1,4 @@
-import { ListenToPartner } from "../../components/ListenToPartner/ListenToPartner";
+import { ShoesPartner } from "../../components/ListenToPartner/ShoesPartner";
 import { ProductsCustomer } from "../../components/ProductsCustomers/ProductsCustomers";
 import { Shoes } from "../../components/Shoes/Shoes";
 import { ShoesQr } from "../../components/ShoesQr/ShoesQr";
@@ -30,7 +30,7 @@ export const ProductShoes = props =>{
             <ProductsCustomer></ProductsCustomer>
             <TryShoes></TryShoes>
             <ShoesQr></ShoesQr>
-            <ListenToPartner></ListenToPartner>
+            <ShoesPartner></ShoesPartner>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 .productStatisticsContainer{
-    height: 70vh;
+    padding: 50px 0px;
     display: flex;
     background: white;
     gap: 50px;
@@ -34,15 +34,16 @@
 .productStatisticsSpanElements{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 80px;
-    top: 100px;
     width: 60%;
 }
 .productStatisticsImage{
-    position: absolute;
-    right: 70px;
-    bottom: 106px;
+    width: 50%;
+}
+
+.productStatisticsSpanElementsDiv{
+    display: flex; 
+    width: 70%;
+    position: relative;
 }
 
 @media screen and (max-width: 1200px) {
@@ -50,11 +51,7 @@
     .productStatisticsContainer{
         flex-direction: column;
         justify-content: normal;
-        height: 60vh;
         align-items: center;
-    }
-    .productStatisticsSpanElements{
-        left: auto;
     }
     .productStatisticsHeader{
         height: 120px;
@@ -69,9 +66,6 @@
     .productStatisticsImage img{
         width: 300px;
     }
-    .productStatisticsImage{
-        top: 150px;
-    }
 }
 
 /* Reeponsive Mobile Settings */
@@ -79,12 +73,9 @@
 .mobile .productStatisticsContainer{
     flex-direction: column;
     justify-content: normal;
-    height: 69vh;
     align-items: center;
 }
 .mobile .productStatisticsSpanElements{
-    left: auto;
-    top: auto;
     align-items: center;
     width: 100%;
 }
@@ -109,13 +100,7 @@
 .mobile .productStatisticsImage img{
     width: 300px;
 }
-.mobile .productStatisticsImage{
-    top: auto;
-    bottom: 40px;
-    right: auto;
-}
 .mobile .productStatisticsSpanElementsDiv{
-    height: 100% !important;
-    justify-content: center !important;
-    width: 80% !important;
+    flex-direction: column;
+    gap: 50px;
 }

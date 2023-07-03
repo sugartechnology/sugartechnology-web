@@ -1,5 +1,5 @@
 .experienceReportsContainer{
-    height: 70vh;
+    padding: 50px 0px;
     display: flex;
     justify-content: center;
     background: #EFEFEF;
@@ -8,17 +8,12 @@
 .reportsSpanElement{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    bottom: 10px;
     gap: 26px;
     width: 40%;
     height: 80%;
     right: 84px;
 }
 .reportsSpanImages{
-    position: absolute;
-    bottom: auto;
-    left: 13px;
     width: 50%;
     height: 100%;
     display: flex;
@@ -60,14 +55,16 @@
     bottom: 82px;
 }
 
+.experienceReportsDiv{
+    display: flex;
+    width: 88%;
+    height: 100%;
+    position: relative;
+}
+
 /* Reeponsive Tablet Settings */
 
-.tablet .experienceReportsContainer{
-    height: 75vh;
-}
 .tablet .reportsSpanImages{
-    position: absolute;
-    bottom: 0px;
     width: 100%;
     height: 50%;
     display: flex;
@@ -90,8 +87,6 @@
     align-items: center;
     text-align: justify;
     gap: 0px;
-    top: 0px;
-    right: auto;
 }
 .tablet .reportsSpansImg{
     width: 321px !important;
@@ -104,18 +99,12 @@
 
 /* Reeponsive Mobile Settings */
 
-.mobile .experienceReportsContainer{
-    height: 75vh;
-}
 .mobile .reportsSpanImages{
-    position: absolute;
-    bottom: 0px;
     width: 100%;
     height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    left: auto;
 }
 .mobile .reportsSpansImg{
     width: 75%;
@@ -143,11 +132,13 @@
     align-items: center;
     text-align: justify;
     gap: 0px;
-    top: 0px;
-    right: 0px;
 }
 .mobile .reportsSpangImgShadow{
     display: flex;
     width: 321px;
     bottom: 135px;
+}
+
+.mobile .experienceReportsDiv{
+    flex-direction: column-reverse;
 }

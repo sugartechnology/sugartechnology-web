@@ -1,5 +1,5 @@
 import { TableDetails } from '../../components/ArDetails/TableDetails';
-import { ListenToPartner } from '../../components/ListenToPartner/ListenToPartner';
+import { TablePartner } from '../../components/ListenToPartner/TablePartner';
 import { Table } from '../../components/Products/Table';
 import React, { useState, useEffect } from 'react';
 
@@ -26,7 +26,7 @@ export const ProductTable = props =>{
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ProductTable`}>
             <Table></Table>
             <TableDetails></TableDetails>
-            <ListenToPartner></ListenToPartner>
+            <TablePartner></TablePartner>
         </div>
     );
 }

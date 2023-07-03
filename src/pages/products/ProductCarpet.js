@@ -1,5 +1,5 @@
 import { CarpetDetails } from '../../components/ArDetails/CarpetDetails';
-import { ListenToPartner } from '../../components/ListenToPartner/ListenToPartner';
+import { CarpetPartner } from '../../components/ListenToPartner/CarpetPartner';
 import { Carpet } from '../../components/Products/Carpet';
 import React, { useState, useEffect } from 'react';
 
@@ -26,7 +26,7 @@ export const ProductCarpet = props =>{
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ProductCarpet`}>
             <Carpet></Carpet>
             <CarpetDetails></CarpetDetails>
-            <ListenToPartner></ListenToPartner>
+            <CarpetPartner></CarpetPartner>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import { TextileDetails } from '../../components/ArDetails/TextileDetails';
-import { ListenToPartner } from '../../components/ListenToPartner/ListenToPartner';
+import { TextilePartner } from '../../components/ListenToPartner/TextilePartner';
 import { Textile } from '../../components/Products/Textile';
 import React, { useState, useEffect } from 'react';
 
@@ -26,7 +26,7 @@ export const ProductTextile = props =>{
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ProductTextile`}>
             <Textile></Textile>
             <TextileDetails></TextileDetails>
-            <ListenToPartner></ListenToPartner>
+            <TextilePartner></TextilePartner>
         </div>
     );
 }

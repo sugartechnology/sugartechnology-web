@@ -1,4 +1,4 @@
-import { ListenToPartner } from "../../components/ListenToPartner/ListenToPartner";
+import { MetaPartner } from "../../components/ListenToPartner/MetaPartner";
 import { MetaReports } from "../../components/MetaReports/MetaReports";
 import { Metaverse } from "../../components/Metaverse/Metaverse";
 import { MetaverseProject } from "../../components/MetaverseProject/MetaverseProject";
@@ -30,7 +30,7 @@ export const ProductMeta = props =>{
             <ProductsCustomer></ProductsCustomer>
             <MetaverseProject></MetaverseProject>
             <MetaReports></MetaReports>
-            <ListenToPartner></ListenToPartner>
+            <MetaPartner></MetaPartner>
         </div>
     );
 }

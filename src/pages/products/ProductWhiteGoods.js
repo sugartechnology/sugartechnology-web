@@ -1,5 +1,5 @@
 import { WhiteGoodsDetails } from '../../components/ArDetails/WhiteGoodsDetails';
-import { ListenToPartner } from '../../components/ListenToPartner/ListenToPartner';
+import { WhiteGoodsPartner } from '../../components/ListenToPartner/WhiteGoodsPartner';
 import { WhiteGoods } from '../../components/Products/WhiteGoods';
 import React, { useState, useEffect } from 'react';
 
@@ -26,7 +26,7 @@ export const ProductWhiteGoods = props =>{
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ProductWhiteGoods`}>
             <WhiteGoods></WhiteGoods>
             <WhiteGoodsDetails></WhiteGoodsDetails>
-            <ListenToPartner></ListenToPartner>
+            <WhiteGoodsPartner></WhiteGoodsPartner>
         </div>
     );
 }

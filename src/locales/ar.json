@@ -315,5 +315,33 @@
     "blog3ListItem7": "توفر تقنية الواقع المعزز صور ثلاثية الأبعاد أفضل.",
     "blog3ListItem8": "صور ثلاثية الأبعاد التي توفرها أجهزة تقنية الواقع الافتراضي محدودة بسبب عدم توافر مستخدمين متعددين وأصول تصميم البيئة وقلة الأجهزة.",
     "blog3ListItem9": "يمكن لتقنية الواقع المعزز أن تتكامل مع تدفق التجارة الإلكترونية الحالي.",
-    "blog3ListItem10": "تقنية الواقع الافتراضي والمتاحف تتطلب تغييرًا ثوريًا، حيث ستعاد تصميم الأجهزة ومحركات البحث والتجارة الإلكترونية وستتغير العادات."
+    "blog3ListItem10": "تقنية الواقع الافتراضي والمتاحف تتطلب تغييرًا ثوريًا، حيث ستعاد تصميم الأجهزة ومحركات البحث والتجارة الإلكترونية وستتغير العادات.",
+
+    "contactHeaderSuccesfuly": "Teşekkürler!",
+    "contactSpanSuccesfuly": "Mesajınız başarıyla iletildi.",
+    "contactSecondSpanSuccesfuly": "Bizimmle iletişime geçtiğiniz için teşekkür ederiz.",
+
+    "contactHeaderError": "OOPS!",
+    "contactSpanError": "Mesajınızı iletirken bir sorunla karşılaştık.",
+    "contactSecondSpanError": "Görünüşe göre bir sorunla karşılaştık.",
+    "contactThirdSpanError": " Email adresi ve telefon numarası üzerinden bizlere ulaşabilirsiniz.",
+
+    "contactHeaderLoading": "Gönderiliyor!",
+    "contactSpanLoading": "Mesajınız  birazdan iletilecek.",
+    "contactSecondSpanLoading": "Beklediğiniz için teşekkür ederiz.",
+
+    "contactHeaderFail": "OOPS!",
+    "contactSpanFail": "Mesajınızı iletirken bir sorunla karşılaştık.",
+    "contactSecondSpanFail": "Lütfen bütün bilgileri girdiğinizden emin olun.",
+
+    "bathroomPartnerSpan": "",
+    "cloothPartnerSpan": "",
+    "decorationPartnerSpan": "",
+    "jointPartnerSpan": "",
+    "metaPartnerSpan": "",
+    "shoesPartnerSpan": "",
+    "tablePartnerSpan": "",
+    "textilePartnerSpan": "",
+    "watchPartnerSpan": "",
+    "whiteGoodsPartnerSpan": ""
 }
