@@ -186,18 +186,21 @@ export const MainSectoralSolution = (props) => {
         popupButton.classList.add("popupButton");
         popupSpans.appendChild(popupButton);
 
-        const buttonDiv = document.createElement("a");
-        buttonDiv.href = solutionArray[index].link;
-        popupButton.appendChild(buttonDiv);
+        if (solutionArray[index].link) {
+            const buttonDiv = document.createElement("a");
+            buttonDiv.href = solutionArray[index].link;
+            popupButton.appendChild(buttonDiv);
 
-        const button = document.createElement("button");
-        button.classList.add("showAtHomeButton1");
-        buttonDiv.appendChild(button);
+            const button = document.createElement("button");
+            button.classList.add("showAtHomeButton1");
+            buttonDiv.appendChild(button);
 
-        const buttonSpan = document.createElement("a");
-        buttonSpan.innerHTML = t("usecase");
-        button.appendChild(buttonSpan);
-
+            const buttonSpan = document.createElement("a");
+            buttonSpan.innerHTML = t("usecase");
+            button.appendChild(buttonSpan);
+        } else {
+            popupButton.style.display = "none";
+        }
         const popupImageDiv = document.createElement("div");
         popupImageDiv.classList.add("popupImageDiv");
         popupContainer.appendChild(popupImageDiv);
