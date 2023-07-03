@@ -27,6 +27,18 @@ export const Contact = props =>{
     const [mail, setMail] = useState("");
     const [message, setMessage] = useState("");
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        if (!mail || !name || !mail) {
+            informationErrorPopup();
+            return;
+        }
+        showLoadingPopup();
+    
+        submitForm();
+    }
+
     function submitForm() {
         const form = {
           name: name,
@@ -36,43 +48,63 @@ export const Contact = props =>{
         sendFormData(form);
     }
   
-    function sendFormData(form) {
+    const sendFormData = (form) => {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
-        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader("Content-Type", "application/json");
+      
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              inputDonePopup();
+            } else {
+              inputErrorPopup();
+            }
+          }
+        };
+      
         xhr.send(JSON.stringify(form));
-        if ((this.status == 200) && (this.status < 300)) {
-            inputDonePopup();
-        }
-        else{
-            inputErrorPopup();
-        }
-    }
+    };
     function inputDonePopup() {
-        let inputPopup = document.getElementById('inputDonePopup');
-        let overlay = document.getElementById("overlay");
-        let btn = document.getElementById('inputPopupCloseButton');
+        let inputPopup = document.querySelector('#inputDonePopup');
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "none";
         inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener('click', function closeInputPopup(){
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
     }
     function inputErrorPopup(){
-        let inputPopup = document.getElementById('inputErrorPopup');
-        let overlay = document.getElementById("overlay");
-        let btn = document.getElementById('inputPopupCloseButton');
+        let inputPopup = document.querySelector('#inputErrorPopup');
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "none";
         inputPopup.style.display = "flex";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        btn.addEventListener('click', function closeInputPopup(){
-            inputPopup.style.display = "none";
-            overlay.style.width = "0%";
-            overlay.style.height = "0%";
-        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
+    }
+    function informationErrorPopup(){
+        let inputPopup = document.querySelector('#informationErrorPopup');
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "none";
+        inputPopup.style.display = "flex";
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
+    }
+    function showLoadingPopup(){
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        informationLoadingPopup.style.display = "flex";
+    }
+    const closePopup = () => {
+        let inputPopup = document.querySelector("#inputDonePopup");
+        let inputErrorPopup = document.querySelector("#inputErrorPopup");
+        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        let informationErrorPopup = document.querySelector("#informationErrorPopup");
+        inputPopup.style.display = "none";
+        inputErrorPopup.style.display = "none";
+        informationLoadingPopup.style.display = "none";
+        informationErrorPopup.style.display = "none";
     }
 
     return(
@@ -143,7 +175,7 @@ export const Contact = props =>{
                     <textarea id='name' className='nameInput' placeholder='Name' value={name} onChange={(e)=>setName(e.target.value)}></textarea>
                     <textarea id='email' className='emailInput' placeholder='Email' value={mail} onChange={(e)=>setMail(e.target.value)}></textarea>
                     <textarea id='message' className='messageInput' placeholder='Message' value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
-                    <button className='sendButton' onClick={(e)=>{submitForm()}}>
+                    <button className='sendButton' onClick={handleSubmit}>
                         <a>{t("sendMessage")}</a>
                     </button>
                 </div>
@@ -171,6 +203,68 @@ export const Contact = props =>{
                     <a className='inputPopupSecondSpan'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam semper gravida facilisi donec est.</a>
                 </div>
             </div>
+            <div className='inputDonePopup' id='inputDonePopup'>
+                    <div className='inputPopupButton'>
+                        <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    </div>
+                    <div className='inputPopupSpans'>
+                        <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
+                        <a className='inputPopupHeader'>{t("contactHeaderSuccesfuly")}</a>
+                        <a className='inputPopupSpan'>{t("contactSpanSuccesfuly")}</a>
+                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanSuccesfuly")}</a>
+                    </div>
+                </div>
+                <div className='inputDonePopup' id='inputErrorPopup'>
+                    <div className='inputPopupButton'>
+                        <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    </div>
+                    <div className='inputPopupSpans'>
+                        <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
+                        <a className='inputPopupHeader'>{t("contactHeaderError")}</a>
+                        <a className='inputPopupSpan'>{t("contactSpanError")}</a>
+                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanError")}</a>
+                        <a className='inputPopupSecondSpan'>{t("contactThirdSpanError")}</a>
+                        <a className='inputPopupSecondSpan'>hello@sugartech.io && +905342843427</a>
+                    </div>
+                </div>
+                <div className='inputDonePopup' id='informationLoadingPopup'>
+                    <div class="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
+                    <div className='inputPopupButton'>
+                        <img className='informationLoadingButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    </div>
+                    <div className='inputPopupSpans'>
+                        <a className='inputPopupHeader'>{t("contactHeaderLoading")}</a>
+                        <div class="loading-animation">
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                            <div class="loading-circle"></div>
+                        </div>
+                        <a className='inputPopupSpan'>{t("contactSpanLoading")}</a>
+                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanLoading")}</a>
+                    </div>
+                </div>
+                <div className='inputDonePopup' id='informationErrorPopup'>
+                    <div class="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
+                    <div className='inputPopupButton'>
+                        <img className='informationErrorButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                    </div>
+                    <div className='inputPopupSpans'>
+                        <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
+                        <a className='inputPopupHeader'>{t("contactHeaderFail")}</a>
+                        <a className='inputPopupSpan'>{t("contactSpanFail")}</a>
+                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanFail")}</a>
+                    </div>
+                </div>
         </div>
     );
 }

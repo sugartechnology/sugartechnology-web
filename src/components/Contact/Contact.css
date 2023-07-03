@@ -3,6 +3,8 @@
     flex-direction: column;
     position: relative;
     height: 70vh;
+    align-items: center;
+    justify-content: center;
 }
 .contactElements{
     display: flex;

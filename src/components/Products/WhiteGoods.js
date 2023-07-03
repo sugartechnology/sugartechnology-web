@@ -6,7 +6,7 @@ export const WhiteGoods = props =>{
     const {t} = useTranslation();
 
     function closeContactArea(){
-        let contactComponentDiv = document.querySelector("contactComponentDiv");
+        let contactComponentDiv = document.querySelector(".contactComponentDiv");
         let sendMessageButton = document.querySelector(".sendMessageButton");
         contactComponentDiv.style.display = "flex";
 
