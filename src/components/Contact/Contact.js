@@ -113,7 +113,7 @@ export const Contact = props =>{
             <div className='leftContact'>
                 <div className='about'>
                     <img className='contactLogo' alt="" src={'assets/img/headerLogo.svg'}></img>
-                    <a className='contactAboutSpan'>{t("contactAboutSpan")}fbosnbjuıkgnjshbgıu rsjnhfbvıjfkbjfsbık</a>
+                    <a className='contactAboutSpan'>{t("contactAboutSpan")}Demo talepleriniz için bizim ile iletişime geçin</a>
                 </div>
                 <div className='communication'>
                     <div className='mailAdressContainer'>
@@ -121,8 +121,7 @@ export const Contact = props =>{
                             <img alt="" src={'assets/img/mail.svg'}></img>
                         </div>
                         <div className='mailAdressSpan'>
-                            <a>Sugar@sugartech.io</a>
-                            <a>aturkeri@sugartech.io</a>
+                            <a>hello@sugartech.io</a>
                         </div>
                     </div>
                     <div className='phoneNumberContainer'>
@@ -130,8 +129,7 @@ export const Contact = props =>{
                             <img alt='' src={'assets/img/phone-call.svg'}></img>
                         </div>
                         <div className='phoneNumberSpan'>
-                            <a>+90 534 284 3427</a>
-                            <a>+001 6547 6589</a>
+                            <a>444 06 93</a>
                         </div>
                     </div>
                 </div>

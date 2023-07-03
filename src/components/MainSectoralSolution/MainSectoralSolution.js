@@ -230,7 +230,7 @@ export const MainSectoralSolution = (props) => {
                 <img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
             </div>
             <div className='mainSolutionSpans'>
-                <a className='mainSolutionSpan'>{t("mainSolutionSpan")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc.
+                <a className='mainSolutionSpan'>{t("mainSolutionSpan")}
             </a>
             </div>
             <div className="solutionItems">

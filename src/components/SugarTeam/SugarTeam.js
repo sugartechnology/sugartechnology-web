@@ -22,7 +22,7 @@ export const SugarTeam = props =>{
             image: "./assets/img/SugarTeamLeader3.webp",
             name: "Farhad Faal",
             position: t("cgiTeamLeader"),
-            comment: t("leader2CommentSpan")
+            comment: t("leader3CommentSpan")
         },
         {
             image: "./assets/img/erdemPp.webp",

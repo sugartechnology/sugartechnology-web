@@ -18,7 +18,7 @@
     justify-content: center;
     align-items: center;
     height: 50%;
-    width: 50%;
+    width: 60%;
     z-index: 2;
 }
 .showAtHomeHeader{
@@ -46,14 +46,10 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
-    position: absolute;
-    bottom: 30px;
     width: 80%;
 }
 
 .showAtHomeSpanElements{
-    position: absolute;
-    top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

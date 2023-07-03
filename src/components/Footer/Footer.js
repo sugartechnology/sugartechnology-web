@@ -27,7 +27,7 @@ export const Footer = props =>{
             </div>
             <div className='footerElements'>
                 <div className='footerSpan'>
-                    <a>Copyright © Sugartech | Designed by Elmira - Powered by Sugar</a>
+                    <a>Copyright © Sugartechnology</a>
                 </div>
                 <div className='footerMediaButtons'>
                     <a href="https://www.facebook.com/sugartechyazilim/"><img alt='' src={'assets/img/facebookLogo.svg'}></img></a>

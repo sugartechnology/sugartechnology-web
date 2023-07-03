@@ -25,6 +25,7 @@
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color:black;
 }
 
 .blogAuthor{
@@ -66,7 +67,7 @@
     line-height: 30px;
     display: flex;
     align-items: center;
-    text-align: justify;
+    text-align: left;
     color: #F5F5F5;
     z-index: 1;
     position: relative;
@@ -85,7 +86,10 @@
     color: #FFFFFF;
     z-index: 1;
     position: relative;
+    padding-left: 6px;
+    padding-right: 6px;
 }
+
 
 .squareImg{
     position: absolute;

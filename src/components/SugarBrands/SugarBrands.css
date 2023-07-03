@@ -48,13 +48,11 @@
 }
 .sugarBrandSpan{
     width: 270px;
-    height: 169px;
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     line-height: 16px;
-    text-align: justify;
-    text-transform: capitalize;
+    text-align: left;
     color: #000000;
     position: relative;
     left: 20px;

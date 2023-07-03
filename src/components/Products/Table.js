@@ -40,8 +40,8 @@ export const Table = props =>{
             <div className='mainPageSmallFigure0 '></div>
             <div className='showAtHomeSpans'>
                 <div className='showAtHomeSpanElements'>
-                    <a className='showAtHomeHeader'>{t("showAtHomeHeader")}</a>
-                    <a className='showAtHomeSpan'>{t("showAtHomeSpan")}</a>
+                    <a className='showAtHomeHeader'>{t("showAtHomeHeaderTable")}</a>
+                    <a className='showAtHomeSpan'>{t("showAtHomeSpanTable")}</a>
                 </div>
                 <div className='showAtHomeButtons'>
                     <a><button onClick={closeContactArea} className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
