@@ -1,5 +1,5 @@
 .tryWatchContainer{
-    height: 100vh;
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -23,10 +23,4 @@
 
 .tryWatchImage{
     width: 60%;
-}
-
-/* Reeponsive Mobile Settings */
-
-.mobile .tryWatchContainer{
-    height: 85vh;
 }

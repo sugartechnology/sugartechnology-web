@@ -1,5 +1,5 @@
 .cloothPaternContainer{
-    height: 90vh;
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,10 +46,6 @@
 
 /* Reeponsive Tablet Settings */
 
-.tablet .cloothPaternContainer{
-    height: 110vh;
-}
-
 .tablet .cloothPaternSpans{
     width: 100%;
     align-items: center;
@@ -94,12 +90,8 @@
     transform: rotate(90deg);
 }
 
-.mobile .cloothPaternContainer{
-    height: 120vh;
-}
-
 .mobile .cloothPaternSpans{
-    width: 100%;
+    width: 90%;
     align-items: center;
     top: 0px;
 }

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     gap: 50px;
-    height: 10vh;
+    padding: 20px 0px;
     background: #ED401A;
     transform: matrix(1, 0, 0, -1, 0, 0);
 }
@@ -14,7 +14,6 @@
 /* Reeponsive Mobile Settings */
 
 .mobile .productsCustomerContainer{
-    height: 43px;
     gap: 20px;
 }
 .mobile .productsCustomerContainer img{

@@ -32,7 +32,7 @@ export const Clooth = props =>{
                 </div>
             </div>
             <div className='cloothImageDiv'>
-                <img className='cloothImage' alt='' src={'./assets/img/cloothImage.webp'}></img>
+                <img className='cloothImage' width={"100%"} alt='' src={'./assets/img/cloothImage.webp'}></img>
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
 .shoesContainer{
-    height: 100vh;
+    padding: 10px 0px;
     display: flex;
     justify-content: space-evenly;
     background: #EBEBEB;
@@ -12,6 +12,10 @@
     z-index: 1;
     width: 50%;
     height: 100%;
+}
+
+.shoesImage{
+    width: 100%;
 }
 
 /* Reeponsive Tablet Settings */

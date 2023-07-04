@@ -1,5 +1,5 @@
 .contactCvContainer{
-    height: 115vh;
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,10 +207,6 @@ input[type="radio"]:checked{
 
 
 /* Reeponsive Mobile Settings */
-
-.mobile .contactCvContainer{
-    height: 160vh;
-}
 
 .mobile .contactCvInputs{
     width: 370px;

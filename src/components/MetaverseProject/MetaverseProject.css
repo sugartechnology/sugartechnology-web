@@ -64,10 +64,6 @@
 
 /* Reeponsive Mobile Settings */
 
-.mobile .MetaverseProjectContainer{
-    height: 80vh;
-}
-
 .mobile .metaverseProjectSpan{
     font-size: 15px;
     line-height: 20px;

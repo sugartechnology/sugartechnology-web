@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 70vh;
+    padding: 50px 0px;
     align-items: center;
     justify-content: center;
 }
@@ -293,9 +293,6 @@
 
 /* Reeponsive Mobile Settings */
 
-.mobile.contactContainer{
-    height: 340px;
-}
 .mobile .contactLogo{
     width: 91px !important;
     bottom: 20px;

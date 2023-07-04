@@ -1,5 +1,5 @@
 .tryShoesContainer{
-    height: 100vh;
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -10,10 +10,4 @@
     width: 813px;
     z-index: -1;
     opacity: 0.9;
-}
-
-/* Reeponsive Mobile Settings */
-
-.mobile .tryShoesContainer{
-    height: 75vh;
 }

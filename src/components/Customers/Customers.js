@@ -37,7 +37,7 @@ export const Customers = props => {
   };
 
   return (
-    <Swiper {...swiperSettings} style={{height: "35vh"}}>
+    <Swiper {...swiperSettings} style={{height: "35vh", padding: "50px 0px"}}>
       <a className="customersSpan">{t("homePageCustomersSpan")}</a>
       <SwiperSlide>
         <img alt="" src={process.env.PUBLIC_URL + "/assets/img/bellona.svg"}></img>

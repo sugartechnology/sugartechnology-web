@@ -1,6 +1,6 @@
 .shoesQrContainer{
     display: flex;
-    height: 100vh;
+    padding: 50px 0px;
     background: #E9E9E9;
     flex-direction: row;
     justify-content: center;
@@ -59,10 +59,6 @@
 
 /* Reeponsive Tablet Settings */
 
-.tablet .shoesQrContainer{
-    height: 100vh;
-}
-
 .tablet .shoesQrElements{
     position: absolute;
     top: 0px;
@@ -96,18 +92,15 @@
 /* Reeponsive Mobile Settings */
 
 .mobile .shoesQrContainer{
-    height: 70vh;
+    flex-direction: column;
 }
 
 .mobile .shoesQrElements{
-    position: absolute;
-    top: 0px;
+    width: 90%;
     align-items: center;
 }
 
 .mobile .shoesQrImg{
-    position: absolute;
-    bottom: 0px;
     width: 70%;
     height: 50%;
     display: flex;
@@ -131,7 +124,7 @@
 .mobile .shoesQr{
     position: absolute;
     width: 20%;
-    top: 100px !important;
+    top: 70px !important;
     left: 35%;
     right: auto !important;
 }

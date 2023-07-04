@@ -1,5 +1,4 @@
 .cloothContainer{
-    height: 100vh;
     display: flex;
     justify-content: center;
     background: #EBEBEB;
@@ -27,6 +26,7 @@
 /* Reeponsive Mobile Settings */
 
 .mobile .cloothContainer{
+    padding: 30px 0px;
     flex-direction: column;
 }
 

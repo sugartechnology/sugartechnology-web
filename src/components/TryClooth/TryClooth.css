@@ -1,6 +1,6 @@
 .tryCloothContainer{
     display: flex;
-    height: 100vh;
+    padding: 50px 0px;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
@@ -35,10 +35,6 @@
 }
 
 /* Reeponsive Tablet Settings */
-
-.tablet .tryCloothContainer{
-    height: 120vh;
-}
 
 .tablet .tryCloothElements{
     position: absolute;
@@ -79,20 +75,16 @@
 /* Reeponsive Mobile Settings */
 
 .mobile .tryCloothContainer{
-    height: 100vh;
+    flex-direction: column;
 }
 
 .mobile .tryCloothElements{
-    position: absolute;
-    top: 0px;
-    width: 100%;
+    width: 90%;
     align-items: center;
     gap: 20px;
 }
 
 .mobile .tryCloothImages{
-    position: absolute;
-    bottom: 0px;
     width: 100%;
     height: 40%;
     display: flex;

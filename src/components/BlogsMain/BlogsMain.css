@@ -117,10 +117,6 @@
 
 /* Reeponsive Mobile Settings */
 
-.mobile .blogsMainContainer{
-    height: 195vh;
-}
-
 .mobile .squares{
     width: 100%;
     flex-direction: column;

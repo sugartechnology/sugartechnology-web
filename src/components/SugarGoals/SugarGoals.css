@@ -1,10 +1,11 @@
 .SugarGoalsContainer{
-    height: 93vh;
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     position: relative;
+    gap: 50px;
 }
 .sugarGoalHeader{
     font-style: normal;
@@ -67,9 +68,6 @@
 /* Reeponsive Tablet Settings */
 
 @media screen and (max-width: 1200px){
-    .SugarGoalsContainer{
-        height: 84vh;
-    }
     .sugarGoals img{
         width: 200px;
     }
@@ -170,6 +168,7 @@
 
 @media screen and (max-width: 500px) {
     .SugarGoalsContainer{
+        height: 68vh;
         justify-content: normal;
     }
     .sugarGoalsElements2{

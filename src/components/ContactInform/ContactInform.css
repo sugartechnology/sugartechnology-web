@@ -1,5 +1,5 @@
 .contactInformContainer{
-    height: 130vh;
+    padding: 200px 0px;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -9,8 +9,9 @@
 }
 
 .contactInform{
-    width: 115vh;
-    height: 70vh;
+    width: 50%;
+    height: 50%;
+    padding: 50px 50px;
     background: #FFFFFF;
     opacity: 0.8;
     box-shadow: 0px 4px 40px #000000;
