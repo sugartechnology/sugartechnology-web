@@ -17,7 +17,7 @@ export const CarpetPartner = props =>{
                     <img className='spanBottomLogo' alt='' src={'./assets/img/ListenToPartnerImg2.svg'} style={{position: "absolute", right: "10px", bottom: "-10px"}}></img>
                 </div>
                 <div className='partnerVideo'>
-                    <iframe className='jointAboutImage' style={{width: "80%", height: "80%"}}  width="804" height="411" src="https://www.youtube.com/embed/oKDV_wUaaOo" frameborder="0" allowfullscreen></iframe>
+                    <iframe className='jointAboutImage' style={{width: "80%", height: "80%"}}  width="804" height="411" src="https://www.youtube.com/embed/oKDV_wUaaOo" frameBorder="0" allowFullScreen></iframe>
                     <img className='partnerVideoShadow' id='deskopVideoShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
                 </div>
             </div>

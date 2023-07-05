@@ -1,8 +1,19 @@
+import { useEffect } from 'react';
 import './ArDetails.css';
 import { useTranslation} from "react-i18next";
 
 export const WhiteGoodsDetails = props =>{
     const {t} = useTranslation();
+    useEffect(()=>{
+        const existingScript = document.getElementById('sugar-model-viwer-js');
+        if (!existingScript) {
+            const script = document.createElement('script');
+            script.src = '/assets/js/sugar-model-viewer.js';
+            script.id = 'sugar-model-viwer-js';
+            script.type = 'module';
+            document.body.appendChild(script);   
+        }
+    },[])
     return(
         <div className='arDetailsContainer'>
             <div className='arDetailsSpans'>

@@ -1696,6 +1696,7 @@ visibility: hidden;
   margin: auto;
   margin: 50px;
   gap: 30px;
+  align-items: flex-start;
 }
 
 .slideDetailSecondSpan {
@@ -1716,6 +1717,8 @@ visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #FFFFFF;
+  padding: 0px 20px;
 }
 
 .slideDetailButton a{

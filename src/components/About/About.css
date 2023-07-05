@@ -13,6 +13,7 @@
     height: 75%;
     z-index: 1;
     width: 50%;
+    align-items: flex-start;
 }
 .aboutSpansHeader{
     font-style: normal;
@@ -41,15 +42,8 @@
     cursor: pointer;
     position: relative;
     padding: 0px 14px;
-}
-.aboutButton a{
-    width: 83px;
-    height: 18px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15.9998px;
-    line-height: 18px;
-    text-transform: capitalize;
+    display: flex;
+    align-items: center;
     color: #FFFFFF;
 }
 .secondAboutLogo{

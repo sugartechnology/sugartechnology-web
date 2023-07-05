@@ -61,10 +61,9 @@
 
 .popupMediaCenterButton{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 18px 24px;
+    color: white;
     gap: 4px;
     width: 154px;
     height: 48px;
@@ -322,6 +321,10 @@
     border-radius: 76px;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .popupMediaCenterButton:hover,

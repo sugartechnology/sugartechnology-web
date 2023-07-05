@@ -34,7 +34,7 @@ export const ContactInput = props =>{
         }}></div>
         <div className='mainPageSmallFigure0 '></div>
             <ContactInputs></ContactInputs>
-            <div class="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
+            <div className="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
                 <div className='inputDonePopup' id='inputDonePopup'>
                     <div className='inputPopupButton'>
                         <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
@@ -62,22 +62,22 @@ export const ContactInput = props =>{
                     </div>
                 </div>
                 <div className='inputDonePopup' id='informationLoadingPopup'>
-                    <div class="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
+                    <div className="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
                     <div className='inputPopupButton'>
                         <img className='informationLoadingButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                     </div>
                     <div className='inputPopupSpans'>
                         <a className='inputPopupHeader'>{t("contactHeaderLoading")}</a>
-                        <div class="loading-animation">
-                            <div class="loading-circle"></div>
-                            <div class="loading-circle"></div>
-                            <div class="loading-circle"></div>
-                            <div class="loading-circle"></div>
-                            <div class="loading-circle"></div>
-                            <div class="loading-circle"></div>
-                            <div class="loading-circle"></div>
-                            <div class="loading-circle"></div>
-                            <div class="loading-circle"></div>
+                        <div className="loading-animation">
+                            <div className="loading-circle"></div>
+                            <div className="loading-circle"></div>
+                            <div className="loading-circle"></div>
+                            <div className="loading-circle"></div>
+                            <div className="loading-circle"></div>
+                            <div className="loading-circle"></div>
+                            <div className="loading-circle"></div>
+                            <div className="loading-circle"></div>
+                            <div className="loading-circle"></div>
                         </div>
                         <a className='inputPopupSpan'>{t("contactSpanLoading")}</a>
                         <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
@@ -85,7 +85,7 @@ export const ContactInput = props =>{
                     </div>
                 </div>
                 <div className='inputDonePopup' id='informationErrorPopup'>
-                    <div class="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
+                    <div className="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
                     <div className='inputPopupButton'>
                         <img className='informationErrorButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                     </div>

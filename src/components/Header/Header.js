@@ -155,7 +155,7 @@ export const Header = props => {
     
     return(
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} headerContainer`} id='headerContainer'>
-            <div class="overlay" id='overlay' style={{zIndex: "1"}} onClick={showMobilePopup}></div>
+            <div className="overlay" id='overlay' style={{zIndex: "1"}} onClick={showMobilePopup}></div>
             <div className='mobileHeaderPopup' id='mobileHeaderPopup' style={{display: "none", position: "absolute", zIndex: "2"}}>
                 <div className='backToHome' onClick={showMobilePopup}>
                     <img className='backToHomeArrow' alt='' src={'./assets/img/arrow-left.svg'}></img>
@@ -235,11 +235,7 @@ export const Header = props => {
                 </div>
                 <img id='mobilePopupLine3' alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px", position: "relative"}}></img>
                 <div className='mobileMediaCenterButtons'>
-                    <a href='/contactCv'>
-                        <button className='popupMediaCenterButton' id='popupMediaCenterButton'>
-                            <a>{t("careers")}</a>
-                        </button>
-                    </a>
+                    <a href='/contactCv' className='popupMediaCenterButton' id='popupMediaCenterButton'>{t("careers")}</a>
                 </div>
             </div>
 
@@ -287,10 +283,8 @@ export const Header = props => {
             </div>
             <div className="headerButtons">
                 <LanguageSelector></LanguageSelector>
-                <a href='/contactCv'>
-                    <button className='mediaCenterButton'>
-                        <a>{t("careers")}</a>
-                    </button>
+                <a href='/contactCv' className='mediaCenterButton'>
+                   {t("careers")}
                 </a>
             </div>
         </div>  

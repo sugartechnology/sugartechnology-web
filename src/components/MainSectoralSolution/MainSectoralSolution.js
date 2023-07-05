@@ -187,17 +187,12 @@ export const MainSectoralSolution = (props) => {
         popupSpans.appendChild(popupButton);
 
         if (solutionArray[index].link) {
-            const buttonDiv = document.createElement("a");
-            buttonDiv.href = solutionArray[index].link;
-            popupButton.appendChild(buttonDiv);
 
-            const button = document.createElement("button");
+            const button = document.createElement("a");
             button.classList.add("showAtHomeButton1");
-            buttonDiv.appendChild(button);
+            button.innerHTML = t("usecase");
+            popupButton.appendChild(button);
 
-            const buttonSpan = document.createElement("a");
-            buttonSpan.innerHTML = t("usecase");
-            button.appendChild(buttonSpan);
         } else {
             popupButton.style.display = "none";
         }

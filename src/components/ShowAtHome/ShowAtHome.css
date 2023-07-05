@@ -80,7 +80,8 @@
     border-radius: 30px;
     cursor: pointer;
     position: relative;
-    padding: 0px 15px;
+    padding: 10px 15px;
+    color: #FFFFFF;
 }
 .showAtHomeButton1:hover{
     background: #ED401A;

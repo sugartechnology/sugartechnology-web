@@ -18,7 +18,7 @@ export const Bathroom = props =>{
     return(
         <div className="ShowAtHomeContainer">
             <div className='contactComponentDiv'>
-                <div class="cookiesOverlay" id='cookiesOverlay' style={{zIndex: "1"}}></div>
+                <div className="cookiesOverlay" id='cookiesOverlay' style={{zIndex: "1"}}></div>
                 <ContactInputs></ContactInputs>
             </div>
             <div className='mainPageTopLeftFigure rotate'></div>
@@ -44,7 +44,7 @@ export const Bathroom = props =>{
                     <a className='showAtHomeSpan'>{t("showAtHomeSpanBathroom")}</a>
                 </div>
                 <div className='showAtHomeButtons'>
-                    <a><button onClick={closeContactArea} className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
+                    <button onClick={closeContactArea} className='showAtHomeButton1'><a>{t("getStarted")}</a></button>
                 </div>
             </div>
             <div className='showAtHomeImageDiv'>
