@@ -29,8 +29,12 @@ export const ProductShoes = props =>{
             <Shoes></Shoes>
             <ProductsCustomer></ProductsCustomer>
             <TryShoes></TryShoes>
+            {
+                /**
             <ShoesQr></ShoesQr>
             <ShoesPartner></ShoesPartner>
+             */
+            }
         </div>
     );
 }

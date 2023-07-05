@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 50px 0px;
     align-items: center;
     justify-content: center;
 }
@@ -14,6 +13,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 10px;
 }
 .leftContact{
     display: flex;
@@ -91,7 +91,7 @@
     height: 38px;
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 128.18%;
     text-transform: capitalize;
     color: #242331;
@@ -135,13 +135,21 @@
     display: flex;
     justify-content: space-evenly;
     position: relative;
-    font-family: 'Nunito';
+    width: 30%;
 }
+
+@media screen and (max-width: 1200px) {
+    .middleContact{
+        width: 50%;
+    } 
+}    
+
+
+
 .rightContact{
     display: flex;
     flex-direction: column;
     position: relative;
-    font-family: 'Nunito';
 }
 .rightContactInputs{
     display: flex;

@@ -158,6 +158,7 @@
 }
 .tablet .brandsPageButton{
     display: flex !important;
+    margin-top: 20px;
 }
 .tablet .sugarBrandShadow1{
     top: 2420px;

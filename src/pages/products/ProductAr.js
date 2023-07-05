@@ -32,8 +32,12 @@ export const ProductAr = props =>{
             <ProductsCustomer></ProductsCustomer>
             <ArDetails></ArDetails>
             <SugarBrands></SugarBrands>
+            {
+            /*
             <ProductStatistics></ProductStatistics>
             <ExperienceReports></ExperienceReports>
+            */
+            }
             <FurniturePartner></FurniturePartner>
         </div>
     );

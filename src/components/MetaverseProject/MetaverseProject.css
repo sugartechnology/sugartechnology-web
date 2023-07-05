@@ -34,14 +34,12 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
-    text-align: justify;
-    text-transform: capitalize;
+    text-align: left;
     color: #000000;
 }
 .metaverseProjectElement{
     width: 40%;
-    position: absolute;
-    bottom: 50px;
+ 
 }
 
 /* Reeponsive Tablet Settings */
@@ -71,8 +69,19 @@
 
 .mobile .metaverseProjectHeader{
     font-size: 30px;
+    line-height: 35px;
 }
 
 .mobile .metaverseProjectElement{
     width: 60%;
+}
+
+.metaverseProjectElement{
+    width: 65%;
+    height: 71%;
+}
+
+.mobile .metaverseProjectElement{
+    width: 90%;
+    height: 250px;
 }

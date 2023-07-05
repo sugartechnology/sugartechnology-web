@@ -125,6 +125,10 @@
     align-items: flex-end;
 }
 
+.mobile .solutionsDiv{
+    width: 90%;
+}
+
 @keyframes slideRight {
     from {
         transform: translateX(100%);
@@ -196,7 +200,7 @@
 }
 .mobile .solutionSpans{
     position: relative;
-    width: 80%;
+    
     gap: 40px;
 }
 .mobile #rightImage{

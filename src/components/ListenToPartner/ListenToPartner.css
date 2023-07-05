@@ -26,30 +26,27 @@
 }
 .partnerHeaders{
     display: flex;
-    gap: 50px;
+    gap: 20px;
     position: relative;
-    top: 40px;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 90%;
     height: 16%;
+    text-align: center;
 }
+
+
 .partnerHeader{
-    width: 70%;
-    height: 139px;
+    width: 90%;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
-    line-height: 52px;
-    text-transform: capitalize;
+    line-height: 38px;
     color: #000000;
-    position: absolute;
-    right: 0px;
 }
 .partnerSpans{
-    width: 64%;
-    margin: auto;
+    width: 75%;
     position: relative;
 }
 .partnerSpan{
@@ -120,13 +117,9 @@
 .tablet .partnerHeader{
     width: 100%;
     font-size: 22px;
-    bottom: 20px;
 }
 .tablet .partnerLogo{
     width: 139px !important;
-    position: absolute !important;
-    top: 90px;
-    left: auto !important;
 }
 .tablet .partnerSpan{
     font-size: 16px;
@@ -135,15 +128,14 @@
 .tablet .partnerVideo{
     width: 90%;
     height: 424px !important;
-    position: absolute;
-    bottom: 30px;
     display: flex;
     justify-content: center;
 }
 .tablet .containerTopLogo{
     width: 72px;
-    bottom: 155px !important;
+    top: 0px !important;
     left: 0px !important;
+    position: absolute;
 }
 .tablet .spanBottomLogo{
     width: 37px;
@@ -160,7 +152,7 @@
     font-size: 22px;
     position: relative;
     line-height: 36px;
-    text-align: center;
+    
 }
 .mobile .partnerLogo{
     width: 139px !important;
@@ -181,8 +173,9 @@
 }
 .mobile .containerTopLogo{
     width: 72px;
-    bottom: 135px !important;
+    top: 0px !important;
     left: 0px !important;
+    position: absolute;
 }
 .mobile .spanBottomLogo{
     width: 37px;
@@ -196,5 +189,13 @@
 .mobile .partnerHeaders{
     height: auto;
     width: 94%;
-    top: auto;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.tablet .partnerHeaders{
+    height: auto;
+    width: 94%;
+    flex-direction: column;
+    margin-top: 40px;
 }

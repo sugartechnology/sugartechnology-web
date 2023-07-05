@@ -28,7 +28,11 @@ export const ProductWatch = props =>{
             <Watch></Watch>
             <ProductsCustomer></ProductsCustomer>
             <TryWatch></TryWatch>
-            <WatchPartner></WatchPartner>
+            {/**          
+             *   <WatchPartner></WatchPartner>
+             **/
+
+            }
         </div>
     );
 }

@@ -20,8 +20,7 @@ export const ContactAddress = props =>{
                             <img alt="" src={'assets/img/mail.svg'}></img>
                         </div>
                         <div className='mailAdressSpan'>
-                            <a>Sugar@sugartech.io</a>
-                            <a>aturkeri@sugartech.io</a>
+                            <a>hello@sugartech.io</a>
                         </div>
                     </div>
                     <div className='phoneNumberContainer'>
@@ -29,8 +28,7 @@ export const ContactAddress = props =>{
                             <img alt='' src={'assets/img/phone-call.svg'}></img>
                         </div>
                         <div className='phoneNumberSpan'>
-                            <a>+90 534 284 3427</a>
-                            <a>+001 6547 6589</a>
+                            <a>444 06 93 </a>
                         </div>
                     </div>
                 </div>
@@ -59,8 +57,7 @@ export const ContactAddress = props =>{
                             <img alt='' src={'assets/img/phone-call.svg'}></img>
                         </div>
                         <div className='phoneNumberSpanMobile'>
-                            <a>+90 534 284 3427</a>
-                            <a>+001 6547 6589</a>
+                            <a>444 06 93</a>
                         </div>
                     </div>
                     <div className='mailAdressContainer'>
@@ -68,8 +65,7 @@ export const ContactAddress = props =>{
                             <img alt="" src={'assets/img/mail.svg'}></img>
                         </div>
                         <div className='mailAdressSpanMobile'>
-                            <a>Sugar@sugartech.io</a>
-                            <a>aturkeri@sugartech.io</a>
+                            <a>hello@sugartech.io</a>
                         </div>
                     </div>
                 </div>

@@ -6,10 +6,15 @@ export const TryShoes = props =>{
     return(
         <div className='tryShoesContainer'>
             <div className='jointAboutElements'>
-                <a className='jointAboutHeader'>{t("tryShoesContainerHeader")}Lorem ipsum dolor sit consectetur.</a>
-                <a className='jointAboutSpan'>{t("tryShoesContainerSpan")}Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat. Elit diam vulputate id ullamcorper in tellus vulputate donec. Faucibus quisque euismod sodales nunc.</a>
-                <iframe className='jointAboutImage' style={{width: "50%"}} width="560" height="315" src="https://www.youtube.com/shorts/hOnLOylBcSM" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                <img className='jointShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
+                <a className='jointAboutHeader'>{t("tryShoesContainerHeader")}</a>
+                <a className='jointAboutSpan'>{t("tryShoesContainerSpan")}</a>
+                <iframe width="315" height="560"
+src="https://www.youtube.com/embed/hOnLOylBcSM"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+                
             </div>
             <img className='jointAboutBubble' id='shoeBubble' alt='' src={'./assets/img/jointAboutBubble.webp'}></img>
         </div>

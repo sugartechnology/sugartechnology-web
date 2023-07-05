@@ -31,6 +31,10 @@
     height: auto;
 }
 
+.shoesImage{
+    width: 90%;
+}   
+
 .tablet .shoesImage{
     width: 45%;
 }

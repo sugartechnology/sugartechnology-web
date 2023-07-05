@@ -24,3 +24,29 @@
 .tryWatchImage{
     width: 60%;
 }
+
+.watchAboutHeader{
+    width: 90%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 56px;
+    text-align: center;
+    color: #000000;
+}
+
+/* Reeponsive Mobile Settings */
+
+.mobile .tryWatchContainer{
+    height: 85vh;
+}
+
+.watchVideoFrame{
+    width: 65%;
+    height: 71%;
+}
+
+.mobile .watchVideoFrame{
+    width: 90%;
+    height: 250px;
+}

@@ -24,7 +24,7 @@
     display: flex;
     gap: 70px;
     width: 100%;
-    height: 60%;
+    height: 70%;
     justify-content: center;
     position: relative;
 }
@@ -41,7 +41,6 @@
     border-radius: 100px;
 }
 .leaderName{
-    height: 50px;
     font-style: normal;
     font-weight: 600;
     font-size: 19px;
@@ -50,8 +49,11 @@
     letter-spacing: -0.035em;
     color: #ED401A;
 }
+.mobile .leaderName {
+    font-size: 15px;
+}
+
 .leaderPosition{
-    height: 40px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

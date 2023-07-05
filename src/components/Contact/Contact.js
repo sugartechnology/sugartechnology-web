@@ -138,7 +138,7 @@ export const Contact = props =>{
                 <div className='pages'>
                     <div className='contactHeaders'>
                         <a>{t("pages")}</a>
-                        <img  className='pagesLine'alt='' src={'assets/img/littleLine.svg'}></img>
+                        
                     </div>
                     <div className='contactRouters'>
                         <a href='/'>{t("home")}</a>
@@ -152,7 +152,7 @@ export const Contact = props =>{
                 <div className='utilityPages'>
                     <div className='contactHeaders'>
                         <a>{t("utilityPages")}</a>
-                        <img className='utilityLine' alt='' src={'assets/img/littleLine.svg'}></img>
+                        
                     </div>
                     <div className='contactRouters'>
                         <a href='/productAr'>{t("showFurniture")}</a>
@@ -167,6 +167,7 @@ export const Contact = props =>{
             <div className='rightContact'>
                 <div className='contactHeaders'>
                     <a>{t("contactUs")}</a>
+                    
                 </div>
                 <div className='rightContactInputs' onSubmit={(e)=>{return false;}}>
                     <a>{t("enterYourNameAndEmail")}</a>

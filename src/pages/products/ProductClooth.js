@@ -30,7 +30,11 @@ export const ProductClooth = props =>{
             <ProductsCustomer></ProductsCustomer>
             <TryClooth></TryClooth>
             <CloothPatern></CloothPatern>
+
+            {/*
             <CloothPartner></CloothPartner>
+            */
+            }
         </div>
     );
 }

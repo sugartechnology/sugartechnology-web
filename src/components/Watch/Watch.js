@@ -25,7 +25,7 @@ export const Watch = props =>{
             <div className='showAtHomeSpans'>
                 <div className='showAtHomeSpanElements'>
                     <a className='showAtHomeHeader'>{t("watchContainerHeader")}</a>
-                    <a className='showAtHomeSpan'>{t("watchContainerSpan")}Lorem ipsum dolor sit amet consectetur. Erat dui quis ac mollis malesuada. Eu neque non ipsum in egestas quam mattis. </a>
+                    <a className='showAtHomeSpan'>{t("watchContainerSpan")} </a>
                 </div>
                 <div className='showAtHomeButtons'>
                     <a href='/'><button className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>

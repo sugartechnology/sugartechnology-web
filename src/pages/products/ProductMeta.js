@@ -29,8 +29,12 @@ export const ProductMeta = props =>{
             <Metaverse></Metaverse>
             <ProductsCustomer></ProductsCustomer>
             <MetaverseProject></MetaverseProject>
+
+            {/**
             <MetaReports></MetaReports>
             <MetaPartner></MetaPartner>
+             */
+            }
         </div>
     );
 }

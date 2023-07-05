@@ -16,13 +16,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 10px;
     z-index: 999;
 }
 .contactInputInputs{
     display: flex;
     gap: 20px;
     flex-direction: column;
+    margin-top: 10px;
 }
 .contactInputHeaders{
     display: flex;
@@ -55,7 +56,6 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #67748E;
 }
 .nameEmailInputs{
     display: flex;
@@ -94,7 +94,9 @@
 }
 .nameEmailInput{
     height: 4.5vh;
-    width: 306px;
+    width: 40%;
+    min-width: 200px;
+    max-width: 300px ;
     border-radius: 8px;
     background: #FFFFFF;
     border: 1px solid #D2D6DA;
@@ -102,6 +104,8 @@
 .fullnameInput{
     height: 4.5vh;
     width: 99%;
+    min-width: 200px;
+    max-width: 500px ;
     border-radius: 8px;
     background: #FFFFFF;
     border: 1px solid #D2D6DA;
@@ -112,8 +116,10 @@
     gap: 10px;
 }
 .descriptionInput{
-    height: 150px;
-    width: 636px;
+    height: 90px;
+    width: 99%;
+    min-width: 200px;
+    max-width: 500px ;
     background: #FFFFFF;
     border: 1px solid #D2D6DA;
     border-radius: 8px;

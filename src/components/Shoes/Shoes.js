@@ -24,8 +24,8 @@ export const Shoes = props =>{
         <div className='mainPageSmallFigure0 '></div>
             <div className='showAtHomeSpans'>
                 <div className='showAtHomeSpanElements'>
-                    <a className='showAtHomeHeader'>{t("shoesContainerHeader")}Lorem ipsum dolor sit amet consectetur.</a>
-                    <a className='showAtHomeSpan'>{t("shoesContainerSpan")}Lorem ipsum dolor sit amet consectetur. Neque viverra mi at mattis nascetur eu quis risus netus.</a>
+                    <a className='showAtHomeHeader'>{t("shoesContainerHeader")}</a>
+                    <a className='showAtHomeSpan'>{t("shoesContainerSpan")}</a>
                 </div>
                 <div className='showAtHomeButtons'>
                     <a href='/'><button className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>

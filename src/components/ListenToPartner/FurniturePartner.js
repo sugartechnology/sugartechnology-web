@@ -7,10 +7,10 @@ export const FurniturePartner = props =>{
     return(
         <div className='listenToPartnerContainer'>
             <div className='partner1'>
+            <img className='containerTopLogo' alt='' src={'./assets/img/ListenToPartnerImg1.svg'} ></img>
                 <div className='partnerHeaders'>
-                    <img className='containerTopLogo' alt='' src={'./assets/img/ListenToPartnerImg1.svg'} style={{position: "absolute", bottom: "140px", left: "40px"}}></img>
                     <a className='partnerHeader'>{t("listenToPartnerHeader")}</a>
-                    <img className='partnerLogo' alt='' src={'./assets/img/tepe-home-min.svg'} style={{width: "170px", position: "absolute", left: "40px"}}></img>
+                    <img className='partnerLogo' alt='' src={'./assets/img/tepe-home-min.svg'} ></img>
                 </div>
                 <div className='partnerSpans' style={{display: "flex"}}>
                     <a className='partnerSpan'>{t("tepeHomeComments")}</a>
