@@ -182,7 +182,7 @@ export const MainSectoralSolution = (props) => {
         span.innerHTML = solutionArray[index].span;
         popupSpanElements.appendChild(span);
 
-        const popupButton = document.createElement("div");
+        const popupButton = document.createElement("a");
         popupButton.classList.add("popupButton");
         popupSpans.appendChild(popupButton);
 
@@ -191,6 +191,7 @@ export const MainSectoralSolution = (props) => {
             const button = document.createElement("a");
             button.classList.add("showAtHomeButton1");
             button.innerHTML = t("usecase");
+            button.href = solutionArray[index].link;
             popupButton.appendChild(button);
 
         } else {
