@@ -14,7 +14,6 @@
     font-weight: 700;
     font-size: 44px;
     line-height: 52px;
-    text-align: justify;
     text-transform: capitalize;
     color: #000000;
 }
@@ -24,8 +23,6 @@
 }
 .sugarBrand{
     display: flex;
-    width: 313px;
-    height: 542px;
     background: #FFFFFF;
     border-radius: 16px;
     justify-content: space-evenly;
@@ -34,9 +31,7 @@
 }
 .sugarBrandHomeImg{
     position: relative;
-    right: 3px;
     width: 320px;
-    bottom: 27px;
     border-radius: 16px 16px 0px 0px;
 }
 .sugarBrandShadow{
@@ -55,13 +50,16 @@
     text-align: left;
     color: #000000;
     position: relative;
-    left: 20px;
+    margin: auto;
 }
 .sugarBrandLogo{
-    width: 259px;
+    width: 200px;
     position: relative;
-    left: 20px;
-    height: 42px;
+   
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
 }
 .brandsPageButton{
     display: flex;
@@ -105,8 +103,10 @@
 /* Reeponsive Mobile Settings */
 
 .mobile .sugarBrandsHeader{
-    width: 100%;
-    font-size: 19px;
+    width: 90%;
+    font-size: 22px;
+    margin: auto;
+    line-height: 30px;
 }
 .mobile #brand2,
 .mobile #brand3{
@@ -137,9 +137,6 @@
     padding: 40px 0px;
 }
 
-.mobile .sugarBrandsHeaders{
-    padding: 40px 10px;
-}
 
 /* Reeponsive Tablet Settings */
 

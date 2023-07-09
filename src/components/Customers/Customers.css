@@ -11,8 +11,9 @@
   .swiper-slide img {
     display: block;
     width: 170px!important;
+    
     height: auto;
-    object-fit: cover;
+    max-height: 80px;
   }
 
   .swiper-button-next {
@@ -47,7 +48,7 @@
   }
   
   .swiper-wrapper{
-    left: 170px;
+    left: 10%;
     width: 80% !important;
   }
   
@@ -60,9 +61,9 @@
   }
 
   .customersSpan{
-    position: absolute;
-    top: 30px;
+    
     width: 100%;
+    display: block;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -70,10 +71,11 @@
     text-align: center;
     text-transform: capitalize;
     color: #666666;
+    margin-top: 40px;
   }
 
   .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
-    bottom: 40px;
+    bottom: 25px;
   }
 
   .swiper-button-next{
@@ -106,12 +108,12 @@
   /* Reeponsive Mobile Settings */
 
   .mobile .swiper-slide img{
-    width: 65px !important;
+    width: 70px !important;
   }
 
   .mobile .swiper-wrapper{
-    width: 60% !important;
-    left: 20% !important;
+    width: 76% !important;
+    left: 12% !important;
   }
 
   .mobile .swiper-button-next{

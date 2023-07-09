@@ -1,5 +1,4 @@
 .MetaverseProjectContainer{
-    height: 100vh;
     position: relative;
     background: radial-gradient(#DBB7DC,#B194C9, #6F6EAC);
 }
@@ -39,8 +38,26 @@
 }
 .metaverseProjectElement{
     width: 40%;
- 
+    
+
 }
+
+.metaverseProjectElement{
+    width: 800px;
+    height: 400px;
+    margin: auto;
+}
+
+.mobile .metaverseProjectElement{
+    width: 90%;
+    margin: auto;
+    height: 300px;
+
+}
+.tablet .metaverseProjectElement{
+    width: 80%;
+}
+
 
 /* Reeponsive Tablet Settings */
 
@@ -52,9 +69,7 @@
     gap: 30px;
 }
 
-.tablet .metaverseProjectElement{
-    width: 50%;
-}
+
 
 .tablet .metaverseProjectSpan{
     height: 100px;
@@ -72,16 +87,4 @@
     line-height: 35px;
 }
 
-.mobile .metaverseProjectElement{
-    width: 60%;
-}
 
-.metaverseProjectElement{
-    width: 65%;
-    height: 71%;
-}
-
-.mobile .metaverseProjectElement{
-    width: 90%;
-    height: 250px;
-}

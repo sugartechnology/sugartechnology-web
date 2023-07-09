@@ -26,7 +26,11 @@ export const ProductBathroom = props =>{
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ProductBathroom`}>
             <Bathroom></Bathroom>
             <BathroomDetails></BathroomDetails>
+
+            {/**
             <BathroomPartner></BathroomPartner>
+             */
+            }
         </div>
     );
 }

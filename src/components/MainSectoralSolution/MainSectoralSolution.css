@@ -12,7 +12,8 @@
     height: 60vh;
     display: flex;
     justify-content: space-evenly;
-    position: absolute;
+    position: fixed ;
+    top: 15%;
     align-items: center;
     background: #EFEFEF;
     border-radius: 12px;
@@ -21,7 +22,7 @@
     box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.25), inset 0px 0px 10px rgba(255, 255, 255, 0.7);
     padding: 50px 0px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%); 
 }
 
 .solutionImage.selected{
@@ -120,16 +121,19 @@
     flex-direction: column;
     width: 80%;
     position: relative;
-    gap: 30px;
-    margin-bottom: 50px;
+    gap: 50px;
+    margin-bottom: 20px;
     align-items: center;
+}
+
+.mobile .solutionItems{
+    gap: 15px;
 }
 
 .solutionItem{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
     width: 20%;
 }
 
@@ -176,12 +180,13 @@
     flex-direction: column-reverse;
     height: auto;
     padding: 20px 10px;
-    width: 100%;
+    width: 90%;
 }
 
 .mobile .popupImageDiv{
-    width: 80%;
+    width: 65%;
 }
+
 
 .mobile .popupSpans{
     width: auto;

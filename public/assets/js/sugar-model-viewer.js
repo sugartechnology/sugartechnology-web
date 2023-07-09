@@ -73049,7 +73049,7 @@ advenced_feature_template.innerHTML = `
         transform: translateY(100%);
     }
 
-    .mobile.sugar-model-viewer-container{
+    .mobile .sugar-model-viewer-container{
         position: relative;
         display: flex;
         flex-direction: column;

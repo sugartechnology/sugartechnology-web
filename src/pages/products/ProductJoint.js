@@ -30,7 +30,10 @@ export const ProductJoint = props =>{
             <ProductsCustomer></ProductsCustomer>
             <JointAbout></JointAbout>
             <CreateYourProduct></CreateYourProduct>
+            {/**
             <JointPartner></JointPartner>
+             */
+            }
         </div>
     );
 }

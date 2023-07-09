@@ -26,7 +26,11 @@ export const ProductDecoration = props =>{
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ProductDecoration`}>
             <Decoration></Decoration>
             <DecorationDetails></DecorationDetails>
+            {
+                /**
             <DecorationPartner></DecorationPartner>
+                 */
+            }
         </div>
     );
 }

@@ -39,7 +39,7 @@
 
 .firstCommentSpan{
     width: 90%;
-    font-family: 'Nunito';
+    
     font-style: normal;
     font-weight: 800;
     font-size: 40px;
@@ -49,7 +49,7 @@
 }
 .secondCommentSpan{
     width: 100%;
-    font-family: 'Nunito';
+    
     font-style: normal;
     font-weight: 800;
     font-size: 100px;
@@ -59,7 +59,7 @@
 }
 .thirdCommentSpan{
     width: 65%;
-    font-family: 'Nunito';
+    
     font-style: italic;
     font-weight: 600;
     font-size: 22px;
@@ -84,13 +84,12 @@
 }
 .commentCustomer h1{
     color: #FFFFFF;
-    font-family: 'Nunito';
+    
     font-size: 23px;
 }
 .commentCustomer a{
     color: #FFFFFF;
     position: relative;
-    font-family: 'Nunito';
     bottom: 10px;
 }
 .commentPageButtons{
@@ -214,6 +213,15 @@
 .companyLogo{
     width: 10%;
     margin-top: 20px;
+}
+
+.mobile .companyLogo{
+    width: 30%;
+}
+
+
+.tablet .companyLogo{
+    width: 20%;
 }
 
 /* Reeponsive Tablet Settings */

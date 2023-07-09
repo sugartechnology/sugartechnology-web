@@ -16,10 +16,10 @@ export const WhiteGoodsPartner = props =>{
                     <a className='thirdCommentSpan'>{t("whiteGoodsPartnerSpan")}</a>
                 </div>
                 <div className='commentCustomer'>
-                    <img className='customerPhoto' alt='' src={'assets/img/kys2.JPEG'}></img>
-                    <h1>Beyaz Eşya Müdürü İsmi</h1>
-                    <a>Beyaz Eşya Müdürü</a>
-                    <img className='partnerCompanyLogo' alt='' src={'./assets/img/simurgLogo.svg'}></img>
+                    <img className='customerPhoto' alt='' src={'assets/img/buket_kaplan_vestel.jpeg'}></img>
+                    <h1>Buket Kaplan</h1>
+                    <a>Marketing Communications&Retail Marketing Executive</a>
+                    <img className='partnerCompanyLogo' alt='' src={'./assets/img/vestel-logo-min.svg'}></img>
                 </div>
             </div>
         </div>

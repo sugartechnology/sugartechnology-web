@@ -29,7 +29,7 @@
 #sugar-model-container{
     display: flex;
     flex-direction: column;
-    height: 629px;
+    height: 80vh!important;
     position: relative;
     overflow: hidden;
     align-items: center;

@@ -45,8 +45,21 @@
     opacity: 0.5;
 }
 .jointAboutImage{
-    width: 47%;
+    width: 800px;
+    height: 400px;
+    margin: auto;
 }
+
+.mobile .jointAboutImage{
+    width: 90%;
+    margin: auto;
+    height: 300px;
+
+}
+.tablet .jointAboutImage{
+    width: 80%;
+}
+
 
 /* Reeponsive Mobile Settings */
 
@@ -63,10 +76,7 @@
     font-size: 14px;
     line-height: 20px;
 }
-.mobile .jointAboutImage{
-    width: 78% !important;
 
-}
 
 .mobile .jointAboutElements{
     justify-content: space-evenly;
@@ -93,9 +103,6 @@
     width: 80%;
     font-size: 13px;
     line-height: 24px;
-}
-.tablet .jointAboutImage{
-    width: 80%;
 }
 
 .tablet .jointAboutElements{
