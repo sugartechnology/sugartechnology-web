@@ -37,7 +37,7 @@ export const SugarSquad = props =>{
         },
         {
             image: "./assets/img/erenPp.webp",
-            name: "Muhammed Eren Baş",
+            name: "Muhammed Eren Demirbaş",
             position: t("sugarSquadMember7Position")
         },
         {
