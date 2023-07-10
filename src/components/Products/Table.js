@@ -8,9 +8,17 @@ export const Table = props =>{
     function closeContactArea(){
         let contactComponentDiv = document.querySelector(".contactComponentDiv");
         let sendMessageButton = document.querySelector(".sendMessageButton");
+        let closeBtn = document.querySelector(".productInputsCloseButton");
+        let overlay = document.querySelector(".cookiesOverlay");
         contactComponentDiv.style.display = "flex";
 
         sendMessageButton.addEventListener("click", () => {
+            contactComponentDiv.style.display = "none";
+        })
+        closeBtn.addEventListener("click",() => {
+            contactComponentDiv.style.display = "none";
+        })
+        overlay.addEventListener("click",() => {
             contactComponentDiv.style.display = "none";
         })
     }
@@ -20,6 +28,9 @@ export const Table = props =>{
             <div className='contactComponentDiv'>
                 <div className="cookiesOverlay" id='cookiesOverlay' style={{zIndex: "1"}}></div>
                 <ContactInputs></ContactInputs>
+                <div className='productInputsCloseButton'>
+                    <img alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                </div>
             </div>
             <div className='mainPageTopLeftFigure rotate'></div>
             <div className='mainPageTopRightFigure rotate'></div>

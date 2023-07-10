@@ -125,6 +125,14 @@
     z-index: 1;
 }
 
+.productInputsCloseButton{
+    position: absolute;
+    z-index: 999;
+    top: 14%;
+    right: 27%;
+    cursor: pointer;
+}
+
 /* Reeponsive Tablet Settings */
 
 .tablet .showAtHomeHeader{
@@ -195,4 +203,8 @@
 .mobile .showAtHomeSpans{
     width: 71%;
     align-items: normal;
+}
+.mobile .productInputsCloseButton{
+    top: 11%;
+    right: 10%;
 }

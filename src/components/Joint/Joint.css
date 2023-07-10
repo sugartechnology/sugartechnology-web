@@ -9,6 +9,7 @@
 }
 .jointImage{
     width: 100%;
+    padding: 120px 0px;
 }
 .jointImageDiv{
     width: 70%;
@@ -42,4 +43,8 @@
 
 .mobile #jointDeskopImage{
     display: none;
+}
+
+.jointImage{
+    padding: 0px;
 }
