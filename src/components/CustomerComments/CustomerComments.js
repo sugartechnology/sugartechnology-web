@@ -66,7 +66,7 @@ export const CustomerComments = (props) => {
   
     return (
       <div className='customerCommentsContainer'>
-        <img className='commentsLeftButton' alt='' src={'assets/img/commentsLeftButton.svg'} onClick={() => {prev();}}></img>
+        <img className='commentsLeftButton' alt='' src={'assets/img/CommentsLeftButton.svg'} onClick={() => {prev();}}></img>
           <img className='redBackgroundCircle1' alt='' src={'./assets/img/circle1.svg'}></img>
           <img className='redBackgroundCircle2' alt='' src={'./assets/img/circle2.svg'}></img>
           <img className='redBackgroundCircle3' alt='' src={'./assets/img/circle3.svg'}></img>
@@ -83,7 +83,7 @@ export const CustomerComments = (props) => {
               <img className='companyLogo' alt='' src={array[index].companyLogo}></img>
             </div>
           </div>
-        <img className='commentsRightButton' alt='' src={'assets/img/commentsRightButton.svg'} onClick={() => {next();}}></img>
+        <img className='commentsRightButton' alt='' src={'assets/img/CommentsRightButton.svg'} onClick={() => {next();}}></img>
       </div>
     );
   };
