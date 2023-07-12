@@ -1,5 +1,6 @@
 .MetaverseProjectContainer{
     position: relative;
+    padding: 50px 0px;
     background: radial-gradient(#DBB7DC,#B194C9, #6F6EAC);
 }
 .metaverseProjectBackground{

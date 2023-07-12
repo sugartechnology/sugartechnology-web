@@ -25,7 +25,7 @@ export const SugarTeam = props =>{
             comment: t("leader3CommentSpan")
         },
         {
-            image: "./assets/img/erdemPp.webp",
+            image: "./assets/img/erdemPp.jpg",
             name: "Şükrü Erdem Şahin",
             position: t("sugarSquadMember3Position"),
             comment: t("leader4CommentSpan")

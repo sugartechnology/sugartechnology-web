@@ -2,138 +2,39 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 function LanguageSelector(){
+  
     const { i18n } = useTranslation();
-    function toggleEnglish(){
-      var englishButton = document.querySelector('.englishButton');
-      var turkishButton = document.querySelector('.turkishButton');
-      var frenchButton = document.querySelector(".frenchButton");
-      var germanButton = document.querySelector(".germanButton");
-      var italianButton = document.querySelector(".italianButton");
-      var arabicButton = document.querySelector(".arabicButton");
-      var popup = document.getElementById("languagePopup");
-      if(englishButton.style.display === "none"){
-        englishButton.style.display = "flex";
-        turkishButton.style.display = "none";
-        frenchButton.style.display = "none";
-        germanButton.style.display = "none";
-        italianButton.style.display = "none";
-        arabicButton.style.display = "none";
-        popup.style.display = "none";
-        i18n.changeLanguage('en');
-      }
-      else{
-        englishButton.style.display = "none";
-      }
+    const [selectedLanguage, setSelectedLanguage] = React.useState(
+      localStorage.getItem("selectedLanguage") || i18n.language
+    );
+    function toggleEnglish() {
+      setSelectedLanguage("en");
+      i18n.changeLanguage("en");
     }
-    function toggleTurkish(){
-      var englishButton = document.querySelector('.englishButton');
-      var turkishButton = document.querySelector('.turkishButton');
-      var frenchButton = document.querySelector(".frenchButton");
-      var germanButton = document.querySelector(".germanButton");
-      var italianButton = document.querySelector(".italianButton");
-      var arabicButton = document.querySelector(".arabicButton");
-      var popup = document.getElementById("languagePopup");
-      if(turkishButton.style.display === "none"){
-        turkishButton.style.display = "flex";
-        englishButton.style.display = "none";
-        frenchButton.style.display = "none";
-        germanButton.style.display = "none";
-        italianButton.style.display = "none";
-        arabicButton.style.display = "none";
-        popup.style.display = "none";
-        i18n.changeLanguage('tr');
-      }
-      else{
-        turkishButton.style.display = "none";
-      }
+    
+    function toggleTurkish() {
+      setSelectedLanguage("tr");
+      i18n.changeLanguage("tr");
     }
-    function toggleFrench(){
-      var englishButton = document.querySelector('.englishButton');
-      var turkishButton = document.querySelector('.turkishButton');
-      var frenchButton = document.querySelector(".frenchButton");
-      var germanButton = document.querySelector(".germanButton");
-      var italianButton = document.querySelector(".italianButton");
-      var arabicButton = document.querySelector(".arabicButton");
-      var popup = document.getElementById("languagePopup");
-      if(frenchButton.style.display === "none"){
-        frenchButton.style.display = "flex";
-        turkishButton.style.display = "none";
-        englishButton.style.display = "none";
-        germanButton.style.display = "none";
-        italianButton.style.display = "none";
-        arabicButton.style.display = "none";
-        popup.style.display = "none";
-        i18n.changeLanguage('fr');
-      }
-      else{
-        frenchButton.style.display = "none";
-      }
+    
+    function toggleFrench() {
+      setSelectedLanguage("fr");
+      i18n.changeLanguage("fr");
     }
-    function toggleGerman(){
-      var englishButton = document.querySelector('.englishButton');
-      var turkishButton = document.querySelector('.turkishButton');
-      var frenchButton = document.querySelector(".frenchButton");
-      var germanButton = document.querySelector(".germanButton");
-      var italianButton = document.querySelector(".italianButton");
-      var arabicButton = document.querySelector(".arabicButton");
-      var popup = document.getElementById("languagePopup");
-      if(germanButton.style.display === "none"){
-        germanButton.style.display = "flex";
-        turkishButton.style.display = "none";
-        englishButton.style.display = "none";
-        frenchButton.style.display = "none";
-        italianButton.style.display = "none";
-        arabicButton.style.display = "none";
-        popup.style.display = "none";
-        i18n.changeLanguage('de');
-      }
-      else{
-        germanButton.style.display = "none";
-      }
+    
+    function toggleGerman() {
+      setSelectedLanguage("de");
+      i18n.changeLanguage("de");
     }
-    function toggleItalian(){
-      var englishButton = document.querySelector('.englishButton');
-      var turkishButton = document.querySelector('.turkishButton');
-      var frenchButton = document.querySelector(".frenchButton");
-      var germanButton = document.querySelector(".germanButton");
-      var italianButton = document.querySelector(".italianButton");
-      var arabicButton = document.querySelector(".arabicButton");
-      var popup = document.getElementById("languagePopup");
-      if(italianButton.style.display === "none"){
-        italianButton.style.display = "flex";
-        turkishButton.style.display = "none";
-        englishButton.style.display = "none";
-        germanButton.style.display = "none";
-        frenchButton.style.display = "none";
-        arabicButton.style.display = "none";
-        popup.style.display = "none";
-        i18n.changeLanguage('it');
-      }
-      else{
-        italianButton.style.display = "none";
-      }
+    
+    function toggleItalian() {
+      setSelectedLanguage("it");
+      i18n.changeLanguage("it");
     }
-    function toggleArabic(){
-      var englishButton = document.querySelector('.englishButton');
-      var turkishButton = document.querySelector('.turkishButton');
-      var frenchButton = document.querySelector(".frenchButton");
-      var germanButton = document.querySelector(".germanButton");
-      var italianButton = document.querySelector(".italianButton");
-      var arabicButton = document.querySelector(".arabicButton");
-      var popup = document.getElementById("languagePopup");
-      if(arabicButton.style.display === "none"){
-        arabicButton.style.display = "flex";
-        turkishButton.style.display = "none";
-        englishButton.style.display = "none";
-        germanButton.style.display = "none";
-        italianButton.style.display = "none";
-        frenchButton.style.display = "none";
-        popup.style.display = "none";
-        i18n.changeLanguage('ar');
-      }
-      else{
-        arabicButton.style.display = "none";
-      }
+    
+    function toggleArabic() {
+      setSelectedLanguage("ar");
+      i18n.changeLanguage("ar");
     }
     function openLanguagePopup() {
       var popup = document.getElementById("languagePopup");
@@ -151,27 +52,27 @@ function LanguageSelector(){
     return (
       <div>
           <div className='languageButton'>
-            <div className='englishButton' id="englishButton" style={{display: "none", right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
+            <div className={`englishButton ${selectedLanguage === "en" ? "" : "hidden"}`} id="englishButton" style={{right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
               <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag.svg'}></img>
               <a className="languageSpan" id="headerLanguage">English</a>
             </div>
-            <div className='turkishButton' id="turkishButton" style={{right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
+            <div className={`turkishButton ${selectedLanguage === "tr" ? "" : "hidden"}`} id="turkishButton" style={{right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
               <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/Flag2.svg'}></img>
               <a className="languageSpan" id="headerLanguage">Turkish</a>
             </div>
-            <div className='frenchButton' id="frenchButton" style={{display: "none", right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
+            <div className={`frenchButton ${selectedLanguage === "fr" ? "" : "hidden"}`} id="frenchButton" style={{right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
               <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/frenchFlag.svg'}></img>
               <a className="languageSpan" id="headerLanguage">French</a>
             </div>
-            <div className='germanButton' id="germanButton" style={{display: "none", right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
+            <div className={`germanButton ${selectedLanguage === "de" ? "" : "hidden"}`} id="germanButton" style={{right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
               <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/germanFlag.svg'}></img>
               <a className="languageSpan" id="headerLanguage">German</a>
             </div>
-            <div className='italianButton' id="italianButton" style={{display: "none", right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
+            <div className={`italianButton ${selectedLanguage === "it" ? "" : "hidden"}`} id="italianButton" style={{right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
               <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/italianFlag.svg'}></img>
               <a className="languageSpan" id="headerLanguage">Italian</a>
             </div>
-            <div className='arabicButton' id="arabicButton" style={{display: "none", right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
+            <div className={`arabicButton ${selectedLanguage === "ar" ? "" : "hidden"}`} id="arabicButton" style={{right: "5px", cursor: "pointer"}} onClick={openLanguagePopup}>
               <img className='languageFlag' alt='' src={process.env.PUBLIC_URL +'/assets/img/arabicFlag.svg'}></img>
               <a className="languageSpan" id="headerLanguage">Arabic</a>
             </div>

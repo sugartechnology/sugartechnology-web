@@ -21,7 +21,7 @@ export const MainSectoralSolution = (props) => {
                 popupImage: "./assets/img/products/carpet.svg"
             },
             {
-                url: "./assets/img/solutionImages/tablo.svg",
+                url: "./assets/img/solutionImages/tablo.webp",
                 header: t("tableHeader"),
                 span: t("tableSpan"), 
                 link: "/productTable",
@@ -35,14 +35,14 @@ export const MainSectoralSolution = (props) => {
                 popupImage: "./assets/img/products/banyo.svg"
             },
             {
-                url: "./assets/img/solutionImages/beyazEşya.svg",
+                url: "./assets/img/solutionImages/beyazEşya.webp",
                 header: t("whiteGoodsHeader"),
                 span: t("whiteGoodsSpan"), 
                 link: "/productWhiteGoods",
                 popupImage: "./assets/img/products/beyazEsya.svg"
             },
             {
-                url: "./assets/img/solutionImages/aksesuarlar.svg",
+                url: "./assets/img/solutionImages/aksesuarlar.webp",
                 header: t("decorationHeader"),
                 span: t("decorationSpan"),
                 link: "/productDecoration",
@@ -55,28 +55,28 @@ export const MainSectoralSolution = (props) => {
                 popupImage: "./assets/img/products/materials.svg"
             },
             {
-                url: "./assets/img/solutionImages/saat.svg",
+                url: "./assets/img/solutionImages/saat.webp",
                 header: t("watchHeader"),
                 span: t("watchSpan"),
                 link: "/productWatch",
                 popupImage: "./assets/img/watchImage.webp"
             },
             {
-                url: "./assets/img/solutionImages/ayakkabı.svg",
+                url: "./assets/img/solutionImages/ayakkabı.webp",
                 header: t("shoesHeader"),
                 span: t("shoesSpan"), 
                 link: "/productShoes",
                 popupImage: "./assets/img/shoesImage.webp"
             },
             {
-                url: "./assets/img/solutionImages/kıyafet.svg",
+                url: "./assets/img/solutionImages/kıyafet.webp",
                 header: t("cloothHeader"),
                 span: t("cloothSpan"),
                 link: "/productClooth",
                 popupImage: "./assets/img/cloothImage.webp"
             },
             {
-                url: "./assets/img/solutionImages/tekstil.svg",
+                url: "./assets/img/solutionImages/tekstil.webp",
                 header: t("textileHeader"),
                 span: t("textileSpan"),
                 link: "/productTextile",
@@ -104,7 +104,7 @@ export const MainSectoralSolution = (props) => {
             const solutionSpan = document.createElement("a");
 
             solutionItem.classList.add("solutionItem");
-            solutionImage.classList.add("solutionImage");
+            solutionImage.classList.add("solutionMainImage");
             solutionImage.setAttribute("index", "" + i);
             solutionImage.addEventListener("click", selectSolution);
             solutionSpan.classList.add("solutionSpans");

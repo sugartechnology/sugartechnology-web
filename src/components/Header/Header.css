@@ -651,6 +651,10 @@
     padding: 2px 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Reeponsive Tablet Settings */
 
 .tablet .headerContainer{
