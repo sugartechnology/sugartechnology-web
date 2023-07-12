@@ -111,17 +111,14 @@
     font-size: 19px;
     line-height: 220%;
     text-transform: capitalize;
-    color: #797979 !important;
     gap: 10px;
     position: relative;
     top: 20px;
 }
 .contactRouters a{
     text-decoration: none;
-    width: 100%;
-}
-.contactRouters a:visited{
     color: #797979;
+    width: 100%;
 }
 .contactRouters a:hover{
     color: red;
