@@ -14,7 +14,7 @@ export const TryClooth = props =>{
                 </div>
             </div>
             <div className='tryCloothImages'>
-                <img className='tryCloothImage' alt='' src={'./assets/img/tryCloothImage.webp'} style={{width:"361px"}}></img>
+                <img className='tryCloothImage' alt='' src={'./assets/img/tryCloothImage.jpg'} style={{width:"361px"}}></img>
                 <img className='tryCloothBubble' alt='' src={'./assets/img/tryCloothBubble.webp'} style={{position: "absolute", right: "0px", zIndex: "-1", top: "800px"}}></img>
             </div>
         </div>

@@ -143,7 +143,7 @@ export const ContactInputs = props =>{
                     </div>
                 </div>
                 <ReCAPTCHA
-                    sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
+                    sitekey="6LeDWB4nAAAAAERZuZ45quLmaqG8RQhbvFV_Y_HB"
                     /*onChange={handleRecaptchaChange}*/ />
                 <div className='contactInputButtons'>
                     <button className='sendMessageButton' onClick={handleSubmit}><a>{t("sendMessage")}</a></button>

@@ -224,7 +224,7 @@ export const ContactCv = props =>{
                     </div>
                 </div>
                 <ReCAPTCHA className='contactCvRecaptcha'
-                    sitekey="6LcjSPglAAAAAJbme5uh6p2Mf0fjAqhWn5FI1mN2"
+                    sitekey="6LeDWB4nAAAAAERZuZ45quLmaqG8RQhbvFV_Y_HB"
                    /*onChange={handleRecaptchaChange}*/ />
                 <div className='submitButton' onClick={handleSubmit}>
                     <a>{t("submit")}</a>

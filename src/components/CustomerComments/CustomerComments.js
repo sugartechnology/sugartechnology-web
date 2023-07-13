@@ -18,7 +18,7 @@ export const CustomerComments = (props) => {
         trustedByMillionsOfCompany: 'commentHeader2',
         commentSpan: 'commentSpan2',
         commentHeader: 'Şatış Direktörü',
-        commentAuthor: 'Yesim Korkmaz',
+        commentAuthor: 'Yeşim Korkmaz',
         customerPhoto:'https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/yesim_korkmaz.jpeg',
         companyLogo: 'assets/img/tepe-home-min.svg'
       },
@@ -42,8 +42,8 @@ export const CustomerComments = (props) => {
         trustedByMillionsOfCompany: 'commentHeader5',
         commentSpan: 'commentSpan5',
         commentHeader: 'Tasarımcı ve Şirket Yöneticisi',
-        commentAuthor: 'Göksel Günaydın',
-        customerPhoto: 'assets/img/kys2.JPEG',
+        commentAuthor: 'Göksal Günaydın',
+        customerPhoto: 'assets/img/kys2.jpeg',
         companyLogo: 'assets/img/kys_design.svg'
       },
       {
@@ -51,7 +51,7 @@ export const CustomerComments = (props) => {
         commentSpan: 'commentSpan6',
         commentHeader: 'Pazarlama Müdürü',
         commentAuthor: 'Ceren Evcimen',
-        customerPhoto: 'assets/img/cerenEvcimen.JPEG',
+        customerPhoto: 'assets/img/cerenEvcimen.jpeg',
         companyLogo: 'assets/img/tepe-home-min.svg'
       },
     ];

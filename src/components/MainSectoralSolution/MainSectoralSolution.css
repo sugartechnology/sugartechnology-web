@@ -25,6 +25,10 @@
     transform: translate(-50%); 
 }
 
+.solutionMainImage{
+    width: 100%;
+}
+
 .solutionMainImage.selected{
     border: 1px solid #ED401A;
     border-radius: 20px;
