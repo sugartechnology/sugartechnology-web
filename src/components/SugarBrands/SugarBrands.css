@@ -28,6 +28,9 @@
     justify-content: space-evenly;
     flex-direction: column;
     position: relative;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 0px 20px 0px;
 }
 .sugarBrandHomeImg{
     position: relative;
@@ -53,13 +56,7 @@
     margin: auto;
 }
 .sugarBrandLogo{
-    width: 200px;
-    position: relative;
-   
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
+    width: 80%;
 }
 .brandsPageButton{
     display: flex;
@@ -71,33 +68,17 @@
     border-radius: 10px;
     cursor: pointer;
 }
- 
-#brand1{
-    animation: slideRight 1s forwards;
-}
-#brand2{
-    animation: slideRight 1s forwards;
-}
-#brand3{
-    animation: slideRight 1s forwards;
-}
-.sugarBrandShadow1{
-    animation: slideRight 1s forwards;
-}
-.sugarBrandShadow2{
-    animation: slideRight 1s forwards;
-}
-.sugarBrandShadow3{
-    animation: slideRight 1s forwards;
-}
 
-@keyframes slideRight {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+.sugarBrandButton{
+    border-radius: 100px;
+    border: 2px solid #ED401A;
+    padding: 10px 0px;
+    width: 85%;
+    color: #ED401A;
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
 }
 
 /* Reeponsive Mobile Settings */
@@ -107,10 +88,7 @@
     font-size: 22px;
     margin: auto;
     line-height: 30px;
-}
-.mobile #brand2,
-.mobile #brand3{
-    display: none;
+    text-align: center;
 }
 .mobile .sugarBrandShadow1,
 .mobile .sugarBrandShadow2,
@@ -135,6 +113,9 @@
 
 .mobile .sugarBrands{
     padding: 40px 0px;
+    overflow-x: scroll;
+    gap: 10px;
+    width: 90%;
 }
 
 

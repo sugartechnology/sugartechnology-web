@@ -114,11 +114,6 @@
     justify-content: center;
 }
 
-.mainSolutionSpan{
-    text-align: justify;
-    width: 80%;
-    display: flex;
-}
 
 .solutionItems{
     display: flex;

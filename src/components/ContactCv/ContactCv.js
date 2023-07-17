@@ -178,14 +178,14 @@ export const ContactCv = props =>{
                     <a className='contactCvHeader'>{t("contactCvHeader")}</a>
                     <a className='contactCvSpan'>{t("contactCvSpan")}</a>
                 </div>
-                <div className='nameEmailInputs'>
-                        <div className='nameInputs'>
+                <div className='nameEmailInputsCv'>
+                        <div className='nameInputsCv'>
                             <a className='nameInputSpan'>{t("fullName")}</a>
-                            <input className='nameEmailInput' placeholder={t("fullName")} value={name} onChange={(e)=>setName(e.target.value)}></input>
+                            <input className='nameEmailInputCv' placeholder={t("fullName")} value={name} onChange={(e)=>setName(e.target.value)}></input>
                         </div>
-                        <div className='emailInputs'>
+                        <div className='emailInputsCv'>
                             <a className='emailInputSpan'>{t("email")}</a>
-                            <input className='nameEmailInput' placeholder='hello@creative-tim.com' value={mail} onChange={(e)=>setMail(e.target.value)}></input>
+                            <input className='nameEmailInputCv' placeholder='hello@creative-tim.com' value={mail} onChange={(e)=>setMail(e.target.value)}></input>
                         </div>
                 </div>
                 <div className='jobTitleInputs'>
@@ -197,18 +197,18 @@ export const ContactCv = props =>{
                         <option>Unity</option>
                     </select>
                 </div>
-                <div className='nameEmailInputs'>
-                        <div className='nameInputs'>
+                <div className='nameEmailInputsCv'>
+                        <div className='nameInputsCv'>
                             <a className='nameInputSpan'>{t("phone")}</a>
-                            <input className='nameEmailInput' placeholder={"Phone Number"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
+                            <input className='nameEmailInputCv' placeholder={"Phone Number"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
                         </div>
-                        <div className='emailInputs'>
+                        <div className='emailInputsCv'>
                             <a className='addCvInput'>{t("addCv")}</a>
-                            <input className='nameEmailInput' type='file' placeholder={t("fileChoosen")} value={cv} onChange={cvDoubleMethod}></input>
+                            <input className='cvInput' type='file' placeholder={t("fileChoosen")} value={cv} onChange={cvDoubleMethod}></input>
                             <a className='cvAlert'>{t("cvAlert")}</a>
                         </div>
                 </div>
-                <div className='descriptionInputs'>
+                <div className='descriptionInputsCv'>
                     <a className='descriptionInputSpan'>{t("howCanWeHelpYou")}</a>
                     <textarea className='descriptionInput' type="text" placeholder={t("describeYourProblem")} value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                 </div>

@@ -1,5 +1,4 @@
 .contactAddressInformation{
-    position: absolute;
     display: flex;
     width: 843px;
     height: 410px;
@@ -10,13 +9,13 @@
 }
 
 .contactAddressContainer{
-    height: 140vh;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 200px 0px;
 }
 .addressContainer{
     display: flex;

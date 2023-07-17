@@ -29,26 +29,18 @@
     color: #000000;
 }
 .metaverseProjectSpan{
-    width: 70%;
+    width: 60%;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
-    text-align: left;
+    text-align: center;
     color: #000000;
 }
 .metaverseProjectElement{
-    width: 40%;
-    
-
+    width: 60%;
+    height: 60vh;
 }
-
-.metaverseProjectElement{
-    width: 800px;
-    height: 400px;
-    margin: auto;
-}
-
 .mobile .metaverseProjectElement{
     width: 90%;
     margin: auto;

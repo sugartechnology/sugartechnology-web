@@ -23,12 +23,12 @@
     color: #000000;
 }
 .jointAboutSpan{
-    width: 70%;
+    width: 60%;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
-    text-align: justify;
+    text-align: center;
     text-transform: capitalize;
     color: #000000;
 }

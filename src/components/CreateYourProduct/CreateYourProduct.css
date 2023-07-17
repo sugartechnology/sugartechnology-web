@@ -26,20 +26,11 @@
     bottom: 50px;
     right: 50px;
 }
-#sugar-model-container{
-    display: flex;
-    flex-direction: column;
-    height: 80vh!important;
-    position: relative;
-    overflow: hidden;
-    align-items: center;
-    justify-content: flex-end;
-}
 .sugarModelViewer{
-    width: 90%;
+    width: 93%;
     height: 70%;
     position: absolute;
-    top: 200px;
+    bottom: 60px;
 }
 #sugar-joint-container{
     bottom: 0px !important;

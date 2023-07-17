@@ -6,12 +6,12 @@
     position: relative;
 }
 .tryCloothElements{
-    width: 50%;
+    width: 45%;
+    gap: 30px;
     display: flex;
     flex-direction: column;
 }
 .tryCloothHeader{
-    width: 543px;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;

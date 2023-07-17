@@ -60,7 +60,7 @@ function App() {
         <div>
           <Header></Header>
           <Routes>
-            <Route path='/' element={<MainPage></MainPage>}></Route>
+            <Route exact path='/' element={<MainPage></MainPage>}></Route>
             <Route path='/productAr' element={<ProductAr></ProductAr>}></Route>
             <Route path='/productMeta' element={<ProductMeta></ProductMeta>}></Route>
             <Route path='/productJoint' element={<ProductJoint></ProductJoint>}></Route>

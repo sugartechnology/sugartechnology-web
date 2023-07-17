@@ -3,106 +3,12 @@ import { useTranslation} from "react-i18next";
 
 export const SectoralSolution = props =>{
     const {t} = useTranslation();
-    function showSolution1(){
-        var solution1 = document.getElementById("solution1");
-        var btn1 = document.getElementById("solution1Button");
-        var solution2 = document.getElementById("solution2v1");
-        var btn2 = document.getElementById("solution2Button");
-        var solution3 = document.getElementById("solution3");
-        var btn3 = document.getElementById("solution3Button");
-        var solution4 = document.getElementById("solution4v1");
-        var btn4 = document.getElementById("solution4Button");
-
-        if(solution1.style.display === "none"){
-            solution1.style.display = "flex";
-            btn1.style.background = "#ED401A";
-            solution2.style.display = "none";
-            btn2.style.background = "#CCCCCC";
-            solution3.style.display = "none";
-            btn3.style.background = "#CCCCCC";
-            solution4.style.display = "none";
-            btn4.style.background = "#CCCCCC";
-        }
-        else{
-            solution1.style.display = "none"
-        }
-    }
-    function showSolution2(){
-        var solution1 = document.getElementById("solution1");
-        var btn1 = document.getElementById("solution1Button");
-        var solution2 = document.getElementById("solution2v1");
-        var btn2 = document.getElementById("solution2Button");
-        var solution3 = document.getElementById("solution3");
-        var btn3 = document.getElementById("solution3Button");
-        var solution4 = document.getElementById("solution4v1");
-        var btn4 = document.getElementById("solution4Button");
-
-        if(solution2.style.display === "none"){
-            solution2.style.display = "flex";
-            btn2.style.background = "#ED401A";
-            solution1.style.display = "none";
-            btn1.style.background = "#CCCCCC";
-            solution3.style.display = "none";
-            btn3.style.background = "#CCCCCC";
-            solution4.style.display = "none";
-            btn4.style.background = "#CCCCCC";
-        }
-        else{
-            solution2.style.display = "none"
-        }
-    }
-    function showSolution3(){
-        var solution1 = document.getElementById("solution1");
-        var btn1 = document.getElementById("solution1Button");
-        var solution2 = document.getElementById("solution2v1");
-        var btn2 = document.getElementById("solution2Button");
-        var solution3 = document.getElementById("solution3");
-        var btn3 = document.getElementById("solution3Button");
-        var solution4 = document.getElementById("solution4v1");
-        var btn4 = document.getElementById("solution4Button");
-
-        if(solution3.style.display === "none"){
-            solution3.style.display = "flex";
-            btn3.style.background = "#ED401A";
-            solution2.style.display = "none";
-            btn2.style.background = "#CCCCCC";
-            solution1.style.display = "none";
-            btn1.style.background = "#CCCCCC";
-            solution4.style.display = "none";
-            btn4.style.background = "#CCCCCC";
-        }
-        else{
-            solution3.style.display = "none"
-        }
-    }
-    function showSolution4(){
-        var solution1 = document.getElementById("solution1");
-        var btn1 = document.getElementById("solution1Button");
-        var solution2 = document.getElementById("solution2v1");
-        var btn2 = document.getElementById("solution2Button");
-        var solution3 = document.getElementById("solution3");
-        var btn3 = document.getElementById("solution3Button");
-        var solution4 = document.getElementById("solution4v1");
-        var btn4 = document.getElementById("solution4Button");
-
-        if(solution4.style.display === "none"){
-            solution4.style.display = "flex";
-            btn4.style.background = "#ED401A";
-            solution2.style.display = "none";
-            btn2.style.background = "#CCCCCC";
-            solution3.style.display = "none";
-            btn3.style.background = "#CCCCCC";
-            solution1.style.display = "none";
-            btn1.style.background = "#CCCCCC";
-        }
-        else{
-            solution4.style.display = "none"
-        }
-    }
     return(
         <div className='sectoralSolutionContainer'>
             <div className='sectoralSolutionHeader'>
+                <img alt='' src={'./assets/img/sectoralSolutionLine.svg'}></img>
                 <a className='sectoralSolutionSpan'>{t("sectoralSolution")}</a>
+                <img alt='' src={'./assets/img/sectoralSolutionLine.svg'}></img>
             </div>
             <div className='solutionsDiv'>
                 <div className='solution' id='solution1'>
