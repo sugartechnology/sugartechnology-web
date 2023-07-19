@@ -13,7 +13,7 @@ export const SugarBrands = props =>{
                     <img className='sugarBrandHomeImg' alt='' src={'./assets/img/istikbalHome.webp'}></img>
                     <img className='sugarBrandLogo' alt='' src={'./assets/img/istikbalHomeLogo.svg'}></img>
                     <a className='sugarBrandSpan'>{t("sugarBrand1Span")}</a>
-                    <a className='sugarBrandButton'>Read in blog</a>
+                    <a className='sugarBrandButton' href='/blogs'>{t("sugarBrandButton")}</a>
                     <img className='sugarBrandShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 </div>
                 
@@ -21,7 +21,7 @@ export const SugarBrands = props =>{
                     <img className='sugarBrandHomeImg' alt='' src={'./assets/img/tepehomeHome.webp'}></img>
                     <img className='sugarBrandLogo' alt='' src={'./assets/img/tepehomeHomeLogo.svg'}></img>
                     <a className='sugarBrandSpan'>{t("sugarBrand2Span")}</a>
-                    <a className='sugarBrandButton'>Read in blog</a>
+                    <a className='sugarBrandButton' href='/blogs'>{t("sugarBrandButton")}</a>
                     <img className='sugarBrandShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 </div>
                 
@@ -29,7 +29,7 @@ export const SugarBrands = props =>{
                     <img className='sugarBrandHomeImg' alt='' src={'./assets/img/bellonaHome.webp'}></img>
                     <img className='sugarBrandLogo' alt='' src={'./assets/img/bellonaHomeLogo.svg'}></img>
                     <a className='sugarBrandSpan'>{t("sugarBrand3Span")}</a>
-                    <a className='sugarBrandButton'>Read in blog</a>
+                    <a className='sugarBrandButton' href='/blogs'>{t("sugarBrandButton")}</a>
                     <img className='sugarBrandShadow' alt='' src={'./assets/img/arDetailsShadow.svg'}></img>
                 </div>
                 

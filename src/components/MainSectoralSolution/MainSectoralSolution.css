@@ -134,6 +134,7 @@
     flex-direction: column;
     align-items: center;
     width: 20%;
+    cursor: pointer;
 }
 
 .solutionSpans{
