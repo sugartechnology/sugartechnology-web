@@ -17,7 +17,7 @@ export const CustomerComments = (props) => {
       {
         trustedByMillionsOfCompany: 'commentHeader2',
         commentSpan: 'commentSpan2',
-        commentHeader: 'Şatış Direktörü',
+        commentHeader: 'Satış Direktörü',
         commentAuthor: 'Yeşim Korkmaz',
         customerPhoto:'https://sugar.mncdn.com/sugartechwebsite/assets/img/sugar/yesim_korkmaz.jpeg',
         companyLogo: 'assets/img/tepe-home-min.svg'
