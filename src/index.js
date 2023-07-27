@@ -15,7 +15,7 @@ root.render(
 );
 
 //Initialize GA4
-ReactGA.initialize("G-5JQQ5JMVE3");
+ReactGA.initialize("G-400237884");
 root.render(
   <React.StrictMode>
     <BrowserRouter>
