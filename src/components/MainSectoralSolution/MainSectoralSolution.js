@@ -1,128 +1,127 @@
 import './MainSectoralSolution.css';
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import React, { useEffect, useState } from 'react';
 
 
 export const MainSectoralSolution = (props) => {
     const { t } = useTranslation();
     const solutionArray = [
-            {
-                url: "./assets/img/solutionImages/koltuk.svg",
-                header: t("furnitureHeader"),
-                span: t("furnitureSpan"),
-                link: "/productAr",
-                popupImage: "./assets/img/ShowAtHomeImage.webp"
-            },
-            {
-                url: "./assets/img/solutionImages/halı.svg",
-                header: t("carpetHeader"),
-                span: t("carpetSpan"), 
-                link: "/productCarpet",
-                popupImage: "./assets/img/products/carpet.svg"
-            },
-            {
-                url: "./assets/img/solutionImages/tablo.webp",
-                header: t("tableHeader"),
-                span: t("tableSpan"), 
-                link: "/productTable",
-                popupImage: "./assets/img/products/tablo.svg"
-            },
-            {
-                url: "./assets/img/solutionImages/banyo.svg",
-                header: t("bathroomFurnitureHeader"),
-                span: t("bathroomFurnitureSpan"),
-                link: "/productBathroom",
-                popupImage: "./assets/img/products/banyo.svg"
-            },
-            {
-                url: "./assets/img/solutionImages/beyazEşya.webp",
-                header: t("whiteGoodsHeader"),
-                span: t("whiteGoodsSpan"), 
-                link: "/productWhiteGoods",
-                popupImage: "./assets/img/products/beyazEsya.svg"
-            },
-            {
-                url: "./assets/img/solutionImages/aksesuarlar.webp",
-                header: t("decorationHeader"),
-                span: t("decorationSpan"),
-                link: "/productDecoration",
-                popupImage: "./assets/img/products/dekorasyon.svg"
-            },
-            {
-                url: "./assets/img/solutionImages/materyaller.svg",
-                header: t("materialsHeader"),
-                span: t("materialsSpan"),
-                popupImage: "./assets/img/products/materials.svg"
-            },
-            {
-                url: "./assets/img/solutionImages/saat.webp",
-                header: t("watchHeader"),
-                span: t("watchSpan"),
-                link: "/productWatch",
-                popupImage: "./assets/img/watchImage.webp"
-            },
-            {
-                url: "./assets/img/solutionImages/ayakkabı.webp",
-                header: t("shoesHeader"),
-                span: t("shoesSpan"), 
-                link: "/productShoes",
-                popupImage: "./assets/img/shoesImage.webp"
-            },
-            {
-                url: "./assets/img/solutionImages/kıyafet.webp",
-                header: t("cloothHeader"),
-                span: t("cloothSpan"),
-                link: "/productClooth",
-                popupImage: "./assets/img/cloothImage.webp"
-            },
-            {
-                url: "./assets/img/solutionImages/tekstil.webp",
-                header: t("textileHeader"),
-                span: t("textileSpan"),
-                link: "/productTextile",
-                popupImage: "./assets/img/products/tekstil.svg"
-            },
-            {
-                url: "./assets/img/solutionImages/ışık.svg",
-                header: t("lightHeader"),
-                span: t("lightSpan"),
-                popupImage: "./assets/img/products/light.svg"
-            }
+        {
+            url: "./assets/img/solutionImages/koltuk.svg",
+            header: t("furnitureHeader"),
+            span: t("furnitureSpan"),
+            link: "/productAr",
+            popupImage: "./assets/img/ShowAtHomeImage.webp"
+        },
+        {
+            url: "./assets/img/solutionImages/halı.svg",
+            header: t("carpetHeader"),
+            span: t("carpetSpan"),
+            link: "/productCarpet",
+            popupImage: "./assets/img/products/carpet.svg"
+        },
+        {
+            url: "./assets/img/solutionImages/tablo.webp",
+            header: t("tableHeader"),
+            span: t("tableSpan"),
+            link: "/productTable",
+            popupImage: "./assets/img/products/tablo.svg"
+        },
+        {
+            url: "./assets/img/solutionImages/banyo.svg",
+            header: t("bathroomFurnitureHeader"),
+            span: t("bathroomFurnitureSpan"),
+            link: "/productBathroom",
+            popupImage: "./assets/img/products/banyo.svg"
+        },
+        {
+            url: "./assets/img/solutionImages/beyazEşya.webp",
+            header: t("whiteGoodsHeader"),
+            span: t("whiteGoodsSpan"),
+            link: "/productWhiteGoods",
+            popupImage: "./assets/img/products/beyazEsya.svg"
+        },
+        {
+            url: "./assets/img/solutionImages/aksesuarlar.webp",
+            header: t("decorationHeader"),
+            span: t("decorationSpan"),
+            link: "/productDecoration",
+            popupImage: "./assets/img/products/dekorasyon.svg"
+        },
+        {
+            url: "./assets/img/solutionImages/materyaller.svg",
+            header: t("materialsHeader"),
+            span: t("materialsSpan"),
+            popupImage: "./assets/img/products/materials.svg"
+        },
+        {
+            url: "./assets/img/solutionImages/saat.webp",
+            header: t("watchHeader"),
+            span: t("watchSpan"),
+            link: "/productWatch",
+            popupImage: "./assets/img/watchImage.webp"
+        },
+        {
+            url: "./assets/img/solutionImages/ayakkabı.webp",
+            header: t("shoesHeader"),
+            span: t("shoesSpan"),
+            link: "/productShoes",
+            popupImage: "./assets/img/shoesImage.webp"
+        },
+        {
+            url: "./assets/img/solutionImages/kıyafet.webp",
+            header: t("cloothHeader"),
+            span: t("cloothSpan"),
+            link: "/productClooth",
+            popupImage: "./assets/img/cloothImage.webp"
+        },
+        {
+            url: "./assets/img/solutionImages/tekstil.webp",
+            header: t("textileHeader"),
+            span: t("textileSpan"),
+            link: "/productTextile",
+            popupImage: "./assets/img/products/tekstil.svg"
+        },
+        {
+            url: "./assets/img/solutionImages/ışık.svg",
+            header: t("lightHeader"),
+            span: t("lightSpan"),
+            popupImage: "./assets/img/products/light.svg"
+        }
     ];
 
-    useEffect(() => {
-        const parentDiv = document.querySelector(".solutionItems");
-        solutionArray.forEach((item, i) => {
-            if (i % 4 === 0) {
-                const solutionGroup = document.createElement("div");
-                solutionGroup.classList.add("solutionGroup");
-                parentDiv.appendChild(solutionGroup);
-            }
+    // useEffect(() => {
+    //     const parentDiv = document.querySelector(".solutionItems");
+    //     solutionArray.forEach((item, i) => {
+    //         if (i % 4 === 0) {
+    //             const solutionGroup = document.createElement("div");
+    //             solutionGroup.classList.add("solutionGroup");
+    //             parentDiv.appendChild(solutionGroup);
+    //         }
 
-            const solutionItem = document.createElement("div");
-            const solutionImage = document.createElement("img");
-            const solutionSpan = document.createElement("a");
+    //         const solutionItem = document.createElement("div");
+    //         const solutionImage = document.createElement("img");
+    //         const solutionSpan = document.createElement("a");
 
-            solutionItem.classList.add("solutionItem");
-            solutionImage.classList.add("solutionMainImage");
-            solutionImage.setAttribute("index", "" + i);
-            solutionImage.addEventListener("click", selectSolution);
-            solutionSpan.classList.add("solutionSpans");
-            solutionImage.src = item.url;
-            solutionSpan.innerHTML = t(item.header);
+    //         solutionItem.classList.add("solutionItem");
+    //         solutionImage.classList.add("solutionMainImage");
+    //         solutionImage.setAttribute("index", "" + i);
+    //         solutionImage.addEventListener("click", selectSolution);
+    //         solutionSpan.classList.add("solutionSpans");
+    //         solutionImage.src = item.url;
+    //         solutionSpan.innerHTML = t(item.header);
 
-            solutionItem.appendChild(solutionImage);
-            solutionItem.appendChild(solutionSpan);
+    //         solutionItem.appendChild(solutionImage);
+    //         solutionItem.appendChild(solutionSpan);
 
-            const parentElement = document.querySelector(".solutionGroup:last-child");
-            parentElement.appendChild(solutionItem);
-        });
-    }, []);
+    //         const parentElement = document.querySelector(".solutionGroup:last-child");
+    //         parentElement.appendChild(solutionItem);
+    //     });
+    // }, []);
 
     const selectSolution = (event) => {
 
         const index = parseInt(event.target.getAttribute("index"));
-       
 
         let parentElement = event.target.parentElement;
 
@@ -130,17 +129,16 @@ export const MainSectoralSolution = (props) => {
             parentElement = parentElement.parentElement;
         }
 
-
         const solutionItem = event.target.closest(".solutionItem");
 
         const existingPopups = document.querySelectorAll(".popup");
 
         existingPopups.forEach((popup) => {
-            if ( popup || popup.parentNode !== solutionItem) {
+            if (popup || popup.parentNode !== solutionItem) {
                 popup.remove();
             }
         });
-        
+
         const popupContainer = document.createElement("div");
         popupContainer.classList.add("popup");
 
@@ -153,17 +151,17 @@ export const MainSectoralSolution = (props) => {
 
         const closeIcon = document.createElement("img");
         closeIcon.src = "./assets/img/popupVector2.svg";
-        closeIcon.classList.add("popupCloseButton")
+        closeIcon.classList.add("popupCloseButton");
         closeButtons.appendChild(closeIcon);
         closeIcon.addEventListener("click", () => {
             const popup = closeIcon.closest(".popup");
             const overlay = document.querySelector(".popupOverlay");
             if (popup) {
-              popup.parentElement.removeChild(popup);
-              overlay.parentElement.removeChild(overlay);
+                popup.parentElement.removeChild(popup);
+                overlay.parentElement.removeChild(overlay);
             }
         });
-    
+
         const popupSpans = document.createElement("div");
         popupSpans.classList.add("popupSpans");
         popupContainer.appendChild(popupSpans);
@@ -173,6 +171,7 @@ export const MainSectoralSolution = (props) => {
         popupSpans.appendChild(popupSpanElements);
 
         const header = document.createElement("a");
+        console.log(header);
         header.classList.add("showAtHomeHeader");
         header.innerHTML = solutionArray[index].header;
         popupSpanElements.appendChild(header);
@@ -187,7 +186,6 @@ export const MainSectoralSolution = (props) => {
         popupSpans.appendChild(popupButton);
 
         if (solutionArray[index].link) {
-
             const button = document.createElement("a");
             button.classList.add("showAtHomeButton1");
             button.innerHTML = t("usecase");
@@ -208,9 +206,9 @@ export const MainSectoralSolution = (props) => {
 
         solutionItem.appendChild(overlay);
         solutionItem.appendChild(popupContainer);
-    
+
         const solutionImages = document.querySelectorAll(".solutionImage");
-    
+
         solutionImages.forEach((item) => {
             const itemIndex = parseInt(item.getAttribute("index"));
             if (itemIndex === index) {
@@ -220,7 +218,7 @@ export const MainSectoralSolution = (props) => {
             }
         });
     };
-      
+
     return (
         <div className='mainSectoralSolutionContainer'>
             <div className='mainSolutionHeader'>
@@ -230,10 +228,15 @@ export const MainSectoralSolution = (props) => {
             </div>
             <div className='mainSolutionSpans'>
                 <a className='mainSolutionSpan'>{t("mainSolutionSpan")}
-            </a>
+                </a>
             </div>
             <div className="solutionItems">
-               
+                {solutionArray.map((item, index) => (
+                    <div className='solutionItem'>
+                        <img src={item.url} onClick={selectSolution} />
+                        <a className='solutionSpans'>{t(item.header)}</a>
+                    </div>
+                ))}
             </div>
         </div>
     );

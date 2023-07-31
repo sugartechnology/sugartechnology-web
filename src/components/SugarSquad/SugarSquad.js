@@ -1,9 +1,8 @@
 import './SugarSquad.css';
-import { useTranslation} from "react-i18next";
-import { useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 
-export const SugarSquad = props =>{
-    const {t} = useTranslation();
+export const SugarSquad = props => {
+    const { t } = useTranslation();
     const array = [
         {
             image: "./assets/img/almiraPp.webp",
@@ -66,45 +65,22 @@ export const SugarSquad = props =>{
             position: t("sugarSquadMember7Position")
         },
     ];
-    useEffect(() => {
-        let parentDiv = document.querySelector(".sugarSquadsDeskop");
-        array.forEach((item, i) => {
-            if(i % 4 === 0){
-                const crew = document.createElement("div");
-                crew.classList.add("crew");
-                parentDiv.appendChild(crew);
-            }
 
-            const memberDiv = document.createElement("div");
-            memberDiv.classList.add("SugarSquadMember");
-
-            const memberInformation = document.createElement("div");
-            memberInformation.classList.add("memberInformation");
-
-            const memberImage = document.createElement("img");
-            memberImage.src = item.image;
-
-            const memberName = document.createElement("a");
-            memberName.innerHTML = item.name;
-            memberName.classList.add("memberName");
-
-            const memberPosition = document.createElement("a");
-            memberPosition.innerHTML = item.position;
-            memberPosition.classList.add("memberPosition");
-
-            memberDiv.appendChild(memberImage);
-            memberDiv.appendChild(memberInformation);
-            memberInformation.appendChild(memberName);
-            memberInformation.appendChild(memberPosition);
-
-            const parentElement = document.querySelector(".crew:last-child");
-            parentElement.appendChild(memberDiv);
-        })
-    },[]);
-    return(
+    return (
         <div className='SugarSquadContainer'>
-            <div className='sugarSquadsDeskop'>
-                
+            <div className='SugarSquadsDeskop'>
+                {array.map((item, index) => (
+                    <div className='crew'>
+                        <div i={index} className='SugarSquadMember'>
+                            <img src={item.image}></img>
+                            <div className='memberInformation'>
+                                <div className='memberName'>{item.name}</div>
+                                <div className='memberPosition'>{item.position}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                ))}
             </div>
         </div>
     );
