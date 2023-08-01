@@ -4,6 +4,11 @@ import React, { useEffect, useState } from 'react';
 
 
 export const MainSectoralSolution = (props) => {
+    const [showPopUp, setShowPopUp] = useState(false);
+    const [index, setIndex] = useState(0);
+    const clickedPopUp = () => {
+        setShowPopUp(!showPopUp);
+    }
     const { t } = useTranslation();
     const solutionArray = [
         {
@@ -90,134 +95,133 @@ export const MainSectoralSolution = (props) => {
         }
     ];
 
-    // useEffect(() => {
-    //     const parentDiv = document.querySelector(".solutionItems");
-    //     solutionArray.forEach((item, i) => {
-    //         if (i % 4 === 0) {
-    //             const solutionGroup = document.createElement("div");
-    //             solutionGroup.classList.add("solutionGroup");
-    //             parentDiv.appendChild(solutionGroup);
+    const ShowPopUp = (index) => {
+        console.log("basıldı");
+        return (
+            <>
+                <div className='popupOverlay' style={showPopUp ? { display: "flex" } : { display: "none" }}>
+                </div>
+                <div className='popup' style={showPopUp ? { display: "flex" } : { display: "none" }}>
+                    <div className='popupCloseButtons'>
+                        <img className='popupCloseButton' src="./assets/img/popupVector2.svg" onClick={() => { clickedPopUp() }} />
+                    </div>
+                    <div className='popupSpans'>
+                        <div className='popupSpanElements'>
+                            <a className='showAtHomeHeader'> {solutionArray[index].header} </a>
+                            <a className='popupSpan'> {solutionArray[index].span} </a>
+                        </div>
+                        <a className='popupButton' style={solutionArray[index].header ? { display: "flex" } : { display: "none" }}>
+                            <a className='showAtHomeButton1' href={solutionArray[index].link}>{t("usecase")}</a>
+                        </a>
+
+                    </div>
+                    <div className='popupImageDiv'>
+                        <img className='showAtHomeImage' src={solutionArray[index].popupImage} />
+                    </div>
+                </div>
+            </>
+        )
+    }
+
+    // const selectSolution = (event) => {
+
+    //     const index = parseInt(event.target.getAttribute("index"));
+
+    //     let parentElement = event.target.parentElement;
+
+    //     while (parentElement && !parentElement.classList.contains("solutionGroup")) {
+    //         parentElement = parentElement.parentElement;
+    //     }
+
+    //     const solutionItem = event.target.closest(".solutionItem");
+
+    //     const existingPopups = document.querySelectorAll(".popup");
+
+    //     existingPopups.forEach((popup) => {
+    //         if (popup || popup.parentNode !== solutionItem) {
+    //             popup.remove();
     //         }
-
-    //         const solutionItem = document.createElement("div");
-    //         const solutionImage = document.createElement("img");
-    //         const solutionSpan = document.createElement("a");
-
-    //         solutionItem.classList.add("solutionItem");
-    //         solutionImage.classList.add("solutionMainImage");
-    //         solutionImage.setAttribute("index", "" + i);
-    //         solutionImage.addEventListener("click", selectSolution);
-    //         solutionSpan.classList.add("solutionSpans");
-    //         solutionImage.src = item.url;
-    //         solutionSpan.innerHTML = t(item.header);
-
-    //         solutionItem.appendChild(solutionImage);
-    //         solutionItem.appendChild(solutionSpan);
-
-    //         const parentElement = document.querySelector(".solutionGroup:last-child");
-    //         parentElement.appendChild(solutionItem);
     //     });
-    // }, []);
 
-    const selectSolution = (event) => {
+    //     const popupContainer = document.createElement("div");
+    //     popupContainer.classList.add("popup");
 
-        const index = parseInt(event.target.getAttribute("index"));
+    //     const overlay = document.createElement("div");
+    //     overlay.classList.add("popupOverlay");
 
-        let parentElement = event.target.parentElement;
+    //     const closeButtons = document.createElement("div");
+    //     closeButtons.classList.add("popupCloseButtons");
+    //     popupContainer.appendChild(closeButtons);
 
-        while (parentElement && !parentElement.classList.contains("solutionGroup")) {
-            parentElement = parentElement.parentElement;
-        }
+    //     const closeIcon = document.createElement("img");
+    //     closeIcon.src = "./assets/img/popupVector2.svg";
+    //     closeIcon.classList.add("popupCloseButton");
+    //     closeButtons.appendChild(closeIcon);
+    //     console.log(overlay.parentElement);
+    //     closeIcon.addEventListener("click", () => {
+    //         const popup = closeIcon.closest(".popup");
+    //         const overlay = document.querySelector(".popupOverlay");
+    //         if (popup) {
+    //             popup.parentElement.removeChild(popup);
+    //             overlay.parentElement.removeChild(overlay);
+    //         }
+    //     });
 
-        const solutionItem = event.target.closest(".solutionItem");
+    //     const popupSpans = document.createElement("div");
+    //     popupSpans.classList.add("popupSpans");
+    //     popupContainer.appendChild(popupSpans);
 
-        const existingPopups = document.querySelectorAll(".popup");
+    //     const popupSpanElements = document.createElement("div");
+    //     popupSpanElements.classList.add("popupSpanElements");
+    //     popupSpans.appendChild(popupSpanElements);
 
-        existingPopups.forEach((popup) => {
-            if (popup || popup.parentNode !== solutionItem) {
-                popup.remove();
-            }
-        });
+    //     const header = document.createElement("a");
+    //     header.classList.add("showAtHomeHeader");
+    //     header.innerHTML = solutionArray[index].header;
+    //     popupSpanElements.appendChild(header);
 
-        const popupContainer = document.createElement("div");
-        popupContainer.classList.add("popup");
+    //     const span = document.createElement("a");
+    //     span.classList.add("popupSpan");
+    //     span.innerHTML = solutionArray[index].span;
+    //     popupSpanElements.appendChild(span);
 
-        const overlay = document.createElement("div");
-        overlay.classList.add("popupOverlay");
+    //     const popupButton = document.createElement("a");
+    //     popupButton.classList.add("popupButton");
+    //     popupSpans.appendChild(popupButton);
 
-        const closeButtons = document.createElement("div");
-        closeButtons.classList.add("popupCloseButtons");
-        popupContainer.appendChild(closeButtons);
+    //     if (solutionArray[index].link) {
+    //         const button = document.createElement("a");
+    //         button.classList.add("showAtHomeButton1");
+    //         button.innerHTML = t("usecase");
+    //         button.href = solutionArray[index].link;
+    //         popupButton.appendChild(button);
 
-        const closeIcon = document.createElement("img");
-        closeIcon.src = "./assets/img/popupVector2.svg";
-        closeIcon.classList.add("popupCloseButton");
-        closeButtons.appendChild(closeIcon);
-        closeIcon.addEventListener("click", () => {
-            const popup = closeIcon.closest(".popup");
-            const overlay = document.querySelector(".popupOverlay");
-            if (popup) {
-                popup.parentElement.removeChild(popup);
-                overlay.parentElement.removeChild(overlay);
-            }
-        });
+    //     } else {
+    //         popupButton.style.display = "none";
+    //     }
+    //     const popupImageDiv = document.createElement("div");
+    //     popupImageDiv.classList.add("popupImageDiv");
+    //     popupContainer.appendChild(popupImageDiv);
 
-        const popupSpans = document.createElement("div");
-        popupSpans.classList.add("popupSpans");
-        popupContainer.appendChild(popupSpans);
+    //     const popupImage = document.createElement("img");
+    //     popupImage.classList.add("showAtHomeImage");
+    //     popupImage.src = solutionArray[index].popupImage;
+    //     popupImageDiv.appendChild(popupImage);
 
-        const popupSpanElements = document.createElement("div");
-        popupSpanElements.classList.add("popupSpanElements");
-        popupSpans.appendChild(popupSpanElements);
+    //     solutionItem.appendChild(overlay);
+    //     solutionItem.appendChild(popupContainer);
 
-        const header = document.createElement("a");
-        console.log(header);
-        header.classList.add("showAtHomeHeader");
-        header.innerHTML = solutionArray[index].header;
-        popupSpanElements.appendChild(header);
+    //     const solutionImages = document.querySelectorAll(".solutionImage");
 
-        const span = document.createElement("a");
-        span.classList.add("popupSpan");
-        span.innerHTML = solutionArray[index].span;
-        popupSpanElements.appendChild(span);
-
-        const popupButton = document.createElement("a");
-        popupButton.classList.add("popupButton");
-        popupSpans.appendChild(popupButton);
-
-        if (solutionArray[index].link) {
-            const button = document.createElement("a");
-            button.classList.add("showAtHomeButton1");
-            button.innerHTML = t("usecase");
-            button.href = solutionArray[index].link;
-            popupButton.appendChild(button);
-
-        } else {
-            popupButton.style.display = "none";
-        }
-        const popupImageDiv = document.createElement("div");
-        popupImageDiv.classList.add("popupImageDiv");
-        popupContainer.appendChild(popupImageDiv);
-
-        const popupImage = document.createElement("img");
-        popupImage.classList.add("showAtHomeImage");
-        popupImage.src = solutionArray[index].popupImage;
-        popupImageDiv.appendChild(popupImage);
-
-        solutionItem.appendChild(overlay);
-        solutionItem.appendChild(popupContainer);
-
-        const solutionImages = document.querySelectorAll(".solutionImage");
-
-        solutionImages.forEach((item) => {
-            const itemIndex = parseInt(item.getAttribute("index"));
-            if (itemIndex === index) {
-                item.classList.add("selected");
-            } else {
-                item.classList.remove("selected");
-            }
-        });
-    };
+    //     solutionImages.forEach((item) => {
+    //         const itemIndex = parseInt(item.getAttribute("index"));
+    //         if (itemIndex === index) {
+    //             item.classList.add("selected");
+    //         } else {
+    //             item.classList.remove("selected");
+    //         }
+    //     });
+    // };
 
     return (
         <div className='mainSectoralSolutionContainer'>
@@ -231,9 +235,13 @@ export const MainSectoralSolution = (props) => {
                 </a>
             </div>
             <div className="solutionItems">
+                {ShowPopUp(index)}
                 {solutionArray.map((item, index) => (
                     <div className='solutionItem'>
-                        <img src={item.url} onClick={selectSolution} />
+                        <img src={item.url} onClick={() => {
+                            setIndex(index);
+                            clickedPopUp()
+                        }} />
                         <a className='solutionSpans'>{t(item.header)}</a>
                     </div>
                 ))}

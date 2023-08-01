@@ -2,7 +2,6 @@
     background: #F7F7F7;
     display: flex;
     position: relative;
-    height: 55vh;
 }
 .SugarSquadsDeskop{
     display: grid;
@@ -13,6 +12,14 @@
     margin: 50px;
     gap: 40px;
     overflow-x: auto;
+}
+.tablet .SugarSquadsDeskop{
+    grid-template-columns: repeat(4, 1fr);
+
+}
+.mobile .SugarSquadsDeskop{
+    grid-template-columns: repeat(2, 1fr);
+
 }
 .SugarSquadMember{
     display: flex;
