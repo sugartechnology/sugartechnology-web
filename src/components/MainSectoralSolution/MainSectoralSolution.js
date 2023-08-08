@@ -96,7 +96,6 @@ export const MainSectoralSolution = (props) => {
     ];
 
     const ShowPopUp = (index) => {
-        console.log("basıldı");
         return (
             <>
                 <div className='popupOverlay' style={showPopUp ? { display: "flex" } : { display: "none" }}>
@@ -231,7 +230,7 @@ export const MainSectoralSolution = (props) => {
                 <img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
             </div>
             <div className='mainSolutionSpans'>
-                <a className='mainSolutionSpan'>{t("mainSolutionSpan")}
+                <a className='mainSolutionSpan' style={{ padding: "0px 30px" }}>{t("mainSolutionSpan")}
                 </a>
             </div>
             <div className="solutionItems">

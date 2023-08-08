@@ -163,6 +163,7 @@
     z-index: 2;
 }
 
+
 .mobile .solutionGroup{
     flex-wrap: wrap;
 }
@@ -175,6 +176,13 @@
     width: 45%;
 }
 
+.tablet .mainSolutionHeaderLine{
+    width: 30%;
+}
+
+.tablet .mainSolutionHeader h1{
+    font-size: 40px;
+}
 .mobile .mainSolutionHeaderLine{
     width: 20%;
 }
