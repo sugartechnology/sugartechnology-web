@@ -1,12 +1,13 @@
 .SugarTeamContainer{
-    height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     background: white;
     position: relative;
+    gap: 60px;
     overflow-x: auto;
+    padding-bottom: 60px;
 }
 
 .sugarTeamHeader a{
@@ -24,17 +25,16 @@
 }
 .sugarTeamLeaders{
     display: flex;
-    gap: 70px;
     width: 100%;
-    height: 70%;
     position: relative;
+    justify-content: center;
 }
 .sugarTeamLeader{
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    width: 25%;
+    width: 22%;
 }   
 .sugarTeamLeaders img{
     width: 170px;
@@ -69,7 +69,7 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 15px;
-    text-align: left;
+    text-align: center;
     color: #000000;
 }
 

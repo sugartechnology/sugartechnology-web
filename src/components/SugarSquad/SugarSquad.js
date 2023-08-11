@@ -5,64 +5,64 @@ export const SugarSquad = props => {
     const { t } = useTranslation();
     const array = [
         {
-            image: "./assets/img/almiraPp.webp",
+            image: "./assets/img/squadPp/elmiraPp.svg",
             name: "Elmira Ghoreishi",
             position: t("sugarSquadMember1Position")
         },
         {
-            image: "./assets/img/aliPp.webp",
-            name: "Ali Rıza Yalçın",
-            position: t("sugarSquadMember5Position")
-        },
-        {
-            image: "./assets/img/selcukPp.webp",
-            name: "Selçuk Taşlı",
-            position: t("sugarSquadMember7Position")
-        },
-        {
-            image: "./assets/img/eyadPp.webp",
-            name: "Muhammad Eyad",
-            position: t("sugarSquadMember7Position")
-        },
-        {
-            image: "./assets/img/kubraPp.svg",
+            image: "./assets/img/squadPp/kubraPp.svg",
             name: "Kübra Yıldız",
             position: t("sugarSquadMember2Position")
         },
         {
-            image: "./assets/img/tugrulPp.webp",
+            image: "./assets/img/squadPp/sametPp.svg",
+            name: "Abdulsamet Sarıkoç",
+            position: t("sugarSquadMember4Position")
+        },
+        {
+            image: "./assets/img/squadPp/tugrulPp.svg",
             name: "Tuğrul Subekçi",
             position: t("sugarSquadMember6Position")
         },
         {
-            image: "./assets/img/erenPp.webp",
-            name: "Muhammed Eren Demirbaş",
+            image: "./assets/img/squadPp/nisaPp.svg",
+            name: "Nisa Nur Çakıcı",
+            position: t("sugarSquadMember8Position")
+        },
+        {
+            image: "./assets/img/squadPp/utkuPp.svg",
+            name: "Utku Sert",
             position: t("sugarSquadMember7Position")
         },
         {
-            image: "./assets/img/hakkiPp.webp",
-            name: "Hakkı Altan Cebeci",
-            position: t("sugarSquadMember7Position")
-        },
-        {
-            image: "./assets/img/sametPp.webp",
-            name: "Abdülsamet Sarıkoç",
-            position: t("sugarSquadMember4Position")
-        },
-        {
-            image: "./assets/img/ibrahimPp.webp",
+            image: "./assets/img/squadPp/ibrahimPp.svg",
             name: "İbrahim Aktaş",
             position: t("sugarSquadMember7Position")
         },
         {
-            image: "./assets/img/nisaPp.webp",
-            name: "Nisa Nur Çakıcı",
+            image: "./assets/img/squadPp/erenPp.svg",
+            name: "Muhammed Eren Demirbaş",
             position: t("sugarSquadMember7Position")
         },
         {
-            image: "./assets/img/utkuPp.webp",
-            name: "Utku Sert",
+            image: "./assets/img/squadPp/selcukPp.svg",
+            name: "Selçuk Taşlı",
             position: t("sugarSquadMember7Position")
+        },
+        {
+            image: "./assets/img/squadPp/eyadPp.svg",
+            name: "Muhammad Eyad Kamacheh",
+            position: t("sugarSquadMember7Position")
+        },
+        {
+            image: "./assets/img/squadPp/altanPp.svg",
+            name: "Hakkı Altan Cebeci",
+            position: t("sugarSquadMember7Position")
+        },
+        {
+            image: "./assets/img/squadPp/berkayPp.svg",
+            name: "Berkay Kaynar",
+            position: t("sugarSquadMember5Position")
         },
     ];
 

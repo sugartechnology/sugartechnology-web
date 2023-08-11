@@ -2,10 +2,11 @@
     background: #F7F7F7;
     display: flex;
     position: relative;
+    padding-left: 6.8vw;
 }
 .SugarSquadsDeskop{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     flex-wrap: wrap;
     width: 100%;
     position: relative;
@@ -14,7 +15,7 @@
     overflow-x: auto;
 }
 .tablet .SugarSquadsDeskop{
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
 }
 .mobile .SugarSquadsDeskop{
@@ -35,6 +36,7 @@
 .memberInformation{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 }
 .memberName{
     width: 100%;
