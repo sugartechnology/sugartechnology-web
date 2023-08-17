@@ -17,7 +17,6 @@
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
-    line-height: 85px;
     text-align: center;
     text-transform: capitalize;
     color: #000000;
@@ -137,11 +136,16 @@
         transform: translateX(0);
     }
 }
-
+.sectoralSolutionHeadLine{
+    width: 25%;
+}
 /* Reeponsive Tablet Settings */
 
 .tablet .sectoralSolutionSpan{
     font-size: 29px;
+}
+.tablet .sectoralSolutionHeadLine{
+    width: 20%;
 }
 .tablet .sectoralSolutionLine{
     position: relative;
@@ -221,4 +225,7 @@
 }
 .mobile #solution2, .mobile #solution4{
     flex-direction: column-reverse;
+}
+.mobile .sectoralSolutionHeadLine{
+    width: 20%;
 }

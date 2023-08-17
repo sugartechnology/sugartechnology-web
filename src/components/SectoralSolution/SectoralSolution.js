@@ -1,14 +1,14 @@
 import './SectoralSolution.css';
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-export const SectoralSolution = props =>{
-    const {t} = useTranslation();
-    return(
+export const SectoralSolution = props => {
+    const { t } = useTranslation();
+    return (
         <div className='sectoralSolutionContainer'>
             <div className='sectoralSolutionHeader'>
-                <img alt='' src={'./assets/img/sectoralSolutionLine.svg'}></img>
+                <img className='sectoralSolutionHeadLine' alt='' src={'./assets/img/sectoralSolutionLine.svg'}></img>
                 <a className='sectoralSolutionSpan'>{t("sectoralSolution")}</a>
-                <img alt='' src={'./assets/img/sectoralSolutionLine.svg'}></img>
+                <img className='sectoralSolutionHeadLine' alt='' src={'./assets/img/sectoralSolutionLine.svg'}></img>
             </div>
             <div className='solutionsDiv'>
                 <div className='solution' id='solution1'>
@@ -19,14 +19,14 @@ export const SectoralSolution = props =>{
                     </div>
                     <div className='solutionImage'>
                         <img alt='' src={'./assets/img/solutionImg1.webp'} id='rightImage'></img>
-                        <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
+                        <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{ display: "none" }}></img>
                     </div>
                 </div>
 
                 <div className='solution' id='solution2'>
                     <div className='solutionImage'>
                         <img alt='' src={'./assets/img/solutionImg2.webp'} id='leftImage'></img>
-                        <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
+                        <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{ display: "none" }}></img>
                     </div>
                     <div className='solutionSpans' id='rightSpans'>
                         <a className='solutionHeader'>{t("solutionHeader2")}</a>
@@ -35,7 +35,7 @@ export const SectoralSolution = props =>{
                     </div>
                 </div>
 
-                <div className='solution' id='solution3'> 
+                <div className='solution' id='solution3'>
                     <div className='solutionSpans' id='leftSpans'>
                         <a className='solutionHeader'>{t("solutionHeader3")}</a>
                         <a className='solutionSpan'>{t("solutionSpan3")}</a>
@@ -43,14 +43,14 @@ export const SectoralSolution = props =>{
                     </div>
                     <div className='solutionImage'>
                         <img alt='' src={'./assets/img/solutionImg3.webp'} id='rightImage'></img>
-                        <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
+                        <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{ display: "none" }}></img>
                     </div>
                 </div>
 
                 <div className='solution' id='solution4'>
                     <div className='solutionImage'>
                         <img alt='' src={'./assets/img/solutionImg4.webp'} id='leftImage'></img>
-                        <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{display: "none"}}></img>
+                        <img className='solutionShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{ display: "none" }}></img>
                     </div>
                     <div className='solutionSpans' id='rightSpans'>
                         <a className='solutionHeader'>{t("solutionHeader4")}</a>
