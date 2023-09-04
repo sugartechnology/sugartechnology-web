@@ -28,6 +28,7 @@
     top: 15px;
     left: 30px;
     cursor: pointer;
+    padding-left: 5%;
 }
 
 .routers{
@@ -175,6 +176,7 @@
     margin-top: 18px;
     position: relative;
     right: 40px;
+    padding-right: 5%;
 }
 
 .languageButton{
@@ -425,6 +427,8 @@
 
 .popupLineSmall{
     width: 150px;
+    height: 1.5px;
+    object-fit: cover;
 }
 
 .secondPopup{
@@ -432,11 +436,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 7px 8px;
+    padding: 10px 8px;
     position: relative;
     width: 150px;
     height: 100px;
-    background: #FFFFFF;
+    background: #ECECEC;
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
     position: absolute;
@@ -521,7 +525,7 @@
     padding: 7px 8px;
     position: relative;
     width: 155px;
-    background: #FFFFFF;
+    background: #ececec;
     box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
     border-radius: 12px;
     position: absolute;
@@ -529,7 +533,7 @@
     z-index: 6;
     top: 0px;
     justify-content: space-around;
-    padding: 10px 10px;
+    padding: 15px 10px;
 }
 
 #popupEnglishButton:hover,
@@ -544,7 +548,7 @@
 .languagePopup{
     display: flex;
     top: 40px;
-    right: 135px;
+    right: 57%;
     position: absolute;
     flex-direction: column;
     justify-content: center;

@@ -3,10 +3,10 @@ import './Customers.css'
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/navigation";
-import { Navigation, Pagination, Mousewheel, Keyboard,Autoplay } from "swiper";
-import { useTranslation} from "react-i18next";
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
+import { useTranslation } from "react-i18next";
 
- 
+
 export const Customers = props => {
   const { t } = useTranslation();
 
@@ -33,14 +33,18 @@ export const Customers = props => {
     },
     mousewheel: {
       enabled: true,
-    }
+    },
+    style: {
+      "--swiper-navigation-size": "30px",
+    },
+
   };
 
   return (
-    
+
     <div>
-      
-      <Swiper {...swiperSettings} style={{height: "25vh"}}>
+
+      <Swiper {...swiperSettings} style={{ height: "25vh" }}>
         <SwiperSlide>
           <img alt="" src={process.env.PUBLIC_URL + "/assets/img/bellona.svg"}></img>
         </SwiperSlide>
@@ -68,7 +72,7 @@ export const Customers = props => {
         <SwiperSlide>
           <img alt="" src={process.env.PUBLIC_URL + "/assets/img/vestel-logo-min.svg"}></img>
         </SwiperSlide>
-    
+
         <SwiperSlide>
           <img alt="" src={process.env.PUBLIC_URL + "/assets/img/simurgLogo.svg"}></img>
         </SwiperSlide>
@@ -79,25 +83,25 @@ export const Customers = props => {
           <img alt="" src={process.env.PUBLIC_URL + "/assets/img/creavit_logo-min.svg"}></img>
         </SwiperSlide>
         <SwiperSlide>
-            <img alt="" src={process.env.PUBLIC_URL + "/assets/img/ekohalilogo.svg"}></img>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/ekohalilogo.svg"}></img>
         </SwiperSlide>
         <SwiperSlide>
-            <img alt="" src={process.env.PUBLIC_URL + "/assets/img/tilia.svg"}></img>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/tilia.svg"}></img>
         </SwiperSlide>
         <SwiperSlide>
-            <img alt="" src={process.env.PUBLIC_URL + "/assets/img/kaas.svg"}></img>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/kaas.svg"}></img>
         </SwiperSlide>
         <SwiperSlide>
-            <img alt="" src={process.env.PUBLIC_URL + "/assets/img/gabba.svg"}></img>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/gabba.svg"}></img>
         </SwiperSlide>
         <SwiperSlide>
-            <img alt="" src={process.env.PUBLIC_URL + "/assets/img/homillia.svg"}></img>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/homillia.svg"}></img>
         </SwiperSlide>
         <SwiperSlide>
-            <img alt="" src={process.env.PUBLIC_URL + "/assets/img/homeandrugs.svg"}></img>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/homeandrugs.svg"}></img>
         </SwiperSlide>
         <SwiperSlide>
-            <img alt="" src={process.env.PUBLIC_URL + "/assets/img/pasaj.svg"}></img>
+          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/pasaj.svg"}></img>
         </SwiperSlide>
       </Swiper>
     </div>

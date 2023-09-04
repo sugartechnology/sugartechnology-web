@@ -29,8 +29,11 @@
 
 .wheelAnimationItemsContainer {
     position: relative;
+    margin-left: 5%;
 }
-
+.mobile .wheelAnimationItemsContainer{
+    margin-left: 0;
+}
 @media screen and (max-width: 1200px) {
     .wheelAnimationItemsContainer {
         right: 150px;

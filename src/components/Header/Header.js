@@ -1,11 +1,11 @@
 import './Header.css'
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import LanguageSelector from './LanguageSelector';
 import React, { useState, useEffect } from 'react';
 
 
 export const Header = props => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const [isTablet, setIsTablet] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -13,7 +13,7 @@ export const Header = props => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 900);
             setIsTablet(window.innerWidth > 900 && window.innerWidth <= 1100);
-            
+
         };
 
         handleResize();
@@ -21,14 +21,14 @@ export const Header = props => {
         window.addEventListener('resize', handleResize);
 
         return () => {
-        window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
-    const showPopup = ()=>{
+    const showPopup = () => {
         var popup = document.getElementById("productServicesPopup");
-        var popupOption1 =  document.getElementById("firstPopup");
-        var popupOption2 =  document.getElementById("secondPopup");
+        var popupOption1 = document.getElementById("firstPopup");
+        var popupOption2 = document.getElementById("secondPopup");
         var headerContainer = document.getElementById('headerContainer');
         popup.style.display = "flex";
         headerContainer.addEventListener('mouseleave', () => {
@@ -36,24 +36,24 @@ export const Header = props => {
             popupOption1.style.display = "none";
             popupOption2.style.display = "none";
         })
-        
-        
+
+
     }
-    const showPopupMobile = ()=>{
+    const showPopupMobile = () => {
         var firstMobilePopup = document.getElementById("firstMobilePopup");
         var firstChildPopup = document.getElementById("firstChildPopup");
         var secondChildPopup = document.getElementById("secondChildPopup");
         var span = document.getElementById("routerProductSpan");
         var div = document.getElementById("routerProduct");
         var btn = document.getElementById("productMobileButton");
-        if(firstMobilePopup.style.display === "none"){
+        if (firstMobilePopup.style.display === "none") {
             firstMobilePopup.style.display = "flex";
             btn.style.transform = "rotate(+90deg)";
             span.style.color = "#ED401A";
             btn.style.transform = "rotate(+90deg)";
             div.style.background = "#F8EDEB";
         }
-        else{
+        else {
             firstMobilePopup.style.display = "none";
             firstChildPopup.style.display = "none";
             secondChildPopup.style.display = "none";
@@ -63,25 +63,25 @@ export const Header = props => {
         }
     }
     const showFirstChildPopup = () => {
-       var firstChildPopup = document.getElementById("firstChildPopup");
-       var secondChildPopup = document.getElementById("secondChildPopup");
-       var span = document.getElementById("routerShowAtHomeMobileSpan");
-       var btn = document.getElementById("showAtHomeMobileButton");
-       var btn2 = document.getElementById("vtonMobileButton");
+        var firstChildPopup = document.getElementById("firstChildPopup");
+        var secondChildPopup = document.getElementById("secondChildPopup");
+        var span = document.getElementById("routerShowAtHomeMobileSpan");
+        var btn = document.getElementById("showAtHomeMobileButton");
+        var btn2 = document.getElementById("vtonMobileButton");
         var span2 = document.getElementById("routerVtonMobileSpan");
-       if(firstChildPopup.style.display === "none"){
-        firstChildPopup.style.display = "flex";
-        secondChildPopup.style.display = "none";
-        btn.style.transform = "rotate(+90deg)";
-        span.style.color = "#ED401A";
-        btn2.style.transform = "none";
-        span2.style.color = "#000000";
-       }
-       else{
-        firstChildPopup.style.display = "none";
-        btn.style.transform = "none";
-        span.style.color = "#000000";
-       }
+        if (firstChildPopup.style.display === "none") {
+            firstChildPopup.style.display = "flex";
+            secondChildPopup.style.display = "none";
+            btn.style.transform = "rotate(+90deg)";
+            span.style.color = "#ED401A";
+            btn2.style.transform = "none";
+            span2.style.color = "#000000";
+        }
+        else {
+            firstChildPopup.style.display = "none";
+            btn.style.transform = "none";
+            span.style.color = "#000000";
+        }
     }
     const showSecondChildPopup = () => {
         var firstChildPopup = document.getElementById("firstChildPopup");
@@ -90,15 +90,15 @@ export const Header = props => {
         var span = document.getElementById("routerVtonMobileSpan");
         var span2 = document.getElementById("routerShowAtHomeMobileSpan");
         var btn2 = document.getElementById("showAtHomeMobileButton");
-        if(secondChildPopup.style.display === "none"){
+        if (secondChildPopup.style.display === "none") {
             secondChildPopup.style.display = "flex";
             firstChildPopup.style.display = "none";
             btn.style.transform = "rotate(+90deg)";
             span.style.color = "#ED401A";
             btn2.style.transform = "none";
-        span2.style.color = "#000000";
+            span2.style.color = "#000000";
         }
-        else{
+        else {
             secondChildPopup.style.display = "none";
             btn.style.transform = "none";
             span.style.color = "#000000";
@@ -111,12 +111,12 @@ export const Header = props => {
         var div = document.getElementById("routerProduct");
         var btn = document.getElementById("productMobileButton");
         var firstMobilePopup = document.getElementById("firstMobilePopup");
-        if (popup.style.display === "none"){
+        if (popup.style.display === "none") {
             popup.style.display = "flex";
             overlay.style.width = "100%";
             overlay.style.height = "100%";
         }
-        else{
+        else {
             popup.style.display = "none";
             overlay.style.width = "0%";
             overlay.style.height = "0%";
@@ -137,7 +137,7 @@ export const Header = props => {
         var popupOption2 = document.getElementById("secondPopup");
         popupOption2.style.display = "flex";
         popupOption1.style.display = "none";
-        
+
     }
     const closePopupOption1 = () => {
         var popupOption1 = document.getElementById("firstPopup");
@@ -152,16 +152,16 @@ export const Header = props => {
         closePopupOption1();
         closePopupOption2();
     }
-    
-    return(
+
+    return (
         <div className={`${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} headerContainer`} id='headerContainer'>
-            <div className="overlay" id='overlay' style={{zIndex: "1"}} onClick={showMobilePopup}></div>
-            <div className='mobileHeaderPopup' id='mobileHeaderPopup' style={{display: "none", position: "absolute", zIndex: "2"}}>
+            <div className="overlay" id='overlay' style={{ zIndex: "1" }} onClick={showMobilePopup}></div>
+            <div className='mobileHeaderPopup' id='mobileHeaderPopup' style={{ display: "none", position: "absolute", zIndex: "2" }}>
                 <div className='backToHome' onClick={showMobilePopup}>
                     <img className='backToHomeArrow' alt='' src={'./assets/img/arrow-left.svg'}></img>
                     <a className='backToHomeSpan'>{t("backToHome")}</a>
                 </div>
-                <img alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px"}}></img>
+                <img alt='' src={'./assets/img/popupLine.svg'} style={{ width: "264px" }}></img>
                 <div className="popupRouters">
                     <div className='popupRouter' id='routerHome'>
                         <a href='/'>{t("home")}</a>
@@ -171,19 +171,19 @@ export const Header = props => {
                         <a id='routerProductSpan'>{t("productServices")}</a>
                         <img className='popupRightButton' id='productMobileButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
-                    <div className='firstMobilePopup' id='firstMobilePopup' style={{display: "none"}}>
-                        <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "200px"}}></img>
+                    <div className='firstMobilePopup' id='firstMobilePopup' style={{ display: "none" }}>
+                        <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "200px" }}></img>
                         <div className='popupRouterMobile' id='routerShowAtHomeMobile' onClick={showFirstChildPopup}>
                             <a id='routerShowAtHomeMobileSpan'>{t("showAtHome")}</a>
                             <img className='popupRightButton' id='showAtHomeMobileButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
 
                         </div>
-                        <div className='firstChildPopup' id='firstChildPopup' style={{display: "none"}}>
-                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
+                        <div className='firstChildPopup' id='firstChildPopup' style={{ display: "none" }}>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "170px" }}></img>
                             <div className='popupRouterMobile' id='routerShowFurnitureMobile'>
                                 <a>{t("showFurniture")}</a>
                             </div>
-                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "170px" }}></img>
                             <div className='itemsPopup'>
                                 <a href='/productAr' className='popupItem'>Mobilya</a>
                                 <a href='/productCarpet' className='popupItem'>Halı</a>
@@ -193,11 +193,11 @@ export const Header = props => {
                                 <a href='/productDecoration' className='popupItem'>Dekorasyon</a>
                                 <a href='/productTextile' className='popupItem'>Tekstil</a>
                             </div>
-                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "170px" }}></img>
                             <div className='popupRouterMobile' id='routerJointMobile'>
                                 <a href='/productJoint'>{t("createProduct")}</a>
                             </div>
-                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "170px" }}></img>
                         </div>
                         <div className='popupRouterMobile' id='routerMetaverseMobile'>
                             <a href='/productMeta'>{t("metaverse")}</a>
@@ -206,8 +206,8 @@ export const Header = props => {
                             <a id='routerVtonMobileSpan'>{t("vton")}</a>
                             <img className='popupRightButton' id='vtonMobileButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                         </div>
-                        <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "200px"}}></img>
-                        <div className='secondChildPopup' id='secondChildPopup' style={{display: "none"}}>
+                        <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "200px" }}></img>
+                        <div className='secondChildPopup' id='secondChildPopup' style={{ display: "none" }}>
                             <div className='popupRouterMobile' id='routerWatchMobile'>
                                 <a href='/productWatch'>{t("dressWatch")}</a>
                             </div>
@@ -217,7 +217,7 @@ export const Header = props => {
                             <div className='popupRouterMobile' id='routerCloothMobile'>
                                 <a href='/productClooth'>{t("dressClooth")}</a>
                             </div>
-                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{width: "170px"}}></img>
+                            <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "170px" }}></img>
                         </div>
                     </div>
                     <div className='popupRouter' id='routerAbout'>
@@ -233,14 +233,14 @@ export const Header = props => {
                         <img className='popupRightButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
                 </div>
-                <img id='mobilePopupLine3' alt='' src={'./assets/img/popupLine.svg'} style={{width: "264px", position: "relative"}}></img>
+                <img id='mobilePopupLine3' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "264px", position: "relative" }}></img>
                 <div className='mobileMediaCenterButtons'>
                     <a href='/contactCv' className='popupMediaCenterButton' id='popupMediaCenterButton'>{t("careers")}</a>
                 </div>
             </div>
 
-            <div className='headerShowButtons' style={{display: "none"}}>
-                <img className='headerShowButton' id='headerShowButton' alt='' src={'./assets/img/headerOpenButton.svg'} onClick={showMobilePopup} style={{width: "50px", position: "relative", cursor: "pointer"}}></img>
+            <div className='headerShowButtons' style={{ display: "none" }}>
+                <img className='headerShowButton' id='headerShowButton' alt='' src={'./assets/img/headerOpenButton.svg'} onClick={showMobilePopup} style={{ width: "50px", position: "relative", cursor: "pointer" }}></img>
             </div>
             <div className="sugarLogo" >
                 <a href='/'><img alt="" src={'assets/img/headerLogo.svg'}></img></a>
@@ -248,10 +248,10 @@ export const Header = props => {
             <div className="routers">
                 <a href='/'>{t("home")}</a>
                 <a onMouseOver={showPopup}>{t("productServices")}</a>
-                <div className='productServicesPopup' id='productServicesPopup' style={{ display: "none", position: "absolute", top: "45px", left: "70px", zIndex: "6"}}>
+                <div className='productServicesPopup' id='productServicesPopup' style={{ display: "none", position: "absolute", top: "45px", left: "70px", zIndex: "6" }}>
                     <div className='popupOption' id='firstPopupOption' onMouseOver={showPopupOption1}><a>{t("showAtHome")}</a><img className='popupVector' id='vector1' alt='' src={'./assets/img/popupVector.svg'}></img></div>
-                    <div className='firstPopup' id='firstPopup' style={{display: "none"}}>
-                        <div className='secondPopupFirstOption'><a style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("showFurniture")}</a></div>
+                    <div className='firstPopup' id='firstPopup' style={{ display: "none" }}>
+                        <div className='secondPopupFirstOption'><a style={{ fontSize: "13px", cursor: "pointer", position: "relative", left: "5px", paddingBottom: "10px" }}>{t("showFurniture")}</a></div>
                         <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
                         <div className='itemsPopup'>
                             <a href='/productAr' className='popupItem'>Mobilya</a>
@@ -263,18 +263,18 @@ export const Header = props => {
                             <a href='/productTextile' className='popupItem'>Tekstil</a>
                         </div>
                         <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
-                        <div className='secondPopupSecondOption'><a href='/productJoint' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("createProduct")}</a></div>
+                        <div className='secondPopupSecondOption'><a href='/productJoint' style={{ fontSize: "13px", cursor: "pointer", position: "relative", left: "5px", paddingTop: "10px" }}>{t("createProduct")}</a></div>
                     </div>
                     <img className='popupLine' alt='' src={'./assets/img/popupLine.svg'}></img>
-                    <div className='popupOption' onMouseOver={closePopups} style={{top: "0px"}}><a href='/productMeta'>{t("metaverse")}</a></div>
+                    <div className='popupOption' onMouseOver={closePopups} style={{ top: "0px" }}><a href='/productMeta'>{t("metaverse")}</a></div>
                     <img className='popupLine' alt='' src={'./assets/img/popupLine.svg'}></img>
-                    <div className='popupOption' id='thirdPopupOption' onMouseOver={showPopupOption2} style={{top: "0px"}}><a>{t("vton")}</a><img className='popupVector' id='vector2' alt='' src={'./assets/img/popupVector.svg'}></img></div>
-                    <div className='secondPopup' id='secondPopup' style={{display: "none"}}>
-                        <div className='firstPopupFirstOption'><a href='/productWatch' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressWatch")}</a></div>
+                    <div className='popupOption' id='thirdPopupOption' onMouseOver={showPopupOption2} style={{ top: "0px" }}><a>{t("vton")}</a><img className='popupVector' id='vector2' alt='' src={'./assets/img/popupVector.svg'}></img></div>
+                    <div className='secondPopup' id='secondPopup' style={{ display: "none" }}>
+                        <div className='firstPopupFirstOption'><a href='/productWatch' style={{ fontSize: "13px", cursor: "pointer", position: "relative", left: "5px" }}>{t("dressWatch")}</a></div>
                         <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
-                        <div className='firstPopupSecondOption'><a href='/productShoes' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressShoe")}</a></div>
+                        <div className='firstPopupSecondOption'><a href='/productShoes' style={{ fontSize: "13px", cursor: "pointer", position: "relative", left: "5px" }}>{t("dressShoe")}</a></div>
                         <img className='popupLineSmall' alt='' src={'./assets/img/popupLine.svg'}></img>
-                        <div className='firstPopupThirdOption'><a href='/productClooth' style={{fontSize: "13px", cursor: "pointer",position: "relative", left: "5px"}}>{t("dressClooth")}</a></div>
+                        <div className='firstPopupThirdOption'><a href='/productClooth' style={{ fontSize: "13px", cursor: "pointer", position: "relative", left: "5px" }}>{t("dressClooth")}</a></div>
                     </div>
                 </div>
                 <a href='/aboutUs'>{t("aboutUs")}</a>
@@ -284,9 +284,9 @@ export const Header = props => {
             <div className="headerButtons">
                 <LanguageSelector></LanguageSelector>
                 <a href='/contactCv' className='mediaCenterButton'>
-                   {t("careers")}
+                    {t("careers")}
                 </a>
             </div>
-        </div>  
+        </div>
     );
 }

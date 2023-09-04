@@ -24,7 +24,7 @@ export const CarpetDetails = props =>{
                         ar-scale="fixed" show-option="" camera-controls="" ar-status="not-presenting" camera-down-lock="true"  camera-orbit="15deg 55deg auto" template="advanced" showDimension="true"
                         product_id="8699173980480" company_id="30" exposure="1"  joint-show="" selectColor="#ED401A" qr="">
                     </sugar-model-viewer>
-                    <img className='modelViewerShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{opacity: "0.5", position: "absolute", width: "76%", zIndex: "-1"}}></img>
+                    <img className='modelViewerShadow' alt='' src={'./assets/img/arDetailsShadow.svg'} style={{opacity: "0.5", position: "absolute", width: "65%", zIndex: "-1"}}></img>
                 </div>
             </div>
             <img className='arDetailsBubble' alt='' src={'./assets/img/ArDetailsImg2.webp'} style={{position: "absolute", bottom: "0px", left: "0px", zIndex: "-1"}}></img>
