@@ -131,9 +131,9 @@
 }
 .middleContact{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     position: relative;
-    width: 30%;
+    width: 32%;
 }
 
 @media screen and (max-width: 1200px) {

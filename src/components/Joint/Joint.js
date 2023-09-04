@@ -30,24 +30,20 @@ export const Joint = props => {
                     <img alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                 </div>
             </div>
-            <div className='mainPageTopLeftFigure rotate'></div>
-            <div className='mainPageTopRightFigure rotate'></div>
-            <div className='mainPageMiddleFigure rotate' style={{
-                width: "388px",
-                height: "244px"
-            }}></div>
             <div className='mainPageSmallFigure bright' style={{
                 width: '243px',
                 height: '233px',
-                left: '498px',
-                top: '136px'
+                left: '41%',
+                bottom: "10%"
             }}></div>
-            <div className='mainPageSmallFigure '></div>
+            <div className='mainPageSmallFigure ' style={{
+                left: "85%"
+            }}></div>
             <div className='mainPageSmallFigure ' style={{
                 width: '629px',
                 height: '665px',
-                left: '170px',
-                top: '316px'
+                left: '-65px',
+                top: '-385px'
             }}></div>
             <div className='mainPageSmallFigure0 '></div>
             <div className='showAtHomeSpans'>

@@ -12,9 +12,10 @@
     height: 100%;
     justify-content: space-evenly;
     gap: 50px;
+    overflow: hidden;
 }
 .jointAboutHeader{
-    width: 90%;
+    width: 65%;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
