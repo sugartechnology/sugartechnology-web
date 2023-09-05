@@ -63,11 +63,124 @@
     right: 0px;
     z-index: -1;
 }
+.sugarGoalMobile{
+    display: none;
+   
+}
+.sugarGoalMobileRow1{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 47%;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.sugarGoalMobileRow2{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 47%;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%,-50%);
+}
+.sugarGoalMobile1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
+}
+.sugarGoalMobile2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
 
+}
+.sugarGoalMobile3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
 
+}
+.sugarGoalMobile4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
+
+}
+.sugarGoalsImageMobile{
+    width: 20%;
+}
+.sugarGoalsHeaderMobile{
+    color: #895EE2;
+    text-align: center;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+.sugarGoalsSpanMobile{
+    color: #8A8A8A;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    width: 80%;
+}
 /* Reeponsive Tablet Settings */
+.mobile .sugarGoalMobile{
+    display: flex;
+    background:url(/public/assets/img/sugarGoalElementMobile.svg);
+    display: flex;
+    width: 41%;
+    width: 360px;
+    height: 415px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+.tablet .sugarGoalMobile{
+    display: flex;
+    background:url(/public/assets/img/sugarGoalElementMobile.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    width: 360px;
+    height: 415px;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+
 
 @media screen and (max-width: 1200px){
+    .sugarGoalMobile{
+        display: flex;
+        background:url(/public/assets/img/sugarGoalElementMobile.svg);
+        background-repeat: no-repeat;
+        display: flex;
+        width: 360px;
+        height: 415px;
+        background-position: center;
+        position: relative;
+        background-size: cover;
+    }
     .sugarGoals img{
         width: 200px;
     }
@@ -106,7 +219,7 @@
         display: none;
     }
     .sugarGoalsElements2{
-        display: flex;
+        display: none;
     }
     .sugarGoalsElementsGroup{
         display: flex;
@@ -148,7 +261,15 @@
     }
     .goalsShadow{
         position: absolute;
-        bottom: 60px;
+        bottom: 10px;
+        display: none;
+    }
+    .goalsShadowAbsolute{
+        width: 100%;
+        align-self: center;
+        bottom: -30px;
+        position: absolute;
+        justify-self: center;
     }
     .goalsLine{
         width: 414px !important;
@@ -221,8 +342,12 @@
     }
     .goalsShadow{
         width: 250px;
+
     }
     .goalsLine{
         width: 100% !important;
+    }
+    .sugarGoalMobile{
+        top: 15%;
     }
 }

@@ -118,6 +118,7 @@
 
   .mobile .swiper-button-next{
     right: 10px !important;
+    display: none !important;
   }
 
   .mobile .swiper-button-prev{
@@ -153,9 +154,7 @@
 .mobile .swiper-button-prev, .swiper-rtl .swiper-button-next{
   display: none;
 }
-.mobile .swiper-button-next:after, .swiper-button-prev:after{
-  display: none;
-}
+
 .swiper-button-next:after, .swiper-button-prev:after {
   width: 100%;
   height: 100%;
