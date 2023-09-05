@@ -28,7 +28,7 @@
     position: relative;
 }
 .blogParagraphs4Container img{
-    width: 70%;
+    width: 100%;
 }
 .paragraph{
     display: flex;
@@ -156,7 +156,13 @@
 .tablet .authorImage{
     width: auto !important;
 }
-
+.mobile .paragraph{
+    width: 90%;
+    overflow: hidden;
+}
+.mobile .paragraph img{
+    width: 100%;
+}
 .tablet .paragraphSpan{
     font-size: 14px;
     line-height: 25px;
@@ -170,7 +176,7 @@
 
 .mobile .paragraphHeader{
     line-height: 37px;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .mobile .secondParagraphLists{

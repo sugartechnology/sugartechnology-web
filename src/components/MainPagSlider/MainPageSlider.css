@@ -1694,7 +1694,7 @@ visibility: hidden;
   flex-direction: column;
   width: 88%;
   margin: auto;
-  margin: 50px;
+  margin: 35px;
   gap: 30px;
   align-items: flex-start;
 }
@@ -1769,7 +1769,7 @@ visibility: hidden;
 }
 
 .mobile .slideDetail{
-  bottom: 5vh;
+  bottom: 3.5vh;
   width: 460px !important;
 }
 
@@ -1777,7 +1777,7 @@ visibility: hidden;
   right: -125px;
   left: auto;
   bottom: auto;
-  top: 140px;
+  top: 150px;
   transform: rotate(90deg);
   width: 80%;
 }
@@ -1812,7 +1812,8 @@ visibility: hidden;
   right: 10vh;
 }
 .mobile .mainPageSmallFigure{
-  display: none;
+  display: flex;
+  left: -300px !important;
 }
 .mobile .mainPageMiddleFigure{
   left: calc(-20%);

@@ -314,10 +314,13 @@
 }
 .mobile .contactHeaders a{
     font-size: 13px;
-    height: 20px;
+    /* height: 20px; */
 }
 .mobile .leftContact{
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 .mobile .middleContact{
     width: 50%;
@@ -357,9 +360,11 @@
 }
 .mobile .about{
     gap: 0px;
+    display: flex;
+    flex-direction: column;
 }
 .mobile .communication{
-    bottom: 60px;
+    /* bottom: 60px; */
     right: auto;
 }
 .mobile .inputDonePopup{

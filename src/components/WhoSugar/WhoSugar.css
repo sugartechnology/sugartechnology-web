@@ -32,6 +32,9 @@
     padding: 80px 0px;
     z-index: 1;
 }
+.mobile .whoSugarSpans{
+    padding-top: 180px;
+}
 .whoSugarHeader{
     font-style: normal;
     font-weight: 700;

@@ -92,18 +92,19 @@
 }
 
 .mobile .tryCloothImage{
-    width: 35% !important;
+    width: 65% !important;
+    padding-top: 30px;
 }
 
 .mobile .tryCloothHeader{
     width: 100%;
-    text-align: justify;
+    text-align: center;
     font-size: 30px;
 }
 
 .mobile .tryCloothSpan{
-    width: 80%;
-    text-align: justify;
+    width: 100%;
+    text-align: center;
 }
 
 .mobile .tryCloothBubble{
@@ -115,9 +116,9 @@
 }
 
 .mobile .tryCloothElementImage1{
-    width: 70% !important;
+    width: 80% !important;
 }
 
 .mobile .tryCloothElementImage2{
-    width: 70% !important;
+    width: 80% !important;
 }

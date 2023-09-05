@@ -8,6 +8,10 @@
     gap: 50px;
     padding-bottom: 150px;
 }
+.mobile .sugarBrandsContainer{
+    gap: 0;
+    overflow: hidden;
+}
 .sugarBrandsHeader{
     display: flex;
     width: 100%;
@@ -36,14 +40,14 @@
 }
 .sugarBrandHomeImg{
     position: relative;
-    width: 320px;
+    width: 288px;
     border-radius: 16px 16px 0px 0px;
 }
 .sugarBrandShadow{
     position: absolute;
-    width: 289px;
+    width: 275px;
     bottom: -19px;
-    left: 13px;
+    /* left: 13px; */
     opacity: 0.3;
 }
 .sugarBrandSpan{
@@ -119,8 +123,10 @@
 .mobile .sugarBrands{
     padding: 40px 0px;
     overflow-x: scroll;
-    gap: 10px;
-    width: 90%;
+    gap: 15px;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 40px;
 }
 
 

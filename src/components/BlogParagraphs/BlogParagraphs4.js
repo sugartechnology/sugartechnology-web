@@ -1,11 +1,32 @@
 import './BlogParagraphs.css';
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from 'react';
+export const BlogParagraphs4 = props => {
+    const { t } = useTranslation();
 
-export const BlogParagraphs4 = props =>{
-    const {t} = useTranslation();
-    return(
+
+    const [isTablet, setIsTablet] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 800);
+            setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return (
         <div className='blogParagraphs4Container'>
-            <div className='paragraph' style={{marginTop: "40px"}}>
+            <div className='paragraph' style={{ marginTop: "40px", width: isMobile && "90%" }}>
                 <a className='paragraphHeader'>{t("paragraphHeader4")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph4Span1")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph4Span2")}</a>
@@ -15,7 +36,7 @@ export const BlogParagraphs4 = props =>{
                 <a className='paragraphSpan'>{t("blogParagraph4Span6")}</a>
             </div>
 
-            <div className='paragraph'>
+            <div className='paragraph' style={{ width: isMobile && "90%" }}>
                 <img alt='' src={'./assets/img/blog4Image1.jpg'}></img>
                 <a className='paragraphHeader'>{t("paragraphHeader5")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph4Span7")}</a>
@@ -31,19 +52,19 @@ export const BlogParagraphs4 = props =>{
             </div>
 
             <div className='videoParagraph'>
-                <video controls style={{width: "100%"}}>
+                <video controls style={{ width: "100%" }}>
                     <source src={'./assets/videos/videoplayback.mp4'} type='video/mp4' />
                 </video>
             </div>
 
-            <div className='paragraph'>
+            <div className='paragraph' style={{ width: isMobile && "90%" }}>
                 <a className='paragraphHeader'>{t("paragraphHeader6")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph4Span11")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph4Span12")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph4Span13")}</a>
             </div>
 
-            <div className='paragraph'>
+            <div className='paragraph' style={{ width: isMobile && "90%" }}>
                 <img alt='' src={'./assets/img/blog4Image3.jpg'}></img>
                 <a className='paragraphHeader'>{t("paragraphHeader7")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph4Span14")}</a>
@@ -52,16 +73,16 @@ export const BlogParagraphs4 = props =>{
                 <img alt='' src={'./assets/img/blog4Image4.jpeg'}></img>
                 <img alt='' src={'./assets/img/blog4Image2.jpg'}></img>
             </div>
-            
-            <div className='author'>
+
+            <div className='author'  >
                 <div className='authorImage'>
-                    <img style={{width: "100%"}} alt='' src={'./assets/img/kubraPp.svg'}></img>
+                    <img style={{ width: "100%" }} alt='' src={'./assets/img/squadPp/kubraPp.svg'}></img>
                 </div>
                 <div className='authorSpans'>
                     <a className='authorHeader'>Kübra Yıldız</a>
                     <a className='authorSpan'>{t("paragraphAuthor3Span")}AR, VR, AI teknolojilerine dayalı çözümler ile gerçek hayat problemlerinin çözülmesini sağlayan ürünler geliştiriyor ve bu ürünleri müşterilerimizi dahil ederek geliştiriyoruz.</a>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

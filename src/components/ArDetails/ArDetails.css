@@ -162,19 +162,23 @@
 }
 
 /* Reeponsive Mobile Settings */
-
+.mobile .modelViewerShadow{
+    width: 90% !important;
+}
 .mobile .arDetailsHeader{
     font-size: 29px;
+    width: 92%;
 }
 .mobile .arDetailsSpan{
     font-size: 13px;
+    width: 90%;
 }
 .mobile .showAtHomeImg{
     display: none;
 }
 
 .mobile .modelViewerShadow{
-    bottom: 71px;
+    bottom: 88px;
 }
 
 .mobile .arDetailsBubble{

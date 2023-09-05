@@ -24,6 +24,9 @@
     height: 94%;
     justify-content: center;
 }
+.mobile .partner1{
+    gap: 30px;
+}
 .partnerHeaders{
     display: flex;
     position: relative;
@@ -46,6 +49,9 @@
 .partnerSpans{
     width: 65%;
     position: relative;
+}
+.mobile .partnerSpans{
+    width: 90%;
 }
 .partnerSpan{
     font-style: normal;
@@ -149,12 +155,12 @@
     
 }
 .mobile .partnerLogo{
-    width: 139px !important;
+    width: 200px !important;
   
 }
 .mobile .partnerSpan{
     font-size: 14px;
-    width: 92%;
+    width: 100%;
 }
 
 .tablet .partnerVideo{
@@ -185,13 +191,13 @@
 }
 .mobile .containerTopLogo{
     width: 72px;
-    top: 0px !important;
-    left: 0px !important;
+    top: -78px !important;
+    left: 6% !important;
     position: absolute;
 }
 .mobile .spanBottomLogo{
     width: 37px;
-    right: 0px !important;
+    right: 5% !important;
 }
 .mobile .partnersPageButtons{
     bottom: 30px;

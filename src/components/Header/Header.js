@@ -8,6 +8,7 @@ export const Header = props => {
     const { t } = useTranslation();
     const [isTablet, setIsTablet] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const [isOpenFirstMobilePopup, setIsOpenFirstMobilePopup] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -63,6 +64,7 @@ export const Header = props => {
         }
     }
     const showFirstChildPopup = () => {
+        setIsOpenFirstMobilePopup(!isOpenFirstMobilePopup);
         var firstChildPopup = document.getElementById("firstChildPopup");
         var secondChildPopup = document.getElementById("secondChildPopup");
         var span = document.getElementById("routerShowAtHomeMobileSpan");
@@ -161,17 +163,16 @@ export const Header = props => {
                     <img className='backToHomeArrow' alt='' src={'./assets/img/arrow-left.svg'}></img>
                     <a className='backToHomeSpan'>{t("backToHome")}</a>
                 </div>
-                <img alt='' src={'./assets/img/popupLine.svg'} style={{ width: "264px" }}></img>
+                <img alt='' src={'./assets/img/popupLine.svg'} style={{ width: "264px", paddingLeft: "10px" }}></img>
                 <div className="popupRouters">
                     <div className='popupRouter' id='routerHome'>
                         <a href='/'>{t("home")}</a>
-                        <img className='popupRightButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
                     <div className='popupRouter' id='routerProduct' onClick={showPopupMobile}>
                         <a id='routerProductSpan'>{t("productServices")}</a>
                         <img className='popupRightButton' id='productMobileButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
-                    <div className='firstMobilePopup' id='firstMobilePopup' style={{ display: "none" }}>
+                    <div className='firstMobilePopup' id='firstMobilePopup' style={{ display: "none", background: isOpenFirstMobilePopup && "none" }}>
                         <img className='firstMobilePopupLine' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "200px" }}></img>
                         <div className='popupRouterMobile' id='routerShowAtHomeMobile' onClick={showFirstChildPopup}>
                             <a id='routerShowAtHomeMobileSpan'>{t("showAtHome")}</a>
@@ -222,19 +223,16 @@ export const Header = props => {
                     </div>
                     <div className='popupRouter' id='routerAbout'>
                         <a href='/aboutUs'>{t("aboutUs")}</a>
-                        <img className='popupRightButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
                     <div className='popupRouter' id='routerBlog'>
                         <a href='/blogs'>{t("blog")}</a>
-                        <img className='popupRightButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
                     <div className='popupRouter' id='routerContact'>
                         <a href='/contactUs'>{t("contactUs")}</a>
-                        <img className='popupRightButton' alt='' src={'./assets/img/popupMobileVector.svg'}></img>
                     </div>
                 </div>
-                <img id='mobilePopupLine3' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "264px", position: "relative" }}></img>
-                <div className='mobileMediaCenterButtons'>
+                <img id='mobilePopupLine3' alt='' src={'./assets/img/popupLine.svg'} style={{ width: "264px", position: "relative", paddingLeft: "10px" }}></img>
+                <div className='mobileMediaCenterButtons' style={{ paddingLeft: "10px" }}>
                     <a href='/contactCv' className='popupMediaCenterButton' id='popupMediaCenterButton'>{t("careers")}</a>
                 </div>
             </div>

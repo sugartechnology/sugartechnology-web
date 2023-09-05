@@ -41,6 +41,9 @@
     background: #FAF1EF;
     border-radius: 100px;
 }
+.mobile .sugarTeamLeaders img{
+    width: 215px;
+}
 .leaderName{
     font-style: normal;
     font-weight: 600;

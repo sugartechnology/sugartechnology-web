@@ -42,7 +42,7 @@ export const Customers = props => {
 
   return (
 
-    <div>
+    <div style={{ overflow: "hidden" }}>
 
       <Swiper {...swiperSettings} style={{ height: "25vh" }}>
         <SwiperSlide>

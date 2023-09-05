@@ -1,11 +1,31 @@
 import './BlogParagraphs.css';
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from 'react';
+export const BlogParagraphs3 = props => {
+    const { t } = useTranslation();
 
-export const BlogParagraphs3 = props =>{
-    const {t} = useTranslation();
-    return(
+    const [isTablet, setIsTablet] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 800);
+            setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return (
         <div className='blogParagraphs3Container'>
-            <div className='paragraph' style={{marginTop: "40px"}}>
+            <div className='paragraph' style={{ marginTop: "40px" }}>
                 <a className='paragraphHeader'>{t("paragraphHeader3")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span1")}</a>
             </div>
@@ -23,7 +43,7 @@ export const BlogParagraphs3 = props =>{
             <div className='paragraph'>
                 <a className='paragraphHeader'>{t("blogParagraph3Span6")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span7")}</a>
-                <img className='paragraphImage'alt='' src={'assets/img/paragraphImage5.jpeg'}></img>
+                <img className='paragraphImage' alt='' src={'assets/img/paragraphImage5.jpeg'}></img>
             </div>
             <div className='paragraph'>
                 <a className='paragraphSpan'>{t("blogParagraph3Span8")}</a>
@@ -58,7 +78,7 @@ export const BlogParagraphs3 = props =>{
                 <a className='paragraphSpan'>{t("blogParagraph3Span17")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span18")}</a>
             </div>
-            <img alt='' src={'./assets/img/istikbal_ar_deneyim.png'}></img>
+            <img alt='' src={'./assets/img/istikbal_ar_deneyim.png'} style={{ width: isMobile && "100%" }}></img>
             <div className='paragraph'>
                 <a className='paragraphHeader'>{t("blogParagraph3Span19")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span20")}</a>
@@ -66,7 +86,7 @@ export const BlogParagraphs3 = props =>{
                 <a className='paragraphSpan'>{t("blogParagraph3Span22")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span23")}</a>
             </div>
-            <img alt='' src={'./assets/img/3d_animation.gif'}></img>
+            <img alt='' src={'./assets/img/3d_animation.gif'} style={{ width: isMobile && "100%" }}></img>
             <div className='paragraph'>
                 <a className='paragraphHeader'>{t("blogParagraph3Span24")}</a>
                 <a className='paragraphSpan'>{t("blogParagraph3Span25")}</a>
@@ -78,7 +98,7 @@ export const BlogParagraphs3 = props =>{
             </div>
             <div className='author'>
                 <div className='authorImage'>
-                    <img style={{width: "100%"}} alt='' src={'./assets/img/SugarTeamLeader1.webp'}></img>
+                    <img style={{ width: "100%" }} alt='' src={'./assets/img/SugarTeamLeader1.webp'}></img>
                 </div>
                 <div className='authorSpans'>
                     <a className='authorHeader'>Abdurrahman Türkeri</a>

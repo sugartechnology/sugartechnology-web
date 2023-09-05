@@ -44,6 +44,9 @@
 .showAtHomeImage{
     width: 100%;
 }
+.mobile .showAtHomeImage{
+    padding-top: 30px;
+}
 .showAtHomeButtons{
     display: flex;
     flex-direction: row;
@@ -165,6 +168,7 @@
     position: relative;
 }
 .mobile .showAtHomeSpan{
+    width: 100%;
     line-height: 25px;
     font-size: 17px;
     position: relative;
@@ -198,11 +202,12 @@
     gap: 20px;
 }
 .mobile .showAtHomeSpanElements{
-    width: auto;
+    width: 100%;
 }
 .mobile .showAtHomeSpans{
-    width: 71%;
+    width: 83%;
     align-items: normal;
+    gap: 30px;
 }
 .mobile .productInputsCloseButton{
     top: 11%;

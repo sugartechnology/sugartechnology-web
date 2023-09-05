@@ -192,7 +192,8 @@
 }
 
 .mobile .mainSolutionHeader h1{
-    font-size: 30px;
+    font-size: 18px;
+    line-height: 0;
 }
 
 .mobile .popup{

@@ -44,6 +44,7 @@
 
 .mobile .shoesContainer{
     flex-direction: column;
+    padding-top: 50px;
 }
 
 .mobile .shoesImageDiv{
@@ -55,4 +56,5 @@
 
 .mobile .shoesImage{
     width: 75%;
+    padding-top: 30px;
 }

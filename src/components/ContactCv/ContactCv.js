@@ -1,11 +1,13 @@
 import './ContactCv.css';
 import { useState, useEffect } from 'react';
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import ReCAPTCHA from 'react-google-recaptcha';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'
 
-export const ContactCv = props =>{
+export const ContactCv = props => {
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [cv, setCv] = useState(null);
@@ -25,10 +27,10 @@ export const ContactCv = props =>{
         const maxSize = 20 * 1024 * 1024;
 
         if (fileSize > maxSize) {
-        alert('Dosya boyutu 20 MB\'tan büyük olamaz.');
-        event.target.value = null;
+            alert('Dosya boyutu 20 MB\'tan büyük olamaz.');
+            event.target.value = null;
         } else {
-        setCv(file);
+            setCv(file);
         }
     };
 
@@ -40,13 +42,13 @@ export const ContactCv = props =>{
         setOption('secondOption');
     };
 
-    function cvDoubleMethod(event){
+    function cvDoubleMethod(event) {
         handleFileSelect(event);
         setCv(event.target.value);
     }
     const handleSubmit = async (event) => {
         event.preventDefault();
-    
+
         if (!mail || !phone || !message || !name || !job || !cv || !option) {
             informationErrorPopup();
             return;
@@ -63,12 +65,12 @@ export const ContactCv = props =>{
         //         setTimeout(() => reject(new Error("Request timeout")), 15000)
         //     )
         // ]);
-    
+
         // if (!response) {
         //     inputErrorPopup();
         //     return;
         // }
-    
+
         // const result = response.json();
         // if (result.success) {
         //     submitForm();
@@ -77,9 +79,9 @@ export const ContactCv = props =>{
         // }
 
         showLoadingPopup();
-    
+
         submitForm();
-        
+
     }
 
     const submitForm = () => {
@@ -99,17 +101,17 @@ export const ContactCv = props =>{
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
         xhr.setRequestHeader("Content-Type", "application/json");
-      
+
         xhr.onreadystatechange = function () {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
-                inputDonePopup();
+                    inputDonePopup();
                 } else {
-                inputErrorPopup();
+                    inputErrorPopup();
                 }
             }
         };
-      
+
         xhr.send(JSON.stringify(form));
     };
 
@@ -132,7 +134,7 @@ export const ContactCv = props =>{
             window.location.reload();
         }, 3000);
     }
-    function inputErrorPopup(){
+    function inputErrorPopup() {
         let inputPopup = document.querySelector('#inputErrorPopup');
         let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
         informationLoadingPopup.style.display = "none";
@@ -141,7 +143,7 @@ export const ContactCv = props =>{
             window.location.reload();
         }, 3000);
     }
-    function informationErrorPopup(){
+    function informationErrorPopup() {
         let inputPopup = document.querySelector('#informationErrorPopup');
         let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
         informationLoadingPopup.style.display = "none";
@@ -150,11 +152,11 @@ export const ContactCv = props =>{
             window.location.reload();
         }, 3000);
     }
-    function showLoadingPopup(){
+    function showLoadingPopup() {
         let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
         informationLoadingPopup.style.display = "flex";
     }
-    return(
+    return (
         <div className='contactCvContainer'>
             <div className='mainPageTopLeftFigure rotate'></div>
             <div className='mainPageTopRightFigure rotate'></div>
@@ -173,24 +175,25 @@ export const ContactCv = props =>{
                 top: '316px'
             }}></div>
             <div className='mainPageSmallFigure0 '></div>
-            <div className='contactCvInputs' onSubmit={(e)=>{return false;}}>
+            <div className='contactCvInputs' onSubmit={(e) => { return false; }}>
                 <div className='contactInputHeaders'>
                     <a className='contactCvHeader'>{t("contactCvHeader")}</a>
                     <a className='contactCvSpan'>{t("contactCvSpan")}</a>
                 </div>
                 <div className='nameEmailInputsCv'>
-                        <div className='nameInputsCv'>
-                            <a className='nameInputSpan'>{t("fullName")}</a>
-                            <input className='nameEmailInputCv' placeholder={t("fullName")} value={name} onChange={(e)=>setName(e.target.value)}></input>
-                        </div>
-                        <div className='emailInputsCv'>
-                            <a className='emailInputSpan'>{t("email")}</a>
-                            <input className='nameEmailInputCv' placeholder='hello@creative-tim.com' value={mail} onChange={(e)=>setMail(e.target.value)}></input>
-                        </div>
+                    <div className='nameInputsCv'>
+                        <a className='nameInputSpan'>{t("fullName")}</a>
+                        <input className='nameEmailInputCv' placeholder={t("fullName")} value={name} onChange={(e) => setName(e.target.value)}></input>
+                    </div>
+                    <div className='emailInputsCv'>
+                        <a className='emailInputSpan'>{t("email")}</a>
+                        <input className='nameEmailInputCv' placeholder='hello@creative-tim.com' value={mail} onChange={(e) => setMail(e.target.value)}></input>
+                    </div>
                 </div>
+
                 <div className='jobTitleInputs'>
                     <a className='nameInputSpan'>{t("jobTitle")}</a>
-                    <select className='jobTitleSelect' value={job} onChange={(e)=>setJob(e.target.value)}>
+                    <select className='jobTitleSelect' value={job} onChange={(e) => setJob(e.target.value)}>
                         <option>Select Your Job</option>
                         <option>Software Developer</option>
                         <option>Graphic Designer</option>
@@ -198,24 +201,44 @@ export const ContactCv = props =>{
                     </select>
                 </div>
                 <div className='nameEmailInputsCv'>
-                        <div className='nameInputsCv'>
-                            <a className='nameInputSpan'>{t("phone")}</a>
-                            <input className='nameEmailInputCv' placeholder={"Phone Number"} value={phone} onChange={(e)=>setPhone(e.target.value)}></input>
-                        </div>
-                        <div className='emailInputsCv'>
-                            <a className='addCvInput'>{t("addCv")}</a>
-                            <input className='cvInput' type='file' placeholder={t("fileChoosen")} value={cv} onChange={cvDoubleMethod}></input>
-                            <a className='cvAlert'>{t("cvAlert")}</a>
-                        </div>
+                    <div className='nameInputsCv'>
+                        <a className='nameInputSpan'>{t("phone")}</a>
+                        <PhoneInput
+                            className="nameEmailInputCv"
+                            country={"tr"}
+                            value={phone}
+                            // onChange={phone => setPhone({ phone })}
+                            placeholder='Phone Number'
+                            containerStyle={{
+                                borderRadius: "8px",
+                                border: "none",
+                            }}
+                            buttonStyle={{
+                                width: "13% ",
+                                backgroundColor: "white",
+                            }}
+                            inputStyle={{
+                                width: "100%",
+                                height: "100%",
+                            }}
+
+                        />
+                        {/* <input className='nameEmailInputCv' placeholder={"Phone Number"} value={phone} onChange={(e) => setPhone(e.target.value)}></input> */}
+                    </div>
+                    <div className='emailInputsCv'>
+                        <a className='addCvInput'>{t("addCv")}</a>
+                        <input className='cvInput' type='file' placeholder={t("fileChoosen")} value={cv} onChange={cvDoubleMethod}></input>
+                        <a className='cvAlert'>{t("cvAlert")}</a>
+                    </div>
                 </div>
                 <div className='descriptionInputsCv'>
                     <a className='descriptionInputSpan'>{t("howCanWeHelpYou")}</a>
-                    <textarea className='descriptionInput' type="text" placeholder={t("describeYourProblem")} value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+                    <textarea className='descriptionInput' type="text" placeholder={t("describeYourProblem")} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                 </div>
-                
+
                 <div className='contactOptions'>
                     <div className='contactOption'>
-                        <input id='firstOption' type='radio' onClick={toggleFirstOption} value='firstOption' checked={option === 'firstOption'} onChange={(e) => setOption(e.target.value)}/>
+                        <input id='firstOption' type='radio' onClick={toggleFirstOption} value='firstOption' checked={option === 'firstOption'} onChange={(e) => setOption(e.target.value)} />
                         <label htmlFor='firstOption'>I confirm that I have read the information clause.</label>
                     </div>
                     <div className='contactOption'>
@@ -232,67 +255,67 @@ export const ContactCv = props =>{
             </div>
 
             <div className='inputDonePopup' id='inputDonePopup'>
-                    <div className='inputPopupButton'>
-                        <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
-                    </div>
-                    <div className='inputPopupSpans'>
-                        <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
-                        <a className='inputPopupHeader'>{t("contactHeaderSuccesfuly")}</a>
-                        <a className='inputPopupSpan'>{t("contactSpanSuccesfuly")}</a>
-                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanSuccesfuly")}</a>
-                    </div>
+                <div className='inputPopupButton'>
+                    <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                 </div>
-                <div className='inputDonePopup' id='inputErrorPopup'>
-                    <div className='inputPopupButton'>
-                        <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
-                    </div>
-                    <div className='inputPopupSpans'>
-                        <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
-                        <a className='inputPopupHeader'>{t("contactHeaderError")}</a>
-                        <a className='inputPopupSpan'>{t("contactSpanError")}</a>
-                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanError")}</a>
-                        <a className='inputPopupSecondSpan'>{t("contactThirdSpanError")}</a>
-                        <a className='inputPopupSecondSpan'>hello@sugartech.io && +905342843427</a>
-                    </div>
+                <div className='inputPopupSpans'>
+                    <img className='inputPopupImg' alt='' src={'./assets/img/inputPopupImg.svg'}></img>
+                    <a className='inputPopupHeader'>{t("contactHeaderSuccesfuly")}</a>
+                    <a className='inputPopupSpan'>{t("contactSpanSuccesfuly")}</a>
+                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                    <a className='inputPopupSecondSpan'>{t("contactSecondSpanSuccesfuly")}</a>
                 </div>
-                <div className='inputDonePopup' id='informationLoadingPopup'>
-                    <div className="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
-                    <div className='inputPopupButton'>
-                        <img className='informationLoadingButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
-                    </div>
-                    <div className='inputPopupSpans'>
-                        <a className='inputPopupHeader'>{t("contactHeaderLoading")}</a>
-                        <div className="loading-animation">
-                            <div className="loading-circle"></div>
-                            <div className="loading-circle"></div>
-                            <div className="loading-circle"></div>
-                            <div className="loading-circle"></div>
-                            <div className="loading-circle"></div>
-                            <div className="loading-circle"></div>
-                            <div className="loading-circle"></div>
-                            <div className="loading-circle"></div>
-                            <div className="loading-circle"></div>
-                        </div>
-                        <a className='inputPopupSpan'>{t("contactSpanLoading")}</a>
-                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanLoading")}</a>
-                    </div>
+            </div>
+            <div className='inputDonePopup' id='inputErrorPopup'>
+                <div className='inputPopupButton'>
+                    <img className='inputPopupCloseButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                 </div>
-                <div className='inputDonePopup' id='informationErrorPopup'>
-                    <div className="contactOverlay" id='contactOverlay' style={{zIndex: "1"}}></div>
-                    <div className='inputPopupButton'>
-                        <img className='informationErrorButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
-                    </div>
-                    <div className='inputPopupSpans'>
-                        <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
-                        <a className='inputPopupHeader'>{t("contactHeaderFail")}</a>
-                        <a className='inputPopupSpan'>{t("contactSpanFail")}</a>
-                        <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
-                        <a className='inputPopupSecondSpan'>{t("contactSecondSpanFail")}</a>
-                    </div>
+                <div className='inputPopupSpans'>
+                    <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
+                    <a className='inputPopupHeader'>{t("contactHeaderError")}</a>
+                    <a className='inputPopupSpan'>{t("contactSpanError")}</a>
+                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                    <a className='inputPopupSecondSpan'>{t("contactSecondSpanError")}</a>
+                    <a className='inputPopupSecondSpan'>{t("contactThirdSpanError")}</a>
+                    <a className='inputPopupSecondSpan'>hello@sugartech.io && +905342843427</a>
                 </div>
+            </div>
+            <div className='inputDonePopup' id='informationLoadingPopup'>
+                <div className="contactOverlay" id='contactOverlay' style={{ zIndex: "1" }}></div>
+                <div className='inputPopupButton'>
+                    <img className='informationLoadingButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                </div>
+                <div className='inputPopupSpans'>
+                    <a className='inputPopupHeader'>{t("contactHeaderLoading")}</a>
+                    <div className="loading-animation">
+                        <div className="loading-circle"></div>
+                        <div className="loading-circle"></div>
+                        <div className="loading-circle"></div>
+                        <div className="loading-circle"></div>
+                        <div className="loading-circle"></div>
+                        <div className="loading-circle"></div>
+                        <div className="loading-circle"></div>
+                        <div className="loading-circle"></div>
+                        <div className="loading-circle"></div>
+                    </div>
+                    <a className='inputPopupSpan'>{t("contactSpanLoading")}</a>
+                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                    <a className='inputPopupSecondSpan'>{t("contactSecondSpanLoading")}</a>
+                </div>
+            </div>
+            <div className='inputDonePopup' id='informationErrorPopup'>
+                <div className="contactOverlay" id='contactOverlay' style={{ zIndex: "1" }}></div>
+                <div className='inputPopupButton'>
+                    <img className='informationErrorButton' onClick={closePopup} alt='' src={'./assets/img/inputPopupButton.svg'}></img>
+                </div>
+                <div className='inputPopupSpans'>
+                    <img className='inputPopupImg' alt='' src={'./assets/img/inputErrorPopupImg.svg'}></img>
+                    <a className='inputPopupHeader'>{t("contactHeaderFail")}</a>
+                    <a className='inputPopupSpan'>{t("contactSpanFail")}</a>
+                    <img className='inputPopupLine' alt='' src={'./assets/img/contactPopupLine.svg'}></img>
+                    <a className='inputPopupSecondSpan'>{t("contactSecondSpanFail")}</a>
+                </div>
+            </div>
         </div>
     );
 }
