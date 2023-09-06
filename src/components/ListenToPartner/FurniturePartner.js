@@ -37,7 +37,7 @@ export const FurniturePartner = props => {
                     <a className='partnerSpan'>{t("tepeHomeComments")}</a>
                 </div>
                 <div className='partnerVideo'>
-                    <iframe className='partnerVideos' style={{ width: "90%", alignSelf: "center" }} src="https://www.youtube.com/embed/C-aoRasmfX8" frameBorder="0" allowFullScreen></iframe>
+                    <iframe className='partnerVideos' style={{ width: isMobile ? "90%" : "82%", alignSelf: "center" }} src="https://www.youtube.com/embed/C-aoRasmfX8" frameBorder="0" allowFullScreen></iframe>
                     <img className='partnerVideoShadow' id='deskopVideoShadow' alt='' src={'./assets/img/goalsShadow.svg'}></img>
                 </div>
             </div>

@@ -204,7 +204,7 @@ export const ContactCv = props => {
                     <div className='nameInputsCv'>
                         <a className='nameInputSpan'>{t("phone")}</a>
                         <PhoneInput
-                            className="nameEmailInputCv"
+                            className="nameEmailInputCv phone"
                             country={"tr"}
                             value={phone}
                             // onChange={phone => setPhone({ phone })}
@@ -238,11 +238,11 @@ export const ContactCv = props => {
 
                 <div className='contactOptions'>
                     <div className='contactOption'>
-                        <input id='firstOption' type='radio' onClick={toggleFirstOption} value='firstOption' checked={option === 'firstOption'} onChange={(e) => setOption(e.target.value)} />
+                        <input id='firstOption' type='radio' onClick={toggleFirstOption} value='firstOption' checked={option === 'firstOption'} onChange={(e) => setOption(e.target.value)} style={{ marginTop: "5px" }} />
                         <label htmlFor='firstOption'>I confirm that I have read the information clause.</label>
                     </div>
                     <div className='contactOption'>
-                        <input id='secondOption' type='radio' onClick={toggleSecondOption} value='secondOption' checked={option === 'secondOption'} onChange={(e) => setOption(e.target.value)} />
+                        <input id='secondOption' type='radio' onClick={toggleSecondOption} value='secondOption' checked={option === 'secondOption'} onChange={(e) => setOption(e.target.value)} style={{ marginTop: "5px" }} />
                         <label htmlFor='secondOption'>Lorem ipsum dolor sit amet consectetur. Potenti turpis aenean tempus aliquam metus at. Ultricies vel adipiscing volutpat erat.</label>
                     </div>
                 </div>

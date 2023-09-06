@@ -189,6 +189,9 @@
 }
 .mobile .mainSolutionHeaderLine{
     width: 20%;
+    height: 2.5px;
+    align-self: center;
+    object-fit: cover;
 }
 
 .mobile .mainSolutionHeader h1{

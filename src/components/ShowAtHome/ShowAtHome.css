@@ -53,7 +53,12 @@
     gap: 30px;
     width: 80%;
 }
-
+.showAtHomeButtons.joint{
+    width: 90%;
+}
+.showAtHomeButtons.metaverse{
+    width: 75%;
+}
 .showAtHomeSpanElements{
     display: flex;
     flex-direction: column;
@@ -62,7 +67,12 @@
     width: 82%;
     gap: 30px;
 }
-
+.showAtHomeSpanElements.metaverse{
+    width: 75%;
+}
+.showAtHomeSpanElements.joint{
+    width: 90%;
+}
 .showAtHomeButton1 a{
     width: 100%;
     height: 18px;

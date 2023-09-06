@@ -1,9 +1,30 @@
 import { ContactInputs } from '../ContactInput/ContactInputs';
+import { useState, useEffect } from 'react';
 import './Joint.css';
 import { useTranslation } from "react-i18next";
 
 export const Joint = props => {
     const { t } = useTranslation();
+
+    const [isTablet, setIsTablet] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 800);
+            setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     function closeContactArea() {
         let contactComponentDiv = document.querySelector(".contactComponentDiv");
         let sendMessageButton = document.querySelector(".sendMessageButton");
@@ -22,7 +43,7 @@ export const Joint = props => {
         })
     }
     return (
-        <div className='jointContainer'>
+        <div className='jointContainer' style={{ overflow: "hidden", flexDirection: isMobile && "column", gap: isMobile && "50px" }}>
             <div className='contactComponentDiv'>
                 <div className="cookiesOverlay" id='cookiesOverlay' style={{ zIndex: "1" }}></div>
                 <ContactInputs ></ContactInputs>
@@ -47,11 +68,11 @@ export const Joint = props => {
             }}></div>
             <div className='mainPageSmallFigure0 '></div>
             <div className='showAtHomeSpans'>
-                <div className='showAtHomeSpanElements'>
+                <div className='showAtHomeSpanElements joint'>
                     <a className='showAtHomeHeader'>{t("jointContainerHeader")}</a>
                     <a className='showAtHomeSpan'>{t("jointContainerSpan")}</a>
                 </div>
-                <div className='showAtHomeButtons'>
+                <div className='showAtHomeButtons joint'>
                     <a><button onClick={closeContactArea} className='showAtHomeButton1'><a>{t("getStarted")}</a></button></a>
                 </div>
             </div>

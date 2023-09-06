@@ -1,8 +1,29 @@
 import './ContactAddress.css';
+import { useEffect, useState } from 'react';
 
-export const ContactAddress = props =>{
-    return(
-        <div className='contactAddressContainer' style={{backgroundImage: 'URL("./assets/img/contactAddressBackground.webp")'}}>
+export const ContactAddress = props => {
+    const [isTablet, setIsTablet] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 800);
+            setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+
+    return (
+        <div className='contactAddressContainer' style={{ backgroundImage: 'URL("./assets/img/contactAddressBackground.webp")', backgroundSize: isMobile && "contain" }}>
             <div className='contactAddressInformation'>
                 <div className='contactAddress'>
                     <img className='contactLogo2' alt='' src={'./assets/img/headerLogo.svg'}></img>
@@ -32,7 +53,7 @@ export const ContactAddress = props =>{
                         </div>
                     </div>
                 </div>
-                <iframe 
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1638.2123790132218!2d28.919188399896342!3d41.00349589708704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1680472239444!5m2!1str!2str"
                     allowFullScreen=""
                     loading="lazy"
@@ -44,12 +65,12 @@ export const ContactAddress = props =>{
                 <img className='contactLogoMobile' alt='' src={'./assets/img/headerLogo.svg'}></img>
                 <div className='addressContainer'>
                     <div className='addressLogo'>
-                            <img alt="" src={'assets/img/addressVector.svg'}></img>
-                        </div>
-                        <div className='addressSpanMobile'>
-                            <a>Kazlıçeşme mah. 245. Sk.</a>
-                            <a>No:5 Zeytinburnu / İstanbul</a>
-                        </div>
+                        <img alt="" src={'assets/img/addressVector.svg'}></img>
+                    </div>
+                    <div className='addressSpanMobile'>
+                        <a>Kazlıçeşme mah. 245. Sk.</a>
+                        <a>No:5 Zeytinburnu / İstanbul</a>
+                    </div>
                 </div>
                 <div className='communicationAddress'>
                     <div className='phoneNumberContainer'>
@@ -70,12 +91,12 @@ export const ContactAddress = props =>{
                     </div>
                 </div>
             </div>
-            <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1638.2123790132218!2d28.919188399896342!3d41.00349589708704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1680472239444!5m2!1str!2str"
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="locationMobile">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1638.2123790132218!2d28.919188399896342!3d41.00349589708704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1680472239444!5m2!1str!2str"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="locationMobile">
             </iframe>
         </div>
     );

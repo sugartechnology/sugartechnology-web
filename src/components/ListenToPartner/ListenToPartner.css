@@ -156,7 +156,7 @@
 }
 .mobile .partnerLogo{
     width: 200px !important;
-  
+    align-self: flex-start;
 }
 .mobile .partnerSpan{
     font-size: 14px;
@@ -181,7 +181,10 @@
     width: 80%;
     height: 70vh;
 }
-
+.mobile .partnerVideos{
+    width: 90% !important;
+    align-self: center;
+}
 
 .mobile .partnerVideo{
     width: 100%;
@@ -198,6 +201,7 @@
 .mobile .spanBottomLogo{
     width: 37px;
     right: 5% !important;
+    top: 90px !important;
 }
 .mobile .partnersPageButtons{
     bottom: 30px;
@@ -205,8 +209,8 @@
 .mobile .partnerHeaders{
     height: auto;
     width: 94%;
-    flex-direction: column;
-    margin-top: 40px;
+    flex-direction: column-reverse;
+    margin-top: 20px;
 }
 
 .tablet .partnerHeaders{

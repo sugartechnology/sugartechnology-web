@@ -46,7 +46,7 @@
     opacity: 0.5;
 }
 .jointAboutImage{
-    width: 800px;
+    width: 60%;
     height: 400px;
     margin: auto;
 }
@@ -80,7 +80,9 @@
 
 
 .mobile .jointAboutElements{
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 30px;
+    height: 88%;
 }
 
 .mobile .jointAboutBubble{

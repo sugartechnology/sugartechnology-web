@@ -234,7 +234,9 @@
         font-size: 26px;
         position: relative;
         line-height: 40px;
-        margin-top: 30px;
+        padding-top: 30px;
+        text-align: center;
+        justify-content: center;
     }
     .sugarGoalsHeader{
         width: 120px;

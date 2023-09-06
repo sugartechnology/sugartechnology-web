@@ -114,7 +114,7 @@ input[type=file]::file-selector-button {
 .contactOption{
     display: flex;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start;
 }
 .contactOption img{
     width: 13px;
@@ -161,7 +161,7 @@ input[type="radio"]:checked{
     z-index: 999999;
     padding: 0px 20px;
 }
-  
+
 @keyframes spinner-animation {
     0% {
         transform: rotate(0deg);
@@ -221,6 +221,11 @@ input[type="radio"]:checked{
     border-radius: 8px;
     background: #FFFFFF;
     border: 1px solid #D2D6DA;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.mobile .nameEmailInputCv.phone{
+    width: 300px;
 }
 .cvInput{
     height: 4.5vh;
@@ -246,7 +251,8 @@ input[type="radio"]:checked{
 }
 
 .mobile .jobTitleSelect{
-    width: 310px;
+    width: 300px;
+    height: 4.5vh;
 }
 
 .mobile .contactCvRecaptcha{
@@ -282,5 +288,5 @@ input[type="radio"]:checked{
 }
 
 .mobile .cvInput{
-    height: 6vh;
+    height: 5.5vh;
 }

@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useState } from "react";
 import './Customers.css'
 import "swiper/css";
 import "swiper/css/bundle";
@@ -9,14 +10,32 @@ import { useTranslation } from "react-i18next";
 
 export const Customers = props => {
   const { t } = useTranslation();
+  const [isTablet, setIsTablet] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+      setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const swiperSettings = {
-    spaceBetween: 50,
+    spaceBetween: isMobile ? 20 : 50,
     cssMode: true,
     navigation: true,
     modules: [Navigation, Pagination, Mousewheel, Keyboard, Autoplay],
     className: "mySwiper",
-    slidesPerView: 5,
+    slidesPerView: isMobile ? 3.5 : 5,
     spaceBetween: 60,
     loop: true,
     autoplay: {

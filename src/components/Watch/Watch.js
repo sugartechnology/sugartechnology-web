@@ -30,14 +30,13 @@ export const Watch = props => {
                     <img alt='' src={'./assets/img/inputPopupButton.svg'}></img>
                 </div>
             </div>
-
             <div className='mainPageSmallFigure bright' style={{
                 width: '243px',
                 height: '233px',
                 left: '498px',
                 top: '136px'
             }}></div>
-            <div className='mainPageSmallFigure '></div>
+            <div className='mainPageSmallFigure ' style={{ left: "85%" }}></div>
             <div className='mainPageSmallFigure ' style={{
                 width: '629px',
                 height: '665px',
@@ -46,11 +45,11 @@ export const Watch = props => {
             }}></div>
             <div className='mainPageSmallFigure0 '></div>
             <div className='showAtHomeSpans'>
-                <div className='showAtHomeSpanElements'>
+                <div className='showAtHomeSpanElements metaverse'>
                     <a className='showAtHomeHeader'>{t("watchContainerHeader")}</a>
                     <a className='showAtHomeSpan'>{t("watchContainerSpan")} </a>
                 </div>
-                <div className='showAtHomeButtons'>
+                <div className='showAtHomeButtons metaverse'>
                     <button className='showAtHomeButton1' onClick={closeContactArea}><a>{t("getStarted")}</a></button>
                 </div>
             </div>

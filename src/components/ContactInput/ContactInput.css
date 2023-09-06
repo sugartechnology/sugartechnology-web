@@ -111,6 +111,11 @@
     background: #FFFFFF;
     border: 1px solid #D2D6DA;
 }
+.mobile .fullnameInput{
+    width: 300px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 .descriptionInputs{
     display: flex;
     flex-direction: column;

@@ -146,7 +146,10 @@
 
 @media screen and (max-width: 499px) {
     .contactAddressContainer{
-        height: 90vh;
-        justify-content: space-evenly;
+        height: 81vh;
+        justify-content: flex-start;
+        padding-top: 30px;
+        gap: 60px;
+        padding-bottom: 50px;
     }
 }
