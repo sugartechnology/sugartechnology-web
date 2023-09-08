@@ -63,7 +63,7 @@
 }
 
 .mainSolutionHeaderLine{
-    width: 40%;
+    width: 26%;
 }
 
 .popupSpans{
@@ -105,7 +105,7 @@
 .mainSolutionHeader h1{
     font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 38px;
     line-height: 52px;
     text-align: center;
     text-transform: capitalize;
