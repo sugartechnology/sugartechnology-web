@@ -72,7 +72,7 @@ export const ContactInputs = props => {
     }
 
     function submitForm() {
-        setError("");
+        // setError("");
         const form = {
             name: name,
             email: mail,
@@ -153,7 +153,7 @@ export const ContactInputs = props => {
                             className="nameEmailInputCv phone"
                             country={"tr"}
                             value={phone}
-                            // onChange={phone => setPhone({ phone })}
+                            onChange={phone => setPhone(phone)}
                             placeholder='Phone Number'
                             containerStyle={{
                                 borderRadius: "8px",
