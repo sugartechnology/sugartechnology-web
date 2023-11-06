@@ -11,7 +11,7 @@ export const WhiteGoodsPartner = props =>{
                 <img className='redBackgroundCircle2' alt='' src={'./assets/img/circle2.svg'}></img>
                 <img className='redBackgroundCircle3' alt='' src={'./assets/img/circle3.svg'}></img>
                 <div className='commentSpans'>
-                    <a className='firstCommentSpan' style={{width: "70%"}}>{t("listenToPartnerHeader")}</a>
+                    <a className='firstCommentSpan' style={{width: "70%"}}>{t("whiteGoodsPartnerHead")}</a>
                     <a className='secondCommentSpan'>“</a>
                     <a className='thirdCommentSpan'>{t("whiteGoodsPartnerSpan")}</a>
                 </div>

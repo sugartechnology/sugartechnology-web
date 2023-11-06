@@ -352,7 +352,8 @@
     "contactSpanFail": "Bei der Übermittlung Ihrer Nachricht ist ein Problem aufgetreten.",
     "contactSecondSpanFail": "Bitte stellen Sie sicher, dass Sie alle Informationen eingegeben haben.",
 
-    "whiteGoodsPartnerSpan": "Vestel is the first company in its vertical to implement the In-Home Preview technology. We have enabled our customers to experience our products in their homes through high-detail digitalization. We have taken the 360° product experience to the next level with animations and hotspots.",
+    "whiteGoodsPartnerHead":"30 % unserer Besucher erleben AR-Technologie.",
+    "whiteGoodsPartnerSpan": "Vestel ist das erste Unternehmen in seiner Branche, das die In-Home Preview-Technologie einsetzt. Wir haben es unseren Kunden ermöglicht, unsere Produkte durch eine hochdetaillierte Digitalisierung in ihrem Zuhause zu erleben. Wir haben das 360°-Produkterlebnis mit Animationen und Hotspots auf die nächste Stufe gehoben.",
     "declineButton": "Nein, danke",
     "acceptButton": "Akzeptieren",
     "joinNow": "Jetzt beitreten",
