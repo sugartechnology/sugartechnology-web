@@ -55,7 +55,7 @@ export const CustomerComments = (props) => {
       companyLogo: 'assets/img/tepe-home-min.svg'
     },
     {
-      trustedByMillionsOfCompany: 'listenToPartnerHeader',
+      trustedByMillionsOfCompany: 'whiteGoodsPartnerHead',
       commentSpan: 'whiteGoodsPartnerSpan',
       commentHeader: 'Marketing Communications&Retail Marketing Executive',
       commentAuthor: 'Buket Kaplan',
