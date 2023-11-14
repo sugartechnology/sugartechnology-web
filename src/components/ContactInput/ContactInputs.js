@@ -77,7 +77,7 @@ export const ContactInputs = props => {
             name: name,
             email: mail,
             message: message,
-            phone: phone,
+            phoneNumber: phone,
         }
         sendFormData(form);
     }
