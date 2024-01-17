@@ -35,24 +35,24 @@ i18n
     fallbackLng: "tr",
     resources: {
       en: {
-        translation: require("../src/locales/en.json")
+        translation: require("../src/locales/en.json"),
       },
       tr: {
-        translation: require("../src/locales/tr.json")
+        translation: require("../src/locales/tr.json"),
       },
       fr: {
-        translation: require("../src/locales/fr.json")
+        translation: require("../src/locales/fr.json"),
       },
       de: {
-        translation: require("../src/locales/de.json")
+        translation: require("../src/locales/de.json"),
       },
       it: {
-        translation: require("../src/locales/it.json")
+        translation: require("../src/locales/it.json"),
       },
       ar: {
-        translation: require("../src/locales/ar.json")
-      }
-    }
+        translation: require("../src/locales/ar.json"),
+      },
+    },
   });
 
 function App() {
