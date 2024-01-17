@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import './ArDetails.css';
 import { useTranslation } from "react-i18next";
+import './ArDetails.css';
 
 export const WhiteGoodsDetails = props => {
     const { t } = useTranslation();
@@ -17,8 +17,10 @@ export const WhiteGoodsDetails = props => {
     return (
         <div className='arDetailsContainer'>
             <div className='arDetailsSpans'>
-                <a className='arDetailsHeader'>{t("ArDetailsWhiteGoods")}</a>
-                <a className='arDetailsSpan'>{t("arDetailsSpanWhiteGoods")}</a>
+                <h2 className='arDetailsHeader'>{t("ArDetailsWhiteGoods")}</h2>
+                <p className='arDetailsSpan'>{t("arDetailsSpanWhiteGoods1")}</p>
+                <p className='arDetailsSpan'>{t("arDetailsSpanWhiteGoods2")}</p>
+                <p className='arDetailsSpan'>{t("arDetailsSpanWhiteGoods3")}</p>
                 <div className='arDetailsModelViewer'>
                     <sugar-model-viewer class="modelViewer" id="sugar" style={{ width: "100%", height: "100%", background: "white", margin: "auto", display: "block", marginBottom: "60px", paddingBottom: "60px" }} ar="" shadow-intensity="1" show-model-group
                         ar-scale="fixed" show-option="" camera-controls="" ar-status="not-presenting" camera-down-lock="true" camera-orbit="15deg 55deg auto" template="advanced" showDimension="true"

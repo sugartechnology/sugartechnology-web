@@ -1,5 +1,5 @@
+import { useTranslation } from "react-i18next";
 import './WhoSugar.css';
-import { useTranslation} from "react-i18next";
 
 export const WhoSugar = props =>{
     const {t} = useTranslation();
@@ -15,7 +15,22 @@ export const WhoSugar = props =>{
             </div>
             <div className='whoSugarSpans'>
                 <a className='whoSugarHeader'>{t("whoIsSugar")}</a>
-                <a className='whoSugarSpan'>{t("whoSugarSpan")}</a>
+                <a className='whoSugarSpan'>{t("whoSugarSpan1")}</a>
+                <a className='whoSugarSpan'>{t("whoSugarSpan2")}</a>
+                <div className="whatSugarProvidesContainer">
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides1') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides2') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides3') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides4') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides5') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides6') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides7') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides8') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides9') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides10') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides11') }</li>
+                    <li className="whatSugarProvidesList">{ t('whatSugarProvides12') }</li>
+                </div>
             </div>
             <div className='whoSugarLogos'>
                 <img className='whoSugarLogo1' alt='' src={'./assets/img/whoSugarImage.svg'}></img>

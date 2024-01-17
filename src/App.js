@@ -1,32 +1,32 @@
-import './App.css';
-import { Header } from './components/Header/Header';
-import { Footer } from './components/Footer/Footer';
-import { Contact } from './components/Contact/Contact';
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import { Route, Routes} from 'react-router-dom';
-import { MainPage } from './pages/main/MainPage';
-import { AboutUs } from './pages/aboutUs/AboutUs';
-import { ProductAr } from './pages/products/ProductAr';
-import { ProductMeta } from './pages/products/ProductMeta';
-import { ProductJoint } from './pages/products/ProductJoint';
-import { ProductWatch } from './pages/products/ProductWatch';
-import { ProductShoes } from './pages/products/ProductShoes';
-import { ProductClooth } from './pages/products/ProductClooth';
-import { ProductCarpet } from './pages/products/ProductCarpet';
-import { ProductTable } from './pages/products/ProductTable';
-import { ProductBathroom } from './pages/products/ProductBathroom';
-import { ProductWhiteGoods } from './pages/products/ProductWhiteGoods';
-import { ProductDecoration } from './pages/products/ProductDecoration';
-import { ProductTextile } from './pages/products/ProductTextile';
-import { Blog1 } from './pages/blogs/Blog1';
-import { Blogs } from './pages/blogs/Blogs';
-import { ContactUs } from './pages/contactUs/ContactUs';
-import { ContactUsCv } from './pages/contactUs/ContactUsCv';
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from "react-i18next";
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import { Contact } from './components/Contact/Contact';
+import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
+import { AboutUs } from './pages/aboutUs/AboutUs';
+import { Blog1 } from './pages/blogs/Blog1';
 import { Blog2 } from './pages/blogs/Blog2';
 import { Blog3 } from './pages/blogs/Blog3';
 import { Blog4 } from './pages/blogs/Blog4';
+import { Blogs } from './pages/blogs/Blogs';
+import { ContactUs } from './pages/contactUs/ContactUs';
+import { ContactUsCv } from './pages/contactUs/ContactUsCv';
+import { MainPage } from './pages/main/MainPage';
+import { ProductAr } from './pages/products/ProductAr';
+import { ProductBathroom } from './pages/products/ProductBathroom';
+import { ProductCarpet } from './pages/products/ProductCarpet';
+import { ProductClooth } from './pages/products/ProductClooth';
+import { ProductDecoration } from './pages/products/ProductDecoration';
+import { ProductJoint } from './pages/products/ProductJoint';
+import { ProductMeta } from './pages/products/ProductMeta';
+import { ProductShoes } from './pages/products/ProductShoes';
+import { ProductTable } from './pages/products/ProductTable';
+import { ProductTextile } from './pages/products/ProductTextile';
+import { ProductWatch } from './pages/products/ProductWatch';
+import { ProductWhiteGoods } from './pages/products/ProductWhiteGoods';
 
 i18n
   .use(initReactI18next)
@@ -84,7 +84,7 @@ function App() {
           </Routes>
           <Contact></Contact>
           <Footer></Footer>
-        </div>  
+        </div>
   );
 }
 
