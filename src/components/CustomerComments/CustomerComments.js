@@ -1,6 +1,6 @@
-import './CustomerComments.css';
-import { useTranslation } from "react-i18next";
 import React, { useState } from 'react';
+import { useTranslation } from "react-i18next";
+import './CustomerComments.css';
 
 export const CustomerComments = (props) => {
   const { t } = useTranslation();
@@ -57,7 +57,7 @@ export const CustomerComments = (props) => {
     {
       trustedByMillionsOfCompany: 'whiteGoodsPartnerHead',
       commentSpan: 'whiteGoodsPartnerSpan',
-      commentHeader: 'Marketing Communications&Retail Marketing Executive',
+      commentHeader: 'Marketing Communications & Retail Marketing Executive',
       commentAuthor: 'Buket Kaplan',
       customerPhoto: 'assets/img/buket_kaplan_vestel.jpeg',
       companyLogo: './assets/img/vestel-logo-min.svg'

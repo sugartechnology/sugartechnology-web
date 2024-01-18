@@ -4,6 +4,8 @@
     padding: 50px 0px;
     margin-top: 60px;
     position: relative;
+    align-items: center;
+    row-gap: 10%;
 }
 .flyingElements1{
     display: flex;
@@ -16,43 +18,44 @@
 .flyingElements1 img{
     width: 70%;
     position: relative;
-    z-index: 1;
+    z-index: 999;
 }
 .flyingElements1 a{
     height: 40%;
     position: absolute;
 }
+
 .whoSugarSpans{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 75%;
     height: 65%;
     justify-content: center;
-    padding: 80px 0px;
     z-index: 1;
 }
 .mobile .whoSugarSpans{
     padding-top: 180px;
 }
+
 .whoSugarHeader{
+    width: 65%;
+    margin-top: 5vh;
     font-style: normal;
     font-weight: 700;
     font-size: 44px;
-    line-height: 95px;
-    text-align: justify;
-    text-transform: capitalize;
+    text-align: center;
     color: #000000;
     position: relative;
 }
 .whoSugarSpan{
+    margin: 1vh 0vw;
     width: 63%;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 23px;
     text-align: justify;
-    text-transform: capitalize;
     color: #000000;
 }
 .whoSugarLogos{
@@ -71,6 +74,10 @@
     left: 0px;
     top: 0px;
     width: 500px;
+}
+
+.whatSugarProvidesContainer {
+    width: 60%;
 }
 
 .whoSugarImg1{
@@ -135,6 +142,11 @@
     top: 0px;
 }
 
+.tablet .whoSugarHeader{
+    margin-top: 18vh;
+    line-height: normal;
+}
+
 /* Reeponsive Mobile Settings */
 
 .mobile .whoSugarImg1{
@@ -165,7 +177,6 @@
     line-height: 20px;
     width: 90%;
 }
-
 
 .mobile .flyingElements1{
     width: 100%;

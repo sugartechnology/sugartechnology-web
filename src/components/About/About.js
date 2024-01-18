@@ -1,5 +1,5 @@
+import { useTranslation } from "react-i18next";
 import './About.css';
-import { useTranslation} from "react-i18next";
 
 export const About = props =>{
     const {t} = useTranslation();
@@ -7,10 +7,9 @@ export const About = props =>{
         <div>
         <div className='aboutContainer'>
             <div className='aboutSpans'>
-                <a className='aboutSpansHeader'>{t("aboutSugar")}</a>
-                <a className='aboutSpan'>{t("aboutSugarSpan1")}</a>
-
-                <a className='aboutSpan'>{t("aboutSugarSpan2")}</a>
+                <h2 className='aboutSpansHeader'>{t("aboutSugar")}</h2>
+                <p className='aboutSpan'>{t("aboutSugarSpan1")}</p>
+                <p className='aboutSpan'>{t("aboutSugarSpan2")}</p>
 
                 <a href='/aboutUs'className='aboutButton'>{t("aboutButton")}</a>
             </div>

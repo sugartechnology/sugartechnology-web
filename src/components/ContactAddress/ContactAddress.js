@@ -1,5 +1,5 @@
-import './ContactAddress.css';
 import { useEffect, useState } from 'react';
+import './ContactAddress.css';
 
 export const ContactAddress = props => {
     const [isTablet, setIsTablet] = useState(false);
@@ -32,7 +32,7 @@ export const ContactAddress = props => {
                             <img alt="" src={'assets/img/addressVector.svg'}></img>
                         </div>
                         <div className='addressSpan'>
-                            <a>Kazlıçeşme mah. 245. Sk.</a>
+                            <a>Kazlıçeşme Mah. 245. Sk.</a>
                             <a>No:5 Zeytinburnu / İstanbul</a>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ export const ContactAddress = props => {
                         <img alt="" src={'assets/img/addressVector.svg'}></img>
                     </div>
                     <div className='addressSpanMobile'>
-                        <a>Kazlıçeşme mah. 245. Sk.</a>
+                        <a>Kazlıçeşme Mah. 245. Sk.</a>
                         <a>No:5 Zeytinburnu / İstanbul</a>
                     </div>
                 </div>

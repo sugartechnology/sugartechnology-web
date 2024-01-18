@@ -1,5 +1,5 @@
+import { useTranslation } from "react-i18next";
 import './ListenToPartner.css';
-import { useTranslation} from "react-i18next";
 
 export const WhiteGoodsPartner = props =>{
     const {t} = useTranslation();
@@ -18,7 +18,7 @@ export const WhiteGoodsPartner = props =>{
                 <div className='commentCustomer'>
                     <img className='customerPhoto' alt='' src={'assets/img/buket_kaplan_vestel.jpeg'}></img>
                     <h1>Buket Kaplan</h1>
-                    <a>Marketing Communications&Retail Marketing Executive</a>
+                    <a>Marketing Communications & Retail Marketing Executive</a>
                     <img className='partnerCompanyLogo' alt='' src={'./assets/img/vestel-logo-min.svg'}></img>
                 </div>
             </div>
