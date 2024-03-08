@@ -1,354 +1,361 @@
 {
-    "home": "الصفحة الرئيسية",
-    "productServices": "المنتجات / الخدمات",
-    "aboutUs": "من نحن",
-    "blog": "المدونة",
-    "contactUs": "اتصل بنا",
-    "mediaCenter": "مركز الإعلام",
-    "readMore": "قراءة المزيد",
-    "aboutSugar": "عن Sugar...",
-    "homePageCustomersSpan": "يعمل Sugar مع أفضل وأشهر الأسماء في مجال صناعاتهم",
-    "companyCustomer": "عميل الشركة",
-    "trustedByMillionsOfCompany": "يثق بها ملايين الشركات",
-    "pages": "الصفحات",
-    "utilityPages": "صفحات الأدوات",
-    "askYourQuestions":"اسأل أسئلتك?",
-    "enterYourNameAndEmail": "أدخل اسمك وبريدك الإلكتروني وأرسل رسالتك إلينا.",
-    "name": "الاسم",
-    "email": "البريد الإلكتروني",
-    "message": "الرسالة",
-    "whoIsSugar": "من هو Sugar؟",
-    "sugarTeam": "فريق Sugar...",
-    "productManagmentHead": "المدير التنفيذي",
-    "softwareDeliveryHead": "الرئيس التنفيذي للتكنولوجيا",
-    "cgiTeamLeader": "الرئيس التنفيذي للعمليات",
-    "whatsNew": "ما الجديد؟",
-    "sectoralSolution": "حلول قطاعية",
-    "solutionHeader1": "هل أنت بائع أثاث؟",
-    "solutionHeader2": "هل أنت مهندس معماري؟",
-    "solutionHeader3": "هل أنت بائع أحذية؟",
-    "solutionHeader4": "هل تريد Metaverse؟",
-    "weHaveGoodSolutionForYou": "لدينا حل جيد لك.",
-    "getStarted": "البدء",
-    "usecase": "يُرجى مراجعة الحالة الاستخدامية.",
-    "ArDetails": "مع تقنية 'انظر في منزلك':",
-    "arDetailsSpan": "يمكن للزوار دمج المنتجات مع منتجات أخرى مختلفة وتخصيص لونها وملمسها. يمكن للزائر تجربة المنتج المخصص في مساحة العيش بأحجامه الحقيقية في غضون ثوانٍ دون الحاجة إلى تنزيل التطبيق. يمكن أيضًا تجربة الميزات الإضافية مثل فتح الغطاء والتوسعة والإضاءة للزائر. يتم زيادة تصنيف محرك البحث (SEO) بناءً على زيادة التفاعل مع العملاء وزمن البقاء على الصفحة. يؤدي ذلك أيضًا إلى زيادة معدل التحويل إلى مبيعات ورضا العملاء. يمكن إكمال التثبيت في الفترة بين 30 دقيقة ونصف يوم ولا يزيد عن ذلك، ولا يتطلب تكاليف إضافية لفرق البرمجة والمنتجات في الشركة.",
-    "arDetails": "تفاصيل AR",
-    "changeMaterial": "تغيير المواد",
-    "arSeeHome": "AR ورؤية المنزل",
-    "joint": "مشترك",
-    "listenToPartnerHeader": "استمع إلى شركائنا وعملائنا حول تقنية SugAR!",
-    "dailyAndProductBasedExperienceReports": "تقارير الخبرة اليومية والمنتجات المعتمدة على الخبرة.",
-    "experienceReportsSpan": "بعد التكيف مع التقنية ، يمكنك قياس الأداء باستخدام أدوات القياس وتحديد استراتيجيات جديدة. مع شاشات تقارير Sugar:",
-    "reportsList1": "أرقام تجارب ٣D و AR شهريًا على حدة",
-    "reportsList2": "تجارب ٣D و AR اليومية",
-    "reportsList3": "تجارب ٣D و AR المعتمدة على المنتج",
-    "reportsList4": "تفضيلات النسيج واللون",
-    "reportsList5": "مسح رمز الاستجابة السريعة (QR code)",
-    "productStatisticsHeader": "زيادة في المبيعات والبقاء على الصفحة.",
-    "productStatisticsSpan1": "زيادة معدل الإضافة إلى عربة التسوق بمقدار ٣ مرات باستخدام تقنية ٣D و AR. استخدمت شركة Made.com كحالة دراسية.",
-    "productStatisticsSpan2": "تقليل معدل ترك الزائرين لعربة التسوق وزيادة بقائهم على الصفحة. تقليل إرجاع المنتجات.",
-    "sugarBrandsHeader": "أفضل العلامات التجارية تستخدم تقنية Sugar",
-    "metaverseProject": "مشاريع متعددة الأبعاد",
-    "showAtHome": "عرض في المنزل / كحالة دراسية",
-    "metaverse": "متعدد الأبعاد",
-    "vton": "VTON",
-    "showFurniture": "الأثاث ، انظر في المنزل",
-    "createProduct": "إنشاء منتجك الخاص / مشاركة",
-    "dressWatch": "تلبيس الساعات",
-    "dressShoe": "تلبيس الأحذية",
-    "dressClooth": "تلبيس الملابس",
-    "blogPageHeader2": "الأشياء التي ستراها أثناء قراءة هذه المدونة:",
-    "youAlsoLike": "ستحب أيضا...",
-    "shareBlog": "هل أنت مستعد لمشاركة مدونتك؟",
-    "contactPageSpan": "لأية أسئلة إضافية، بما في ذلك فرص الشراكة، يرجى إرسال بريد إلكتروني إلى Sugar@sugartech.io أو الاتصال باستخدام نموذج الاتصال الخاص بنا.",
-    "fullName": "الاسم الكامل",
-    "howCanWeHelpYou": "كيف يمكننا مساعدتك؟",
-    "describeYourProblem": "صف مشكلتك في ما لا يقل عن 250 حرفًا",
-    "sendMessage": "إرسال رسالة",
-    "backToHome": "العودة إلى الصفحة الرئيسية",
-    "goalsHeader": "ما حققناه وخططنا المستقبلية",
-    "goals1Header": "اليوم",
-    "goals1Span": "نقدم تقنيات ٣D المكون و AR في فئات الأثاث والأجهزة البيضاء والأحذية والملابس.",
-    "goals2Header": "قريبًا جدًا",
-    "goals2Span": "سنكون مكتبة تحتوي على آلاف المنتجات من العلامات التجارية العالمية.",
-    "goals3Header": "قريبًا",
-    "goals3Span": "سنمكِّن الشركات من نشر نماذجها ثلاثية الأبعاد على منصات مثل Google و Snapchat و Instagram و TikTok بنقرة واحدة.",
-    "goals4Header": "التالي",
-    "goals4Span": "سنكون علامة تجارية عالمية توفر منتجاتٍ وتجربة منتجات في الميتافيرس.",
-    "aboutSugarSpan1": "Sugar Technology، هي شركة تكنولوجيا متخصصة في مجالات الواقع المعزز والواقع الافتراضي والذكاء الاصطناعي والتوأم الرقمي. تسمح Sugar بتوفير تجربة منتج تفاعلية ومشوقة لعملاء الشركات من خلال التقنيات التي تقدمها. منذ عام 2019 ، قامت Sugar بإنشاء توائم رقمية لأكثر من 22,000 منتج ، وضمان توصيل هذه النماذج ثلاثية الأبعاد إلى الجماهير المستهدفة بتنسيقات مناسبة للتجارة الإلكترونية ووسائل التواصل الاجتماعي وبرامج CAD و BIM لعملائها.",
-    "aboutSugarSpan2": "سوغار، منذ عام 2019 وحتى اليوم، قامت بإنشاء نماذج ثلاثية الأبعاد لأكثر من 22,000 منتج، وقامت بتوصيل هذه النماذج للجمهور المستهدف في مجالات التجارة الإلكترونية ووسائل التواصل الاجتماعي وبرامج CAD و BIM بتنسيقات مناسبة.",
-
-    "blogGraphHeader": "طريقة سهلة وسريعة لاختيار الأثاث",
-    "blogGraphSpan": "اتخاذ القرار هو واحد من أصعب الأمور في العالم. والسبب في ذلك هو أن نتائج القرارات التي نتخذها غالبًا ما تكون غير مؤكدة وهذا يجعل عملية اتخاذ القرار صعبة حقًا. على سبيل المثال ، في اختيار الأثاث للمنزل الجديد ، يجب أن يكون الأثاث المختار متناسقًا مع بقية الأشياء في المنزل. يمكننا أن نذكر أمثلة مثل الستائر والسجاد والطاولات والإضاءة.",
-    "blogGraph2Header": "لماذا يجب أن تكون لمنتجاتي نماذج ثلاثية الأبعاد ذات جودة عالية؟",
-    "blogGraph2Span": "منذ وقت طويل - حوالي 4 سنوات - نقدم خدمات الواقع المعزز والعرض والرسم ثلاثي الأبعاد لعملائنا في مجالات الكتالوج. عند تقديم هذه الخدمة ، نصل أحيانًا إلى جزء يحدد مصير العقود.",
-    "blogGraph3Header": "لماذا نحن في الوقت المناسب لتقنيات الواقع المعزز وثلاثي الأبعاد؟",
-    "blogGraph3Span": "عندما نتحدث مع عملائنا عن حلنا للواقع المعزز ، نحصل أحيانًا على تعليق مشابه لما يلي.",
-    "blogGraph4Header": "ما هي تقنية الواقع المعزز / المعاينة في المنزل وكيفية استخدامها؟",
-    
-    "paragraphListSpan1": "كما أنا واحدة من أولئك الذين يجدون أنفسهم في هذا الموقف، أتمنى لو يمكنني أن أرى كيف ستبدو الأثاث الذي سأشتريه في منزلي قبل أن أشتريه. على الأقل، أتمنى أن يكون لدي خيار مثل هذا. في هذه المقالة، سأتحدث عن تطبيق يوفر حلاً لهذه المشكلة.",
-    "paragraphListSpan2": "أولاً وقبل كل شيء، اسم التطبيق هو Rapid Render. إنه تطبيق يمكنه توفير راحة كبيرة لك في تصور التصميم الذي تحلم به للغرفة أو المنزل. كل ما تحتاجه هو معرفة أبعاد الغرفة أو المنزل الخاص بك. عند بدء التطبيق، ستظهر لك أولاً صفحة للرسم التخطيطي...",
-    "paragraphListSpan3": "إن الرسم هنا ليس أمرًا صعبًا على الإطلاق. كل ما عليك فعله هو رسم خط، والتطبيق سيساعدك بالفعل في ذلك. في الخطوة التالية، يمكنك وضع المنتجات من المتاجر المشتركة في الزوايا والجدران وبأي طريقة تريدها في منزلك.",
-    "paragraphListSpan4": "والأهم من ذلك، تستغرق هذه الخطوة فقط 5 دقائق، طبعاً إذا كنت قد اتخذت قرارًا بشأن المنتج الذي ترغب في شرائه 😊 ثم بعد ذلك، يمكنك إرسال طلب للخادم للحصول على صورة أكثر واقعية لداخل المنزل. إذا كنت تحب التفاصيل، يمكنني أن أعرض لك تصميمًا لغرفة قمت بإنشائها بنفسي كمثال. استغرقت رسم الغرفة دقيقة واحدة، ووضع المنتجات استغرق 5 دقائق، واختيار الستائر والأرضيات استغرق 3 دقائق.",
-    "paragraphAuthorSpan": "بدأت في البرمجة عندما كنت مولعًا بها. حتى الآن، قمت بالعمل في مجالات مختلفة على الكمبيوتر بخلاف البرمجة، مثل الرسم ثنائي الأبعاد وتصميم نماذج ثلاثية الأبعاد واستخدام Arduino و Raspberry Pi وتطوير ألعاب واجهات SQL وتطوير تطبيقات Windows Form.",
-    
-    
-    "paragraphList2Span1": "كل شركة تحتاج إلى كتالوج لتصور منتجاتها. هذا هو الاحتياج التقليدي الذي يواجهه العديد من الشركات. يمكنك بناء النموذج المفهومي للمنتج بشكل فيزيائي والتقاط صور عالية الجودة في الاستوديو. أو يمكنك تصوير المنتجات بشكل منفصل وإنشاء صورة ناجحة باستخدام القص وبرنامج فوتوشوب وبعض الظلال. يمكنك أيضًا الحصول على استخدام مكرر بتكلفة أقل.",
-    "paragraphList2Span2": "ولكن الآن، يجب أن يتبع التسويق طرقًا مختلفة بسبب الفيروسات والعوامل الأخرى. الشركات الرائدة في مجال التجارة الإلكترونية ووسائل التواصل الاجتماعي يتوقعون أن تتفاعل مع الحياة بسرعة مثل كائن حي. يرغبون في رؤية مشاركات للعلامات التجارية التي يتابعونها وفقًا لمعنى وأهمية اليوم. لتلبية هذه الاحتياجات الجديدة، يجب عليك تصور منتجاتك بألوان وملمس مختلفين وحتى ضمن سياقات مختلفة.",
-    "paragraphList2Span3Part1": "تمت مشاركة مقال جميل حول هذا الموضوع في",
-    "paragraphList2Span3Part2": "الاستطلاع",
-    "paragraphList2Span3Part3": "هنا، وتناول استراتيجية مرئية مختلفة قامت بها Netflix لمستخدميها لمسلسل Stranger Things وفقًا لعادات المشاهدة. إذا افترضنا أن وسائل التواصل الاجتماعي والتجارة الإلكترونية هما بقالتنا في العصر الحالي، فإنه يجب أن تجذب المستخدم لتحقيق ذلك،",
-    "paragraphList2Span4": "فكيف يمكن تبني هذه الاستراتيجية؟ إنه من الواضح أن هذا النهج لن يعمل بشكل جيد باستخدام الطرق التقليدية التي تتطلب إنشاء استوديو وإنتاج المنتج بألوان وملمس جديدين وتصويره وتكاليف أخرى. ولهذا السبب، ينتشر الآن استخدام التصور المرئي لإنشاء النماذج المفهومية بين العلامات التجارية الكبرى في تركيا.",
-    "paragraphList2Span5": "نحن نقدم خدمة التصور المرئي وأيضًا تطبيق Rapid Render الخاص بنا الذي يشمل ميزات المعاينة والسحابة وغيرها. يمكن لـ Rapid Render إنجاز التصورات الأكثر تعقيدًا في غضون 5 دقائق باستخدام تقنية السحابة في الخلفية، ونحن نوفر لعملائنا أيضًا المعرفة التي توضح أن النماذج ثلاثية الأبعاد المستخدمة في عملية التصور يمكن استخدامها في مجالات متعددة مثل الواقع المعزز وتقنية الواقع المعزز في بحث Google وغيرها.",
-    "paragraphList2Span6": "بناء النماذج ثلاثية الأبعاد لمنتجاتنا وتخزينها بشكل مناسب للاستخدام المتكرر يتيح لشركاتنا توفير تكاليف في العديد من المجالات وفرصة مواكبة التغييرات التكنولوجية بشكل سريع.",
-    "paragraphList2Span7": "نحن نقدم خدمة المسح ثلاثي الأبعاد عالي الجودة لعملائنا ونوضح لشركاءنا أن النماذج ثلاثية الأبعاد عالية الجودة هي طريقة مهمة للتواصل مع المستخدم النهائي ونؤكد دائمًا أهمية العمل مع نماذج عالية الجودة.",
-    "paragraphList2Span8": "بعد عمليات المسح التي قمنا بها ، أشارك هنا بعض الأمثلة من نماذج ثلاثية الأبعاد التي تم الحصول عليها. سنواصل مشاركة هذا الاستخدام في المجالات التي يمكن استخدام النماذج ثلاثية الأبعاد فيها من خلال الكتابات التالية. البحث بواسطة الواقع المعزز - كتالوج جوجل للتجارة الإلكترونية ووسائل التواصل الاجتماعي لتقديم تقديمات.",
-
-    "a": "Bu kısım Çevirisi yapılacak",
-
-    "paragraphHeader3": "Bu teknolojiyi 1990 yada 2000 lerde bir seminerde denedim...",
-    "blogParagraph3Span1": "Satış kariyerimin ilk günlerinde bunun bir anı paylaşımı olduğunu düşünürken, tecrübe kazandığım 4-5 yıl sonunda, anısını aktarmaktan ziyade müşterimizin, Artırılmış Gerçekliğin kullanılabilirliği sorgulayıp, teknolojinin kullanımının güncel veriler ile desteklenerek anlatılmasını istedğini farkettim.",
-    "blogParagraph3Span2": "Özet olarak müşterimiz şunları sormak istiyordu:",
-    "paragraphList3Span3": "Bu teknoloji uzun zamandır var, Teknoloji de oyun değiştirici yeni bir gelişme var mı?",
-    "paragraphList3Span4": "Uzun zamandır olmasına rağmen insanlar kullanmıyor ... Neden yatırım yapmalıyım ?",
-    "blogParagraph3Span5": "Bu serinin sonunda marka yetkililerinin AR ve dijitalleşme teknolojilerine geçiş için roadmaplerinin oluşmasına yardımcı olabilmeyi umuyorum. İlk olarak üzerine en çok yazı yazılan konu ile başlayacak AR ve Vr farklarına kısaca değineceğim.",
-    "blogParagraph3Span6": "AR Nedir ? VR ile AR arasındaki farklar nedir ?",
-    "blogParagraph3Span7": "İngilizce açılımı Augmented Reality olan AR teknolojisi, gerçek hayattaki bir alanı yada objeyi tanır ve tanıdığı gerçek alanlara dijital içerik koymamızı sağlar. Tespit edilen içerik bazen bir insan vucüdu, insan saçı, bazen sadece zemin yada gökyüzünün kendisi olabilir.",
-    "blogParagraph3Span8": "AR teknolojisinin çalışması yapay zeka ve sensör desteği ile mümkün olur VR ile kaşılaştırıldığında ihtiyaç duyduğu Yapay Zeka ve sensör isterleri çok olsada, Akıllı Telefonlarımız hali hazırda bunları sağlayan cihazlar olduğu için teknolojinin yaygınlaşmasında AR isterlerine bağlı engel bulunmamaktadır.",
-    "blogParagraph3Span9": "VR ise Virtual Reality- Sanal Gerçeklik anlamına gelip bir gözlük yada benzeri teknoloji tarafından gerçek hayattan izole edilmemiz ve devamında sanal bir ortamda dijital içerikler ile etkileşime girdiğimiz teknolojidir. AR ile kritik farklar izole olmak, akıllı gözlük gibi günlük rutin kullanımda hayatımızda olmayan bir cihaz kullanma zorunluluğudur. Telefonlarımızı cardboard ile VR gözlüğe çevirebiliyor ellerimizi de dongle olarak konumlandırabilsekte, VR cihaz yatırımı daha mantıklı bir opsiyon olarak tercih edilmektedir.",
-    "blogParagraph3Span10": "AR ve VR farkını daha detaylı işleyeceğimiz her iki teknolojiyi de yatırım yapan markalar ve tüketiciye yatkınlığını irdeleyeceğimiz yeni blog yazımızı da en kısa sürede yayınlayacağız, fakat genel bir karşılaştırma yapıp konuyu park ederek asıl konumuz olan AR teknolojisi ile ilgili sorulara ve bu soruların nasıl çözüldüğüne dönelim.",
-    "blogParagraph3Span11": "Bu teknoloji uzun zamandır var, Neler değişti ?",
-    "blogParagraph3Span12": "Evet bu teknoloji uzun zamandır var fakat teknolojinin, her kesim tarafından kullanılabilirliği 2018 yılında sağlandı. 2017 öncesi teknolojinin çalışması için QR kod yada resim işaretcileri kullanılırdı, sensör eksikliği ve yapay zekanın olmaması sebebi ile boyut yerleştirimi düzgün çalışmamakta ve cihaz donanım kısıtları sebebi ile de gerçekci 3D model kullanılamazdı. 2017 yılında teknoloji Apple'ın o dönemki cihazları ile önce mobil uygulamalar için 2018'de de web dahil kullanıma sunuldu.",
-    "blogParagraph3Span13": "2017 yılından önceki dönemlerde, teknolojiyi denemeden yazıcıdan QR kodu bastırmayı şart koştuğumuzda tabiki teknolojinin yaygınlaşmasına bir bariyer koymuş oluyordunuz. Şimdi ise 90% ının üzerinde cihaz desteği ile teknoloji, herhangi bir uygulama indirmeye de gerek kalmadan gerçek boyut ve yüksek 3D data kalitesi ile çalışabilmektedir.",
-    "blogParagraph3Span14": "Uzun zamandır teknoloji var olmasına rağmen insanlar kullanmıyor, Kullanıyor mu ?",
-    "blogParagraph3Span15": "2007 yılında Apple taşınabilir disk, işletim sistemi ve 3G yi bir araya getirerek teknoloji tüketimine yeni bir yol belirledi ve farklı markaların katkıları ile 15 yılda teknoloji çok hızlı evrildi. Cihazların kamera sayısının artması, işlemcilerinin grafik yeteneklerinin yükselmesi ile teknoloji gelişti ve ucuzlaştı.",
-    "blogParagraph3Span16": "Türkiyenin en büyük e-ticaret şirketlerinden biri için yaptığımız cihaz destek oranları çalışmasında; kullanılan cihazların 89% u, belli sepet büyüklüğü üzere ve alım alışkanlığına sahip kullanıcılarda ise cihazların 96% sının AR teknolojisini desteklediğini biliyoruz. Mevcut müşterilerimizde uygun UI/UX ve bilgilendirme tasarımları ile belli ürünlerde 50% ye yakın AR kullanımı görüyoruz.",
-    "blogParagraph3Span17": "Beyaz eşya kategorisinde TV, Buzdolabı gibi ürünlerde, mobilya kategorisinde ise 3’lü koltuk, TV konsolu, gardrob ve yataklarda ziyaretçilerin 40% ının AR seçeneğini kullandığını görüyoruz. Komodin, saat, telefon ve süpürge gibi ürünlerde ise 3D de zaman geçirme zamanlarının çok yüksek olduğunu AR a geçişlerin ise 10% altında olduğunu görüyoruz.",
-    "blogParagraph3Span18": "Daha genel bir perspektif ile baktığımızda doğru kurgulanmış bir “Evinde Gör” AR hizmeti ile ortalamada 25% üzeri bir tercih oranı görüyoruz. Pozitif ödeme başaran müşterilerde AR denemiş olanların ise oranının 37,5% olduğunu görüyoruz. Tüm bu datalara baktığımız AR teknolojisinin artık yeni bir faza geçtiğini, önümüzdeki 1 yıl içinde teknolojiye geçmeyen şirketlerin öncülük avantajını kaybedeceklerini öngörüyoruz. E-ticaret sitesi, mobile app geçişleri gibi pek çok şirketin dijitalleşme çabalarını 3D ve AR teknolojisi ile tamamlayacaklarını düşünüyoruz.",
-    "blogParagraph3Span19": "Kimler, Neden Ar teknolojisine yatırım yapmalı ?",
-    "blogParagraph3Span20": "Akıllı cihaz kullanım oranları ile müşterilerimiz artık mobil sayfalarımız yada uygulamalarımız üzerinden bizlere ulaşıyor. Hedef kitle b2c olduğunda ziyaretçilerin 80%+ kısmının mobil cihazlar üzerinden geldiklerini görüyoruz, bu sebeple markalar önceliklerini Mobile-First yani önce mobil odaklı hale getirmekteler.",
-    "blogParagraph3Span21": "Dolayısı ile her biri teknoloji harikası olan akıllı telefonların kullanımını artarken markaların de yatırımlarını bu alana yönlendireceği rasyonel bir tespit. 2021 yılında Türkiyede e-ticaret cirosu 381 milyar TL ve toplam e-ticaretin 18% si oldu, 2030 a geldiğinde bu rakamın 40% üzerinde olacağını, dönüşmesi mümkün ve uygun olmayan ürün ve hizmetler dikkate alındığında online ticaretin offline ticareti pratikte geçeceğini söyleyebiliriz. Gelişmiş cihazlar ve online kanala kayan ticaretin geleceği üzerinden baktığımızda, artık müşterilerimize online ürün deneyimi sunmanın önemi ile ilgili ek bir veriye ihtiyaç duymuyoruz.",
-    "blogParagraph3Span22": "Küçük mobil ekranlar ile uygulama yada websitemize gelen ziyaretçiye ürünü 360° deneyimletmek fiziksel özelliklerinin anlaşılmasını sağlamak ve özelleştirebilmek online ürün deneyiminde, offline ticarette sağlanamayacak “Evinde Gör” hizmetini sağlamak, tabiki satışlarımızı arttıracak ve online'a yapılan geçişte, adapte olan şirketlere rekabet farkı sağlayacaktır.",
-    "blogParagraph3Span23": "2022 yılında sıçrama yapan teknolojilerden biri olan Metaverse olgusuna olan ilgi, cihaz yaygınlaşma eksikliği ve birlikte büyüdüğü diğer innovasyonlarda yaşanan hayal kırıklıkları sebebi ile azalmış olsa da cihazların ucuzlaşması ve görsel kalitenin yükselmesi, büyük markaların yatırımlarını tamamlaması, yaygınlaşmayı arttıracak oluşturulan yeni tüketim içerikleri ile Metaverse de beklenen çıkışı yapacak hayatımızda yer alacaktır. Şirketler AR teknolojisine yaptıkları dijitalleşme yatırımlarını yine Metaverse de içerik olarak kullanabileceklerdir. Dolayısı ile RealWorld Metaverse olarakta anılan AR şirketlerin bu alanlarda var olması için en makul giriş ve dönüşüm adımıdır.",
-    "blogParagraph3Span24": "Artırılmış Gerçekliğin Altın Çağı mı ?",
-    "blogParagraph3Span25": "Sugar olarak 5 yıldır AR teknolojisini markalarımıza sunuyoruz, marker ile başlayıp sadece belli cihazlarda serbest çalışan AR, devamında tüm cihazların mobil uygulamarında AR desteği, web tabanlı app free AR ve devamında yapay zeka ile öğrenilen her alan ve objenin AR ile gerçekliğinin artırılmasına ve bu deneyimlerin mümkünleşmesine şahit olduk ve ürünlerimizi bu akışa istinaden güncelleyerek adapte ettik. 5 yıl içinde AR teknolojisinde yaşanan bu devrimsel ilerleme cihaz, işletim sistemi, SDK-kütüphane ve kod geliştirme toolları geliştiren teknoloji devlerinin sayesinde başarıldı.",
-    "blogParagraph3Span26": "Bu teknoloji devlerinin arasında Google, Apple, Snapchat, Tiktok, Meta, Microsoft ve Niantici sayabiliriz. Peki bir marka için bu şirketlerin AR teknolojisine yatırım yapmasının nasıl bağlayıcılığı olabilir? Örnek üzerinden açıklayalım.",
-    "blogParagraph3Span27": "E-ticaret trafiğinin 50%'si arama motorları, reklam ve sosyal medya üzerinen alan bir marka, google’un arama sonucu getirdiği listede, ürünlerin resim yerine 3 boyutlu getirmesinden, ürünlere tıklandığında Evinde denetebilmesi devamında da bunu sağlayan şirketlere listeleme önceliği vermesinden çok tabi etkilenecektir.",
-    "blogParagraph3Span28": "Üstteki cümlemizi futuristik bir yorum ve varsayım olduğunu düşünmeyelim, artık google ayakkabı ve mobilya kategorisindeki ürünlerin 3 boyutlu versiyonunu müşterilere sunuyor ve listeleme de bu dataya sahip e-ticaret sitelerine öncelik veriyor. Yine google ve meta reklamlarını 3 boyutlu ve AR teknolojisi ile müşterilerine sunuyor. Reklamlar 3D yayınlandığında müşteriyi geri çağırma başarısı 2D resimlere oran ile 45% daha fazla oluyor.",
-    "blogParagraph3Span29": "Bu blog yazısını burada tamamlıyoruz, fakat serimizin devamında, AR teknolojisinin, teknoloji devlerinin yatırımları ile nasıl yaygınlaşacağını daha detaylı anlatıyor olacağız. Bana Linkedin Profilimden yada İletişim sayfasından ulaşabilirsiniz, sorularınızı cevaplamaya ve şirketinizin ürün dijitalleşme çalışmalarında destek olmaya her zaman hazırız.",
-    "paragraphAuthor2Span": "AR, VR, AI teknolojilerine dayalı çözümler ile gerçek hayat problemlerinin çözülmesini sağlayan ürünler geliştiriyor ve bu ürünleri müşterilerimizi dahil ederek geliştiriyoruz.",
-
-    "b": "Bu kısım Çevirisi yapılacak",
-
-    "blogInfoHeader": "",
-    "blogInfoSpan": "",
-    "blogsInfoItemHeader1": "",
-    "blogsInfoItemSpan1": "",
-    "blogsInfoItemHeader2": "",
-    "blogsInfoItemSpan2": "",
-    "blogsInfoItemHeader3": "",
-    "blogsInfoItemSpan3": "",
-    "blogListHeader": "",
-    "blogListItemHeader": "",
-    "blogListItemSpan1": "",
-    "blogListItemSpan2": "",
-    "blogListItemSpan3": "",
-    "squareHeader1": "",
-    "squareHeader2": "",
-    "squareHeader3": "",
-    "squareHeader4": "",
-    "squareHeader5": "",
-    "squareHeader6": "",
-    "squareHeader7": "",
-    "squareHeader8": "",
-    "squareHeader9": "",
-    "squareHeader10": "",
-    "squareHeader11": "",
-    "squareHeader12": "",
-    "squareHeader13": "",
-    "squareHeader14": "",
-    "squareHeader15": "",
-    "cloothContainerHeader": "",
-    "cloothContainerSpan": "",
-    "cloothPaternHeader": "",
-    "cloothPaternSpan": "",
-    "contactAboutSpan": "",
-    "commentSpan": "",
-    "commentHeader": "",
-    "commentSpan2": "",
-    "commentHeader2": "",
-    "commentSpan3": "",
-    "commentHeader3": "",
-    "jointContainerHeader": "",
-    "jointContainerSpan": "",
-    "jointAboutHeader": "",
-    "jointAboutSpan": "",
-    
-    "simurgComments": "",
-    "tepeHomeComments": "",
-    "ekoHaliComments": "",
-
-    "metaverseContainerHeader": "",
-    "metaverseContainerSpan": "",
-    "metaverseProjectSpan": "",
-    "solutionSpan1": "",
-    "solutionSpan2": "",
-    "solutionSpan3": "",
-    "solutionSpan4": "",
-    "shareBlogSpan": "",
-    "shoesContainerHeader": "",
-    "shoesContainerSpan": "",
-    "shoesQrHeader": "",
-    "shoesQrSpan": "",
-    "showAtHomeHeader": "",
-    "showAtHomeSpan": "",
-    "companyCustomerStatisticsSpan": "",
-    "projectStatisticsSpan": "",
-    "sugarBrand1Span": "",
-    "sugarBrand2Span": "",
-    "sugarBrand3Span": "",
-
-    "sugarSquadMember1Position": "CX Manager",
-    "sugarSquadMember2Position": "Customer Succes Manager ",
-    "sugarSquadMember3Position": "Unity & AI Team Lead",
-    "sugarSquadMember4Position": "3D Artist Unity Developer",
-    "sugarSquadMember5Position": "Frontend Developer",
-    "sugarSquadMember6Position": "Team Lead Metaverse Env.",
-    "sugarSquadMember7Position": "3D Generalist",
-
-    "leader1CommentSpan": "",
-    "leader2CommentSpan": "",
-    "leader3CommentSpan": "",
-    "leader4CommentSpan": "",
-    
-    "tryClootContainerHeader": "",
-    "tryClootContainerSpan": "",
-    "tryShoesContainerHeader": "",
-    "tryShoesContainerSpan": "",
-    "tryWatchContainerHeader": "",
-    "tryWatchContainerSpan": "",
-    "watchContainerHeader": "",
-    "watchContainerSpan": "",
-    
-    "whatsNewContainerSpan": "",
-    "whoSugarSpan": "",
-    "slideDetailHeader": "",
-    "slideDetailSpan": "",
-    "slideButtonLabel1":"",
-    "slideDetailHeader2": "",
-    "slideDetailSpan2": "",
-    "slideButtonLabel2":"",
-    "slideDetailHeader3": "",
-    "slideDetailSpan3": "",
-    "slideButtonLabel3":"",
-    "slideDetailHeader4": "",
-    "slideDetailSpan4": "",
-    "slideButtonLabel4":"",
-    "slideDetailHeader5": "",
-    "slideDetailSpan5": "",
-    "slideButtonLabel5":"",
-    "slideDetailHeader6": "",
-    "slideDetailSpan6": "",
-
-    "careers": "فرص العمل",
-    "jobTitle": "المسمى الوظيفي",
-    "phone": "الهاتف",
-    "addCv": "إضافة السيرة الذاتية",
-    "cvAlert": "يمكنك إضافة ملف بحجم يصل إلى ٢٠ ميجابايت.",
-
-    "reportsHeader": "تقارير وإدارة العملاء",
-    "reportsFirstSpan": "تتبع العملاء ومراقبة أداء الموظفين",
-    "reportsSecondSpan": "يمكن للوكلاء الذين يستخدمون Rapid Render تسجيل عملائهم من خلال المشروع الذي يعملون عليه، ويمكن مراجعة أداء الموظفين من خلال التحكم في المشروع الذي يعملون عليه والعروض المقدمة.",
-
-    "contactCvHeader": "قدّم طلبك للمستقبل",
-    "contactCvSpan": "إذا لم تجد الموقع الذي تحلم به بين عروضنا، يرجى ترك سيرتك الذاتية / معلومات الاتصال الخاصة بك للمستقبل!",
-    "submit": "يُقدِّم",
-
-    "cookiesHeader": "السماح بالكوكيز",
-    "cookiesSpan": "نستخدم ملفات تعريف الارتباط لتخصيص المحتوى وتوفير الميزات وتحليل حركة المرور.",
-    "furniture": "أثاث",
-    "carpet": "سجادة",
-    "table": "طاولة",
-    "bathroomFurniture": "أثاث الحمام",
-    "beyazEsya": "أجهزة بيضاء",
-    "decoration": "ديكور",
-    "materials": "مواد",
-    "watch": "ساعة",
-    "shoes": "أحذية",
-    "clooth": "ملابس",
-    "textile": "نسيج",
-    "light": "إضاءة",
-
-    "mainSolutionSpan": "",
-    "furnitureHeader": "أثاث",
-    "furnitureSpan": "",
-    "carpetHeader": "سجادة",
-    "carpetSpan": "",
-    "tableHeader": "طاولة",
-    "tableSpan": "",
-    "bathroomFurnitureHeader": "أثاث الحمام",
-    "bathroomFurnitureSpan": "",
-    "whiteGoodsHeader": "أجهزة كهربائية بيضاء",
-    "whiteGoodsSpan": "",
-    "decorationHeader": "ديكور",
-    "decorationSpan": "",
-    "materialsHeader": "مواد",
-    "materialsSpan": "",
-    "watchHeader": "ساعة",
-    "watchSpan": "",
-    "shoesHeader": "أحذية",
-    "shoesSpan": "",
-    "cloothHeader": "ملابس",
-    "cloothSpan": "",
-    "textileHeader": "نسيج",
-    "textileSpan": "",
-    "lightHeader": "إضاءة",
-    "lightSpan": "",
-
-    "blog3ListItem1": "تقنية الواقع المعزز يمكن استهلاكها بسهولة مع الأجهزة اليومية في حياتنا.",
-    "blog3ListItem2": "يتطلب تقنية الواقع الافتراضي استثمارًا في جهاز جديد.",
-    "blog3ListItem3": "يمكن استخدام تقنية الواقع المعزز في الحياة اليومية لأن المستخدم لا يعزل عن الحياة اليومية.",
-    "blog3ListItem4": "لا يمكن استخدام تقنية الواقع الافتراضي في الحياة اليومية، يمكن تقديمها فقط في المنزل وفي بيئات المتاجر فقط، حيث تعزل المستخدم.",
-    "blog3ListItem5": "من الصعب التخطيط لتفاعلات طويلة مع تقنية الواقع المعزز.",
-    "blog3ListItem6": "يمكن القيام بأنشطة والاستمرار في التفاعل لفترة طويلة مع تقنية الواقع الافتراضي.",
-    "blog3ListItem7": "توفر تقنية الواقع المعزز صور ثلاثية الأبعاد أفضل.",
-    "blog3ListItem8": "صور ثلاثية الأبعاد التي توفرها أجهزة تقنية الواقع الافتراضي محدودة بسبب عدم توافر مستخدمين متعددين وأصول تصميم البيئة وقلة الأجهزة.",
-    "blog3ListItem9": "يمكن لتقنية الواقع المعزز أن تتكامل مع تدفق التجارة الإلكترونية الحالي.",
-    "blog3ListItem10": "تقنية الواقع الافتراضي والمتاحف تتطلب تغييرًا ثوريًا، حيث ستعاد تصميم الأجهزة ومحركات البحث والتجارة الإلكترونية وستتغير العادات.",
-
-    "contactHeaderSuccesfuly": "شكرًا لك!",
-    "contactSpanSuccesfuly": "تم توصيل رسالتك بنجاح.",
-    "contactSecondSpanSuccesfuly": "نشكرك على التواصل معنا.",
-
-    "contactHeaderError": "عفوًا!",
-    "contactSpanError": "واجهنا مشكلة أثناء إيصال رسالتك.",
-    "contactSecondSpanError": "يبدو أن هناك مشكلة.",
-    "contactThirdSpanError": "يمكنك التواصل معنا عبر البريد الإلكتروني ورقم الهاتف.",
-
-    "contactHeaderLoading": "جارِ الإرسال!",
-    "contactSpanLoading": "سيتم إيصال رسالتك قريبًا.",
-    "contactSecondSpanLoading": "نشكرك على صبرك.",
-
-    "contactHeaderFail": "عفوًا!",
-    "contactSpanFail": "واجهنا مشكلة أثناء إيصال رسالتك.",
-    "contactSecondSpanFail": "يرجى التأكد من إدخال جميع المعلومات المطلوبة.",
-
-    "bathroomPartnerSpan": "",
-    "cloothPartnerSpan": "",
-    "decorationPartnerSpan": "",
-    "jointPartnerSpan": "",
-    "metaPartnerSpan": "",
-    "shoesPartnerSpan": "",
-    "tablePartnerSpan": "",
-    "textilePartnerSpan": "",
-    "watchPartnerSpan": "",
-    "whiteGoodsPartnerSpan": "",
-
-    "whiteGoodsPartnerHead":"Ziyaretçilerimizin 30%'u AR teknolojisini deneyimliyor.",
-
-    "declineButton": "لا أرغب",
-    "acceptButton": "أوافق",
-
-    "sugarBrandButton": "اقرأ في المدونة"
+	"home": "الصفحة الرئيسية",
+	"productServices": "المنتج / الخدمات",
+	"aboutUs": "معلومات عنا",
+	"blog": "مدونة",
+	"contactUs": "تواصل",
+	"mediaCenter": "المركز الاعلامي",
+	"readMore": "المزيد من التفاصيل",
+	"slideDetailHeader": "انظر في التكنولوجيا المنزلية",
+	"slideDetailSpan": "قدم لعملائك تجربة منتج فريدة وتفاعلية باستخدام تقنية \"الرؤية في المنزل\". اعرض منتجاتك بنطاق 360 درجة وقم بتكوينها في الوقت الفعلي ومكّن عملائك من تجربتها في مساحات معيشتهم الخاصة.",
+	"slideDetailHeader2": "هل علامتك التجارية جاهزة لعالم Metaverse؟",
+	"slideDetailSpan2": "هل أنت مستعد للجمع بين العالم المادي والرقمي؟ من خلال إنشاء توائم رقمية لمنتجاتك, يمكنك الوصول إلى عملاء جدد وولاء عملاء استثنائي باستخدام تقنيات الواقع المعزز.",
+	"slideDetailHeader3": "تقليل العوائد من خلال تجربة الملابس عبر الإنترنت",
+	"slideDetailSpan3": "كن مختلفًا مع علامتك التجارية في أكبر فئة من فئات التجارة الإلكترونية. قلل العوائد وزد من رضا العملاء من خلال تقديم تجربة ملابس رقمية لعملائك الذين يقومون بإدخال قياساتهم.",
+	"slideDetailHeader4": "التجارة الإلكترونية ثلاثية الأبعاد",
+	"slideDetailSpan4": "عصر جديد يبدأ في التجارة الإلكترونية: تجربة المنتجات ثلاثية الأبعاد. ميز نفسك عن منافسيك وزد مبيعاتك من خلال تقديم تجربة فريدة لعملائك في منتجات مثل الساعات والمجوهرات والإكسسوارات.",
+	"slideDetailHeader5": "تجربة الأحذية الرقمية",
+	"slideDetailSpan5": "عزز تجربة منتجك عبر الإنترنت من خلال السماح لعملائك بتجربة الأحذية افتراضيًا.",
+	"slideDetailHeader6": "تجربة المنتج الشخصية",
+	"slideDetailSpan6": "امنح عملائك الفرصة لتخصيص منتجاتهم. فالمنتجات التي تبيعها يمكن أن تنمو وتتقلص وتجمع وتحتوي على مكونات قابلة للتحديث. اترك لعملائك الحرية في هذا الصدد من خلال تقنيتنا.",
+	"aboutSugar": "Sugar: ثورة الذكاء الاصطناعي في التصميم المعماري",
+	"aboutSugarSpan1": "SugAR هي شركة تكنولوجية متخصصة في الواقع المعزز (AR), والواقع الافتراضي (VR), والواقع الممتد (XR), والذكاء الاصطناعي (AI) والتوأم الرقمي. وهي تمكن الشركات من تقديم تجارب منتجات تفاعلية وغامرة لعملائها من خلال التقنيات التي تطورها.",
+	"aboutSugarSpan2": "تأسست شركة SugAR Technology في عام 2019, وقد أنشأت توائم رقمية لأكثر من 22000 منتج منذ تأسيسها. التزامنا هو تقديم هذه النماذج ثلاثية الأبعاد بسلاسة للجمهور المستهدف بتنسيقات مناسبة مثل التجارة الإلكترونية ووسائل التواصل الاجتماعي وبرامج CAD وBIM.",
+	"aboutButton": "أنت مدعو لاكتشاف خبرتنا",
+	"whoIsSugar": "SugAR: رائد تجربة المنتجات الرقمية",
+	"whoSugarSpan1": "SugAR هي علامة تجارية تكنولوجية متخصصة في الجيل الجديد من تقنيات الواقع الافتراضي مثل AR وVR وXR وإنشاء التوائم الرقمية للمنتجات المادية والذكاء الاصطناعي . ومن خلال التخصص في الجيل الجديد من التقنيات المتقدمة, فإنها تمكن الشركات من تقديم تجارب منتجات تفاعلية وغامرة لعملائهم.",
+	"whoSugarSpan2": "قامت شركة SugarAR, التي أخذت دورًا رائدًا في رحلات التحول الرقمي للشركات منذ عام 2019, بإنشاء توائم رقمية لأكثر من 22000 منتج من العلامات التجارية الشهيرة, مما يمكّن الشركات من تقديم تجربة منتج فريدة لعملائها. والنماذج التفاعلية ثلاثية الأبعاد التي تنتجها هي تُستخدم في التجارة الإلكترونية ووسائل التواصل الاجتماعي وبرامج CAD. وBIM, ويتم تسليمها إلى الجمهور المستهدف بالتنسيقات التي يطلبها العملاء.",
+	"whatSugarProvides1": "باستخدام تقنية التوأم الرقمي, نقوم بإنشاء نسخ رقمية تفاعلية لجميع المنتجات في كتالوجات المنتجات.",
+	"whatSugarProvides2": "نحن نمكن المستخدمين من تجربة المنتجات افتراضيًا.",
+	"whatSugarProvides3": "نحن نسمح بعرض المنتجات بمزيد من التفاصيل وبشكل واقعي مع خيارات مختلفة للألوان والملمس والتكوين.",
+	"whatSugarProvides4": "يمكن عرض المنتجات من زوايا مختلفة في البيئة الرقمية.",
+	"whatSugarProvides5": "باستخدام ميزات مسح الغرف والمنزل, يمكننا إنشاء نسخة دقيقة ثلاثية الأبعاد للموقع.",
+	"whatSugarProvides6": "يمكننا الجمع بين الواقع المادي والافتراضي (الواقع المختلط)",
+	"whatSugarProvides7": "من خلال تطبيق التصميم والمراجعة المباشرة في الوقت الفعلي, فإننا نلبي احتياجات مستخدمينا وشركائنا في مجالات الأثاث والديكور والهندسة المعمارية والتصميم الداخلي.",
+	"whatSugarProvides8": "نحن نقدم خدمة التصميم الرقمي المدعومة بالذكاء الاصطناعي.",
+	"whatSugarProvides9": "نحن نضمن إمكانية إنشاء ERP Integrated Proforma في التصميمات التي تم إنشاؤها بلمسة واحدة.",
+	"whatSugarProvides10": "نحن نضمن إمكانية عمل عروض 2K و4K و8K للتصميمات التي تم إنشاؤها.",
+	"whatSugarProvides11": "نحن نقدم ميزة العرض البانورامي.",
+	"whatSugarProvides12": "من خلال الحلول الرقمية التي نقوم بإنشائها, نقوم بزيادة رضا العملاء وأداء المبيعات وتقليل معدلات العائد.",
+	"sugarBrandsHeader": "العلامات التجارية المرموقة تستخدم تقنيتنا",
+	"homePageCustomersSpan": "نسير نحو المستقبل الرقمي معًا",
+	"trustedByMillionsOfCompany": "ما يقوله عملاؤنا عن Sugar.",
+	"pages": "الصفحات",
+	"utilityPages": "الصفحات التكميلية",
+	"askYourQuestions": "اسأل سؤالا؟",
+	"enterYourNameAndEmail": "كيف يمكننا مساعدتك؟",
+	"name": "اسم",
+	"email": "بريد إلكتروني",
+	"message": "رسالة",
+	"sugarTeam": "فريق شوجر...",
+	"productManagmentHead": "المدير التنفيذي",
+	"softwareDeliveryHead": "مدير التكنولوجيا",
+	"cgiTeamLeader": "سجع",
+	"whatsNew": "الاستشارات المعمارية ذاتية الخدمة مع الذكاء الاصطناعي",
+	"sectoralSolution": "حلولنا القائمة على القطاع",
+	"solutionHeader1": "هل تنتج وتبيع الأثاث؟",
+	"solutionHeader2": "هل أنت محترف في تصميم وبيع مساحات المعيشة؟",
+	"solutionHeader3": "هل تريد زيادة مبيعاتك وتقليل العوائد على موقع التجارة الإلكترونية الخاص بك؟",
+	"solutionHeader4": "هل تحتاج مؤسستك إلى بيئة Metaverse؟",
+	"weHaveGoodSolutionForYou": "لدينا حل جيد لك.",
+	"getStarted": "طلب عرض توضيحي",
+	"usecase": "افحص وقائع الاستخدام.",
+	"arDetails": "تفاصيل الواقع المعزز",
+	"changeMaterial": "تغيير المادة",
+	"arSeeHome": "الواقع المعزز والمشاهدة في المنزل",
+	"showAtHomeHeader": "تجربة منتج واقعية وتفاعلية على موقع الويب الخاص بك",
+	"showAtHomeSpan": "اسمح لعملائك بمشاهدة منتجاتك بنطاق 360 درجة وتجربة عينات من الخشب والنسيج. يمكن للمستخدمين اختبار منتجاتك بأحجام حقيقية في أماكن معيشتهم دون تنزيل أي تطبيقات.",
+	"ArDetails": "مزايا تقنية \"الرؤية في المنزل\":",
+	"arDetailsSpan": "قد تتاح لعملائك الفرصة لتخصيص المنتجات حسب لونها وملمسها. يمكنهم على الفور تجربة المنتج الذي قاموا بتخصيصه في مساحات معيشتهم بالحجم الحقيقي, دون الحاجة إلى تنزيل تطبيق. بالإضافة إلى ذلك, قد تتاح للمستخدمين فرصة استمتع بتجربة تفاعلية للميزات الإضافية للمنتجات مثل فتح الأغطية والتوسيع والإضاءة.",
+	"tepeHomeComments": "يتوقع منا عملاؤنا ليس فقط شرح المنتجات ولكن أيضًا إنشاء مفاهيم لمنازلهم باستخدام منتجاتنا. لقد أمضينا أكثر من 10 ساعات في الرسومات والعروض لمنازل العملاء. كما أدت المراجعات وتغييرات الألوان إلى إطالة عملية البيع. مع Rapid Render, نقوم بإنشاء عروض وعروض أسعار لعملائنا دون مغادرة المتجر. المفهوم نحن نكمل المبيعات بمعدل يزيد عن 80٪ للعملاء الذين نعمل معهم.",
+	"showAtHomeHeaderCarpet": "انقل سجادك إلى منازل عملائك افتراضيًا",
+	"showAtHomeSpanCarpet": "اسمح لعملائك بشراء جميع السجاد في مجموعة منتجاتك بأمان من خلال تجربتها في المنزل, بمختلف الأحجام والألوان والملمس, عبر هواتفهم الذكية.",
+	"ArDetailsCarpet": "قم بزيادة مبيعاتك باستخدام تقنية \"الرؤية في المنزل\"",
+	"arDetailsSpanCarpet": "من خلال تقديم تقنية \"انظر في المنزل\" لعملائك, يمكنك بسهولة العثور على المنتج الأنسب لأرضياتهم وستائرهم وأثاثهم. وتتيح لهم هذه التقنية الاختيار من بين آلاف المنتجات دون الحاجة إلى الاستشارات المعمارية, وبالتالي زيادة معدلات تحويل المبيعات ",
+	"ekoHaliComments": "بفضل تعاوننا بين SugAR وEko Halı, نقوم بإنشاء ابتكار ثوري في صناعة الأثاث والديكور. تم دمج تقنية RapidRender 3D/AR بسلاسة في عمليات التجارة الإلكترونية الخاصة بـ Eko Halı, مما أدى إلى تحسين التسوق عبر الإنترنت والعملاء داخل المتجر الخبرة. وبهذه الطريقة, أصبحت عملية اتخاذ القرار أسهل وزادت المبيعات.",
+	"showAtHomeHeaderTable": "تجربة الفن الرقمي على حائطك: تصور أعمالك بطريقة واقعية!",
+	"showAtHomeSpanTable": "يمكنك الوصول إلى فرص فريدة لتجربة كتالوج اللوحات والقماش بالكامل رقميًا على موقع التجارة الإلكترونية الخاص بك. قم بزيادة مبيعاتك من خلال تقديم تجربة تسوق مخصصة وتفاعلية لعملائك.",
+	"ArDetailsTable": "عصر جديد في الديكور الافتراضي: تقنية \"الرؤية على حائطك\"",
+	"arDetailsSpanTable": "تعد تقنية \"See on Your Wall\" ميزة ثورية تتيح لعملائك تجربة أعمالك فعليًا على جدرانهم. وبفضل هذه التقنية, يستطيع عملاؤك مشاهدة اللوحات ذات الصلة بأحجام وتركيبات ألوان مختلفة, مع ظروف إضاءة مختلفة, وألوان حائطية مختلفة. الألوان والعديد من خيارات التحرير, دون الحاجة لزيارة المعارض. يبلغ معدل استخدام تقنية \"See on the Wall\" في اللوحات المشتراة حاليًا 39% وهذا المعدل يتزايد يومًا بعد يوم.",
+	"simurgComments1": "هل يمكن لـ \"Art House\" تحويل أعماله باستخدام التكنولوجيا؟ من خلال تعاوننا مع Simurg Art House, نقوم بتصميم المستقبل اليوم من خلال نقل الأعمال الفنية الفريدة إلى البيئة الرقمية. وبهذه الطريقة, يمكن للعملاء تجربة منتجاتهم بأنفسهم مساحات المعيشة, بغض النظر عن الزمان والمكان.",
+	"simurgComments2": "شارك السيد إبراهيم خليل شاهين, أحد الشركاء المؤسسين لشركة Simurg Sanatevi, مع SugAR رحلته للتحول الرقمي, وكيف حول تجربة العملاء وفريق المبيعات, ورؤيته للمستقبل مع التكنولوجيا.",
+	"showAtHomeHeaderBathroom": "تجربة المنتج الافتراضية مع تقنية \"انظر في حمامك\"",
+	"showAtHomeSpanBathroom": "من خلال تقديم تقنية \"See in the Bathroom\" لعملائك, يمكنك تمكينهم من تجربة وشراء المنتجات بالحجم المناسب ومزيج الألوان المناسب لحماماتهم.",
+	"ArDetailsBathroom": "دع حمامات أحلامك تُصمم بصريًا",
+	"arDetailsSpanBathroom": "عندما تقدم تقنية \"See in Your Bathroom\" لعملائك, يمكنك تجربة المنتج وشرائه فعليًا بالحجم المناسب وتكوين الألوان المناسب لحمام عميلك. وبهذه الطريقة, يتم تصميم حجم وألوان المنتجات بشكل متناغم مع الحمامات ويتم تحقيق الأسلوب والمظهر الأنسب. يمكن لعملائك اتخاذ قرارات الشراء الخاصة بهم يمكنهم العطاء بوعي أكبر والاستمتاع بتجربة التسوق الخاصة بهم أكثر. ويزداد ولائهم لعلامتك التجارية واحتمالية الشراء مرة أخرى.",
+	"showAtHomeHeaderWhiteGoods": "تجربة مساحة المعيشة ثلاثية الأبعاد",
+	"showAtHomeSpanWhiteGoods": "هل يمكن وضع الثلاجة وغسالة الأطباق هناك؟ ما الحجم الذي يجب أن يكون عليه التلفزيون؟ اسمح لعملائك بالإجابة على هذه الأسئلة من خلال تجربة منتجاتك.",
+	"ArDetailsWhiteGoods": "سر تصميم منزل أحلامك",
+	"arDetailsSpanWhiteGoods1": "مع تقنية \"انظر في المنزل\", يمكنك تزويد عملائك بتجربة تسوق مخصصة وتفاعلية.",
+	"arDetailsSpanWhiteGoods2": "واحدة من أكبر مشاكل العملاء عند طلب الأجهزة المنزلية هي عدم قدرتهم على فهم أبعاد المنتجات وتوافقها مع المنزل بشكل صحيح.",
+	"arDetailsSpanWhiteGoods3": "تم تصميم تقنية الرؤية في المنزل لحل هذه المشكلة لعملائك. وبفضل تقنيتنا, يستطيع عملاؤك تجربة أغراضهم الإلكترونية فعليًا في المنزل, واتخاذ أفضل الخيارات من خلال إنشاء مجموعات مختلفة من المنتجات, واتخاذ قرارات شراء مستنيرة بوضوح فهم الانسجام الذي ستخلقه المنتجات مع منازلهم.",
+	"whiteGoodsPartnerSpan": "باعتبارنا Vestel, نحن أول شركة تطبق تقنية \"See at Home\" في قطاعنا الخاص. لقد مكننا عملائنا من تجربة منتجاتنا في المنزل من خلال رقمنة عالية التفاصيل. لقد قمنا بزيادة تجربة المنتج 360 درجة إلى أقصى حد مع الرسوم المتحركة و نقاط الجذب.",
+	"showAtHomeHeaderDecoration": "تجربة مثالية للعملاء مع تجربة الديكور الافتراضية",
+	"whiteGoodsPartnerHead": "30% من زوارنا يجربون تقنية الواقع المعزز.",
+	"showAtHomeSpanDecoration": "مع تقنية \"انظر في المنزل\", امنح عملائك الذين يرغبون في تحديد التفاصيل الزخرفية مثل الأثاث والأرضيات وطلاء الجدران فرصة شراء المنتجات الموجودة في كتالوج الملحقات الخاص بك من خلال تجربتها في المنزل.",
+	"ArDetailsDecoration": "دع عملائك يرون مظهر ديكوراتك في المنزل",
+	"arDetailsSpanDecoration": "من خلال تقديم تقنية \"See at Home\" لعملائك, يمكنك منحهم تجربة تسوق فريدة من نوعها. وبهذه الطريقة, يختبر عملاؤك تناغم منتجات الديكور الخاصة بك في مساحات معيشتهم في مجموعات مختلفة ويدركون سلوك شراء أكثر وعيًا. يزداد رضا عملائك وتزيد مبيعاتك.",
+	"showAtHomeHeaderTextile": "امنح عملائك تجربة منتج شاملة 360 درجة",
+	"showAtHomeSpanTextile": "قم بتقليل تكاليف الاستشارات المعمارية والتصورات بينما تقدم لعملائك تجربة تفاعلية مع الوسائد والوسائد والفراش القابلة للتخصيص.",
+	"ArDetailsTextile": "عصر الديكور الافتراضي في غرف النوم باستخدام تقنية التكوين ثلاثي الأبعاد",
+	"arDetailsSpanTextile": "باستخدام تقنية 3D Configurator, يمكن لعملائك تزيين أسرتهم ديناميكيًا برؤاهم الخاصة وتكوين وسائدهم وأغطية الوسائد وأغطية الألحفة في ثوانٍ لتناسب أذواقهم. وبهذه الطريقة, يتم تحقيق تجربة تسوق مخصصة وفريدة من نوعها. إنتاجك المرئي انخفاض التكاليف, ورضا العملاء, وزيادة معدل المبيعات الناجحة, وانخفاض معدلات العائد.",
+	"tryClootContainerHeader": "اسمح لعملائك بإنشاء صور رمزية بقياساتهم الخاصة.",
+	"tryClootContainerSpan": "يمكنك اختيار الحجم المناسب بخبرة 360 درجة مع دعم الذكاء الاصطناعي أو من اختيار العميل.",
+	"shoesContainerHeader": "التكنولوجيا الافتراضية القابلة للارتداء في الأحذية",
+	"shoesContainerSpan": "باستخدام تقنية التجربة الافتراضية, يمكن لعملائك تجربة الأحذية التي يختارونها فعليًا من خلال ضبط خيارات الألوان والنمط والحجم.",
+	"tryShoesContainerHeader": "تجربة المنتج الشاملة تقلل من معدلات التخلي عن سلة التسوق!",
+	"tryShoesContainerSpan1": "إذا كنت شركة تبيع في فئة الأحذية, فيمكنك زيادة مبيعاتك وزيادة رضا عملائك من خلال تقديم تجربة أحذية افتراضية لعملائك. يمكن لعملائك رؤية كيف تبدو الأحذية عليهم, وتجربة خيارات مختلفة للألوان والمقاسات, وشاهد الحذاء من زوايا مختلفة.",
+	"tryShoesContainerSpan2": "تتيح تجربة الأحذية الافتراضية للعملاء اتخاذ قرارات شراء أكثر وعيًا. كما أنها تقلل بشكل كبير من معدلات التخلي عن عربة التسوق وإرجاعها. كما أنها تعزز صورة العلامة التجارية وتساهم في تحقيق النجاح المستدام.",
+	"watchContainerHeader": "مستقبل التجارة الإلكترونية: تجربة المنتجات عبر الإنترنت",
+	"watchContainerSpan": "قم بزيادة ربحية تجارتك الإلكترونية من خلال تجربة منتج شاملة. قم بزيادة أداء مبيعاتك ورضا العملاء وقلل عوائدك باستخدام تقنيات الملابس الافتراضية.",
+	"tryWatchContainerHeader": "المزيد من المبيعات والربحية باستخدام تقنيات الملابس الافتراضية",
+	"tryWatchContainerSpan": "يكمن حاضر ومستقبل التجارة الإلكترونية في توفير تجربة المنتجات عبر الإنترنت للعملاء. مع SugAR, يمكنك تقديم تجربة تسوق فريدة تتيح لعملائك تجربة وشراء المجوهرات والساعات والإكسسوارات التي يمكن ارتداؤها. بفضل تقنية الملابس الافتراضية المتقدمة لدينا , يمكن لعملائك تجربة المنتجات التي اختاروها فعليًا ومعرفة كيف تبدو عليها. وبهذه الطريقة, يتخذ عملاؤك قرارات شراء أكثر استنارة وتنخفض معدلات الإرجاع بشكل ملحوظ.",
+	"cloothContainerHeader": "تجربة ملابس على الإنترنت بزاوية 360 درجة مع الصور الرمزية الافتراضية",
+	"cloothContainerSpan1": "استخدم تقنية الصورة الرمزية ثلاثية الأبعاد لتزويد عملائك بتجربة تسوق فريدة من نوعها والتخلص من العوائد بسبب عدم تطابق الحجم.",
+	"cloothContainerSpan2": "من خلال تصور الخرائط الحرارية باستخدام تقنيتنا, يمكن لعملائك تصميم صورة رمزية افتراضية متوافقة تمامًا مع حجم أجسامهم وتجربة الملابس التي يختارونها افتراضيًا. تزداد المبيعات ورضا العملاء بشكل كبير, وتنخفض العوائد المرتبطة بالحجم, وتقل صورة علامتك التجارية. تصبح محدثة بما يتماشى مع متطلبات العصر الرقمي.",
+	"cloothPaternHeader": "رقمنة كتالوج المنتجات الخاصة بك",
+	"cloothPaternSpan": "من خلال خدماتنا لتصور المنتجات ثلاثية الأبعاد, نقوم بإنشاء توائم رقمية لمنتجاتك بخيارات الحجم واللون والنمط المناسبة ونمكنك من تقديم تجربة تسوق شاملة وتفاعلية لعملائك.",
+	"contactAboutSpan": "اتصل بنا الآن واحصل على معلومات أكثر تفصيلاً حول خدمات تصور المنتجات ثلاثية الأبعاد لدينا. سيعمل فريق الخبراء لدينا معك لتطوير حل يناسب احتياجاتك.",
+	"joint": "مشترك",
+	"dailyAndProductBasedExperienceReports": "تقارير الخبرة اليومية والقائمة على المنتجات.",
+	"listenToPartnerHeader": "اكتشف تجارب مستخدمينا!",
+	"experienceReportsSpan": "بعد تكييف التقنية, يمكنك إجراء القياسات وتحديد الاستراتيجيات الجديدة من خلال التقارير. مع شاشات تقرير SugAR:",
+	"reportsList1": "أرقام تجربة 3D و AR الشهرية بشكل منفصل",
+	"reportsList2": "أرقام تجربة 3D و AR اليومية",
+	"reportsList3": "أرقام تجربة 3D و AR المستندة إلى المنتج",
+	"reportsList4": "الكميات المفضلة للنسيج واللون",
+	"reportsList5": "أرقام مسح رمز الاستجابة السريعة",
+	"productStatisticsHeader": "زيادة المبيعات ومشاهدات الصفحة.",
+	"productStatisticsSpan1": "قم بزيادة معدلات الإضافة إلى سلة التسوق بما يصل إلى 3 مرات باستخدام تقنية الواقع المعزز والواقع المعزز.",
+	"productStatisticsSpan2": "تقليل معدلات التخلي عن عربة التسوق لدى زوار موقعك وزيادة وقت بقائهم في الصفحة. تقليل مرتجعات المنتج.",
+	"showAtHome": "شاهده في المنزل/حالة الاستخدام",
+	"vton": "كابينة AR التجريبية",
+	"showFurniture": "انظر في المنزل",
+	"createProduct": "إنشاء منتجك/مشتركك الخاص",
+	"dressWatch": "تلبيس الساعة",
+	"dressShoe": "تزيين الأحذية",
+	"dressClooth": "إرتد ملابس",
+	"blogPageHeader2": "ما ستراه أثناء قراءة هذه المدونة هو:",
+	"youAlsoLike": "سوف يعجبك أيضًا ...",
+	"shareBlog": "هل أنت مستعد لمشاركة مدونتك؟",
+	"contactPageSpan": "لجميع أسئلتك وطلباتك التجريبية, بما في ذلك فرص الشراكة, يمكنك إرسال بريد إلكتروني إلى hello@sugartech.io, أو التواصل معنا من خلال أرقام الاتصال الخاصة بنا أو ملء نموذج الاتصال.",
+	"fullName": "اسم اللقب",
+	"howCanWeHelpYou": "كيف يمكننا مساعدتك؟",
+	"describeYourProblem": "",
+	"sendMessage": "ارسل رسالة",
+	"backToHome": "العوده للصفحة الرئيسية",
+	"goalsHeader": "ما حققناه وخططنا المستقبلية",
+	"goals1Header": "اليوم",
+	"goals1Span": "نحن نقدم تقنيات التهيئة ثلاثية الأبعاد والواقع المعزز في فئات الأثاث والسلع البيضاء والأحذية والملابس.",
+	"goals2Header": "قريب جدا",
+	"goals2Span": "سنكون بمثابة مكتبة تحتوي على آلاف المنتجات من الماركات العالمية.",
+	"goals3Header": "قريباً",
+	"goals3Span": "سنمكن الشركات من نشر نماذجها ثلاثية الأبعاد على منصات مثل Google Snapchat وInstagram وTikTok بنقرة واحدة, دون الحاجة إلى أي معرفة تكنولوجية.",
+	"goals4Header": "فى المستقبل",
+	"goals4Span": "سنكون علامة تجارية عالمية تقدم تجربة منتجات ثلاثية الأبعاد على منصات مثل Metaverse وSpatial.",
+	"blogGraphHeader": "طريقة سهلة وسريعة لاختيار الأثاث",
+	"blogGraphSpan": "إن عملية صنع القرار هي واحدة من أصعب القضايا في العالم. والسبب في ذلك هو أنه ليس من الواضح دائمًا ما هي عواقب القرارات التي نتخذها, وهذا عدم اليقين يجعل عملية صنع القرار صعبة للغاية. على سبيل المثال , عند اختيار الأثاث المراد شراؤه لمنزل جديد, يجب أن يكون الأثاث المراد شراؤه متوافقًا مع الأشياء الأخرى الموجودة في المنزل, على سبيل المثال؛ يمكننا أن نسميها الستائر, السجاد, اللوحات, الإضاءة",
+	"blogGraph2Header": "لماذا يجب أن تحتوي منتجاتي على نماذج ثلاثية الأبعاد عالية الجودة",
+	"blogGraph2Span": "نحن نخدم عملائنا في مجالات الواقع المعزز VR والرندر والكتالوج لفترة طويلة - حوالي 4 سنوات. أثناء تقديم هذه الخدمة, نصل أحيانًا إلى جزء يحدد مصير العقود.",
+	"blogGraph3Header": "لماذا نحن في الوقت المناسب لتقنيات الواقع المعزز والثلاثية الأبعاد؟",
+	"blogGraph3Span": "عندما نتحدث مع عملائنا حول حل الواقع المعزز الخاص بنا, أتلقى أحيانًا تعليقًا مثل هذا.",
+	"blogGraph4Header": "ما هي تقنية الواقع المعزز/العرض في المنزل وكيف يتم استخدامها؟",
+	"paragraphListSpan1": "قد يعتقد شخص ما في هذا الموقف أنه يرغب في رؤية كيف ستبدو العناصر التي سيشتريها في المنزل قبل شرائها. على الأقل, أود أن يكون لدي مثل هذا الخيار. في هذه المدونة, سأتحدث عن تطبيق الذي يوفر حلاً لهذه المشكلة بالضبط.",
+	"paragraphListSpan2": "بادئ ذي بدء, اسم التطبيق هو Rapid Render. وهو تطبيق يمكن أن يوفر لك راحة كبيرة في تصور تصميم غرفة أحلامك أو منزلك. كل ما تحتاجه هو معرفة أبعاد غرفتك أو منزلك. أول ما تراه في التطبيق هو مسودة صفحة الرسم...",
+	"paragraphListSpan3": "الرسم هنا ليس بهذه الصعوبة. كل ما عليك فعله هو رسم خط, والتطبيق مفيد بالفعل بما فيه الكفاية لذلك. في المرحلة التالية, يمكنك وضع المنتجات في المتاجر المتعاقد عليها في أي ركن من أركان منزلك, على الجدار بأي طريقة تريدها.",
+	"paragraphListSpan4": "علاوة على ذلك, تستغرق هذه المرحلة 5 دقائق فقط, إذا كنت قد قررت المنتج الذي ستشتريه 😊 يمكنك بعد ذلك إرسال طلب إلى الخادم للحصول على صورة ذات جودة أفضل للجزء الداخلي من المنزل. إذا كنت شخصًا يحب التفاصيل , اسمحوا لي أن أعرض لكم تصميم غرفة صنعته بنفسي كمثال. رسم هذه الغرفة يستغرق دقيقة واحدة, ووضع المنتج استغرق مني 5 دقائق, واختيار الستارة والخلفية استغرق 3 دقائق.",
+	"paragraphAuthorSpan": "لقد بدأت البرمجة عندما حصلت على شهادتي. وحتى الآن, عملت في مجالات مختلفة ليس فقط في البرمجة ولكن أيضًا الرسم ثنائي الأبعاد والنمذجة ثلاثية الأبعاد وArduino وRaspberry Pi وتطوير الألعاب وSQL وتطوير تطبيقات نماذج Windows.",
+	"paragraphList2Span1": "تحتاج كل شركة إلى كتالوج لتصور منتجاتها. هذه هي الحاجة التقليدية التي تعاني منها العديد من الشركات. ولهذا, يمكنك بناء مفهوم فعليًا والتقاط الصور في الاستوديو بتكاليف عالية. أو يمكنك أخذ المنتجات بمفردها ورسمها بالديكوباج باستخدام الفوتوشوب وبعض الظلال.يمكنك إنشاء صورة ناجحة. يمكنك ضمان الاستخدام المتكرر بقيمة أكثر ملاءمة.",
+	"paragraphList2Span2": "لكن الآن, الفيروس والعوامل الأخرى في التسويق تجعل من الضروري اتباع طريقة مختلفة تمامًا. تتوقع شركات التجارة الإلكترونية ووسائل التواصل الاجتماعي الآن منهم أن يتفاعلوا مع حياتهم سريعة الوتيرة مثل كائن حي. إنهم يريدون رؤية الأسهم العلامات التجارية التي يتبعونها بناءً على معنى وأهمية اليوم. هذا من أجل تلبية الاحتياجات الجديدة, تحتاج إلى تصور منتجاتك بأنسجة أو ألوان مختلفة أو حتى بمفاهيم مختلفة.",
+	"paragraphList2Span3Part1": "مهتم بهذا الأمر",
+	"paragraphList2Span3Part2": "هنا",
+	"paragraphList2Span3Part3": "تمت مشاركة مقالة لطيفة جدًا عن Ankte, وتم ذكر الإستراتيجية المرئية المختلفة التي أنتجتها Netflix لسلسلة Stranger Things لمستخدميها, بناءً على عادات المشاهدة الخاصة بهم. #بافتراض أن وسائل التواصل الاجتماعي والتجارة الإلكترونية هي متجر بقالة اليوم, جذب المستخدم",
+	"paragraphList2Span4": "فكيف يمكن اتباع هذه الاستراتيجية؟ من الواضح أن هذا الهيكل لن يعمل بشكل صحيح مع الأساليب التقليدية التي تتطلب جهودًا مثل إنشاء استوديو, وإنتاج المنتج بألوان وأنسجة جديدة, وصياغة, وما إلى ذلك. إنشاء المفهوم مع العرض, والذي الذي تفضله العلامات التجارية الكبرى لحل هذه المشاكل, أصبح الآن منتشرًا على نطاق واسع في تركيا.",
+	"paragraphList2Span5": "تمامًا كما نقدم خدمات العرض كشركة, فإننا نقدم أيضًا تطبيقنا الخاص الذي يسمى Rapid Render لعملائنا, والذي يتضمن خدمات مثل المعاينة والمزرعة السحابية وما إلى ذلك. بينما يمكن لـ Rapid Render الحصول على العروض الأكثر تعقيدًا في 5 دقائق باستخدام التكنولوجيا السحابية في الخلفية, كما نقدم لعملائنا عروضًا ثلاثية الأبعاد للمنتجات المستخدمة في العرض, ومناسبة لإعادة الاستخدام.نذكر أن هناك نماذج وأن هذه النماذج ثلاثية الأبعاد يمكن استخدامها في العديد من المجالات, من الواقع المعزز إلى Web AR وGoogle Search AR, ونحن ننقل هذه المعرفة.",
+	"paragraphList2Span6": "بالنسبة للاستراتيجية الجديدة المذكورة أعلاه, فإن إنتاج نماذج ثلاثية الأبعاد لمنتجاتنا وتخزينها في هيكل مناسب لإعادة الاستخدام يوفر لشركاتنا الفرصة لتوفير المال في العديد من المجالات ومواكبة عصر التغير التكنولوجي السريع.",
+	"paragraphList2Span7": "نحن نقدم لعملائنا التقنيات المناسبة وخدمات المسح الضوئي عالية الجودة لإنتاج نموذج ثلاثي الأبعاد بأعلى جودة. وننقل لشركائنا أن النموذج ثلاثي الأبعاد عالي الجودة أصبح الآن وسيلة مهمة للوصول إلى المستخدم النهائي ونؤكد دائمًا على أهمية العمل مع موديلات عالية الجودة.",
+	"paragraphList2Span8": "أشارك هنا بعض الأمثلة للنماذج ثلاثية الأبعاد التي تم الحصول عليها بعد عمليات المسح لدينا. وسنستمر في مشاركة هذا المنشور مع المقالات التالية التي يمكن فيها استخدام النماذج ثلاثية الأبعاد. البحث باستخدام الواقع المعزز - العرض للتجارة الإلكترونية لكتالوج GOOGLE و وسائل التواصل الاجتماعي.",
+	"paragraphHeader3": "لقد جربت هذه التكنولوجيا في ندوة في التسعينيات أو العقد الأول من القرن الحادي والعشرين...",
+	"blogParagraph3Span1": "على الرغم من أنني اعتقدت أن هذا كان بمثابة مشاركة للذكريات في الأيام الأولى من مسيرتي المهنية في مجال المبيعات, إلا أنه بعد 4-5 سنوات من اكتساب الخبرة, أدركت أنه بدلاً من نقل ذكرياته, شكك عميلنا في إمكانية استخدام الواقع المعزز وأراد استخدام التكنولوجيا التي سيتم شرحها, مدعومة بالبيانات الحالية.",
+	"blogParagraph3Span2": "باختصار, أراد عميلنا أن يسأل:",
+	"paragraphList3Span3": "هذه التكنولوجيا موجودة منذ فترة طويلة, هل هناك تطور جديد يغير قواعد اللعبة في مجال التكنولوجيا؟",
+	"paragraphList3Span4": "على الرغم من أنها موجودة منذ فترة طويلة, إلا أن الناس لا يستخدمونها... لماذا يجب أن أستثمر؟",
+	"blogParagraph3Span5": "في نهاية هذه السلسلة, آمل أن أتمكن من مساعدة مسؤولي العلامات التجارية في إنشاء خرائط طريق للانتقال إلى تقنيات الواقع المعزز والرقمنة. أولاً, سأتطرق بإيجاز إلى الاختلافات بين الواقع المعزز والواقع الافتراضي, بدءًا من الموضوع الأكثر كتابةً عن.",
+	"blogParagraph3Span6": "ما هو الواقع المعزز؟ ما هي الاختلافات بين الواقع الافتراضي والواقع المعزز؟",
+	"blogParagraph3Span7": "تتعرف تقنية AR, والتي تعني الواقع المعزز باللغة الإنجليزية, على منطقة أو كائن في الحياة الواقعية وتسمح لنا بوضع المحتوى الرقمي في المناطق الحقيقية التي تتعرف عليها. يمكن أن يكون المحتوى المكتشف في بعض الأحيان جسمًا بشريًا, أو شعرًا بشريًا, أو مجرد شعر بشري في بعض الأحيان. الأرض أو السماء نفسها.",
+	"blogParagraph3Span8": "إن تشغيل تقنية الواقع المعزز ممكن من خلال الذكاء الاصطناعي ودعم أجهزة الاستشعار. على الرغم من أن متطلبات الذكاء الاصطناعي وأجهزة الاستشعار أعلى مقارنة بالواقع الافتراضي, إلا أنه لا يوجد عائق أمام انتشار التكنولوجيا بسبب متطلبات الواقع المعزز, نظرًا لأن هواتفنا الذكية هي أجهزة تعمل بالفعل توفير هذه.",
+	"blogParagraph3Span9": "VR يعني الواقع الافتراضي وهي التكنولوجيا التي يتم من خلالها عزلنا عن الحياة الواقعية بواسطة النظارات أو التكنولوجيا المشابهة ومن ثم نتفاعل مع المحتوى الرقمي في بيئة افتراضية. يتم عزل الاختلافات الحاسمة مع الواقع المعزز باستخدام جهاز غير موجود في عالمنا يعيش في الاستخدام الروتيني اليومي, مثل النظارات الذكية.على الرغم من أنه يمكننا تحويل هواتفنا إلى نظارات الواقع الافتراضي باستخدام الورق المقوى ووضع أيدينا كأجهزة دونجل, إلا أن الاستثمار في جهاز الواقع الافتراضي هو المفضل كخيار أكثر منطقية.",
+	"blogParagraph3Span10": "سننشر تدوينة مدونتنا الجديدة في أقرب وقت ممكن, حيث سنناقش الفرق بين الواقع المعزز والواقع الافتراضي بمزيد من التفاصيل ونفحص العلامات التجارية التي تستثمر في كلتا التقنيتين ومدى قابليتهما للمستهلكين, ولكن دعونا نجري مقارنة عامة ونوقف الأمر الموضوع عودة لموضوعنا الرئيسي وهو الأسئلة المتعلقة بتقنية الواقع المعزز وكيفية حل هذه الأسئلة.",
+	"blogParagraph3Span11": "هذه التكنولوجيا موجودة منذ فترة طويلة, ما الذي تغير؟",
+	"blogParagraph3Span12": "نعم, هذه التكنولوجيا موجودة منذ فترة طويلة, ولكن التكنولوجيا أصبحت متاحة للجميع في عام 2018. قبل عام 2017, تم استخدام رموز الاستجابة السريعة أو علامات الصور لكي تعمل التكنولوجيا. بسبب عدم وجود أجهزة استشعار ونقص الاصطناعي الذكاء, وضع الحجم لا يعمل بشكل صحيح وبسبب قيود أجهزة الجهاز, فهو غير واقعي. لا يمكن استخدام النموذج ثلاثي الأبعاد. في عام 2017, أصبحت التكنولوجيا متاحة لتطبيقات الهاتف المحمول مع أجهزة أبل في تلك الفترة, وفي عام 2018 , بما في ذلك الويب.",
+	"blogParagraph3Span13": "في الفترات التي سبقت عام 2017, عندما طلبنا طباعة رمز الاستجابة السريعة من الطابعة دون تجربة التكنولوجيا, كنت بالطبع تضع حاجزًا أمام انتشار التكنولوجيا. الآن, مع دعم الأجهزة بنسبة تزيد عن 90%, يمكن للتكنولوجيا العمل مع حجم حقيقي وجودة بيانات ثلاثية الأبعاد عالية دون الحاجة إلى تنزيل أي تطبيق.",
+	"blogParagraph3Span14": "على الرغم من وجود التكنولوجيا منذ فترة طويلة, إلا أن الناس لا يستخدمونها. هل يستخدمونها؟",
+	"blogParagraph3Span15": "في عام 2007, حددت شركة أبل مسارًا جديدًا لاستهلاك التكنولوجيا من خلال الجمع بين القرص المحمول ونظام التشغيل وشبكة الجيل الثالث, وبمساهمة العلامات التجارية المختلفة, تطورت التكنولوجيا بسرعة كبيرة خلال 15 عامًا. ومع زيادة عدد الكاميرات في العالم, الأجهزة وزيادة القدرات الرسومية للمعالجات, تطورت التكنولوجيا وأصبحت أرخص.",
+	"blogParagraph3Span16": "في دراسة معدلات دعم الأجهزة التي أجريناها لإحدى أكبر شركات التجارة الإلكترونية في تركيا, نعلم أن 89% من الأجهزة المستخدمة تدعم تقنية الواقع المعزز, وبين المستخدمين الذين لديهم حجم سلة معين وعادات شراء معينة, 96% من الأجهزة تدعم تقنية الواقع المعزز: يتمتع عملاؤنا الحاليون بواجهة المستخدم/تجربة المستخدم المناسبة ومن خلال التصميمات المعلوماتية, نرى ما يقرب من 50% من استخدام الواقع المعزز في بعض المنتجات.",
+	"blogParagraph3Span17": "نرى أن 40% من الزوار يستخدمون خيار الواقع المعزز في منتجات مثل أجهزة التلفاز والثلاجات في فئة السلع البيضاء, وفي الأرائك ذات 3 مقاعد ووحدات تحكم التلفزيون وخزائن الملابس والأسرة في فئة الأثاث. وفي منتجات مثل الطاولات بجانب السرير, الساعات والهواتف والمكانس الكهربائية, فإن الوقت المستغرق في العرض ثلاثي الأبعاد مرتفع جدًا.نرى أن الانتقال إلى الواقع المعزز أقل من 10%.",
+	"blogParagraph3Span18": "عندما ننظر إلى الأمر من منظور أكثر عمومية, نرى متوسط معدل تفضيل يزيد عن 25% مع خدمة الواقع المعزز \"See at Home\" المصممة بشكل صحيح. ونرى أنه من بين العملاء الذين قاموا بمدفوعات إيجابية, فإن معدل أولئك الذين لقد جربنا الواقع المعزز بنسبة 37.5%. وعندما ننظر إلى كل هذه البيانات, نرى أن تقنية الواقع المعزز أصبحت الآن جديدة ونتوقع أن الشركات التي لا تتحول إلى التكنولوجيا خلال العام المقبل ستفقد ميزتها الرائدة. ونعتقد أن العديد من الشركات سوف استكمال جهود الرقمنة باستخدام تقنية الواقع المعزز والثلاثي الأبعاد, مثل التحولات في مواقع التجارة الإلكترونية وتطبيقات الأجهزة المحمولة.",
+	"blogParagraph3Span19": "من يجب أن يستثمر في تكنولوجيا الواقع المعزز ولماذا؟",
+	"blogParagraph3Span20": "مع معدلات استخدام الأجهزة الذكية, يصل عملاؤنا الآن إلينا من خلال صفحاتنا أو تطبيقاتنا على الأجهزة المحمولة. عندما يكون الجمهور المستهدف هو b2c, نرى أن أكثر من 80% من الزوار يأتون عبر الأجهزة المحمولة, ولهذا السبب, تضع العلامات التجارية أولوياتها على الأجهزة المحمولة- أولاً, أي التوجه نحو الهاتف المحمول أولاً.",
+	"blogParagraph3Span21": "لذلك, فإن القرار العقلاني هو أنه بينما يتزايد استخدام الهواتف الذكية, التي تعد كل واحدة منها أعجوبة تكنولوجية, فإن العلامات التجارية ستوجه استثماراتها إلى هذا المجال. في عام 2021, بلغ حجم مبيعات التجارة الإلكترونية في تركيا 381 مليار ليرة تركية و18 مليار ليرة تركية. % من إجمالي التجارة الإلكترونية, وبحلول عام 2030 ستزيد عن هذا الرقم بنسبة 40%. يمكننا القول أن التجارة عبر الإنترنت ستتجاوز عمليًا التجارة خارج الإنترنت, مع الأخذ في الاعتبار المنتجات والخدمات التي لا يمكن تحويلها وغير مناسبة. بالنظر إلى مستقبل تحول التجارة إلى الأجهزة المتقدمة والقنوات عبر الإنترنت, لم نعد بحاجة إلى بيانات إضافية حول أهمية تقديم تجربة المنتج عبر الإنترنت لعملائنا.",
+	"blogParagraph3Span22": "السماح للزائرين الذين يأتون إلى تطبيقنا أو موقعنا الإلكتروني بتجربة المنتج بزاوية 360 درجة من خلال شاشات متنقلة صغيرة, مما يضمن فهم ميزاتهم المادية وتخصيصها, وتوفير خدمة \"الرؤية في المنزل\" في تجربة المنتج عبر الإنترنت, والتي لا يمكن توفيرها في التجارة دون اتصال بالإنترنت, ستؤدي بالطبع إلى زيادة مبيعاتنا وستوفر فرقًا تنافسيًا للشركات التي تتكيف مع التحول إلى الإنترنت. .",
+	"blogParagraph3Span23": "على الرغم من أن الاهتمام بظاهرة Metaverse, وهي إحدى التقنيات التي حققت قفزة في عام 2022, قد انخفض بسبب قلة استخدام الأجهزة على نطاق واسع وخيبات الأمل التي شهدتها الابتكارات الأخرى التي نمت بها, إلا أن Metaverse تواصل نموها أيضًا مع الأجهزة الرخيصة وزيادة الجودة المرئية, واستكمال الاستثمارات من قبل العلامات التجارية الكبرى, ومحتويات الاستهلاك الجديدة التي تم إنشاؤها لزيادة الانتشار. سوف تظهر لأول مرة المتوقعة وتشارك في حياتنا. وستكون الشركات قادرة على استخدام استثماراتهم الرقمية في تقنية الواقع المعزز كمحتوى في Metaverse. لذلك, يعد الواقع المعزز, المعروف أيضًا باسم RealWorld Metaverse, خطوة الدخول والتحول الأكثر منطقية للشركات في هذه المجالات.",
+	"blogParagraph3Span24": "العصر الذهبي للواقع المعزز؟",
+	"blogParagraph3Span25": "بصفتنا SugAR, نقدم تقنية الواقع المعزز لعلاماتنا التجارية منذ 5 سنوات, بدءًا من العلامات والواقع المعزز الذي يعمل مجانًا على أجهزة معينة فقط, يليه دعم الواقع المعزز في تطبيقات الهاتف المحمول لجميع الأجهزة, وتطبيق الواقع المعزز المجاني على الويب, ومواصلة مع الذكاء الاصطناعي لزيادة واقع كل مجال وكائن تم تعلمه باستخدام الواقع المعزز وتعزيز هذه التجارب. تم تحقيق هذا التقدم الثوري في تكنولوجيا الواقع المعزز خلال 5 سنوات بفضل عمالقة التكنولوجيا الذين طوروا الأجهزة وأنظمة التشغيل ومكتبات SDK والتعليمات البرمجية ادوات التطوير.",
+	"blogParagraph3Span26": "من بين عمالقة التكنولوجيا, يمكننا أن نحصي Google وApple وSnapchat وTiktok وMeta وMicrosoft وNiantici. إذًا, كيف يلزم العلامة التجارية هذه الشركات بالاستثمار في تكنولوجيا الواقع المعزز؟ دعنا نوضح بمثال.",
+	"blogParagraph3Span27": "العلامة التجارية التي تتلقى 50% من حركة تجارتها الإلكترونية من محركات البحث والإعلانات ووسائل التواصل الاجتماعي هي أكثر من مجرد منتج من قائمة نتائج بحث جوجل, حيث يتم عرض المنتجات في صور ثلاثية الأبعاد بدلاً من الصور, عند النقر على المنتجات , يمكن اختبارها في المنزل, وبالطبع, يعطون أولوية الإدراج للشركات التي توفر ذلك. \"سوف تتأثر.\"",
+	"blogParagraph3Span28": "دعونا لا نعتقد أن الجملة أعلاه هي تعليق وافتراض مستقبلي, فشركة Google تقدم الآن إصدارات ثلاثية الأبعاد من المنتجات في فئة الأحذية والأثاث للعملاء, وتعطي القائمة الأولوية لمواقع التجارة الإلكترونية التي تحتوي على هذه البيانات. مرة أخرى, تقدم Google إعلاناتها التعريفية لعملائها باستخدام تقنية 3D وAR. عندما يتم نشر الإعلانات بتقنية 3D, فإن نجاح تذكر العملاء يكون أعلى بنسبة 45% مقارنة بالصور ثنائية الأبعاد.",
+	"blogParagraph3Span29": "نحن نكمل منشور المدونة هذا هنا, ولكن في استمرار سلسلتنا, سنشرح بمزيد من التفصيل كيف ستصبح تقنية الواقع المعزز منتشرة على نطاق واسع مع استثمارات عمالقة التكنولوجيا. يمكنك التواصل معي من خلال ملفي الشخصي على LinkedIn أو صفحة الاتصال, نحن مستعدون دائمًا للإجابة على أسئلتك ودعم جهود رقمنة منتجات شركتك.",
+	"paragraphHeader4": "تجربة غامرة تستخدم كأسلوب جديد في وقت التصميم والعرض التقديمي لمصممي الديكور الداخلي والمستخدمين. ما هي تقنية الواقع المعزز/العرض في المنزل وكيف يتم استخدامها؟",
+	"paragraphHeader5": "لماذا يفضل مهندسو الديكور الداخلي تقنية الواقع المعزز/العرض في المنزل؟",
+	"paragraphHeader6": "كيف تؤثر تقنية الواقع المعزز/العرض في المنزل على قرارات الشراء بين العملاء/المستخدمين؟",
+	"paragraphHeader7": "ما هي Vision Pro, أول كاميرا ثلاثية الأبعاد من Apple تجمع بين تقنيات الواقع المعزز والواقع الافتراضي, وكيف تؤثر على التحول الرقمي؟",
+	"blogParagraph4Span1": "مثل جميع التخصصات, يتشكل نظام الهندسة المعمارية الداخلية باستمرار من خلال التحول الرقمي وقد استخدم تقنيات عرض مختلفة عبر التاريخ من أجل الحفاظ على مفهوم التصميم على قيد الحياة. وفي التسعينيات, لوحظ أن تقنيات الكمبيوتر بدأت تنعكس في التصميم الداخلي تصميمات.",
+	"blogParagraph4Span2": "بدأ مهندسو الديكور الداخلي في التعامل مع تصميماتهم بسهولة أكبر بكثير بدعم من الكمبيوتر, وانخفضت الأخطاء وأوجه القصور في عملية التصميم, وزادت الكفاءة, ومن ثم ظهر مفهوم الواقع المعزز بالإضافة إلى التصميم بمساعدة الكمبيوتر. تكنولوجيا الواقع المعزز, وهي عبارة عن وجزء من هذا التحول الرقمي, أحدث ثورة في التصميم. جلب",
+	"blogParagraph4Span3": "يحدث الواقع المعزز عن طريق وضع مكون افتراضي على مساحة حقيقية أو كائن داخل المساحة (أزوما, 1994). وبفضل الواقع المعزز, تحدث زيادة في جودة الإدراك دون أن ينفصل المستخدم عن العالم الذي يدركه.",
+	"blogParagraph4Span4": "في مجال الهندسة المعمارية الداخلية, تمنع تقنية الواقع المعزز/الرؤية في المنزل الخسائر من حيث الوقت والتكلفة من خلال الكشف عن العديد من الأشكال المختلفة للمواد المستخدمة في التصميم اليوم, مما يسمح للمنتجين والمستخدمين برؤية النسخة النهائية من التصميم. في هذه المرحلة, تعد تقنية الواقع المعزز/الرؤية في المنزل تصميمًا جديدًا للهندسة المعمارية الداخلية.",
+	"blogParagraph4Span5": "تقنية الواقع المعزز هي تقنية تستخدم بشكل فعال في مجال الهندسة المعمارية الداخلية ويتم إجراء دراسات التطوير ضمن هذا الإطار (وانغ, 2009). تتمتع تقنية الواقع المعزز بالقدرة على العمل بنشاط في منطقة عمل المهندس المعماري الداخلي.",
+	"blogParagraph4Span6": "يمكن للمصمم الداخلي والمستخدم رؤية الأثاث المصمم بزاوية 360 درجة, ثم اتخاذ قرارات سريعة بشأن بعض التفاصيل مثل تنوع المواد التي سيتم استخدامها وملاحظات التصميم, ومن ثم السماح للمستخدم بتجربتها افتراضيًا.",
+	"blogParagraph4Span7": "النماذج ثلاثية الأبعاد المجربة بتقنية الواقع المعزز وواقعية المكونات مثل الضوء واللون والمادة تجعل التعبير التصميمي أسهل. واليوم, ظهرت الأسباب العامة لاختيار تقنية الواقع المعزز والتي أصبحت إحدى طرق العرض الرقمي للتصميمات الداخلية, يمكن التعبير عنها على النحو التالي:",
+	"blogParagraph4Span8": "هناك نقطة أخرى تجعل تقنية الواقع المعزز مفضلة وهي أنها تسمح بتغطية اللون أو المادة أو الملمس الخاص بالتصميم بمادة موجودة بالفعل. تتميز طريقة عرض الواقع المعزز بميزة واقعية وتخلق أيضًا إمكانية الرسوم المتحركة. وبالتالي , يتم فحص التصميم من جميع جوانبه.",
+	"blogParagraph4Span9": "تعد تقنية الواقع المعزز أداة مبتكرة ومثيرة يمكن استخدامها في التصميم الداخلي لتعزيز عملية التصميم وتزويد العملاء بفهم أفضل للتصميم النهائي. وباستخدام تقنية الواقع المعزز, يمكن للمصممين إنشاء تجربة أكثر غامرة وجاذبية لعملائهم ",
+	"blogParagraph4Span10": "بالإضافة إلى ذلك, يمكن لتقنية الواقع المعزز أيضًا تحسين التواصل بين المصممين والعملاء. يمكن لمصممي الديكور الداخلي الذين يستخدمون تقنية الواقع المعزز أن يوضحوا للعملاء كيف سيبدو تصميمهم بالضبط, مما يمنع مشاكل الاتصال المحتملة ويؤدي إلى عملية تصميم أكثر تعاونًا ونجاحًا لأن العملاء لديهم رؤية واضحة فهم ما يمكن توقعه من النتيجة النهائية. سيكونون أكثر ارتياحًا. كمصمم داخلي, أعتقد أن تقنية الواقع المعزز ستستمر في لعب دور مهم في مستقبل صناعة التصميم.",
+	"blogParagraph4Span11": "يمكن لمهندسي الديكور الداخلي وضع الأثاث والإكسسوارات افتراضيًا في مساحة ما باستخدام تقنية الواقع المعزز. ومع الواقع المعزز, يمكن للمستخدمين أن يفهموا بشكل أفضل كيف ستبدو المنتجات المادية ومقدار المساحة التي ستشغلها المنتجات قبل وضعها. على الرغم من أن هذه التجربة هي مفهوم واقعي العرض التقديمي, يمكن لكل من المصمم الداخلي والمستخدم التفكير في التصميم. يسهل الإخطارات وقرارات الشراء.",
+	"blogParagraph4Span12": "تتمتع تقنية الواقع المعزز بالقدرة على التأثير على بيئة تتراوح من المصممين إلى المستخدمين, ومن تجار التجزئة للأثاث إلى الشركات المصنعة, وقد أصبحت اتجاهًا متناميًا في السنوات الأخيرة, حيث تبنتها العديد من الصناعات كأداة لتحسين تجارب العملاء. يعد عرض تجهيزات داخلية افتراضية في مساحة حقيقية وسيلة لمبيعات التجزئة. وقد لوحظ أن تجار تجزئة الأثاث يمكنهم الترويج لمنتجاتهم الجديدة باستخدام تقنية الواقع المعزز, وتقليل معدل العائد, وزيادة مبيعات المنتجات واكتساب عملاء جدد. لقد تم لاحظ أن تطبيقات الواقع المعزز التي تم تطويرها خصيصًا للمصممين والمستخدمين لديها القدرة على التأثير بشكل عميق على تصميمات الأثاث, وقد لوحظ أن التجارب في السنوات الأخيرة مع التحول الرقمي كشفت أن المستخدمين لديهم اهتمام فوق الطبيعي بالتفاعل مع تقنية الواقع المعزز. على الأجهزة الذكية (شال, 2013). وبالتالي, يمكننا التنبؤ بأن تقنية الواقع المعزز ستصل إلى عدد أكبر من المستخدمين كل يوم وتصبح جزءًا لا يتجزأ من الحياة اليومية بشكل دائم.",
+	"blogParagraph4Span13": "يمكن أيضًا استخدام تقنية الواقع المعزز كأداة تسويقية لجذب العملاء المحتملين. يمكن للشركات التي تستخدم تقنية الواقع المعزز إنشاء إعلانات جذابة وتفاعلية تجذب انتباه جمهورها المستهدف. ومن المعروف أن إعلانات الواقع المعزز أكثر فعالية من الإعلانات التقليدية من حيث زيادة الوعي بالعلامة التجارية ومشاركة العملاء. ونتيجة لذلك, لتقنية الواقع المعزز تأثير كبير على قرارات الشراء لدى المستهلكين. ومن خلال تزويد العملاء بتجربة تسوق أكثر غامرة وتفاعلية, فإنها تقلل من مخاطر شراء المنتجات التي قد لا تلبي احتياجاتهم.",
+	"blogParagraph4Span14": "قدمت شركة Apple Vision Pro, وهو أحد سلسلة منتجاتها الرئيسية الجديدة, في حدث WWDC السنوي هذا العام. وقد تمت الإشارة إلى البيانات الأولى التي تم الإدلاء بها لنظام التصوير فائق الدقة هذا أن Vision Pro هو أول كمبيوتر مكاني للشركة. هذا الجهاز المتطور ستدفع التكنولوجيا التحولات الرقمية إلى الأمام. من المتوقع أن تكون خطوة مهمة في الاتجاه الصحيح. تم تجهيز كاميرا Vision Pro بمستشعرات LiDAR التي يمكنها التقاط بيانات عميقة دقيقة ورسم خريطة للبيئة ثلاثية الأبعاد.",
+	"blogParagraph4Span15": "بفضل Vision Pro, الذي سيتم استخدامه بالصوت والأيدي بدلاً من أي تحكم مادي, فإن إنشاء تجارب واقع افتراضي غامرة لمصممي الديكور الداخلي ورؤية التصميمات الناتجة مسبقًا سيعطي زخمًا كبيرًا لصناعة التصميم. من خلال الجمع بين إمكانات رسم الخرائط ثلاثية الأبعاد باستخدام الكاميرا مع تقنيات الواقع الافتراضي والمعزز, يمكن لمصممي الديكور الداخلي القيام بجولات افتراضية لتصميماتهم. فبدلاً من تقديم تصميماتهم فعليًا لعملائهم, لديهم أيضًا البديل المتمثل في وضع عملائهم في تصميماتهم وتقديمهم في هذه البيئة الافتراضية. وبفضل هذا التحول الرقمي, يمكن لكل من مهندس الديكور الداخلي والعميل تجربة التصاميم التي سيتم تنفيذها بأبعاد حقيقية, في الموقع, مما يلغي الحاجة إلى إنتاج النموذج الأولي, الأمر الذي يجلب الوقت والتكلفة. الذي يجذب الانتباه ويزيد من حافز مصممي الديكور الداخلي, سيكون له تأثير قوي على صناعة التصميم في هذه المرحلة.",
+	"blogParagraph4Span16": "واحدة من أهم مزايا استخدام Vision Pro هي قدرة المهندسين المعماريين الداخليين على التعاون مع العملاء في الوقت الفعلي. وبهذه الطريقة, يمكن للعملاء المساهمة بأفكارهم ووجهات نظرهم الخاصة في المشروع, ومن خلال العمل مع المهندس المعماري الداخلي, توضيح احتياجاتهم وتوقعاتهم المحتملة بشأن المشروع, وهو أكثر انسجامًا وفعالية بميزاته التعاونية وواجهته البديهية, تعد Apple Vision Pro أولوية لجميع مصممي الديكور الداخلي الذين يرغبون في البقاء في الطليعة. أنا متحمس لاستكشاف القدرات هذه التكنولوجيا المبتكرة ونرى كيف يمكن استخدامها لإنشاء تصميمات مذهلة وعملية.",
+	"blog4ListItem1": "تصور واقعي وتغيير مادي فوري",
+	"blog4ListItem2": "توفير الوقت والتكلفة",
+	"blog4ListItem3": "مراجعة سهلة لتعليقات التصميم",
+	"blog4ListItem4": "التحجيم الفعلي.",
+	"paragraphAuthor2Span": "نحن نطور منتجات تمكن من حل مشكلات الحياة الواقعية من خلال حلول تعتمد على تقنيات الواقع المعزز والواقع الافتراضي والذكاء الاصطناعي, ونقوم بتطوير هذه المنتجات من خلال إشراك عملائنا.",
+	"paragraphHeader2": "\"إنشاء مفهوم...\"",
+	"squareHeader1": "طريقة سهلة وسريعة لاختيار الأثاث",
+	"squareHeader2": "لماذا يجب أن تحتوي منتجاتي على نماذج ثلاثية الأبعاد عالية الجودة",
+	"squareHeader3": "لماذا نحن في الوقت المناسب للاستثمار في تقنيات الواقع المعزز والتقنيات ثلاثية الأبعاد؟",
+	"squareHeader4": "ما هي تقنية الواقع المعزز/العرض في المنزل وكيف يتم استخدامها؟",
+	"commentHeader": "لقد حققنا زيادة كبيرة في مبيعاتنا عبر الإنترنت باستخدام تقنية \"See at Home\"",
+	"commentSpan": "لقد نجحنا في تسليم الأعمال الأصلية للفنانين إلى أماكن معيشة عملائنا. هذه التكنولوجيا, التي أطلقناها خلال فترة الوباء, لم تؤد إلى زيادة مبيعاتنا عبر الإنترنت فحسب, بل خفضت أيضًا متوسط زيارات المتجر الخمس التي تم إجراؤها لاتخاذ قرار الشراء إلى 1 ",
+	"commentHeader2": "نحن نعمل على مفهوم لجميع عملائنا في متاجرنا.",
+	"commentSpan2": "\"يتوقع منا عملاؤنا ليس فقط شرح المنتجات, ولكن أيضًا إنشاء دراسات مفاهيمية لمنتجاتنا في منازلهم. لقد اكتسبت تصميمات المنازل, التي كانت تستغرق في السابق أكثر من 10 ساعات من الجهد, سرعة بفضل تقنية RapidRender من SugAR. علاوة على ذلك, يمكننا الآن إنشاء عروض لعملائنا دون مغادرة المتجر. لقد تمكنا من تحقيق معدل مبيعات يزيد عن 80% بين عملائنا الذين أجرينا لهم دراسات مفاهيمية باستخدام RapidRender.\"",
+	"commentHeader3": "لقد وصلنا إلى آلاف العملاء باستخدام تقنية \"See at Home\"",
+	"commentSpan3": "باعتبارنا شركة Eco Carpet, لدينا 300 نقطة بيع في تركيا ونقوم بالتصدير إلى ما يقرب من 30 دولة. عند شراء السجاد, وهو منتجات تكميلية, نرى أن الجيل الجديد يحاول اختيار سجاده بما يتناسب مع أثاثه وديكوره, وإذا إذا لزم الأمر, يتلقون استشارات معمارية بشأن هذه المسألة. كما نقدم خدمات لزوارنا على موقعنا الإلكتروني باستخدام تقنية \"See at Home\". أردنا تقديم هذه الخدمة. في عالم التحول الرقمي, خاصة خلال فترة الوباء, وصلنا إلى الآلاف من العملاء الذين يستخدمون تقنية SugarAR وتقنية \"See at Home\".",
+	"commentHeader4": "لقد قمنا بزيادة احتمالية تحول عروضنا إلى مبيعات.",
+	"commentSpan4": "تتيح لنا تقنية Rapid Render توفير الكثير من الوقت من خلال تقصير عملية التصور. وبالتالي, يمكننا قضاء المزيد من الوقت في عملية التصميم, حيث نركز على رغبات واحتياجات عملائنا.",
+	"commentHeader5": "من خلال تقليل الأسئلة بين العلامة التجارية والمستخدم, قمنا بتقصير مراحل المبيعات.",
+	"commentSpan5": "تساعد تقنية \"See at Home\" في عملية اتخاذ القرار لعملائنا الذين لم يقرروا بعد بشأن خيارات الألوان والملمس وتؤثر بشكل إيجابي على معدل رضا العملاء/المستخدمين. فهي تكتشف اتجاه الضوء السائد, وتخلق انعكاسات في مادة المنتج وفقًا لذلك وينتج الألوان والأنسجة التي يتخيلها عملاؤنا بشكل أقرب إلى الواقع قدر الإمكان. يزيل هذا التطبيق علامات الاستفهام لدى عملائنا.",
+	"commentHeader6": "مع تقنية \"انظر في المنزل\" نتيح لك فرصة التخيل قبل اتخاذ قرار الشراء",
+	"commentSpan6": "لقد أعجب عملاؤنا بمنتجاتنا عندما زاروا متاجرنا, لكننا لم نتمكن من الإجابة على جميع الأسئلة التي تدور في أذهان عملائنا. ومع التكوين ثلاثي الأبعاد وتقنية See at Home, قدمنا الفرصة للتخيل قبل اتخاذ قرار الشراء. باعتبارنا أول شركة تنفذ هذه التكنولوجيا في تركيا, فإننا نعمل على توسيع مكتبتنا الرقمية. نحن نستثمر في التكنولوجيا لزيادة رضا العملاء. وسنستمر.",
+	"jointContainerHeader": "ضمان التكوين وفقًا لقواعد الإنتاج",
+	"jointContainerSpan": "اسمح لعملائك بإنشاء المنتج الذي يناسبهم عن طريق تغيير ودمج وحدات أو أجزاء من منتجاتك.",
+	"jointAboutHeader": "قواعد الجمعية",
+	"jointAboutSpan": "يمكن للعميل إنشاء مجموعات من المنتجات وفقًا لقواعد الارتباط. ويمكن للعميل إنشاء ركنه الخاص (أريكة, خزانة ملابس, إلخ.).",
+	"metaverse": "ميتافيرس",
+	"metaverseContainerHeader": "إنشاء متجر Metaverse الخاص بك",
+	"metaverseContainerSpan": "استعد لمستقبل التجارة الإلكترونية مع SugAR! قدم لعملائك تجربة تصورية غامرة للمنتج تلبي متطلبات Web3 وMetaverse, سواء عن طريق إنشاء النظام الأساسي الخاص بك أو باستخدام منصات جاهزة.",
+	"metaverseProject": "تألق بعلامتك التجارية في مركز التسوق الرقمي",
+	"metaverseProjectSpan": "شارك مع علامتك التجارية في مركز التسوق الرقمي, حيث ينتظر ما يقرب من 10 ملايين مستخدم بفارغ الصبر, وقدم تجربة تسوق ثورية. قدم لعملائك تجربة تسوق فريدة من نوعها من خلال تقديم منتجاتك في بيئة مكانية 360 درجة.",
+	"solutionSpan1": "اتصل بنا لرقمنة منتجاتك وتسليمها إلى الجماهير المستهدفة باستخدام برامج التكوين ثلاثي الأبعاد والواقع المعزز وبرامج الرسم ثلاثي الأبعاد.",
+	"solutionSpan2": "هل أنت مهندس معماري أو موظف مبيعات يقوم بتصميم المنازل والفنادق والمطابخ الاحترافية والمستودعات والمنازل الصغيرة؟ اتصل بنا لإكمال جهود التصميم الحالية في وقت أقل بنسبة 90% وتحقيق زيادة في المبيعات تصل إلى 80%.",
+	"solutionSpan3": "يمكنك زيادة مبيعاتك من خلال تجربة المنتج عبر الإنترنت على موقع التجارة الإلكترونية الخاص بك حيث تبيع الأحذية والملابس والمجوهرات والأثاث والسجاد واللوحات. وبينما تزداد معدلات التحويل لعملائك الذين يمكنهم تجربة التوأم الرقمي عبر الإنترنت, تنخفض معدلات العائد",
+	"solutionSpan4": "تصميم المنتجات, والعروض التقديمية للعملاء, والتواصل بين الفرق, والإصدار الجديد من التجارة الإلكترونية متوفر الآن في بيئات ثلاثية الأبعاد. اتصل بنا للاستثمار في الوقت المناسب.",
+	"shareBlogSpan": "",
+	"shoesQrHeader": "",
+	"shoesQrSpan": "",
+	"companyCustomerStatisticsSpan": "",
+	"projectStatisticsSpan": "",
+	"sugarBrand1Span": "بدأت شركة Istikbal, إحدى شركات الأثاث الرائدة في العالم والتي تضم 700 تاجر, خدمة التجارة الإلكترونية في عام 2022. واستمرارًا لاستثماراتها الرقمية, اختارت #Istikbal شركة SugAR Technology لتكون شريكها في تجربة المنتجات عبر الإنترنت والتحول الرقمي. في هذه العملية برمتها, تم استخدام التوائم الرقمية لـ تم إنتاج أكثر من 400 منتج من منتجات استقلال ومئات المواد على موقع istikbal.com.tr, الذي يخدم أكثر من 1,000,000 زائر شهريًا, يمكن للعملاء فحص المنتجات بزاوية 360 درجة ومشاهدتها في مساحات معيشتهم الخاصة بنقرة واحدة. 14% من يختبر الزائرون المنتجات في أماكن معيشتهم باستخدام تقنية الواقع المعزز.",
+	"sugarBrand2Span": "Tepe Home هي علامة تجارية متميزة اكتسبت مكانًا في عالم الأثاث بتاريخها الممتد 40 عامًا وأسلوبها الفريد. يتم تحويل منتجات العلامة التجارية, التي يتم تجديد كتالوجها بانتظام كل عام, إلى صيغة رقمية وعرضها لزوار الويب عبر tepehome.com .tr وإلى متاجرهم عبر RapidRender.app. بفضل التقنيات التي توفرها SugAR لقد زادت علامتنا التجارية من تحويل المبيعات بنسبة 45% على الويب و85% في المتاجر.",
+	"sugarBrand3Span": "بدأت Bellona, شركة الأثاث الرائدة حول العالم والتي تضم ما يقرب من 700 متجر, خدمة التجارة الإلكترونية في عام 2022. واستمرارًا لاستثماراتها الرقمية, اختارت #Bellona شركة SugAR Technology لتكون شريكها في تجربة المنتجات عبر الإنترنت والرقمنة. في هذه العملية برمتها , تم إنتاج أكثر من 300 منتج من منتجات Bellona ومئات من التوائم الرقمية للمادة. في bellona.com.tr, الذي يخدم أكثر من 700000 زائر شهريًا, يمكن للعملاء فحص المنتجات بزاوية 360 درجة وعرضها في مساحات المعيشة الخاصة بهم مع بنقرة واحدة. 17% من الزائرين يجربون المنتجات في أماكن معيشتهم باستخدام تقنية الواقع المعزز.",
+	"sugarSquadMember1Position": "مدير تجربة العملاء",
+	"sugarSquadMember2Position": "مدير نجاح العملاء",
+	"sugarSquadMember3Position": "الوحدة وقيادة الذكاء الاصطناعي",
+	"sugarSquadMember4Position": "مطور وحدة الفنان ثلاثي الأبعاد",
+	"sugarSquadMember5Position": "مطور الواجهة الأمامية",
+	"sugarSquadMember6Position": "قائد فريق Metaverse Env.",
+	"sugarSquadMember7Position": "أخصائي ثلاثي الأبعاد",
+	"sugarSquadMember8Position": "مهندس داخلي",
+	"leader1CommentSpan": "واصل مديرنا, الذي يتعامل مع المبيعات والتسويق وعلاقات المستثمرين, مسيرته المهنية من خلال شركة تكنولوجيا المعلومات الخاصة به بعد أن عمل في شركات مثل Allianz Sigorta وPartnera وDone. ويمكنك الوصول إليه من خلال معلومات الاتصال الخاصة به وLinkedin.",
+	"leader2CommentSpan": "لقد عمل مديرنا, الذي يقوم بتعيين فريق تكنولوجيا المعلومات وإدارته, كمدير أول في شركات مثل Allianz Sigorta وAccenture. ويمكنك الوصول إليه من خلال ملفه الشخصي على LinkedIn.",
+	"leader3CommentSpan": "يمكنك الوصول إلى مديرنا المسؤول عن CGI وإدارة الفريق ثلاثي الأبعاد والتوظيف من ملفه الشخصي على LinkedIn.",
+	"leader4CommentSpan": "يمكنك الوصول إلى قائد تكنولوجيا المعلومات لدينا, الذي يدير مشاريع تطوير الذكاء الاصطناعي والوحدة والواجهة الخلفية والواجهة الأمامية, من خلال ملفه الشخصي على LinkedIn.",
+	"whatsNewContainerSpan": "يمكن أيضًا توفير التكنولوجيا لزائر المتجر من خلال الكشك. ويمكن للعميل أيضًا تصميم غرفته. ويتم تحديد أسلوب العميل من خلال الإجابات المقدمة على الأسئلة. ويتم تصميم المنطقة المرسومة بمنتجات بالنمط المناسب المسمى نموذج الذكاء الاصطناعي, ويتم زيادة القيمة الجمالية لمساحة المعيشة مع الملحقات. ويكتمل التصميم بالذكاء الاصطناعي. . يتم العرض التلقائي في غضون ثوانٍ ويتم مشاركة الطريقة التي يفضلها العميل معه.",
+	"careers": "حياة مهنية",
+	"jobTitle": "وظيفة",
+	"phone": "هاتف",
+	"addCv": "إضافة سيرة ذاتية",
+	"cvAlert": "يمكنك إضافة ملفات يصل حجمها إلى 20 ميجابايت.",
+	"reportsHeader": "التقارير وإدارة العملاء",
+	"reportsFirstSpan": "متابعة العملاء ومراقبة أداء الموظفين",
+	"reportsSecondSpan": "يمكن للمتداولين الذين يستخدمون Rapid Render الاحتفاظ بسجلات عملائهم من خلال المشروع الذي يعملون عليه, ويمكن فحص أداء الموظفين من خلال البرنامج من خلال التحقق من المشروع الذي تم العمل عليه والعروض المقدمة.",
+	"contactCvHeader": "تقدم للمستقبل",
+	"contactCvSpan": "إذا لم تجد وظيفة أحلامك في عروضنا, فاترك لنا سيرتك الذاتية / معلومات الاتصال الخاصة بك للمستقبل!",
+	"submit": "يرسل",
+	"cookiesHeader": "السماح للكوكيز",
+	"cookiesSpan": "نحن نستخدم ملفات تعريف الارتباط لتخصيص المحتوى وتوفير الميزات وتحليل حركة المرور.",
+	"furniture": "أثاث",
+	"carpet": "ولاية",
+	"table": "طاولة",
+	"bathroomFurniture": "أثاث الحمام",
+	"beyazEsya": "الأجهزة المنزلية",
+	"decoration": "زخرفة",
+	"materials": "مواد",
+	"watch": "ساعة",
+	"shoes": "حذاء",
+	"clooth": "ملابس",
+	"textile": "الغزل والنسيج",
+	"light": "إضاءة",
+	"mainSolutionSpan": "يمكنك التعرف علينا بشكل أفضل من خلال الأمثلة الحية من خلال فحص حلولنا بالتفصيل في عشرات الفئات مثل الأثاث والسجاد ومنتجات الحمام والإكسسوارات والسلع الإلكترونية.",
+	"furnitureHeader": "أثاث",
+	"furnitureSpan": "نحن نقدم خدمات استبدال الأقمشة واستبدال الأثاث على مواقع التجارة الإلكترونية لعملائنا الحاليين. بينما نعمل على زيادة وقت الصفحة ومتوسط حجم سلة العلامات التجارية التي نعمل معها, فإننا نقوم بتقليل معدلات التخلي عن السلة. انقر لمراجعة حالات الاستخدام لدينا و احصل على معلومات اكثر.",
+	"carpetHeader": "ولاية",
+	"carpetSpan": "العملاء الذين يرغبون في شراء السجاد يريدون اختيار السجاد الذي يناسب ستائرهم وأثاثهم وأرضياتهم. إذا كانت هناك تقنية ويمكن لعملائنا تجربة السجاد الذي يحبونه في المنزل في ثوانٍ, اتخذوا قرارات الشراء الخاصة بهم بسرعة وأضفوا المنتجات إلى عربة التسوق, لنستمع إلى قصة العلامات التجارية التي حققت ذلك من خلال تقنية الواقع المعزز التي تقدمها SugAR انقر لـ ",
+	"tableHeader": "طاولة",
+	"tableSpan": "إن الأعمال الفنية واللوحات الفنية, التي تعد الأجزاء الأكثر قيمة في مساحات المعيشة, ليست منتجًا سهل الاختيار. يمكنك تحويل العملاء الذين يزورون المعارض الفنية ولا يمكنهم اتخاذ القرار بشأن اللوحة الأكثر مثالية إلى مبيعات من خلال موقع الويب الخاص بك. يمكنك تمكين عملائك من جرب الكتالوج الخاص بك بالكامل على جدرانهم من خلال موقع التجارة الإلكترونية الخاص بك. انقر للاستماع إلى قصص عملائنا الناجحين ",
+	"bathroomFurnitureHeader": "أثاث الحمام",
+	"bathroomFurnitureSpan": "الحمامات هي الغرف التي يحتاج فيها عملاؤك إلى استخدام مساحة صغيرة بأكثر الطرق فعالية. تقدم على منافسيك بخطوة واحدة من خلال السماح لعملائك بتجربة كبائن الاستحمام والمراحيض وغرف الغسيل والأحواض ومنتجات بانيا الأخرى في أماكن معيشتهم مع دقة تزيد عن 99%.",
+	"whiteGoodsHeader": "الأجهزة المنزلية",
+	"whiteGoodsSpan": "هل تتناسب الثلاجة أو التلفزيون أو الفرن الذي يرغب عميلك في شرائه مع المناطق المعنية؟ ما هو الجدار الأكثر ملاءمة لمكيف الهواء؟ ما هو سطح العمل الأكثر ملاءمة لطاولة المطبخ؟ يمكننا الإجابة على كل هذه الأسئلة لك العميل باستخدام تقنية See at Home, واعرض تقنياتك التي تصنع الاختلاف والاختلافات بين منتجاتك وبين منافسيك بنطاق 360 درجة ورسوم متحركة. يمكنك شرح ذلك من خلال. انقر للحصول على قصص علاماتنا التجارية الناجحة لمتاجر بيع الإلكترونيات بالتجزئة. ",
+	"decorationHeader": "زخرفة",
+	"decorationSpan": "اسمح لعميلك بتجربة الملحقات التي تعد عناصر مكملة لمساحات المعيشة في المنزل قبل الشراء. قلل من علامات الاستفهام وزاد مبيعاتك. يمكنك الاتصال بنا لمعرفة ما يمكننا فعله لعلامتك التجارية من خلال تجربة منتجاتنا الاختبارية.",
+	"materialsHeader": "مواد",
+	"materialsSpan": "هل أنت شركة مصنعة لورق الحائط, والطلاء, والأقمشة, والباركيه, وما إلى ذلك؟ اسمح برقمنة منتجاتك وإتاحتها للمحترفين في جميع أنحاء العالم. يمكنك الاتصال بنا للحصول على معلومات",
+	"watchHeader": "ساعة",
+	"watchSpan": "يمكن لعملائك تجربة الساعة التي تناسب معصمهم على موقع التجارة الإلكترونية الخاص بك. يمكنهم تقييم المنتج ومقارنته في غضون دقائق, وهو ما لا يمكنهم تجربته في المتاجر الفعلية. اتصل بنا للحصول على مزيد من المعلومات.",
+	"shoesHeader": "حذاء",
+	"shoesSpan": "قم بزيادة معدلات تحويل مبيعاتك من خلال تقديم أحذية افتراضية مناسبة لعملائك بواقعية عالية. يمكنك الاتصال بنا للحصول على طلباتك التجريبية.",
+	"cloothHeader": "ملابس",
+	"cloothSpan": "هل ترغب في تقديم اقتراحات الملابس لعملائك على الصور الرمزية ثلاثية الأبعاد؟ يتسوق عملاؤك بالملابس التي يضعونها على الصورة الرمزية ثلاثية الأبعاد بالحجم المناسب لهم. يمكنك الاتصال بنا لزيادة أرباح علامتك التجارية عن طريق تقليل عوائد البضائع.",
+	"textileHeader": "الغزل والنسيج",
+	"textileSpan": "يمكنك أن تمنح عملائك تجربة 360 درجة لمنتجاتك مثل أغطية الألحفة والأقمشة والستائر. يمكن لعملائك تكوين المنتجات وتجربتها في أماكن معيشتهم. اتصل بنا للحصول على مزيد من المعلومات.",
+	"lightHeader": "إضاءة",
+	"lightSpan": "اسمح لعملائك بتجربة منتجات الإضاءة الخاصة بك, والتي تعد عناصر مكملة لمساحات المعيشة, قبل شرائها. قلل من علامات الاستفهام وزاد مبيعاتك. يمكنك الاتصال بنا لمعرفة ما يمكننا فعله لعلامتك التجارية من خلال تجربة منتجاتنا الاختبارية.",
+	"blog3ListItem1": "يمكن استخدام تقنية الواقع المعزز بسهولة مع الأجهزة في حياتنا اليومية",
+	"blog3ListItem2": "يلزم استثمار جهاز جديد لتقنية الواقع الافتراضي.",
+	"blog3ListItem3": "يمكن استخدام تقنية الواقع المعزز في الحياة اليومية لأن المستخدم ليس معزولاً عن الحياة اليومية.",
+	"blog3ListItem4": "لا يمكن استخدام تقنية الواقع الافتراضي في الحياة اليومية. ولا يمكن تقديمها إلا في بيئات المنزل والمتاجر. إنها تعزل المستخدم.",
+	"blog3ListItem5": "التخطيط لتفاعلات طويلة مع الواقع المعزز أمر صعب.",
+	"blog3ListItem6": "باستخدام الواقع الافتراضي, من الممكن القيام بالأنشطة معًا ومواصلة التفاعل لفترة طويلة.",
+	"blog3ListItem7": "يوفر الواقع المعزز صورًا ثلاثية الأبعاد أفضل",
+	"blog3ListItem8": "إن الصورة ثلاثية الأبعاد التي تقدمها أجهزة الواقع الافتراضي محدودة بسبب تعدد المستخدمين, والأصول المستخدمة في تصميم البيئة, وعدم كفاية الأجهزة.",
+	"blog3ListItem9": "يمكن دمج الواقع المعزز في تدفق التجارة الإلكترونية الحالي",
+	"blog3ListItem10": "يتطلب الواقع الافتراضي والميتافيرس تغييرًا ثوريًا؛ حيث سيتم إعادة بناء الجهاز ومحرك البحث والتجارة الإلكترونية وستتغير العادات.",
+	"contactHeaderSuccesfuly": "شكرًا!",
+	"contactSpanSuccesfuly": "تم تسليم رسالتك بنجاح.",
+	"contactSecondSpanSuccesfuly": "أشكركم على الاتصال بنا.",
+	"contactHeaderError": "أُووبس!",
+	"contactSpanError": "لقد واجهنا مشكلة في تسليم رسالتك.",
+	"contactSecondSpanError": "يبدو أننا واجهنا مشكلة.",
+	"contactThirdSpanError": "يمكنك التواصل معنا عبر عنوان البريد الإلكتروني ورقم الهاتف.",
+	"contactHeaderLoading": "إرسال!",
+	"contactSpanLoading": "سيتم تسليم رسالتك قريبا.",
+	"contactSecondSpanLoading": "شكرا لإنتظارك.",
+	"contactHeaderFail": "أُووبس!",
+	"contactSpanFail": "لقد واجهنا مشكلة في تسليم رسالتك.",
+	"contactSecondSpanFail": "يُرجى التأكد من إدخال جميع المعلومات.",
+	"declineButton": "أنا لا أريد",
+	"acceptButton": "أقبل",
+	"joinNow": "انضم إليكم أيضًا",
+	"sugarBrandButton": "اقرأ في المدونة"
 }
