@@ -1,128 +1,91 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
-import './Customers.css'
+import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/navigation";
-import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
-import { useTranslation } from "react-i18next";
+import { Autoplay, Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import './Customers.css';
 
+export const Customers = () => {
+	const { t } = useTranslation();
+	const [isTablet, setIsTablet] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
 
-export const Customers = props => {
-  const { t } = useTranslation();
-  const [isTablet, setIsTablet] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 800);
+			setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+		};
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 800);
-      setIsTablet(window.innerWidth > 800 && window.innerWidth <= 1100);
+		handleResize();
 
-    };
+		window.addEventListener('resize', handleResize);
 
-    handleResize();
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
 
-    window.addEventListener('resize', handleResize);
+	const swiperSettings = {
+		spaceBetween: isMobile ? 20 : 50,
+		cssMode: true,
+		navigation: true,
+		modules: [Navigation, Pagination, Mousewheel, Keyboard, Autoplay],
+		className: "mySwiper",
+		slidesPerView: isMobile ? 3.5 : 5,
+		loop: true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			clickable: true,
+			dynamicBullets: true,
+			dynamicMainBullets: 4,
+		},
+		keyboard: {
+			enabled: true,
+		},
+		mousewheel: {
+			enabled: true,
+		},
+		style: {
+			"--swiper-navigation-size": "30px",
+		},
+	};
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+	const images = [
+		"/assets/img/bellona.svg",
+		"/assets/img/doqu_home.svg",
+		"/assets/img/istikbal.svg",
+		"/assets/img/mondi.svg",
+		"/assets/img/vivense.svg",
+		"/assets/img/weltew.svg",
+		"/assets/img/kys_design.svg",
+		"/assets/img/tepe-home-min.svg",
+		"/assets/img/vestel-logo-min.svg",
+		"/assets/img/simurgLogo.svg",
+		"/assets/img/lazzoni-logo.svg",
+		"/assets/img/creavit_logo-min.svg",
+		"/assets/img/ekohalilogo.svg",
+		"/assets/img/tilia.svg",
+		"/assets/img/kaas.svg",
+		"/assets/img/gabba.svg",
+		"/assets/img/homillia.svg",
+		"/assets/img/homeandrugs.svg",
+		"/assets/img/pasaj.svg",
+	];
 
-  const swiperSettings = {
-    spaceBetween: isMobile ? 20 : 50,
-    cssMode: true,
-    navigation: true,
-    modules: [Navigation, Pagination, Mousewheel, Keyboard, Autoplay],
-    className: "mySwiper",
-    slidesPerView: isMobile ? 3.5 : 5,
-    spaceBetween: 60,
-    loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      clickable: true,
-      dynamicBullets: true,
-      dynamicMainBullets: 4,
-    },
-    keyboard: {
-      enabled: true,
-    },
-    mousewheel: {
-      enabled: true,
-    },
-    style: {
-      "--swiper-navigation-size": "30px",
-    },
-
-  };
-
-  return (
-
-    <div style={{ overflow: "hidden" }}>
-
-      <Swiper {...swiperSettings} style={{ height: "25vh" }}>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/bellona.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/doqu_home.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/istikbal.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/mondi.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/vivense.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/weltew.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/kys_design.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/tepe-home-min.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/vestel-logo-min.svg"}></img>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/simurgLogo.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/lazzoni-logo.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/creavit_logo-min.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/ekohalilogo.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/tilia.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/kaas.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/gabba.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/homillia.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/homeandrugs.svg"}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src={process.env.PUBLIC_URL + "/assets/img/pasaj.svg"}></img>
-        </SwiperSlide>
-      </Swiper>
-    </div>
-  );
+	return (
+		<div className="customers-page" style={{ overflow: "hidden" }}>
+			<Swiper {...swiperSettings} style={{ height: "25vh" }}>
+				{images.map((image, index) => (
+					<SwiperSlide key={index}>
+						<img className="customers-slide-img" alt="" src={process.env.PUBLIC_URL + image}></img>
+					</SwiperSlide>
+				))}
+			</Swiper>
+		</div>
+	);
 };

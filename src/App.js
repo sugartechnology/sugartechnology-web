@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
+import { useEffect, useState } from "react";
 import { initReactI18next } from "react-i18next";
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -7,11 +8,8 @@ import { Contact } from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { AboutUs } from './pages/aboutUs/AboutUs';
-import { Blog1 } from './pages/blogs/Blog1';
-import { Blog2 } from './pages/blogs/Blog2';
-import { Blog3 } from './pages/blogs/Blog3';
-import { Blog4 } from './pages/blogs/Blog4';
-import { Blogs } from './pages/blogs/Blogs';
+import { BlogContainerPage } from "./pages/blogs/BlogContainerPage";
+import { BlogsPage } from "./pages/blogs/BlogsPage";
 import { ContactUs } from './pages/contactUs/ContactUs';
 import { ContactUsCv } from './pages/contactUs/ContactUsCv';
 import { MainPage } from './pages/main/MainPage';
@@ -34,28 +32,50 @@ i18n
   .init({
     fallbackLng: "tr",
     resources: {
-      en: {
-        translation: require("../src/locales/en.json"),
-      },
-      tr: {
-        translation: require("../src/locales/tr.json"),
-      },
-      fr: {
-        translation: require("../src/locales/fr.json"),
-      },
-      de: {
-        translation: require("../src/locales/de.json"),
-      },
-      it: {
-        translation: require("../src/locales/it.json"),
-      },
-      ar: {
-        translation: require("../src/locales/ar.json"),
-      },
+      en: {translation: require("../src/locales/en.json"),},
+      tr: {translation: require("../src/locales/tr.json"),},
+      fr: {translation: require("../src/locales/fr.json"),},
+      de: {translation: require("../src/locales/de.json"),},
+      it: {translation: require("../src/locales/it.json"),},
+      ar: {translation: require("../src/locales/ar.json"),},
     },
   });
 
 function App() {
+  const [blogThumbs, setPageThumbs] = useState([]);
+  const [blogUrls, setPageUrls] = useState([]);
+ 
+  useEffect(() => {
+    const fetchPages = async () => {
+      try {
+		const url = 'http://localhost:7980/api/blogs/published-pages/SUGARTECH_IO';
+		// const url = process.env.REACT_APP_BACKEND_API + 'api/blogs/published-pages/SUGARTECH_IO';
+		const response = await fetch(url);
+		const data = await response.json();
+		return data;
+      } catch (error) {
+      }
+    };
+    fetchPages().then(pages => {
+      if (pages === undefined || pages.length < 1) return;
+      const urls = pages.map(p => {
+        return {
+          ar: p.urlAr,
+          de: p.urlDe,
+          en: p.urlEn,
+          es: p.urlEs,
+          fr: p.urlFr,
+          it: p.urlIt,
+          tr: p.urlTr
+		}
+      });
+      const thumbs = pages.map(page => page.thumb);
+
+      setPageUrls(urls);
+      setPageThumbs(thumbs);
+    })
+  }, []);
+
   return (
         <div>
           <Header></Header>
@@ -74,11 +94,14 @@ function App() {
             <Route path='/productDecoration' element={<ProductDecoration></ProductDecoration>}></Route>
             <Route path='/productTextile' element={<ProductTextile></ProductTextile>}></Route>
             <Route path='/aboutUs' element={<AboutUs></AboutUs>}></Route>
-            <Route path='/sugarBlog1' element={<Blog1></Blog1>}></Route>
-            <Route path='/sugarBlog2' element={<Blog2></Blog2>}></Route>
-            <Route path='/sugarBlog3' element={<Blog3></Blog3>}></Route>
-            <Route path='/sugarBlog4' element={<Blog4></Blog4>}></Route>
-            <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+			<Route path="/blogs" element={<BlogsPage thumbs={blogThumbs} urls={blogUrls} />} />
+				{blogUrls && blogUrls.length > 0 && blogUrls.map((urls, index) => (
+					blogThumbs[index] &&
+					<Route key={index}
+						path={`/blog${index}`}
+						element={<BlogContainerPage urls={urls} />} />
+				)
+				)}
             <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
             <Route path='/contactCv' element={<ContactUsCv></ContactUsCv>}></Route>
           </Routes>

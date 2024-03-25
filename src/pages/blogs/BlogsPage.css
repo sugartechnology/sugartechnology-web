@@ -1,0 +1,23 @@
+.blog-swiper-slide {
+	width: 346px !important;
+	height: 480px !important;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+	user-select: none;
+}
+
+.blog-swiper-slide img {
+	width: auto;
+	height: 100%;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+	overflow: hidden;
+	user-select: none;
+}
+
+.blogs-swiper {
+	width: 100%;
+	padding: 20px 0;
+}
