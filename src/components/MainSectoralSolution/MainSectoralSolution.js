@@ -1,250 +1,250 @@
-import './MainSectoralSolution.css';
+import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
-import React, { useEffect, useState } from 'react';
+import './MainSectoralSolution.css';
 
 
 export const MainSectoralSolution = (props) => {
-    const [showPopUp, setShowPopUp] = useState(false);
-    const [index, setIndex] = useState(0);
-    const clickedPopUp = () => {
-        setShowPopUp(!showPopUp);
-    }
-    const { t } = useTranslation();
-    const solutionArray = [
-        {
-            url: "./assets/img/solutionImages/koltuk.svg",
-            header: t("furnitureHeader"),
-            span: t("furnitureSpan"),
-            link: "/productAr",
-            popupImage: "./assets/img/ShowAtHomeImage.webp"
-        },
-        {
-            url: "./assets/img/solutionImages/halı.svg",
-            header: t("carpetHeader"),
-            span: t("carpetSpan"),
-            link: "/productCarpet",
-            popupImage: "./assets/img/products/carpet.svg"
-        },
-        {
-            url: "./assets/img/solutionImages/tablo.webp",
-            header: t("tableHeader"),
-            span: t("tableSpan"),
-            link: "/productTable",
-            popupImage: "./assets/img/products/tablo.svg"
-        },
-        {
-            url: "./assets/img/solutionImages/banyo.svg",
-            header: t("bathroomFurnitureHeader"),
-            span: t("bathroomFurnitureSpan"),
-            link: "/productBathroom",
-            popupImage: "./assets/img/products/banyo.svg"
-        },
-        {
-            url: "./assets/img/solutionImages/beyazEşya.webp",
-            header: t("whiteGoodsHeader"),
-            span: t("whiteGoodsSpan"),
-            link: "/productWhiteGoods",
-            popupImage: "./assets/img/products/beyazEsya.svg"
-        },
-        {
-            url: "./assets/img/solutionImages/aksesuarlar.webp",
-            header: t("decorationHeader"),
-            span: t("decorationSpan"),
-            link: "/productDecoration",
-            popupImage: "./assets/img/products/dekorasyon.svg"
-        },
-        {
-            url: "./assets/img/solutionImages/materyaller.svg",
-            header: t("materialsHeader"),
-            span: t("materialsSpan"),
-            popupImage: "./assets/img/products/materials.svg"
-        },
-        {
-            url: "./assets/img/solutionImages/saat.webp",
-            header: t("watchHeader"),
-            span: t("watchSpan"),
-            link: "/productWatch",
-            popupImage: "./assets/img/watchImage.webp"
-        },
-        {
-            url: "./assets/img/solutionImages/ayakkabı.webp",
-            header: t("shoesHeader"),
-            span: t("shoesSpan"),
-            link: "/productShoes",
-            popupImage: "./assets/img/shoesImage.webp"
-        },
-        {
-            url: "./assets/img/solutionImages/kıyafet.webp",
-            header: t("cloothHeader"),
-            span: t("cloothSpan"),
-            link: "/productClooth",
-            popupImage: "./assets/img/cloothImage.webp"
-        },
-        {
-            url: "./assets/img/solutionImages/tekstil.webp",
-            header: t("textileHeader"),
-            span: t("textileSpan"),
-            link: "/productTextile",
-            popupImage: "./assets/img/products/tekstil.svg"
-        },
-        {
-            url: "./assets/img/solutionImages/ışık.svg",
-            header: t("lightHeader"),
-            span: t("lightSpan"),
-            popupImage: "./assets/img/products/light.svg"
-        }
-    ];
+	const [showPopUp, setShowPopUp] = useState(false);
+	const [index, setIndex] = useState(0);
+	const clickedPopUp = () => {
+		setShowPopUp(!showPopUp);
+	}
+	const { t } = useTranslation();
+	const solutionArray = [
+		{
+			url: "./assets/img/solutionImages/koltuk.svg",
+			header: t("furnitureHeader"),
+			span: t("furnitureSpan"),
+			link: "/productAr",
+			popupImage: "./assets/img/ShowAtHomeImage.webp"
+		},
+		{
+			url: "./assets/img/solutionImages/halı.svg",
+			header: t("carpetHeader"),
+			span: t("carpetSpan"),
+			link: "/productCarpet",
+			popupImage: "./assets/img/products/carpet.svg"
+		},
+		{
+			url: "./assets/img/solutionImages/tablo.webp",
+			header: t("tableHeader"),
+			span: t("tableSpan"),
+			link: "/productTable",
+			popupImage: "./assets/img/products/tablo.svg"
+		},
+		{
+			url: "./assets/img/solutionImages/banyo.svg",
+			header: t("bathroomFurnitureHeader"),
+			span: t("bathroomFurnitureSpan"),
+			link: "/productBathroom",
+			popupImage: "./assets/img/products/banyo.svg"
+		},
+		{
+			url: "./assets/img/solutionImages/beyazEşya.webp",
+			header: t("whiteGoodsHeader"),
+			span: t("whiteGoodsSpan"),
+			link: "/productWhiteGoods",
+			popupImage: "./assets/img/products/beyazEsya.svg"
+		},
+		{
+			url: "./assets/img/solutionImages/aksesuarlar.webp",
+			header: t("decorationHeader"),
+			span: t("decorationSpan"),
+			link: "/productDecoration",
+			popupImage: "./assets/img/products/dekorasyon.svg"
+		},
+		{
+			url: "./assets/img/solutionImages/materyaller.svg",
+			header: t("materialsHeader"),
+			span: t("materialsSpan"),
+			popupImage: "./assets/img/products/materials.svg"
+		},
+		{
+			url: "./assets/img/solutionImages/saat.webp",
+			header: t("watchHeader"),
+			span: t("watchSpan"),
+			link: "/productWatch",
+			popupImage: "./assets/img/watchImage.webp"
+		},
+		{
+			url: "./assets/img/solutionImages/ayakkabı.webp",
+			header: t("shoesHeader"),
+			span: t("shoesSpan"),
+			link: "/productShoes",
+			popupImage: "./assets/img/shoesImage.webp"
+		},
+		{
+			url: "./assets/img/solutionImages/kıyafet.webp",
+			header: t("cloothHeader"),
+			span: t("cloothSpan"),
+			link: "/productClooth",
+			popupImage: "./assets/img/cloothImage.webp"
+		},
+		{
+			url: "./assets/img/solutionImages/tekstil.webp",
+			header: t("textileHeader"),
+			span: t("textileSpan"),
+			link: "/productTextile",
+			popupImage: "./assets/img/products/tekstil.svg"
+		},
+		{
+			url: "./assets/img/solutionImages/ışık.svg",
+			header: t("lightHeader"),
+			span: t("lightSpan"),
+			popupImage: "./assets/img/products/light.svg"
+		}
+	];
 
-    const ShowPopUp = (index) => {
-        return (
-            <>
-                <div className='popupOverlay' style={showPopUp ? { display: "flex" } : { display: "none" }}>
-                </div>
-                <div className='popup' style={showPopUp ? { display: "flex" } : { display: "none" }}>
-                    <div className='popupCloseButtons'>
-                        <img className='popupCloseButton' src="./assets/img/popupVector2.svg" onClick={() => { clickedPopUp() }} />
-                    </div>
-                    <div className='popupSpans'>
-                        <div className='popupSpanElements'>
-                            <a className='showAtHomeHeader'> {solutionArray[index].header} </a>
-                            <a className='popupSpan'> {solutionArray[index].span} </a>
-                        </div>
-                        <a className='popupButton' style={solutionArray[index].header ? { display: "flex" } : { display: "none" }}>
-                            <a className='showAtHomeButton1' href={solutionArray[index].link}>{t("usecase")}</a>
-                        </a>
+	const ShowPopUp = (index) => {
+		return (
+			<div>
+				<div className='popupOverlay' style={showPopUp ? { display: "flex" } : { display: "none" }}>
+				</div>
+				<div className='popup' style={showPopUp ? { display: "flex" } : { display: "none" }}>
+					<div className='popupCloseButtons'>
+						<img className='popupCloseButton' alt="" src="./assets/img/popupVector2.svg" onClick={() => { clickedPopUp() }} />
+					</div>
+					<div className='popupSpans'>
+						<div className='popupSpanElements'>
+							<div className='showAtHomeHeader'> {solutionArray[index].header} </div>
+							<div className='popupSpan'> {solutionArray[index].span} </div>
+						</div>
+						<div className='popupButton' style={solutionArray[index].header ? { display: "flex" } : { display: "none" }}>
+							<a className='showAtHomeButton1' href={solutionArray[index].link}>{t("usecase")}</a>
+						</div>
 
-                    </div>
-                    <div className='popupImageDiv'>
-                        <img className='showAtHomeImage' src={solutionArray[index].popupImage} />
-                    </div>
-                </div>
-            </>
-        )
-    }
+					</div>
+					<div className='popupImageDiv'>
+						<img className='showAtHomeImage' alt="" src={solutionArray[index].popupImage} />
+					</div>
+				</div>
+			</div>
+		)
+	}
 
-    // const selectSolution = (event) => {
+	// const selectSolution = (event) => {
 
-    //     const index = parseInt(event.target.getAttribute("index"));
+	//     const index = parseInt(event.target.getAttribute("index"));
 
-    //     let parentElement = event.target.parentElement;
+	//     let parentElement = event.target.parentElement;
 
-    //     while (parentElement && !parentElement.classList.contains("solutionGroup")) {
-    //         parentElement = parentElement.parentElement;
-    //     }
+	//     while (parentElement && !parentElement.classList.contains("solutionGroup")) {
+	//         parentElement = parentElement.parentElement;
+	//     }
 
-    //     const solutionItem = event.target.closest(".solutionItem");
+	//     const solutionItem = event.target.closest(".solutionItem");
 
-    //     const existingPopups = document.querySelectorAll(".popup");
+	//     const existingPopups = document.querySelectorAll(".popup");
 
-    //     existingPopups.forEach((popup) => {
-    //         if (popup || popup.parentNode !== solutionItem) {
-    //             popup.remove();
-    //         }
-    //     });
+	//     existingPopups.forEach((popup) => {
+	//         if (popup || popup.parentNode !== solutionItem) {
+	//             popup.remove();
+	//         }
+	//     });
 
-    //     const popupContainer = document.createElement("div");
-    //     popupContainer.classList.add("popup");
+	//     const popupContainer = document.createElement("div");
+	//     popupContainer.classList.add("popup");
 
-    //     const overlay = document.createElement("div");
-    //     overlay.classList.add("popupOverlay");
+	//     const overlay = document.createElement("div");
+	//     overlay.classList.add("popupOverlay");
 
-    //     const closeButtons = document.createElement("div");
-    //     closeButtons.classList.add("popupCloseButtons");
-    //     popupContainer.appendChild(closeButtons);
+	//     const closeButtons = document.createElement("div");
+	//     closeButtons.classList.add("popupCloseButtons");
+	//     popupContainer.appendChild(closeButtons);
 
-    //     const closeIcon = document.createElement("img");
-    //     closeIcon.src = "./assets/img/popupVector2.svg";
-    //     closeIcon.classList.add("popupCloseButton");
-    //     closeButtons.appendChild(closeIcon);
-    //     console.log(overlay.parentElement);
-    //     closeIcon.addEventListener("click", () => {
-    //         const popup = closeIcon.closest(".popup");
-    //         const overlay = document.querySelector(".popupOverlay");
-    //         if (popup) {
-    //             popup.parentElement.removeChild(popup);
-    //             overlay.parentElement.removeChild(overlay);
-    //         }
-    //     });
+	//     const closeIcon = document.createElement("img");
+	//     closeIcon.src = "./assets/img/popupVector2.svg";
+	//     closeIcon.classList.add("popupCloseButton");
+	//     closeButtons.appendChild(closeIcon);
+	//     console.log(overlay.parentElement);
+	//     closeIcon.addEventListener("click", () => {
+	//         const popup = closeIcon.closest(".popup");
+	//         const overlay = document.querySelector(".popupOverlay");
+	//         if (popup) {
+	//             popup.parentElement.removeChild(popup);
+	//             overlay.parentElement.removeChild(overlay);
+	//         }
+	//     });
 
-    //     const popupSpans = document.createElement("div");
-    //     popupSpans.classList.add("popupSpans");
-    //     popupContainer.appendChild(popupSpans);
+	//     const popupSpans = document.createElement("div");
+	//     popupSpans.classList.add("popupSpans");
+	//     popupContainer.appendChild(popupSpans);
 
-    //     const popupSpanElements = document.createElement("div");
-    //     popupSpanElements.classList.add("popupSpanElements");
-    //     popupSpans.appendChild(popupSpanElements);
+	//     const popupSpanElements = document.createElement("div");
+	//     popupSpanElements.classList.add("popupSpanElements");
+	//     popupSpans.appendChild(popupSpanElements);
 
-    //     const header = document.createElement("a");
-    //     header.classList.add("showAtHomeHeader");
-    //     header.innerHTML = solutionArray[index].header;
-    //     popupSpanElements.appendChild(header);
+	//     const header = document.createElement("a");
+	//     header.classList.add("showAtHomeHeader");
+	//     header.innerHTML = solutionArray[index].header;
+	//     popupSpanElements.appendChild(header);
 
-    //     const span = document.createElement("a");
-    //     span.classList.add("popupSpan");
-    //     span.innerHTML = solutionArray[index].span;
-    //     popupSpanElements.appendChild(span);
+	//     const span = document.createElement("a");
+	//     span.classList.add("popupSpan");
+	//     span.innerHTML = solutionArray[index].span;
+	//     popupSpanElements.appendChild(span);
 
-    //     const popupButton = document.createElement("a");
-    //     popupButton.classList.add("popupButton");
-    //     popupSpans.appendChild(popupButton);
+	//     const popupButton = document.createElement("a");
+	//     popupButton.classList.add("popupButton");
+	//     popupSpans.appendChild(popupButton);
 
-    //     if (solutionArray[index].link) {
-    //         const button = document.createElement("a");
-    //         button.classList.add("showAtHomeButton1");
-    //         button.innerHTML = t("usecase");
-    //         button.href = solutionArray[index].link;
-    //         popupButton.appendChild(button);
+	//     if (solutionArray[index].link) {
+	//         const button = document.createElement("a");
+	//         button.classList.add("showAtHomeButton1");
+	//         button.innerHTML = t("usecase");
+	//         button.href = solutionArray[index].link;
+	//         popupButton.appendChild(button);
 
-    //     } else {
-    //         popupButton.style.display = "none";
-    //     }
-    //     const popupImageDiv = document.createElement("div");
-    //     popupImageDiv.classList.add("popupImageDiv");
-    //     popupContainer.appendChild(popupImageDiv);
+	//     } else {
+	//         popupButton.style.display = "none";
+	//     }
+	//     const popupImageDiv = document.createElement("div");
+	//     popupImageDiv.classList.add("popupImageDiv");
+	//     popupContainer.appendChild(popupImageDiv);
 
-    //     const popupImage = document.createElement("img");
-    //     popupImage.classList.add("showAtHomeImage");
-    //     popupImage.src = solutionArray[index].popupImage;
-    //     popupImageDiv.appendChild(popupImage);
+	//     const popupImage = document.createElement("img");
+	//     popupImage.classList.add("showAtHomeImage");
+	//     popupImage.src = solutionArray[index].popupImage;
+	//     popupImageDiv.appendChild(popupImage);
 
-    //     solutionItem.appendChild(overlay);
-    //     solutionItem.appendChild(popupContainer);
+	//     solutionItem.appendChild(overlay);
+	//     solutionItem.appendChild(popupContainer);
 
-    //     const solutionImages = document.querySelectorAll(".solutionImage");
+	//     const solutionImages = document.querySelectorAll(".solutionImage");
 
-    //     solutionImages.forEach((item) => {
-    //         const itemIndex = parseInt(item.getAttribute("index"));
-    //         if (itemIndex === index) {
-    //             item.classList.add("selected");
-    //         } else {
-    //             item.classList.remove("selected");
-    //         }
-    //     });
-    // };
+	//     solutionImages.forEach((item) => {
+	//         const itemIndex = parseInt(item.getAttribute("index"));
+	//         if (itemIndex === index) {
+	//             item.classList.add("selected");
+	//         } else {
+	//             item.classList.remove("selected");
+	//         }
+	//     });
+	// };
 
-    return (
-        <div className='mainSectoralSolutionContainer'>
-            <div className='mainSolutionHeader'>
-                <img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
-                <h1>{t("sectoralSolution")}</h1>
-                <img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
-            </div>
-            <div className='mainSolutionSpans'>
-                <a className='mainSolutionSpan' style={{ padding: "0px 30px" }}>{t("mainSolutionSpan")}
-                </a>
-            </div>
-            <div className="solutionItems">
-                {ShowPopUp(index)}
-                {solutionArray.map((item, index) => (
-                    <div className='solutionItem'>
-                        <img src={item.url} onClick={() => {
-                            setIndex(index);
-                            clickedPopUp()
-                        }} />
-                        <a className='solutionSpans'>{t(item.header)}</a>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+	return (
+		<div className='mainSectoralSolutionContainer'>
+			<div className='mainSolutionHeader'>
+				<img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
+				<h1>{t("sectoralSolution")}</h1>
+				<img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
+			</div>
+			<div className='mainSolutionSpans'>
+				<span className='mainSolutionSpan' style={{ padding: "0px 30px" }}>{t("mainSolutionSpan")}
+				</span>
+			</div>
+			<div className="solutionItems">
+				{ShowPopUp(index)}
+				{solutionArray.map((item, index) => (
+					<div className='solutionItem' key={index}>
+						<img src={item.url} alt="" onClick={() => {
+							setIndex(index);
+							clickedPopUp()
+						}} />
+						<span className='solutionSpans'>{t(item.header)}</span>
+					</div>
+				))}
+			</div>
+		</div>
+	);
 }

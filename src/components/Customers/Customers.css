@@ -1,162 +1,166 @@
-  .swiper-slide {
-    text-align: justify;
-    font-size: 18px;
-    /* Center slide text vertically */
-    display: flex!important;
-    justify-content: center;
-    align-items: center;
-
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 170px!important;
-    
-    height: auto;
-    max-height: 80px;
-  }
-
-  .swiper-button-next {
-    width: 10px;
-    height: 21px;
-    left: 76.78px;
-    top: 1604px;
-    
-  }
-
-  .swiper-button-next::after{
-    content: 'next';
-    color: #606060!important;
-    background-size: 30% ;
-    background-position: center;
-    font-size: 20px;
-  }
-
-  .swiper-pagination-bullet {
-    background-color: #636363 !important;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: #ff0000 !important;
-  }
-
-  .swiper-button-prev {
-    width: 10px;
-    height: 21px;
-    left: 76.78px;
-    top: 1604px;
-  }
-  
-  .swiper-wrapper{
-    left: 10%;
-    width: 80% !important;
-  }
-  
-  .swiper-button-prev::after{
-    content: 'next';
-    color: #606060!important;
-    background-size: 30% ;
-    background-position: center;
-    font-size: 20px;
-  }
-
-  .customersSpan{
-    
-    width: 100%;
-    display: block;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 26px;
-    text-align: center;
-    text-transform: capitalize;
-    color: #666666;
-    margin-top: 40px;
-  }
-
-  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
-    bottom: 25px;
-  }
-
-  .swiper-button-next{
-    right: 60px !important;
-  }
-
-  .swiper-button-prev{
-    left: 60px !important;
-  }
-
-  /* Reeponsive Tablet Settings */
-
-  .tablet .swiper-wrapper{
-    width: 100% !important;
-    left: 15%;
-  }
-
-  .tablet .swiper-button-next{
-    right: 10px !important;
-  }
-
-  .tablet .swiper-button-prev{
-    left: 10px !important;
-  }
-
-  .tablet .swiper-slide img{
-    width: 120px !important;
-  }
-
-  /* Reeponsive Mobile Settings */
-
-  .mobile .swiper-slide img{
-    width: 70px !important;
-  }
-
-  .mobile .swiper-wrapper{
-    width: 90% !important;
-    left: 5% !important;
-  }
-
-  .mobile .swiper-button-next{
-    right: 10px !important;
-    display: none !important;
-  }
-
-  .mobile .swiper-button-prev{
-    left: 10px !important;
-  }
-
-  .mobile .customersSpan{
-    font-size: 14px;
-  }
-
-
-@media screen and (max-width: 500px){
-  .swiper-container {
-    width: 500px;
-  }
-  .swiper-button-next{
-    right: 10px !important;
-  }
-  .swiper-button-prev{
-    left: 10px !important;
-  }
-  .swiper-slide img{
-    width: 100px !important;
-  }
-  .swiper-wrapper{
-    left: 50px;
-  }
-}
-.swiper-button-next, .swiper-button-prev{
-  height: 25px !important;
-  width: 25px !important;
-}
-.mobile .swiper-button-prev, .swiper-rtl .swiper-button-next{
-  display: none;
+.customers-page .swiper-slide {
+	text-align: justify;
+	font-size: 18px;
+	/* Center slide text vertically */
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+.customers-page .customers-slide-img {
+	display: block;
+	width: 170px !important;
+	height: auto;
+	max-height: 80px;
+}
+
+.customers-page .swiper-button-next {
+	width: 10px;
+	height: 21px;
+	left: 76.78px;
+	top: 1604px;
+}
+
+.customers-page .swiper-button-next::after {
+	content: 'next';
+	color: #606060 !important;
+	background-size: 30%;
+	background-position: center;
+	font-size: 20px;
+}
+
+.customers-page .swiper-pagination-bullet {
+	background-color: #636363 !important;
+}
+
+.customers-page .swiper-pagination-bullet-active {
+	background-color: #ff0000 !important;
+}
+
+.customers-page .swiper-button-prev {
+	width: 10px;
+	height: 21px;
+	left: 76.78px;
+	top: 1604px;
+}
+
+.customers-page .swiper-wrapper {
+	left: 10%;
+	width: 80% !important;
+}
+
+.customers-page .swiper-button-prev::after {
+	content: 'next';
+	color: #606060 !important;
+	background-size: 30%;
+	background-position: center;
+	font-size: 20px;
+}
+
+.customers-page .customersSpan {
+	width: 100%;
+	display: block;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 26px;
+	text-align: center;
+	text-transform: capitalize;
+	color: #666666;
+	margin-top: 40px;
+}
+
+.customers-page .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: 25px;
+}
+
+.customers-page .swiper-button-next {
+	right: 60px !important;
+}
+
+.customers-page .swiper-button-prev {
+	left: 60px !important;
+}
+
+/* Reeponsive Tablet Settings */
+
+.customers-page .tablet .swiper-wrapper {
+	width: 100% !important;
+	left: 15%;
+}
+
+.customers-page .tablet .swiper-button-next {
+	right: 10px !important;
+}
+
+.customers-page .tablet .swiper-button-prev {
+	left: 10px !important;
+}
+
+.customers-page .tablet .swiper-slide img {
+	width: 120px !important;
+}
+
+/* Reeponsive Mobile Settings */
+
+.customers-page .mobile .swiper-slide img {
+	width: 70px !important;
+}
+
+.customers-page .mobile .swiper-wrapper {
+	width: 90% !important;
+	left: 5% !important;
+}
+
+.customers-page .mobile .swiper-button-next {
+	right: 10px !important;
+	display: none !important;
+}
+
+.customers-page .mobile .swiper-button-prev {
+	left: 10px !important;
+}
+
+.customers-page .mobile .customersSpan {
+	font-size: 14px;
+}
+
+@media screen and (max-width: 500px) {
+	.customers-page .swiper-container {
+		width: 500px;
+	}
+
+	.customers-page .swiper-button-next {
+		right: 10px !important;
+	}
+
+	.customers-page .swiper-button-prev {
+		left: 10px !important;
+	}
+
+	.customers-page .swiper-slide img {
+		width: 100px !important;
+	}
+
+	.customers-page .swiper-wrapper {
+		left: 50px;
+	}
+}
+
+.customers-page .swiper-button-next,
+.customers-page .swiper-button-prev {
+	height: 25px !important;
+	width: 25px !important;
+}
+
+.customers-page .mobile .swiper-button-prev,
+.swiper-rtl .customers-page .swiper-button-next {
+	display: none;
+}
+
+.customers-page .swiper-button-next:after,
+.customers-page .swiper-button-prev:after {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
 }
