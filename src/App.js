@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { initReactI18next } from "react-i18next";
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { Api } from "./api/Api";
 import { Contact } from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
@@ -41,39 +42,31 @@ i18n
     },
   });
 
+const api = new Api();
+
 function App() {
   const [blogThumbs, setPageThumbs] = useState([]);
   const [blogUrls, setPageUrls] = useState([]);
  
-  useEffect(() => {
-    const fetchPages = async () => {
-      try {
-		const url = 'http://localhost:7980/api/blogs/published-pages/SUGARTECH_IO';
-		// const url = process.env.REACT_APP_BACKEND_API + 'api/blogs/published-pages/SUGARTECH_IO';
-		const response = await fetch(url);
-		const data = await response.json();
-		return data;
-      } catch (error) {
-      }
-    };
-    fetchPages().then(pages => {
-      if (pages === undefined || pages.length < 1) return;
-      const urls = pages.map(p => {
-        return {
-          ar: p.urlAr,
-          de: p.urlDe,
-          en: p.urlEn,
-          es: p.urlEs,
-          fr: p.urlFr,
-          it: p.urlIt,
-          tr: p.urlTr
-		}
-      });
-      const thumbs = pages.map(page => page.thumb);
 
-      setPageUrls(urls);
-      setPageThumbs(thumbs);
-    })
+  useEffect(() => {
+	const pages = api.fetchPages;
+	if (pages === undefined || pages.length < 1) return;
+	const urls = pages.map(p => {
+	  return {
+		ar: p.urlAr,
+		de: p.urlDe,
+		en: p.urlEn,
+		es: p.urlEs,
+		fr: p.urlFr,
+		it: p.urlIt,
+		tr: p.urlTr
+	  };
+	});
+	const thumbs = pages.map(page => page.thumb);
+
+	setPageUrls(urls);
+	setPageThumbs(thumbs);
   }, []);
 
   return (
