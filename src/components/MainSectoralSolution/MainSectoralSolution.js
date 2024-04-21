@@ -97,28 +97,31 @@ export const MainSectoralSolution = (props) => {
 
 	const ShowPopUp = (index) => {
 		return (
-			<div>
-				<div className='popupOverlay' style={showPopUp ? { display: "flex" } : { display: "none" }}>
-				</div>
-				<div className='popup' style={showPopUp ? { display: "flex" } : { display: "none" }}>
-					<div className='popupCloseButtons'>
-						<img className='popupCloseButton' alt="" src="./assets/img/popupVector2.svg" onClick={() => { clickedPopUp() }} />
+			showPopUp
+				?
+				<div>
+					<div className='popupOverlay' style={showPopUp ? { display: "flex" } : { display: "none" }}>
 					</div>
-					<div className='popupSpans'>
-						<div className='popupSpanElements'>
-							<div className='showAtHomeHeader'> {solutionArray[index].header} </div>
-							<div className='popupSpan'> {solutionArray[index].span} </div>
+					<div className='popup' style={showPopUp ? { display: "flex" } : { display: "none" }}>
+						<div className='popupCloseButtons'>
+							<img className='popupCloseButton' alt="" src="./assets/img/popupVector2.svg" onClick={() => { clickedPopUp() }} />
 						</div>
-						<div className='popupButton' style={solutionArray[index].header ? { display: "flex" } : { display: "none" }}>
-							<a className='showAtHomeButton1' href={solutionArray[index].link}>{t("usecase")}</a>
-						</div>
+						<div className='popupSpans'>
+							<div className='popupSpanElements'>
+								<div className='showAtHomeHeader'> {solutionArray[index].header} </div>
+								<div className='popupSpan'> {solutionArray[index].span} </div>
+							</div>
+							<div className='popupButton' style={solutionArray[index].header ? { display: "flex" } : { display: "none" }}>
+								<a className='showAtHomeButton1' href={solutionArray[index].link}>{t("usecase")}</a>
+							</div>
 
-					</div>
-					<div className='popupImageDiv'>
-						<img className='showAtHomeImage' alt="" src={solutionArray[index].popupImage} />
+						</div>
+						<div className='popupImageDiv'>
+							<img className='showAtHomeImage' alt="" src={solutionArray[index].popupImage} />
+						</div>
 					</div>
 				</div>
-			</div>
+				: null
 		)
 	}
 
@@ -223,28 +226,30 @@ export const MainSectoralSolution = (props) => {
 	// };
 
 	return (
-		<div className='mainSectoralSolutionContainer'>
-			<div className='mainSolutionHeader'>
-				<img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
-				<h1>{t("sectoralSolution")}</h1>
-				<img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
+		<>
+			<div className='mainSectoralSolutionContainer'>
+				<div className='mainSolutionHeader'>
+					<img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
+					<h1>{t("sectoralSolution")}</h1>
+					<img className='mainSolutionHeaderLine' alt='' src={'./assets/img/mainSolutionLine.svg'}></img>
+				</div>
+				<div className='mainSolutionSpans'>
+					<span className='mainSolutionSpan' style={{ padding: "0px 30px" }}>{t("mainSolutionSpan")}
+					</span>
+				</div>
+				<div className="solutionItems">
+					{solutionArray.map((item, index) => (
+						<div className='solutionItem' key={index}>
+							<img src={item.url} alt="" onClick={() => {
+								setIndex(index);
+								clickedPopUp()
+							}} />
+							<span className='solutionSpans'>{t(item.header)}</span>
+						</div>
+					))}
+				</div>
 			</div>
-			<div className='mainSolutionSpans'>
-				<span className='mainSolutionSpan' style={{ padding: "0px 30px" }}>{t("mainSolutionSpan")}
-				</span>
-			</div>
-			<div className="solutionItems">
-				{ShowPopUp(index)}
-				{solutionArray.map((item, index) => (
-					<div className='solutionItem' key={index}>
-						<img src={item.url} alt="" onClick={() => {
-							setIndex(index);
-							clickedPopUp()
-						}} />
-						<span className='solutionSpans'>{t(item.header)}</span>
-					</div>
-				))}
-			</div>
-		</div>
+			{ShowPopUp(index)}
+		</>
 	);
 }
