@@ -1,136 +1,88 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import "./LanguageSelector.css";
 
 function LanguageSelector() {
+	const { i18n } = useTranslation();
+	const [selectedLanguage, setSelectedLanguage] = useState(i18n.resolvedLanguage);
+	const wrapperRef = useRef(null);
+	const popupRef = useRef(null);
+	const [isLanguagePopupOpen, setIsLanguagePopupOpen] = useState(false);
 
-  const { i18n } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = React.useState(
-    localStorage.getItem("selectedLanguage") || i18n.language
-  );
-  function toggleEnglish() {
-    closeLanguagePopup();
-    setSelectedLanguage("en");
-    i18n.changeLanguage("en");
-  }
+	const languages = [
+		{ code: "en", name: "English", src: "/assets/img/header/lang/US.svg" },
+		{ code: "tr", name: "Türkçe", src: "/assets/img/header/lang/TR.svg" },
+		{ code: "fr", name: "Français", src: "/assets/img/header/lang/FR.svg" },
+		{ code: "de", name: "Deutsch", src: "/assets/img/header/lang/DE.svg" },
+		{ code: "it", name: "Italiano", src: "/assets/img/header/lang/IT.svg" },
+		{ code: "ar", name: "العربية", src: "/assets/img/header/lang/AR.svg" },
+	];
 
-  function toggleTurkish() {
-    closeLanguagePopup();
-    setSelectedLanguage("tr");
-    i18n.changeLanguage("tr");
-  }
+	function toggleLanguage(lang) {
+		setSelectedLanguage(lang);
+		i18n.changeLanguage(lang);
+	}
 
-  function toggleFrench() {
-    closeLanguagePopup();
-    setSelectedLanguage("fr");
-    i18n.changeLanguage("fr");
-  }
+	useEffect(() => {
+		const handleClickOutside = (event) => {
+			if (
+				wrapperRef.current &&
+				!wrapperRef.current.contains(event.target) &&
+				popupRef.current &&
+				!popupRef.current.contains(event.target)
+			) {
+				setIsLanguagePopupOpen(false);
+			} else if (popupRef.current && popupRef.current.contains(event.target)) {
+				setIsLanguagePopupOpen(false);
+			}
+		};
 
-  function toggleGerman() {
-    closeLanguagePopup();
-    setSelectedLanguage("de");
-    i18n.changeLanguage("de");
-  }
+		document.addEventListener("click", handleClickOutside);
+		window.addEventListener("scroll", handleClickOutside);
+		return () => {
+			document.removeEventListener("click", handleClickOutside);
+			window.removeEventListener("scroll", handleClickOutside);
+		};
+	});
 
-  function toggleItalian() {
-    closeLanguagePopup();
-    setSelectedLanguage("it");
-    i18n.changeLanguage("it");
-  }
-
-  function toggleArabic() {
-    closeLanguagePopup();
-    setSelectedLanguage("ar");
-    i18n.changeLanguage("ar");
-  }
-  function openLanguagePopup() {
-    var popup = document.getElementById("languagePopup");
-    var headerContainer = document.getElementById("headerContainer");
-    if (popup.style.display === "none") {
-      popup.style.display = "flex";
-      headerContainer.addEventListener('mouseleave', () => {
-        popup.style.display = "none";
-      })
-    }
-    else {
-      popup.style.display = "none";
-    }
-  }
-  const closeLanguagePopup = () => {
-    var popup = document.getElementById("languagePopup");
-    var headerContainer = document.getElementById("headerContainer");
-    if (popup.style.display === "flex") {
-      popup.style.display = "none";
-      headerContainer.addEventListener('mouseleave', () => {
-        popup.style.display = "none";
-      })
-    }
-    else {
-      popup.style.display = "flex";
-    }
-  }
-  return (
-    <div>
-      <div className='languageButton'>
-        <div className={`englishButton ${selectedLanguage === "en" ? "" : "hidden"}`} id="englishButton" style={{ right: "5px", cursor: "pointer" }} onClick={openLanguagePopup}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/Flag.svg'}></img>
-          <a className="languageSpan" id="headerLanguage">English</a>
-        </div>
-        <div className={`turkishButton ${selectedLanguage === "tr" ? "" : "hidden"}`} id="turkishButton" style={{ right: "5px", cursor: "pointer" }} onClick={openLanguagePopup}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/Flag2.svg'}></img>
-          <a className="languageSpan" id="headerLanguage">Turkish</a>
-        </div>
-        <div className={`frenchButton ${selectedLanguage === "fr" ? "" : "hidden"}`} id="frenchButton" style={{ right: "5px", cursor: "pointer" }} onClick={openLanguagePopup}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/frenchFlag.svg'}></img>
-          <a className="languageSpan" id="headerLanguage">French</a>
-        </div>
-        <div className={`germanButton ${selectedLanguage === "de" ? "" : "hidden"}`} id="germanButton" style={{ right: "5px", cursor: "pointer" }} onClick={openLanguagePopup}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/germanFlag.svg'}></img>
-          <a className="languageSpan" id="headerLanguage">German</a>
-        </div>
-        <div className={`italianButton ${selectedLanguage === "it" ? "" : "hidden"}`} id="italianButton" style={{ right: "5px", cursor: "pointer" }} onClick={openLanguagePopup}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/italianFlag.svg'}></img>
-          <a className="languageSpan" id="headerLanguage">Italian</a>
-        </div>
-        <div className={`arabicButton ${selectedLanguage === "ar" ? "" : "hidden"}`} id="arabicButton" style={{ right: "5px", cursor: "pointer" }} onClick={openLanguagePopup}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/arabicFlag.svg'}></img>
-          <a className="languageSpan" id="headerLanguage">Arabic</a>
-        </div>
-        <img className='languageShowButton' alt='' src={'assets/img/Chevron.svg'} onClick={openLanguagePopup}></img>
-      </div>
-
-      <div className="languagePopup" id="languagePopup" style={{ display: "none" }}>
-        <div id="popupTurkishButton" className='turkishButton' onClick={toggleTurkish} style={{ cursor: "pointer", left: "10px" }}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/Flag2.svg'}></img>
-          <a className="languageSpan">Turkish</a>
-        </div>
-        <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{ width: "125px", position: "relative", left: "11px" }}></img>
-        <div id="popupEnglishButton" className='englishButton' onClick={toggleEnglish} style={{ cursor: "pointer", left: "10px" }}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/Flag.svg'}></img>
-          <a className="languageSpan">English</a>
-        </div>
-        <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{ width: "125px", position: "relative", left: "11px" }}></img>
-        <div id="popupFrenchButton" className='frenchButton' onClick={toggleFrench} style={{ cursor: "pointer", left: "10px" }}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/frenchFlag.svg'}></img>
-          <a className="languageSpan">French</a>
-        </div>
-        <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{ width: "125px", position: "relative", left: "11px" }}></img>
-        <div id="popupGermanButton" className='germanButton' onClick={toggleGerman} style={{ cursor: "pointer", left: "10px" }}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/germanFlag.svg'} style={{ left: "3px" }}></img>
-          <a className="languageSpan">German</a>
-        </div>
-        <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{ width: "125px", position: "relative", left: "11px" }}></img>
-        <div id="popupItalianButton" className='italianButton' onClick={toggleItalian} style={{ cursor: "pointer", left: "10px" }}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/italianFlag.svg'} style={{ right: "4px" }}></img>
-          <a className="languageSpan">Italian</a>
-        </div>
-        <img className="languageLine" alt="" src={"./assets/img/littleLine.svg"} style={{ width: "125px", position: "relative", left: "11px" }}></img>
-        <div id="popupArabicButton" className='arabicButton' onClick={toggleArabic} style={{ cursor: "pointer", left: "10px" }}>
-          <img className='languageFlag' alt='' src={process.env.PUBLIC_URL + '/assets/img/arabicFlag.svg'} ></img>
-          <a className="languageSpan">Arabic</a>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className="language-wrapper" ref={wrapperRef}>
+			<div
+				className="selected-language-container"
+				onClick={() => setIsLanguagePopupOpen(!isLanguagePopupOpen)}>
+				{languages
+					.filter((lang) => lang.code === selectedLanguage)
+					.map((lang, index) => {
+						return (
+							<div key={index} className="language-option">
+								<img className="language-flag" alt={lang.name} src={lang.src} />
+								<span className="language-name">{lang.name}</span>
+							</div>
+						);
+					})}
+				<img
+					className="dropdown-chevron"
+					alt="dropdown arrow"
+					src={"/assets/img/header/chevron.svg"}
+				/>
+			</div>
+			{isLanguagePopupOpen && (
+				<div className="language-dropdown" ref={popupRef}>
+					{languages.map((lang, index) => {
+						return (
+							<div
+								key={index}
+								className="language-option"
+								onClick={() => toggleLanguage(lang.code)}>
+								<img className="language-flag" alt={lang.name} src={lang.src} />
+								<span className="language-name">{lang.name}</span>
+							</div>
+						);
+					})}
+				</div>
+			)}
+		</div>
+	);
 }
 
 export default LanguageSelector;

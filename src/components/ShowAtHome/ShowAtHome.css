@@ -95,6 +95,7 @@
     position: relative;
     padding: 10px 15px;
     color: #FFFFFF;
+    white-space: nowrap;
 }
 .showAtHomeButton1:hover{
     background: #ED401A;

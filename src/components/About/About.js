@@ -1,25 +1,18 @@
 import { useTranslation } from "react-i18next";
 import './About.css';
 
-export const About = props =>{
-    const {t} = useTranslation();
-    return(
-        <div>
-        <div className='aboutContainer'>
-            <div className='aboutSpans'>
-                <h2 className='aboutSpansHeader'>{t("aboutSugar")}</h2>
-                <p className='aboutSpan'>{t("aboutSugarSpan1")}</p>
-                <p className='aboutSpan'>{t("aboutSugarSpan2")}</p>
-
-                <a href='/aboutUs'className='aboutButton'>{t("aboutButton")}</a>
-            </div>
-            <div className='aboutLogos'>
-                <img className='firstAboutLogo' alt='' src={'./assets/img/firstAboutLogo.webp'}></img>
-                <img className='secondAboutLogo' alt='' src={'assets/img/Objeto_inteligente.webp'}></img>
-            </div>
-            
-        </div>
-        <a className="customersSpan">{t("homePageCustomersSpan")}</a>
-        </div>
-    );
+export const About = () => {
+	const { t } = useTranslation();
+	return (
+		<div className='about-container'>
+			<h2 className='about-header'>{t("aboutSugar")}</h2>
+			<div className='about-spans'>
+				<p className='about-span'>{t("aboutSugarSpan1")}</p>
+				<p className='about-span'>{t("aboutSugarSpan2")}</p>
+				<a href='/aboutUs' className='about-button'>{t("aboutButton")}</a>
+			</div>
+			<img className='about-image' alt='' src={'./assets/img/firstAboutLogo.webp'}></img>
+			<img className='about-background-shape' alt='' src={'assets/img/Objeto_inteligente.webp'}></img>
+		</div>
+	);
 }

@@ -1,223 +1,253 @@
-.WhoSugarContainer{
-    display: flex;
-    flex-direction: column;
-    padding: 50px 0px;
-    margin-top: 60px;
-    position: relative;
-    align-items: center;
-    row-gap: 10%;
-}
-.flyingElements1{
-    display: flex;
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    top: 0px;
-    align-items: center;
-}
-.flyingElements1 img{
-    width: 70%;
-    position: relative;
-    z-index: 999;
-}
-.flyingElements1 a{
-    height: 40%;
-    position: absolute;
+.WhoSugarContainer {
+	display: flex;
+	flex-direction: column;
+	padding: 50px 0px;
+	margin-top: 60px;
+	position: relative;
+	align-items: center;
+	row-gap: 10%;
 }
 
-.whoSugarSpans{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 75%;
-    height: 65%;
-    justify-content: center;
-    z-index: 1;
-}
-.mobile .whoSugarSpans{
-    padding-top: 180px;
+.flyingElements1 {
+	display: flex;
+	width: 100%;
+	height: 30%;
+	position: absolute;
+	top: 0px;
+	align-items: center;
 }
 
-.whoSugarHeader{
-    width: 65%;
-    margin-top: 5vh;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 44px;
-    text-align: center;
-    color: #000000;
-    position: relative;
-}
-.whoSugarSpan{
-    margin: 1vh 0vw;
-    width: 63%;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 17px;
-    line-height: 23px;
-    text-align: justify;
-    color: #000000;
-}
-.whoSugarLogos{
-    display: flex;
-    width: 100%;
-    height: 60%;
-    justify-content: center;
-}
-.whoSugarLogo1{
-    width: 100%;
-    z-index: -1;
-}
-.whoSugarLogo2{
-    position: absolute;
-    z-index: -1;
-    left: 0px;
-    top: 0px;
-    width: 500px;
+.flyingElements1 img {
+	width: 70%;
+	position: relative;
+	z-index: 999;
 }
 
-.whatSugarProvidesContainer {
-    width: 60%;
+.flyingElements1 a {
+	height: 40%;
+	position: absolute;
 }
 
-.whoSugarImg1{
-    bottom: 0px;
-    z-index: 1;
-    left: 33px;
+.whoSugarSpans {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 75%;
+	height: 65%;
+	justify-content: center;
+	z-index: 1;
 }
-.whoSugarImg2{
-    left: 201px;
-    bottom: 71px;
+
+.mobile .whoSugarSpans {
+	padding-top: 180px;
 }
-.whoSugarImg3{
-    top: 10px;
-    left: 360px;
+
+.whoSugarHeader {
+	width: 65%;
+	margin-top: 5vh;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	text-align: center;
+	color: #000000;
+	position: relative;
 }
-.whoSugarImg4{
-    right: 345px;
-    top: 36px;
+
+.whoSugarSpan,
+.whatSugarProvidesList {
+	margin: 1vh 0vw;
+	width: 63%;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 23px;
+	text-align: justify;
+	color: #000000;
 }
-.whoSugarImg5{
-    right: 121px;
+
+.whatSugarProvidesList {
+	margin: 5px;
 }
-.whoSugarImg6{
-    right: 18px;
-    bottom: -34px;
+
+.whoSugarLogos {
+	display: flex;
+	width: 100%;
+	height: 60%;
+	justify-content: center;
+}
+
+.whoSugarLogo1 {
+	width: 100%;
+	z-index: -1;
+}
+
+.whoSugarLogo2 {
+	position: absolute;
+	z-index: -1;
+	left: 0px;
+	top: 0px;
+	width: 500px;
+}
+
+#whoSugarImg1 {
+	bottom: 0px;
+	z-index: 1;
+	left: 33px;
+}
+
+#whoSugarImg2 {
+	left: 201px;
+	bottom: 71px;
+}
+
+#whoSugarImg3 {
+	top: 10px;
+	left: 360px;
+}
+
+#whoSugarImg4 {
+	right: 345px;
+	top: 36px;
+}
+
+#whoSugarImg5 {
+	right: 121px;
+}
+
+#whoSugarImg6 {
+	right: 18px;
+	bottom: -34px;
 }
 
 /* Reeponsive Tablet Settings */
 
-.tablet .whoSugarImg1{
-    bottom: 0px;
-    left: 33px;
-}
-.tablet .whoSugarImg2{
-    left: 111px;
-    bottom: 81px;
-}
-.tablet .whoSugarImg3{
-    top: -25px;
-    left: 210px;
-}
-.tablet .whoSugarImg4{
-    right: 190px;
-    top: 13px;
-}
-.tablet .whoSugarImg5{
-    right: 35px;
-}
-.tablet .whoSugarImg6{
-    right: -21px;
-    bottom: -34px;
+.tablet #whoSugarImg1 {
+	bottom: 0px;
+	left: 33px;
 }
 
-.tablet .WhoSugarContainer{
-    height: 90vh;
+.tablet #whoSugarImg2 {
+	left: 111px;
+	bottom: 81px;
 }
 
-.tablet .flyingElements1{
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    top: 0px;
+.tablet #whoSugarImg3 {
+	top: -25px;
+	left: 210px;
 }
 
-.tablet .whoSugarHeader{
-    margin-top: 18vh;
-    line-height: normal;
+.tablet #whoSugarImg4 {
+	right: 190px;
+	top: 13px;
+}
+
+.tablet #whoSugarImg5 {
+	right: 35px;
+}
+
+.tablet #whoSugarImg6 {
+	right: -21px;
+	bottom: -34px;
+}
+
+.tablet .WhoSugarContainer {
+	height: 90vh;
+}
+
+.tablet .flyingElements1 {
+	width: 100%;
+	height: 30%;
+	position: absolute;
+	top: 0px;
+}
+
+.tablet .whoSugarHeader {
+	margin-top: 18vh;
+	line-height: normal;
 }
 
 /* Reeponsive Mobile Settings */
 
-.mobile .whoSugarImg1{
-    bottom: 0px;
-    left: -16px;
-}
-.mobile .whoSugarImg2{
-    left: 76px;
-    bottom: 81px;
-}
-.mobile .whoSugarImg3{
-    top: -7px;
-    left: 150px;
-}
-.mobile .whoSugarImg4{
-    right: 29px;
-    top: 13px;
-}
-.mobile .whoSugarImg5{
-    right: -98px;
-}
-.mobile .whoSugarImg6{
-    right: -97px;
-    bottom: -34px;
-}
-.mobile .whoSugarSpan{
-    font-size: 14px;
-    line-height: 20px;
-    width: 90%;
+.mobile #whoSugarImg1 {
+	bottom: 0px;
+	left: -16px;
 }
 
-.mobile .flyingElements1{
-    width: 100%;
-    height: 25%;
-    position: absolute;
-    top: 0px;
+.mobile #whoSugarImg2 {
+	left: 76px;
+	bottom: 81px;
+}
+
+.mobile #whoSugarImg3 {
+	top: -7px;
+	left: 150px;
+}
+
+.mobile #whoSugarImg4 {
+	right: 29px;
+	top: 13px;
+}
+
+.mobile #whoSugarImg5 {
+	right: -98px;
+}
+
+.mobile #whoSugarImg6 {
+	right: -97px;
+	bottom: -34px;
+}
+
+.mobile .whoSugarSpan,
+.mobile .whatSugarProvidesList {
+	font-size: 14px;
+	line-height: 20px;
+	width: 90%;
+}
+
+.mobile .flyingElements1 {
+	width: 100%;
+	height: 25%;
+	position: absolute;
+	top: 0px;
 }
 
 .mobile .flyingElements1 img {
-    width: 50%;
+	width: 50%;
 }
 
-.whoSugarLogo2{
-    display: none;
+.whoSugarLogo2 {
+	display: none;
 }
 
 @media screen and (max-width: 500px) {
-    .whoSugarImg2{
-        left: 30px !important;
-    }
-    .whoSugarImg3{
-        top: 66px !important;
-        left: 124px !important;
-    }
-    .whoSugarImg4{
-        right: 125px !important;
-        top: 13px !important;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    .whoSugarImg5{
-        right: 10px !important;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    .whoSugarImg6{
-        right: 1px !important;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
+	#whoSugarImg2 {
+		left: 30px !important;
+	}
+
+	#whoSugarImg3 {
+		top: 66px !important;
+		left: 124px !important;
+	}
+
+	#whoSugarImg4 {
+		right: 125px !important;
+		top: 13px !important;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	#whoSugarImg5 {
+		right: 10px !important;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	#whoSugarImg6 {
+		right: 1px !important;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
 }

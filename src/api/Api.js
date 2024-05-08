@@ -4,10 +4,12 @@ export class Api {
 		this.api_url = process.env.REACT_APP_API_ENDPOINT;
 	}
 
-	fetchPages = async () => {
+	async fetchPages() {
 		const url = this.api_url + 'api/blogs/published-pages/SUGARTECH_IO';
 		const response = await fetch(url);
 		const data = await response.json();
+		console.log(data);
 		return data;
 	}
+	
 }
