@@ -3,6 +3,10 @@
     animation-fill-mode: forwards;
 }
 
+:root {
+  --min-scale: 0.6;
+  --max-scale: 1;
+}
 
 @keyframes rotate_open {
     from {
@@ -26,20 +30,25 @@
     }
 }
 
-
 .wheelAnimationItemsContainer {
     position: relative;
-    margin-left: 5%;
-}
-.mobile .wheelAnimationItemsContainer{
-    margin-left: 0;
-}
-@media screen and (max-width: 1200px) {
-    .wheelAnimationItemsContainer {
-        right: 150px;
-    }
+    left: -50px;
+    bottom: -50px;
+    scale: 0.8;
 }
 
+@media (max-width: 1100px) {
+  .wheelAnimationItemsContainer {
+    transform: scale(var(--min-scale));
+  }
+}
+
+.mobile .wheelAnimationItemsContainer{
+    margin-left: 0;
+    scale: 0.9;
+    right: 50px;
+    bottom: 70px;
+}
 
 .wheelAnimationItems {
     width: 100%;
@@ -63,10 +72,6 @@
 }
 
 .tablet .wheelAnimationItemsContainer{
-    right: 0vh;
-    bottom: 0vh;
-}
-
-.mobile .wheelAnimationItemsContainer{
-    right: auto;
+    bottom: 5vh;
+    scale: 0.8;
 }

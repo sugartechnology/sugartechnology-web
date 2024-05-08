@@ -1,756 +1,588 @@
-.headerContainer{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #F2F2F2;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    z-index: 9999;
-    height: 70px;
+.headerContainer {
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #F2F2F2;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	z-index: 9999;
+	height: 70px;
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 0%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-  
-.sugarLogo{
-    position: relative;
-    width: 160.08px;
-    height: 58.46px;
-    top: 15px;
-    left: 30px;
-    cursor: pointer;
-    padding-left: 5%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 0%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
 }
 
-.routers{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 25px;
-    position: relative;
-    left: 40px;
+.sugarLogo {
+	position: relative;
+	width: 160.08px;
+	height: 58.46px;
+	top: 15px;
+	left: 30px;
+	cursor: pointer;
+	padding-left: 5%;
 }
 
-.routers a{
-    color: #170F49;
-    cursor: pointer;
-    text-decoration: none;
+.routers {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	margin-top: 25px;
+	position: relative;
 }
 
-.itemsPopup a{
-    color: #170F49;
-    cursor: pointer;
-    text-decoration: none;
+.routers a {
+	color: #170F49;
+	cursor: pointer;
+	text-decoration: none;
 }
 
-.popupRouters{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    position: relative;
-    left: 10px;
+.itemsPopup a {
+	color: #170F49;
+	cursor: pointer;
+	text-decoration: none;
 }
 
-.popupMediaCenterButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    gap: 4px;
-    width: 154px;
-    height: 48px;
-    background: #ED401A;
-    border-radius: 76px;
-    border: none;
-    position: relative;
-    top: 20px;
-    cursor: pointer;
-}
-.mobile .popupMediaCenterButton{
-    top: 10px;
-}
-.popupMediaCenterButton a{
-    width: 105px;
-    height: 18px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: justify;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-.popupRouterMobile{
-    height: 40px;
-    width: 264px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    position: relative;
-    font-size: 14px;
-    border-radius: 8px;
-    padding-left: 10px;
+.popupRouters {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	position: relative;
+	left: 10px;
 }
 
-.firstMobilePopup a{
-    width: 250px;
-    height: 24px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: -0.0032em;
-    font-feature-settings: 'tnum' on, 'lnum' on;
-    color: #000000;
-    cursor: pointer;
+.popupMediaCenterButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	gap: 4px;
+	width: 154px;
+	height: 48px;
+	background: #ED401A;
+	border-radius: 76px;
+	border: none;
+	position: relative;
+	top: 20px;
+	cursor: pointer;
 }
 
-.firstMobilePopup{
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    background: linear-gradient(180deg, #EAEAEA 0%, rgba(255, 255, 255, 0.00) 33%);
-}
-.firstChildPopup a{
-    cursor: pointer;
-}
-.firstChildPopup a:hover,
-.firstMobilePopup a:hover{
-    color: #ED401A;
-}
-.popupItem:hover{
-    color: #ED401A;
-}
-.firstChildPopup{
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    background: linear-gradient(180deg, #EAEAEA 0%, rgba(255, 255, 255, 0.00) 55%);
-    margin-top: 5px;
-}
-.secondChildPopup{
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    background: linear-gradient(180deg, #EAEAEA 0%, rgba(255, 255, 255, 0.00) 55%);
-    margin-top: 5px;
-}
-
-.popupRouter{
-    height: 40px;
-    width: 264px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #FFFFFF;
-    border-radius: 8px;
-    position: relative;
-    padding-left: 10px;
-}
-
-.popupRouter a{
-    width: 240px;
-    height: 20px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    color: #353535;
-    text-decoration: none;
-}
-
-.routers a:hover{
-    color: red;
-}
-
-.popupRouter:visited{
-    color: #353535;
-}
-
-.headerButtons{
-    display: flex;
-    gap: 20px;
-    margin-top: 18px;
-    position: relative;
-    right: 40px;
-    padding-right: 5%;
-}
-
-.languageButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 10px;
-    width: 130px;
-    height: 34px;
-    border-radius: 50px;
-    background: #FFFFFF;
-    border: 1px solid #EFF0F7;
-    box-shadow: 0px 5px 5px rgba(8, 15, 52, 0.04);
-}
-
-.languageSelect{
-    border: none;
-}
-
-.englishButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 47px;
-    position: relative;
-    width: 132px;
-    border-radius: 12px;
-}
-
-.turkishButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 47px;
-    position: relative;
-    width: 132px;
-    border-radius: 12px;
-}
-
-.frenchButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 47px;
-    position: relative;
-    width: 132px;
-    border-radius: 12px;
-}
-.germanButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 47px;
-    position: relative;
-    width: 132px;
-    border-radius: 12px;
-}
-.italianButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 47px;
-    position: relative;
-    width: 132px;
-    border-radius: 12px;
-}
-.arabicButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 47px;
-    position: relative;
-    width: 132px;
-    border-radius: 12px;
-}
-
-.languageFlag{
-    width: 36px;
-    height: 30px;
-    position: relative;
-}
-
-.robotSpans{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px 16px 8px 34px;
-    gap: 8px;
-    position: absolute;
-    width: 151px;
-    height: 34px;
-    background: #FFF3F3;
-    border: 1px solid #9E1908;
-    border-radius: 8px;
-    right: 0px;
-    bottom: 40px;
-}
-.robotSpan{
-    width: 400px;
-    height: 30px;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size:  13px;
-    line-height: 30px;
-    text-align: justify;
-    text-transform: capitalize;
-    color: #9E1908;
-}
-.robot{
-    height: 64px;
-    width: 77px;
-    position: relative;
-    left: 40px;
-    top: 30px;
-}
-
-.languageShowButton{
-    width: 8px;
-    height: 4px;
-    cursor: pointer;
-    position: relative;
-    right: 10px;
-}
-
-.mediaCenterButton{
-    width: 125px;
-    height: 34px;
-    background: #ED401A;
-    border-radius: 76px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.popupMediaCenterButton:hover,
-.popupMediaCenterButton a:hover{
-  background-color: #F3E7E6;
-  color: #d23b1a;
+.mobile .popupMediaCenterButton {
+	top: 10px;
 }
 
 .popupMediaCenterButton a {
-  color: white;
+	width: 105px;
+	height: 18px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: justify;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.popupRouterMobile {
+	height: 40px;
+	width: 264px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: transparent;
+	position: relative;
+	font-size: 14px;
+	border-radius: 8px;
+	padding-left: 10px;
+}
+
+.firstMobilePopup a {
+	width: 250px;
+	height: 24px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	letter-spacing: -0.0032em;
+	font-feature-settings: 'tnum' on, 'lnum' on;
+	color: #000000;
+	cursor: pointer;
+}
+
+.firstMobilePopup {
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	background: linear-gradient(180deg, #EAEAEA 0%, rgba(255, 255, 255, 0.00) 33%);
+}
+
+.firstChildPopup a {
+	cursor: pointer;
+}
+
+.firstChildPopup a:hover,
+.firstMobilePopup a:hover {
+	color: #ED401A;
+}
+
+.popupItem {
+	width: 100% !important;
+}
+
+.popupItem:hover {
+	color: #ED401A;
+}
+
+.firstChildPopup {
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	background: linear-gradient(180deg, #EAEAEA 0%, rgba(255, 255, 255, 0.00) 55%);
+	margin-top: 5px;
+}
+
+.secondChildPopup {
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	background: linear-gradient(180deg, #EAEAEA 0%, rgba(255, 255, 255, 0.00) 55%);
+	margin-top: 5px;
+}
+
+.popupRouter {
+	height: 40px;
+	width: 264px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #FFFFFF;
+	border-radius: 8px;
+	position: relative;
+	padding-left: 10px;
+}
+
+.popupRouter a {
+	width: 240px;
+	height: 20px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	color: #353535;
+	text-decoration: none;
+}
+
+.routers a:hover {
+	color: red;
+}
+
+.popupRouter:visited {
+	color: #353535;
+}
+
+.headerButtons {
+	display: flex;
+	gap: 20px;
+	margin-top: 18px;
+	position: relative;
+	right: 40px;
+	padding-right: 5%;
+}
+
+.mediaCenterButton {
+	width: 125px;
+	height: 34px;
+	background: #ED401A;
+	border-radius: 76px;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.popupMediaCenterButton:hover,
+.popupMediaCenterButton a:hover {
+	background-color: #F3E7E6;
+	color: #d23b1a;
+}
+
+.popupMediaCenterButton a {
+	color: white;
 }
 
 .popupMediaCenterButton:hover a {
-  color: red;
+	color: red;
 }
 
 .mediaCenterButton:hover,
-.mediaCenterButton a:hover{
-  background-color: #d23b1a;
-  color: white;
+.mediaCenterButton a:hover {
+	background-color: #d23b1a;
+	color: white;
 }
 
 .mediaCenterButton a {
-  color: red;
-  text-decoration: none;
+	color: red;
+	text-decoration: none;
 }
 
 .mediaCenterButton:hover a {
-  color: white;
+	color: white;
 }
 
-.mediaCenterButton a{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    text-align: justify;
-    color: #FFFFFF;
+.mediaCenterButton a {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: justify;
+	color: #FFFFFF;
 }
 
 .productServicesPopup {
-    width: 208px;
-    height: 140px;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    position: absolute;
-    left: 535px;
-    top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+	width: 208px;
+	height: 140px;
+	position: absolute;
+	left: 70px;
+	top: 100%;
+	padding: 5px 10px;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+	z-index: 6,
 }
 
-.productServicesPopup a {
-    font-size: 13px;
-    cursor: pointer;
-    position: relative;
-    top: 2px;
-    left: 10px;
-    width: 162px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    text-decoration: none;
+.productServicesPopup a,
+.productServicesPopup span {
+	width: 162px;
+	height: auto;
+	min-height: 24px;
+	position: relative;
+	padding-left: 5px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font-size: 13px;
+	text-decoration: none;
 }
 
-.popupOption:hover{
-    background: #FFE9E7;
+.popupOption:hover {
+	background: #FFE9E7;
 }
 
-.productServicesPopup a:visited{
-    color: #353535;
+.productServicesPopup a:visited {
+	color: #353535;
 }
 
-.popupOption{
-    display: flex;
-    position: relative;
-    width: 196px;
-    height: 30px;
-    border-radius: 8px;
-    left: 6px;
-    top: 5px;
+.popupOption {
+	width: 100%;
+	height: auto;
+	min-height: 30px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 8px;
 }
 
-.popupVector{
-    width: 10px;
-    position: relative;
-    left: 20px;
+.popupVector {
+	width: 10px;
+	position: relative;
 }
 
-.popupLine{
-    width: 200px;
-    position: relative;
-    left: 5px;
+.popupLine {
+	width: 200px;
+	position: relative;
+	left: 5px;
 }
 
-.popupLineSmall{
-    width: 150px;
-    height: 1.5px;
-    object-fit: cover;
+.popupLineSmall {
+	width: 150px;
+	height: 1.5px;
+	object-fit: cover;
 }
 
-.secondPopup{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px 8px;
-    position: relative;
-    width: 150px;
-    height: 100px;
-    background: #ECECEC;
-    box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
-    border-radius: 12px;
-    position: absolute;
-    left: 208px;
-    z-index: 6;
-    top: 90px;
-    justify-content: space-around;
+.secondPopup {
+	width: 150px;
+	height: auto;
+	top: calc(100% - 50px);
+	left: 100%;
+	position: absolute;
+	padding: 15px 8px;
+	border-radius: 12px;
+	z-index: 6;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	background: #ECECEC;
+	box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
 }
 
-.secondPopup a{
-    text-decoration: none;
-    color: #545454;
+.secondPopup a {
+	text-decoration: none;
+	color: #545454;
 }
 
-.firstPopup a{
-    text-decoration: none;
-    color: #545454;
+.firstPopup a {
+	text-decoration: none;
+	color: #545454;
 }
-.firstPopup a:hover{
-    color: #ED401A;
+
+.firstPopup a:hover {
+	color: #ED401A;
 }
-.secondPopup a:hover{
-    color: #ED401A;
+
+.secondPopup a:hover {
+	color: #ED401A;
 }
-.secondPopup a:visited{
-    color: #353535;
+
+.secondPopup a:visited {
+	color: #353535;
 }
 
 .secondPopupFirstOption:hover,
-.secondPopupSecondOption:hover{
-    background: #FFE9E7;
+.secondPopupSecondOption:hover {
+	background: #FFE9E7;
 }
 
-.secondPopupFirstOption{
-    display: flex;
-    border-radius: 8px;
-    height: 22px;
-    align-items: center;
+.secondPopupFirstOption {
+	display: flex;
+	border-radius: 8px;
+	height: 22px;
+	align-items: center;
 }
 
-.secondPopupSecondOption{
-    display: flex;
-    border-radius: 8px;
-    height: 22px;
-    align-items: center;
-    padding-bottom: 5px;
+.secondPopupSecondOption {
+	display: flex;
+	border-radius: 8px;
+	height: 22px;
+	align-items: center;
+	padding-bottom: 5px;
 }
 
 .firstPopupFirstOption:hover,
 .firstPopupSecondOption:hover,
-.firstPopupThirdOption:hover{
-    background: #FFE9E7;
+.firstPopupThirdOption:hover {
+	background: #FFE9E7;
 }
 
-.firstPopupFirstOption{
-    display: flex;
-    width: 150px;
-    border-radius: 8px;
-    height: 22px;
-    align-items: center;
+.firstPopupFirstOption {
+	display: flex;
+	width: 150px;
+	border-radius: 8px;
+	height: 22px;
+	align-items: center;
 }
 
-.firstPopupSecondOption{
-    display: flex;
-    width: 150px;
-    border-radius: 8px;
-    height: 22px;
-    align-items: center;
+.firstPopupSecondOption {
+	display: flex;
+	width: 150px;
+	border-radius: 8px;
+	height: 22px;
+	align-items: center;
 }
 
-.firstPopupThirdOption{
-    display: flex;
-    width: 150px;
-    border-radius: 8px;
-    height: 22px;
-    align-items: center;
+.firstPopupThirdOption {
+	display: flex;
+	width: 150px;
+	border-radius: 8px;
+	height: 22px;
+	align-items: center;
 }
 
-.firstPopup{
-    display: flex;
-    flex-direction: column;
-    padding: 7px 8px;
-    position: relative;
-    width: 155px;
-    background: #ececec;
-    box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
-    border-radius: 12px;
-    position: absolute;
-    left: 208px;
-    z-index: 6;
-    top: 0px;
-    justify-content: space-around;
-    padding: 15px 10px;
+.firstPopup {
+	width: 155px;
+	position: absolute;
+	top: 0px;
+	left: 100%;
+	padding: 15px;
+	z-index: 6;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: #ececec;
+	box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
 }
 
-#popupEnglishButton:hover,
-#popupTurkishButton:hover,
-#popupFrenchButton:hover,
-#popupGermanButton:hover,
-#popupItalianButton:hover,
-#popupArabicButton:hover{
-    background: #F3E7E6;
+.headerShowButton {
+	display: flex;
+	width: 50px;
+	position: relative;
+	left: 10px;
 }
 
-.languagePopup{
-    display: flex;
-    top: 40px;
-    right: 57%;
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    z-index: 6;
-    background: white;
-    width: 150px;
-    height: 400px;
-    border-radius: 12px;
+.mobileHeaderPopup {
+	width: 280px;
+	position: relative;
+	top: 100%;
+	padding: 30px 10px;
+	border-bottom-right-radius: 12px;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	align-items: flex-start;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background: #FFF;
+	box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
 }
 
-.headerShowButton{
-    display: flex;
-    width: 50px;
-    position: relative;
-    left: 10px;
+.mobileHeaderPopup a {
+	cursor: pointer;
+	text-decoration: none;
 }
 
-.mobileHeaderPopup{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 10px;
-    position: relative;
-    width: 280px; 
-    background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(97, 97, 97, 0.18), 0px 4px 8px rgba(97, 97, 97, 0.18);
-    border-radius: 12px;
-    gap: 10px;
-    top: 60px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding-left: 0px;
-}
-.mobileHeaderPopup a{
-    cursor: pointer;
-    text-decoration: none;
-}
-.mobileHeaderPopup a:hover{
-    color: #ED401A;
-}
-.backToHome{
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    position: relative;
-    left: 5px;
-    padding-left: 10px;
+.mobileHeaderPopup a:hover {
+	color: #ED401A;
 }
 
-.backToHomeInput{
-    height: 40px;
-    width: 264px;
-    background: #E0E0E0;
-    opacity: 0.5;
-    border-radius: 8px;
-    border: none;
-    caret-color: red;
+.mobilePopupLine {
+	width: 90%;
 }
 
-.backToHomeInput::placeholder{
-    position: relative;
-    left: 10px;
+.backToHome {
+	display: flex;
+	gap: 10px;
+	flex-direction: row;
+	position: relative;
+	left: 5px;
+	padding-left: 10px;
 }
 
-.backToHomeSpan{
-    width: 200px;
-    height: 24px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.0168em;
-    font-feature-settings: 'tnum' on, 'lnum' on;
-    color: #353535;
+.backToHomeInput {
+	height: 40px;
+	width: 264px;
+	background: #E0E0E0;
+	opacity: 0.5;
+	border-radius: 8px;
+	border: none;
+	caret-color: red;
 }
 
-.popupRightButton{
-    width: 10px;
-    cursor: pointer;
-    position: relative;
-    right: 10px;
+.backToHomeInput::placeholder {
+	position: relative;
+	left: 10px;
 }
 
-.popupRouter:hover{
-    color: red;
+.backToHomeSpan {
+	width: 200px;
+	height: 24px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.0168em;
+	font-feature-settings: 'tnum' on, 'lnum' on;
+	color: #353535;
 }
 
-.popupRightButton:hover{
-    color: red;
+.popupRightButton {
+	width: 10px;
+	cursor: pointer;
+	position: relative;
+	right: 10px;
 }
 
-.backToHomeArrow{
-    cursor: pointer;
+.popupRouter:hover,
+.popupRightButton:hover {
+	color: red;
 }
 
-.itemsPopup{
-    display: flex;
-    flex-direction: column;
-    gap:6px;
+.backToHomeArrow {
+	cursor: pointer;
 }
 
-.popupItem{
-    padding: 2px 20px;
+.itemsPopup {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
 }
 
 .hidden {
-    display: none;
+	display: none;
 }
 
 /* Reeponsive Tablet Settings */
 
-.tablet .headerContainer{
-    justify-content: normal;
-    gap: 100px;
+.tablet .headerContainer {
+	justify-content: normal;
+	gap: 100px;
 }
-.tablet .headerShowButtons{
-    display: flex !important;
+
+.tablet .headerShowButtons {
+	display: flex !important;
 }
-.tablet .headerShowButton{
-    display: flex !important;
+
+.tablet .headerShowButton {
+	display: flex !important;
 }
-.tablet .routers{
-    display: none;
+
+.tablet .mediaCenterButton {
+	display: none;
 }
-.tablet .mediaCenterButton{
-    display: none;
+
+.tablet .productServicesPopup {
+	display: flex;
+	position: absolute;
+	top: 90px;
+	left: 0px;
+	height: 120px;
+	z-index: 6;
+	box-shadow: none;
 }
-.tablet #headerLanguage{
-    display: none;
-}
-.tablet .languageButton{
-    gap: 0px;
-    width: 60px;
-    right: 20px;
-}
-.tablet .languagePopup{
-    right: 10px;
-}
-.tablet .productServicesPopup{
-    display: flex;
-    position: absolute;
-    top: 90px;
-    left: 0px;
-    height: 120px;
-    z-index: 6;
-    box-shadow: none;
-}
-.tablet .headerButtons{
-    right: 0px;
+
+.tablet .headerButtons {
+	right: 0px;
 }
 
 /* Reeponsive Mobile Settings */
 
-.mobile .headerContainer{
-    justify-content: normal;
-    gap: 100px;
-}
-.mobile .headerShowButtons{
-    display: flex !important;
-}
-.mobile .headerShowButton{
-    display: flex !important;
-}
-.mobile .routers{
-    display: none;
-}
-.mobile .mediaCenterButton{
-    display: none;
-}
-.mobile #headerLanguage{
-    display: none;
-}
-.mobile .languageButton{
-    gap: 0px;
-    width: 60px;
-    right: 0px;
-}
-.mobile .languagePopup{
-    right: 10px;
-}
-.mobile .productServicesPopup{
-    display: flex;
-    position: absolute;
-    top: 90px;
-    left: 0px;
-    height: 120px;
-    z-index: 6;
-    box-shadow: none;
+.mobile .headerContainer {
+	justify-content: normal;
+	gap: 100px;
 }
 
-.mobile .headerButtons{
-    right: 0px;
+.mobile .headerShowButtons {
+	display: flex !important;
+}
+
+.mobile .headerShowButton {
+	display: flex !important;
+}
+
+.mobile .mediaCenterButton {
+	display: none;
+}
+
+.mobile .productServicesPopup {
+	display: flex;
+	position: absolute;
+	top: 90px;
+	left: 0px;
+	height: 120px;
+	z-index: 6;
+	box-shadow: none;
+}
+
+.mobile .headerButtons {
+	right: 0px;
 }

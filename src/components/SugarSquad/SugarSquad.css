@@ -1,106 +1,119 @@
-.SugarSquadContainer{
-    background: #F7F7F7;
-    display: flex;
-    position: relative;
-    padding-left: 6.8vw;
-}
-.SugarSquadsDeskop{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    flex-wrap: wrap;
-    width: 100%;
-    position: relative;
-    margin: 50px;
-    gap: 40px;
-    overflow-x: auto;
-}
-.tablet .SugarSquadsDeskop{
-    grid-template-columns: repeat(3, 1fr);
-
-}
-.mobile .SugarSquadsDeskop{
-    grid-template-columns: repeat(2, 1fr);
-    gap:0px;
-    margin: 0px;
-
-}
-.SugarSquadMember{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-.crew{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 20%;
-}
-.memberInformation{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.memberName{
-    width: 100%;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: -0.035em;
-    color: #000000;
-}
-.memberPosition{
-    width: 109px;
-    height: 41px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.035em;
-    color: #000000;
-}
-.SugarSquadMember img{
-    background: #EBEBEB;
-    border-radius: 100px;
-    height: 10vh;
+.SugarSquadContainer {
+	background: #F7F7F7;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
 }
 
-.mobile .SugarSquadMember img{
-    height: 7vh;
-}
-.mobile .SugarSquadMember{
-    gap: 3px;
-}
-.mobile .SugarSquadContainer{
-    padding-left: 0px;
-}
-
-.memberPosition{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.035em;
-    color: #000000;
+.SugarSquadsDeskop {
+	display: grid;
+	grid-template-columns: repeat(4, .9fr);
+	flex-wrap: wrap;
+	width: auto;
+	position: relative;
+	margin: 50px auto;
+	gap: 30px;
+	overflow-x: auto;
 }
 
-.memberName{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: -0.035em;
-    color: #000000;
+.tablet .SugarSquadsDeskop {
+	grid-template-columns: repeat(3, .9fr);
+
 }
+
+.mobile .SugarSquadsDeskop {
+	grid-template-columns: repeat(2, .9fr);
+	gap: 0px;
+	margin: 0px;
+
+}
+
+.SugarSquadMember {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+}
+
+.crew {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.memberInformation {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.memberName {
+	width: fit-content;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: -0.035em;
+	color: #000000;
+}
+
+.memberPosition {
+	width: auto;
+	height: 41px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: -0.035em;
+	color: #000000;
+}
+
+.SugarSquadMember img {
+	background: #EBEBEB;
+	border-radius: 100px;
+	height: 100%;
+	width: auto;
+}
+
+.mobile .SugarSquadMember img {
+	height: 7vh;
+}
+
+.mobile .SugarSquadMember {
+	gap: 3px;
+}
+
+.mobile .SugarSquadContainer {
+	padding-left: 0px;
+}
+
+.memberPosition {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: -0.035em;
+	color: #000000;
+}
+
+.memberName {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: -0.035em;
+	color: #000000;
+}
+
 /* Reeponsive Tablet Settings */
 
 /* .tablet .SugarSquadContainer{
     height: 570px;
 } */
-
+/* 
 .tablet .crew{
     width: auto;
-}
+} */
 
 /* Reeponsive Mobile Settings */
 
@@ -108,15 +121,16 @@
     height: auto;
 } */
 
-.mobile .sugarSquadsDeskop{
-    align-items: center;
-    overflow-x: scroll;
-    justify-content: normal;
-    margin: auto;
+.mobile .sugarSquadsDeskop {
+	align-items: center;
+	overflow-x: scroll;
+	justify-content: normal;
+	margin: auto;
 }
 
+/* 
 .mobile .crew{
     width: 100%;
     margin: 10px;
     gap: 24px;
-}
+} */

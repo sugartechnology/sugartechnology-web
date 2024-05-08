@@ -221,7 +221,6 @@ input[type="radio"]:checked{
     border-radius: 8px;
     background: #FFFFFF;
     border: 1px solid #D2D6DA;
-    padding: 0 10px;
 }
 .mobile .nameEmailInputCv.phone{
     width: 300px;

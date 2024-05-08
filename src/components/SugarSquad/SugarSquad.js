@@ -1,5 +1,5 @@
-import './SugarSquad.css';
 import { useTranslation } from "react-i18next";
+import './SugarSquad.css';
 
 export const SugarSquad = props => {
     const { t } = useTranslation();
@@ -10,11 +10,6 @@ export const SugarSquad = props => {
             position: t("sugarSquadMember1Position")
         },
         {
-            image: "./assets/img/squadPp/kubraPp.svg",
-            name: "Kübra Yıldız",
-            position: t("sugarSquadMember2Position")
-        },
-        {
             image: "./assets/img/squadPp/sametPp.svg",
             name: "Abdulsamet Sarıkoç",
             position: t("sugarSquadMember4Position")
@@ -23,11 +18,6 @@ export const SugarSquad = props => {
             image: "./assets/img/squadPp/tugrulPp.svg",
             name: "Tuğrul Subekçi",
             position: t("sugarSquadMember6Position")
-        },
-        {
-            image: "./assets/img/squadPp/nisaPp.svg",
-            name: "Nisa Nur Çakıcı",
-            position: t("sugarSquadMember8Position")
         },
         {
             image: "./assets/img/squadPp/utkuPp.svg",
@@ -54,16 +44,6 @@ export const SugarSquad = props => {
             name: "Muhammad Eyad Kamacheh",
             position: t("sugarSquadMember7Position")
         },
-        {
-            image: "./assets/img/squadPp/altanPp.svg",
-            name: "Hakkı Altan Cebeci",
-            position: t("sugarSquadMember7Position")
-        },
-        {
-            image: "./assets/img/squadPp/berkayPp.svg",
-            name: "Berkay Kaynar",
-            position: t("sugarSquadMember5Position")
-        },
     ];
 
     return (
@@ -72,7 +52,7 @@ export const SugarSquad = props => {
                 {array.map((item, index) => (
                     <div className='crew'>
                         <div i={index} className='SugarSquadMember'>
-                            <img src={item.image}></img>
+                            <img alt='a team member of SugAR Technology' src={item.image}></img>
                             <div className='memberInformation'>
                                 <div className='memberName'>{item.name}</div>
                                 <div className='memberPosition'>{item.position}</div>
