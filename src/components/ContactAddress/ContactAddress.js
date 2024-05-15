@@ -32,8 +32,9 @@ export const ContactAddress = props => {
                             <img alt="" src={'assets/img/addressVector.svg'}></img>
                         </div>
                         <div className='addressSpan'>
-                            <a>Kazlıçeşme Mah. 245. Sk.</a>
-                            <a>No:5 Zeytinburnu / İstanbul</a>
+						<span>Merkez Mh., Kağıthane Cd.</span>
+						<span>Dap Vadisi A Ofis No 11 D:62</span>
+                        <span>Kağıthane İstanbul</span>
                         </div>
                     </div>
                     <div className='mailAdressContainer'>
@@ -41,7 +42,7 @@ export const ContactAddress = props => {
                             <img alt="" src={'assets/img/mail.svg'}></img>
                         </div>
                         <div className='mailAdressSpan'>
-                            <a>hello@sugartech.io</a>
+                            <span>hello@sugartech.io</span>
                         </div>
                     </div>
                     <div className='phoneNumberContainer'>
@@ -49,17 +50,18 @@ export const ContactAddress = props => {
                             <img alt='' src={'assets/img/phone-call.svg'}></img>
                         </div>
                         <div className='phoneNumberSpan'>
-                            <a>444 06 93 </a>
+                            <span>444 06 93 </span>
                         </div>
                     </div>
                 </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1638.2123790132218!2d28.919188399896342!3d41.00349589708704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1680472239444!5m2!1str!2str"
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+				<iframe
+					title="location"
+					src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d751.92916176656!2d28.971320269667533!3d41.075186009198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDA0JzMwLjciTiAyOMKwNTgnMTkuMSJF!5e0!3m2!1sen!2str!4v1715773645622!5m2!1sen!2str"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
                     className="location">
-                </iframe>
+				</iframe>
             </div>
             <div className='contactAddressInformationMobile'>
                 <img className='contactLogoMobile' alt='' src={'./assets/img/headerLogo.svg'}></img>
@@ -68,8 +70,9 @@ export const ContactAddress = props => {
                         <img alt="" src={'assets/img/addressVector.svg'}></img>
                     </div>
                     <div className='addressSpanMobile'>
-                        <a>Kazlıçeşme Mah. 245. Sk.</a>
-                        <a>No:5 Zeytinburnu / İstanbul</a>
+						<span>Merkez Mh., Kağıthane Cd.</span>
+						<span>Dap Vadisi A Ofis No 11 D:62</span>
+                        <span>Kağıthane İstanbul</span>
                     </div>
                 </div>
                 <div className='communicationAddress'>
@@ -78,7 +81,7 @@ export const ContactAddress = props => {
                             <img alt='' src={'assets/img/phone-call.svg'}></img>
                         </div>
                         <div className='phoneNumberSpanMobile'>
-                            <a>444 06 93</a>
+                            <span>444 06 93</span>
                         </div>
                     </div>
                     <div className='mailAdressContainer'>
@@ -86,13 +89,14 @@ export const ContactAddress = props => {
                             <img alt="" src={'assets/img/mail.svg'}></img>
                         </div>
                         <div className='mailAdressSpanMobile'>
-                            <a>hello@sugartech.io</a>
+                            <span>hello@sugartech.io</span>
                         </div>
                     </div>
                 </div>
             </div>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1638.2123790132218!2d28.919188399896342!3d41.00349589708704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1680472239444!5m2!1str!2str"
+				title="location"
+				src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d751.92916176656!2d28.971320269667533!3d41.075186009198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDA0JzMwLjciTiAyOMKwNTgnMTkuMSJF!5e0!3m2!1sen!2str!4v1715773645622!5m2!1sen!2str"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
