@@ -32,8 +32,9 @@ export const ContactAddress = props => {
                             <img alt="" src={'assets/img/addressVector.svg'}></img>
                         </div>
                         <div className='addressSpan'>
-                            <span>Merkez Mh., Kağıthane Cd., Dap Vadisi</span>
-                            <span>A Ofis No 11 D:62 Kağıthane İstanbul</span>
+						<span>Merkez Mh., Kağıthane Cd.</span>
+						<span>Dap Vadisi A Ofis No 11 D:62</span>
+                        <span>Kağıthane İstanbul</span>
                         </div>
                     </div>
                     <div className='mailAdressContainer'>
@@ -69,8 +70,9 @@ export const ContactAddress = props => {
                         <img alt="" src={'assets/img/addressVector.svg'}></img>
                     </div>
                     <div className='addressSpanMobile'>
-						<span>Merkez Mh., Kağıthane Cd., Dap Vadisi</span>
-                        <span>A Ofis No 11 D:62 Kağıthane İstanbul</span>
+						<span>Merkez Mh., Kağıthane Cd.</span>
+						<span>Dap Vadisi A Ofis No 11 D:62</span>
+                        <span>Kağıthane İstanbul</span>
                     </div>
                 </div>
                 <div className='communicationAddress'>
