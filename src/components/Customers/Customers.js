@@ -56,25 +56,25 @@ export const Customers = () => {
 	};
 
 	const images = [
+		"/assets/img/gabba.svg",
 		"/assets/img/bellona.svg",
-		"/assets/img/doqu_home.svg",
 		"/assets/img/istikbal.svg",
 		"/assets/img/mondi.svg",
-		"/assets/img/vivense.svg",
-		"/assets/img/weltew.svg",
-		"/assets/img/kys_design.svg",
 		"/assets/img/tepe-home-min.svg",
+		"/assets/img/chakra.svg",
 		"/assets/img/vestel-logo-min.svg",
+		"/assets/img/boztas.svg",
 		"/assets/img/simurgLogo.svg",
 		"/assets/img/lazzoni-logo.svg",
 		"/assets/img/creavit_logo-min.svg",
-		"/assets/img/ekohalilogo.svg",
+		"/assets/img/madamecoco.svg",
 		"/assets/img/tilia.svg",
-		"/assets/img/kaas.svg",
-		"/assets/img/gabba.svg",
+		"/assets/img/ekohalilogo.svg",
+		"/assets/img/uzaq.svg",
 		"/assets/img/homillia.svg",
-		"/assets/img/homeandrugs.svg",
+		"/assets/img/benimodam.svg",
 		"/assets/img/pasaj.svg",
+		"/assets/img/homage.svg",
 	];
 
 	return (
