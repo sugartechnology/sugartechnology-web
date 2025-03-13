@@ -50,7 +50,7 @@ export const Contact = props => {
 
 	const sendFormData = (form) => {
 		const xhr = new XMLHttpRequest();
-		xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
+		xhr.open("POST", process.env.REACT_APP_BACKEND_API + "/api/form/save/contactForm");
 		xhr.setRequestHeader("Content-Type", "application/json");
 
 		xhr.onreadystatechange = function () {

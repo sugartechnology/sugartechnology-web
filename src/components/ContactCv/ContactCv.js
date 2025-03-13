@@ -1,9 +1,9 @@
-import './ContactCv.css';
-import { useState, useEffect } from 'react';
-import { useTranslation } from "react-i18next";
+import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { useTranslation } from "react-i18next";
 import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css'
+import 'react-phone-input-2/lib/style.css';
+import './ContactCv.css';
 
 export const ContactCv = props => {
 
@@ -99,7 +99,7 @@ export const ContactCv = props => {
 
     const sendFormData = (form) => {
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
+        xhr.open("POST", process.env.REACT_APP_BACKEND_API + "/api/form/save/contactForm");
         xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.onreadystatechange = function () {

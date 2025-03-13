@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useTranslation } from "react-i18next";
 import PhoneInput from "react-phone-input-2";
 
 export const ContactInputs = () => {
@@ -79,7 +79,7 @@ export const ContactInputs = () => {
 
 	const sendFormData = (form) => {
 		const xhr = new XMLHttpRequest();
-		xhr.open("POST", "https://cdn.sugartech.io/api/form/save/contactForm");
+		xhr.open("POST", process.env.REACT_APP_BACKEND_API + "/api/form/save/contactForm");
 		xhr.setRequestHeader("Content-Type", "application/json");
 
 		xhr.onreadystatechange = function () {
