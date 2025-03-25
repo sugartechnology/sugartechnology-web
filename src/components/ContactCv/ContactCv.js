@@ -49,7 +49,7 @@ export const ContactCv = props => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (!mail || !phone || !message || !name || !job || !cv || !option) {
+        if (!mail || !phone || !message || !name || !job || !cv || !option || phone.length < 10) {
             informationErrorPopup();
             return;
         }
@@ -144,12 +144,12 @@ export const ContactCv = props => {
         }, 3000);
     }
     function informationErrorPopup() {
-        let inputPopup = document.querySelector('#informationErrorPopup');
-        let informationLoadingPopup = document.querySelector("#informationLoadingPopup");
+        const inputPopup = document.querySelector('#informationErrorPopup');
+        const informationLoadingPopup = document.querySelector("#informationLoadingPopup");
         informationLoadingPopup.style.display = "none";
         inputPopup.style.display = "flex";
         setTimeout(() => {
-            window.location.reload();
+            inputPopup.style.display = "none";
         }, 3000);
     }
     function showLoadingPopup() {
