@@ -1,18 +1,13 @@
 import i18n from "i18next";
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
-import { useEffect, useState } from "react";
 import { initReactI18next } from "react-i18next";
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Api } from "./api/Api";
 import { Contact } from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { AboutUs } from './pages/aboutUs/AboutUs';
-import { BlogContainerPage } from "./pages/blogs/BlogContainerPage";
-import { BlogsPage } from "./pages/blogs/BlogsPage";
 import { ContactUs } from './pages/contactUs/ContactUs';
-import { ContactUsCv } from './pages/contactUs/ContactUsCv';
 import { MainPage } from './pages/main/MainPage';
 import { ProductAr } from './pages/products/ProductAr';
 import { ProductBathroom } from './pages/products/ProductBathroom';
@@ -42,31 +37,31 @@ i18n
 		},
 	});
 
-const api = new Api();
+// const api = new Api();
 
 function App() {
-	const [blogThumbs, setPageThumbs] = useState([]);
-	const [blogUrls, setPageUrls] = useState([]);
+	// const [blogThumbs, setPageThumbs] = useState([]);
+	// const [blogUrls, setPageUrls] = useState([]);
 
-	useEffect(() => {
-		const pages = api.fetchPages;
-		if (pages === undefined || pages.length < 1) return;
-		const urls = pages.map(p => {
-			return {
-				ar: p.urlAr,
-				de: p.urlDe,
-				en: p.urlEn,
-				es: p.urlEs,
-				fr: p.urlFr,
-				it: p.urlIt,
-				tr: p.urlTr
-			};
-		});
-		const thumbs = pages.map(page => page.thumb);
+	// useEffect(() => {
+	// 	const pages = api.fetchPages;
+	// 	if (pages === undefined || pages.length < 1) return;
+	// 	const urls = pages.map(p => {
+	// 		return {
+	// 			ar: p.urlAr,
+	// 			de: p.urlDe,
+	// 			en: p.urlEn,
+	// 			es: p.urlEs,
+	// 			fr: p.urlFr,
+	// 			it: p.urlIt,
+	// 			tr: p.urlTr
+	// 		};
+	// 	});
+	// 	const thumbs = pages.map(page => page.thumb);
 
-		setPageUrls(urls);
-		setPageThumbs(thumbs);
-	}, []);
+	// 	setPageUrls(urls);
+	// 	setPageThumbs(thumbs);
+	// }, []);
 
 	return (
 		<div>
@@ -86,16 +81,16 @@ function App() {
 				<Route path='/productDecoration' element={<ProductDecoration />}></Route>
 				<Route path='/productTextile' element={<ProductTextile />}></Route>
 				<Route path='/aboutUs' element={<AboutUs />}></Route>
-				<Route path="/blogs" element={<BlogsPage thumbs={blogThumbs} urls={blogUrls} />} />
-				{blogUrls && blogUrls.length > 0 && blogUrls.map((urls, index) => (
+				{/* <Route path="/blogs" element={<BlogsPage thumbs={blogThumbs} urls={blogUrls} />} /> */}
+				{/* {blogUrls && blogUrls.length > 0 && blogUrls.map((urls, index) => (
 					blogThumbs[index] &&
 					<Route key={index}
 						path={`/blog-${index}`}
 						element={<BlogContainerPage urls={urls} />} />
 				)
-				)}
+				)} */}
 				<Route path='/contactUs' element={<ContactUs />}></Route>
-				<Route path='/contactCv' element={<ContactUsCv />}></Route>
+				{/* <Route path='/contactCv' element={<ContactUsCv />}></Route> */}
 			</Routes>
 			<Contact />
 			<Footer />

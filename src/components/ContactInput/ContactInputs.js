@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
 import PhoneInput from "react-phone-input-2";
+import { Api } from "../../api/Api";
 
 export const ContactInputs = () => {
 	const { t } = useTranslation();
@@ -74,26 +75,8 @@ export const ContactInputs = () => {
 			message: message,
 			phoneNumber: phone,
 		};
-		sendFormData(form);
+		Api.instance.sendFormData(form, inputDonePopup, inputErrorPopup);
 	}
-
-	const sendFormData = (form) => {
-		const xhr = new XMLHttpRequest();
-		xhr.open("POST", process.env.REACT_APP_BACKEND_API + "/api/form/save/contactForm");
-		xhr.setRequestHeader("Content-Type", "application/json");
-
-		xhr.onreadystatechange = function () {
-			if (xhr.readyState === XMLHttpRequest.DONE) {
-				if (xhr.status === 200) {
-					inputDonePopup();
-				} else {
-					inputErrorPopup();
-				}
-			}
-		};
-
-		xhr.send(JSON.stringify(form));
-	};
 
 	function inputDonePopup() {
 		let inputPopup = document.querySelector("#inputDonePopup");
@@ -200,7 +183,7 @@ export const ContactInputs = () => {
 				</div>
 				<ReCAPTCHA
 					sitekey="6LeDWB4nAAAAAERZuZ45quLmaqG8RQhbvFV_Y_HB"
-					/*onChange={handleRecaptchaChange}*/
+				/*onChange={handleRecaptchaChange}*/
 				/>
 				<div className="contactInputButtons">
 					<input

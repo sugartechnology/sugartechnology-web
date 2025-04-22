@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
+import { Api } from '../../api/Api';
 import './Contact.css';
 
 export const Contact = props => {
@@ -43,28 +44,11 @@ export const Contact = props => {
 		const form = {
 			name: name,
 			email: mail,
-			message: message,
+			message: message
 		}
-		sendFormData(form);
+
+		Api.instance.sendFormData(form, inputDonePopup, inputErrorPopup);
 	}
-
-	const sendFormData = (form) => {
-		const xhr = new XMLHttpRequest();
-		xhr.open("POST", process.env.REACT_APP_BACKEND_API + "/api/form/save/contactForm");
-		xhr.setRequestHeader("Content-Type", "application/json");
-
-		xhr.onreadystatechange = function () {
-			if (xhr.readyState === XMLHttpRequest.DONE) {
-				if (xhr.status === 200) {
-					inputDonePopup();
-				} else {
-					inputErrorPopup();
-				}
-			}
-		};
-
-		xhr.send(JSON.stringify(form));
-	};
 
 	function inputDonePopup() {
 		let inputPopup = document.querySelector('#inputDonePopup');

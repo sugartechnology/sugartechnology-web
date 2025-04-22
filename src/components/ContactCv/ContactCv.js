@@ -3,6 +3,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslation } from "react-i18next";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import { Api } from '../../api/Api';
 import './ContactCv.css';
 
 export const ContactCv = props => {
@@ -94,25 +95,7 @@ export const ContactCv = props => {
             option: option,
             job: job,
         };
-        sendFormData(form);
-    };
-
-    const sendFormData = (form) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", process.env.REACT_APP_BACKEND_API + "/api/form/save/contactForm");
-        xhr.setRequestHeader("Content-Type", "application/json");
-
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    inputDonePopup();
-                } else {
-                    inputErrorPopup();
-                }
-            }
-        };
-
-        xhr.send(JSON.stringify(form));
+        Api.instance.sendFormData(form, inputDonePopup, inputErrorPopup);
     };
 
     const closePopup = () => {
@@ -223,7 +206,7 @@ export const ContactCv = props => {
                             }}
 
                         />
-                        {/* <input className='nameEmailInputCv' placeholder={"Phone Number"} value={phone} onChange={(e) => setPhone(e.target.value)}></input> */}
+                        <input className='nameEmailInputCv' placeholder={"Phone Number"} value={phone} onChange={(e) => setPhone(e.target.value)}></input>
                     </div>
                     <div className='emailInputsCv'>
                         <a className='addCvInput'>{t("addCv")}</a>
