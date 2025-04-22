@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import LanguageSelector from "./LanguageSelector";
-import { Link } from "react-router-dom";
 
 export const Header = () => {
 	const { t } = useTranslation();
@@ -263,9 +263,9 @@ export const Header = () => {
 						<div className="popupRouter" id="routerAbout">
 							<a href="/aboutUs">{t("aboutUs")}</a>
 						</div>
-						<div className="popupRouter" id="routerBlog">
+						{/* <div className="popupRouter" id="routerBlog">
 							<a href="/blogs">{t("blog")}</a>
-						</div>
+						</div> */}
 						<div className="popupRouter" id="routerContact">
 							<a href="/contactUs">{t("contactUs")}</a>
 						</div>
