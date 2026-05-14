@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        REACT_APP_BACKEND_API: ${REACT_APP_BACKEND_API:-https://sso.sugartech.io}
+    ports:
+      - "${PORT:-7774}:80"
+    restart: unless-stopped
